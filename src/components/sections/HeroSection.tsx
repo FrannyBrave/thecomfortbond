@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export const HeroSection = () => {
   const scrollToProducts = () => {
@@ -10,84 +10,56 @@ export const HeroSection = () => {
     }
   };
 
-  const scrollToAbout = () => {
-    const element = document.querySelector("#about");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-sage/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-gold/10 to-transparent" />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: `url(${heroBg})`,
+          backgroundPosition: 'center 40%'
+        }}
+      />
+      
+      {/* Dark Overlay - 60% opacity deep forest green */}
+      <div className="absolute inset-0 bg-forest/60" />
 
-      <div className="section-container relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <span className="inline-block text-sage font-sans text-sm md:text-base uppercase tracking-widest mb-6">
-              Meaningful Connection Through Touch
-            </span>
-          </motion.div>
-
+      <div className="section-container relative z-10 pt-24">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center min-h-[calc(100vh-6rem)]">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="heading-xl text-forest mb-6 text-balance"
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+            className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-cream mb-8 leading-tight"
           >
-            Comfort Beyond Words
+            The Comfort Bond: Nurturing Comfort, Inspiring Connection.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="body-lg text-muted-foreground max-w-2xl mx-auto mb-10"
+            transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+            className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
-            Thoughtfully designed sensory products that bring calm, connection, 
-            and comfort to residents in memory care and senior living communities.
+            A complete engagement ecosystem for Senior Living, Memory Care, and Life Enrichment Directors.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
           >
-            <Button variant="cta" size="xl" onClick={scrollToProducts}>
-              Explore Our Collection
-            </Button>
-            <Button variant="cta-outline" size="xl" onClick={scrollToAbout}>
-              Learn More
+            <Button 
+              variant="cta" 
+              size="xl" 
+              onClick={scrollToProducts}
+              className="text-white hover:text-white"
+            >
+              Shop the Ecosystem
             </Button>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-sage hover:text-terracotta transition-colors cursor-pointer"
-        aria-label="Scroll to learn more"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        >
-          <ArrowDown size={28} />
-        </motion.div>
-      </motion.button>
     </section>
   );
 };
