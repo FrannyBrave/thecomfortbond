@@ -31,7 +31,7 @@ export const FooterSection = () => {
               Support
             </a>
             <a
-              href="#"
+              href="/privacy-policy"
               className="text-forest hover:opacity-70 transition-opacity"
             >
               Privacy Policy
