@@ -2,43 +2,61 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
+
 export const CTASection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: true,
-    margin: "-100px"
-  });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const scrollToProducts = () => {
     const element = document.querySelector("#products");
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
-    <section ref={ref} className="bg-sage py-20 md:py-28">
-      <div className="section-container">
+    <section className="section-padding relative overflow-hidden" ref={ref}>
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest to-sage/80" />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-gold/5 blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-1/4 h-1/3 bg-terracotta/5 blur-3xl" />
+
+      <div className="section-container relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="font-serif text-3xl md:text-4xl text-forest mb-6">
+          <h2 className="heading-lg text-cream mb-6">
             Ready to Bring Comfort to Your Community?
           </h2>
-          <p className="text-lg text-forest/80 mb-8">
-            Explore our collection and discover how The Comfort Bond can support meaningful moments for your residents.
+          <p className="body-lg text-cream/80 mb-10 max-w-2xl mx-auto">
+            Join hundreds of care professionals who have discovered the difference 
+            that thoughtful sensory products can make.
           </p>
-          <Button
-            variant="cta"
-            size="lg"
-            onClick={scrollToProducts}
-            className="text-lg px-8 py-6"
-          >
-            Shop Now
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button
+              variant="cta"
+              size="xl"
+              onClick={scrollToProducts}
+              className="bg-terracotta hover:bg-terracotta/90"
+            >
+              Shop the Collection
+            </Button>
+            <Button
+              variant="cta-outline"
+              size="xl"
+              className="border-cream text-cream hover:bg-cream hover:text-forest"
+              asChild
+            >
+              <a href="mailto:hello@thecomfortbond.com">
+                Contact Us
+              </a>
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>
