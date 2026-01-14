@@ -6,6 +6,7 @@ import roadTripImage from "@/assets/road-trip-kit.png";
 import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
+import serenityImage from "@/assets/serenity-video-suite.png";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
@@ -67,7 +68,7 @@ const products = [
     price: "$34",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
-    image: null,
+    image: serenityImage,
   },
 ];
 
