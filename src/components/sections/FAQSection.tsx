@@ -1,86 +1,28 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-
-const faqs = [
-  {
-    question: "Are these products safe for residents with dementia?",
-    answer:
-      "Yes, all products are designed with safety as the top priority. Materials are non-toxic, there are no small parts, and each item is tested for durability. We recommend supervision as with any engagement activity.",
-  },
-  {
-    question: "Can products be cleaned and sanitized?",
-    answer:
-      "Absolutely. All products feature removable, machine-washable covers or can be wiped down with standard facility cleaning solutions. We provide detailed care instructions with every order.",
-  },
-  {
-    question: "Do you offer bulk pricing for communities?",
-    answer:
-      "Yes, we offer tiered pricing for orders of 10+ items and work directly with purchasing departments. Contact us at orders@thecomfortbond.com for a customized quote.",
-  },
-  {
-    question: "What is your return policy?",
-    answer:
-      "We stand behind our products with a 30-day satisfaction guarantee. If a product doesn't meet your expectations, we'll work with you to make it right or provide a full refund.",
-  },
-  {
-    question: "How quickly do orders ship?",
-    answer:
-      "Standard orders ship within 2-3 business days. We also offer expedited shipping options. Bulk orders may require additional processing time—we'll provide a timeline when you place your order.",
-  },
-];
-
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+const faqs = [{
+  question: "Are these products safe for residents with dementia?",
+  answer: "Yes, all products are designed with safety as the top priority. Materials are non-toxic, there are no small parts, and each item is tested for durability. We recommend supervision as with any engagement activity."
+}, {
+  question: "Can products be cleaned and sanitized?",
+  answer: "Absolutely. All products feature removable, machine-washable covers or can be wiped down with standard facility cleaning solutions. We provide detailed care instructions with every order."
+}, {
+  question: "Do you offer bulk pricing for communities?",
+  answer: "Yes, we offer tiered pricing for orders of 10+ items and work directly with purchasing departments. Contact us at orders@thecomfortbond.com for a customized quote."
+}, {
+  question: "What is your return policy?",
+  answer: "We stand behind our products with a 30-day satisfaction guarantee. If a product doesn't meet your expectations, we'll work with you to make it right or provide a full refund."
+}, {
+  question: "How quickly do orders ship?",
+  answer: "Standard orders ship within 2-3 business days. We also offer expedited shipping options. Bulk orders may require additional processing time—we'll provide a timeline when you place your order."
+}];
 export const FAQSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section id="faq" className="section-padding bg-cream-dark" ref={ref}>
-      <div className="section-container">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <span className="inline-block text-terracotta font-sans text-sm uppercase tracking-widest mb-4">
-            Questions & Answers
-          </span>
-          <h2 className="heading-lg text-forest mb-6">
-            Frequently Asked Questions
-          </h2>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-3xl mx-auto"
-        >
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-card rounded-xl border border-sage/20 px-6 data-[state=open]:border-gold/40 transition-colors duration-300"
-              >
-                <AccordionTrigger className="text-left font-serif text-lg text-forest hover:text-terracotta hover:no-underline py-5">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="body-md text-muted-foreground pb-5">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </motion.div>
-      </div>
-    </section>
-  );
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-100px"
+  });
+  return;
 };
