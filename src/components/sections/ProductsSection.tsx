@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import bundleImage from "@/assets/full-ecosystem-bundle.png";
 import roadTripImage from "@/assets/road-trip-kit.png";
+import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
@@ -40,7 +41,7 @@ const products = [
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
-    image: null,
+    image: nostalgiaImage,
   },
   {
     id: 3,
