@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import holidayKitImage from "@/assets/holiday-kit.png";
 
 const featuredProduct = {
   id: "bundle",
@@ -28,6 +29,7 @@ const products = [
     id: 1,
     name: "Road Trip Kit",
     price: "$24",
+    image: holidayKitImage,
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
   },
@@ -158,11 +160,19 @@ export const ProductsSection = () => {
               className="group"
             >
               <div className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                {/* Product Image Placeholder */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center">
-                  <span className="text-sage/50 font-serif text-sm text-center px-4">
-                    {product.name} Image
-                  </span>
+                {/* Product Image */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
+                  {product.image ? (
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-sage/50 font-serif text-sm text-center px-4">
+                      {product.name} Image
+                    </span>
+                  )}
                 </div>
 
                 {/* Product Info */}
