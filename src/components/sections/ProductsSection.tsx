@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import bundleImage from "@/assets/full-ecosystem-bundle.png";
+import roadTripImage from "@/assets/road-trip-kit.png";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
@@ -31,6 +32,7 @@ const products = [
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
+    image: roadTripImage,
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ const products = [
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
+    image: null,
   },
   {
     id: 3,
@@ -45,6 +48,7 @@ const products = [
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
+    image: null,
   },
   {
     id: 4,
@@ -52,6 +56,7 @@ const products = [
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
+    image: null,
   },
   {
     id: 5,
@@ -59,6 +64,7 @@ const products = [
     price: "$34",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
+    image: null,
   },
 ];
 
@@ -161,11 +167,19 @@ export const ProductsSection = () => {
               className="group"
             >
               <div className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                {/* Product Image Placeholder */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center">
-                  <span className="text-sage/50 font-serif text-sm text-center px-4">
-                    {product.name} Image
-                  </span>
+                {/* Product Image */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
+                  {product.image ? (
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <span className="text-sage/50 font-serif text-sm text-center px-4">
+                      {product.name} Image
+                    </span>
+                  )}
                 </div>
 
                 {/* Product Info */}
