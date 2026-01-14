@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import bundleImage from "@/assets/full-ecosystem-bundle.png";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
@@ -93,10 +94,12 @@ export const ProductsSection = () => {
           <div className="bg-card rounded-2xl overflow-hidden border-2 border-gold shadow-xl shadow-gold/20 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Product Image Placeholder */}
-              <div className="aspect-square md:aspect-auto bg-gradient-to-br from-sage/20 to-gold/10 relative flex items-center justify-center min-h-[280px]">
-                <span className="text-sage/60 font-serif text-lg text-center px-4">
-                  Collection of Kits Mockup
-                </span>
+              <div className="aspect-square md:aspect-auto bg-gradient-to-br from-sage/20 to-gold/10 relative flex items-center justify-center min-h-[280px] overflow-hidden">
+                <img 
+                  src={bundleImage} 
+                  alt="The Full Ecosystem Bundle - Collection of all kits"
+                  className="w-full h-full object-cover"
+                />
                 <span className="absolute top-4 left-4 bg-gold text-forest text-sm font-sans font-semibold px-4 py-1.5 rounded-full">
                   {featuredProduct.badge}
                 </span>
