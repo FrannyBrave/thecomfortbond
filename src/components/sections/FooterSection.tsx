@@ -1,137 +1,54 @@
-import { motion } from "framer-motion";
-
-const footerLinks = {
-  products: [
-    { label: "Weighted Wraps", href: "#products" },
-    { label: "Sensory Kits", href: "#products" },
-    { label: "Comfort Companions", href: "#products" },
-    { label: "Bulk Orders", href: "mailto:orders@thecomfortbond.com" },
-  ],
-  company: [
-    { label: "About Us", href: "#about" },
-    { label: "Our Mission", href: "#about" },
-    { label: "Contact", href: "mailto:hello@thecomfortbond.com" },
-  ],
-  support: [
-    { label: "FAQ", href: "#faq" },
-    { label: "Shipping Info", href: "#faq" },
-    { label: "Returns", href: "#faq" },
-  ],
-};
+import logo from "@/assets/logo.png";
 
 export const FooterSection = () => {
-  const scrollToSection = (href: string) => {
-    if (href.startsWith("#")) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="bg-forest text-cream/90">
-      <div className="section-container py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <h3 className="text-2xl font-serif font-semibold text-cream mb-4">
-              The Comfort Bond
-            </h3>
-            <p className="body-sm text-cream/70 mb-6">
-              Thoughtfully designed sensory products for memory care 
-              and senior living communities.
-            </p>
-            <p className="body-sm text-cream/50">
-              © {new Date().getFullYear()} The Comfort Bond.
-              <br />
-              All rights reserved.
-            </p>
-          </div>
+    <footer className="bg-cream border-t border-sage/40">
+      <div className="container mx-auto px-6 py-16 md:py-20">
+        <div className="flex flex-col items-center text-center space-y-8">
+          {/* Logo */}
+          <button
+            onClick={scrollToTop}
+            className="transition-opacity hover:opacity-80"
+            aria-label="Scroll to top"
+          >
+            <img
+              src={logo}
+              alt="The Comfort Bond"
+              className="w-32 md:w-36 h-auto"
+            />
+          </button>
 
-          {/* Products */}
-          <div>
-            <h4 className="font-sans font-semibold text-cream mb-4 uppercase text-sm tracking-wider">
-              Products
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.products.map((link) => (
-                <li key={link.label}>
-                  {link.href.startsWith("#") ? (
-                    <button
-                      onClick={() => scrollToSection(link.href)}
-                      className="body-sm text-cream/70 hover:text-gold transition-colors"
-                    >
-                      {link.label}
-                    </button>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="body-sm text-cream/70 hover:text-gold transition-colors"
-                    >
-                      {link.label}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-sans font-semibold text-cream mb-4 uppercase text-sm tracking-wider">
-              Company
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  {link.href.startsWith("#") ? (
-                    <button
-                      onClick={() => scrollToSection(link.href)}
-                      className="body-sm text-cream/70 hover:text-gold transition-colors"
-                    >
-                      {link.label}
-                    </button>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="body-sm text-cream/70 hover:text-gold transition-colors"
-                    >
-                      {link.label}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="font-sans font-semibold text-cream mb-4 uppercase text-sm tracking-wider">
+          {/* Support & Links */}
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <a
+              href="mailto:info@thecomfortbond.com"
+              className="text-forest hover:opacity-70 transition-opacity"
+            >
               Support
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.support.map((link) => (
-                <li key={link.label}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="body-sm text-cream/70 hover:text-gold transition-colors"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            </a>
+            <a
+              href="#"
+              className="text-forest hover:opacity-70 transition-opacity"
+            >
+              Privacy Policy
+            </a>
           </div>
-        </div>
 
-        {/* Bottom border accent */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 1 }}
-          className="w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent mt-12"
-        />
+          {/* Copyright */}
+          <p className="text-sm text-forest">
+            © 2026 The Comfort Bond. Nurturing Comfort, Inspiring Connection.
+          </p>
+
+          {/* Legal Disclaimer */}
+          <p className="text-xs text-forest/70 max-w-2xl leading-relaxed">
+            The Comfort Bond™ products are designed for recreational and life enrichment purposes only. 
+            They are not medical devices and are not intended to diagnose, treat, or prevent any medical condition.
+          </p>
+        </div>
       </div>
     </footer>
   );
