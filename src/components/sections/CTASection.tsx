@@ -52,7 +52,7 @@ export const CTASection = () => {
               className="border-cream text-cream hover:bg-cream hover:text-forest"
               asChild
             >
-              <a href="mailto:hello@thecomfortbond.com">
+              <a href="mailto:info@thecomfortbond.com">
                 Contact Us
               </a>
             </Button>
