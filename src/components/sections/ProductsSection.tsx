@@ -4,6 +4,7 @@ import { useRef } from "react";
 import bundleImage from "@/assets/full-ecosystem-bundle.png";
 import roadTripImage from "@/assets/road-trip-kit.png";
 import nostalgiaImage from "@/assets/nostalgia-kit.png";
+import kitchenImage from "@/assets/kitchen-kit.png";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
@@ -49,7 +50,7 @@ const products = [
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
-    image: null,
+    image: kitchenImage,
   },
   {
     id: 4,
