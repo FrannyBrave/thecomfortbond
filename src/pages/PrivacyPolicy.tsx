@@ -20,94 +20,160 @@ const PrivacyPolicy = () => {
       {/* Content */}
       <main className="container mx-auto px-6 py-12 md:py-20">
         <div className="max-w-3xl mx-auto">
-          <h1 className="font-display text-3xl md:text-4xl text-forest mb-8">
-            Privacy Policy
+          <h1 className="font-display text-3xl md:text-4xl text-forest mb-4">
+            The Comfort Bond – Privacy Policy
           </h1>
 
-          <div className="prose prose-forest max-w-none space-y-6 text-forest/80">
-            <p className="text-sm text-forest/60">
-              Last updated: January 2026
-            </p>
+          <p className="text-sm text-forest/60 mb-10">
+            Last Updated: January 14, 2026
+          </p>
 
+          <div className="space-y-10 text-forest/80">
+            {/* Section 1 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">Introduction</h2>
+              <h2 className="font-display text-xl text-forest">1. Introduction</h2>
               <p>
-                The Comfort Bond ("we," "our," or "us") is committed to protecting your privacy. 
-                This Privacy Policy explains how we collect, use, disclose, and safeguard your 
-                information when you visit our website or purchase our products.
+                Welcome to The Comfort Bond ("we," "us," or "our"). We respect your privacy and are 
+                committed to protecting your personal information. This Privacy Policy explains how 
+                information is collected, used, and safeguarded when you visit thecomfortbond.com or 
+                purchase our digital products.
               </p>
             </section>
 
+            {/* Section 2 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">Information We Collect</h2>
+              <h2 className="font-display text-xl text-forest">2. Merchant of Record (Lemon Squeezy)</h2>
               <p>
-                We may collect personal information that you voluntarily provide to us when you:
+                Our store uses Lemon Squeezy as our Merchant of Record.
               </p>
+              <p>This means that:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Make a purchase or place an order</li>
-                <li>Subscribe to our newsletter</li>
-                <li>Contact us with inquiries or feedback</li>
-                <li>Participate in promotions or surveys</li>
+                <li>Lemon Squeezy securely processes all payments.</li>
+                <li>We do not collect, store, or have access to your credit card or banking details.</li>
+                <li>Transactional emails (receipts, download links) are sent directly by Lemon Squeezy.</li>
               </ul>
               <p>
-                This information may include your name, email address, shipping address, 
-                payment information, and phone number.
+                For details on how financial information is handled, please review{" "}
+                <a 
+                  href="https://www.lemonsqueezy.com/privacy" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sage hover:text-forest underline transition-colors"
+                >
+                  Lemon Squeezy's Privacy Policy
+                </a>.
               </p>
             </section>
 
+            {/* Section 3 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">How We Use Your Information</h2>
+              <h2 className="font-display text-xl text-forest">3. Information We Collect</h2>
               <p>
-                We use the information we collect to:
+                We collect only the information necessary to operate our business and deliver our products:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Process and fulfill your orders</li>
-                <li>Communicate with you about your orders and inquiries</li>
-                <li>Send promotional communications (with your consent)</li>
-                <li>Improve our website and products</li>
-                <li>Comply with legal obligations</li>
+                <li>
+                  <strong>Contact Information:</strong> Your name and email address, collected when you 
+                  download a free sample, purchase a product, or subscribe to updates.
+                </li>
+                <li>
+                  <strong>Basic Usage Data:</strong> Anonymous, aggregated information about how visitors 
+                  interact with our website (such as page visits), used solely to improve site performance 
+                  and user experience.
+                </li>
               </ul>
             </section>
 
+            {/* Section 4 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">Information Sharing</h2>
+              <h2 className="font-display text-xl text-forest">4. How We Use Your Information</h2>
+              <p>We use your information to:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Deliver purchased or requested digital products (PDFs and videos)</li>
+                <li>Send access details, updates, or support-related communications</li>
+                <li>Notify you of updates or additions to products you have purchased</li>
+                <li>Share occasional tips or newsletters for Activity Professionals (you may unsubscribe at any time)</li>
+              </ul>
+              <p className="font-medium">We do not sell or rent your personal information.</p>
+            </section>
+
+            {/* Section 5 */}
+            <section className="space-y-4">
+              <h2 className="font-display text-xl text-forest">5. Cookies & Third-Party Services</h2>
               <p>
-                We do not sell, trade, or rent your personal information to third parties. 
-                We may share your information with trusted service providers who assist us 
-                in operating our website, conducting our business, or servicing you, as long 
-                as those parties agree to keep this information confidential.
+                <strong>Cookies:</strong> Our website may use standard, essential cookies to ensure 
+                proper functionality and performance.
+              </p>
+              <p><strong>Third-Party Services:</strong></p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Payments and file delivery are handled by Lemon Squeezy.</li>
+                <li>Website hosting and presentation are handled by Lovable.</li>
+                <li>
+                  Some video content (such as the Serenity Suite) is hosted on YouTube. Viewing this 
+                  content is subject to YouTube's own Terms of Service and Privacy Policy.
+                </li>
+              </ul>
+              <p>
+                We do not control how third-party platforms process data once you interact with their services.
               </p>
             </section>
 
+            {/* Section 6 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">Data Security</h2>
+              <h2 className="font-display text-xl text-forest">6. Data Security</h2>
               <p>
-                We implement appropriate security measures to protect your personal information 
-                against unauthorized access, alteration, disclosure, or destruction. However, 
-                no method of transmission over the Internet is 100% secure.
+                We take reasonable steps to protect your information by working with reputable third-party 
+                providers that use industry-standard security measures, including encryption during data 
+                transmission. However, no method of online transmission or storage is 100% secure.
               </p>
             </section>
 
+            {/* Section 7 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">Your Rights</h2>
+              <h2 className="font-display text-xl text-forest">7. Your Rights</h2>
+              <p>You may:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Request access to the personal information we hold about you</li>
+                <li>Request correction or deletion of your information</li>
+                <li>Unsubscribe from marketing emails using the link provided in each email</li>
+              </ul>
+              <p>To exercise these rights, contact us using the information below.</p>
+            </section>
+
+            {/* Section 8 */}
+            <section className="space-y-4">
+              <h2 className="font-display text-xl text-forest">8. Updates to This Policy</h2>
               <p>
-                You have the right to access, correct, or delete your personal information. 
-                You may also opt out of receiving marketing communications at any time by 
-                contacting us or using the unsubscribe link in our emails.
+                We may update this Privacy Policy from time to time. Any changes will be reflected on 
+                this page with an updated revision date.
               </p>
             </section>
 
+            {/* Section 9 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">Contact Us</h2>
+              <h2 className="font-display text-xl text-forest">9. Contact Us</h2>
               <p>
-                If you have any questions about this Privacy Policy, please contact us at:
+                If you have questions about this Privacy Policy or how your information is handled, 
+                please contact us:
               </p>
               <p>
+                <strong>Email:</strong>{" "}
                 <a 
                   href="mailto:info@thecomfortbond.com" 
-                  className="text-sage hover:text-forest transition-colors"
+                  className="text-sage hover:text-forest underline transition-colors"
                 >
                   info@thecomfortbond.com
+                </a>
+              </p>
+              <p>
+                <strong>Website:</strong>{" "}
+                <a 
+                  href="https://thecomfortbond.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sage hover:text-forest underline transition-colors"
+                >
+                  https://thecomfortbond.com
                 </a>
               </p>
             </section>
