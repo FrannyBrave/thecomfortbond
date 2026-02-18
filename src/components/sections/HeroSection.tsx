@@ -18,7 +18,7 @@ export const HeroSection = () => {
     }} />
       
       {/* Dark Overlay - 60% opacity */}
-      <div className="absolute inset-0 bg-forest/60" />
+      <div className="absolute inset-0 bg-forest/65" />
 
       {/* Hero Content */}
       <div className="section-container relative z-10 pt-20">
@@ -33,7 +33,7 @@ export const HeroSection = () => {
           duration: 1,
           delay: 0.2,
           ease: "easeOut"
-        }} className="inline-block font-serif text-lg md:text-xl lg:text-2xl text-cream font-semibold tracking-widest bg-forest/60 backdrop-blur-sm rounded-[14px] px-4 py-2.5 mb-4">The Comfort Bond™ — Nurturing Comfort, Inspiring Connection.</motion.p>
+        }} className="inline-block font-serif text-base md:text-lg lg:text-xl text-cream font-semibold tracking-[0.02em] bg-forest/60 backdrop-blur-sm border border-gold/50 rounded-xl px-4 py-1.5 mb-4 shadow-sm">The Comfort Bond™ — Nurturing Comfort, Inspiring Connection.</motion.p>
 
           <motion.h1 initial={{
           opacity: 0,
