@@ -57,7 +57,7 @@ export const HeroSection = () => {
           duration: 1,
           delay: 0.6,
           ease: "easeOut"
-        }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-12">Premium, done-for-you engagement kits for senior living teams —designed to create comfort and meaningful connection with less prep.</motion.p>
+        }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-12">Premium, done-for-you engagement kits for senior living teams—designed to create calm, meaningful connection in group settings.</motion.p>
 
           <motion.div initial={{
           opacity: 0,
