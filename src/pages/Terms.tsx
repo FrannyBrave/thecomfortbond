@@ -68,8 +68,8 @@ const Terms = () => {
               <p>Delivery is typically instant after purchase via email and/or a download page.</p>
               <p>
                 If you do not receive your download, please contact us at{" "}
-                <a href="mailto:support@thecomfortbond.com" className="text-sage hover:text-forest underline transition-colors">
-                  support@thecomfortbond.com
+                <a href="mailto:info@thecomfortbond.com" className="text-sage hover:text-forest underline transition-colors">
+                  info@thecomfortbond.com
                 </a>{" "}
                 and we will help.
               </p>
