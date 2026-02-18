@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle, Lightbulb, Users, Music, Leaf } from "lucide-react";
+import { MessageCircle, Lightbulb, Users, Music, Leaf, ArrowRight } from "lucide-react";
 
 const steps = [
 {
@@ -88,7 +88,6 @@ export const MethodologySection = () => {
           <div className="relative flex justify-between items-end px-4">
             {steps.map((step, index) => {
               const Icon = step.icon;
-              // Create arc effect: step 3 (index 2) is highest
               const elevations = [0, -20, -40, -20, 0];
               const elevation = elevations[index];
               const scale = step.isHighlight ? 1.1 : 1;
@@ -102,7 +101,6 @@ export const MethodologySection = () => {
                   className="flex flex-col items-center text-center relative z-10"
                   style={{ transform: `translateY(${elevation}px) scale(${scale})` }}>
 
-                  {/* Icon Circle */}
                   <div
                     className={`
                       w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center mb-4
@@ -110,30 +108,29 @@ export const MethodologySection = () => {
                       ${step.isHighlight ?
                     'bg-terracotta text-cream border-4 border-terracotta shadow-lg shadow-terracotta/20' :
                     'bg-cream-dark text-forest border-2 border-sage/40'}
-                    `
-                    }>
-
+                    `}>
                     <Icon className={`${step.isHighlight ? 'w-8 h-8 lg:w-10 lg:h-10' : 'w-6 h-6 lg:w-8 lg:h-8'}`} />
                   </div>
 
-                  {/* Step Title */}
                   <h3
                     className={`
                       font-serif text-lg lg:text-xl font-semibold mb-1
                       ${step.isHighlight ? 'text-terracotta' : 'text-forest'}
                     `}>
-
                     {step.title}
                   </h3>
 
-                  {/* Subtext */}
-                  <p className="font-sans text-xs lg:text-sm text-forest/70 max-w-[120px] lg:max-w-[140px]">
+                  <p className="font-sans text-xs lg:text-sm text-forest max-w-[120px] lg:max-w-[140px]">
                     {step.subtext}
                   </p>
                 </motion.div>);
-
             })}
           </div>
+
+          {/* Diagram Caption */}
+          <p className="text-center font-sans text-sm text-forest/80 mt-6 italic">
+            Build energy → Peak connection → Gentle close
+          </p>
         </motion.div>
 
         {/* Mobile: Vertical Timeline Layout */}
@@ -183,7 +180,7 @@ export const MethodologySection = () => {
 
                       {step.title}
                     </h3>
-                    <p className="font-sans text-sm text-forest/70">
+                    <p className="font-sans text-sm text-forest">
                       {step.subtext}
                     </p>
                   </div>
@@ -194,14 +191,44 @@ export const MethodologySection = () => {
         </motion.div>
 
         {/* Supporting Copy */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-          className="mt-16 md:mt-20 max-w-[700px] mx-auto text-center font-sans text-base md:text-lg text-forest/80 leading-relaxed">
+          className="mt-14 md:mt-18 max-w-[640px] mx-auto text-center">
 
-          Most activity kits focus on just one moment. The Comfort Bond™ is designed as a complete engagement experience. Our five-step flow gently guides participants from conversation and focus, through joyful connection, and finally into a calm, settling close — creating a balanced and facilitator-friendly hour of engagement.
-        </motion.p>
+          <p className="font-sans text-base md:text-lg text-forest leading-relaxed mb-5">
+            Most activity kits cover one moment. The Comfort Bond™ creates a full, balanced hour of engagement.
+          </p>
+
+          <ul className="font-sans text-sm md:text-base text-forest space-y-2.5 text-left inline-block">
+            <li className="flex items-start gap-2">
+              <span className="text-terracotta mt-0.5">•</span>
+              <span>Guides the room from gentle warm-up → peak connection → calm close</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-terracotta mt-0.5">•</span>
+              <span>Designed for group facilitation with minimal prep</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-terracotta mt-0.5">•</span>
+              <span>Flexible pacing—residents set the speed</span>
+            </li>
+          </ul>
+
+          {/* Secondary CTA */}
+          <a
+            href="#products"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-flex items-center gap-1.5 mt-8 font-sans text-sm md:text-base text-terracotta hover:text-terracotta/80 transition-colors font-medium"
+          >
+            See the Kits
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </motion.div>
       </div>
     </section>);
 
