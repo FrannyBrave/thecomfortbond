@@ -35,7 +35,7 @@ export const HeroSection = () => {
             duration: 1,
             delay: 0.2,
             ease: "easeOut"
-          }} className="inline-block font-serif text-[13px] md:text-lg lg:text-xl text-cream font-semibold tracking-[0.02em] bg-forest/60 backdrop-blur-sm border border-gold/50 rounded-xl px-3 py-1.5 md:px-4 mb-5 md:mb-4 shadow-sm max-w-[90%] md:max-w-none">The Comfort Bond™ — Nurturing Comfort, Inspiring Connection.</motion.p>
+          }} className="inline-block font-serif text-[13px] md:text-lg lg:text-xl text-cream font-semibold tracking-[0.02em] bg-forest/60 backdrop-blur-sm border border-gold/50 rounded-xl px-3 py-1.5 md:px-4 mb-7 md:mb-4 shadow-sm max-w-[90%] md:max-w-none">The Comfort Bond™ — Nurturing Comfort, Inspiring Connection.</motion.p>
 
             <motion.h1 initial={{
             opacity: 0,
