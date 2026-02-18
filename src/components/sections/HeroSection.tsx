@@ -23,57 +23,63 @@ export const HeroSection = () => {
       {/* Hero Content */}
       <div className="section-container relative z-10 pt-20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 1,
-          delay: 0.2,
-          ease: "easeOut"
-        }} className="inline-block font-serif text-base md:text-lg lg:text-xl text-cream font-semibold tracking-[0.02em] bg-forest/60 backdrop-blur-sm border border-gold/50 rounded-xl px-4 py-1.5 mb-4 shadow-sm">The Comfort Bond™ — Nurturing Comfort, Inspiring Connection.</motion.p>
+          {/* Translucent backdrop for text readability */}
+          <div className="bg-forest/20 backdrop-blur-[2px] rounded-2xl px-4 py-8 md:px-8 md:py-10 mx-auto max-w-3xl">
+            <motion.p initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 1,
+            delay: 0.2,
+            ease: "easeOut"
+          }} className="inline-block font-serif text-[13px] md:text-lg lg:text-xl text-cream font-semibold tracking-[0.02em] bg-forest/60 backdrop-blur-sm border border-gold/50 rounded-xl px-3 py-1.5 md:px-4 mb-5 md:mb-4 shadow-sm max-w-[90%] md:max-w-none">The Comfort Bond™ — Nurturing Comfort, Inspiring Connection.</motion.p>
 
-          <motion.h1 initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 1,
-          delay: 0.4,
-          ease: "easeOut"
-        }} className="font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-cream mb-6 leading-tight">Senior Living Engagement Kits & Activity Guides</motion.h1>
+            <motion.h1 initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 1,
+            delay: 0.4,
+            ease: "easeOut"
+          }} className="font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-cream mb-6 leading-[1.1] md:leading-tight">Senior Living Engagement Kits & Activity Guides</motion.h1>
 
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 1,
-          delay: 0.6,
-          ease: "easeOut"
-        }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-12">Premium, done-for-you engagement kits for senior living teams — designed to create comfort and meaningful connection with less prep.</motion.p>
+            <motion.p initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 1,
+            delay: 0.6,
+            ease: "easeOut"
+          }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-8 md:mb-12">
+              <span className="hidden md:inline">Premium, done-for-you engagement kits for senior living teams — designed to create comfort and meaningful connection with less prep.</span>
+              <span className="md:hidden">Premium, done-for-you kits designed for comfort, connection, and less prep.</span>
+            </motion.p>
 
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 1,
-          delay: 0.9,
-          ease: "easeOut"
-        }}>
-            <Button variant="cta" size="xl" onClick={scrollToProducts} className="text-white">
-              Shop the Ecosystem
-            </Button>
-          </motion.div>
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 1,
+            delay: 0.9,
+            ease: "easeOut"
+          }}>
+              <Button variant="cta" size="xl" onClick={scrollToProducts} className="text-white">
+                Shop the Ecosystem
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>;
