@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 export const HoneyPotSection = () => {
   const sectionRef = useRef(null);
@@ -19,36 +20,42 @@ export const HoneyPotSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl mx-auto text-center"
         >
-          {/* Headline */}
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-forest mb-6 leading-tight">
-            Struggling with the 4 PM Sundowning Shift?
-          </h2>
+          {/* Card backdrop */}
+          <div className="bg-cream/[0.92] rounded-2xl shadow-md border border-sage/40 px-6 py-10 md:px-10 md:py-12">
+            {/* Icon + Headline */}
+            <div className="flex items-center justify-center gap-2.5 mb-4">
+              <Download className="text-forest w-6 h-6 md:w-7 md:h-7 shrink-0" strokeWidth={2} />
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-forest leading-tight">
+                Struggling with the 4 PM Sundowning Shift?
+              </h2>
+            </div>
 
-          {/* Supporting Copy */}
-          <p className="font-sans text-lg md:text-xl text-forest/90 mb-10 leading-relaxed">
-            Download our Free Engagement Pack, including ready-to-print activity cards for instant connection.
-          </p>
+            {/* Supporting Copy */}
+            <p className="font-sans text-lg md:text-xl text-forest mb-6 leading-relaxed">
+              Download our Free Engagement Pack, including ready-to-print activity cards for instant connection.
+            </p>
 
-          {/* CTA Button - External Link */}
-          <Button
-            asChild
-            variant="cta"
-            size="xl"
-            className="w-full sm:w-auto min-w-[280px] text-lg"
-          >
-            <a
-              href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
-              target="_blank"
-              rel="noopener noreferrer"
+            {/* CTA Button */}
+            <Button
+              asChild
+              variant="cta"
+              size="xl"
+              className="w-full sm:w-auto min-w-[280px] text-lg"
             >
-              Download Free Sample
-            </a>
-          </Button>
+              <a
+                href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Free Sample
+              </a>
+            </Button>
 
-          {/* Reassurance Text */}
-          <p className="mt-6 text-sm text-forest/70 font-sans">
-            Instant download. No credit card required.
-          </p>
+            {/* Reassurance Text */}
+            <p className="mt-4 text-sm text-forest font-sans">
+              Instant download. No credit card required.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
