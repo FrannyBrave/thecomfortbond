@@ -22,42 +22,31 @@ export const FooterSection = () => {
             />
           </button>
 
-          {/* Support Email */}
-          <p className="text-sm text-forest">
-            Support:{" "}
+          {/* Support & Links */}
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
             <a
               href="mailto:info@thecomfortbond.com"
-              className="underline underline-offset-4 hover:opacity-70 transition-opacity"
+              className="text-forest hover:opacity-70 transition-opacity"
             >
-              info@thecomfortbond.com
+              Support
             </a>
-          </p>
-
-          {/* Links */}
-          <div className="flex items-center gap-6">
             <a
               href="/privacy-policy"
-              className="text-sm text-forest hover:opacity-70 transition-opacity"
+              className="text-forest hover:opacity-70 transition-opacity"
             >
               Privacy Policy
-            </a>
-            <span className="text-forest/30">|</span>
-            <a
-              href="/terms"
-              className="text-sm text-forest hover:opacity-70 transition-opacity"
-            >
-              Terms
             </a>
           </div>
 
           {/* Copyright */}
-          <p className="text-sm text-forest/80">
+          <p className="text-sm text-forest">
             © 2026 The Comfort Bond. Nurturing Comfort, Inspiring Connection.
           </p>
 
           {/* Legal Disclaimer */}
-          <p className="text-xs text-forest/60 max-w-2xl leading-relaxed">
-            The Comfort Bond™ products are for recreational and life enrichment purposes only. Not a medical device.
+          <p className="text-xs text-forest/70 max-w-2xl leading-relaxed">
+            The Comfort Bond™ products are designed for recreational and life enrichment purposes only. 
+            They are not medical devices and are not intended to diagnose, treat, or prevent any medical condition.
           </p>
         </div>
       </div>

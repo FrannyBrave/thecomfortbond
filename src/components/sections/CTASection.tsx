@@ -14,13 +14,6 @@ export const CTASection = () => {
     }
   };
 
-  const scrollToHoneyPot = () => {
-    const element = document.querySelector("#honey-pot");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="section-padding relative overflow-hidden" ref={ref}>
       {/* Background gradient */}
@@ -41,8 +34,8 @@ export const CTASection = () => {
             Ready to Bring Comfort to Your Community?
           </h2>
           <p className="body-lg text-cream/80 mb-10 max-w-2xl mx-auto">
-            Premium, ready-to-run engagement kits designed for calm, meaningful 
-            connection in senior living communities.
+            Join hundreds of care professionals who have discovered the difference 
+            that thoughtful sensory products can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
@@ -51,20 +44,19 @@ export const CTASection = () => {
               onClick={scrollToProducts}
               className="bg-terracotta hover:bg-terracotta/90"
             >
-              Shop the Bundle
+              Shop the Collection
             </Button>
             <Button
               variant="cta-outline"
               size="xl"
               className="border-cream text-cream hover:bg-cream hover:text-forest"
-              onClick={scrollToHoneyPot}
+              asChild
             >
-              Get the Free Sample
+              <a href="mailto:info@thecomfortbond.com">
+                Contact Us
+              </a>
             </Button>
           </div>
-          <p className="text-cream/60 text-sm mt-6 tracking-wide">
-            Instant digital download • No account needed
-          </p>
         </motion.div>
       </div>
     </section>
