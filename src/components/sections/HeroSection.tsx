@@ -23,6 +23,18 @@ export const HeroSection = () => {
       {/* Hero Content */}
       <div className="section-container relative z-10 pt-20">
         <div className="max-w-4xl mx-auto text-center">
+          <motion.p initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 1,
+          delay: 0.2,
+          ease: "easeOut"
+        }} className="font-serif text-lg md:text-xl lg:text-2xl text-gold mb-4 tracking-wide">The Comfort Bond™ — Nurturing Comfort, Inspiring Connection.</motion.p>
+
           <motion.h1 initial={{
           opacity: 0,
           y: 20
@@ -31,9 +43,9 @@ export const HeroSection = () => {
           y: 0
         }} transition={{
           duration: 1,
-          delay: 0.3,
+          delay: 0.4,
           ease: "easeOut"
-        }} className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-cream mb-6 leading-tight">Nurturing Comfort, Inspiring Connection.</motion.h1>
+        }} className="font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-cream mb-6 leading-tight">Senior Living Engagement Kits & Activity Guides</motion.h1>
 
           <motion.p initial={{
           opacity: 0,
@@ -45,7 +57,7 @@ export const HeroSection = () => {
           duration: 1,
           delay: 0.6,
           ease: "easeOut"
-        }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-12">A complete engagement ecosystem for Senior Living communities and Engagement Professionals.</motion.p>
+        }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-12">Premium, done-for-you engagement kits for senior living teams—designed to create calm, meaningful connection in group settings.</motion.p>
 
           <motion.div initial={{
           opacity: 0,
