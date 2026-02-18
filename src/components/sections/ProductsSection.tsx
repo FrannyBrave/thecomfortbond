@@ -8,7 +8,7 @@ import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
 import serenityImage from "@/assets/serenity-video-suite.png";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { FileText, Users, Zap } from "lucide-react";
 
 const featuredProduct = {
   id: "bundle",
@@ -33,6 +33,7 @@ const products = [
   {
     id: 1,
     name: "Road Trip Kit",
+    description: "Stories, maps, and classic Americana prompts.",
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
@@ -41,6 +42,7 @@ const products = [
   {
     id: 2,
     name: "Nostalgia Kit",
+    description: "1950s–1990s memory lane moments.",
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
@@ -48,7 +50,8 @@ const products = [
   },
   {
     id: 3,
-    name: "Kitchen Kit",
+    name: "Comfort Food Kit",
+    description: "Kitchen memories + cozy conversation.",
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
@@ -56,7 +59,8 @@ const products = [
   },
   {
     id: 4,
-    name: "Holiday Kit",
+    name: "Holiday Traditions Kit",
+    description: "Seasonal prompts & shared rituals.",
     price: "$24",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
@@ -65,6 +69,7 @@ const products = [
   {
     id: 5,
     name: "Serenity Video Suite",
+    description: "Calming nature scenes for gentle resets.",
     price: "$34",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
@@ -152,7 +157,6 @@ export const ProductsSection = () => {
                     className="inline-flex items-center justify-center gap-2"
                   >
                     Buy Full Bundle
-                    <ExternalLink size={18} />
                   </a>
                 </Button>
               </div>
@@ -160,8 +164,27 @@ export const ProductsSection = () => {
           </div>
         </motion.div>
 
+        {/* What You Receive Strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 mb-12 py-6 border-y border-sage/20"
+        >
+          {[
+            { icon: FileText, label: "Print-ready PDFs" },
+            { icon: Users, label: "Facilitator-friendly" },
+            { icon: Zap, label: "Instant access" },
+          ].map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-center gap-2.5">
+              <Icon className="w-5 h-5 text-gold" strokeWidth={2} />
+              <span className="font-sans text-sm font-medium text-forest">{label}</span>
+            </div>
+          ))}
+        </motion.div>
+
         {/* A La Carte Products Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -170,47 +193,46 @@ export const ProductsSection = () => {
               transition={{ duration: 0.6, delay: 0.3 + 0.1 * index }}
               className="group"
             >
-              <div className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+              <div className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                 {/* Product Image */}
                 <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
-                  {product.image ? (
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-full object-cover object-top"
-                    />
-                  ) : (
-                    <span className="text-sage/50 font-serif text-sm text-center px-4">
-                      {product.name} Image
-                    </span>
-                  )}
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
 
                 {/* Product Info */}
                 <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="font-serif text-lg font-semibold text-forest mb-2">
+                  <h3 className="font-serif text-lg font-semibold text-forest mb-1">
                     {product.name}
                   </h3>
+                  <p className="font-sans text-sm text-forest/80 mb-4 leading-snug">
+                    {product.description}
+                  </p>
                   <div className="mt-auto">
-                    <span className="text-2xl font-serif font-bold text-forest block mb-4">
+                    <span className="text-2xl font-serif font-bold text-forest block mb-1">
                       {product.price}
                     </span>
+                    <p className="font-sans text-xs text-forest/60 mb-4">
+                      Instant digital download.
+                    </p>
                     <Button
                       variant="cta"
                       size="default"
-                      className="w-full"
+                      className="w-full h-11"
                       asChild
                     >
                       <a
                         href={product.checkoutUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2"
+                        className="inline-flex items-center justify-center"
                       >
                         {product.name === "Serenity Video Suite"
                           ? "Purchase Suite"
                           : "Purchase Kit"}
-                        <ExternalLink size={16} />
                       </a>
                     </Button>
                   </div>
