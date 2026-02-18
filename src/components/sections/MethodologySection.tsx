@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle, Lightbulb, Users, Music, Leaf } from "lucide-react";
+import { MessageCircle, Lightbulb, Users, Music, Leaf, ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -84,6 +84,11 @@ export const MethodologySection = () => {
           {/* Connecting Line */}
           <div className="absolute top-1/2 left-[10%] right-[10%] h-1 bg-sage/50 -translate-y-1/2 rounded-full" />
           
+          {/* Caption under the line */}
+          <p className="absolute top-[calc(50%+6px)] left-1/2 -translate-x-1/2 font-sans text-xs text-forest/60 tracking-wide whitespace-nowrap">
+            Build energy → Peak connection → Gentle close
+          </p>
+          
           {/* Steps Container */}
           <div className="relative flex justify-between items-end px-4">
             {steps.map((step, index) => {
@@ -127,7 +132,7 @@ export const MethodologySection = () => {
                   </h3>
 
                   {/* Subtext */}
-                  <p className="font-sans text-xs lg:text-sm text-forest/70 max-w-[120px] lg:max-w-[140px]">
+                  <p className="font-sans text-xs lg:text-sm text-forest max-w-[120px] lg:max-w-[140px]">
                     {step.subtext}
                   </p>
                 </motion.div>
@@ -183,7 +188,7 @@ export const MethodologySection = () => {
                     >
                       {step.title}
                     </h3>
-                    <p className="font-sans text-sm text-forest/70">
+                    <p className="font-sans text-sm text-forest">
                       {step.subtext}
                     </p>
                   </div>
@@ -194,14 +199,40 @@ export const MethodologySection = () => {
         </motion.div>
 
         {/* Supporting Copy */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-          className="mt-16 md:mt-20 max-w-[700px] mx-auto text-center font-sans text-base md:text-lg text-forest/80 leading-relaxed"
+          className="mt-16 md:mt-20 max-w-[700px] mx-auto text-center font-sans"
         >
-          Most activity kits focus on just one moment. The Comfort Bond™ is designed as a complete engagement experience. Our five-step flow gently guides participants from conversation and focus, through joyful connection, and finally into a calm, settling close — creating a balanced and facilitator-friendly hour of engagement.
-        </motion.p>
+          <p className="text-base md:text-lg text-forest leading-relaxed mb-6">
+            Most activity kits cover one moment. The Comfort Bond™ creates a full, balanced hour of engagement.
+          </p>
+          <ul className="text-left max-w-md mx-auto space-y-3 text-forest text-sm md:text-base mb-8">
+            <li className="flex items-start gap-2">
+              <span className="text-terracotta mt-0.5">•</span>
+              Guides the room from gentle warm-up → peak connection → calm close
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-terracotta mt-0.5">•</span>
+              Designed for group facilitation with minimal prep
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-terracotta mt-0.5">•</span>
+              Flexible pacing—residents set the speed
+            </li>
+          </ul>
+          <a
+            href="#products"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("products")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="inline-flex items-center gap-1.5 font-sans text-sm font-semibold text-terracotta hover:text-terracotta/80 transition-colors"
+          >
+            See the Kits <ArrowRight className="w-4 h-4" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );
