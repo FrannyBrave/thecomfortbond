@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+
 
 export const HoneyPotSection = () => {
   const sectionRef = useRef(null);
@@ -24,7 +24,6 @@ export const HoneyPotSection = () => {
           <div className="bg-cream/[0.92] rounded-2xl shadow-md border border-sage/40 px-6 py-10 md:px-10 md:py-12">
             {/* Icon + Headline */}
             <div className="flex items-center justify-center gap-2.5 mb-4">
-              <Download className="text-forest w-6 h-6 md:w-7 md:h-7 shrink-0" strokeWidth={2} />
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-forest leading-tight">
                 Struggling with the 4 PM Sundowning Shift?
               </h2>
