@@ -51,7 +51,7 @@ export const CTASection = () => {
               onClick={scrollToProducts}
               className="bg-terracotta hover:bg-terracotta/90"
             >
-              Shop the Bundle
+              Shop the Kits
             </Button>
             <Button
               variant="cta-outline"

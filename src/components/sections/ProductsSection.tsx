@@ -12,7 +12,7 @@ import { FileText, Users, Zap } from "lucide-react";
 
 const featuredProduct = {
   id: "bundle",
-  name: "The Full Ecosystem Bundle",
+  name: "The Full Kit Bundle",
   description:
     "Everything you need for calm, engaging, facilitator-friendly activity sessions — all in one place.",
   includes: [
@@ -92,10 +92,10 @@ export const ProductsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="heading-lg text-forest mb-4">
-            Choose Your Engagement Ecosystem
+            Choose Your Kit
           </h2>
           <p className="body-md text-forest/70 max-w-2xl mx-auto">
-            Flexible options for your community's unique needs.
+            Individual kits or the full bundle — all instant digital downloads.
           </p>
         </motion.div>
 
