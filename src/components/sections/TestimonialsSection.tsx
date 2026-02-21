@@ -7,7 +7,7 @@ const testimonials = [
   {
     quote: "The Nostalgia Kit has been a complete game-changer for our memory care programming. It requires zero prep time on my end, and the 1950s memory lane prompts spark the most beautiful conversations among our residents.",
     author: "Jennifer Walsh",
-    role: "Activity Director, Meadowbrook Senior Living"
+    role: "Activity Director"
   },
   {
     quote: "Purchasing the Full Ecosystem Bundle is the best investment we've made for our community this year. My staff loves how accessible the activities are, and the Serenity Video Suite provides such a gentle, calming reset for the whole room.",
