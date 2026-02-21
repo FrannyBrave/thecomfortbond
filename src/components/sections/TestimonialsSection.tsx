@@ -11,7 +11,7 @@ const testimonials = [
     facility: "Maplewood Memory Care, Austin TX"
   },
   {
-    quote: "Purchasing the Full Ecosystem Bundle is the best investment we've made for our community this year. My staff loves how accessible the activities are, and the Serenity Video Suite provides such a gentle, calming reset for the whole room.",
+    quote: "Purchasing the Full Kit Bundle is the best investment we've made for our community this year. My staff loves how accessible the activities are, and the Serenity Video Suite provides such a gentle, calming reset for the whole room.",
     author: "Marcus Rivera",
     role: "Life Enrichment Manager",
     facility: "Harmony Senior Living, Denver CO"
