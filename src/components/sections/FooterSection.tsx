@@ -33,6 +33,15 @@ export const FooterSection = () => {
             </a>
           </p>
 
+          {/* Trust Statement */}
+          <p className="text-xs text-forest/70 max-w-xl leading-relaxed">
+            🛡️ We've Got You — All sales are final on digital downloads, but if you have any trouble accessing your purchase, we'll make it right. Contact us at{" "}
+            <a href="mailto:info@thecomfortbond.com" className="underline underline-offset-2 hover:opacity-70 transition-opacity">
+              info@thecomfortbond.com
+            </a>{" "}
+            within 7 days.
+          </p>
+
           {/* Links */}
           <div className="flex items-center gap-6">
             <a
