@@ -54,8 +54,22 @@ export const Navigation = () => {
             </span>
           </a>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
+          {/* Desktop Nav Links + CTA */}
+          <div className="hidden md:flex items-center gap-8">
+            {[
+              { label: "How It Works", href: "#methodology" },
+              { label: "Kits", href: "#products" },
+              { label: "FAQ", href: "#faq" },
+              { label: "Free Sample", href: "#free-sample" },
+            ].map((link) => (
+              <button
+                key={link.href}
+                onClick={() => scrollToSection(link.href)}
+                className="font-sans text-sm font-medium text-forest hover:text-terracotta transition-colors"
+              >
+                {link.label}
+              </button>
+            ))}
             <Button
               variant="cta"
               size="lg"
@@ -84,7 +98,21 @@ export const Navigation = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-cream border-t border-sage/20 pb-6"
           >
-            <div className="flex flex-col gap-4 pt-4">
+            <div className="flex flex-col gap-2 pt-4">
+              {[
+                { label: "How It Works", href: "#methodology" },
+                { label: "Kits", href: "#products" },
+                { label: "FAQ", href: "#faq" },
+                { label: "Free Sample", href: "#free-sample" },
+              ].map((link) => (
+                <button
+                  key={link.href}
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-left font-sans text-base font-medium text-forest hover:text-terracotta transition-colors px-2 py-2"
+                >
+                  {link.label}
+                </button>
+              ))}
               <div className="pt-2 px-2">
                 <Button
                   variant="cta"
