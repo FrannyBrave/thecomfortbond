@@ -49,20 +49,20 @@ export const CTASection = () => {
               variant="cta"
               size="xl"
               onClick={scrollToProducts}
-              className="bg-terracotta hover:bg-terracotta/90"
+              className="bg-cream text-forest hover:bg-cream/90"
             >
               Shop the Kits
             </Button>
             <Button
-              variant="cta-outline"
+              variant="cta"
               size="xl"
-              className="border-cream text-cream hover:bg-cream hover:text-forest"
+              className="bg-terracotta text-cream hover:bg-terracotta/90"
               onClick={scrollToHoneyPot}
             >
               Get the Free Sample
             </Button>
           </div>
-          <p className="text-sm text-cream/60 mt-6 tracking-wide">
+          <p className="text-sm text-cream mt-6 tracking-wide">
             Instant digital download • No account needed
           </p>
         </motion.div>
