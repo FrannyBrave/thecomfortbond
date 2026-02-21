@@ -49,14 +49,14 @@ export const CTASection = () => {
               variant="cta"
               size="xl"
               onClick={scrollToProducts}
-              className="bg-cream text-forest hover:bg-cream/90"
+              className="!bg-[hsl(var(--cream))] !text-[hsl(var(--forest))] hover:!bg-[hsl(40,33%,88%)]"
             >
               Shop the Kits
             </Button>
             <Button
               variant="cta"
               size="xl"
-              className="bg-terracotta text-cream hover:bg-terracotta/90"
+              className="!bg-[hsl(var(--terracotta))] !text-[hsl(var(--cream))] hover:!bg-[hsl(18,46%,50%)]"
               onClick={scrollToHoneyPot}
             >
               Get the Free Sample
