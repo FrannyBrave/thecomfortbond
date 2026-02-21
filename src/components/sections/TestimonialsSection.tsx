@@ -7,17 +7,20 @@ const testimonials = [
   {
     quote: "The Nostalgia Kit has been a complete game-changer for our memory care programming. It requires zero prep time on my end, and the 1950s memory lane prompts spark the most beautiful conversations among our residents.",
     author: "Jennifer Walsh",
-    role: "Activity Director"
+    role: "Activity Director",
+    facility: "Maplewood Memory Care, Austin TX"
   },
   {
     quote: "Purchasing the Full Ecosystem Bundle is the best investment we've made for our community this year. My staff loves how accessible the activities are, and the Serenity Video Suite provides such a gentle, calming reset for the whole room.",
     author: "Marcus Rivera",
-    role: "Life Enrichment Manager"
+    role: "Life Enrichment Manager",
+    facility: "Harmony Senior Living, Denver CO"
   },
   {
     quote: "Finding ways to genuinely connect during visits was getting difficult, but the Comfort Food Kit changed everything. We spend our afternoons sharing old family recipes and kitchen stories now. It has brought so much warmth back to our time together.",
     author: "Linda Chen",
-    role: "Family Caregiver"
+    role: "Memory Care Activity Coordinator",
+    facility: "Sunrise Gardens Assisted Living"
   }
 ];
 
@@ -51,13 +54,15 @@ export const TestimonialsSection = () => {
               transition={{ duration: 0.6, delay: index * 0.12 }}
               className="bg-card rounded-xl p-8 shadow-sm border border-sage/20 relative"
             >
-              <Quote className="w-7 h-7 text-terracotta/40 mb-4" strokeWidth={1.5} />
+              <Quote className="w-7 h-7 text-terracotta/40 mb-3" strokeWidth={1.5} />
+              <p className="text-terracotta font-sans text-sm tracking-wide mb-3">★★★★★</p>
               <p className="font-serif text-forest/85 leading-relaxed mb-6 italic">
                 "{testimonial.quote}"
               </p>
               <div className="border-t border-sage/20 pt-4">
                 <p className="font-sans font-semibold text-sm text-forest">{testimonial.author}</p>
                 <p className="font-sans text-xs text-forest/60">{testimonial.role}</p>
+                <p className="font-sans text-xs text-forest/40 mt-0.5">{testimonial.facility}</p>
               </div>
             </motion.div>
           ))}
