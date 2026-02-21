@@ -10,7 +10,7 @@ const testimonials = [
     role: "Activity Director, Meadowbrook Senior Living"
   },
   {
-    quote: "The facilitator guides make it so easy for my team to run meaningful sessions — even new staff feel confident from day one. We use them every single week.",
+    quote: "Finding ways to genuinely connect during visits was getting difficult, but the Comfort Food Kit changed everything. We spend our afternoons sharing old family recipes and kitchen stories now.",
     author: "Marcus Rivera",
     role: "Life Enrichment Manager, Harmony Gardens"
   },
