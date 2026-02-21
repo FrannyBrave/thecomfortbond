@@ -10,29 +10,29 @@ import {
 
 const faqs = [
   {
-    question: "Are these products safe for residents with dementia?",
+    question: "Is this a monthly subscription?",
     answer:
-      "Yes, all products are designed with safety as the top priority. Materials are non-toxic, there are no small parts, and each item is tested for durability. We recommend supervision as with any engagement activity.",
+      "No. All of our engagement kits and the Full Ecosystem Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to use forever.",
   },
   {
-    question: "Can products be cleaned and sanitized?",
+    question: "What file format will I receive?",
     answer:
-      "Absolutely. All products feature removable, machine-washable covers or can be wiped down with standard facility cleaning solutions. We provide detailed care instructions with every order.",
+      "Your kits are delivered as high-quality PDF files. The formatting, text size, and images look perfect on any computer or device.",
   },
   {
-    question: "Do you offer bulk pricing for communities?",
+    question: "Can I print these materials?",
     answer:
-      "Yes, we offer tiered pricing for orders of 10+ items and work directly with purchasing departments. Contact us at orders@thecomfortbond.com for a customized quote.",
+      "Yes! The kits are specifically designed to be printer-friendly on standard 8.5\" x 11\" paper. You can print BINGO cards, Trivia sheets, and Conversation prompts to hand out directly to residents.",
   },
   {
-    question: "What is your return policy?",
+    question: "Are these kits reusable?",
     answer:
-      "We stand behind our products with a 30-day satisfaction guarantee. If a product doesn't meet your expectations, we'll work with you to make it right or provide a full refund.",
+      "Yes. Because these are digital downloads, you can print the materials as many times as you need. You can revisit the activities year after year.",
   },
   {
-    question: "How quickly do orders ship?",
+    question: "How quickly will I get access?",
     answer:
-      "Standard orders ship within 2-3 business days. We also offer expedited shipping options. Bulk orders may require additional processing time—we'll provide a timeline when you place your order.",
+      "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be playing with your group five minutes later.",
   },
 ];
 
@@ -41,7 +41,7 @@ export const FAQSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="faq" className="section-padding bg-cream-dark" ref={ref}>
+    <section id="faq" className="section-padding bg-sage/15" ref={ref}>
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -49,12 +49,15 @@ export const FAQSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <span className="inline-block text-terracotta font-sans text-sm uppercase tracking-widest mb-4">
+          <span className="inline-block text-gold font-sans text-sm uppercase tracking-widest mb-4">
             Questions & Answers
           </span>
-          <h2 className="heading-lg text-forest mb-6">
+          <h2 className="heading-lg text-forest mb-4">
             Frequently Asked Questions
           </h2>
+          <p className="body-md text-forest/70">
+            Everything you need to know before you buy.
+          </p>
         </motion.div>
 
         <motion.div
