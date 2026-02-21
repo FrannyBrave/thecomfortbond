@@ -15,7 +15,7 @@ const testimonials = [
     role: "Life Enrichment Manager, Harmony Gardens"
   },
   {
-    quote: "Purchasing the Full Ecosystem Bundle is the best investment we've made for our community this year. My staff loves how accessible the activities are, and the Serenity Video Suite provides such a gentle, calming reset for the whole room.",
+    quote: "Finding ways to genuinely connect during visits was getting difficult, but the Comfort Food Kit changed everything. We spend our afternoons sharing old family recipes and kitchen stories now. It has brought so much warmth back to our time together.",
     author: "Linda Chen",
     role: "Life Enrichment Assistant, Sunrise Memory Care"
   }
