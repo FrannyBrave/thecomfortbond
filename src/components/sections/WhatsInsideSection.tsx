@@ -50,7 +50,7 @@ export const WhatsInsideSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-5 gap-4 max-w-5xl mx-auto">
           {activities.map((activity, index) => {
             const Icon = activity.icon;
             return (
