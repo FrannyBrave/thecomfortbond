@@ -2,28 +2,28 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Quote } from "lucide-react";
-const testimonials = [{
-  quote: "The weighted wrap has become an essential tool for our memory care unit. It helps residents transition through sundowning with much less distress.",
-  author: "Sarah Mitchell",
-  role: "Activity Director",
-  organization: "Sunrise Memory Care"
-}, {
-  quote: "We've seen remarkable moments of calm and connection. One resident who rarely engages now reaches for her comfort companion every afternoon.",
-  author: "Dr. James Chen",
-  role: "Medical Director",
-  organization: "Harmony Senior Living"
-}, {
-  quote: "Finally, products that actually work. My team no longer struggles to find meaningful engagement tools—these do exactly what they promise.",
-  author: "Maria Santos",
-  role: "Life Enrichment Manager",
-  organization: "Golden Years Community"
-}];
+
+const testimonials = [
+  {
+    quote: "These kits have completely transformed our afternoon programming. Residents who used to disengage are now actively participating and sharing stories with each other.",
+    author: "Jennifer Walsh",
+    role: "Activity Director, Meadowbrook Senior Living"
+  },
+  {
+    quote: "The facilitator guides make it so easy for my team to run meaningful sessions — even new staff feel confident from day one. We use them every single week.",
+    author: "Marcus Rivera",
+    role: "Life Enrichment Manager, Harmony Gardens"
+  },
+  {
+    quote: "I've tried dozens of engagement tools over the years. Nothing has sparked as much genuine joy and conversation as The Comfort Bond kits. They just work.",
+    author: "Linda Chen",
+    role: "Life Enrichment Assistant, Sunrise Memory Care"
+  }
+];
+
 export const TestimonialsSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: true,
-    margin: "-100px"
-  });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section className="section-padding bg-cream" ref={ref}>
@@ -32,31 +32,32 @@ export const TestimonialsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-14"
         >
-          <h2 className="heading-lg text-forest mb-4">What Professionals Say</h2>
-          <p className="body-lg text-forest/70 max-w-2xl mx-auto">
-            Trusted by activity directors and care professionals across senior living communities.
-          </p>
+          <span className="inline-block text-gold font-sans text-sm uppercase tracking-widest mb-4">
+            Real Feedback
+          </span>
+          <h2 className="heading-lg text-forest">
+            What Activity Directors Are Saying
+          </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-white rounded-xl p-8 shadow-soft relative"
+              transition={{ duration: 0.6, delay: index * 0.12 }}
+              className="bg-card rounded-xl p-8 shadow-sm border border-sage/20 relative"
             >
-              <Quote className="w-8 h-8 text-sage/40 absolute top-6 right-6" />
-              <p className="text-forest/80 mb-6 leading-relaxed italic">
+              <Quote className="w-7 h-7 text-terracotta/40 mb-4" strokeWidth={1.5} />
+              <p className="font-serif text-forest/85 leading-relaxed mb-6 italic">
                 "{testimonial.quote}"
               </p>
               <div className="border-t border-sage/20 pt-4">
-                <p className="font-semibold text-forest">{testimonial.author}</p>
-                <p className="text-sm text-forest/60">{testimonial.role}</p>
-                <p className="text-sm text-forest/50">{testimonial.organization}</p>
+                <p className="font-sans font-semibold text-sm text-forest">{testimonial.author}</p>
+                <p className="font-sans text-xs text-forest/60">{testimonial.role}</p>
               </div>
             </motion.div>
           ))}
