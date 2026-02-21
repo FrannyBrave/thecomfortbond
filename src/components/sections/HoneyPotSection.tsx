@@ -39,7 +39,7 @@ export const HoneyPotSection = () => {
               asChild
               variant="cta"
               size="xl"
-              className="w-full sm:w-auto min-w-[280px] text-lg !bg-[hsl(var(--cream))] !text-[hsl(var(--forest))] hover:!bg-[hsl(40,33%,88%)]"
+              className="w-full sm:w-auto min-w-[280px] text-lg !bg-[hsl(var(--terracotta))] !text-[hsl(var(--cream))] hover:!bg-[hsl(18,46%,50%)]"
             >
               <a
                 href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
