@@ -48,7 +48,7 @@ export const HeroSection = () => {
             duration: 1,
             delay: 0.4,
             ease: "easeOut"
-          }} className="font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-cream mb-6 leading-[1.1] md:leading-tight">Senior Living Engagement Kits & Activity Guides</motion.h1>
+          }} className="font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-cream mb-6 leading-[1.1] md:leading-tight">Give Your Residents an Hour They'll Look Forward To.</motion.h1>
 
             <motion.p initial={{
             opacity: 0,
@@ -61,8 +61,7 @@ export const HeroSection = () => {
             delay: 0.6,
             ease: "easeOut"
           }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-8 md:mb-12">
-              <span className="hidden md:inline">Premium, done-for-you engagement kits for senior living teams — designed to create comfort and meaningful connection with less prep.</span>
-              <span className="md:hidden">Premium, done-for-you kits designed for comfort, connection, and less prep.</span>
+              Done-for-you activity kits for senior living teams — zero prep, full engagement, genuine connection.
             </motion.p>
 
             <motion.div initial={{
@@ -77,7 +76,7 @@ export const HeroSection = () => {
             ease: "easeOut"
           }}>
               <Button variant="cta" size="xl" onClick={scrollToProducts} className="text-white">
-                Shop the Ecosystem
+                See the Kits
               </Button>
             </motion.div>
           </div>
