@@ -1,24 +1,34 @@
-import { Brain, Leaf, Heart, ArrowRight } from "lucide-react";
+import { Grid3X3, HelpCircle, Link, MessageCircle, Music, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 const pillars = [
   {
-    icon: Brain,
-    title: "Mental Engagement",
-    description: "Thoughtful prompts that invite focus, recall, and satisfying conversation."
+    icon: Grid3X3,
+    title: "Themed BINGO Game",
+    description: "Familiar rules with a fresh thematic twist. Easy to facilitate with zero prep time.",
   },
   {
-    icon: Leaf,
-    title: "Soothing Atmospheres",
-    description: "Gentle visuals and soundscapes that support a calm room tone."
+    icon: HelpCircle,
+    title: "Trivia Time",
+    description: "Designed to be accessible and low-pressure, focused entirely on celebrating what your group already knows.",
   },
   {
-    icon: Heart,
-    title: "Meaningful Connection",
-    description: "Designed to bring residents, families, and teams into shared moments."
-  }
+    icon: Link,
+    title: "Word Link Game",
+    description: "A gentle, collaborative icebreaker that gets everyone working together on simple, satisfying word associations.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Conversation Card Prompts",
+    description: "Open-ended prompts that bridge past and present, making it easy to draw out beautiful memories.",
+  },
+  {
+    icon: Music,
+    title: "Musical Memory Games",
+    description: "Joyful lyric recall, humming games and more that spark musical memories and joyful singalongs.",
+  },
 ];
 
 export const TrustSignalsSection = () => {
@@ -53,9 +63,9 @@ export const TrustSignalsSection = () => {
           </h2>
         </motion.div>
 
-        {/* Trust Pillars Grid */}
-        <div ref={ref} className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        {/* Five Cards Grid */}
+        <div ref={ref} className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-5 gap-4">
             {pillars.map((pillar, index) => {
               const Icon = pillar.icon;
               return (
@@ -64,17 +74,17 @@ export const TrustSignalsSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/60 rounded-xl p-10 md:p-12 text-center shadow-sm border border-sage/15"
+                  className="bg-white/60 rounded-xl p-6 text-center shadow-sm border border-sage/15"
                 >
-                  <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center">
-                      <Icon className="w-8 h-8 text-forest" strokeWidth={1.5} />
+                  <div className="flex justify-center mb-4">
+                    <div className="w-14 h-14 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center">
+                      <Icon className="w-7 h-7 text-forest" strokeWidth={1.5} />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-forest mb-3">
+                  <h3 className="font-serif text-base font-semibold text-forest mb-2">
                     {pillar.title}
                   </h3>
-                  <p className="text-forest/80 leading-relaxed text-sm">
+                  <p className="font-sans text-sm text-forest/70 leading-relaxed">
                     {pillar.description}
                   </p>
                 </motion.div>
