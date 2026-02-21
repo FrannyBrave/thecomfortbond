@@ -15,7 +15,7 @@ const testimonials = [
     role: "Life Enrichment Manager, Harmony Gardens"
   },
   {
-    quote: "I've tried dozens of engagement tools over the years. Nothing has sparked as much genuine joy and conversation as The Comfort Bond kits. They just work.",
+    quote: "Purchasing the Full Ecosystem Bundle is the best investment we've made for our community this year. My staff loves how accessible the activities are, and the Serenity Video Suite provides such a gentle, calming reset for the whole room.",
     author: "Linda Chen",
     role: "Life Enrichment Assistant, Sunrise Memory Care"
   }
