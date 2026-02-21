@@ -49,9 +49,14 @@ export const Navigation = () => {
               alt="The Comfort Bond" 
               className="h-12 md:h-14 w-auto"
             />
-            <span className="text-xl md:text-2xl font-serif font-semibold text-forest tracking-tight">
-              The Comfort Bond
-            </span>
+            <div className="flex flex-col">
+              <span className="text-xl md:text-2xl font-serif font-semibold text-forest tracking-tight leading-tight">
+                The Comfort Bond
+              </span>
+              <span className="text-[10px] md:text-[11px] font-sans font-light text-forest tracking-wide">
+                Nurturing Comfort, Inspiring Connection
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav Links + CTA */}
