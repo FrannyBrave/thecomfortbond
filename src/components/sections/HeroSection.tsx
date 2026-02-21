@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-hands.jpg";
+import heroBackground from "@/assets/hero-table.png";
 export const HeroSection = () => {
   const scrollToProducts = () => {
     const element = document.querySelector("#products");
