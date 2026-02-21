@@ -17,7 +17,7 @@ const testimonials = [
   {
     quote: "Finding ways to genuinely connect during visits was getting difficult, but the Comfort Food Kit changed everything. We spend our afternoons sharing old family recipes and kitchen stories now. It has brought so much warmth back to our time together.",
     author: "Linda Chen",
-    role: "Life Enrichment Assistant, Sunrise Memory Care"
+    role: "Family Caregiver"
   }
 ];
 
