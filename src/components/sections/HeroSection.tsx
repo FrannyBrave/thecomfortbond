@@ -23,18 +23,8 @@ export const HeroSection = () => {
       {/* Hero Content */}
       <div className="section-container relative z-10 pt-20">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Tagline pill - positioned at top of hero block */}
-          <motion.p initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 1,
-            delay: 0.2,
-            ease: "easeOut"
-          }} className="inline-block font-serif text-[13px] md:text-lg lg:text-xl text-cream font-semibold tracking-[0.02em] bg-forest/60 backdrop-blur-sm border border-gold/50 rounded-xl px-3 py-1.5 md:px-4 mb-6 md:mb-5 shadow-sm max-w-[90%] md:max-w-none">The Comfort Bond™ — Nurturing Comfort, Inspiring Connection.</motion.p>
+
+
 
           {/* Translucent backdrop for text readability */}
           <div className="bg-forest/20 backdrop-blur-[2px] rounded-2xl px-4 py-8 md:px-8 md:py-10 mx-auto max-w-3xl">
