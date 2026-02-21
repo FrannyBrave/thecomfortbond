@@ -10,7 +10,7 @@ const testimonials = [
     role: "Activity Director, Meadowbrook Senior Living"
   },
   {
-    quote: "Finding ways to genuinely connect during visits was getting difficult, but the Comfort Food Kit changed everything. We spend our afternoons sharing old family recipes and kitchen stories now.",
+    quote: "Purchasing the Full Ecosystem Bundle is the best investment we've made for our community this year. My staff loves how accessible the activities are, and the Serenity Video Suite provides such a gentle, calming reset for the whole room.",
     author: "Marcus Rivera",
     role: "Life Enrichment Manager, Harmony Gardens"
   },
