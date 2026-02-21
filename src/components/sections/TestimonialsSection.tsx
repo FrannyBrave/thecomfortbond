@@ -5,7 +5,7 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "These kits have completely transformed our afternoon programming. Residents who used to disengage are now actively participating and sharing stories with each other.",
+    quote: "The Nostalgia Kit has been a complete game-changer for our memory care programming. It requires zero prep time on my end, and the 1950s memory lane prompts spark the most beautiful conversations among our residents.",
     author: "Jennifer Walsh",
     role: "Activity Director, Meadowbrook Senior Living"
   },
