@@ -18,7 +18,7 @@ export const HeroSection = () => {
     }} />
       
       {/* Dark Overlay - 60% opacity */}
-      <div className="absolute inset-0 bg-forest/65" />
+      <div className="absolute inset-0 bg-forest/40" />
 
       {/* Hero Content */}
       <div className="section-container relative z-10 pt-20">
