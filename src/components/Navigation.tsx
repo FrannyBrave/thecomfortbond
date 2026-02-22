@@ -39,16 +39,8 @@ export const Navigation = () => {
       <nav className="section-container">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a
-            href="#"
-            onClick={scrollToTop}
-            className="flex items-center gap-3 py-2"
-          >
-            <img 
-              src={logo} 
-              alt="The Comfort Bond" 
-              className="h-12 md:h-14 w-auto"
-            />
+          <a href="/" onClick={scrollToTop} className="flex items-center gap-3 py-2">
+            <img src={logo} alt="The Comfort Bond" className="h-12 md:h-14 w-auto" />
             <span className="text-xl md:text-2xl font-serif font-semibold text-forest tracking-tight">
               The Comfort Bond
             </span>
@@ -70,11 +62,7 @@ export const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button
-              variant="cta"
-              size="lg"
-              onClick={() => scrollToSection("#products")}
-            >
+            <Button variant="cta" size="lg" onClick={() => scrollToSection("#products")}>
               Shop Bundle
             </Button>
           </div>
@@ -114,12 +102,7 @@ export const Navigation = () => {
                 </button>
               ))}
               <div className="pt-2 px-2">
-                <Button
-                  variant="cta"
-                  size="lg"
-                  className="w-full"
-                  onClick={() => scrollToSection("#products")}
-                >
+                <Button variant="cta" size="lg" className="w-full" onClick={() => scrollToSection("#products")}>
                   Shop Bundle
                 </Button>
               </div>
