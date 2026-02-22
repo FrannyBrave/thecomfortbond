@@ -40,6 +40,9 @@ export const TestimonialsSection = () => {
           
 
 
+          <p className="font-sans text-xs md:text-sm font-semibold tracking-[0.15em] uppercase text-terracotta mb-4">
+            Join our growing network of forward-thinking Activity Directors.
+          </p>
           <h2 className="heading-lg text-forest">
             What Activity Directors Are Saying
           </h2>
