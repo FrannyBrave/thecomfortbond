@@ -13,13 +13,13 @@ export const FooterSection = () => {
           <button
             onClick={scrollToTop}
             className="transition-opacity hover:opacity-80"
-            aria-label="Scroll to top"
-          >
+            aria-label="Scroll to top">
+
             <img
               src={logo}
               alt="The Comfort Bond"
-              className="w-32 md:w-36 h-auto"
-            />
+              className="w-32 md:w-36 h-auto" />
+
           </button>
 
           {/* Support Email */}
@@ -27,18 +27,18 @@ export const FooterSection = () => {
             Support:{" "}
             <a
               href="mailto:info@thecomfortbond.com"
-              className="underline underline-offset-2 hover:opacity-70 transition-opacity"
-            >
+              className="underline underline-offset-2 hover:opacity-70 transition-opacity">
+
               info@thecomfortbond.com
             </a>
           </p>
 
           {/* Trust Statement */}
           <p className="text-xs text-forest/70 max-w-xl leading-relaxed">
-            🛡️ We've Got You — All sales are final on digital downloads, but if you have any trouble accessing your purchase, we'll help you get set up. Contact us at{" "}
-            <a href="mailto:info@thecomfortbond.com" className="underline underline-offset-2 hover:opacity-70 transition-opacity">
-              info@thecomfortbond.com
-            </a>{" "}
+            🛡️ We've Got You — All sales are final on digital downloads, but if you have any trouble accessing your purchase, we'll make it right. Contact us at{" "}
+            
+
+            {" "}
             within 7 days.
           </p>
 
@@ -46,15 +46,15 @@ export const FooterSection = () => {
           <div className="flex items-center gap-6">
             <a
               href="/privacy-policy"
-              className="text-sm text-forest hover:opacity-70 transition-opacity"
-            >
+              className="text-sm text-forest hover:opacity-70 transition-opacity">
+
               Privacy Policy
             </a>
             <span className="text-forest/30">|</span>
             <a
               href="/terms"
-              className="text-sm text-forest hover:opacity-70 transition-opacity"
-            >
+              className="text-sm text-forest hover:opacity-70 transition-opacity">
+
               Terms
             </a>
           </div>
@@ -70,6 +70,6 @@ export const FooterSection = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
