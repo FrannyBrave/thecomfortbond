@@ -35,8 +35,8 @@ export const CTASection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center"
-        >
+          className="max-w-3xl mx-auto text-center">
+
           <h2 className="heading-lg text-cream mb-6">
             Ready to Bring Comfort to Your Community?
           </h2>
@@ -49,24 +49,24 @@ export const CTASection = () => {
               variant="cta"
               size="xl"
               onClick={scrollToProducts}
-              className="!bg-[hsl(var(--cream))] !text-[hsl(var(--forest))] hover:!bg-[hsl(40,33%,88%)]"
-            >
+              className="!bg-[hsl(var(--cream))] !text-[hsl(var(--forest))] hover:!bg-[hsl(40,33%,88%)]">
+
               Shop the Kits
             </Button>
             <Button
               variant="cta"
               size="xl"
               className="!bg-[hsl(var(--terracotta))] !text-[hsl(var(--cream))] hover:!bg-[hsl(18,46%,50%)]"
-              onClick={scrollToHoneyPot}
-            >
+              onClick={scrollToHoneyPot}>
+
               Get the Free Sample
             </Button>
           </div>
-          <p className="text-sm text-cream mt-6 tracking-wide">
-            Instant digital download • No account needed
+          <p className="text-sm text-cream mt-6 tracking-wide">Instant digital download • No credit card needed
+
           </p>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
