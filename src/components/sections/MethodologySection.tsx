@@ -201,9 +201,9 @@ export const MethodologySection = () => {
             Most activity kits cover one moment. The Comfort Bond™ creates a full, balanced hour of engagement.
           </p>
 
-          <p className="font-sans text-sm md:text-base text-forest leading-relaxed mt-4">
-            Designed for group facilitation with minimal prep — and residents always set the speed.
-          </p>
+          
+
+
         </motion.div>
       </div>
     </section>);
