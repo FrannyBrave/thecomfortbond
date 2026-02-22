@@ -201,33 +201,9 @@ export const MethodologySection = () => {
             Most activity kits cover one moment. The Comfort Bond™ creates a full, balanced hour of engagement.
           </p>
 
-          <ul className="font-sans text-sm md:text-base text-forest space-y-2.5 text-left inline-block">
-            <li className="flex items-start gap-2">
-              <span className="text-terracotta mt-0.5">•</span>
-              <span>Guides the room from gentle warm-up → peak connection → calm close</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-terracotta mt-0.5">•</span>
-              <span>Designed for group facilitation with minimal prep</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-terracotta mt-0.5">•</span>
-              <span>Flexible pacing—residents set the speed</span>
-            </li>
-          </ul>
-
-          {/* Secondary CTA */}
-          <a
-            href="#products"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="inline-flex items-center gap-1.5 mt-8 font-sans text-sm md:text-base text-terracotta hover:text-terracotta/80 transition-colors font-medium"
-          >
-            See the Kits
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          <p className="font-sans text-sm md:text-base text-forest leading-relaxed mt-4">
+            Designed for group facilitation with minimal prep — and residents always set the speed.
+          </p>
         </motion.div>
       </div>
     </section>);
