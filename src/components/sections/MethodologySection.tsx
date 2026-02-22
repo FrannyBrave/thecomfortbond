@@ -49,7 +49,7 @@ export const MethodologySection = () => {
     <section
       ref={sectionRef}
       id="methodology"
-      className="w-full bg-cream py-20 md:py-28 lg:py-32">
+      className="w-full bg-cream py-20 md:py-24 lg:py-28 pb-10 md:pb-12 lg:pb-14">
 
       <div className="section-container">
         {/* Headline */}
@@ -197,13 +197,9 @@ export const MethodologySection = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
           className="mt-14 md:mt-18 max-w-[640px] mx-auto text-center">
 
-          <p className="font-sans text-base md:text-lg text-forest leading-relaxed mb-5">
+          <p className="font-sans text-base md:text-lg text-forest leading-relaxed">
             Most activity kits cover one moment. The Comfort Bond™ creates a full, balanced hour of engagement.
           </p>
-
-          
-
-
         </motion.div>
       </div>
     </section>);
