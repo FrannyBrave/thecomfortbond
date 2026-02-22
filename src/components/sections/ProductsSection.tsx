@@ -82,7 +82,7 @@ export const ProductsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="products" className="section-padding bg-cream" ref={ref}>
+    <section id="products" className="section-padding pb-10 md:pb-12 lg:pb-14 bg-cream" ref={ref}>
       <div className="section-container">
         {/* Section Header */}
         <motion.div
