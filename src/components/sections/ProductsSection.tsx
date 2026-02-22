@@ -33,6 +33,7 @@ const products = [
   {
     id: 1,
     name: "Road Trip Kit",
+    anchorId: "road-trip-kit",
     description: "Stories, maps, and classic Americana prompts.",
     price: "$24",
     checkoutUrl:
@@ -42,6 +43,7 @@ const products = [
   {
     id: 2,
     name: "Nostalgia Kit",
+    anchorId: "nostalgia-kit",
     description: "1950s–1990s memory lane moments.",
     price: "$24",
     checkoutUrl:
@@ -51,6 +53,7 @@ const products = [
   {
     id: 3,
     name: "Comfort Food Kit",
+    anchorId: "kitchen-comfort-kit",
     description: "Kitchen memories + cozy conversation.",
     price: "$24",
     checkoutUrl:
@@ -60,6 +63,7 @@ const products = [
   {
     id: 4,
     name: "Holiday Traditions Kit",
+    anchorId: "holiday-traditions-kit",
     description: "Seasonal prompts & shared rituals.",
     price: "$24",
     checkoutUrl:
@@ -69,6 +73,7 @@ const products = [
   {
     id: 5,
     name: "Serenity Video Suite",
+    anchorId: "serenity-video-suite",
     description: "Calming nature scenes for gentle resets.",
     price: "$34",
     checkoutUrl:
@@ -106,7 +111,7 @@ export const ProductsSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
         >
-          <div className="bg-card rounded-2xl overflow-hidden border-2 border-gold shadow-xl shadow-gold/20 max-w-4xl mx-auto">
+          <div id="full-ecosystem-bundle" className="bg-card rounded-2xl overflow-hidden border-2 border-gold shadow-xl shadow-gold/20 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Product Image Placeholder */}
               <div className="aspect-square md:aspect-auto bg-gradient-to-br from-sage/20 to-gold/10 relative flex items-center justify-center min-h-[280px] overflow-hidden">
@@ -193,7 +198,7 @@ export const ProductsSection = () => {
               transition={{ duration: 0.6, delay: 0.3 + 0.1 * index }}
               className="group"
             >
-              <div className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+              <div id={product.anchorId} className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                 {/* Product Image */}
                 <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
                   <img
