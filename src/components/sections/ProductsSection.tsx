@@ -39,7 +39,6 @@ const products = [
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
     image: roadTripImage,
-    alt: "Road Trip Kit — stories, maps, and classic Americana prompts for senior engagement activities",
   },
   {
     id: 2,
@@ -50,7 +49,6 @@ const products = [
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
     image: nostalgiaImage,
-    alt: "Nostalgia Kit — 1950s to 1990s memory lane conversation prompts for seniors",
   },
   {
     id: 3,
@@ -61,7 +59,6 @@ const products = [
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
     image: kitchenImage,
-    alt: "Comfort Food Kit — kitchen memories and cozy conversation starters for caregivers",
   },
   {
     id: 4,
@@ -72,7 +69,6 @@ const products = [
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
     image: holidayImage,
-    alt: "Holiday Traditions Kit — seasonal prompts and shared ritual activities for memory care",
   },
   {
     id: 5,
@@ -83,7 +79,6 @@ const products = [
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
     image: serenityImage,
-    alt: "Serenity Video Suite — calming nature scenes for gentle sensory resets in senior living",
   },
 ];
 
@@ -122,7 +117,7 @@ export const ProductsSection = () => {
               <div className="aspect-square md:aspect-auto bg-gradient-to-br from-sage/20 to-gold/10 relative flex items-center justify-center min-h-[280px] overflow-hidden">
                 <img 
                   src={bundleImage} 
-                  alt="The Full Kit Bundle — includes Road Trip, Nostalgia, Comfort Food, Holiday Traditions kits and Serenity Video Suite for senior living engagement"
+                  alt="The Full Ecosystem Bundle - Collection of all kits"
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute top-4 left-4 bg-gold text-forest text-sm font-sans font-semibold px-4 py-1.5 rounded-full">
@@ -208,7 +203,7 @@ export const ProductsSection = () => {
                 <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
                   <img
                     src={product.image}
-                    alt={product.alt}
+                    alt={product.name}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
