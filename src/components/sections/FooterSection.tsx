@@ -34,8 +34,8 @@ export const FooterSection = () => {
           </p>
 
           {/* Trust Statement */}
-          <p className="text-xs text-forest/70 max-w-xl leading-relaxed">
-            🛡️ We've Got You — All sales are final on digital downloads, but if you have any trouble accessing your purchase, we'll make it right. Contact us within 7 days.
+          <p className="text-xs text-forest/70 max-w-xl leading-relaxed">🛡️ All sales are final on digital downloads, but if you have any trouble accessing your purchase, we'll make it right. Contact us within 7 days.
+
           </p>
 
           {/* Links */}
