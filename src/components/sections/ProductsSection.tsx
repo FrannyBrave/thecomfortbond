@@ -20,7 +20,6 @@ const featuredProduct = {
     "Nostalgia Kit",
     "Kitchen Kit",
     "Holiday Kit",
-    "Serenity Video Suite (Free Bonus)",
   ],
   price: "$97",
   originalPrice: "$116",
