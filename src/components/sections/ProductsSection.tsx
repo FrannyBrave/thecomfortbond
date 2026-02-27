@@ -22,8 +22,8 @@ const featuredProduct = {
     "Holiday Kit",
     "Serenity Video Suite (Free Bonus)",
   ],
-  price: "$96",
-  originalPrice: "$130",
+  price: "$97",
+  originalPrice: "$116",
   badge: "Best Value",
   checkoutUrl:
     "https://shop.thecomfortbond.com/checkout/buy/9ffc59b7-0a7f-4717-9a45-3d3000a960fc",
