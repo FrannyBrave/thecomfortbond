@@ -14,7 +14,7 @@ const featuredProduct = {
   id: "bundle",
   name: "The Full Kit Bundle",
   description:
-    "Four Comfort Flow™ kits. Five activities each. Ready to run — from morning session to the 4 o'clock hour.",
+    "Four themed kits. Five activities each. Ready to run — from morning session to the 4 o'clock hour.",
   includes: [
     "Road Trip Kit",
     "Nostalgia Kit",
