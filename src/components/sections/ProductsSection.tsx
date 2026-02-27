@@ -74,7 +74,7 @@ const products = [
     name: "Serenity Video Suite",
     anchorId: "serenity-video-suite",
     description: "Calming nature scenes for gentle resets.",
-    price: "$34",
+    price: "$35",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
     image: serenityImage,
