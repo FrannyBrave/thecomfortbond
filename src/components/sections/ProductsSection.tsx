@@ -35,7 +35,7 @@ const products = [
     name: "Road Trip Kit",
     anchorId: "road-trip-kit",
     description: "Stories, maps, and classic Americana prompts.",
-    price: "$24",
+    price: "$29",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
     image: roadTripImage,
@@ -45,7 +45,7 @@ const products = [
     name: "Nostalgia Kit",
     anchorId: "nostalgia-kit",
     description: "1950s–1990s memory lane moments.",
-    price: "$24",
+    price: "$29",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
     image: nostalgiaImage,
@@ -55,7 +55,7 @@ const products = [
     name: "Comfort Food Kit",
     anchorId: "kitchen-comfort-kit",
     description: "Kitchen memories + cozy conversation.",
-    price: "$24",
+    price: "$29",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
     image: kitchenImage,
@@ -65,7 +65,7 @@ const products = [
     name: "Holiday Traditions Kit",
     anchorId: "holiday-traditions-kit",
     description: "Seasonal prompts & shared rituals.",
-    price: "$24",
+    price: "$29",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
     image: holidayImage,
