@@ -11,7 +11,7 @@ export const HoneyPotSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-sage py-20 md:py-28"
+      className="w-full bg-sage py-10 md:py-14"
     >
       <div className="section-container">
         <motion.div
