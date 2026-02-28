@@ -49,7 +49,7 @@ export const MethodologySection = () => {
     <section
       ref={sectionRef}
       id="methodology"
-      className="w-full bg-cream py-20 md:py-24 lg:py-28 pb-10 md:pb-12 lg:pb-14">
+      className="w-full bg-cream py-10 md:py-12 lg:py-14 pb-6 md:pb-8 lg:pb-10">
 
       <div className="section-container">
         {/* Headline */}

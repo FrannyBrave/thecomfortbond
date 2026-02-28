@@ -41,9 +41,9 @@ export const TrustSignalsSection = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-cream">
+    <section className="py-10 md:py-14 bg-cream">
       {/* Thin horizontal divider */}
-      <div className="max-w-4xl mx-auto px-6 mb-16">
+      <div className="max-w-4xl mx-auto px-6 mb-8">
         <div className="h-px bg-sage/35 w-full" />
       </div>
 
