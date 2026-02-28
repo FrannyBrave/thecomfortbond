@@ -7,27 +7,27 @@ const pillars = [
 {
   icon: Grid3X3,
   title: "Themed BINGO Game",
-  description: "Familiar rules with a fresh thematic twist. Easy to facilitate with zero prep time."
+  description: "Builds excitement and friendly energy in the room. Residents light up with each match — boosting focus, participation, and a sense of accomplishment."
 },
 {
   icon: HelpCircle,
   title: "Trivia Time",
-  description: "Designed to be accessible and low-pressure, focused entirely on celebrating what your group already knows."
+  description: "Celebrates what residents already know, reinforcing confidence and self-worth. Low-pressure questions keep spirits high and minds engaged."
 },
 {
   icon: Link,
   title: "Word Link Game",
-  description: "A gentle, collaborative icebreaker that gets everyone working together on simple, satisfying word associations."
+  description: "Encourages teamwork and gentle cognitive stimulation. Residents connect words together, sparking creativity and a shared sense of achievement."
 },
 {
   icon: MessageCircle,
   title: "Conversation Card Prompts",
-  description: "Open-ended prompts that bridge past and present, making it easy to draw out beautiful memories."
+  description: "Opens the door to meaningful storytelling and emotional connection. Residents share memories that help staff and families see who they truly are."
 },
 {
   icon: Music,
   title: "Musical Memory Games",
-  description: "Joyful lyric recall, humming games and more that spark musical memories and joyful singalongs."
+  description: "Taps into deep emotional memory through music. Even residents who are mostly quiet often come alive — humming, singing, and smiling together."
 }];
 
 
@@ -56,10 +56,10 @@ export const TrustSignalsSection = () => {
           className="text-center mb-16">
 
           <span className="inline-block text-gold font-sans text-sm uppercase tracking-widest mb-4">
-            Why It Works
+            The Benefits
           </span>
           <h2 className="text-3xl md:text-4xl font-serif text-forest">
-            Designed for Well-Being
+            Why Every Activity Matters
           </h2>
         </motion.div>
 
