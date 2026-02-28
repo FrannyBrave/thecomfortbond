@@ -66,7 +66,7 @@ export const HeroSection = () => {
             ease: "easeOut"
           }}>
               <Button variant="cta" size="xl" onClick={scrollToProducts} className="text-white">
-                Get Your Activity Kit
+                See What's Inside
               </Button>
             </motion.div>
           </div>
