@@ -33,7 +33,7 @@ const products = [
     id: 1,
     name: "Road Trip Kit",
     anchorId: "road-trip-kit",
-    description: "includes 5 ready-to-use activities across 20 pages: Themed BINGO, Trivia (with answer key), Word Link Game, Conversation Starter Cards, and Musical Memory Games for a full Road Trip-themed engagement session.",
+    description: "5 complete themed activities: Road Trip BINGO, U.S. Highway & National Parks Trivia (with answer key), Road Trip Word Link Puzzles, Conversation Starter Cards, and Musical Memory Games — designed to spark memories of family road trips.",
     price: "$29",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
