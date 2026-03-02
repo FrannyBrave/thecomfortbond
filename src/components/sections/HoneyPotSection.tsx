@@ -19,44 +19,46 @@ export const HoneyPotSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="w-full max-w-sm group"
+          className="w-full max-w-4xl"
         >
-          <div className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-            {/* Product Image */}
-            <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
-              <img
-                src={samplerImage}
-                alt="The Founder's Sampler"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
+          <div className="bg-card rounded-2xl overflow-hidden border border-sage/20 shadow-xl">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Product Image */}
+              <div className="aspect-square md:aspect-auto bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center min-h-[280px] overflow-hidden">
+                <img
+                  src={samplerImage}
+                  alt="The Founder's Sampler"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-            {/* Product Info */}
-            <div className="p-5 flex flex-col flex-grow">
-              <h3 className="font-serif text-lg font-semibold text-forest mb-1">
-                The Founder's Sampler
-              </h3>
-              <p className="font-sans text-sm text-forest/80 mb-4 leading-snug">
-                A free taste of The Comfort Bond™ — Includes 3 ready-to-use activity types: discussion prompts, storytelling cards, and a Guess the Era game. Perfect for trying before you buy.
-              </p>
-              <div className="mt-auto">
-                <span className="text-2xl font-serif font-bold text-forest block mb-1">
-                  FREE
-                </span>
-                <p className="font-sans text-xs text-forest/60 mb-4">
+              {/* Product Info */}
+              <div className="p-8 md:p-10 flex flex-col justify-center">
+                <h3 className="heading-md text-forest mb-3">
+                  The Founder's Sampler
+                </h3>
+                <p className="body-md text-forest/70 mb-6">
+                  A free taste of The Comfort Bond™ — Includes 3 ready-to-use activity types: discussion prompts, storytelling cards, and a Guess the Era game. Perfect for trying before you buy.
+                </p>
+                <div className="flex items-baseline gap-3 mb-6">
+                  <span className="text-4xl font-serif font-bold text-forest">
+                    FREE
+                  </span>
+                </div>
+                <p className="font-sans text-sm text-forest/60 mb-6">
                   Instant digital download. No credit card required.
                 </p>
                 <Button
                   variant="cta"
-                  size="default"
-                  className="w-full h-11"
+                  size="lg"
+                  className="w-full md:w-auto"
                   asChild
                 >
                   <a
                     href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center"
+                    className="inline-flex items-center justify-center gap-2"
                   >
                     Download Free Sample
                   </a>
