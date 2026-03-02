@@ -30,6 +30,9 @@ export const HoneyPotSection = () => {
                   alt="The Founder's Sampler"
                   className="w-full h-full object-cover"
                 />
+                <span className="absolute top-4 left-4 bg-gold text-forest text-sm font-sans font-semibold px-4 py-1.5 rounded-full">
+                  Try Free
+                </span>
               </div>
 
               {/* Product Info */}
