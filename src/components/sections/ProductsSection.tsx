@@ -63,7 +63,7 @@ const products = [
     id: 4,
     name: "Holiday Traditions Kit",
     anchorId: "holiday-traditions-kit",
-    description: "Seasonal prompts & shared rituals.",
+    description: "5 complete themed activities: BINGO, 32-question trivia, 15 word link puzzles, 15 conversation cards, and 11 musical memory games — spanning holidays across the entire year.",
     price: "$29",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
