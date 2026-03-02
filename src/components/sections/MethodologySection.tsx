@@ -83,13 +83,12 @@ export const MethodologySection = () => {
 
           {/* Connecting Line - horizontal on desktop, vertical on mobile */}
           <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-sage/50 md:hidden" />
-          <div className="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-1 bg-sage/50 -translate-y-1/2 rounded-full" />
+          <div className="hidden md:block absolute top-[32px] lg:top-[40px] left-[10%] right-[10%] h-1 bg-sage/50 -translate-y-1/2 rounded-full" />
 
           {/* Steps Container */}
-          <div className="space-y-8 md:space-y-0 md:relative md:flex md:justify-between md:items-end md:px-4">
+          <div className="space-y-8 md:space-y-0 md:relative md:flex md:justify-between md:items-start md:px-4">
             {steps.map((step, index) => {
               const Icon = step.icon;
-              const elevations = [0, -20, -40, -20, 0];
 
               return (
                 <motion.div
@@ -97,15 +96,7 @@ export const MethodologySection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 + index * 0.1 }}
-                  className="flex items-start gap-6 relative md:flex-col md:items-center md:text-center md:gap-0 z-10"
-                  style={{
-                    // Arc elevation only on desktop via media query workaround — applied inline, hidden on mobile via the flex layout
-                  }}>
-
-                  {/* Wrapper div for desktop arc transform */}
-                  <div
-                    className="contents md:block"
-                    style={{ transform: `translateY(${elevations[index]}px) scale(${step.isHighlight ? 1.1 : 1})` }}>
+                  className="flex items-start gap-6 relative md:flex-col md:items-center md:text-center md:gap-0 z-10">
 
                     {/* Icon Circle */}
                     <div
@@ -113,7 +104,7 @@ export const MethodologySection = () => {
                         relative z-10 w-16 h-16 md:mb-4 lg:w-20 lg:h-20 rounded-full flex items-center justify-center flex-shrink-0
                         transition-all duration-300 shadow-md
                         ${step.isHighlight
-                          ? 'bg-terracotta text-cream border-4 border-terracotta shadow-lg shadow-terracotta/20 scale-110 md:scale-100'
+                          ? 'bg-terracotta text-cream border-4 border-terracotta shadow-lg shadow-terracotta/20'
                           : 'bg-cream-dark text-forest border-2 border-sage/40'}
                       `}>
                       <Icon className={`${step.isHighlight ? 'w-7 h-7 lg:w-10 lg:h-10' : 'w-6 h-6 lg:w-8 lg:h-8'}`} />
@@ -132,7 +123,6 @@ export const MethodologySection = () => {
                         {step.subtext}
                       </p>
                     </div>
-                  </div>
                 </motion.div>
               );
             })}
