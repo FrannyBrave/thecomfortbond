@@ -12,15 +12,15 @@ export const HoneyPotSection = () => {
     <section
       id="honey-pot"
       ref={sectionRef}
-      className="w-full bg-sage py-10 md:py-14"
-    >
+      className="w-full bg-sage py-10 md:py-14">
+
       <div className="section-container flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="w-full max-w-4xl"
-        >
+          className="w-full max-w-4xl">
+
           <div className="bg-card rounded-2xl overflow-hidden border border-sage/20 shadow-xl">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Product Image */}
@@ -28,8 +28,8 @@ export const HoneyPotSection = () => {
                 <img
                   src={samplerImage}
                   alt="The Founder's Sampler"
-                  className="w-full h-full object-cover"
-                />
+                  className="w-full h-full object-cover" />
+
                 <span className="absolute top-4 left-4 bg-gold text-forest text-sm font-sans font-semibold px-4 py-1.5 rounded-full">
                   Try Free
                 </span>
@@ -45,7 +45,7 @@ export const HoneyPotSection = () => {
                 </p>
                 <div className="flex items-baseline gap-3 mb-6">
                   <span className="text-4xl font-serif font-bold text-forest">
-                    FREE
+
                   </span>
                 </div>
                 <p className="font-sans text-sm text-forest/60 mb-6">
@@ -55,14 +55,14 @@ export const HoneyPotSection = () => {
                   variant="cta"
                   size="lg"
                   className="w-full md:w-auto"
-                  asChild
-                >
+                  asChild>
+
                   <a
                     href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2"
-                  >
+                    className="inline-flex items-center justify-center gap-2">
+
                     Download Free Sample
                   </a>
                 </Button>
@@ -71,6 +71,6 @@ export const HoneyPotSection = () => {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
