@@ -73,7 +73,7 @@ const products = [
     id: 5,
     name: "Serenity Video Suite",
     anchorId: "serenity-video-suite",
-    description: "Calming nature scenes for gentle resets.",
+    description: "10 calming nature experiences (over 80 minutes of content): gardens, ocean waves, mountain sunrises, flowing waterfalls, and more — instantly accessible via QR code or direct link, designed to soothe, settle, and bring a moment of calm to any room.",
     price: "$35",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
