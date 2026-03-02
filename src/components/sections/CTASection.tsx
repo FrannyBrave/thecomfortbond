@@ -7,20 +7,6 @@ export const CTASection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const scrollToProducts = () => {
-    const element = document.querySelector("#products");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const scrollToHoneyPot = () => {
-    const element = document.querySelector("#honey-pot");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="section-padding relative overflow-hidden" ref={ref}>
       {/* Background gradient */}
@@ -35,8 +21,8 @@ export const CTASection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center">
-
+          className="max-w-3xl mx-auto text-center"
+        >
           <h2 className="heading-lg text-cream mb-6">
             Ready to Bring Comfort to Your Community?
           </h2>
@@ -48,25 +34,36 @@ export const CTASection = () => {
             <Button
               variant="cta"
               size="xl"
-              onClick={scrollToProducts}
-              className="!bg-[hsl(var(--cream))] !text-[hsl(var(--forest))] hover:!bg-[hsl(40,33%,88%)]">
-
-              Shop the Kits
+              asChild
+            >
+              <a
+                href="https://shop.thecomfortbond.com/checkout/buy/9ffc59b7-0a7f-4717-9a45-3d3000a960fc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Shop the Kits
+              </a>
             </Button>
             <Button
-              variant="cta"
+              variant="cta-outline"
               size="xl"
-              className="!bg-[hsl(var(--terracotta))] !text-[hsl(var(--cream))] hover:!bg-[hsl(18,46%,50%)]"
-              onClick={scrollToHoneyPot}>
-
-              Get the Free Sample
+              className="border-[hsl(var(--cream))] text-cream hover:bg-cream/10"
+              asChild
+            >
+              <a
+                href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get the Free Sample
+              </a>
             </Button>
           </div>
-          
-
-
+          <p className="body-sm text-cream/50 mt-6">
+            Instant digital download • No credit card needed for the free sample
+          </p>
         </motion.div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
