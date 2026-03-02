@@ -33,7 +33,7 @@ const products = [
     id: 1,
     name: "Road Trip Kit",
     anchorId: "road-trip-kit",
-    description: "Stories, maps, and classic Americana prompts.",
+    description: "5 complete themed activities: BINGO, 20-question trivia, 15 word link puzzles, 15 conversation cards, and 9 musical memory games.",
     price: "$29",
     checkoutUrl:
       "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
