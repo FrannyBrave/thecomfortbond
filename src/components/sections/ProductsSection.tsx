@@ -129,9 +129,6 @@ export const ProductsSection = () => {
                 <h3 className="heading-md text-forest mb-3">
                   {featuredProduct.name}
                 </h3>
-                <p className="body-md text-forest/70 mb-4">
-                  {featuredProduct.description}
-                </p>
                 <div className="mb-6">
                   <p className="text-sm font-sans font-medium text-forest/60 mb-2">
                     Includes:
