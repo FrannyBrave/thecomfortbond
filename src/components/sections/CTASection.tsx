@@ -62,9 +62,9 @@ export const CTASection = () => {
               Get the Free Sample
             </Button>
           </div>
-          <p className="text-sm text-cream mt-6 tracking-wide">Instant digital download • No credit card needed
+          
 
-          </p>
+
         </motion.div>
       </div>
     </section>);
