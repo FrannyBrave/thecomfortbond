@@ -14,72 +14,72 @@ const featuredProduct = {
   id: "bundle",
   name: "The Full Kit Bundle",
   description:
-    "Four themed kits. Five activities each. Ready to run — from morning session to the 4 o'clock hour.",
+  "Four themed kits. Five activities each. Ready to run — from morning session to the 4 o'clock hour.",
   includes: [
-    "Road Trip Kit",
-    "Nostalgia Kit",
-    "Kitchen Kit",
-    "Holiday Kit",
-  ],
+  "Road Trip Kit",
+  "Nostalgia Kit",
+  "Kitchen Kit",
+  "Holiday Kit"],
+
   price: "$97",
   originalPrice: "$116",
   badge: "Best Value",
   checkoutUrl:
-    "https://shop.thecomfortbond.com/checkout/buy/9ffc59b7-0a7f-4717-9a45-3d3000a960fc",
+  "https://shop.thecomfortbond.com/checkout/buy/9ffc59b7-0a7f-4717-9a45-3d3000a960fc"
 };
 
 const products = [
-  {
-    id: 1,
-    name: "Road Trip Kit",
-    anchorId: "road-trip-kit",
-    description: "5 complete themed activities: Road Trip BINGO, U.S. Highway & National Parks Trivia (with answer key), Road Trip Word Link Puzzles, Conversation Starter Cards, and Musical Memory Games — designed to spark memories of family road trips.",
-    price: "$29",
-    checkoutUrl:
-      "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
-    image: roadTripImage,
-  },
-  {
-    id: 2,
-    name: "Nostalgia Kit",
-    anchorId: "nostalgia-kit",
-    description: "5 complete themed activities: BINGO, Trivia (with answer key), Word link puzzles, Conversation Starter Cards, and Musical memory games — all focused on memories from the 1950s through the 1990s.",
-    price: "$29",
-    checkoutUrl:
-      "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
-    image: nostalgiaImage,
-  },
-  {
-    id: 3,
-    name: "Comfort Food Kit",
-    anchorId: "kitchen-comfort-kit",
-    description: "5 complete themed activities: BINGO, Trivia (with answer key), Word link puzzles, Conversation Starter Cards, and Musical memory games — all centered on the kitchen, comfort food, and family mealtime memories.",
-    price: "$29",
-    checkoutUrl:
-      "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
-    image: kitchenImage,
-  },
-  {
-    id: 4,
-    name: "Holiday Traditions Kit",
-    anchorId: "holiday-traditions-kit",
-    description: "5 complete themed activities: BINGO, Trivia (with answer key), Word link puzzles, Conversation Starter Cards, and Musical memory games — spanning holidays across the entire year.",
-    price: "$29",
-    checkoutUrl:
-      "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
-    image: holidayImage,
-  },
-  {
-    id: 5,
-    name: "Serenity Video Suite",
-    anchorId: "serenity-video-suite",
-    description: "10 calming nature experiences (over 80 minutes of content): gardens, ocean waves, mountain sunrises, flowing waterfalls, and more — instantly accessible via QR code or direct link, designed to soothe, settle, and bring a moment of calm to any room.",
-    price: "$35",
-    checkoutUrl:
-      "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
-    image: serenityImage,
-  },
-];
+{
+  id: 1,
+  name: "Road Trip Kit",
+  anchorId: "road-trip-kit",
+  description: "5 complete themed activities: BINGO, 20-question trivia, 15 word link puzzles, 15 conversation cards, and 9 musical memory games.",
+  price: "$29",
+  checkoutUrl:
+  "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
+  image: roadTripImage
+},
+{
+  id: 2,
+  name: "Nostalgia Kit",
+  anchorId: "nostalgia-kit",
+  description: "5 complete themed activities: BINGO, 21-question trivia, 15 word link puzzles, 15 conversation cards, and 11 musical memory games — all focused on memories from the 1950s through the 1990s.",
+  price: "$29",
+  checkoutUrl:
+  "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
+  image: nostalgiaImage
+},
+{
+  id: 3,
+  name: "Comfort Food Kit",
+  anchorId: "kitchen-comfort-kit",
+  description: "5 complete themed activities: BINGO, 20-question trivia, 15 word link puzzles, 14 conversation cards, and 11 musical memory games — all centered on the kitchen, comfort food, and family mealtime memories.",
+  price: "$29",
+  checkoutUrl:
+  "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
+  image: kitchenImage
+},
+{
+  id: 4,
+  name: "Holiday Traditions Kit",
+  anchorId: "holiday-traditions-kit",
+  description: "5 complete themed activities: BINGO, 32-question trivia, 15 word link puzzles, 15 conversation cards, and 11 musical memory games — spanning holidays across the entire year.",
+  price: "$29",
+  checkoutUrl:
+  "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
+  image: holidayImage
+},
+{
+  id: 5,
+  name: "Serenity Video Suite",
+  anchorId: "serenity-video-suite",
+  description: "Calming nature scenes for gentle resets.",
+  price: "$35",
+  checkoutUrl:
+  "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
+  image: serenityImage
+}];
+
 
 export const ProductsSection = () => {
   const ref = useRef(null);
@@ -93,8 +93,8 @@ export const ProductsSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
+
           <h2 className="heading-lg text-forest mb-4">
             Choose Your Kit
           </h2>
@@ -108,17 +108,17 @@ export const ProductsSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-12"
-        >
+          className="mb-12">
+
           <div id="full-ecosystem-bundle" className="bg-card rounded-2xl overflow-hidden border-2 border-gold shadow-xl shadow-gold/20 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Product Image Placeholder */}
               <div className="aspect-square md:aspect-auto bg-gradient-to-br from-sage/20 to-gold/10 relative flex items-center justify-center min-h-[280px] overflow-hidden">
-                <img 
-                  src={bundleImage} 
+                <img
+                  src={bundleImage}
                   alt="The Full Ecosystem Bundle - Collection of all kits"
-                  className="w-full h-full object-cover"
-                />
+                  className="w-full h-full object-cover" />
+
                 <span className="absolute top-4 left-4 bg-gold text-forest text-sm font-sans font-semibold px-4 py-1.5 rounded-full">
                   {featuredProduct.badge}
                 </span>
@@ -129,9 +129,12 @@ export const ProductsSection = () => {
                 <h3 className="heading-md text-forest mb-3">
                   {featuredProduct.name}
                 </h3>
+                <p className="body-md text-forest/70 mb-4">
+                  {featuredProduct.description}
+                </p>
                 <div className="mb-6">
-                  <p className="text-sm font-sans font-medium text-forest/60 mb-2">
-                    Includes:
+                  <p className="text-sm font-sans font-medium text-forest/60 mb-2">Everything you need for weeks of meaningful engagement — all 4 themed kits (Kitchen & Comfort Food, Nostalgia, Road Trip, and Holiday Traditions) in one bundle: 20+ activities, 80+ pages, and enough content to run weekly programming for an entire season, all ready to print
+
                   </p>
                   <p className="body-sm text-forest/80">
                     {featuredProduct.includes.join(" · ")}
@@ -149,14 +152,14 @@ export const ProductsSection = () => {
                   variant="cta"
                   size="lg"
                   className="w-full md:w-auto"
-                  asChild
-                >
+                  asChild>
+
                   <a
                     href={featuredProduct.checkoutUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2"
-                  >
+                    className="inline-flex items-center justify-center gap-2">
+
                     Buy Full Bundle
                   </a>
                 </Button>
@@ -170,47 +173,47 @@ export const ProductsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="mb-12 py-8 border-y border-sage/20"
-        >
+          className="mb-12 py-8 border-y border-sage/20">
+
           <h3 className="heading-md text-forest text-center mb-8">
             What's Inside Each Kit
           </h3>
           <div className="flex flex-wrap items-start justify-center gap-8 sm:gap-10 md:gap-12">
             {[
-              { icon: Grid3X3, label: "Themed Bingo Game" },
-              { icon: HelpCircle, label: "Trivia Time" },
-              { icon: Link, label: "Word Link Game" },
-              { icon: MessageCircle, label: "Conversation Card Prompts" },
-              { icon: Music, label: "Musical Memory Games" },
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center gap-2.5 w-28 sm:w-32">
+            { icon: Grid3X3, label: "Themed Bingo Game" },
+            { icon: HelpCircle, label: "Trivia Time" },
+            { icon: Link, label: "Word Link Game" },
+            { icon: MessageCircle, label: "Conversation Card Prompts" },
+            { icon: Music, label: "Musical Memory Games" }].
+            map(({ icon: Icon, label }) =>
+            <div key={label} className="flex flex-col items-center gap-2.5 w-28 sm:w-32">
                 <div className="w-12 h-12 rounded-full bg-sage/15 border border-sage/30 flex items-center justify-center">
                   <Icon className="w-5 h-5 text-sage" strokeWidth={2} />
                 </div>
                 <span className="font-sans text-sm font-medium text-forest text-center leading-tight">{label}</span>
               </div>
-            ))}
+            )}
           </div>
         </motion.div>
 
         {/* A La Carte Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {products.map((product, index) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 + 0.1 * index }}
-              className="group"
-            >
+          {products.map((product, index) =>
+          <motion.div
+            key={product.id}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 + 0.1 * index }}
+            className="group">
+
               <div id={product.anchorId} className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                 {/* Product Image */}
                 <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
                   <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover object-top"
-                  />
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover object-top" />
+
                 </div>
 
                 {/* Product Info */}
@@ -229,29 +232,29 @@ export const ProductsSection = () => {
                       Instant digital download.
                     </p>
                     <Button
-                      variant="cta"
-                      size="default"
-                      className="w-full h-11"
-                      asChild
-                    >
+                    variant="cta"
+                    size="default"
+                    className="w-full h-11"
+                    asChild>
+
                       <a
-                        href={product.checkoutUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center"
-                      >
-                        {product.name === "Serenity Video Suite"
-                          ? "Purchase Suite"
-                          : "Purchase Kit"}
+                      href={product.checkoutUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center">
+
+                        {product.name === "Serenity Video Suite" ?
+                      "Purchase Suite" :
+                      "Purchase Kit"}
                       </a>
                     </Button>
                   </div>
                 </div>
               </div>
             </motion.div>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
