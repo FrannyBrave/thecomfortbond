@@ -50,7 +50,7 @@ export const HeroSection = () => {
             duration: 1,
             delay: 0.6,
             ease: "easeOut"
-          }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-8 md:mb-12">Done-for-you activity kits for senior living teams - zero prep, full engagement, genuine connection.
+          }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-8 md:mb-12">Printable activity kits built for Activity Directors: zero prep, full resident engagement, genuine connection every time.
 
           </motion.p>
 
