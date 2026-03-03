@@ -54,21 +54,6 @@ export const HeroSection = () => {
 
           </motion.p>
 
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 1,
-            delay: 0.9,
-            ease: "easeOut"
-          }}>
-              <Button variant="cta" size="xl" onClick={scrollToProducts} className="text-white">
-                See What's Inside
-              </Button>
-            </motion.div>
           </div>
         </div>
       </div>
