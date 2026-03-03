@@ -14,12 +14,12 @@ const featuredProduct = {
   id: "bundle",
   name: "The Full Kit Bundle",
   description:
-  "Four themed kits. Five activities each. Ready to run — from morning session to the 4 o'clock hour.",
+  "Four themed kits. One complete engagement library. Ready to run from morning session to the 4 o'clock hour.",
   includes: [
   "Road Trip Kit",
   "Nostalgia Kit",
-  "Kitchen Kit",
-  "Holiday Kit"],
+  "Comfort Food Kit",
+  "Holiday Traditions Kit"],
 
   price: "$97",
   originalPrice: "$116",
@@ -133,8 +133,7 @@ export const ProductsSection = () => {
                   {featuredProduct.description}
                 </p>
                 <div className="mb-6">
-                  <p className="text-sm font-sans font-medium text-forest/60 mb-2">Everything you need for weeks of meaningful engagement — all 4 themed kits (Kitchen & Comfort Food, Nostalgia, Road Trip, and Holiday Traditions) in one bundle.
-{"\n"}20+ activities, 80+ pages, and enough content to run weekly programming for an entire season, all ready to print</p>
+                  <p className="text-sm font-sans font-medium text-forest/60 mb-2">Everything you need for weeks of meaningful engagement — all 4 themed kits (Road Trip, Nostalgia, Comfort Food, and Holiday Traditions) in one bundle. 80+ pages of print-ready activities, 20 themed sessions, and enough content to run weekly programming for an entire season.</p>
                   <p className="body-sm text-forest/80">
                     {featuredProduct.includes.join(" · ")}
                   </p>
