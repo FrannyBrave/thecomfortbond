@@ -17,7 +17,7 @@ const pillars = [
 {
   icon: Link,
   title: "Word Link Game",
-  description: "Encourages teamwork; residents connect words, sparking creativity."
+  description: "Sparks creativity and gentle teamwork as residents connect words together."
 },
 {
   icon: MessageCircle,
