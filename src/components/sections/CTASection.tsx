@@ -24,11 +24,10 @@ export const CTASection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="heading-lg text-cream mb-6">
-            Ready to Bring Comfort to Your Community?
+            Your Next Session Is Already Planned.
           </h2>
           <p className="body-lg text-cream/80 mb-10 max-w-2xl mx-auto">
-            Premium, ready-to-run engagement kits designed for comfort and meaningful 
-            connection in senior living communities.
+            Download today, print tomorrow, run it Friday. No prep, no stress — just a room full of residents who can't wait to come back.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
