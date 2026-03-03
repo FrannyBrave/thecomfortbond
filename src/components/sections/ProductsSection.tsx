@@ -63,7 +63,7 @@ const products = [
   id: 4,
   name: "Holiday Traditions Kit",
   anchorId: "holiday-traditions-kit",
-  description: "Spanning holidays across the entire year — from New Year's to Christmas and everything in between. Includes BINGO, trivia, word links, conversation cards, and musical memory games.",
+  description: "Spanning holidays across the entire year from New Year's to Christmas and everything in between. Includes BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
