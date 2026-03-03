@@ -33,7 +33,7 @@ const products = [
   id: 1,
   name: "Road Trip Kit",
   anchorId: "road-trip-kit",
-  description: "5 complete themed activities: BINGO, 20-question trivia, 15 word link puzzles, 15 conversation cards, and 9 musical memory games.",
+  description: "Hit the open road through decades of American travel memories, from Route 66 to family road trips. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
@@ -43,7 +43,7 @@ const products = [
   id: 2,
   name: "Nostalgia Kit",
   anchorId: "nostalgia-kit",
-  description: "5 complete themed activities: BINGO, 21-question trivia, 15 word link puzzles, 15 conversation cards, and 11 musical memory games — all focused on memories from the 1950s through the 1990s.",
+  description: "A walk down memory lane from the 1950s through the 1990s, sparking stories, smiles, and sing-alongs. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
@@ -53,7 +53,7 @@ const products = [
   id: 3,
   name: "Comfort Food Kit",
   anchorId: "kitchen-comfort-kit",
-  description: "5 complete themed activities: BINGO, 20-question trivia, 15 word link puzzles, 14 conversation cards, and 11 musical memory games — all centered on the kitchen, comfort food, and family mealtime memories.",
+  description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
@@ -63,7 +63,7 @@ const products = [
   id: 4,
   name: "Holiday Traditions Kit",
   anchorId: "holiday-traditions-kit",
-  description: "5 complete themed activities: BINGO, 32-question trivia, 15 word link puzzles, 15 conversation cards, and 11 musical memory games — spanning holidays across the entire year.",
+  description: "Spanning holidays across the entire year, from New Year's to Christmas and everything in between. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
