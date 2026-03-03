@@ -50,9 +50,9 @@ export const HeroSection = () => {
             duration: 1,
             delay: 0.6,
             ease: "easeOut"
-          }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-8 md:mb-12">
-              Done-for-you activity kits for senior living teams — zero prep, full engagement, genuine connection.
-            </motion.p>
+          }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-8 md:mb-12">Done-for-you activity kits for senior living teams - zero prep, full engagement, genuine connection.
+
+          </motion.p>
 
             <motion.div initial={{
             opacity: 0,
