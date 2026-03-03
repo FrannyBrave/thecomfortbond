@@ -7,7 +7,7 @@ const pillars = [
 {
   icon: Grid3X3,
   title: "Themed BINGO Game",
-  description: "Builds excitement and friendly energy in the room. Residents light up with each match — boosting focus, participation, and a sense of accomplishment."
+  description: "Builds excitement and friendly energy in the room. Residents light up with each match."
 },
 {
   icon: HelpCircle,
@@ -17,17 +17,17 @@ const pillars = [
 {
   icon: Link,
   title: "Word Link Game",
-  description: "Encourages teamwork and gentle cognitive stimulation. Residents connect words together, sparking creativity and a shared sense of achievement."
+  description: "Encourages teamwork; residents connect words, sparking creativity."
 },
 {
   icon: MessageCircle,
   title: "Conversation Card Prompts",
-  description: "Opens the door to meaningful storytelling and emotional connection. Residents share memories that help staff and families see who they truly are."
+  description: "Opens the door to meaningful storytelling and emotional connection."
 },
 {
   icon: Music,
   title: "Musical Memory Games",
-  description: "Taps into deep emotional memory through music. Even residents who are mostly quiet often come alive — humming, singing, and smiling together."
+  description: "Even residents who are mostly quiet often come alive: humming, singing, and smiling together."
 }];
 
 
