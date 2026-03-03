@@ -43,7 +43,7 @@ const products = [
   id: 2,
   name: "Nostalgia Kit",
   anchorId: "nostalgia-kit",
-  description: "5 complete themed activities: BINGO, 21-question trivia, 15 word link puzzles, 15 conversation cards, and 11 musical memory games — all focused on memories from the 1950s through the 1990s.",
+  description: "A walk down memory lane from the 1950s through the 1990s — sparking stories, smiles, and sing-alongs. Includes BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
