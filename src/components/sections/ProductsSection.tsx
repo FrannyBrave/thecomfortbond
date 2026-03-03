@@ -133,7 +133,7 @@ export const ProductsSection = () => {
                   {featuredProduct.description}
                 </p>
                 <div className="mb-6">
-                  <p className="text-sm font-sans font-medium text-forest/60 mb-2">Everything you need for weeks of meaningful engagement — all 4 themed kits (Road Trip, Nostalgia, Comfort Food, and Holiday Traditions) in one bundle. 80+ pages of print-ready activities, 20 themed sessions, and enough content to run weekly programming for an entire season.</p>
+                  <p className="text-sm font-sans font-medium text-forest/60 mb-2">Everything you need for weeks of meaningful engagement: all 4 themed kits in one bundle. 80+ pages of print-ready activities and 20 themed sessions.</p>
                   <p className="body-sm text-forest/80">
                     {featuredProduct.includes.join(" · ")}
                   </p>
