@@ -8,7 +8,7 @@ import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
 import serenityImage from "@/assets/serenity-video-suite.png";
 import { Button } from "@/components/ui/button";
-import { Grid3X3, HelpCircle, Link, MessageCircle, Music } from "lucide-react";
+
 
 const featuredProduct = {
   id: "bundle",
@@ -168,33 +168,6 @@ export const ProductsSection = () => {
           </div>
         </motion.div>
 
-        {/* What's Inside Each Kit */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.25 }}
-          className="mb-12 py-8 border-y border-sage/20">
-
-          <h3 className="heading-md text-forest text-center mb-8">
-            What's Inside Each Kit
-          </h3>
-          <div className="flex flex-wrap items-start justify-center gap-8 sm:gap-10 md:gap-12">
-            {[
-            { icon: Grid3X3, label: "Themed Bingo Game" },
-            { icon: HelpCircle, label: "Trivia Time" },
-            { icon: Link, label: "Word Link Game" },
-            { icon: MessageCircle, label: "Conversation Card Prompts" },
-            { icon: Music, label: "Musical Memory Games" }].
-            map(({ icon: Icon, label }) =>
-            <div key={label} className="flex flex-col items-center gap-2.5 w-28 sm:w-32">
-                <div className="w-12 h-12 rounded-full bg-sage/15 border border-sage/30 flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-sage" strokeWidth={2} />
-                </div>
-                <span className="font-sans text-sm font-medium text-forest text-center leading-tight">{label}</span>
-              </div>
-            )}
-          </div>
-        </motion.div>
 
         {/* A La Carte Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
