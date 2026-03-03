@@ -1,28 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Quote } from "lucide-react";
+import { Printer, MessageCircle, Heart } from "lucide-react";
 
-const testimonials = [
-{
-  quote: "The Nostalgia Kit has been a complete game-changer for our memory care programming. It requires zero prep time on my end, and the 1950s memory lane prompts spark the most beautiful conversations among our residents.",
-  author: "Jennifer Walsh",
-  role: "Activity Director",
-  facility: "Maplewood Memory Care, Austin TX"
-},
-{
-  quote: "Purchasing the Full Kit Bundle is the best investment we've made for our community this year. My staff loves how accessible the activities are, and the Serenity Video Suite provides such a gentle, calming reset for the whole room.",
-  author: "Marcus Rivera",
-  role: "Life Enrichment Manager",
-  facility: "Harmony Senior Living, Denver CO"
-},
-{
-  quote: "Finding ways to genuinely connect during visits was getting difficult, but the Comfort Food Kit changed everything. We spend our afternoons sharing old family recipes and kitchen stories now. It has brought so much warmth back to our time together.",
-  author: "Linda Chen",
-  role: "Memory Care Activity Coordinator",
-  facility: "Sunrise Gardens Assisted Living"
-}];
-
+const trustSignals = [
+  { icon: Printer, text: "Print and run. No prep required." },
+  { icon: MessageCircle, text: "Designed around memory care best practices." },
+  { icon: Heart, text: "Try it free before you buy." },
+];
 
 export const TestimonialsSection = () => {
   const ref = useRef(null);
@@ -30,47 +15,46 @@ export const TestimonialsSection = () => {
 
   return (
     <section className="section-padding bg-cream" ref={ref}>
-      <div className="section-container">
+      <div className="section-container max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14">
-
-          
-
-
+          className="text-center mb-10"
+        >
           <p className="font-sans text-xs md:text-sm font-semibold tracking-[0.15em] uppercase text-terracotta mb-4">
-            Join our growing network of forward-thinking Activity Directors.
+            Early Access
           </p>
-          <h2 className="heading-lg text-forest">
-            What Activity Directors Are Saying
+          <h2 className="heading-lg text-forest mb-6">
+            Built for the People Who Show Up Every Day
           </h2>
+          <p className="body-md text-forest/75 text-balance">
+            The Comfort Bond™ was created with Activity Directors, Life Enrichment Managers, and in-home caregivers in mind — the people who plan, prep, and pour themselves into every session. These kits are designed to give you back time while giving your residents more.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {testimonials.map((testimonial, index) =>
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: index * 0.12 }}
-            className="bg-card rounded-xl p-8 shadow-sm border border-sage/20 relative">
-
-              <Quote className="w-7 h-7 text-terracotta/40 mb-3" strokeWidth={1.5} />
-              <p className="text-terracotta font-sans text-sm tracking-wide mb-3">★★★★★</p>
-              <p className="font-serif text-forest/85 leading-relaxed mb-6 italic">
-                "{testimonial.quote}"
-              </p>
-              <div className="border-t border-sage/20 pt-4">
-                <p className="font-sans font-semibold text-sm text-forest">{testimonial.author}</p>
-                <p className="font-sans text-xs text-forest/60">{testimonial.role}</p>
-                <p className="font-sans text-xs text-forest/40 mt-0.5">{testimonial.facility}</p>
-              </div>
-            </motion.div>
-          )}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {trustSignals.map((signal, index) => {
+            const Icon = signal.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                className="flex flex-col items-center text-center gap-3 p-6"
+              >
+                <div className="w-12 h-12 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-terracotta" strokeWidth={1.5} />
+                </div>
+                <p className="font-sans text-sm text-forest/80 leading-relaxed">
+                  {signal.text}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
