@@ -73,7 +73,7 @@ const products = [
   id: 5,
   name: "Serenity Video Suite",
   anchorId: "serenity-video-suite",
-  description: "Calming nature scenes for gentle resets.",
+  description: "Calming nature videos designed for gentle resets between activities or during quiet moments. Perfect for winding down a session or easing sundowning restlessness.",
   price: "$35",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
