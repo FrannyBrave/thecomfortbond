@@ -7,7 +7,7 @@ export const FooterSection = () => {
 
   return (
     <footer className="bg-cream border-t border-sage/40">
-      <div className="container mx-auto px-6 py-16 md:py-20">
+      <div className="container mx-auto px-6 py-10 md:py-12">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Logo */}
           <button
