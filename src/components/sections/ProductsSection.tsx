@@ -53,7 +53,7 @@ const products = [
   id: 3,
   name: "Comfort Food Kit",
   anchorId: "kitchen-comfort-kit",
-  description: "5 complete themed activities: BINGO, 20-question trivia, 15 word link puzzles, 14 conversation cards, and 11 musical memory games — all centered on the kitchen, comfort food, and family mealtime memories.",
+  description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. Includes BINGO, trivia, word links, conversation cards, and musical memory games. 20+ pages",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
