@@ -99,7 +99,7 @@ export const ProductsSection = () => {
             Choose Your Kit
           </h2>
           <p className="body-md text-forest/70 max-w-2xl mx-auto">
-            Individual kits or the full bundle — all instant digital downloads.
+            Each kit is a complete, themed engagement session — print, gather, and begin.
           </p>
         </motion.div>
 
@@ -197,9 +197,9 @@ export const ProductsSection = () => {
           )}
         </div>
 
-        {/* Bottom Row (2 cards, each half-width) */}
+        {/* Bottom Row - Holiday Traditions only */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {products.slice(3).map((product, index) =>
+          {products.slice(3, 4).map((product, index) =>
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 40 }}
@@ -218,7 +218,7 @@ export const ProductsSection = () => {
                     <p className="font-sans text-xs text-forest/60 mb-4">Instant digital download.</p>
                     <Button variant="cta" size="default" className="w-full h-11" asChild>
                       <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
-                        {product.name === "Serenity Video Suite" ? "Purchase Suite" : "Purchase Kit"}
+                        Purchase Kit
                       </a>
                     </Button>
                   </div>
@@ -227,6 +227,41 @@ export const ProductsSection = () => {
             </motion.div>
           )}
         </div>
+
+        {/* Add-On: Serenity Video Suite */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-16 max-w-4xl mx-auto">
+          <div className="text-center mb-6">
+            <span className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-terracotta">Add-On</span>
+            <p className="body-md text-forest/70 mt-2">Pair any kit with calming background content for transitions and quiet moments.</p>
+          </div>
+          {(() => {
+            const product = products[4];
+            return (
+              <div id={product.anchorId} className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 max-w-md mx-auto">
+                <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
+                  <img src={product.image} alt={product.name} className="w-full h-full object-cover object-top" />
+                </div>
+                <div className="p-5 flex flex-col">
+                  <h3 className="font-serif text-lg font-semibold text-forest mb-1">{product.name}</h3>
+                  <p className="font-sans text-sm text-forest/80 mb-4 leading-snug">{product.description}</p>
+                  <div className="mt-auto">
+                    <span className="text-2xl font-serif font-bold text-forest block mb-1">{product.price}</span>
+                    <p className="font-sans text-xs text-forest/60 mb-4">Instant digital download.</p>
+                    <Button variant="cta" size="default" className="w-full h-11" asChild>
+                      <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
+                        Purchase Suite
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
+        </motion.div>
       </div>
     </section>);
 
