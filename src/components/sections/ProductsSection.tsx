@@ -169,56 +169,59 @@ export const ProductsSection = () => {
         </motion.div>
 
 
-        {/* A La Carte Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {products.map((product, index) =>
+        {/* A La Carte Products — Top Row (3 cards) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+          {products.slice(0, 3).map((product, index) =>
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 + 0.1 * index }}
             className="group">
-
               <div id={product.anchorId} className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                {/* Product Image */}
                 <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
-                  <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover object-top" />
-
+                  <img src={product.image} alt={product.name} className="w-full h-full object-cover object-top" />
                 </div>
-
-                {/* Product Info */}
                 <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="font-serif text-lg font-semibold text-forest mb-1">
-                    {product.name}
-                  </h3>
-                  <p className="font-sans text-sm text-forest/80 mb-4 leading-snug">
-                    {product.description}
-                  </p>
+                  <h3 className="font-serif text-lg font-semibold text-forest mb-1">{product.name}</h3>
+                  <p className="font-sans text-sm text-forest/80 mb-4 leading-snug">{product.description}</p>
                   <div className="mt-auto">
-                    <span className="text-2xl font-serif font-bold text-forest block mb-1">
-                      {product.price}
-                    </span>
-                    <p className="font-sans text-xs text-forest/60 mb-4">
-                      Instant digital download.
-                    </p>
-                    <Button
-                    variant="cta"
-                    size="default"
-                    className="w-full h-11"
-                    asChild>
+                    <span className="text-2xl font-serif font-bold text-forest block mb-1">{product.price}</span>
+                    <p className="font-sans text-xs text-forest/60 mb-4">Instant digital download.</p>
+                    <Button variant="cta" size="default" className="w-full h-11" asChild>
+                      <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
+                        Purchase Kit
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </div>
 
-                      <a
-                      href={product.checkoutUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center">
-
-                        {product.name === "Serenity Video Suite" ?
-                      "Purchase Suite" :
-                      "Purchase Kit"}
+        {/* Bottom Row (2 cards, each half-width) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {products.slice(3).map((product, index) =>
+          <motion.div
+            key={product.id}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 + 0.1 * index }}
+            className="group">
+              <div id={product.anchorId} className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
+                  <img src={product.image} alt={product.name} className="w-full h-full object-cover object-top" />
+                </div>
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="font-serif text-lg font-semibold text-forest mb-1">{product.name}</h3>
+                  <p className="font-sans text-sm text-forest/80 mb-4 leading-snug">{product.description}</p>
+                  <div className="mt-auto">
+                    <span className="text-2xl font-serif font-bold text-forest block mb-1">{product.price}</span>
+                    <p className="font-sans text-xs text-forest/60 mb-4">Instant digital download.</p>
+                    <Button variant="cta" size="default" className="w-full h-11" asChild>
+                      <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
+                        {product.name === "Serenity Video Suite" ? "Purchase Suite" : "Purchase Kit"}
                       </a>
                     </Button>
                   </div>
