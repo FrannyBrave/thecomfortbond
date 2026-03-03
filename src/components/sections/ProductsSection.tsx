@@ -33,7 +33,7 @@ const products = [
   id: 1,
   name: "Road Trip Kit",
   anchorId: "road-trip-kit",
-  description: "Hit the open road through decades of American travel memories from Route 66 to family road trips. Includes BINGO, trivia, word links, conversation cards, and musical memory games.",
+  description: "5 complete themed activities: BINGO, 20-question trivia, 15 word link puzzles, 15 conversation cards, and 9 musical memory games.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
@@ -43,7 +43,7 @@ const products = [
   id: 2,
   name: "Nostalgia Kit",
   anchorId: "nostalgia-kit",
-  description: "A walk down memory lane from the 1950s through the 1990s; sparking stories, smiles, and sing-alongs. Includes BINGO, trivia, word links, conversation cards, and musical memory games.",
+  description: "5 complete themed activities: BINGO, 21-question trivia, 15 word link puzzles, 15 conversation cards, and 11 musical memory games — all focused on memories from the 1950s through the 1990s.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
@@ -53,7 +53,7 @@ const products = [
   id: 3,
   name: "Comfort Food Kit",
   anchorId: "kitchen-comfort-kit",
-  description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. Includes BINGO, trivia, word links, conversation cards, and musical memory games. 20+ pages",
+  description: "5 complete themed activities: BINGO, 20-question trivia, 15 word link puzzles, 14 conversation cards, and 11 musical memory games — all centered on the kitchen, comfort food, and family mealtime memories.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
@@ -63,7 +63,7 @@ const products = [
   id: 4,
   name: "Holiday Traditions Kit",
   anchorId: "holiday-traditions-kit",
-  description: "Spanning holidays across the entire year from New Year's to Christmas and everything in between. Includes BINGO, trivia, word links, conversation cards, and musical memory games.",
+  description: "5 complete themed activities: BINGO, 32-question trivia, 15 word link puzzles, 15 conversation cards, and 11 musical memory games — spanning holidays across the entire year.",
   price: "$29",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
@@ -73,7 +73,7 @@ const products = [
   id: 5,
   name: "Serenity Video Suite",
   anchorId: "serenity-video-suite",
-  description: "Calming nature videos designed for gentle resets between activities or during quiet moments. Perfect for winding down a session or easing sundowning restlessness.",
+  description: "Calming nature scenes for gentle resets.",
   price: "$35",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
@@ -133,9 +133,10 @@ export const ProductsSection = () => {
                   {featuredProduct.description}
                 </p>
                 <div className="mb-6">
-                  <p className="text-sm font-sans font-medium text-forest/60 mb-2">Everything you need for weeks of meaningful engagement — all 4 themed kits (Kitchen & Comfort Food, Nostalgia, Road Trip, and Holiday Traditions) in one bundle: 20+ activities, 80+ pages, and enough content to run weekly programming for an entire season, all ready to print
+                  <p className="text-sm font-sans font-medium text-forest/60 mb-2">Everything you need for weeks of meaningful engagement — all 4 themed kits (Kitchen & Comfort Food, Nostalgia, Road Trip, and Holiday Traditions) in one bundle.
 
-                  </p>
+
+Includes 20+ activities, 80+ pages all ready to print.</p>
                   <p className="body-sm text-forest/80">
                     {featuredProduct.includes.join(" · ")}
                   </p>
@@ -148,11 +149,10 @@ export const ProductsSection = () => {
                     {featuredProduct.originalPrice}
                   </span>
                 </div>
-                <Button
-                  variant="cta"
-                  size="lg"
-                  className="w-full md:w-auto"
-                  asChild>
+                <Button variant="cta"
+                size="lg"
+                className="w-full md:w-auto"
+                asChild>
 
                   <a
                     href={featuredProduct.checkoutUrl}
