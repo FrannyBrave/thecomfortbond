@@ -54,6 +54,24 @@ export const HeroSection = () => {
 
           </motion.p>
 
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+              className="flex flex-col items-center gap-3"
+            >
+              <Button
+                variant="cta"
+                size="xl"
+                onClick={scrollToProducts}
+              >
+                Get Your First Kit
+              </Button>
+              <p className="font-sans text-sm text-cream/60">
+                Instant digital download. No subscription required.
+              </p>
+            </motion.div>
+
           </div>
         </div>
       </div>
