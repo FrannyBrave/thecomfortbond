@@ -15,6 +15,11 @@ const faqs = [
       "No. All of our engagement kits and the Full Ecosystem Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to use forever.",
   },
   {
+    question: "Is this appropriate for memory care residents?",
+    answer:
+      "Yes. The Comfort Bond™ kits are specifically designed with memory care in mind. Activities are gentle, themed around long-term memory (music, food, travel, holidays), and structured to reduce confusion while sparking participation. The Comfort Flow™ sequence moves from gentle warm-up to peak engagement to a calm close — supporting residents at every cognitive level.",
+  },
+  {
     question: "What file format will I receive?",
     answer:
       "Your kits are delivered as high-quality PDF files. The formatting, text size, and images look perfect on any computer or device.",
