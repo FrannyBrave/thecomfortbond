@@ -27,6 +27,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <div className="fixed top-20 left-0 right-0 z-40 bg-primary flex items-center justify-center h-11">
+        <p className="text-primary-foreground text-sm tracking-widest uppercase font-sans">
+          Join Activity Directors who believe every resident deserves an hour worth showing up for.
+        </p>
+      </div>
       <main>
         <HeroSection />
         <HoneyPotSection />
