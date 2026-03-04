@@ -59,9 +59,7 @@ export const HoneyPotSection = () => {
 
                   <a
                     href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2">
+                    className="lemonsqueezy-button inline-flex items-center justify-center gap-2">
 
                     Download Free Sample
                   </a>
