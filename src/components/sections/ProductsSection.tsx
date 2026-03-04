@@ -18,7 +18,7 @@ const featuredProduct = {
   includes: [
   "Road Trip Kit",
   "Nostalgia Kit",
-  "Comfort Food Kit",
+  "Kitchen & Comfort Food Kit",
   "Holiday Traditions Kit"],
 
   price: "$97",
