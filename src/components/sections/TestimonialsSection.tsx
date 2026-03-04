@@ -23,7 +23,7 @@ export const TestimonialsSection = () => {
           className="text-center mb-10"
         >
           <p className="font-sans text-xs md:text-sm font-semibold tracking-[0.15em] uppercase text-terracotta mb-4">
-            Our Mission
+            Who We Built This For
           </p>
           <h2 className="heading-lg text-forest mb-6">
             Built for the People Who Show Up Every Day
