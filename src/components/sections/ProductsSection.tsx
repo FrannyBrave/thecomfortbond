@@ -33,6 +33,7 @@ const products = [
   id: 1,
   name: "Road Trip Kit",
   anchorId: "road-trip-kit",
+  badge: "Great for group sessions",
   description: "Hit the open road through decades of American travel memories, from Route 66 to family road trips. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
@@ -43,6 +44,7 @@ const products = [
   id: 2,
   name: "Nostalgia Kit",
   anchorId: "nostalgia-kit",
+  badge: "Memory care favorite",
   description: "A walk down memory lane from the 1950s through the 1990s, sparking stories, smiles, and sing-alongs. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
@@ -53,6 +55,7 @@ const products = [
   id: 3,
   name: "Kitchen & Comfort Food Kit",
   anchorId: "kitchen-comfort-kit",
+  badge: "Great for 1:1 & group",
   description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
@@ -63,6 +66,7 @@ const products = [
   id: 4,
   name: "Holiday Traditions Kit",
   anchorId: "holiday-traditions-kit",
+  badge: "Runs year-round",
   description: "Spanning holidays across the entire year, from New Year's to Christmas and everything in between. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
@@ -181,6 +185,11 @@ export const ProductsSection = () => {
                 </div>
                 <div className="p-5 flex flex-col flex-grow">
                   <h3 className="font-serif text-lg font-semibold text-forest mb-1">{product.name}</h3>
+                  {product.badge && (
+                    <span className="inline-block bg-sage/20 text-forest/70 text-xs font-sans font-medium px-2.5 py-0.5 rounded-full mb-2">
+                      {product.badge}
+                    </span>
+                  )}
                   <p className="font-sans text-sm text-forest/80 mb-4 leading-snug">{product.description}</p>
                   <div className="mt-auto">
                     <span className="text-2xl font-serif font-bold text-forest block mb-1">{product.price}</span>
