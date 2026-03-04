@@ -157,9 +157,7 @@ export const ProductsSection = () => {
 
                   <a
                     href={featuredProduct.checkoutUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2">
+                    className="lemonsqueezy-button inline-flex items-center justify-center gap-2">
 
                     Buy Full Bundle
                   </a>
@@ -195,7 +193,7 @@ export const ProductsSection = () => {
                     <span className="text-2xl font-serif font-bold text-forest block mb-1">{product.price}</span>
                     <p className="font-sans text-xs text-forest/60 mb-4">Instant digital download.</p>
                     <Button variant="cta" size="default" className="w-full h-11" asChild>
-                      <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
+                      <a href={product.checkoutUrl} className="lemonsqueezy-button inline-flex items-center justify-center">
                         Purchase Kit
                       </a>
                     </Button>
@@ -230,7 +228,7 @@ export const ProductsSection = () => {
                     <span className="text-2xl font-serif font-bold text-forest block mb-1">{product.price}</span>
                     <p className="font-sans text-xs text-forest/60 mb-4">Instant digital download.</p>
                     <Button variant="cta" size="default" className="w-full h-11" asChild>
-                      <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
+                      <a href={product.checkoutUrl} className="lemonsqueezy-button inline-flex items-center justify-center">
                         Purchase Suite
                       </a>
                     </Button>
