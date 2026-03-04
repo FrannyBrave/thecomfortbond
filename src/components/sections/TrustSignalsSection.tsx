@@ -65,8 +65,9 @@ export const TrustSignalsSection = () => {
 
         {/* Five Cards Grid */}
         <div ref={ref} className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {pillars.map((pillar, index) => {
+          {/* Top row: 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            {pillars.slice(0, 3).map((pillar, index) => {
               const Icon = pillar.icon;
               return (
                 <motion.div
@@ -74,23 +75,42 @@ export const TrustSignalsSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`bg-white/60 rounded-xl p-5 shadow-sm border border-sage/15 flex flex-row items-start gap-4 text-left md:last:col-span-2 md:last:max-w-[calc(50%-0.5rem)] md:last:mx-auto lg:flex-col lg:items-center lg:text-center lg:p-6 lg:last:col-span-1 lg:last:max-w-none lg:last:mx-0`}>
-
-                  <div className="flex-shrink-0 lg:mb-4">
-                    <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center">
-                      <Icon className="w-6 h-6 lg:w-7 lg:h-7 text-forest" strokeWidth={1.5} />
+                  className="bg-white/60 rounded-xl p-5 shadow-sm border border-sage/15 flex flex-row items-start gap-4 text-left md:flex-col md:items-center md:text-center md:p-6">
+                  <div className="flex-shrink-0 md:mb-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center">
+                      <Icon className="w-6 h-6 md:w-7 md:h-7 text-forest" strokeWidth={1.5} />
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-serif text-base font-semibold text-forest mb-1 lg:mb-2">
-                      {pillar.title}
-                    </h3>
-                    <p className="font-sans text-sm text-forest/70 leading-relaxed">
-                      {pillar.description}
-                    </p>
+                    <h3 className="font-serif text-base font-semibold text-forest mb-1 md:mb-2">{pillar.title}</h3>
+                    <p className="font-sans text-sm text-forest/70 leading-relaxed">{pillar.description}</p>
                   </div>
-                </motion.div>);
-
+                </motion.div>
+              );
+            })}
+          </div>
+          {/* Bottom row: 2 centered cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[66%] mx-auto max-md:max-w-none">
+            {pillars.slice(3, 5).map((pillar, index) => {
+              const Icon = pillar.icon;
+              return (
+                <motion.div
+                  key={pillar.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
+                  className="bg-white/60 rounded-xl p-5 shadow-sm border border-sage/15 flex flex-row items-start gap-4 text-left md:flex-col md:items-center md:text-center md:p-6">
+                  <div className="flex-shrink-0 md:mb-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center">
+                      <Icon className="w-6 h-6 md:w-7 md:h-7 text-forest" strokeWidth={1.5} />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-base font-semibold text-forest mb-1 md:mb-2">{pillar.title}</h3>
+                    <p className="font-sans text-sm text-forest/70 leading-relaxed">{pillar.description}</p>
+                  </div>
+                </motion.div>
+              );
             })}
           </div>
 
