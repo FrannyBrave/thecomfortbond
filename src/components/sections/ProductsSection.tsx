@@ -51,7 +51,7 @@ const products = [
 },
 {
   id: 3,
-  name: "Comfort Food Kit",
+  name: "Kitchen & Comfort Food Kit",
   anchorId: "kitchen-comfort-kit",
   description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
