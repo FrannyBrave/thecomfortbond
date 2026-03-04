@@ -59,7 +59,7 @@ export const TrustSignalsSection = () => {
             The Benefits
           </span>
           <h2 className="text-3xl md:text-4xl font-serif text-forest">
-            Why Every Activity Matters
+            What Makes Every Comfort Bond™ Session Work
           </h2>
         </motion.div>
 
