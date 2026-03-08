@@ -10,7 +10,7 @@ import { HolidayKitDisplay } from "./HolidayKitDisplay";
 import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
-import serenityImage from "@/assets/serenity-video-suite.png";
+import serenityImage from "@/assets/serenity-hero.png";
 import { Button } from "@/components/ui/button";
 
 
