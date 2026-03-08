@@ -130,9 +130,9 @@ export const ProductsSection = () => {
 
               {/* Product Info */}
               <div className="p-8 md:p-10 flex flex-col justify-center">
-                <h3 className="heading-md text-forest mb-3">
-                  {featuredProduct.name}
-                </h3>
+                
+
+                
                 
 
                 
