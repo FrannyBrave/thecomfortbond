@@ -85,7 +85,7 @@ const products = [
   price: "$35",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
-  image: serenityImage
+  image: ""
 }];
 
 
