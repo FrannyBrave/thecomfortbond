@@ -133,9 +133,9 @@ export const ProductsSection = () => {
                 <h3 className="heading-md text-forest mb-3">
                   {featuredProduct.name}
                 </h3>
-                <p className="body-md text-forest/70 mb-4">
-                  {featuredProduct.description}
-                </p>
+                
+
+                
                 <div className="mb-6">
                   <p className="text-sm font-sans font-medium text-forest/60 mb-2">Everything you need for weeks of meaningful engagement: all 4 themed kits in one bundle. 80+ pages of print-ready activities and 20 themed sessions.</p>
                   <p className="body-sm text-forest/80">
@@ -183,11 +183,11 @@ export const ProductsSection = () => {
                 </div>
                 <div className="p-5 flex flex-col flex-grow">
                   <h3 className="font-serif text-lg font-semibold text-forest mb-1">{product.name}</h3>
-                  {product.badge && (
-                    <span className="inline-block bg-sage/20 text-forest/70 text-xs font-sans font-medium px-2.5 py-0.5 rounded-full mb-2">
+                  {product.badge &&
+                <span className="inline-block bg-sage/20 text-forest/70 text-xs font-sans font-medium px-2.5 py-0.5 rounded-full mb-2">
                       {product.badge}
                     </span>
-                  )}
+                }
                   <p className="font-sans text-sm text-forest/80 mb-4 leading-snug">{product.description}</p>
                   <div className="mt-auto">
                     <span className="text-2xl font-serif font-bold text-forest block mb-1">{product.price}</span>
@@ -234,8 +234,8 @@ export const ProductsSection = () => {
                     </Button>
                   </div>
                 </div>
-              </div>
-            );
+              </div>);
+
           })()}
         </motion.div>
       </div>
