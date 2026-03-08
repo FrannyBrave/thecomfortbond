@@ -23,17 +23,16 @@ const KitCover = ({
   <div
     style={{
       position: "absolute",
-      left: `calc(50% + ${offset}px - 70px)`,
-      bottom: "60px",
-      width: "140px",
-      height: "190px",
+      left: `calc(50% + ${offset}px - 77px)`,
+      bottom: "40px",
+      width: "155px",
+      height: "220px",
       transform: `rotate(${rotation}deg) ${isActive ? "translateY(-8px) scale(1.03)" : "translateY(0) scale(1)"}`,
       transition: "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
       zIndex: isActive ? 10 : zIndex,
       transformOrigin: "bottom center",
     }}
   >
-    {/* Outer terracotta cover */}
     <div
       style={{
         width: "100%",
@@ -47,7 +46,6 @@ const KitCover = ({
         transition: "box-shadow 0.6s ease",
       }}
     >
-      {/* Cream inner panel */}
       <div
         style={{
           width: "100%",
@@ -62,7 +60,6 @@ const KitCover = ({
           overflow: "hidden",
         }}
       >
-        {/* Sage scalloped band */}
         <div
           style={{
             position: "absolute",
@@ -77,7 +74,6 @@ const KitCover = ({
             justifyContent: "center",
           }}
         >
-          {/* Scallop top edge */}
           <div
             style={{
               position: "absolute",
@@ -89,7 +85,6 @@ const KitCover = ({
               backgroundSize: "12px 6px",
             }}
           />
-          {/* Scallop bottom edge */}
           <div
             style={{
               position: "absolute",
@@ -103,7 +98,6 @@ const KitCover = ({
           />
         </div>
 
-        {/* Kit title */}
         <div
           style={{
             fontSize: "13px",
@@ -123,7 +117,6 @@ const KitCover = ({
           {title}
         </div>
 
-        {/* Bottom branding */}
         <div
           style={{
             position: "absolute",
@@ -142,6 +135,13 @@ const KitCover = ({
   </div>
 );
 
+const pulseKeyframes = `
+@keyframes badgePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+`;
+
 export const FullBundleDisplay = () => {
   const [activeKit, setActiveKit] = useState(3);
 
@@ -156,16 +156,20 @@ export const FullBundleDisplay = () => {
     <div
       style={{
         background: "linear-gradient(145deg, #3D5A47 0%, #2C4235 60%, #1E3028 100%)",
-        padding: "48px 24px 32px",
+        padding: "48px 24px 24px",
+        paddingBottom: "24px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        minHeight: "480px",
+        height: "100%",
+        minHeight: "560px",
       }}
     >
+      <style>{pulseKeyframes}</style>
+
       {/* Background texture circles */}
       <div style={{ position: "absolute", top: "-60px", left: "-60px", width: "200px", height: "200px", borderRadius: "50%", background: "rgba(255,255,255,0.04)" }} />
       <div style={{ position: "absolute", bottom: "-40px", right: "-40px", width: "160px", height: "160px", borderRadius: "50%", background: "rgba(255,255,255,0.03)" }} />
@@ -179,19 +183,22 @@ export const FullBundleDisplay = () => {
           left: "20px",
           background: "#C1714F",
           color: "white",
-          fontSize: "9px",
+          fontSize: "11px",
           fontWeight: 700,
-          letterSpacing: "1.5px",
-          padding: "5px 12px",
+          letterSpacing: "2px",
+          padding: "5px 14px",
           borderRadius: "20px",
           fontFamily: "Georgia, serif",
+          border: "2px solid #E8956D",
+          boxShadow: "0 0 0 4px rgba(193,113,79,0.25), 0 4px 12px rgba(193,113,79,0.4)",
+          animation: "badgePulse 2s ease-in-out infinite",
         }}
       >
-        BEST VALUE
+        🏆 BEST VALUE
       </div>
 
       {/* Fan of kit cards */}
-      <div style={{ position: "relative", width: "280px", height: "300px" }}>
+      <div style={{ position: "relative", width: "300px", height: "320px", flexShrink: 0 }}>
         {kits.map((kit, i) => (
           <KitCover
             key={i}
@@ -235,7 +242,7 @@ export const FullBundleDisplay = () => {
               color: i === activeKit ? "white" : "rgba(255,255,255,0.5)",
               padding: "3px 8px",
               borderRadius: "10px",
-              background: i === activeKit ? "rgba(255,255,255,0.15)" : "transparent",
+              background: i === activeKit ? "#C1714F" : "transparent",
               cursor: "pointer",
               transition: "all 0.3s",
               fontFamily: "Georgia, serif",

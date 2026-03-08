@@ -116,9 +116,9 @@ export const ProductsSection = () => {
 
           <div id="full-ecosystem-bundle" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)", display: "grid", gridTemplateColumns: "1fr" }}>
             <style>{`@media (min-width: 768px) { .bundle-grid { grid-template-columns: 1fr 1fr !important; } }`}</style>
-            <div className="bundle-grid" style={{ display: "grid", gridTemplateColumns: "1fr" }}>
+            <div className="bundle-grid" style={{ display: "grid", gridTemplateColumns: "1fr", alignItems: "stretch", minHeight: "560px" }}>
               {/* Left — Animated Display */}
-              <div style={{ minHeight: "480px" }}>
+              <div style={{ height: "100%" }}>
                 <FullBundleDisplay />
               </div>
 
