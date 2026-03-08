@@ -138,9 +138,9 @@ export const ProductsSection = () => {
                 
                 <div className="mb-6">
                   
-                  <p className="body-sm text-forest/80">
-                    {featuredProduct.includes.join(" · ")}
-                  </p>
+                  
+
+                  
                 </div>
                 
 
