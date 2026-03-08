@@ -613,7 +613,7 @@ export const ProductsSection = () => {
               <img
                 src={serenityImage}
                 alt="The Serenity Video Suite"
-                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }}
               />
             </div>
 
