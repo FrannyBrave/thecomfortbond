@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import roadTripImage from "@/assets/road-trip-kit.png";
 import { FullBundleDisplay } from "./FullBundleDisplay";
+import { RoadTripKitDisplay } from "./RoadTripKitDisplay";
 import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
@@ -212,9 +213,105 @@ export const ProductsSection = () => {
         </motion.div>
 
 
-        {/* A La Carte Products — 2x2 grid */}
+        {/* Road Trip Kit — Featured Two-Column Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mb-12">
+
+          <div id="road-trip-kit" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)" }}>
+            <style>{`@media (min-width: 768px) { .roadtrip-grid { grid-template-columns: 1fr 1fr !important; } }`}</style>
+            <div className="roadtrip-grid" style={{ display: "grid", gridTemplateColumns: "1fr", alignItems: "stretch", minHeight: "560px" }}>
+              <div style={{ height: "100%" }}>
+                <RoadTripKitDisplay />
+              </div>
+
+              <div style={{ background: "#FDFAF5", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "center", fontFamily: "Georgia, serif" }}>
+                <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "2px", color: "#3D5A47", marginBottom: "12px" }}>
+                  THE COMFORT BOND™
+                </div>
+
+                <h2 style={{ fontSize: "32px", lineHeight: 1.2, color: "#2C3E2D", marginBottom: "12px", fontWeight: 700 }}>
+                  The{" "}
+                  <span style={{ color: "#C1714F", fontStyle: "italic" }}>Road Trip</span>{" "}
+                  Kit
+                </h2>
+
+                <p style={{ fontSize: "15px", lineHeight: 1.6, color: "#5C6B5D", marginBottom: "28px" }}>
+                  Hit the open road through decades of American travel memories — from Route 66 to family road trips. 20+ pages of print-ready activities.
+                </p>
+
+                <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "2px", color: "#C1714F", marginBottom: "14px" }}>
+                  WHAT'S INSIDE
+                </div>
+
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "28px" }}>
+                  {[
+                    { emoji: "🗺️", bg: "#C1714F", title: "Conversation Cards", subtitle: "The Great American Road Trip · 4 pages" },
+                    { emoji: "❓", bg: "#3D5A47", title: "Trivia Time", subtitle: "Famous highways, state nicknames & more · 5 pages" },
+                    { emoji: "🔗", bg: "#8B7355", title: "Word Link Game", subtitle: "Find the bridge word · 3 pages" },
+                    { emoji: "🎱", bg: "#8B9E8F", title: "BINGO", subtitle: "State Nickname Bingo · 3 pages" },
+                    { emoji: "🎵", bg: "#C1714F", title: "Musical Memory Games", subtitle: "Finish the lyric & name that tune · 5 pages" },
+                  ].map((item) => (
+                    <div key={item.title} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                      <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: item.bg, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", flexShrink: 0 }}>
+                        {item.emoji}
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "14px", fontWeight: 700, color: "#2C3E2D", lineHeight: 1.3 }}>{item.title}</div>
+                        <div style={{ fontSize: "12px", color: "#8B9E8F", lineHeight: 1.3 }}>{item.subtitle}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginBottom: "20px" }}>
+                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$29</span>
+                </div>
+
+                <a
+                  href="https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05"
+                  className="lemonsqueezy-button"
+                  style={{
+                    display: "inline-block",
+                    textAlign: "center",
+                    background: "#C1714F",
+                    color: "#FDFAF5",
+                    border: "none",
+                    borderRadius: "10px",
+                    padding: "14px 28px",
+                    fontSize: "15px",
+                    fontWeight: 700,
+                    fontFamily: "Georgia, serif",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 4px 14px rgba(193,113,79,0.3)",
+                    textDecoration: "none",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.boxShadow = "0 8px 24px rgba(193,113,79,0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 14px rgba(193,113,79,0.3)";
+                  }}
+                >
+                  Purchase Kit
+                </a>
+
+                <p style={{ fontSize: "11px", color: "#8B9E8F", marginTop: "12px", textAlign: "center" }}>
+                  Instant digital download · Print as many copies as you need
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* A La Carte Products — remaining kits */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {products.slice(0, 4).map((product, index) =>
+          {products.slice(1, 4).map((product, index) =>
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 40 }}
