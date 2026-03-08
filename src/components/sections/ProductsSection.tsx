@@ -608,55 +608,13 @@ export const ProductsSection = () => {
           className="mb-12"
         >
           <div id="serenity-video-suite" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)", background: "#FDFAF5" }}>
-            {/* Illustrated Nature Scene */}
-            <div style={{ width: "100%", height: "230px", position: "relative", overflow: "hidden", borderRadius: "24px 24px 0 0" }}>
-              {/* Sky gradient */}
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, #FDFAF5 0%, #E8C9A8 50%, #D4956A 85%)" }} />
-
-              {/* Large translucent circle for depth */}
-              <div style={{ position: "absolute", top: "-60px", right: "-40px", width: "280px", height: "280px", borderRadius: "50%", background: "rgba(212,149,106,0.12)" }} />
-              <div style={{ position: "absolute", bottom: "-30px", left: "-20px", width: "200px", height: "200px", borderRadius: "50%", background: "rgba(61,90,71,0.08)" }} />
-
-              {/* Sun/moon */}
-              <div style={{ position: "absolute", top: "55px", left: "38%", width: "40px", height: "40px", borderRadius: "50%", background: "radial-gradient(circle, #FDFAF5 30%, rgba(212,149,106,0.4) 60%, transparent 100%)" }} />
-              <div style={{ position: "absolute", top: "45px", left: "36%", width: "60px", height: "60px", borderRadius: "50%", background: "radial-gradient(circle, rgba(212,149,106,0.25) 0%, transparent 70%)" }} />
-
-              {/* Distant treeline row 1 (furthest, faded) */}
-              <svg style={{ position: "absolute", bottom: "75px", left: 0, width: "100%", height: "60px", opacity: 0.4 }} viewBox="0 0 1000 60" preserveAspectRatio="none">
-                <path d="M0,60 L0,45 Q25,10 50,45 Q75,5 100,42 Q130,12 160,45 Q185,8 210,42 Q240,15 270,45 Q295,5 320,43 Q350,10 380,45 Q405,8 430,42 Q460,12 490,45 Q515,5 540,43 Q570,10 600,45 Q625,8 650,42 Q680,15 710,45 Q735,5 760,42 Q790,10 820,45 Q845,8 870,42 Q900,12 930,45 Q955,5 980,42 L1000,45 L1000,60 Z" fill="#3D5A47" />
-              </svg>
-
-              {/* Distant treeline row 2 (medium) */}
-              <svg style={{ position: "absolute", bottom: "65px", left: 0, width: "100%", height: "65px", opacity: 0.65 }} viewBox="0 0 1000 65" preserveAspectRatio="none">
-                <path d="M0,65 L0,48 Q30,15 60,48 Q90,8 120,46 Q150,18 180,48 Q210,10 240,46 Q270,20 300,48 Q330,12 360,46 Q390,18 420,48 Q450,8 480,46 Q510,15 540,48 Q570,10 600,46 Q630,18 660,48 Q690,8 720,46 Q750,15 780,48 Q810,10 840,46 Q870,18 900,48 Q930,8 960,46 L1000,48 L1000,65 Z" fill="#3D5A47" />
-              </svg>
-
-              {/* Front treeline (full opacity) */}
-              <svg style={{ position: "absolute", bottom: "55px", left: 0, width: "100%", height: "70px" }} viewBox="0 0 1000 70" preserveAspectRatio="none">
-                <path d="M0,70 L0,50 Q20,12 40,48 Q60,5 80,46 Q105,15 130,50 Q155,8 180,48 Q200,18 220,50 Q245,5 270,48 Q295,15 320,50 Q340,8 360,46 Q385,18 410,50 Q430,5 450,48 Q475,15 500,50 Q520,8 540,46 Q565,18 590,50 Q610,5 630,48 Q655,12 680,50 Q700,8 720,46 Q745,18 770,50 Q790,5 810,48 Q835,15 860,50 Q880,8 900,46 Q925,18 950,50 Q975,5 1000,48 L1000,70 Z" fill="#3D5A47" />
-              </svg>
-
-              {/* Horizon glow line */}
-              <div style={{ position: "absolute", bottom: "54px", left: 0, width: "100%", height: "3px", background: "linear-gradient(90deg, transparent 5%, rgba(193,113,79,0.5) 30%, rgba(193,113,79,0.6) 50%, rgba(193,113,79,0.5) 70%, transparent 95%)" }} />
-
-              {/* Water / lake */}
-              <div style={{ position: "absolute", bottom: "12px", left: 0, width: "100%", height: "45px", background: "linear-gradient(180deg, #7A9E8E 0%, #6B8F7F 100%)" }}>
-                {/* Water reflection */}
-                <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "20px", background: "linear-gradient(180deg, rgba(61,90,71,0.3) 0%, rgba(212,149,106,0.15) 100%)", filter: "blur(2px)" }} />
-                {/* Ripple lines */}
-                <div style={{ position: "absolute", top: "10px", left: "10%", width: "80%", height: "1px", background: "rgba(253,250,245,0.15)" }} />
-                <div style={{ position: "absolute", top: "18px", left: "15%", width: "70%", height: "1px", background: "rgba(253,250,245,0.1)" }} />
-                <div style={{ position: "absolute", top: "26px", left: "20%", width: "55%", height: "1px", background: "rgba(253,250,245,0.08)" }} />
-                <div style={{ position: "absolute", top: "33px", left: "25%", width: "45%", height: "1px", background: "rgba(253,250,245,0.06)" }} />
-              </div>
-
-              {/* Foreground bank */}
-              <div style={{ position: "absolute", bottom: 0, left: 0, width: "100%", height: "14px", background: "#2C4235" }} />
-
-              {/* Typography overlay */}
-              <div style={{ position: "absolute", bottom: "20px", left: "24px", fontSize: "9px", fontFamily: "Georgia, serif", fontWeight: 700, letterSpacing: "0.12em", color: "#FDFAF5", opacity: 0.75, textTransform: "uppercase" as const }}>
-                A COMFORT FLOW™ VIDEO EXPERIENCE
-              </div>
+            {/* Hero Image */}
+            <div style={{ width: "100%", height: "0", paddingBottom: "55%", position: "relative", overflow: "hidden" }}>
+              <img
+                src={serenityImage}
+                alt="The Serenity Video Suite"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover" }}
+              />
             </div>
 
             {/* Product Info */}
