@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import roadTripImage from "@/assets/road-trip-kit.png";
 import { FullBundleDisplay } from "./FullBundleDisplay";
+import { RoadTripKitDisplay } from "./RoadTripKitDisplay";
 import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
