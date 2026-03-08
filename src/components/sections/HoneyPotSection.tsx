@@ -24,15 +24,8 @@ export const HoneyPotSection = () => {
           <div className="bg-card rounded-2xl overflow-hidden border border-sage/20 shadow-xl">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Product Image */}
-              <div className="aspect-square md:aspect-auto bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center min-h-[280px] overflow-hidden">
-                <img
-                  src={samplerImage}
-                  alt="The Founder's Sampler"
-                  className="w-full h-full object-cover" />
-
-                <span className="absolute top-4 left-4 bg-gold text-forest text-sm font-sans font-semibold px-4 py-1.5 rounded-full">
-                  Try Free
-                </span>
+              <div className="aspect-square md:aspect-auto relative min-h-[280px] overflow-hidden rounded-l-2xl">
+                <FoundersSamplerDisplay />
               </div>
 
               {/* Product Info */}
