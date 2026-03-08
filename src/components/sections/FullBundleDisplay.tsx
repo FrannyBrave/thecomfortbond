@@ -23,10 +23,10 @@ const KitCover = ({
   <div
     style={{
       position: "absolute",
-      left: `calc(50% + ${offset}px - 77px)`,
-      bottom: "40px",
-      width: "155px",
-      height: "220px",
+      left: `calc(50% + ${offset}px - 85px)`,
+      bottom: "30px",
+      width: "170px",
+      height: "240px",
       transform: `rotate(${rotation}deg) ${isActive ? "translateY(-8px) scale(1.03)" : "translateY(0) scale(1)"}`,
       transition: "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
       zIndex: isActive ? 10 : zIndex,
@@ -238,7 +238,7 @@ export const FullBundleDisplay = () => {
             key={label}
             onClick={() => setActiveKit(i)}
             style={{
-              fontSize: "8px",
+              fontSize: "11px",
               color: i === activeKit ? "white" : "rgba(255,255,255,0.5)",
               padding: "3px 8px",
               borderRadius: "10px",
