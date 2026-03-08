@@ -155,12 +155,12 @@ export const ProductsSection = () => {
                 className="w-full md:w-auto"
                 asChild>
 
-                  <a
-                    href={featuredProduct.checkoutUrl}
-                    className="lemonsqueezy-button inline-flex items-center justify-center gap-2">
+                  
 
-                    Buy Full Bundle
-                  </a>
+
+
+
+                  
                 </Button>
               </div>
             </div>
