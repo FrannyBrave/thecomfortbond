@@ -33,9 +33,9 @@ export const HoneyPotSection = () => {
                 
 
                 
-                <p className="body-md text-forest/70 mb-6">
-                  A free taste of The Comfort Bond™ — Includes 3 ready-to-use activity types: discussion prompts, storytelling cards, and a Guess the Era game. Perfect for trying before you buy.
-                </p>
+                
+
+                
                 <div className="flex items-baseline gap-3 mb-6">
                   <span className="text-4xl font-serif font-bold text-forest">
 
