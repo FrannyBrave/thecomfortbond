@@ -177,8 +177,12 @@ export const HoneyPotSection = () => {
                 ))}
               </div>
 
-              <button
+              <a
+                href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
+                className="lemonsqueezy-button"
                 style={{
+                  display: "inline-block",
+                  textAlign: "center",
                   background: "#C1714F",
                   color: "#FDFAF5",
                   border: "none",
@@ -190,6 +194,7 @@ export const HoneyPotSection = () => {
                   cursor: "pointer",
                   transition: "all 0.3s ease",
                   boxShadow: "0 4px 14px rgba(193,113,79,0.3)",
+                  textDecoration: "none",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-2px)";
@@ -203,7 +208,7 @@ export const HoneyPotSection = () => {
                 }}
               >
                 Download Free Sample
-              </button>
+              </a>
 
               <p
                 style={{
