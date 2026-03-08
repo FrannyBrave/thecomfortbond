@@ -10,7 +10,7 @@ import { HolidayKitDisplay } from "./HolidayKitDisplay";
 import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
-import serenityImage from "@/assets/serenity-hero.png";
+import SerenityNatureScene from "./SerenityNatureScene";
 import { Button } from "@/components/ui/button";
 
 
@@ -85,7 +85,7 @@ const products = [
   price: "$35",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
-  image: serenityImage
+  image: ""
 }];
 
 
@@ -608,14 +608,8 @@ export const ProductsSection = () => {
           className="mb-12"
         >
           <div id="serenity-video-suite" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)", background: "#FDFAF5" }}>
-            {/* Hero Image */}
-            <div style={{ width: "100%", height: "0", paddingBottom: "55%", position: "relative", overflow: "hidden" }}>
-              <img
-                src={serenityImage}
-                alt="The Serenity Video Suite"
-                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }}
-              />
-            </div>
+            {/* Animated Nature Scene Hero */}
+            <SerenityNatureScene />
 
             {/* Product Info */}
             <div style={{ padding: "40px 36px", fontFamily: "Georgia, serif" }}>
