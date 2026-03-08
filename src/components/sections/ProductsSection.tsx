@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import bundleImage from "@/assets/full-ecosystem-bundle.png";
 import roadTripImage from "@/assets/road-trip-kit.png";
+import { FullBundleDisplay } from "./FullBundleDisplay";
 import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
@@ -114,55 +114,99 @@ export const ProductsSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12">
 
-          <div id="full-ecosystem-bundle" className="bg-card rounded-2xl overflow-hidden border-2 border-gold shadow-xl shadow-gold/20 max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-0">
-              {/* Product Image Placeholder */}
-              <div className="aspect-square md:aspect-auto bg-gradient-to-br from-sage/20 to-gold/10 relative flex items-center justify-center min-h-[280px] overflow-hidden">
-                <img
-                  src={bundleImage}
-                  alt="The Full Ecosystem Bundle - Collection of all kits"
-                  className="w-full h-full object-cover" />
-
-                <span className="absolute top-4 left-4 bg-gold text-forest text-sm font-sans font-semibold px-4 py-1.5 rounded-full">
-                  {featuredProduct.badge}
-                </span>
+          <div id="full-ecosystem-bundle" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)", display: "grid", gridTemplateColumns: "1fr" }}>
+            <style>{`@media (min-width: 768px) { .bundle-grid { grid-template-columns: 1fr 1fr !important; } }`}</style>
+            <div className="bundle-grid" style={{ display: "grid", gridTemplateColumns: "1fr" }}>
+              {/* Left — Animated Display */}
+              <div style={{ minHeight: "480px" }}>
+                <FullBundleDisplay />
               </div>
 
-              {/* Product Info */}
-              
+              {/* Right — Product Info */}
+              <div style={{ background: "#FDFAF5", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "center", fontFamily: "Georgia, serif" }}>
+                <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "2px", color: "#3D5A47", marginBottom: "12px" }}>
+                  THE COMFORT BOND™
+                </div>
 
+                <h2 style={{ fontSize: "32px", lineHeight: 1.2, color: "#2C3E2D", marginBottom: "12px", fontWeight: 700 }}>
+                  The{" "}
+                  <span style={{ color: "#C1714F", fontStyle: "italic" }}>Full Kit</span>{" "}
+                  Bundle
+                </h2>
 
+                <p style={{ fontSize: "17px", fontWeight: 700, color: "#2C3E2D", lineHeight: 1.4, marginBottom: "8px" }}>
+                  Four themed kits. One complete engagement library.
+                </p>
 
+                <p style={{ fontSize: "15px", lineHeight: 1.6, color: "#5C6B5D", marginBottom: "28px" }}>
+                  Everything you need for weeks of meaningful engagement — 80+ pages of print-ready activities and 20 themed sessions.
+                </p>
 
+                <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "2px", color: "#C1714F", marginBottom: "14px" }}>
+                  WHAT'S INSIDE
+                </div>
 
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "28px" }}>
+                  {[
+                    { emoji: "🍳", bg: "#C1714F", title: "Kitchen & Comfort Food Kit", subtitle: "Recipes, food memories & more" },
+                    { emoji: "🎄", bg: "#3D5A47", title: "Holiday Traditions Kit", subtitle: "Seasonal stories & celebrations" },
+                    { emoji: "🚗", bg: "#8B7355", title: "Road Trip Kit", subtitle: "Travel memories & adventures" },
+                    { emoji: "📸", bg: "#8B9E8F", title: "Nostalgia Kit", subtitle: "Then & now, life stories" },
+                  ].map((item) => (
+                    <div key={item.title} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                      <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: item.bg, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", flexShrink: 0 }}>
+                        {item.emoji}
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "14px", fontWeight: 700, color: "#2C3E2D", lineHeight: 1.3 }}>{item.title}</div>
+                        <div style={{ fontSize: "12px", color: "#8B9E8F", lineHeight: 1.3 }}>{item.subtitle}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
+                {/* Pricing */}
+                <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginBottom: "20px" }}>
+                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$97</span>
+                  <span style={{ fontSize: "18px", color: "#A0A0A0", textDecoration: "line-through", fontFamily: "Georgia, serif" }}>$116</span>
+                  <span style={{ fontSize: "12px", fontWeight: 700, color: "#3D5A47", background: "rgba(61,90,71,0.1)", padding: "3px 10px", borderRadius: "20px" }}>Save $19</span>
+                </div>
 
+                <a
+                  href={featuredProduct.checkoutUrl}
+                  className="lemonsqueezy-button"
+                  style={{
+                    display: "inline-block",
+                    textAlign: "center",
+                    background: "#C1714F",
+                    color: "#FDFAF5",
+                    border: "none",
+                    borderRadius: "10px",
+                    padding: "14px 28px",
+                    fontSize: "15px",
+                    fontWeight: 700,
+                    fontFamily: "Georgia, serif",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 4px 14px rgba(193,113,79,0.3)",
+                    textDecoration: "none",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.boxShadow = "0 8px 24px rgba(193,113,79,0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 14px rgba(193,113,79,0.3)";
+                  }}
+                >
+                  Buy Full Bundle
+                </a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
+                <p style={{ fontSize: "11px", color: "#8B9E8F", marginTop: "12px", textAlign: "center" }}>
+                  Instant digital download · Print as many copies as you need
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
