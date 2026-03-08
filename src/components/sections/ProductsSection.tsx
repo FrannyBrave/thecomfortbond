@@ -600,39 +600,110 @@ export const ProductsSection = () => {
           </div>
         </motion.div>
 
-        {/* Add-On: Serenity Video Suite */}
+        {/* Serenity Video Suite — Single-Column Card */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 max-w-4xl mx-auto">
-          <div className="text-center mb-6">
-            <span className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-terracotta">Add-On</span>
-            <p className="body-md text-forest/70 mt-2">Pair any kit with calming background content for transitions and quiet moments.</p>
-          </div>
-          {(() => {
-            const product = products[4];
-            return (
-              <div id={product.anchorId} className="bg-card rounded-xl overflow-hidden border border-sage/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 max-w-md mx-auto">
-                <div className="aspect-[4/3] bg-gradient-to-br from-cream-dark to-sage/10 relative flex items-center justify-center overflow-hidden">
-                  <img src={product.image} alt={product.name} className="w-full h-full object-cover object-top" />
-                </div>
-                <div className="p-5 flex flex-col">
-                  <h3 className="font-serif text-lg font-semibold text-forest mb-1">{product.name}</h3>
-                  <p className="font-sans text-sm text-forest/80 mb-4 leading-snug">{product.description}</p>
-                  <div className="mt-auto">
-                    <span className="text-2xl font-serif font-bold text-forest block mb-1">{product.price}</span>
-                    <p className="font-sans text-xs text-forest/60 mb-4">Instant digital download.</p>
-                    <Button variant="cta" size="default" className="w-full h-11" asChild>
-                      <a href={product.checkoutUrl} className="lemonsqueezy-button inline-flex items-center justify-center">
-                        Purchase Suite
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-              </div>);
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mb-12"
+        >
+          <div id="serenity-video-suite" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)", background: "#FDFAF5" }}>
+            {/* Hero Image */}
+            <div style={{ width: "100%", height: "0", paddingBottom: "55%", position: "relative", overflow: "hidden" }}>
+              <img
+                src={serenityImage}
+                alt="The Serenity Video Suite"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
 
-          })()}
+            {/* Product Info */}
+            <div style={{ padding: "40px 36px", fontFamily: "Georgia, serif" }}>
+              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "2px", color: "#3D5A47", marginBottom: "12px" }}>
+                THE COMFORT BOND™
+              </div>
+
+              <h2 style={{ fontSize: "32px", lineHeight: 1.2, color: "#2C4235", marginBottom: "12px", fontWeight: 700 }}>
+                The{" "}
+                <span style={{ color: "#C1714F", fontStyle: "italic" }}>Serenity</span>{" "}
+                Video Suite
+              </h2>
+
+              <p style={{ fontSize: "15px", lineHeight: 1.6, color: "#5C6B5D", marginBottom: "28px" }}>
+                Designed to ease sundowning restlessness and calm the room between activities. Calming nature videos that provide gentle resets during quiet moments or help wind down a session naturally.
+              </p>
+
+              <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "2px", color: "#C1714F", marginBottom: "14px" }}>
+                WHAT'S INSIDE
+              </div>
+
+              {/* Stat Pills */}
+              <div style={{ display: "flex", gap: "10px", marginBottom: "28px", flexWrap: "wrap" }}>
+                {[
+                  { number: "10", label: "NATURE SCENES" },
+                  { number: "89", label: "TOTAL MINUTES" },
+                  { number: "∞", label: "CONTINUOUS LOOP" },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    style={{
+                      background: "#2C4235",
+                      color: "#FFFFFF",
+                      borderRadius: "12px",
+                      padding: "12px 20px",
+                      display: "flex",
+                      alignItems: "baseline",
+                      gap: "8px",
+                      fontFamily: "Georgia, serif",
+                    }}
+                  >
+                    <span style={{ fontSize: "22px", fontWeight: 700 }}>{stat.number}</span>
+                    <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "1.5px", opacity: 0.8 }}>{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Pricing */}
+              <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginBottom: "20px" }}>
+                <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C4235", fontFamily: "Georgia, serif" }}>$35</span>
+              </div>
+
+              <a
+                href="https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530"
+                className="lemonsqueezy-button"
+                style={{
+                  display: "block",
+                  textAlign: "center",
+                  background: "#C1714F",
+                  color: "#FDFAF5",
+                  border: "none",
+                  borderRadius: "10px",
+                  padding: "14px 28px",
+                  fontSize: "15px",
+                  fontWeight: 700,
+                  fontFamily: "Georgia, serif",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  boxShadow: "0 4px 14px rgba(193,113,79,0.3)",
+                  textDecoration: "none",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(193,113,79,0.4)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "0 4px 14px rgba(193,113,79,0.3)";
+                }}
+              >
+                Purchase Suite
+              </a>
+
+              <p style={{ fontSize: "11px", color: "#8B9E8F", marginTop: "12px", textAlign: "center", fontStyle: "italic" }}>
+                Instant digital download.
+              </p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>);
