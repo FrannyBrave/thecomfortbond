@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import bundleImage from "@/assets/full-ecosystem-bundle.png";
 import roadTripImage from "@/assets/road-trip-kit.png";
+import { FullBundleDisplay } from "./FullBundleDisplay";
 import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
