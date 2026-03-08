@@ -238,7 +238,7 @@ export const FullBundleDisplay = () => {
             key={label}
             onClick={() => setActiveKit(i)}
             style={{
-              fontSize: "8px",
+              fontSize: "11px",
               color: i === activeKit ? "white" : "rgba(255,255,255,0.5)",
               padding: "3px 8px",
               borderRadius: "10px",
