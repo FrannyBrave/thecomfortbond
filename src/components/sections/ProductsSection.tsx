@@ -129,40 +129,40 @@ export const ProductsSection = () => {
               </div>
 
               {/* Product Info */}
-              <div className="p-8 md:p-10 flex flex-col justify-center">
-                
-
-                
-                
-
-                
-                <div className="mb-6">
-                  
-                  
-
-                  
-                </div>
-                
+              
 
 
 
 
 
 
-                
-                <Button variant="cta"
-                size="lg"
-                className="w-full md:w-auto"
-                asChild>
-
-                  
 
 
 
 
-                  
-                </Button>
-              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
             </div>
           </div>
         </motion.div>
