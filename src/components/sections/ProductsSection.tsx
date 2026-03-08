@@ -142,14 +142,14 @@ export const ProductsSection = () => {
                     {featuredProduct.includes.join(" · ")}
                   </p>
                 </div>
-                <div className="flex items-baseline gap-3 mb-6">
-                  <span className="text-4xl font-serif font-bold text-forest">
-                    {featuredProduct.price}
-                  </span>
-                  <span className="text-xl font-serif text-forest/40 line-through">
-                    {featuredProduct.originalPrice}
-                  </span>
-                </div>
+                
+
+
+
+
+
+
+                
                 <Button variant="cta"
                 size="lg"
                 className="w-full md:w-auto"
