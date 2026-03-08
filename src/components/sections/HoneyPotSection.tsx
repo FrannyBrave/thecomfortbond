@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import samplerImage from "@/assets/founders-sampler.png";
+import { FoundersSamplerDisplay } from "./FoundersSamplerDisplay";
 
 export const HoneyPotSection = () => {
   const sectionRef = useRef(null);
