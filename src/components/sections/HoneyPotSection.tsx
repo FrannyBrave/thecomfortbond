@@ -41,9 +41,9 @@ export const HoneyPotSection = () => {
 
                   </span>
                 </div>
-                <p className="font-sans text-sm text-forest/60 mb-6">
-                  Instant digital download. No credit card required.
-                </p>
+                
+
+                
                 <Button
                   variant="cta"
                   size="lg"
