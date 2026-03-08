@@ -10,7 +10,7 @@ export const CTASection = () => {
   return (
     <section className="section-padding relative overflow-hidden" ref={ref}>
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest to-sage/80" />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(145deg, #3D5A47 0%, #2C4235 60%, #1E3028 100%)" }} />
       
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-gold/5 blur-3xl" />
