@@ -29,7 +29,7 @@ const featuredProduct = {
   originalPrice: "$116",
   badge: "Best Value",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/9ffc59b7-0a7f-4717-9a45-3d3000a960fc"
+  "https://shop.thecomfortbond.com/checkout/buy/56346027-500a-4647-bd93-2e23e56288c5"
 };
 
 const products = [
@@ -41,7 +41,7 @@ const products = [
   description: "Hit the open road through decades of American travel memories, from Route 66 to family road trips. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05",
+  "https://shop.thecomfortbond.com/checkout/buy/9c02a875-b45a-44f2-84ec-7c74180b6ce7",
   image: roadTripImage
 },
 {
@@ -52,7 +52,7 @@ const products = [
   description: "A walk down memory lane from the 1950s through the 1990s, sparking stories, smiles, and sing-alongs. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29",
+  "https://shop.thecomfortbond.com/checkout/buy/9c1fbff1-5613-4ff0-bf18-f6e3922b73fd",
   image: nostalgiaImage
 },
 {
@@ -63,7 +63,7 @@ const products = [
   description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45",
+  "https://shop.thecomfortbond.com/checkout/buy/69add6a1-065f-45f2-9577-25c331865cb5",
   image: kitchenImage
 },
 {
@@ -74,7 +74,7 @@ const products = [
   description: "Spanning holidays across the entire year, from New Year's to Christmas and everything in between. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$29",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d",
+  "https://shop.thecomfortbond.com/checkout/buy/dbed51fb-307d-49fe-8df7-03755de0d989",
   image: holidayImage
 },
 {
@@ -84,7 +84,7 @@ const products = [
   description: "Designed to ease sundowning restlessness and calm the room between activities. Calming nature videos that provide gentle resets during quiet moments or help wind down a session naturally.",
   price: "$35",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530",
+  "https://shop.thecomfortbond.com/checkout/buy/29a93e42-c874-4066-82f8-57b21aecaf4f",
   image: serenityImage
 }];
 
@@ -274,7 +274,7 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://shop.thecomfortbond.com/checkout/buy/db7c2f22-538e-43d3-a777-5b4f3b2eda05"
+                  href="https://shop.thecomfortbond.com/checkout/buy/9c02a875-b45a-44f2-84ec-7c74180b6ce7"
                   className="lemonsqueezy-button"
                   style={{
                     display: "inline-block",
@@ -370,7 +370,7 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://shop.thecomfortbond.com/checkout/buy/0bd6f264-108d-4f37-8330-8440f8cb0d29"
+                  href="https://shop.thecomfortbond.com/checkout/buy/9c1fbff1-5613-4ff0-bf18-f6e3922b73fd"
                   className="lemonsqueezy-button"
                   style={{
                     display: "inline-block",
@@ -466,7 +466,7 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://shop.thecomfortbond.com/checkout/buy/92c9c8a3-a532-4760-b27a-4a0907d55f45"
+                  href="https://shop.thecomfortbond.com/checkout/buy/69add6a1-065f-45f2-9577-25c331865cb5"
                   className="lemonsqueezy-button"
                   style={{
                     display: "inline-block",
@@ -562,7 +562,7 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://shop.thecomfortbond.com/checkout/buy/3eff87c2-37b0-4acb-ae78-cf9289e5238d"
+                  href="https://shop.thecomfortbond.com/checkout/buy/dbed51fb-307d-49fe-8df7-03755de0d989"
                   className="lemonsqueezy-button"
                   style={{
                     display: "inline-block",
@@ -669,7 +669,7 @@ export const ProductsSection = () => {
               </div>
 
               <a
-                href="https://shop.thecomfortbond.com/checkout/buy/fe7a8bab-e2f4-433f-a73b-358742e54530"
+                href="https://shop.thecomfortbond.com/checkout/buy/29a93e42-c874-4066-82f8-57b21aecaf4f"
                 className="lemonsqueezy-button"
                 style={{
                   display: "block",

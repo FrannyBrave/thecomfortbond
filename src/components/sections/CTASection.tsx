@@ -36,7 +36,7 @@ export const CTASection = () => {
               asChild
             >
               <a
-                href="https://shop.thecomfortbond.com/checkout/buy/9ffc59b7-0a7f-4717-9a45-3d3000a960fc"
+                href="https://shop.thecomfortbond.com/checkout/buy/56346027-500a-4647-bd93-2e23e56288c5"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -50,7 +50,7 @@ export const CTASection = () => {
               asChild
             >
               <a
-                href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
+                href="https://shop.thecomfortbond.com/checkout/buy/18fee61a-934f-4fd5-8ac1-9bcb24134646"
                 target="_blank"
                 rel="noopener noreferrer"
               >

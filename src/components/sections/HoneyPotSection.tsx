@@ -178,7 +178,7 @@ export const HoneyPotSection = () => {
               </div>
 
               <a
-                href="https://shop.thecomfortbond.com/checkout/buy/57a100bd-b68b-4e71-92a9-174acbc6a313"
+                href="https://shop.thecomfortbond.com/checkout/buy/18fee61a-934f-4fd5-8ac1-9bcb24134646"
                 className="lemonsqueezy-button"
                 style={{
                   display: "inline-block",
