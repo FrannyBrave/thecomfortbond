@@ -50,7 +50,7 @@ const products = [
   anchorId: "nostalgia-kit",
   badge: "Memory care favorite",
   description: "A walk down memory lane from the 1950s through the 1990s, sparking stories, smiles, and sing-alongs. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
-  price: "$26.99",
+  price: "$26",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/9c1fbff1-5613-4ff0-bf18-f6e3922b73fd",
   image: nostalgiaImage
