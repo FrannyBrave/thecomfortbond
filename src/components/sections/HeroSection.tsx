@@ -182,7 +182,7 @@ export const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.8, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              whileHover={{ y: -4, boxShadow: "0 12px 32px -4px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.08)" }}
+              whileHover={{ y: -6, scale: 1.03, boxShadow: "0 16px 40px -4px rgba(0,0,0,0.3), 0 6px 16px rgba(0,0,0,0.15)" }}
               transition={{ duration: 0.5, delay: 1.6, ease: "easeOut" }}
               className="absolute -bottom-5 right-8 z-20 flex items-center gap-2.5 bg-forest/70 backdrop-blur-xl rounded-[14px] px-4 py-3 border border-cream/10 cursor-default"
               style={{
