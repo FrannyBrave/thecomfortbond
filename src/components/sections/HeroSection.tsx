@@ -17,17 +17,17 @@ export const HeroSection = () => {
       backgroundPosition: "center 40%"
     }} />
       
-      {/* Left-to-right dark gradient overlay */}
+      {/* Left-side forest green gradient overlay */}
       <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(to right, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.20) 30%, transparent 55%)"
+          background: "linear-gradient(to right, rgba(44,62,45,0.55) 0%, rgba(44,62,45,0.30) 25%, transparent 50%)"
         }}
       />
 
       {/* Hero Content */}
-      <div className="section-container relative z-10 pt-20">
-        <div className="max-w-2xl text-left">
+      <div className="relative z-10 pt-20 w-full pl-[60px] pr-4 md:pr-0">
+        <div className="text-left w-full md:w-[45%]">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-            className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-xl mb-8 md:mb-12"
+            className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 mb-8 md:mb-12"
           >
             Printable activity kits built for Activity Directors. Zero prep, meaningful engagement and genuine connection every time.
           </motion.p>
