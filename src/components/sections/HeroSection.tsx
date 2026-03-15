@@ -110,14 +110,6 @@ export const HeroSection = () => {
               Get Your First Kit
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button
-              variant="outline"
-              size="xl"
-              onClick={scrollToSampler}
-              className="border-cream/20 text-cream hover:bg-cream/10 hover:border-cream/30"
-            >
-              See a Free Sample
-            </Button>
           </motion.div>
 
           <motion.p
