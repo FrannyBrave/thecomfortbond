@@ -55,7 +55,7 @@ export const HeroSection = () => {
             <Button variant="cta" size="xl" onClick={scrollToProducts}>
               Get Your First Kit
             </Button>
-            <p className="font-sans text-sm text-cream/60">
+            <p className="font-sans text-sm text-cream/70">
               Instant digital download. No subscription required.
             </p>
           </motion.div>
