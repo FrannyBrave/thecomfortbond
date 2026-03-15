@@ -47,7 +47,7 @@ export const MissionBannerSection = () => {
 
           {/* Main line */}
           <p className="font-serif text-xl md:text-2xl lg:text-[1.65rem] leading-relaxed text-forest font-medium">
-            Join Activity Directors who believe every resident deserves an hour worth showing up for.
+            We create zero-prep activity kits for Activity Directors who believe every resident deserves an hour worth showing up for.
           </p>
         </motion.div>
 
