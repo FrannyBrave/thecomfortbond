@@ -50,7 +50,7 @@ export const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             {[
               { label: "How It Works", href: "#methodology" },
-              { label: "Kits", href: "#products" },
+              { label: "Kits", href: "#road-trip-kit" },
               { label: "FAQ", href: "#faq" },
               { label: "Free Sample", href: "#honey-pot" },
             ].map((link) => (
@@ -89,7 +89,7 @@ export const Navigation = () => {
             <div className="flex flex-col gap-2 pt-4">
               {[
                 { label: "How It Works", href: "#methodology" },
-                { label: "Kits", href: "#products" },
+                { label: "Kits", href: "#road-trip-kit" },
                 { label: "FAQ", href: "#faq" },
                 { label: "Free Sample", href: "#honey-pot" },
               ].map((link) => (
