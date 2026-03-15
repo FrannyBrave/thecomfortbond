@@ -270,7 +270,7 @@ export const ProductsSection = () => {
                 </div>
 
                 <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginBottom: "20px" }}>
-                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$29</span>
+                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$26.99</span>
                 </div>
 
                 <a
