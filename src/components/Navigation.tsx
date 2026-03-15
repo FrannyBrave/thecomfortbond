@@ -52,7 +52,7 @@ export const Navigation = () => {
               { label: "How It Works", href: "#methodology" },
               { label: "Kits", href: "#products" },
               { label: "FAQ", href: "#faq" },
-              { label: "Free Sample", href: "#free-sample" },
+              { label: "Free Sample", href: "#honey-pot" },
             ].map((link) => (
               <button
                 key={link.href}
