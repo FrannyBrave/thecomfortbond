@@ -181,7 +181,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.8, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.6, ease: "easeOut" }}
-              className="absolute -bottom-5 right-8 z-20 flex items-center gap-2.5 bg-cream/92 backdrop-blur-lg rounded-[12px] px-4 py-2.5 border border-cream/50"
+              className="absolute -bottom-5 right-8 z-20 flex items-center gap-2.5 bg-white backdrop-blur-lg rounded-[12px] px-4 py-2.5 border border-white/80"
               style={{
                 boxShadow: `0 8px 24px -4px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06)`,
               }}
