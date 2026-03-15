@@ -129,7 +129,7 @@ export const HeroSection = () => {
           transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
           className="relative flex items-center justify-center lg:justify-end"
         >
-          <div className="relative w-full max-w-[460px] lg:max-w-[500px]">
+          <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
             <img
               src={heroPhoto}
               alt="An elderly woman smiling warmly during a comfort activity session"
