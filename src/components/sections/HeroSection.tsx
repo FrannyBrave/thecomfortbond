@@ -17,62 +17,48 @@ export const HeroSection = () => {
       backgroundPosition: "center 40%"
     }} />
       
-      {/* Dark Overlay - 60% opacity */}
-      <div className="absolute inset-0 bg-forest/40" />
+      {/* Left-to-right dark gradient overlay */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(to right, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.20) 30%, transparent 55%)"
+        }}
+      />
 
       {/* Hero Content */}
       <div className="section-container relative z-10 pt-20">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-2xl text-left">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+            className="font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-cream mb-6 leading-[1.1] md:leading-tight"
+          >
+            Give Your Residents an Hour They'll Look Forward To.
+          </motion.h1>
 
-
-
-          {/* Translucent backdrop for text readability */}
-          <div className="bg-forest/20 backdrop-blur-[2px] rounded-2xl px-4 py-8 md:px-8 md:py-10 mx-auto max-w-3xl">
-            <motion.h1 initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 1,
-            delay: 0.4,
-            ease: "easeOut"
-          }} className="font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-cream mb-6 leading-[1.1] md:leading-tight">Give Your Residents an Hour They'll Look Forward To.</motion.h1>
-
-            <motion.p initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 1,
-            delay: 0.6,
-            ease: "easeOut"
-          }} className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-3xl mx-auto mb-8 md:mb-12">Printable activity kits built for Activity Directors. Zero prep, meaningful engagement and genuine connection every time.
-
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+            className="font-sans text-lg md:text-xl lg:text-2xl text-cream/90 max-w-xl mb-8 md:mb-12"
+          >
+            Printable activity kits built for Activity Directors. Zero prep, meaningful engagement and genuine connection every time.
           </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-              className="flex flex-col items-center gap-3"
-            >
-              <Button
-                variant="cta"
-                size="xl"
-                onClick={scrollToProducts}
-              >
-                Get Your First Kit
-              </Button>
-              <p className="font-sans text-sm text-cream/60">
-                Instant digital download. No subscription required.
-              </p>
-            </motion.div>
-
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+            className="flex flex-col items-start gap-3"
+          >
+            <Button variant="cta" size="xl" onClick={scrollToProducts}>
+              Get Your First Kit
+            </Button>
+            <p className="font-sans text-sm text-cream/60">
+              Instant digital download. No subscription required.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>;
