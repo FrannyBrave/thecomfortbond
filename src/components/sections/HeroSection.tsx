@@ -173,7 +173,7 @@ export const HeroSection = () => {
               <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
                 <MessageCircle className="w-5 h-5 text-accent" strokeWidth={2.5} />
               </div>
-              <span className="font-serif text-[11px] md:text-xs text-forest font-semibold tracking-[0.02em] whitespace-nowrap">
+              <span className="font-serif text-xs md:text-sm text-forest font-bold tracking-[0.02em] whitespace-nowrap">
                 Sparks Real Conversation
               </span>
             </motion.div>
