@@ -27,7 +27,7 @@ export const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 pt-20 w-full pl-[60px] pr-4 md:pr-0">
-        <div className="text-left w-full md:w-[45%]">
+        <div className="text-left max-w-[520px]">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
