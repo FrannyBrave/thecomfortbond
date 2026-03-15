@@ -154,7 +154,7 @@ export const HeroSection = () => {
               <div className="w-9 h-9 rounded-full bg-primary/12 flex items-center justify-center shrink-0">
                 <PartyPopper className="w-5 h-5 text-primary" strokeWidth={2.5} />
               </div>
-              <span className="font-serif text-[11px] md:text-xs text-forest font-semibold tracking-[0.02em] whitespace-nowrap">
+              <span className="font-serif text-xs md:text-sm text-forest font-bold tracking-[0.02em] whitespace-nowrap">
                 Zero Prep Required
               </span>
             </motion.div>
