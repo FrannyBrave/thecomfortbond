@@ -78,7 +78,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-          className="relative flex items-center justify-center lg:justify-end"
+          className="relative flex items-center justify-center lg:justify-end lg:pt-10 lg:pb-10 lg:pr-10"
         >
           <div className="relative w-full max-w-[480px] lg:max-w-[520px]">
             {/* Decorative offset border */}
