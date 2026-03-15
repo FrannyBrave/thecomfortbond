@@ -171,9 +171,9 @@ export const ProductsSection = () => {
 
                 {/* Pricing */}
                 <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginBottom: "20px" }}>
-                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$97</span>
-                  <span style={{ fontSize: "18px", color: "#A0A0A0", textDecoration: "line-through", fontFamily: "Georgia, serif" }}>$116</span>
-                  <span style={{ fontSize: "12px", fontWeight: 700, color: "#3D5A47", background: "rgba(61,90,71,0.1)", padding: "3px 10px", borderRadius: "20px" }}>Save $19</span>
+                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$95</span>
+                  <span style={{ fontSize: "18px", color: "#A0A0A0", textDecoration: "line-through", fontFamily: "Georgia, serif" }}>$104</span>
+                  <span style={{ fontSize: "12px", fontWeight: 700, color: "#3D5A47", background: "rgba(61,90,71,0.1)", padding: "3px 10px", borderRadius: "20px" }}>Save $9</span>
                 </div>
 
                 <a
