@@ -20,13 +20,20 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Rich layered background */}
+      {/* Rich layered background — matching product display gradient */}
       <div
         className="absolute inset-0"
         style={{
-          background: `linear-gradient(160deg, hsl(150 20% 22%) 0%, hsl(150 20% 28%) 40%, hsl(150 18% 32%) 70%, hsl(150 20% 26%) 100%)`,
+          background: `linear-gradient(145deg, #3D5A47 0%, #2C4235 60%, #1E3028 100%)`,
         }}
       />
+
+      {/* Decorative background bubbles — matching product displays */}
+      <div className="absolute -top-[60px] -left-[60px] w-[200px] h-[200px] rounded-full" style={{ background: "rgba(255,255,255,0.04)" }} />
+      <div className="absolute -bottom-[40px] -right-[40px] w-[160px] h-[160px] rounded-full" style={{ background: "rgba(255,255,255,0.03)" }} />
+      <div className="absolute top-[40%] right-[10%] w-[120px] h-[120px] rounded-full" style={{ background: "rgba(255,255,255,0.02)" }} />
+      <div className="absolute top-[15%] right-[30%] w-[180px] h-[180px] rounded-full" style={{ background: "rgba(255,255,255,0.03)" }} />
+      <div className="absolute bottom-[20%] left-[15%] w-[140px] h-[140px] rounded-full" style={{ background: "rgba(255,255,255,0.025)" }} />
 
       {/* Subtle diagonal light sweep */}
       <div
