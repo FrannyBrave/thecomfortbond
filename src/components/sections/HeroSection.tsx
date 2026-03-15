@@ -184,15 +184,15 @@ export const HeroSection = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               whileHover={{ y: -4, boxShadow: "0 12px 32px -4px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.08)" }}
               transition={{ duration: 0.5, delay: 1.6, ease: "easeOut" }}
-              className="absolute -bottom-5 right-8 z-20 flex items-center gap-2.5 bg-cream/75 backdrop-blur-xl rounded-[12px] px-4 py-2.5 border border-cream/40 cursor-default"
+              className="absolute -bottom-5 right-8 z-20 flex items-center gap-2.5 bg-forest/70 backdrop-blur-xl rounded-[14px] px-4 py-3 border border-cream/10 cursor-default"
               style={{
-                boxShadow: `0 8px 24px -4px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06)`,
+                boxShadow: `0 8px 24px -4px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.12)`,
               }}
             >
-              <div className="w-9 h-9 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+              <div className="w-9 h-9 rounded-full bg-secondary/20 flex items-center justify-center shrink-0">
                 <Scissors className="w-5 h-5 text-secondary" strokeWidth={2.5} />
               </div>
-              <span className="font-serif text-xs md:text-sm text-forest font-bold tracking-[0.02em] whitespace-nowrap">
+              <span className="font-serif text-xs md:text-sm text-cream font-bold tracking-[0.02em] whitespace-nowrap">
                 Print & Go
               </span>
             </motion.div>
