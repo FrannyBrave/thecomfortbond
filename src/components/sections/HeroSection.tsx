@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
-import { PartyPopper, MessageCircle, Scissors } from "lucide-react";
+import { PartyPopper, MessageCircle, Scissors, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroPhoto from "@/assets/hero-table.png";
 
 export const HeroSection = () => {
   const scrollToProducts = () => {
     const element = document.querySelector("#products");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToSampler = () => {
+    const element = document.querySelector("#sampler");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -41,16 +48,19 @@ export const HeroSection = () => {
       <div className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-8 md:px-16 lg:px-20 pt-32 pb-20 lg:pt-24 lg:pb-16">
         {/* Left — Editorial typography */}
         <div className="flex flex-col justify-center">
+          {/* Trust badge pill */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center gap-4 mb-8"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-8"
           >
-            <div className="w-8 h-[1px] bg-accent/60" />
-            <span className="font-sans text-[11px] md:text-xs tracking-[0.35em] uppercase text-cream/45 font-medium">
-              The Comfort Bond Co.
-            </span>
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-cream/15 bg-cream/[0.06] backdrop-blur-sm px-5 py-2.5">
+              <Sparkles className="w-3.5 h-3.5 text-accent" />
+              <span className="font-sans text-[11px] md:text-xs tracking-[0.12em] uppercase text-cream/70 font-medium">
+                Trusted by Activity Directors Nationwide
+              </span>
+            </div>
           </motion.div>
 
           <motion.h1
@@ -82,29 +92,45 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-            className="font-sans text-[15px] md:text-base text-cream/60 mb-12 max-w-[400px] leading-[1.75] tracking-[0.01em]"
+            className="font-sans text-[15px] md:text-base text-cream/60 mb-10 max-w-[440px] leading-[1.75] tracking-[0.01em]"
           >
             Printable activity kits built for Activity Directors.
             Zero prep, meaningful engagement and genuine connection
             every&nbsp;time.
           </motion.p>
 
+          {/* Dual CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-            className="flex flex-col items-start gap-4"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-4"
           >
-            <Button variant="cta" size="xl" onClick={scrollToProducts}>
+            <Button variant="cta" size="xl" onClick={scrollToProducts} className="group">
               Get Your First Kit
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <p className="font-sans text-[11px] text-cream/30 tracking-[0.08em] uppercase">
-              Instant digital download · No subscription required
-            </p>
+            <Button
+              variant="outline"
+              size="xl"
+              onClick={scrollToSampler}
+              className="border-cream/20 text-cream hover:bg-cream/10 hover:border-cream/30"
+            >
+              See a Free Sample
+            </Button>
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
+            className="font-sans text-[11px] text-cream/30 tracking-[0.08em] uppercase"
+          >
+            Instant digital download · No subscription required
+          </motion.p>
         </div>
 
-        {/* Right — Art-directed photo with luxury frame */}
+        {/* Right — Organic floating photo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,56 +138,71 @@ export const HeroSection = () => {
           className="relative flex items-center justify-center lg:justify-end"
         >
           <div className="relative w-full max-w-[460px] lg:max-w-[500px]">
-            {/* Outer decorative frame */}
-            <div className="absolute -inset-3 rounded-[28px] border border-cream/8" />
-
-            {/* Inner accent frame with gold tint */}
-            <div
-              className="absolute -inset-[6px] rounded-[26px]"
-              style={{
-                background: `linear-gradient(145deg, hsl(30 52% 64% / 0.12), hsl(30 52% 64% / 0.04), transparent)`,
-              }}
-            />
-
             <img
               src={heroPhoto}
               alt="An elderly woman smiling warmly during a comfort activity session"
               className="relative z-10 w-full h-auto rounded-[24px] object-cover"
               style={{
                 aspectRatio: "4/5",
-                boxShadow: `0 20px 60px -12px rgba(0,0,0,0.4), 0 8px 24px -8px rgba(0,0,0,0.2)`,
+                boxShadow: `0 25px 60px -12px rgba(0,0,0,0.45), 0 12px 28px -8px rgba(0,0,0,0.25)`,
               }}
             />
 
-            {/* Floating badge cards */}
-            <div className="absolute bottom-8 left-5 z-20 flex flex-col gap-2">
-              {[
-                { icon: PartyPopper, text: "Zero Prep Required", delay: 1.2 },
-                { icon: MessageCircle, text: "Sparks Real Conversation", delay: 1.35 },
-                { icon: Scissors, text: "Print & Go — Instant Download", delay: 1.5 },
-              ].map(({ icon: Icon, text, delay }, i) => (
-                <motion.div
-                  key={text}
-                  initial={{ opacity: 0, x: -16 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay, ease: "easeOut" }}
-                  className="flex items-center gap-2.5 bg-cream/90 backdrop-blur-md rounded-[10px] px-3.5 py-2 border border-cream/40"
-                  style={{
-                    marginLeft: `${i * 6}px`,
-                    boxShadow: `0 4px 16px -2px rgba(0,0,0,0.1), 0 1px 4px rgba(0,0,0,0.06)`,
-                  }}
-                >
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <Icon className="w-3 h-3 text-primary" />
-                  </div>
-                  <span className="font-serif text-[11px] md:text-xs text-forest font-semibold tracking-[0.02em] whitespace-nowrap">
-                    {text}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
+            {/* Floating badge — top right */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.2, ease: "easeOut" }}
+              className="absolute -top-4 -right-4 z-20 flex items-center gap-2.5 bg-cream/92 backdrop-blur-lg rounded-[12px] px-4 py-2.5 border border-cream/50"
+              style={{
+                boxShadow: `0 8px 24px -4px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06)`,
+              }}
+            >
+              <div className="w-7 h-7 rounded-full bg-primary/12 flex items-center justify-center shrink-0">
+                <PartyPopper className="w-3.5 h-3.5 text-primary" />
+              </div>
+              <span className="font-serif text-[11px] md:text-xs text-forest font-semibold tracking-[0.02em] whitespace-nowrap">
+                Zero Prep Required
+              </span>
+            </motion.div>
 
-            {/* Warm glow */}
+            {/* Floating badge — bottom left */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.4, ease: "easeOut" }}
+              className="absolute bottom-16 -left-6 z-20 flex items-center gap-2.5 bg-cream/92 backdrop-blur-lg rounded-[12px] px-4 py-2.5 border border-cream/50"
+              style={{
+                boxShadow: `0 8px 24px -4px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06)`,
+              }}
+            >
+              <div className="w-7 h-7 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
+                <MessageCircle className="w-3.5 h-3.5 text-accent" />
+              </div>
+              <span className="font-serif text-[11px] md:text-xs text-forest font-semibold tracking-[0.02em] whitespace-nowrap">
+                Sparks Real Conversation
+              </span>
+            </motion.div>
+
+            {/* Floating badge — bottom right */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.6, ease: "easeOut" }}
+              className="absolute -bottom-5 right-8 z-20 flex items-center gap-2.5 bg-cream/92 backdrop-blur-lg rounded-[12px] px-4 py-2.5 border border-cream/50"
+              style={{
+                boxShadow: `0 8px 24px -4px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06)`,
+              }}
+            >
+              <div className="w-7 h-7 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+                <Scissors className="w-3.5 h-3.5 text-secondary" />
+              </div>
+              <span className="font-serif text-[11px] md:text-xs text-forest font-semibold tracking-[0.02em] whitespace-nowrap">
+                Print & Go
+              </span>
+            </motion.div>
+
+            {/* Warm ambient glow behind photo */}
             <div className="absolute inset-0 rounded-[24px] bg-accent/8 blur-[60px] -z-10 scale-125" />
           </div>
         </motion.div>
