@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { PartyPopper, MessageCircle, Scissors } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroPhoto from "@/assets/hero-table.png";
 
