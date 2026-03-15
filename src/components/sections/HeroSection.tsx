@@ -189,8 +189,8 @@ export const HeroSection = () => {
                 boxShadow: `0 8px 24px -4px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06)`,
               }}
             >
-              <div className="w-7 h-7 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
-                <Scissors className="w-3.5 h-3.5 text-secondary" />
+              <div className="w-9 h-9 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+                <Scissors className="w-5 h-5 text-secondary" strokeWidth={2.5} />
               </div>
               <span className="font-serif text-[11px] md:text-xs text-forest font-semibold tracking-[0.02em] whitespace-nowrap">
                 Print & Go
