@@ -65,7 +65,7 @@ export const HeroSection = () => {
             <div className="inline-flex items-center gap-2.5 rounded-full border border-cream/15 bg-cream/[0.06] backdrop-blur-sm px-5 py-2.5">
               <Sparkles className="w-3.5 h-3.5 text-accent" />
               <span className="font-sans text-[11px] md:text-xs tracking-[0.12em] uppercase text-cream/70 font-medium">
-                Trusted by Activity Directors Nationwide
+                Purposefully Crafted for Senior Living
               </span>
             </div>
           </motion.div>
