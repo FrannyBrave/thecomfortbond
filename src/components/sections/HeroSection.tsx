@@ -90,6 +90,29 @@ export const HeroSection = () => {
               className="relative z-10 w-full h-auto rounded-[24px] object-cover shadow-2xl"
               style={{ aspectRatio: "4/5" }}
             />
+
+            {/* Floating badge cards */}
+            <div className="absolute bottom-6 left-4 z-20 flex flex-col gap-2.5">
+              {[
+                { icon: PartyPopper, text: "Zero Prep Required", delay: 1.2 },
+                { icon: MessageCircle, text: "Sparks Real Conversation", delay: 1.35 },
+                { icon: Scissors, text: "Print & Go — Instant Download", delay: 1.5 },
+              ].map(({ icon: Icon, text, delay }, i) => (
+                <motion.div
+                  key={text}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay, ease: "easeOut" }}
+                  className="flex items-center gap-2.5 bg-cream/95 backdrop-blur-sm rounded-[12px] px-4 py-2.5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.15)] border border-cream/50"
+                  style={{ marginLeft: `${i * 8}px` }}
+                >
+                  <Icon className="w-4 h-4 text-primary shrink-0" />
+                  <span className="font-serif text-xs md:text-sm text-forest font-medium whitespace-nowrap">
+                    {text}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
             
             {/* Subtle glow behind the photo */}
             <div className="absolute inset-0 rounded-[24px] bg-primary/10 blur-3xl -z-10 scale-110" />
