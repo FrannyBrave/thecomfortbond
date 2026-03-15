@@ -61,7 +61,7 @@ const products = [
   anchorId: "kitchen-comfort-kit",
   badge: "Great for 1:1 & group",
   description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
-  price: "$26.99",
+  price: "$26",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/69add6a1-065f-45f2-9577-25c331865cb5",
   image: kitchenImage
