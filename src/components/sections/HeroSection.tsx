@@ -192,7 +192,7 @@ export const HeroSection = () => {
               <div className="w-9 h-9 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
                 <Scissors className="w-5 h-5 text-secondary" strokeWidth={2.5} />
               </div>
-              <span className="font-serif text-[11px] md:text-xs text-forest font-semibold tracking-[0.02em] whitespace-nowrap">
+              <span className="font-serif text-xs md:text-sm text-forest font-bold tracking-[0.02em] whitespace-nowrap">
                 Print & Go
               </span>
             </motion.div>
