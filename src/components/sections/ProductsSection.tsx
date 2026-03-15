@@ -25,8 +25,8 @@ const featuredProduct = {
   "Kitchen & Comfort Food Kit",
   "Holiday Traditions Kit"],
 
-  price: "$97",
-  originalPrice: "$116",
+  price: "$95",
+  originalPrice: "$104",
   badge: "Best Value",
   checkoutUrl:
   "https://shop.thecomfortbond.com/checkout/buy/56346027-500a-4647-bd93-2e23e56288c5"
