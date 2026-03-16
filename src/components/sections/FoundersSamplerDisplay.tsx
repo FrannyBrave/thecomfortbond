@@ -160,7 +160,7 @@ export const FoundersSamplerDisplay = () => {
           fontFamily: "Georgia, serif",
         }}
       >
-        FREE SAMPLE: Try before you buy
+        FREE KIT: Try before you buy
       </div>
 
       {/* Main card stack */}
