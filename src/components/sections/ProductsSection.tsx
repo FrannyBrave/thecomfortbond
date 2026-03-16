@@ -563,7 +563,7 @@ export const ProductsSection = () => {
 
                 <a
                   href="https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true"
-                  className="gumroad-button"
+                  className=""
                   style={{
                     display: "inline-block",
                     textAlign: "center",
