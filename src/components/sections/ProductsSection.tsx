@@ -41,7 +41,7 @@ const products = [
   description: "Hit the open road through decades of American travel memories, from Route 66 to family road trips. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$26",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/9c02a875-b45a-44f2-84ec-7c74180b6ce7",
+  "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true",
   image: roadTripImage
 },
 {
