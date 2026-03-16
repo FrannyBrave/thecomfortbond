@@ -207,7 +207,7 @@ export const HoneyPotSection = () => {
                     "0 4px 14px rgba(193,113,79,0.3)";
                 }}
               >
-                Download Free Sample
+                Download Free Kit
               </a>
 
               <p
