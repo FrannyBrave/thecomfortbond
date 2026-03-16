@@ -74,7 +74,7 @@ const products = [
   description: "Spanning holidays across the entire year, from New Year's to Christmas and everything in between. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$26",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/dbed51fb-307d-49fe-8df7-03755de0d989",
+  "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true",
   image: holidayImage
 },
 {
