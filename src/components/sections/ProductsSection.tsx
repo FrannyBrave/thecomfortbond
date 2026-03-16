@@ -178,7 +178,7 @@ export const ProductsSection = () => {
 
                 <a
                   href={featuredProduct.checkoutUrl}
-                  className="gumroad-button"
+                  className=""
                   style={{
                     display: "inline-block",
                     textAlign: "center",
