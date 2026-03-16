@@ -5,7 +5,7 @@ import heroPhoto from "@/assets/hero-table.png";
 
 export const HeroSection = () => {
   const scrollToProducts = () => {
-    const element = document.querySelector("#products");
+    const element = document.querySelector("#full-ecosystem-bundle");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
