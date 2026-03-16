@@ -562,8 +562,8 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://shop.thecomfortbond.com/checkout/buy/dbed51fb-307d-49fe-8df7-03755de0d989"
-                  className="lemonsqueezy-button"
+                  href="https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true"
+                  className="gumroad-button"
                   style={{
                     display: "inline-block",
                     textAlign: "center",
