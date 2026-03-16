@@ -274,8 +274,8 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://shop.thecomfortbond.com/checkout/buy/9c02a875-b45a-44f2-84ec-7c74180b6ce7"
-                  className="lemonsqueezy-button"
+                  href="https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true"
+                  className="gumroad-button"
                   style={{
                     display: "inline-block",
                     textAlign: "center",
