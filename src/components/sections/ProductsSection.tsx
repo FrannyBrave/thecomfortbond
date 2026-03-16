@@ -669,8 +669,8 @@ export const ProductsSection = () => {
               </div>
 
               <a
-                href="https://shop.thecomfortbond.com/checkout/buy/29a93e42-c874-4066-82f8-57b21aecaf4f"
-                className="lemonsqueezy-button"
+                href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true"
+                className="gumroad-button"
                 style={{
                   display: "block",
                   textAlign: "center",

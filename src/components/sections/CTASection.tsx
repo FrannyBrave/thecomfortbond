@@ -50,7 +50,7 @@ export const CTASection = () => {
               asChild
             >
               <a
-                href="https://shop.thecomfortbond.com/checkout/buy/18fee61a-934f-4fd5-8ac1-9bcb24134646"
+                href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
                 target="_blank"
                 rel="noopener noreferrer"
               >

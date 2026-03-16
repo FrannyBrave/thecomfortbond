@@ -42,19 +42,19 @@ const Terms = () => {
               <h2 className="font-display text-xl text-forest">2. Merchant of Record (Lemon Squeezy)</h2>
               <p>Our store uses Lemon Squeezy as our Merchant of Record. This means:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Lemon Squeezy processes payments and may handle tax/VAT where applicable.</li>
+                <li>Gumroad processes payments and may handle tax/VAT where applicable.</li>
                 <li>We do not store or have access to your full payment card details.</li>
-                <li>You will receive order confirmations and download delivery emails from Lemon Squeezy.</li>
+                <li>You will receive order confirmations and download delivery emails from Gumroad.</li>
               </ul>
               <p>
                 For more information, please review{" "}
                 <a
-                  href="https://www.lemonsqueezy.com/terms"
+                  href="https://gumroad.com/terms"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sage hover:text-forest underline transition-colors"
                 >
-                  Lemon Squeezy's terms and policies
+                  Gumroad's terms and policies
                 </a>.
               </p>
             </section>

@@ -48,19 +48,19 @@ const PrivacyPolicy = () => {
               </p>
               <p>This means that:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Lemon Squeezy securely processes all payments.</li>
+                <li>Gumroad securely processes all payments.</li>
                 <li>We do not collect, store, or have access to your credit card or banking details.</li>
-                <li>Transactional emails (receipts, download links) are sent directly by Lemon Squeezy.</li>
+                <li>Transactional emails (receipts, download links) are sent directly by Gumroad.</li>
               </ul>
               <p>
                 For details on how financial information is handled, please review{" "}
                 <a 
-                  href="https://www.lemonsqueezy.com/privacy" 
+                  href="https://gumroad.com/privacy" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sage hover:text-forest underline transition-colors"
                 >
-                  Lemon Squeezy's Privacy Policy
+                  Gumroad's Privacy Policy
                 </a>.
               </p>
             </section>
