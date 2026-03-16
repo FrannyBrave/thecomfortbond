@@ -29,7 +29,7 @@ const featuredProduct = {
   originalPrice: "$104",
   badge: "Best Value",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/56346027-500a-4647-bd93-2e23e56288c5"
+  "https://thecomfortbond.gumroad.com/l/fullbundle"
 };
 
 const products = [
