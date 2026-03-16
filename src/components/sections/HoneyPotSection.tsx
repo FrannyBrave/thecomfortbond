@@ -179,7 +179,7 @@ export const HoneyPotSection = () => {
 
               <a
                 href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
-                className="gumroad-button"
+                className=""
                 style={{
                   display: "inline-block",
                   textAlign: "center",
