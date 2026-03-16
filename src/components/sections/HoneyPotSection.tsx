@@ -178,8 +178,8 @@ export const HoneyPotSection = () => {
               </div>
 
               <a
-                href="https://shop.thecomfortbond.com/checkout/buy/18fee61a-934f-4fd5-8ac1-9bcb24134646"
-                className="lemonsqueezy-button"
+                href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
+                className="gumroad-button"
                 style={{
                   display: "inline-block",
                   textAlign: "center",
