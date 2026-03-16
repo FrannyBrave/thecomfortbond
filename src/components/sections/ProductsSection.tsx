@@ -84,7 +84,7 @@ const products = [
   description: "Designed to ease sundowning restlessness and calm the room between activities. Calming nature videos that provide gentle resets during quiet moments or help wind down a session naturally.",
   price: "$35",
   checkoutUrl:
-  "https://shop.thecomfortbond.com/checkout/buy/29a93e42-c874-4066-82f8-57b21aecaf4f",
+  "https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true",
   image: serenityImage
 }];
 
