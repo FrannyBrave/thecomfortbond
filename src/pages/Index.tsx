@@ -47,7 +47,7 @@ const Index = () => {
           <li><a href="#who">Who It's For</a></li>
           <li><a href="#bundle">Pricing</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="https://thecomfortbond.com" className="nav-cta">Shop Now</a></li>
+          <li><a href="https://thecomfortbond.gumroad.com/l/fullbundle" target="_blank" rel="noopener noreferrer" className="nav-cta">Shop Now</a></li>
         </ul>
       </nav>
 
@@ -64,7 +64,7 @@ const Index = () => {
               Beautifully crafted engagement kits that spark real conversation, warm memories, and genuine connection — designed for senior living professionals and caring families.
             </p>
             <div className="hero-actions">
-              <a href="https://thecomfortbond.com" className="btn-primary">
+              <a href="#products" className="btn-primary">
                 Browse all kits
                 <ArrowSvg />
               </a>
@@ -270,10 +270,10 @@ const Index = () => {
           <p className="section-sub">Each kit is a complete activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
           <div className="products-grid">
             {[
-              { emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"] },
-              { emoji: "📻", bg: "rgba(196,122,90,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"] },
-              { emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"] },
-              { emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"] },
+              { emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
+              { emoji: "📻", bg: "rgba(196,122,90,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
+              { emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true" },
+              { emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true" },
             ].map((kit, i) => (
               <div className="product-card" key={i}>
                 <div className="product-header">
@@ -294,7 +294,7 @@ const Index = () => {
                     <div className="product-price">$26</div>
                     <div className="product-price-note">Instant download · PDF</div>
                   </div>
-                  <a href="https://thecomfortbond.com" className="product-cta">Get kit →</a>
+                  <a href={kit.url} target="_blank" rel="noopener noreferrer" className="product-cta">Get kit →</a>
                 </div>
               </div>
             ))}
@@ -312,7 +312,7 @@ const Index = () => {
                 </div>
                 <div>
                   <div className="serenity-price">$35 <span>one-time purchase</span></div>
-                  <a href="https://thecomfortbond.com" className="serenity-cta">Get the Serenity Suite →</a>
+                  <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" target="_blank" rel="noopener noreferrer" className="serenity-cta">Get the Serenity Suite →</a>
                 </div>
               </div>
               <div className="serenity-scenes">
@@ -369,10 +369,10 @@ const Index = () => {
                     <div style={{ fontSize: 12, color: "var(--text-light)" }}>Add it separately for $35 — 10 nature scenes, 89 minutes</div>
                   </div>
                 </div>
-                <a href="https://thecomfortbond.com" style={{ fontSize: 13, fontWeight: 500, color: "var(--clay)", textDecoration: "none", whiteSpace: "nowrap" }}>Add Serenity Suite →</a>
+                <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 500, color: "var(--clay)", textDecoration: "none", whiteSpace: "nowrap" }}>Add Serenity Suite →</a>
               </div>
               <div className="bundle-cta-row">
-                <a href="https://thecomfortbond.com" className="btn-primary">
+                <a href="https://thecomfortbond.gumroad.com/l/fullbundle" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Get the full bundle — $95
                   <ArrowSvg />
                 </a>
@@ -495,7 +495,7 @@ const Index = () => {
           <h2 className="fcs-title">Start creating <em>real moments</em><br />today</h2>
           <p className="fcs-desc">Download instantly, print what you need, and walk into your next session — or your next visit — with something genuinely beautiful to share.</p>
           <div className="fcs-actions">
-            <a href="https://thecomfortbond.com" className="btn-primary">
+            <a href="https://thecomfortbond.gumroad.com/l/fullbundle" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Shop all kits
               <ArrowSvg />
             </a>
