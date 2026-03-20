@@ -387,65 +387,28 @@ const Index = () => {
 
       {/* REVIEWS */}
       <section className="tcb-section" id="reviews" style={{ background: "var(--sand-pale)" }}>
-        <div className="section-inner">
+        <div className="section-inner" style={{ maxWidth: 620, textAlign: "center" as const }}>
           <div className="section-tag">Reviews</div>
           <h2 className="tcb-section-title">Be the first to share<br />your experience</h2>
           <p className="section-sub">We're just getting started — and we'd love to hear from you. If you've used a kit, your words help other activity directors and families find what they need.</p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginTop: "3rem" }}>
-            {/* Empty review slot 1 */}
-            <div className="review-slot">
-              <div style={{ display: "flex", gap: 4 }}>
-                {[...Array(5)].map((_, i) => <StarSvg key={i} fill="rgba(45,74,62,0.12)" />)}
-              </div>
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "rgba(45,74,62,0.3)", lineHeight: 1.65 }}>
-                Your review could live here. Tell us how a kit landed with your residents, or what it meant to share it with a loved one.
+          <div className="review-cta-card" style={{ marginTop: "2.5rem", textAlign: "left" as const }}>
+            <div>
+              <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "var(--sand)", marginBottom: "0.75rem" }}>Share your story</div>
+              <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontWeight: 600, color: "#fff", lineHeight: 1.25, marginBottom: "0.75rem" }}>
+                Tried a kit?<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>We'd love to hear from you.</em>
+              </h3>
+              <p style={{ fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.65 }}>
+                Your feedback helps other activity directors and families find what they need — and helps us keep improving every kit.
               </p>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: "auto" }}>
-                <div style={{ width: 34, height: 34, borderRadius: "50%", background: "rgba(45,74,62,0.07)", border: "1.5px dashed rgba(45,74,62,0.18)" }} />
-                <div>
-                  <div style={{ width: 80, height: 10, background: "rgba(45,74,62,0.08)", borderRadius: 4, marginBottom: 5 }} />
-                  <div style={{ width: 120, height: 8, background: "rgba(45,74,62,0.05)", borderRadius: 4 }} />
-                </div>
-              </div>
             </div>
-
-            {/* Empty review slot 2 */}
-            <div className="review-slot clay-border">
-              <div style={{ display: "flex", gap: 4 }}>
-                {[...Array(5)].map((_, i) => <StarSvg key={i} fill="rgba(196,122,90,0.15)" />)}
-              </div>
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "rgba(196,122,90,0.4)", lineHeight: 1.65 }}>
-                Did the conversation cards open up a memory you hadn't heard before? We'd genuinely love to know.
-              </p>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: "auto" }}>
-                <div style={{ width: 34, height: 34, borderRadius: "50%", background: "rgba(196,122,90,0.07)", border: "1.5px dashed rgba(196,122,90,0.2)" }} />
-                <div>
-                  <div style={{ width: 80, height: 10, background: "rgba(196,122,90,0.08)", borderRadius: 4, marginBottom: 5 }} />
-                  <div style={{ width: 120, height: 8, background: "rgba(196,122,90,0.05)", borderRadius: 4 }} />
-                </div>
-              </div>
-            </div>
-
-            {/* CTA slot */}
-            <div className="review-cta-card">
-              <div>
-                <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "var(--sand)", marginBottom: "0.75rem" }}>Share your story</div>
-                <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontWeight: 600, color: "#fff", lineHeight: 1.25, marginBottom: "0.75rem" }}>
-                  Tried a kit?<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>We'd love to hear from you.</em>
-                </h3>
-                <p style={{ fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.65 }}>
-                  Your feedback helps other activity directors and families find what they need — and helps us keep improving every kit.
-                </p>
-              </div>
-              <a
-                href="mailto:info@thecomfortbond.com"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--clay)", color: "#fff", padding: "12px 22px", borderRadius: 100, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", width: "fit-content" }}
-              >
-                Leave a review
-                <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </a>
-            </div>
+            <a
+              href="mailto:info@thecomfortbond.com"
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--clay)", color: "#fff", padding: "12px 22px", borderRadius: 100, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", width: "fit-content" }}
+            >
+              Leave a review
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </a>
           </div>
         </div>
       </section>
