@@ -495,7 +495,7 @@ const Index = () => {
           <h2 className="fcs-title">Start creating <em>real moments</em><br />today</h2>
           <p className="fcs-desc">Download instantly, print what you need, and walk into your next session — or your next visit — with something genuinely beautiful to share.</p>
           <div className="fcs-actions">
-            <a href="https://thecomfortbond.com" className="btn-primary">
+            <a href="https://thecomfortbond.gumroad.com/l/fullbundle" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Shop all kits
               <ArrowSvg />
             </a>
