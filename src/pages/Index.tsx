@@ -294,7 +294,7 @@ const Index = () => {
                     <div className="product-price">$26</div>
                     <div className="product-price-note">Instant download · PDF</div>
                   </div>
-                  <a href="https://thecomfortbond.com" className="product-cta">Get kit →</a>
+                  <a href={kit.url} target="_blank" rel="noopener noreferrer" className="product-cta">Get kit →</a>
                 </div>
               </div>
             ))}
