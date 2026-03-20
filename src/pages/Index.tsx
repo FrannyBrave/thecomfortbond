@@ -446,7 +446,7 @@ const Index = () => {
                 </p>
               </div>
               <a
-                href="mailto:hello@thecomfortbond.com"
+                href="mailto:info@thecomfortbond.com"
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--clay)", color: "#fff", padding: "12px 22px", borderRadius: 100, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", width: "fit-content" }}
               >
                 Leave a review
@@ -531,7 +531,7 @@ const Index = () => {
             <h4>Company</h4>
             <ul>
               <li><a href="#about">About Francesca</a></li>
-              <li><a href="mailto:hello@thecomfortbond.com">Contact</a></li>
+              <li><a href="mailto:info@thecomfortbond.com">Contact</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>
             </ul>
@@ -542,13 +542,13 @@ const Index = () => {
               <li><a href="#">How to download</a></li>
               <li><a href="#">Printing tips</a></li>
               <li><a href="#">Facilitation guide</a></li>
-              <li><a href="mailto:hello@thecomfortbond.com">Email support</a></li>
+              <li><a href="mailto:info@thecomfortbond.com">Email support</a></li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
           <span className="footer-copy">© 2026 The Comfort Bond™ · All rights reserved</span>
-          <a href="mailto:hello@thecomfortbond.com" className="footer-email">hello@thecomfortbond.com</a>
+          <a href="mailto:info@thecomfortbond.com" className="footer-email">info@thecomfortbond.com</a>
         </div>
       </footer>
     </div>
