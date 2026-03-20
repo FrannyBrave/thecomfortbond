@@ -64,7 +64,7 @@ const Index = () => {
               Beautifully crafted engagement kits that spark real conversation, warm memories, and genuine connection — designed for senior living professionals and caring families.
             </p>
             <div className="hero-actions">
-              <a href="https://thecomfortbond.com" className="btn-primary">
+              <a href="#products" className="btn-primary">
                 Browse all kits
                 <ArrowSvg />
               </a>
