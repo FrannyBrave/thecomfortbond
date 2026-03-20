@@ -146,7 +146,7 @@
 }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(196,122,90,0.12);
+  background: rgba(198,123,92,0.12);
   color: var(--clay);
   font-size: 12px; font-weight: 500;
   letter-spacing: 0.1em;
@@ -373,7 +373,7 @@
   margin-bottom: 1.25rem;
 }
 .audience-icon.forest { background: rgba(45,74,62,0.1); }
-.audience-icon.clay { background: rgba(196,122,90,0.1); }
+.audience-icon.clay { background: rgba(198,123,92,0.1); }
 .audience-card h3 {
   font-family: var(--font-serif);
   font-size: 1.35rem; font-weight: 600;
@@ -403,7 +403,7 @@
   flex-shrink: 0; margin-top: 2px;
 }
 .check.forest { background: rgba(45,74,62,0.12); }
-.check.clay { background: rgba(196,122,90,0.12); }
+.check.clay { background: rgba(198,123,92,0.12); }
 .check svg { width: 9px; height: 9px; }
 
 /* ---- PRODUCTS ---- */
@@ -449,7 +449,7 @@
   font-size: 10px; font-weight: 500;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--clay);
-  background: rgba(196,122,90,0.1);
+  background: rgba(198,123,92,0.1);
   padding: 4px 10px; border-radius: 100px;
 }
 .product-name {
@@ -594,7 +594,7 @@
 .bundle-card {
   background: #fff;
   border-radius: var(--radius);
-  border: 1px solid rgba(196,122,90,0.2);
+  border: 1px solid rgba(198,123,92,0.2);
   overflow: hidden;
   max-width: 900px; margin: 3rem auto 0;
 }
@@ -840,7 +840,7 @@
   width: 100%;
 }
 .email-input:focus {
-  border-color: rgba(196,122,90,0.6);
+  border-color: rgba(198,123,92,0.6);
 }
 .email-input::placeholder {
   color: rgba(255,255,255,0.35);
@@ -861,7 +861,7 @@
   cursor: pointer;
 }
 .email-select:focus {
-  border-color: rgba(196,122,90,0.6);
+  border-color: rgba(198,123,92,0.6);
 }
 .email-select option {
   background: #1e3229;
@@ -876,7 +876,7 @@
   display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;
 }
 .review-slot.clay-border {
-  border-color: rgba(196,122,90,0.22);
+  border-color: rgba(198,123,92,0.22);
 }
 .review-cta-card {
   background: var(--forest);

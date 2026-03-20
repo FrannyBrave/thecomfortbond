@@ -148,7 +148,7 @@ straight to your inbox
                 "Early access & launch discounts when we go live"].
                 map((item, i) =>
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
-                    <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(196,122,90,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(198,123,92,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#c47a5a" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </span>
                     {item}
@@ -271,7 +271,7 @@ straight to your inbox
           <div className="products-grid">
             {[
             { emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
-            { emoji: "📻", bg: "rgba(196,122,90,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
+            { emoji: "📻", bg: "rgba(198,123,92,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
             { emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true" },
             { emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true" }].
             map((kit, i) =>
@@ -361,7 +361,7 @@ straight to your inbox
                   </div>
                 )}
               </div>
-              <div style={{ background: "var(--sand-pale)", border: "1px solid rgba(196,122,90,0.18)", borderRadius: "var(--radius-sm)", padding: "14px 18px", marginBottom: "2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap" as const, gap: 10 }}>
+              <div style={{ background: "var(--sand-pale)", border: "1px solid rgba(198,123,92,0.18)", borderRadius: "var(--radius-sm)", padding: "14px 18px", marginBottom: "2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap" as const, gap: 10 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                   <span style={{ fontSize: 20 }}>🌿</span>
                   <div>
