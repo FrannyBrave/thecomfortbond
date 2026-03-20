@@ -372,7 +372,7 @@ const Index = () => {
                 <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 500, color: "var(--clay)", textDecoration: "none", whiteSpace: "nowrap" }}>Add Serenity Suite →</a>
               </div>
               <div className="bundle-cta-row">
-                <a href="https://thecomfortbond.com" className="btn-primary">
+                <a href="https://thecomfortbond.gumroad.com/l/fullbundle" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Get the full bundle — $95
                   <ArrowSvg />
                 </a>
