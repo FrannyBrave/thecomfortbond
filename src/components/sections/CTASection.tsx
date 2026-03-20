@@ -37,8 +37,7 @@ export const CTASection = () => {
             >
               <a
                 href="https://thecomfortbond.gumroad.com/l/fullbundle"
-                target="_blank"
-                rel="noopener noreferrer"
+                data-gumroad-overlay-checkout="true"
               >
                 Shop the Kits
               </a>
@@ -51,8 +50,7 @@ export const CTASection = () => {
             >
               <a
                 href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
-                target="_blank"
-                rel="noopener noreferrer"
+                data-gumroad-overlay-checkout="true"
               >
                 Get the Free Sample
               </a>
