@@ -142,9 +142,9 @@ const Index = () => {
 
               <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: "1.75rem" }}>
                 {[
-                  "Then vs. Now · Guess the Era — 5 pages across 4 topic categories with answer key",
-                  "Discussion Circle Prompt Cards — 5 pages covering home & family, school days, music, travel & career",
-                  "Sequential Storytelling Cards — 5 pages with 4 cut-and-laminate story themes to sequence & share",
+                  "Then vs. Now · Guess the Era",
+                  "Discussion Circle Prompt Cards",
+                  "Sequential Storytelling Cards",
                 ].map((item, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
                     <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(196,122,90,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
