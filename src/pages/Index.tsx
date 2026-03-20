@@ -312,7 +312,7 @@ const Index = () => {
                 </div>
                 <div>
                   <div className="serenity-price">$35 <span>one-time purchase</span></div>
-                  <a href="https://thecomfortbond.com" className="serenity-cta">Get the Serenity Suite →</a>
+                  <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" target="_blank" rel="noopener noreferrer" className="serenity-cta">Get the Serenity Suite →</a>
                 </div>
               </div>
               <div className="serenity-scenes">
