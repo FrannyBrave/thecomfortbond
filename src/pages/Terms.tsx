@@ -39,8 +39,8 @@ const Terms = () => {
 
             {/* Section 2 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">2. Merchant of Record (Lemon Squeezy)</h2>
-              <p>Our store uses Lemon Squeezy as our Merchant of Record. This means:</p>
+              <h2 className="font-display text-xl text-forest">2. Merchant of Record (Gumroad)</h2>
+              <p>Our store uses Gumroad as our Merchant of Record. This means:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Gumroad processes payments and may handle tax/VAT where applicable.</li>
                 <li>We do not store or have access to your full payment card details.</li>
