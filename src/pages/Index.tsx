@@ -1,23 +1,23 @@
 import { useState } from "react";
 import logoImg from "@/assets/logo.png";
 
-const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
-<svg viewBox="0 0 10 10" fill="none">
+const CheckSvg = ({ color = "#2d4a3e" }: { color?: string }) => (
+  <svg viewBox="0 0 10 10" fill="none">
     <path d="M2 5l2.5 2.5 3.5-4" stroke={color} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>;
+  </svg>
+);
 
-
-const ArrowSvg = ({ color = "#fff" }: {color?: string;}) =>
-<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
     <path d="M2 7h10M8 3l4 4-4 4" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>;
+  </svg>
+);
 
-
-const StarSvg = ({ fill }: {fill: string;}) =>
-<svg width="18" height="18" viewBox="0 0 14 14">
+const StarSvg = ({ fill }: { fill: string }) => (
+  <svg width="18" height="18" viewBox="0 0 14 14">
     <polygon points="7,1 9,5.5 14,6 10.5,9.5 11.5,14 7,11.5 2.5,14 3.5,9.5 0,6 5,5.5" fill={fill} />
-  </svg>;
-
+  </svg>
+);
 
 const Index = () => {
   const [formState, setFormState] = useState<"idle" | "sending" | "success">("idle");
@@ -130,89 +130,76 @@ const Index = () => {
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--clay)", display: "inline-block" }} />
                 Free download
               </div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "1rem" }}>Get a free activity kit
-straight to your inbox
-                <br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "1rem" }}>
+                Get The Founder's<br />Sampler<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>free, straight to your inbox</em>
               </h2>
               <p style={{ fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: "0.75rem" }}>
-                Sign up and we'll send you a free variety pack of engagement activities so you can experience The Comfort Bond before you buy.
+                Sign up and we'll send you a free variety pack of engagement activities — three complete activity types, 15 pages total — so you can experience The Comfort Bond before you buy.
               </p>
               <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", lineHeight: 1.6 }}>
                 No pressure, no spam. Just a warm welcome and something genuinely useful.
               </p>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: "1.75rem" }}>
-                {["3 conversation cards from the Nostalgia Kit",
-                "A mini trivia round — ready to print & use",
-                "Facilitation tips for first-time users",
-                "Early access & launch discounts when we go live"].
-                map((item, i) =>
-                <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
-                    <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(196,122,90,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: "1.75rem" }}>
+                {[
+                  { title: "Then vs. Now · Guess the Era", desc: "— 5 pages across 4 topic categories with answer key" },
+                  { title: "Discussion Circle Prompt Cards", desc: "— 5 pages covering home & family, school days, music, travel & career" },
+                  { title: "Sequential Storytelling Cards", desc: "— 5 pages with 4 cut-and-laminate story themes to sequence & share" },
+                ].map((item, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
+                    <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(196,122,90,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#c47a5a" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </span>
-                    {item}
+                    <span><strong style={{ color: "rgba(255,255,255,0.9)" }}>{item.title}</strong> {item.desc}</span>
                   </div>
-                )}
+                ))}
+                <div style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)", marginTop: 4 }}>
+                  <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(196,122,90,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#c47a5a" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </span>
+                  <span>15 print-ready pages — PDF instant delivery, no subscription needed</span>
+                </div>
               </div>
             </div>
 
             <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--radius)", padding: "2.5rem" }}>
               <div style={{ marginBottom: "1.75rem" }}>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.25rem", fontStyle: "italic", color: "var(--sand)", marginBottom: "0.4rem" }}>Free sample kit</p>
-                <p style={{ fontSize: 13, color: "rgba(255,255,255,0.45)" }}>Delivered instantly to your inbox</p>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontStyle: "italic", color: "var(--sand)", marginBottom: "0.4rem" }}>The Founder's Sampler</p>
+                <p style={{ fontSize: 13, color: "rgba(255,255,255,0.45)" }}>16 pages · 3 activity types · Free PDF</p>
               </div>
 
-              <form onSubmit={handleSignup} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                  <label style={{ fontSize: 12, fontWeight: 500, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", textTransform: "uppercase" as const }}>Your name</label>
-                  <input type="text" placeholder="First name" required value={name} onChange={(e) => setName(e.target.value)} className="email-input" />
-                </div>
-
-                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                  <label style={{ fontSize: 12, fontWeight: 500, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", textTransform: "uppercase" as const }}>Email address</label>
-                  <input type="email" placeholder="you@yourorganization.com" required value={email} onChange={(e) => setEmail(e.target.value)} className="email-input" />
-                </div>
-
-                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                  <label style={{ fontSize: 12, fontWeight: 500, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", textTransform: "uppercase" as const }}>I am a…</label>
-                  <select value={role} onChange={(e) => setRole(e.target.value)} className="email-select">
-                    <option value="">Select your role…</option>
-                    <option value="activity-director">Activity Director</option>
-                    <option value="life-enrichment">Life Enrichment Coordinator</option>
-                    <option value="care-professional">Care Professional / Nurse</option>
-                    <option value="family-caregiver">Family Caregiver</option>
-                    <option value="in-home-caregiver">In-Home Caregiver</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                {formState !== "success" &&
-                <button
-                  type="submit"
-                  disabled={formState === "sending"}
-                  style={{
-                    background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
-                    padding: "14px 28px", fontSize: 15, fontWeight: 500, fontFamily: "var(--font-sans)",
-                    cursor: "pointer", transition: "background 0.2s", marginTop: "0.5rem",
-                    display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                    opacity: formState === "sending" ? 0.7 : 1
-                  }}>
-                  
-                    {formState === "sending" ? "Sending…" : <>Send me the free kit <ArrowSvg /></>}
-                  </button>
-                }
-
-                {formState === "success" &&
-                <div style={{ background: "rgba(45,74,62,0.3)", border: "1px solid rgba(45,74,62,0.5)", borderRadius: 10, padding: "1rem 1.25rem", textAlign: "center" }}>
-                    <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", color: "var(--sand)", fontSize: "1.1rem", marginBottom: "0.35rem" }}>You're on the list!</p>
-                    <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)" }}>Check your inbox — your free sample kit is on its way.</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "2rem" }}>
+                {[
+                  { icon: "🎯", title: "Then vs. Now · Guess the Era", sub: "5 pages · 4 categories · Answer key included" },
+                  { icon: "💬", title: "Discussion Circle Prompt Cards", sub: "5 pages · Home, school, music, travel & career" },
+                  { icon: "🎬", title: "Sequential Storytelling Cards", sub: "5 pages · 4 story themes · Cut & laminate" },
+                ].map((item, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 14, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "14px 16px" }}>
+                    <span style={{ fontSize: 20, flexShrink: 0 }}>{item.icon}</span>
+                    <div>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: "rgba(255,255,255,0.9)", marginBottom: 2 }}>{item.title}</div>
+                      <div style={{ fontSize: 12, color: "rgba(255,255,255,0.45)" }}>{item.sub}</div>
+                    </div>
                   </div>
-                }
-              </form>
+                ))}
+              </div>
+
+              <a
+                href="https://thecomfortbond.gumroad.com/l/founderssampler"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
+                  padding: "16px 28px", fontSize: 16, fontWeight: 500, fontFamily: "var(--font-sans)",
+                  textDecoration: "none", transition: "background 0.2s", width: "100%",
+                }}
+              >
+                Get the free kit <ArrowSvg />
+              </a>
 
               <p style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", marginTop: "1rem", textAlign: "center", lineHeight: 1.5 }}>
-                No spam, ever. Unsubscribe any time.
+                Free via Gumroad · Instant PDF download
               </p>
             </div>
           </div>
@@ -238,9 +225,9 @@ straight to your inbox
               <h3>Activity Directors &amp; Enrichment Teams</h3>
               <p className="audience-desc">You need programming that's meaningful, easy to facilitate, and ready to go without hours of prep. These kits deliver.</p>
               <ul className="audience-list">
-                {["Ready-to-print, no prep required", "Includes facilitation guides for every activity", "Works for all cognitive levels — no wrong answers", "One-time purchase — use it forever"].map((item, i) =>
-                <li key={i}><span className="check forest"><CheckSvg /></span>{item}</li>
-                )}
+                {["Ready-to-print, no prep required", "Includes facilitation guides for every activity", "Works for all cognitive levels — no wrong answers", "One-time purchase — use it forever"].map((item, i) => (
+                  <li key={i}><span className="check forest"><CheckSvg /></span>{item}</li>
+                ))}
               </ul>
             </div>
             <div className="audience-card secondary">
@@ -253,9 +240,9 @@ straight to your inbox
               <h3>Caring for a Loved One at Home</h3>
               <p className="audience-desc">Visits don't have to be silent or awkward. These kits give you a natural, joyful way to connect and create shared memories.</p>
               <ul className="audience-list">
-                {["Spark warm conversation with prompts that work", "Designed to include everyone — even with memory loss", "Available instantly — no waiting for shipping", "Thoughtful gift idea for aging parents"].map((item, i) =>
-                <li key={i}><span className="check clay"><CheckSvg color="#c47a5a" /></span>{item}</li>
-                )}
+                {["Spark warm conversation with prompts that work", "Designed to include everyone — even with memory loss", "Available instantly — no waiting for shipping", "Thoughtful gift idea for aging parents"].map((item, i) => (
+                  <li key={i}><span className="check clay"><CheckSvg color="#c47a5a" /></span>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -270,12 +257,12 @@ straight to your inbox
           <p className="section-sub">Each kit is a complete activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
           <div className="products-grid">
             {[
-            { emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
-            { emoji: "📻", bg: "rgba(196,122,90,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
-            { emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true" },
-            { emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true" }].
-            map((kit, i) =>
-            <div className="product-card" key={i}>
+              { emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
+              { emoji: "📻", bg: "rgba(196,122,90,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
+              { emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true" },
+              { emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true" },
+            ].map((kit, i) => (
+              <div className="product-card" key={i}>
                 <div className="product-header">
                   <div className="product-icon-row">
                     <div className="product-icon" style={{ background: kit.bg }}>{kit.emoji}</div>
@@ -297,7 +284,7 @@ straight to your inbox
                   <a href={kit.url} target="_blank" rel="noopener noreferrer" className="product-cta">Get kit →</a>
                 </div>
               </div>
-            )}
+            ))}
 
             {/* Serenity Suite */}
             <div className="serenity-card product-card">
@@ -316,11 +303,11 @@ straight to your inbox
                 </div>
               </div>
               <div className="serenity-scenes">
-                {["Butterflies & Garden", "Clouds in the Sky", "Flowers Blooming", "Gentle Rain", "The Peaceful Lake", "Countryside View", "Forest Walk", "Mountain Sunrise", "Flowing Waterfalls", "Ocean Waves"].map((scene, i) =>
-                <div className="scene-pill" key={i}>
+                {["Butterflies & Garden", "Clouds in the Sky", "Flowers Blooming", "Gentle Rain", "The Peaceful Lake", "Countryside View", "Forest Walk", "Mountain Sunrise", "Flowing Waterfalls", "Ocean Waves"].map((scene, i) => (
+                  <div className="scene-pill" key={i}>
                     <span className="scene-num">{String(i + 1).padStart(2, "0")}</span> {scene}
                   </div>
-                )}
+                ))}
               </div>
             </div>
           </div>
@@ -350,16 +337,16 @@ straight to your inbox
               <div className="bundle-includes-label">What's included</div>
               <div className="bundle-items">
                 {[
-                { emoji: "🗺️", name: "The Road Trip Kit" },
-                { emoji: "📻", name: "The Nostalgia Kit" },
-                { emoji: "🍳", name: "The Kitchen & Comfort Kit" },
-                { emoji: "🎄", name: "The Holiday Traditions Kit" }].
-                map((item, i) =>
-                <div className="bundle-item" key={i}>
+                  { emoji: "🗺️", name: "The Road Trip Kit" },
+                  { emoji: "📻", name: "The Nostalgia Kit" },
+                  { emoji: "🍳", name: "The Kitchen & Comfort Kit" },
+                  { emoji: "🎄", name: "The Holiday Traditions Kit" },
+                ].map((item, i) => (
+                  <div className="bundle-item" key={i}>
                     <span className="bundle-item-icon">{item.emoji}</span>
                     {item.name}
                   </div>
-                )}
+                ))}
               </div>
               <div style={{ background: "var(--sand-pale)", border: "1px solid rgba(196,122,90,0.18)", borderRadius: "var(--radius-sm)", padding: "14px 18px", marginBottom: "2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap" as const, gap: 10 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -388,65 +375,28 @@ straight to your inbox
 
       {/* REVIEWS */}
       <section className="tcb-section" id="reviews" style={{ background: "var(--sand-pale)" }}>
-        <div className="section-inner">
+        <div className="section-inner" style={{ maxWidth: 620, textAlign: "center" as const }}>
           <div className="section-tag">Reviews</div>
           <h2 className="tcb-section-title">Be the first to share<br />your experience</h2>
           <p className="section-sub">We're just getting started — and we'd love to hear from you. If you've used a kit, your words help other activity directors and families find what they need.</p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginTop: "3rem" }}>
-            {/* Empty review slot 1 */}
-            <div className="review-slot">
-              <div style={{ display: "flex", gap: 4 }}>
-                {[...Array(5)].map((_, i) => <StarSvg key={i} fill="rgba(45,74,62,0.12)" />)}
-              </div>
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "rgba(45,74,62,0.3)", lineHeight: 1.65 }}>
-                Your review could live here. Tell us how a kit landed with your residents, or what it meant to share it with a loved one.
+          <div className="review-cta-card" style={{ marginTop: "2.5rem", textAlign: "left" as const }}>
+            <div>
+              <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "var(--sand)", marginBottom: "0.75rem" }}>Share your story</div>
+              <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontWeight: 600, color: "#fff", lineHeight: 1.25, marginBottom: "0.75rem" }}>
+                Tried a kit?<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>We'd love to hear from you.</em>
+              </h3>
+              <p style={{ fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.65 }}>
+                Your feedback helps other activity directors and families find what they need — and helps us keep improving every kit.
               </p>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: "auto" }}>
-                <div style={{ width: 34, height: 34, borderRadius: "50%", background: "rgba(45,74,62,0.07)", border: "1.5px dashed rgba(45,74,62,0.18)" }} />
-                <div>
-                  <div style={{ width: 80, height: 10, background: "rgba(45,74,62,0.08)", borderRadius: 4, marginBottom: 5 }} />
-                  <div style={{ width: 120, height: 8, background: "rgba(45,74,62,0.05)", borderRadius: 4 }} />
-                </div>
-              </div>
             </div>
-
-            {/* Empty review slot 2 */}
-            <div className="review-slot clay-border">
-              <div style={{ display: "flex", gap: 4 }}>
-                {[...Array(5)].map((_, i) => <StarSvg key={i} fill="rgba(196,122,90,0.15)" />)}
-              </div>
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "rgba(196,122,90,0.4)", lineHeight: 1.65 }}>
-                Did the conversation cards open up a memory you hadn't heard before? We'd genuinely love to know.
-              </p>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: "auto" }}>
-                <div style={{ width: 34, height: 34, borderRadius: "50%", background: "rgba(196,122,90,0.07)", border: "1.5px dashed rgba(196,122,90,0.2)" }} />
-                <div>
-                  <div style={{ width: 80, height: 10, background: "rgba(196,122,90,0.08)", borderRadius: 4, marginBottom: 5 }} />
-                  <div style={{ width: 120, height: 8, background: "rgba(196,122,90,0.05)", borderRadius: 4 }} />
-                </div>
-              </div>
-            </div>
-
-            {/* CTA slot */}
-            <div className="review-cta-card">
-              <div>
-                <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "var(--sand)", marginBottom: "0.75rem" }}>Share your story</div>
-                <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontWeight: 600, color: "#fff", lineHeight: 1.25, marginBottom: "0.75rem" }}>
-                  Tried a kit?<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>We'd love to hear from you.</em>
-                </h3>
-                <p style={{ fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.65 }}>
-                  Your feedback helps other activity directors and families find what they need — and helps us keep improving every kit.
-                </p>
-              </div>
-              <a
-                href="mailto:info@thecomfortbond.com"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--clay)", color: "#fff", padding: "12px 22px", borderRadius: 100, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", width: "fit-content" }}>
-                
-                Leave a review
-                <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </a>
-            </div>
+            <a
+              href="mailto:info@thecomfortbond.com"
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--clay)", color: "#fff", padding: "12px 22px", borderRadius: 100, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", width: "fit-content" }}
+            >
+              Leave a review
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </a>
           </div>
         </div>
       </section>
@@ -476,12 +426,12 @@ straight to your inbox
               </div>
               <ul className="about-value-list">
                 {[
-                "Every activity is designed to welcome all participants — no wrong answers, no pressure to perform",
-                "Instant PDF download — in your inbox within minutes, not days",
-                "One-time purchase — print and use as many times as you need, forever"].
-                map((item, i) =>
-                <li key={i}><span className="avl-dot" />{item}</li>
-                )}
+                  "Every activity is designed to welcome all participants — no wrong answers, no pressure to perform",
+                  "Instant PDF download — in your inbox within minutes, not days",
+                  "One-time purchase — print and use as many times as you need, forever",
+                ].map((item, i) => (
+                  <li key={i}><span className="avl-dot" />{item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -545,8 +495,8 @@ straight to your inbox
           <a href="mailto:info@thecomfortbond.com" className="footer-email">info@thecomfortbond.com</a>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 };
 
 export default Index;
