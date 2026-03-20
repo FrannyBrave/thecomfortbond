@@ -134,7 +134,7 @@ const Index = () => {
                 Get a free activity<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
               </h2>
               <p style={{ fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: "0.75rem" }}>
-                Sign up and we'll send you a free sample activity pack — including conversation cards and a trivia set — so you can see exactly how The Comfort Bond works before you buy.
+                Sign up and we'll send you a free sample activity pack so you can see exactly how The Comfort Bond works before you buy.
               </p>
               <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", lineHeight: 1.6 }}>
                 No pressure, no spam. Just a warm welcome and something genuinely useful.
