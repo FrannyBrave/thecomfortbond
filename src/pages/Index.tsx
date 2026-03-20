@@ -20,16 +20,6 @@ const StarSvg = ({ fill }: {fill: string;}) =>
 
 
 const Index = () => {
-  const [formState, setFormState] = useState<"idle" | "sending" | "success">("idle");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [role, setRole] = useState("");
-
-  const handleSignup = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormState("sending");
-    setTimeout(() => setFormState("success"), 900);
-  };
 
   return (
     <div>
