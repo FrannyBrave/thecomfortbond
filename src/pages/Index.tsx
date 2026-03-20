@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logoImg from "@/assets/logo.png";
 
 const CheckSvg = ({ color = "#2d4a3e" }: { color?: string }) => (
   <svg viewBox="0 0 10 10" fill="none">
@@ -35,14 +36,7 @@ const Index = () => {
       {/* NAV */}
       <nav className="tcb-nav">
         <a href="#" className="nav-logo">
-          <div className="nav-logo-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="13" cy="10" r="5" fill="#c47a5a" />
-              <circle cx="27" cy="8" r="4" fill="#e8c99a" />
-              <path d="M6 28 C6 18 34 18 34 28 C34 34 6 34 6 28Z" fill="#e8c99a" />
-              <path d="M12 22 C12 22 20 18 28 24" stroke="#c47a5a" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-            </svg>
-          </div>
+          <img src={logoImg} alt="The Comfort Bond logo" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
           <div className="nav-brand">
             <span className="nav-brand-name">The Comfort Bond™</span>
             <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>
