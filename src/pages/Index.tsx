@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logoImg from "@/assets/logo.png";
 
 const CheckSvg = ({ color = "#2d4a3e" }: { color?: string }) => (
   <svg viewBox="0 0 10 10" fill="none">
