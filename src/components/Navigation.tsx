@@ -40,7 +40,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" onClick={scrollToTop} className="flex items-center gap-3 py-2">
-            <img src={logo} alt="The Comfort Bond" className="h-12 md:h-14 w-auto" />
+            <img src={logo} alt="The Comfort Bond" className="h-16 md:h-20 w-auto" />
             <span className="text-xl md:text-2xl font-serif font-semibold text-forest tracking-tight">
               The Comfort Bond
             </span>
