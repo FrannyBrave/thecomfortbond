@@ -494,15 +494,6 @@ straight to your inbox
               <li><a href="/terms">Terms</a></li>
             </ul>
           </div>
-          <div className="footer-col">
-            <h4>Help</h4>
-            <ul>
-              <li><a href="#">How to download</a></li>
-              <li><a href="#">Printing tips</a></li>
-              <li><a href="#">Facilitation guide</a></li>
-              <li><a href="mailto:info@thecomfortbond.com">Email support</a></li>
-            </ul>
-          </div>
         </div>
         <div className="footer-bottom">
           <span className="footer-copy">© 2026 The Comfort Bond™ · All rights reserved</span>
