@@ -792,6 +792,9 @@
   display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 3rem;
 }
+.footer-inner-3col {
+  grid-template-columns: 2fr 1fr 1fr;
+}
 .footer-brand p {
   font-size: 13px; color: rgba(255,255,255,0.45);
   line-height: 1.7; margin-top: 0.75rem; max-width: 280px;
