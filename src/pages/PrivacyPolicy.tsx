@@ -42,9 +42,9 @@ const PrivacyPolicy = () => {
 
             {/* Section 2 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">2. Merchant of Record (Lemon Squeezy)</h2>
+              <h2 className="font-display text-xl text-forest">2. Merchant of Record (Gumroad)</h2>
               <p>
-                Our store uses Lemon Squeezy as our Merchant of Record.
+                Our store uses Gumroad as our Merchant of Record.
               </p>
               <p>This means that:</p>
               <ul className="list-disc pl-6 space-y-2">
@@ -106,7 +106,7 @@ const PrivacyPolicy = () => {
               </p>
               <p><strong>Third-Party Services:</strong></p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Payments and file delivery are handled by Lemon Squeezy.</li>
+                <li>Payments and file delivery are handled by Gumroad.</li>
                 <li>Website hosting and presentation are handled by Lovable.</li>
                 <li>
                   Some video content (such as the Serenity Suite) is hosted on YouTube. Viewing this 
