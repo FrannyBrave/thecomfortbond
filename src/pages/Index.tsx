@@ -114,7 +114,7 @@ const Index = () => {
                 Free download
               </div>
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "1rem", marginTop: 0 }}>
-                Get The Founder's Sampler<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>free, straight to your inbox</em>
+                Get a free activity kit
               </h2>
               <p style={{ fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: "0.75rem" }}>
                 Sign up and we'll send you a free variety pack of engagement activities — three complete activity types, 15 pages total — so you can experience The Comfort Bond before you buy.
