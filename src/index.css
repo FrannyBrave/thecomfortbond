@@ -625,7 +625,7 @@
 }
 .bundle-pricing { text-align: right; }
 .bundle-was {
-  font-size: 14px; color: rgba(255,255,255,0.45);
+  font-size: 14px; color: rgba(255,255,255,0.7);
   text-decoration: line-through; margin-bottom: 4px;
 }
 .bundle-price {
