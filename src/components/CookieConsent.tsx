@@ -25,7 +25,7 @@ export const CookieConsent = () => {
     <div className="fixed bottom-0 left-0 right-0 z-[9999] border-t border-sage/20 bg-cream shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-5 py-4 sm:flex-row sm:gap-5">
         <p className="flex-1 text-center text-sm leading-relaxed text-forest/80 sm:text-left" style={{ fontFamily: "var(--font-sans)" }}>
-          We use essential cookies and third-party services (Gumroad for payments, Lovable for analytics) to operate this site. By continuing to browse, you accept our use of cookies.{" "}
+          We use essential cookies and third-party services to operate this site. By continuing to browse, you accept our use of cookies.{" "}
           <Link to="/privacy-policy" className="underline text-forest hover:text-terracotta transition-colors">
             Privacy Policy
           </Link>
