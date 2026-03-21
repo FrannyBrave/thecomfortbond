@@ -486,7 +486,7 @@
   color: var(--forest-dark);
 }
 .product-price-note {
-  font-size: 11px; color: var(--text-light);
+  font-size: 11px; color: var(--text-mid);
   margin-top: 2px;
 }
 .product-cta {
