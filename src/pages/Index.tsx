@@ -486,6 +486,7 @@ straight to your inbox</span>
           <a href="mailto:info@thecomfortbond.com" className="footer-email">info@thecomfortbond.com</a>
         </div>
       </footer>
+      <CookieConsent />
     </div>);
 
 };
