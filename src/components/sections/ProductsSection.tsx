@@ -372,6 +372,7 @@ export const ProductsSection = () => {
 
                 <a
                   href="https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true"
+                  rel="noopener noreferrer"
                   className=""
                   style={{
                     display: "inline-block",
