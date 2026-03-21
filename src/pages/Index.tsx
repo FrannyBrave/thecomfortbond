@@ -10,7 +10,7 @@ const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
 import React from "react";
 
 const ArrowSvg = React.forwardRef<SVGSVGElement, {color?: string;}>(({ color = "#fff", ...props }, ref) =>
-  <svg ref={ref} width="14" height="14" viewBox="0 0 14 14" fill="none" {...props}>
+<svg ref={ref} width="14" height="14" viewBox="0 0 14 14" fill="none" {...props}>
     <path d="M2 7h10M8 3l4 4-4 4" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
@@ -145,15 +145,15 @@ straight to your inbox</span>
                 {[
                   { bold: "Then vs. Now · Guess the Era", desc: " — 5 pages across 4 topic categories with answer key" },
                   { bold: "Discussion Circle Prompt Cards", desc: " — 5 pages covering home & family, school days, music, travel & career" },
-                  { bold: "Sequential Storytelling Cards", desc: " — 5 pages with 4 cut-and-laminate story themes to sequence & share" },
-                ].map((item, i) =>
+                  { bold: "Sequential Storytelling Cards", desc: " — 5 pages with 4 cut-and-laminate story themes to sequence & share" }].
+                  map((item, i) =>
                   <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
                     <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(198,123,92,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#C67B5C" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </span>
                     <span><strong style={{ color: "rgba(255,255,255,0.9)" }}>{item.bold}</strong>{item.desc}</span>
                   </div>
-                )}
+                  )}
                 <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
                   <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(198,123,92,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#C67B5C" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -173,8 +173,8 @@ straight to your inbox</span>
                 {[
                   { emoji: "🎯", title: "Then vs. Now · Guess the Era", meta: "5 pages · 4 categories · Answer key included" },
                   { emoji: "💬", title: "Discussion Circle Prompt Cards", meta: "5 pages · Home, school, music, travel & career" },
-                  { emoji: "🎬", title: "Sequential Storytelling Cards", meta: "5 pages · 4 story themes · Cut & laminate" },
-                ].map((item, i) =>
+                  { emoji: "🎬", title: "Sequential Storytelling Cards", meta: "5 pages · 4 story themes · Cut & laminate" }].
+                  map((item, i) =>
                   <div key={i} style={{ background: "rgba(255,255,255,0.05)", borderRadius: 12, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14 }}>
                     <span style={{ fontSize: 20, flexShrink: 0 }}>{item.emoji}</span>
                     <div>
@@ -182,21 +182,21 @@ straight to your inbox</span>
                       <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)" }}>{item.meta}</p>
                     </div>
                   </div>
-                )}
+                  )}
               </div>
 
               <a
-                href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
-                data-gumroad-overlay-checkout="true"
-                rel="noopener noreferrer"
-                style={{
-                  background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
-                  padding: "16px 28px", fontSize: 16, fontWeight: 500, fontFamily: "var(--font-sans)",
-                  cursor: "pointer", transition: "background 0.2s", textAlign: "center",
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  textDecoration: "none",
-                }}
-              >
+                  href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
+                  data-gumroad-overlay-checkout="true"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
+                    padding: "16px 28px", fontSize: 16, fontWeight: 500, fontFamily: "var(--font-sans)",
+                    cursor: "pointer", transition: "background 0.2s", textAlign: "center",
+                    display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                    textDecoration: "none"
+                  }}>
+                  
                 Get the free kit <ArrowSvg />
               </a>
 
@@ -228,8 +228,8 @@ straight to your inbox</span>
               <p className="audience-desc">You need programming that's meaningful, easy to facilitate, and ready to go without hours of prep. These kits deliver.</p>
               <ul className="audience-list">
                 {["Ready-to-print, no prep required", "Includes facilitation guides for every activity", "Works for all cognitive levels — no wrong answers", "One-time purchase — use it forever"].map((item, i) =>
-                <li key={i}><span className="check forest"><CheckSvg /></span>{item}</li>
-                )}
+                  <li key={i}><span className="check forest"><CheckSvg /></span>{item}</li>
+                  )}
               </ul>
             </div>
             <div className="audience-card secondary">
@@ -243,8 +243,8 @@ straight to your inbox</span>
               <p className="audience-desc">Visits don't have to be silent or awkward. These kits give you a natural, joyful way to connect and create shared memories.</p>
               <ul className="audience-list">
                 {["Spark warm conversation with prompts that work", "Designed to include everyone — even with memory loss", "Available instantly — no waiting for shipping", "Thoughtful gift idea for aging parents"].map((item, i) =>
-                <li key={i}><span className="check clay"><CheckSvg color="#C67B5C" /></span>{item}</li>
-                )}
+                  <li key={i}><span className="check clay"><CheckSvg color="#C67B5C" /></span>{item}</li>
+                  )}
               </ul>
             </div>
           </div>
@@ -259,12 +259,12 @@ straight to your inbox</span>
           <p className="section-sub">Each kit is a complete activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
           <div className="products-grid">
             {[
-            { emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
-            { emoji: "📻", bg: "rgba(198,123,92,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
-            { emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true" },
-            { emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true" }].
-            map((kit, i) =>
-            <div className="product-card" key={i}>
+              { emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
+              { emoji: "📻", bg: "rgba(198,123,92,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
+              { emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true" },
+              { emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true" }].
+              map((kit, i) =>
+              <div className="product-card" key={i}>
                 <div className="product-header">
                   <div className="product-icon-row">
                     <div className="product-icon" style={{ background: kit.bg }}>{kit.emoji}</div>
@@ -286,7 +286,7 @@ straight to your inbox</span>
                   <a href={kit.url} data-gumroad-overlay-checkout="true" className="product-cta">Get kit →</a>
                 </div>
               </div>
-            )}
+              )}
 
             {/* Serenity Suite */}
             <div className="serenity-card product-card">
@@ -306,10 +306,10 @@ straight to your inbox</span>
               </div>
               <div className="serenity-scenes">
                 {["Butterflies & Garden", "Clouds in the Sky", "Flowers Blooming", "Gentle Rain", "The Peaceful Lake", "Countryside View", "Forest Walk", "Mountain Sunrise", "Flowing Waterfalls", "Ocean Waves"].map((scene, i) =>
-                <div className="scene-pill" key={i}>
+                  <div className="scene-pill" key={i}>
                     <span className="scene-num">{String(i + 1).padStart(2, "0")}</span> {scene}
                   </div>
-                )}
+                  )}
               </div>
             </div>
           </div>
@@ -332,23 +332,23 @@ straight to your inbox</span>
               <div className="bundle-pricing">
                 <div className="bundle-was">$104 if bought separately</div>
                 <div className="bundle-price">$95</div>
-                <div className="bundle-save">Save $9 — best way to start</div>
+                <div className="bundle-save">Save $9 — best value</div>
               </div>
             </div>
             <div className="bundle-body">
               <div className="bundle-includes-label">What's included</div>
               <div className="bundle-items">
                 {[
-                { emoji: "🗺️", name: "The Road Trip Kit" },
-                { emoji: "📻", name: "The Nostalgia Kit" },
-                { emoji: "🍳", name: "The Kitchen & Comfort Kit" },
-                { emoji: "🎄", name: "The Holiday Traditions Kit" }].
-                map((item, i) =>
-                <div className="bundle-item" key={i}>
+                  { emoji: "🗺️", name: "The Road Trip Kit" },
+                  { emoji: "📻", name: "The Nostalgia Kit" },
+                  { emoji: "🍳", name: "The Kitchen & Comfort Kit" },
+                  { emoji: "🎄", name: "The Holiday Traditions Kit" }].
+                  map((item, i) =>
+                  <div className="bundle-item" key={i}>
                     <span className="bundle-item-icon">{item.emoji}</span>
                     {item.name}
                   </div>
-                )}
+                  )}
               </div>
               <div style={{ background: "var(--sand-pale)", border: "1px solid rgba(198,123,92,0.18)", borderRadius: "var(--radius-sm)", padding: "14px 18px", marginBottom: "2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap" as const, gap: 10 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -394,8 +394,8 @@ straight to your inbox</span>
                 </p>
               </div>
               <a
-                href="mailto:hello@thecomfortbond.com"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--clay)", color: "#fff", padding: "12px 22px", borderRadius: 100, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", width: "fit-content" }}>
+                  href="mailto:hello@thecomfortbond.com"
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--clay)", color: "#fff", padding: "12px 22px", borderRadius: 100, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", width: "fit-content" }}>
                 Leave a review
                 <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </a>
@@ -429,12 +429,12 @@ straight to your inbox</span>
               </div>
               <ul className="about-value-list">
                 {[
-                "Every activity is designed to welcome all participants — no wrong answers, no pressure to perform",
-                "Instant PDF download — in your inbox within minutes, not days",
-                "One-time purchase — print and use as many times as you need, forever"].
-                map((item, i) =>
-                <li key={i}><span className="avl-dot" />{item}</li>
-                )}
+                  "Every activity is designed to welcome all participants — no wrong answers, no pressure to perform",
+                  "Instant PDF download — in your inbox within minutes, not days",
+                  "One-time purchase — print and use as many times as you need, forever"].
+                  map((item, i) =>
+                  <li key={i}><span className="avl-dot" />{item}</li>
+                  )}
               </ul>
             </div>
           </div>
