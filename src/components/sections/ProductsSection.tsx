@@ -674,6 +674,7 @@ export const ProductsSection = () => {
 
               <a
                 href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true"
+                rel="noopener noreferrer"
                 className=""
                 style={{
                   display: "block",
