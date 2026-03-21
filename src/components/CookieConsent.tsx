@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export const CookieConsent = () => {
+export const CookieConsent = React.forwardRef<HTMLDivElement>((_, ref) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -49,4 +49,5 @@ export const CookieConsent = () => {
       </div>
     </div>
   );
-};
+});
+CookieConsent.displayName = "CookieConsent";
