@@ -459,7 +459,7 @@
   margin-bottom: 0.5rem;
 }
 .product-desc {
-  font-size: 13px; color: var(--text-light); line-height: 1.6;
+  font-size: 13px; color: var(--text-mid); line-height: 1.6;
 }
 .product-body { padding: 1.25rem 1.75rem; flex: 1; }
 .product-features {
