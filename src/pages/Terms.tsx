@@ -68,8 +68,8 @@ const Terms = () => {
               <p>Delivery is typically instant after purchase via email and/or a download page.</p>
               <p>
                 If you do not receive your download, please contact us at{" "}
-                <a href="mailto:info@thecomfortbond.com" className="text-sage hover:text-forest underline transition-colors">
-                  info@thecomfortbond.com
+                <a href="mailto:hello@thecomfortbond.com" className="text-sage hover:text-forest underline transition-colors">
+                  hello@thecomfortbond.com
                 </a>{" "}
                 and we will help.
               </p>
@@ -94,8 +94,8 @@ const Terms = () => {
               </ul>
               <p>
                 If you need a multi-site or enterprise license, contact{" "}
-                <a href="mailto:info@thecomfortbond.com" className="text-sage hover:text-forest underline transition-colors">
-                  info@thecomfortbond.com
+                <a href="mailto:hello@thecomfortbond.com" className="text-sage hover:text-forest underline transition-colors">
+                  hello@thecomfortbond.com
                 </a>.
               </p>
             </section>
@@ -108,8 +108,8 @@ const Terms = () => {
               </p>
               <p>
                 That said, we want you to have a great experience. If you have trouble accessing your purchase or believe you were charged in error, contact{" "}
-                <a href="mailto:info@thecomfortbond.com" className="text-sage hover:text-forest underline transition-colors">
-                  info@thecomfortbond.com
+                <a href="mailto:hello@thecomfortbond.com" className="text-sage hover:text-forest underline transition-colors">
+                  hello@thecomfortbond.com
                 </a>{" "}
                 within 7 days of purchase and we'll do our best to make it right (for example: resolving delivery issues, replacing a corrupted file, or correcting duplicate charges).
               </p>
@@ -190,10 +190,10 @@ const Terms = () => {
               <p>
                 Email us at:{" "}
                 <a
-                  href="mailto:info@thecomfortbond.com"
+                  href="mailto:hello@thecomfortbond.com"
                   className="text-sage hover:text-forest underline transition-colors"
                 >
-                  info@thecomfortbond.com
+                  hello@thecomfortbond.com
                 </a>
               </p>
             </section>

@@ -29,10 +29,10 @@ export const FooterSection = () => {
         {/* Middle: Links + Contact in a row */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-8">
           <a
-            href="mailto:info@thecomfortbond.com"
+            href="mailto:hello@thecomfortbond.com"
             className="text-sm text-forest underline underline-offset-2 hover:opacity-70 transition-opacity"
           >
-            info@thecomfortbond.com
+            hello@thecomfortbond.com
           </a>
           <span className="hidden md:inline text-forest/30">|</span>
           <a
