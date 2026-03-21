@@ -459,7 +459,7 @@
   margin-bottom: 0.5rem;
 }
 .product-desc {
-  font-size: 13px; color: var(--text-light); line-height: 1.6;
+  font-size: 13px; color: var(--text-mid); line-height: 1.6;
 }
 .product-body { padding: 1.25rem 1.75rem; flex: 1; }
 .product-features {
@@ -486,7 +486,7 @@
   color: var(--forest-dark);
 }
 .product-price-note {
-  font-size: 11px; color: var(--text-light);
+  font-size: 11px; color: var(--text-mid);
   margin-top: 2px;
 }
 .product-cta {
@@ -586,7 +586,7 @@
 .serenity-stat-label {
   font-size: 11px; letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.75);
 }
 
 /* ---- BUNDLE ---- */
@@ -625,7 +625,7 @@
 }
 .bundle-pricing { text-align: right; }
 .bundle-was {
-  font-size: 14px; color: rgba(255,255,255,0.45);
+  font-size: 14px; color: rgba(255,255,255,0.7);
   text-decoration: line-through; margin-bottom: 4px;
 }
 .bundle-price {
@@ -723,7 +723,7 @@
   margin-bottom: 0.25rem;
 }
 .asc-label {
-  font-size: 13px; color: rgba(255,255,255,0.55);
+  font-size: 13px; color: rgba(255,255,255,0.75);
   font-weight: 300;
 }
 .about-value-list {
@@ -819,7 +819,7 @@
   flex-wrap: wrap; gap: 1rem;
 }
 .footer-copy {
-  font-size: 12px; color: rgba(255,255,255,0.3);
+  font-size: 12px; color: rgba(255,255,255,0.6);
 }
 .footer-email {
   font-size: 13px; color: var(--clay-light);
@@ -918,6 +918,19 @@
   .footer-inner { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .fcs-actions { flex-direction: column; align-items: center; }
+}
+
+/* ---- GLOBAL FOCUS INDICATORS (WCAG 2.1 AA) ---- */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Skip navigation link */
