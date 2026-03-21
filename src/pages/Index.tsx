@@ -112,8 +112,8 @@ const Index = () => {
           <div className="tb-label">Designed for</div>
           <div className="tb-facilities">
             <span className="tb-facility">Senior Living Communities</span>
-            <span className="tb-facility">Get a free activity kit
-straight to your inbox</span>
+            
+              
             <span className="tb-facility">Assisted Living Centers</span>
             <span className="tb-facility">In-Home Caregivers</span>
             <span className="tb-facility">Families &amp; Loved Ones</span>
