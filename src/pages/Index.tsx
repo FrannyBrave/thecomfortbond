@@ -22,6 +22,7 @@ const Index = () => {
 
   return (
     <div>
+      <a href="#main" className="skip-nav">Skip to main content</a>
       {/* NAV */}
       <header>
         <nav className="tcb-nav">
