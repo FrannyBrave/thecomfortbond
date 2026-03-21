@@ -178,6 +178,7 @@ straight to your inbox</span>
               <a
                 href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
                 data-gumroad-overlay-checkout="true"
+                rel="noopener noreferrer"
                 style={{
                   background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
                   padding: "16px 28px", fontSize: 16, fontWeight: 500, fontFamily: "var(--font-sans)",
