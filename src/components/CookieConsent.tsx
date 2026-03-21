@@ -49,4 +49,5 @@ export const CookieConsent = React.forwardRef<HTMLDivElement>((_, ref) => {
       </div>
     </div>
   );
-};
+});
+CookieConsent.displayName = "CookieConsent";
