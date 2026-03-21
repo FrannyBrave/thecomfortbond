@@ -23,22 +23,26 @@ const Index = () => {
   return (
     <div>
       {/* NAV */}
-      <nav className="tcb-nav">
-        <a href="#" className="nav-logo">
-          <img src={logoImg} alt="The Comfort Bond logo" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
-          <div className="nav-brand">
-            <span className="nav-brand-name">The Comfort Bond™</span>
-            <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>
-          </div>
-        </a>
-        <ul className="nav-links">
-          <li><a href="#products">Kits</a></li>
-          <li><a href="#who">Who It's For</a></li>
-          <li><a href="#bundle">Pricing</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="nav-cta">Shop Now</a></li>
-        </ul>
-      </nav>
+      <header>
+        <nav className="tcb-nav">
+          <a href="#" className="nav-logo">
+            <img src={logoImg} alt="The Comfort Bond logo" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
+            <div className="nav-brand">
+              <span className="nav-brand-name">The Comfort Bond™</span>
+              <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>
+            </div>
+          </a>
+          <ul className="nav-links">
+            <li><a href="#products">Kits</a></li>
+            <li><a href="#who">Who It's For</a></li>
+            <li><a href="#bundle">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="nav-cta">Shop Now</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main id="main">
 
       {/* HERO */}
       <section style={{ padding: 0, background: "var(--cream)" }}>
@@ -446,6 +450,7 @@ straight to your inbox</span>
           </div>
         </div>
       </section>
+      </main>
 
       {/* FOOTER */}
       <footer className="tcb-footer">
