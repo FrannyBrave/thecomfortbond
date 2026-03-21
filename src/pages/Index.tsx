@@ -450,6 +450,7 @@ straight to your inbox</span>
           </div>
         </div>
       </section>
+      </main>
 
       {/* FOOTER */}
       <footer className="tcb-footer">
