@@ -1,4 +1,5 @@
 import logoImg from "@/assets/logo.png";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
 <svg viewBox="0 0 10 10" fill="none">
@@ -485,6 +486,7 @@ straight to your inbox</span>
           <a href="mailto:info@thecomfortbond.com" className="footer-email">info@thecomfortbond.com</a>
         </div>
       </footer>
+      <CookieConsent />
     </div>);
 
 };
