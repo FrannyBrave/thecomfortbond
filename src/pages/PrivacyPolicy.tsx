@@ -159,10 +159,10 @@ const PrivacyPolicy = () => {
               <p>
                 <strong>Email:</strong>{" "}
                 <a 
-                  href="mailto:info@thecomfortbond.com" 
+                  href="mailto:hello@thecomfortbond.com" 
                   className="text-sage hover:text-forest underline transition-colors"
                 >
-                  info@thecomfortbond.com
+                  hello@thecomfortbond.com
                 </a>
               </p>
               <p>

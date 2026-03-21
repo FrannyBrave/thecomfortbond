@@ -394,7 +394,7 @@ straight to your inbox</span>
                 </p>
               </div>
               <a
-                href="mailto:info@thecomfortbond.com"
+                href="mailto:hello@thecomfortbond.com"
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--clay)", color: "#fff", padding: "12px 22px", borderRadius: 100, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", width: "fit-content" }}>
                 Leave a review
                 <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -479,7 +479,7 @@ straight to your inbox</span>
             <h4>Company</h4>
             <ul>
               <li><a href="#about">About Francesca</a></li>
-              <li><a href="mailto:info@thecomfortbond.com">Contact</a></li>
+              <li><a href="mailto:hello@thecomfortbond.com">Contact</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>
             </ul>
@@ -487,7 +487,7 @@ straight to your inbox</span>
         </div>
         <div className="footer-bottom">
           <span className="footer-copy">© 2026 The Comfort Bond™ · All rights reserved</span>
-          <a href="mailto:info@thecomfortbond.com" className="footer-email">info@thecomfortbond.com</a>
+          <a href="mailto:hello@thecomfortbond.com" className="footer-email">hello@thecomfortbond.com</a>
         </div>
       </footer>
       <CookieConsent />
