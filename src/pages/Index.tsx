@@ -7,10 +7,14 @@ const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
   </svg>;
 
 
-const ArrowSvg = ({ color = "#fff" }: {color?: string;}) =>
-<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+import React from "react";
+
+const ArrowSvg = React.forwardRef<SVGSVGElement, {color?: string;}>(({ color = "#fff", ...props }, ref) =>
+  <svg ref={ref} width="14" height="14" viewBox="0 0 14 14" fill="none" {...props}>
     <path d="M2 7h10M8 3l4 4-4 4" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>;
+  </svg>
+);
+ArrowSvg.displayName = "ArrowSvg";
 
 
 const StarSvg = ({ fill }: {fill: string;}) =>
