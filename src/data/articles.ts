@@ -1,3 +1,10 @@
+import zeroPreoHero from "@/assets/articles/seniors-group-activity-zero-prep.jpg";
+import zeroPreoInline from "@/assets/articles/printable-activity-cards-senior-living.jpg";
+import memoryCareHero from "@/assets/articles/caregiver-memory-care-group-activity.jpg";
+import memoryCareInline from "@/assets/articles/memory-care-activity-levels.jpg";
+import beyondBingoHero from "@/assets/articles/seniors-diverse-activities-beyond-bingo.jpg";
+import beyondBingoInline from "@/assets/articles/senior-living-weekly-activity-calendar.jpg";
+
 export interface Article {
   slug: string;
   title: string;
