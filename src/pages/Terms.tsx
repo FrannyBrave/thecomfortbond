@@ -1,7 +1,23 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Terms = () => {
+  useEffect(() => {
+    document.title = "Terms of Service | The Comfort Bond™";
+    const setMeta = (attr: string, key: string, content: string) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement;
+      if (!el) { el = document.createElement("meta"); el.setAttribute(attr, key); document.head.appendChild(el); }
+      el.setAttribute("content", content);
+    };
+    setMeta("name", "description", "Review the terms of service for purchasing and using The Comfort Bond™ digital engagement kits.");
+    setMeta("property", "og:title", "Terms of Service | The Comfort Bond™");
+    setMeta("property", "og:description", "Review the terms of service for purchasing and using The Comfort Bond™ digital engagement kits.");
+    let canonical = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonical) { canonical = document.createElement("link"); canonical.setAttribute("rel", "canonical"); document.head.appendChild(canonical); }
+    canonical.setAttribute("href", "https://thecomfortbond.com/terms");
+    return () => { document.title = "Instant Engagement Kits for Senior Care | The Comfort Bond™"; };
+  }, []);
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
