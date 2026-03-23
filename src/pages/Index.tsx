@@ -58,8 +58,7 @@ const Index = () => {
               <span className="hero-eyebrow-dot" />
               Engagement Kits for Senior Living
             </div>
-            <h1>Activity Kits for Senior Living, Ready to Use Today.
-                <br />Meaningful Moments, <em>Ready to Use</em> Today.</h1>
+            <h1>Meaningful moments,<br /><em>ready to use</em> today</h1>
             <p className="hero-desc">
               Beautifully crafted engagement kits that spark real conversation, warm memories, and genuine connection — designed for senior living professionals and caring families.
             </p>
@@ -143,17 +142,18 @@ const Index = () => {
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                {[{ bold: "Then vs. Now · Guess the Era", desc: " — 5 pages across 4 topic categories with answer key" },
+                {[
+                  { bold: "Then vs. Now · Guess the Era", desc: " — 5 pages across 4 topic categories with answer key" },
                   { bold: "Discussion Circle Prompt Cards", desc: " — 5 pages covering home & family, school days, music, travel & career" },
                   { bold: "Sequential Storytelling Cards", desc: " — 5 pages with 4 cut-and-laminate story themes to sequence & share" }].
-                  map((item, i) =>
-                  <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
+                  map((item, i) => (
+                    <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
                       <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(198,123,92,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#C67B5C" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                       </span>
                       <span><strong style={{ color: "rgba(255,255,255,0.9)" }}>{item.bold}</strong>{item.desc}</span>
                     </div>
-                  )}
+                  ))}
 
                 <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
                   <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(198,123,92,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
@@ -416,15 +416,15 @@ const Index = () => {
               { q: "What file format will I receive?", a: "Your kits are delivered as high-quality PDF files. The formatting, text size, and images look perfect on any computer or device." },
               { q: "Can I print these materials?", a: 'Yes! The kits are specifically designed to be printer-friendly on standard 8.5" x 11" paper. You can print BINGO cards, Trivia sheets, and Conversation prompts to hand out directly to residents.' },
               { q: "Are these kits reusable?", a: "Yes. Because these are digital downloads, you can print the materials as many times as you need. You can revisit the activities year after year." },
-              { q: "How quickly will I get access?", a: "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be playing with your group five minutes later." }].
-              map((item, i) =>
+              { q: "How quickly will I get access?", a: "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be playing with your group five minutes later." },
+            ].map((item, i) => (
               <details
                 key={i}
                 className="faq-item"
                 style={{
-                  borderBottom: "1px solid rgba(45,74,62,0.15)"
-                }}>
-                
+                  borderBottom: "1px solid rgba(45,74,62,0.15)",
+                }}
+              >
                 <summary
                   style={{
                     display: "flex",
@@ -436,9 +436,9 @@ const Index = () => {
                     fontSize: "1.1rem",
                     fontWeight: 600,
                     color: "var(--forest)",
-                    listStyle: "none"
-                  }}>
-                  
+                    listStyle: "none",
+                  }}
+                >
                   {item.q}
                   <span style={{ flexShrink: 0, marginLeft: 16, fontSize: 18, color: "var(--clay)", transition: "transform 0.2s" }}>+</span>
                 </summary>
@@ -447,13 +447,13 @@ const Index = () => {
                     paddingBottom: "1.25rem",
                     fontSize: 15,
                     lineHeight: 1.7,
-                    color: "rgba(45,74,62,0.75)"
-                  }}>
-                  
+                    color: "rgba(45,74,62,0.75)",
+                  }}
+                >
                   {item.a}
                 </div>
               </details>
-              )}
+            ))}
           </div>
         </div>
       </section>
@@ -522,11 +522,11 @@ const Index = () => {
           <div className="footer-col">
             <h4>Products</h4>
             <ul>
-              <li><a href="#road-trip-kit" onClick={(e) => {e.preventDefault();document.getElementById('road-trip-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Road Trip Kit</a></li>
-              <li><a href="#nostalgia-kit" onClick={(e) => {e.preventDefault();document.getElementById('nostalgia-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Nostalgia Kit</a></li>
-              <li><a href="#kitchen-comfort-kit" onClick={(e) => {e.preventDefault();document.getElementById('kitchen-comfort-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Kitchen &amp; Comfort Kit</a></li>
-              <li><a href="#holiday-traditions-kit" onClick={(e) => {e.preventDefault();document.getElementById('holiday-traditions-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Holiday Traditions Kit</a></li>
-              <li><a href="#serenity-video-suite" onClick={(e) => {e.preventDefault();document.getElementById('serenity-video-suite')?.scrollIntoView({ behavior: 'smooth' });}}>The Serenity Suite</a></li>
+              <li><a href="#road-trip-kit" onClick={(e) => { e.preventDefault(); document.getElementById('road-trip-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Road Trip Kit</a></li>
+              <li><a href="#nostalgia-kit" onClick={(e) => { e.preventDefault(); document.getElementById('nostalgia-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Nostalgia Kit</a></li>
+              <li><a href="#kitchen-comfort-kit" onClick={(e) => { e.preventDefault(); document.getElementById('kitchen-comfort-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Kitchen &amp; Comfort Kit</a></li>
+              <li><a href="#holiday-traditions-kit" onClick={(e) => { e.preventDefault(); document.getElementById('holiday-traditions-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Holiday Traditions Kit</a></li>
+              <li><a href="#serenity-video-suite" onClick={(e) => { e.preventDefault(); document.getElementById('serenity-video-suite')?.scrollIntoView({ behavior: 'smooth' }); }}>The Serenity Suite</a></li>
             </ul>
           </div>
           <div className="footer-col">
