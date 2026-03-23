@@ -14,9 +14,11 @@ export interface Article {
 }
 
 export interface ArticleSection {
-  type: 'paragraph' | 'heading' | 'list' | 'callout';
+  type: 'paragraph' | 'heading' | 'list' | 'callout' | 'image';
   text?: string;
   items?: string[];
+  src?: string;
+  alt?: string;
 }
 
 export const articles: Article[] = [
