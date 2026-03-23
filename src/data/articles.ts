@@ -101,6 +101,8 @@ export const articles: Article[] = [
     excerpt: "Managing the diverse needs of one room is one of the hardest parts of group programming. The secret to successful memory care activities is using layered, failure-free resources that work for everyone.",
     readTime: "5 min read",
     subtitle: "Layered, failure-free resources that work for every cognitive level in the room.",
+    heroImage: memoryCareHero,
+    heroAlt: "Memory care activity table with visual conversation cards, facilitator guide, and engagement materials in a calming setting",
     content: [
       {
         type: 'paragraph',
