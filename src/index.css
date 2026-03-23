@@ -953,3 +953,9 @@ textarea:focus-visible,
   outline: 2px solid hsl(var(--terracotta));
   outline-offset: 2px;
 }
+
+/* FAQ accordion */
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::marker { display: none; content: ''; }
+.faq-item[open] summary span { transform: rotate(45deg); }
+.faq-item summary:hover { opacity: 0.8; }

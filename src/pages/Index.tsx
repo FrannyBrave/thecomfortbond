@@ -405,6 +405,59 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="tcb-section" id="faq" style={{ background: "var(--sage-light, #e8eade)" }}>
+        <div className="section-inner" style={{ maxWidth: 760, margin: "0 auto" }}>
+          <div className="section-tag">Common questions</div>
+          <h2 className="tcb-section-title">Frequently Asked Questions</h2>
+          <div style={{ marginTop: "2.5rem", display: "flex", flexDirection: "column", gap: 0 }}>
+            {[
+              { q: "Is this a monthly subscription?", a: "No. All of our engagement kits and the Full Ecosystem Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to use forever." },
+              { q: "What file format will I receive?", a: "Your kits are delivered as high-quality PDF files. The formatting, text size, and images look perfect on any computer or device." },
+              { q: "Can I print these materials?", a: 'Yes! The kits are specifically designed to be printer-friendly on standard 8.5" x 11" paper. You can print BINGO cards, Trivia sheets, and Conversation prompts to hand out directly to residents.' },
+              { q: "Are these kits reusable?", a: "Yes. Because these are digital downloads, you can print the materials as many times as you need. You can revisit the activities year after year." },
+              { q: "How quickly will I get access?", a: "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be playing with your group five minutes later." },
+            ].map((item, i) => (
+              <details
+                key={i}
+                className="faq-item"
+                style={{
+                  borderBottom: "1px solid rgba(45,74,62,0.15)",
+                }}
+              >
+                <summary
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    cursor: "pointer",
+                    padding: "1.25rem 0",
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "var(--forest)",
+                    listStyle: "none",
+                  }}
+                >
+                  {item.q}
+                  <span style={{ flexShrink: 0, marginLeft: 16, fontSize: 18, color: "var(--clay)", transition: "transform 0.2s" }}>+</span>
+                </summary>
+                <div
+                  style={{
+                    paddingBottom: "1.25rem",
+                    fontSize: 15,
+                    lineHeight: 1.7,
+                    color: "rgba(45,74,62,0.75)",
+                  }}
+                >
+                  {item.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ABOUT */}
       <section className="tcb-section about-section" id="about">
         <div className="section-inner" style={{ padding: 0 }}>
