@@ -109,11 +109,28 @@ export const Navigation = () => {
                 { label: "How It Works", href: "#methodology" },
                 { label: "Kits", href: "#road-trip-kit" },
                 { label: "FAQ", href: "#faq" },
+                { label: "Resources", href: "/resources" },
                 { label: "Free Sample", href: "#honey-pot" },
               ].map((link) => (
                 <button
                   key={link.href}
-                  onClick={() => scrollToSection(link.href)}
+                  onClick={() => {
+                    if (link.href.startsWith("/")) {
+                      navigate(link.href);
+                      setIsMobileMenuOpen(false);
+                    } else {
+                      if (location.pathname !== "/") {
+                        navigate("/");
+                        setIsMobileMenuOpen(false);
+                        setTimeout(() => {
+                          const el = document.querySelector(link.href);
+                          if (el) el.scrollIntoView({ behavior: "smooth" });
+                        }, 800);
+                      } else {
+                        scrollToSection(link.href);
+                      }
+                    }
+                  }}
                   className="text-left font-sans text-base font-medium text-forest hover:text-terracotta transition-colors px-2 py-2"
                 >
                   {link.label}
