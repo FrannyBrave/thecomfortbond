@@ -193,8 +193,8 @@ const Index = () => {
       <section className="tcb-section" id="who">
         <div className="section-inner">
           <div className="section-tag">Who it's for</div>
-          <h2 className="tcb-section-title">Engagement & Activity Kits Built for the People<br />Who Show Up Every Day</h2>
-          <p className="section-sub">Whether you run activities for dozens of residents or you're simply trying to connect more deeply with a parent — The Comfort Bond meets you where you are.</p>
+          <h2 className="tcb-section-title">Built for the People<br />Who Show Up Every Day</h2>
+          <p className="section-sub">Whether you run engagement activities for dozens of residents or you're connecting with a loved one at home — these activity kits meet you where you are.</p>
           <div className="audience-grid">
             <div className="audience-card primary">
               <div className="audience-icon forest">
