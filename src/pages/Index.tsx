@@ -445,7 +445,7 @@ const Index = () => {
               <h2 className="about-title">Created with care,<br />by someone who<br /><em>truly understands</em></h2>
               <div className="about-body">
                 <p>Hi, I'm Francesca — the founder behind The Comfort Bond. I built this because I know how hard it can be to find activities that feel meaningful rather than just filling time. Every kit is crafted with intention — prompts that open doors, games that spark joy, and activities that meet people where they are, including those with memory challenges.</p>
-                <p>My mission is simple: to make genuine connection feel easy and accessible, for the professionals who dedicate their days to seniors, and for the families who love them.</p>
+                <p>My mission is simple: to make genuine connection feel easy and accessible, for the professionals who dedicate their days to seniors, and for the families who love them. <a href="/resources" style={{ color: "var(--clay)", textDecoration: "underline", textUnderlineOffset: 3 }}>Read our free guides for activity directors →</a></p>
               </div>
               <div className="about-sig">— Francesca</div>
             </div>
