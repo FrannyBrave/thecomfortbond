@@ -17,6 +17,8 @@ export interface Article {
   metaDescription: string;
   datePublished: string;
   dateModified: string;
+  heroImage: string;
+  heroAlt: string;
   content: ArticleSection[];
 }
 
