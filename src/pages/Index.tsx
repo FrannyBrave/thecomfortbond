@@ -131,9 +131,9 @@ const Index = () => {
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--clay)", display: "inline-block" }} />
                 Free download
               </div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "1rem" }}>
-                Get a free engagement activity kit
-                <br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "1rem" }}>Get a free activity kit
+straight to your inbox
+                  <br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
               </h2>
               <p style={{ fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: "0.75rem" }}>
                 Sign up and we'll send you a free printable activity kit so you can experience The Comfort Bond before you buy.
