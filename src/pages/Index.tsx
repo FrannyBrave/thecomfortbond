@@ -285,7 +285,7 @@ const Index = () => {
                     <div className="product-price">$26</div>
                     <div className="product-price-note">Instant download · PDF</div>
                   </div>
-                  <a href={kit.url} data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="product-cta">Get kit →</a>
+                  <a href={kit.url} data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="product-cta">{`Get The ${kit.name.replace('The ', '')} →`}</a>
                 </div>
               </div>
               )}
