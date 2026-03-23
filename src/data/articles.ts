@@ -7,6 +7,7 @@ export interface Article {
   excerpt: string;
   readTime: string;
   subtitle: string;
+  metaDescription: string;
   content: ArticleSection[];
 }
 
