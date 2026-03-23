@@ -142,6 +142,25 @@ const ArticleDetail = () => {
         </div>
       </header>
 
+      {/* Hero Image */}
+      {article.heroImage && (
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 1.5rem" }}>
+          <img
+            src={article.heroImage}
+            alt={article.heroAlt}
+            width={1280}
+            height={720}
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: 12,
+              marginTop: "clamp(-2rem, -3vw, -3rem)",
+              boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
+            }}
+          />
+        </div>
+      )}
+
       {/* Article Body */}
       <main style={{
         maxWidth: 720,
@@ -149,6 +168,38 @@ const ArticleDetail = () => {
         padding: "clamp(2.5rem, 5vw, 4rem) 1.5rem",
       }}>
         {article.content.map((section, i) => {
+          if (section.type === "image") {
+            return (
+              <figure key={i} style={{ margin: "2rem 0" }}>
+                <img
+                  src={section.src}
+                  alt={section.alt}
+                  loading="lazy"
+                  width={1280}
+                  height={720}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: 10,
+                    boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+                  }}
+                />
+                {section.alt && (
+                  <figcaption style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: 13,
+                    color: "rgba(45,74,62,0.55)",
+                    marginTop: 8,
+                    textAlign: "center",
+                    fontStyle: "italic",
+                  }}>
+                    {section.alt}
+                  </figcaption>
+                )}
+              </figure>
+            );
+          }
+
           if (section.type === "heading") {
             return (
               <h3 key={i} style={{
