@@ -60,7 +60,7 @@ const Index = () => {
               Engagement & Activity Kits for Senior Living
             </div>
             <h1>Engagement Kits & Printable Activities for Senior Living,<br /><em>Ready to Use</em> Today.</h1>
-            <p className="hero-desc">Beautifully crafted kits that spark real conversation, warm memories, and genuine connection — designed for senior living teams and caring families.
+            <p className="hero-desc">Beautifully crafted engagement kits and printable activities that spark real conversation, warm memories, and genuine connection — designed for senior living professionals and caring families.
 
               </p>
             <div className="hero-actions">
