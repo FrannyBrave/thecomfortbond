@@ -518,7 +518,7 @@ const Index = () => {
         <div className="footer-inner footer-inner-3col">
           <div className="footer-brand">
             <div style={{ fontFamily: "var(--font-serif)", fontSize: 18, color: "#fff", fontWeight: 600 }}>The Comfort Bond™</div>
-            <p>Nurturing Comfort, Inspiring Connection — high-quality engagement kits designed for senior living communities and caring families.</p>
+            <p>Nurturing Comfort, Inspiring Connection — high-quality engagement kits and printable activities designed for senior living communities and caring families.</p>
           </div>
           <div className="footer-col">
             <h4>Products</h4>
