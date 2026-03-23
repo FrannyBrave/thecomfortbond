@@ -11,6 +11,7 @@ const Terms = () => {
       el.setAttribute("content", content);
     };
     setMeta("name", "description", "Review the terms of service for purchasing and using The Comfort Bond™ digital engagement kits.");
+    setMeta("name", "keywords", "terms of service senior kits, digital engagement kit terms, Comfort Bond terms, senior activity kit purchase terms");
     setMeta("property", "og:title", "Terms of Service | The Comfort Bond™");
     setMeta("property", "og:description", "Review the terms of service for purchasing and using The Comfort Bond™ digital engagement kits.");
     let canonical = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
