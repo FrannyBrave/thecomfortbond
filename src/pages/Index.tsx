@@ -257,8 +257,8 @@ const Index = () => {
       <section className="tcb-section products-bg" id="products">
         <div className="section-inner">
           <div className="section-tag">The full collection</div>
-          <h2 className="tcb-section-title">Five ways to nurture<br />comfort &amp; connection</h2>
-          <p className="section-sub">Each kit is a complete activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
+          <h2 className="tcb-section-title">Five Engagement Kits to Nurture<br />Comfort &amp; Connection</h2>
+          <p className="section-sub">Each engagement kit is a complete printable activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
           <div className="products-grid">
             {[
               { id: "road-trip-kit", emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
