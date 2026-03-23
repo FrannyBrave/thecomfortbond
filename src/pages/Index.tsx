@@ -136,7 +136,7 @@ const Index = () => {
                 <br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
               </h2>
               <p style={{ fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: "0.75rem" }}>
-                Sign up and we'll send you a free variety pack of printable engagement activities so you can experience The Comfort Bond's activity kits before you buy.
+                Sign up and we'll send you a free printable activity kit so you can experience The Comfort Bond before you buy.
               </p>
               <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, marginBottom: "1.75rem" }}>
                 No pressure, no spam. Just a warm welcome and something genuinely useful.
