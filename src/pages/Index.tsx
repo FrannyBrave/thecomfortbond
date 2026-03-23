@@ -290,7 +290,7 @@ const Index = () => {
               )}
 
             {/* Serenity Suite */}
-            <div className="serenity-card product-card">
+            <div className="serenity-card product-card" id="serenity-video-suite">
               <div>
                 <div className="serenity-label">Comfort Flow™ Video Experience</div>
                 <div className="serenity-title">The <em>Serenity</em> Suite</div>
