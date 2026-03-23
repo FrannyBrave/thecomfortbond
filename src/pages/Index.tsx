@@ -323,7 +323,7 @@ const Index = () => {
         <div className="section-inner">
           <div className="section-tag">Best value</div>
           <h2 className="tcb-section-title">All four kits, together —<br />for less</h2>
-          <p className="section-sub">Get every engagement kit in one download and save — then add The Serenity Suite whenever you're ready.</p>
+          <p className="section-sub">Get every engagement kit and activity resource in one download and save — then add The Serenity Suite whenever you're ready.</p>
           <div className="bundle-card">
             <div className="bundle-header">
               <div>
