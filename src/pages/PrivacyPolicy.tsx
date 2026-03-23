@@ -11,6 +11,7 @@ const PrivacyPolicy = () => {
       el.setAttribute("content", content);
     };
     setMeta("name", "description", "Learn how The Comfort Bond™ collects, uses, and protects your personal information.");
+    setMeta("name", "keywords", "privacy policy senior care, data protection elderly activities, Comfort Bond privacy, digital kit privacy policy");
     setMeta("property", "og:title", "Privacy Policy | The Comfort Bond™");
     setMeta("property", "og:description", "Learn how The Comfort Bond™ collects, uses, and protects your personal information.");
     let canonical = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
