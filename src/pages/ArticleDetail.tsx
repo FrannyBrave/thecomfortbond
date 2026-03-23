@@ -197,6 +197,61 @@ const ArticleDetail = () => {
             </p>
           );
         })}
+
+        {/* Related Articles */}
+        {(() => {
+          const related = articles.filter(a => a.slug !== article.slug);
+          return (
+            <section style={{ marginTop: "3rem", paddingTop: "2rem", borderTop: "1px solid rgba(45,74,62,0.15)" }}>
+              <h3 style={{
+                fontFamily: "var(--font-serif)",
+                fontSize: "1.25rem",
+                fontWeight: 600,
+                color: "var(--text-dark)",
+                margin: "0 0 1.25rem",
+              }}>
+                Related Articles
+              </h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                {related.map(r => (
+                  <Link
+                    key={r.slug}
+                    to={`/resources/${r.slug}`}
+                    style={{
+                      display: "block",
+                      padding: "1rem 1.25rem",
+                      background: "rgba(45,74,62,0.05)",
+                      borderRadius: 10,
+                      textDecoration: "none",
+                      transition: "background 0.2s",
+                    }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "rgba(45,74,62,0.1)")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "rgba(45,74,62,0.05)")}
+                  >
+                    <span style={{
+                      fontFamily: "var(--font-serif)",
+                      fontSize: 16,
+                      fontWeight: 600,
+                      color: "var(--text-dark)",
+                      lineHeight: 1.4,
+                    }}>
+                      {r.title}
+                    </span>
+                    <span style={{
+                      display: "block",
+                      fontFamily: "var(--font-sans)",
+                      fontSize: 13,
+                      color: "var(--clay)",
+                      marginTop: 4,
+                    }}>
+                      {r.readTime}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
       </main>
 
       {/* CTA Banner */}
@@ -213,7 +268,7 @@ const ArticleDetail = () => {
             color: "#fff",
             margin: "0 0 0.75rem",
           }}>
-            Ready to try it for free?
+            Ready to explore the full collection?
           </h2>
           <p style={{
             fontFamily: "var(--font-sans)",
@@ -223,12 +278,10 @@ const ArticleDetail = () => {
             lineHeight: 1.7,
             margin: "0 0 2rem",
           }}>
-            Download The Founder's Sampler — 16 print-ready pages, no sign-up required.
+            Get all four engagement kits in one bundle and save — printable, ready to use, no prep needed.
           </p>
-          <a
-            href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/#bundle"
             style={{
               display: "inline-block",
               background: "var(--forest)",
@@ -250,8 +303,8 @@ const ArticleDetail = () => {
               (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
             }}
           >
-            Get the free kit →
-          </a>
+            See the Full Comfort Bundle →
+          </Link>
           <div style={{ marginTop: "1.5rem" }}>
             <Link
               to="/resources"

@@ -47,7 +47,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Instead of traditional trivia, which can frustrate residents with memory loss, use visual comparisons. Showing a picture of a 1950s kitchen appliance next to a modern one instantly sparks memories and organic conversation. High-quality **printable activities for elderly** residents are lifesavers here — just print and pass them around.'
+        text: 'Instead of traditional trivia, which can frustrate residents with memory loss, use visual comparisons. Showing a picture of a 1950s kitchen appliance next to a modern one instantly sparks memories and organic conversation. High-quality **printable activities for elderly** residents are lifesavers here — just print and pass them around. <a href="/#nostalgia-kit">The Nostalgia Kit</a> includes ready-made "Then vs. Now" prompts across multiple decades.'
       },
       {
         type: 'heading',
@@ -63,11 +63,11 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'The ultimate safety net for short-staffed days is having a library of ready-to-go **senior engagement kits**. Instead of scrambling for materials, a comprehensive kit gives you the facilitator guide, the visual aids, and the discussion prompts all in one place.'
+        text: 'The ultimate safety net for short-staffed days is having a library of ready-to-go <a href="/#products">engagement kits</a>. Instead of scrambling for materials, a comprehensive kit gives you the facilitator guide, the visual aids, and the discussion prompts all in one place. <a href="/#road-trip-kit">The Road Trip Kit</a> is a great starting point — it works for any group size and cognitive level.'
       },
       {
         type: 'callout',
-        text: 'Need a backup plan for this weekend? Explore <a href="https://thecomfortbond.gumroad.com" target="_blank" rel="noopener noreferrer">The Comfort Bond™ Ecosystem</a> for premium, done-for-you resources that require zero prep time.'
+        text: 'Need a backup plan for this weekend? Explore <a href="/#products">The Comfort Bond™ engagement kits</a> — premium, done-for-you resources that require zero prep time.'
       }
     ]
   },
@@ -98,7 +98,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Verbal instructions can get lost. Use vibrant, clear images to anchor the activity. Whether you are using a themed "Road Trip" kit or discussing old Hollywood, having a physical image to hold bridges the gap for residents who struggle to follow spoken questions.'
+        text: 'Verbal instructions can get lost. Use vibrant, clear images to anchor the activity. Whether you are using a themed <a href="/#road-trip-kit">Road Trip Kit</a> or discussing old Hollywood, having a physical image to hold bridges the gap for residents who struggle to follow spoken questions.'
       },
       {
         type: 'heading',
@@ -106,7 +106,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Open-ended questions can cause anxiety. Instead, use specialized **conversation cards for seniors** that ask "either/or" questions or prompt them to share a simple opinion based on a picture. This allows higher-cognitive residents to tell a full story, while lower-cognitive residents can simply point or give a one-word answer, ensuring everyone participates successfully.'
+        text: 'Open-ended questions can cause anxiety. Instead, use specialized **conversation cards for seniors** that ask "either/or" questions or prompt them to share a simple opinion based on a picture. This allows higher-cognitive residents to tell a full story, while lower-cognitive residents can simply point or give a one-word answer, ensuring everyone participates successfully. Every <a href="/#products">Comfort Bond engagement kit</a> includes conversation cards designed for mixed cognitive levels.'
       },
       {
         type: 'heading',
@@ -114,11 +114,11 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'You can\'t be in every room at once. Empower your CNAs and weekend staff by providing them with structured **caregiver activity kits**. When your staff has a step-by-step facilitator guide (like The Comfort Flow™ methodology), they can confidently lead a session and adapt to the residents\' changing moods.'
+        text: 'You can\'t be in every room at once. Empower your CNAs and weekend staff by providing them with structured **caregiver activity kits**. When your staff has a step-by-step facilitator guide (like The Comfort Flow™ methodology), they can confidently lead a session and adapt to the residents\' changing moods. <a href="/#kitchen-comfort-kit">The Kitchen & Comfort Kit</a> is especially popular with untrained staff — its familiar themes make facilitation natural.'
       },
       {
         type: 'callout',
-        text: 'Looking for resources that adapt to your residents? Download our free <a href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true" target="_blank" rel="noopener noreferrer">Founder\'s Sampler</a> to try activities designed for multiple cognitive levels.'
+        text: 'Looking for resources that adapt to your residents? Browse <a href="/#products">our engagement kits</a> — each one is designed for multiple cognitive levels with built-in facilitator guides.'
       }
     ]
   },
@@ -149,7 +149,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'You don\'t need a massive budget to throw an event. You just need a cohesive theme. Turn a standard Tuesday afternoon into a "1960s Nostalgia Hour" or a "Virtual Road Trip." By grouping activities around a single theme, the session feels like a premium event rather than just another time-filler.'
+        text: 'You don\'t need a massive budget to throw an event. You just need a cohesive theme. Turn a standard Tuesday afternoon into a "1960s Nostalgia Hour" with <a href="/#nostalgia-kit">The Nostalgia Kit</a> or a "Virtual Road Trip" with <a href="/#road-trip-kit">The Road Trip Kit</a>. By grouping activities around a single theme, the session feels like a premium event rather than just another time-filler.'
       },
       {
         type: 'heading',
@@ -157,7 +157,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Generic crosswords often end up in the trash. Upgrading to professionally designed **activity kits for seniors** gives your program a polished, dignified feel. High-quality materials signal to the residents (and their visiting families) that you value their engagement.'
+        text: 'Generic crosswords often end up in the trash. Upgrading to professionally designed <a href="/#products">activity kits for seniors</a> gives your program a polished, dignified feel. High-quality materials signal to the residents (and their visiting families) that you value their engagement.'
       },
       {
         type: 'heading',
@@ -165,11 +165,11 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Your time is better spent building relationships with your residents, not scouring the internet for clip art. By investing in complete, done-for-you **senior engagement kits**, you can populate your monthly calendar in minutes, confident that every activity is purpose-built to inspire connection.'
+        text: 'Your time is better spent building relationships with your residents, not scouring the internet for clip art. By investing in complete, done-for-you <a href="/#products">senior engagement kits</a>, you can populate your monthly calendar in minutes, confident that every activity is purpose-built to inspire connection.'
       },
       {
         type: 'callout',
-        text: 'Ready to upgrade your activity calendar? Shop <a href="https://thecomfortbond.gumroad.com" target="_blank" rel="noopener noreferrer">The Comfort Bond™</a> for complete, ready-to-run thematic kits that your residents will love.'
+        text: 'Ready to upgrade your activity calendar? Browse <a href="/#bundle">The Full Comfort Bundle</a> — get all four thematic kits your residents will love, at a discount.'
       }
     ]
   }
