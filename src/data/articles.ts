@@ -121,6 +121,11 @@ export const articles: Article[] = [
         text: 'Verbal instructions can get lost. Use vibrant, clear images to anchor the activity. Whether you are using a themed <a href="/#road-trip-kit">Road Trip Kit</a> or discussing old Hollywood, having a physical image to hold bridges the gap for residents who struggle to follow spoken questions.'
       },
       {
+        type: 'image',
+        src: memoryCareInline,
+        alt: 'Layered activity approach diagram showing three engagement levels for memory care: visual participation, guided response, and open-ended storytelling'
+      },
+      {
         type: 'heading',
         text: '2. Utilize Conversation Cards for Seniors'
       },
