@@ -20,6 +20,7 @@ export interface ArticleSection {
 export const articles: Article[] = [
   {
     slug: "zero-prep-senior-living-activities",
+    metaDescription: "3 reliable, zero-prep activity ideas for senior living professionals when you're short-staffed. Engage residents instantly with no cutting or laminating.",
     title: "3 Zero-Prep Senior Living Activities for When You're Short-Staffed",
     category: "STAFFING & PREP",
     icon: "⚡",
