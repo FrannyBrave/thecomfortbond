@@ -460,15 +460,6 @@ const Index = () => {
                 <div className="asc-num">89+</div>
                 <div className="asc-label">Minutes of calming nature video in The Serenity Suite</div>
               </div>
-              <ul className="about-value-list">
-                {[
-                  "Every activity is designed to welcome all participants — no wrong answers, no pressure to perform",
-                  "Instant PDF download — in your inbox within minutes, not days",
-                  "One-time purchase — print and use as many times as you need, forever"].
-                  map((item, i) =>
-                  <li key={i}><span className="avl-dot" />{item}</li>
-                  )}
-              </ul>
             </div>
           </div>
         </div>
