@@ -1,3 +1,10 @@
+import zeroPreoHero from "@/assets/articles/seniors-group-activity-zero-prep.jpg";
+import zeroPreoInline from "@/assets/articles/printable-activity-cards-senior-living.jpg";
+import memoryCareHero from "@/assets/articles/caregiver-memory-care-group-activity.jpg";
+import memoryCareInline from "@/assets/articles/memory-care-activity-levels.jpg";
+import beyondBingoHero from "@/assets/articles/seniors-diverse-activities-beyond-bingo.jpg";
+import beyondBingoInline from "@/assets/articles/senior-living-weekly-activity-calendar.jpg";
+
 export interface Article {
   slug: string;
   title: string;
@@ -10,13 +17,17 @@ export interface Article {
   metaDescription: string;
   datePublished: string;
   dateModified: string;
+  heroImage: string;
+  heroAlt: string;
   content: ArticleSection[];
 }
 
 export interface ArticleSection {
-  type: 'paragraph' | 'heading' | 'list' | 'callout';
+  type: 'paragraph' | 'heading' | 'list' | 'callout' | 'image';
   text?: string;
   items?: string[];
+  src?: string;
+  alt?: string;
 }
 
 export const articles: Article[] = [
@@ -32,6 +43,8 @@ export const articles: Article[] = [
     excerpt: "When you're running the floor alone, you need activities that engage the room immediately — no cutting, laminating, or trivia research required. Here are three you can pull out at a moment's notice.",
     readTime: "4 min read",
     subtitle: "Reliable activities that engage the room immediately — no cutting, laminating, or trivia research required.",
+    heroImage: zeroPreoHero,
+    heroAlt: "Senior living activity room set up with printable engagement cards and game materials ready for a zero-prep group session",
     content: [
       {
         type: 'paragraph',
@@ -62,6 +75,11 @@ export const articles: Article[] = [
         text: '3. "Done-For-You" Senior Engagement Kits'
       },
       {
+        type: 'image',
+        src: zeroPreoInline,
+        alt: 'Printable senior living activity cards including conversation prompts, trivia cards, and BINGO sheets spread on a wooden table'
+      },
+      {
         type: 'paragraph',
         text: 'The ultimate safety net for short-staffed days is having a library of ready-to-go <a href="/#products">engagement kits</a>. Instead of scrambling for materials, a comprehensive kit gives you the facilitator guide, the visual aids, and the discussion prompts all in one place. <a href="/#road-trip-kit">The Road Trip Kit</a> is a great starting point — it works for any group size and cognitive level.'
       },
@@ -83,6 +101,8 @@ export const articles: Article[] = [
     excerpt: "Managing the diverse needs of one room is one of the hardest parts of group programming. The secret to successful memory care activities is using layered, failure-free resources that work for everyone.",
     readTime: "5 min read",
     subtitle: "Layered, failure-free resources that work for every cognitive level in the room.",
+    heroImage: memoryCareHero,
+    heroAlt: "Memory care activity table with visual conversation cards, facilitator guide, and engagement materials in a calming setting",
     content: [
       {
         type: 'paragraph',
@@ -99,6 +119,11 @@ export const articles: Article[] = [
       {
         type: 'paragraph',
         text: 'Verbal instructions can get lost. Use vibrant, clear images to anchor the activity. Whether you are using a themed <a href="/#road-trip-kit">Road Trip Kit</a> or discussing old Hollywood, having a physical image to hold bridges the gap for residents who struggle to follow spoken questions.'
+      },
+      {
+        type: 'image',
+        src: memoryCareInline,
+        alt: 'Layered activity approach diagram showing three engagement levels for memory care: visual participation, guided response, and open-ended storytelling'
       },
       {
         type: 'heading',
@@ -134,6 +159,8 @@ export const articles: Article[] = [
     excerpt: "BINGO is a staple — but your residents deserve more variety. Here's how to upgrade your activity calendar with themed programming that fosters deeper connection, without adding to your workload.",
     readTime: "5 min read",
     subtitle: "How to upgrade your activity calendar with themed programming that fosters deeper connection.",
+    heroImage: beyondBingoHero,
+    heroAlt: "Senior living residents enjoying diverse engagement activities beyond traditional BINGO including conversation cards, trivia, and musical memory",
     content: [
       {
         type: 'paragraph',
@@ -154,6 +181,11 @@ export const articles: Article[] = [
       {
         type: 'heading',
         text: '2. Swap Generic Worksheets for Premium Activity Kits for Seniors'
+      },
+      {
+        type: 'image',
+        src: beyondBingoInline,
+        alt: 'Sample weekly activity calendar for senior living featuring themed days like Road Trip Tuesday, Nostalgia Hour, and Kitchen Memories Friday'
       },
       {
         type: 'paragraph',
