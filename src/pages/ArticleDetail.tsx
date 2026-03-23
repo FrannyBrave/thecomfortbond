@@ -35,6 +35,37 @@ const ArticleDetail = () => {
       setMeta("name", "twitter:description", article.metaDescription);
       setMeta("property", "og:title", `${article.title} — The Comfort Bond™`);
       setMeta("name", "twitter:title", `${article.title} — The Comfort Bond™`);
+
+      // BlogPosting JSON-LD
+      const ldId = "article-jsonld";
+      let script = document.getElementById(ldId) as HTMLScriptElement;
+      if (!script) {
+        script = document.createElement("script");
+        script.id = ldId;
+        script.type = "application/ld+json";
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": article.title,
+        "description": article.metaDescription,
+        "author": { "@type": "Person", "name": "Francesca" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "The Comfort Bond",
+          "logo": { "@type": "ImageObject", "url": "https://thecomfortbond.com/logo.png" }
+        },
+        "datePublished": article.datePublished,
+        "dateModified": article.dateModified,
+        "mainEntityOfPage": `https://thecomfortbond.com/resources/${article.slug}`,
+        "image": "https://thecomfortbond.com/og-image.jpg"
+      });
+
+      return () => {
+        const el = document.getElementById(ldId);
+        if (el) el.remove();
+      };
     }
   }, [article]);
 
