@@ -55,11 +55,26 @@ export const Navigation = () => {
               { label: "How It Works", href: "#methodology" },
               { label: "Kits", href: "#road-trip-kit" },
               { label: "FAQ", href: "#faq" },
+              { label: "Resources", href: "/resources" },
               { label: "Free Sample", href: "#honey-pot" },
             ].map((link) => (
               <button
                 key={link.href}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => {
+                  if (link.href.startsWith("/")) {
+                    navigate(link.href);
+                  } else {
+                    if (location.pathname !== "/") {
+                      navigate("/");
+                      setTimeout(() => {
+                        const el = document.querySelector(link.href);
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }, 800);
+                    } else {
+                      scrollToSection(link.href);
+                    }
+                  }
+                }}
                 className="font-sans text-sm font-medium text-forest hover:text-terracotta transition-colors"
               >
                 {link.label}
