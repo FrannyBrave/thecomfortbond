@@ -6,16 +6,20 @@ import { componentTagger } from "lovable-tagger";
 function sitemapPlugin(): Plugin {
   return {
     name: "generate-sitemap",
-    async generateBundle() {
-      const { articles } = await import("./src/data/articles");
+    generateBundle() {
       const BASE = "https://thecomfortbond.com";
+      const articleSlugs = [
+        "zero-prep-senior-living-activities",
+        "memory-care-activities-that-work",
+        "beyond-bingo-for-seniors",
+      ];
       const pages = [
         { loc: "/", changefreq: "weekly", priority: "1.0" },
         { loc: "/resources", changefreq: "weekly", priority: "0.8" },
         { loc: "/privacy-policy", changefreq: "yearly", priority: "0.3" },
         { loc: "/terms", changefreq: "yearly", priority: "0.3" },
-        ...articles.map((a: any) => ({
-          loc: `/resources/${a.slug}`,
+        ...articleSlugs.map(slug => ({
+          loc: `/resources/${slug}`,
           changefreq: "monthly",
           priority: "0.7",
         })),

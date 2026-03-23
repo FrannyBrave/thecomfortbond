@@ -11,7 +11,8 @@ const Resources = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Resources — The Comfort Bond™";
+    const title = "Free Guides & Activity Ideas for Senior Living Professionals | The Comfort Bond™";
+    document.title = title;
     const desc = "Free guides and strategies for activity directors in senior living and memory care. Zero-prep ideas, programming tips, and engagement resources.";
     const setMeta = (attr: string, key: string, content: string) => {
       let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement;
@@ -21,8 +22,8 @@ const Resources = () => {
     setMeta("name", "description", desc);
     setMeta("property", "og:description", desc);
     setMeta("name", "twitter:description", desc);
-    setMeta("property", "og:title", "Resources — The Comfort Bond™");
-    setMeta("name", "twitter:title", "Resources — The Comfort Bond™");
+    setMeta("property", "og:title", title);
+    setMeta("name", "twitter:title", title);
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
       metaKeywords.setAttribute("content", "senior living activities, memory care activities, activity director resources, senior engagement kits, printable activities for elderly");
