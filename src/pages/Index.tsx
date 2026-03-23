@@ -361,7 +361,7 @@ const Index = () => {
         <div className="section-inner" style={{ maxWidth: 620, margin: "0 auto" }}>
           <div className="section-tag">Reviews</div>
           <h2 className="tcb-section-title">Be the first to share<br />your experience</h2>
-          <p className="section-sub">We're just getting started — and we'd love to hear from you. If you've used a kit, your words help other activity directors and families find what they need.</p>
+          <p className="section-sub">We'd love to hear from you.</p>
 
           <div style={{ marginTop: "2.5rem" }}>
             <div className="review-cta-card">
