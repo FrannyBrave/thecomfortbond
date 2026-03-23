@@ -8,6 +8,8 @@ export interface Article {
   readTime: string;
   subtitle: string;
   metaDescription: string;
+  datePublished: string;
+  dateModified: string;
   content: ArticleSection[];
 }
 
