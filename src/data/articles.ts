@@ -98,7 +98,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Verbal instructions can get lost. Use vibrant, clear images to anchor the activity. Whether you are using a themed "Road Trip" kit or discussing old Hollywood, having a physical image to hold bridges the gap for residents who struggle to follow spoken questions.'
+        text: 'Verbal instructions can get lost. Use vibrant, clear images to anchor the activity. Whether you are using a themed <a href="/#road-trip-kit">Road Trip Kit</a> or discussing old Hollywood, having a physical image to hold bridges the gap for residents who struggle to follow spoken questions.'
       },
       {
         type: 'heading',
@@ -106,7 +106,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Open-ended questions can cause anxiety. Instead, use specialized **conversation cards for seniors** that ask "either/or" questions or prompt them to share a simple opinion based on a picture. This allows higher-cognitive residents to tell a full story, while lower-cognitive residents can simply point or give a one-word answer, ensuring everyone participates successfully.'
+        text: 'Open-ended questions can cause anxiety. Instead, use specialized **conversation cards for seniors** that ask "either/or" questions or prompt them to share a simple opinion based on a picture. This allows higher-cognitive residents to tell a full story, while lower-cognitive residents can simply point or give a one-word answer, ensuring everyone participates successfully. Every <a href="/#products">Comfort Bond engagement kit</a> includes conversation cards designed for mixed cognitive levels.'
       },
       {
         type: 'heading',
@@ -114,11 +114,11 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'You can\'t be in every room at once. Empower your CNAs and weekend staff by providing them with structured **caregiver activity kits**. When your staff has a step-by-step facilitator guide (like The Comfort Flow™ methodology), they can confidently lead a session and adapt to the residents\' changing moods.'
+        text: 'You can\'t be in every room at once. Empower your CNAs and weekend staff by providing them with structured **caregiver activity kits**. When your staff has a step-by-step facilitator guide (like The Comfort Flow™ methodology), they can confidently lead a session and adapt to the residents\' changing moods. <a href="/#kitchen-comfort-kit">The Kitchen & Comfort Kit</a> is especially popular with untrained staff — its familiar themes make facilitation natural.'
       },
       {
         type: 'callout',
-        text: 'Looking for resources that adapt to your residents? Download our free <a href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true" target="_blank" rel="noopener noreferrer">Founder\'s Sampler</a> to try activities designed for multiple cognitive levels.'
+        text: 'Looking for resources that adapt to your residents? Browse <a href="/#products">our engagement kits</a> — each one is designed for multiple cognitive levels with built-in facilitator guides.'
       }
     ]
   },
