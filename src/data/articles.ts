@@ -74,6 +74,8 @@ export const articles: Article[] = [
   {
     slug: "memory-care-activities-that-work",
     metaDescription: "Practical strategies for engaging mixed cognitive levels in memory care group activities. Layered, failure-free approaches that work for every resident.",
+    datePublished: "2026-01-20",
+    dateModified: "2026-03-23",
     title: "Engaging Mixed Cognitive Levels: Memory Care Activities That Actually Work",
     category: "MEMORY CARE",
     icon: "🧠",
