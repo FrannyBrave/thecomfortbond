@@ -14,9 +14,6 @@ const PrivacyPolicy = () => {
     setMeta("name", "keywords", "privacy policy senior care, data protection elderly activities, Comfort Bond privacy, digital kit privacy policy");
     setMeta("property", "og:title", "Privacy Policy | The Comfort Bond™");
     setMeta("property", "og:description", "Learn how The Comfort Bond™ collects, uses, and protects your personal information.");
-    let canonical = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
-    if (!canonical) { canonical = document.createElement("link"); canonical.setAttribute("rel", "canonical"); document.head.appendChild(canonical); }
-    canonical.setAttribute("href", "https://thecomfortbond.com/privacy-policy");
     return () => { document.title = "Instant Engagement Kits for Senior Care | The Comfort Bond™"; };
   }, []);
   return (
