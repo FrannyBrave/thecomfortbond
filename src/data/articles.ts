@@ -75,6 +75,11 @@ export const articles: Article[] = [
         text: '3. "Done-For-You" Senior Engagement Kits'
       },
       {
+        type: 'image',
+        src: zeroPreoInline,
+        alt: 'Printable senior living activity cards including conversation prompts, trivia cards, and BINGO sheets spread on a wooden table'
+      },
+      {
         type: 'paragraph',
         text: 'The ultimate safety net for short-staffed days is having a library of ready-to-go <a href="/#products">engagement kits</a>. Instead of scrambling for materials, a comprehensive kit gives you the facilitator guide, the visual aids, and the discussion prompts all in one place. <a href="/#road-trip-kit">The Road Trip Kit</a> is a great starting point — it works for any group size and cognitive level.'
       },
