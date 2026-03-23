@@ -43,6 +43,7 @@ const Index = () => {
             <li><a href="#who">Who It's For</a></li>
             <li><a href="#bundle">Pricing</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="/resources">Resources</a></li>
             <li><a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="nav-cta">Shop Now</a></li>
           </ul>
         </nav>
@@ -533,6 +534,7 @@ const Index = () => {
             <h4>Company</h4>
             <ul>
               <li><a href="#about">About Francesca</a></li>
+              <li><a href="/resources">Resources</a></li>
               <li><a href="mailto:hello@thecomfortbond.com">Contact</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>
