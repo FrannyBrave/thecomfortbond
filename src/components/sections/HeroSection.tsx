@@ -76,13 +76,13 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
             className="font-serif text-[2.5rem] md:text-[3.25rem] lg:text-[3.75rem] xl:text-[4.5rem] font-semibold text-cream leading-[1.05] tracking-[-0.01em] mb-8"
           >
-            Give Your
+            Activity Kits for
             <br />
-            Residents an Hour
+            Senior Living,
             <br />
-            <span className="text-accent italic">They'll Look</span>
+            <span className="text-accent italic">Ready to Use</span>
             <br />
-            Forward To.
+            Today.
           </motion.h1>
 
           <motion.div
