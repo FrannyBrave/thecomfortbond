@@ -47,7 +47,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Instead of traditional trivia, which can frustrate residents with memory loss, use visual comparisons. Showing a picture of a 1950s kitchen appliance next to a modern one instantly sparks memories and organic conversation. High-quality **printable activities for elderly** residents are lifesavers here — just print and pass them around.'
+        text: 'Instead of traditional trivia, which can frustrate residents with memory loss, use visual comparisons. Showing a picture of a 1950s kitchen appliance next to a modern one instantly sparks memories and organic conversation. High-quality **printable activities for elderly** residents are lifesavers here — just print and pass them around. <a href="/#nostalgia-kit">The Nostalgia Kit</a> includes ready-made "Then vs. Now" prompts across multiple decades.'
       },
       {
         type: 'heading',
@@ -63,11 +63,11 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'The ultimate safety net for short-staffed days is having a library of ready-to-go **senior engagement kits**. Instead of scrambling for materials, a comprehensive kit gives you the facilitator guide, the visual aids, and the discussion prompts all in one place.'
+        text: 'The ultimate safety net for short-staffed days is having a library of ready-to-go <a href="/#products">engagement kits</a>. Instead of scrambling for materials, a comprehensive kit gives you the facilitator guide, the visual aids, and the discussion prompts all in one place. <a href="/#road-trip-kit">The Road Trip Kit</a> is a great starting point — it works for any group size and cognitive level.'
       },
       {
         type: 'callout',
-        text: 'Need a backup plan for this weekend? Explore <a href="https://thecomfortbond.gumroad.com" target="_blank" rel="noopener noreferrer">The Comfort Bond™ Ecosystem</a> for premium, done-for-you resources that require zero prep time.'
+        text: 'Need a backup plan for this weekend? Explore <a href="/#products">The Comfort Bond™ engagement kits</a> — premium, done-for-you resources that require zero prep time.'
       }
     ]
   },
