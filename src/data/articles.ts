@@ -118,6 +118,7 @@ export const articles: Article[] = [
   },
   {
     slug: "beyond-bingo-for-seniors",
+    metaDescription: "Move beyond BINGO with meaningful engagement kits for senior living. Upgrade your activity calendar with conversation cards, trivia, word games, and more.",
     title: "Beyond BINGO for Seniors: Upgrading Your Calendar with Meaningful Engagement Kits",
     category: "PROGRAMMING",
     icon: "📋",
