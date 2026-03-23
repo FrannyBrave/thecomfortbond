@@ -275,7 +275,7 @@ export const ProductsSection = () => {
 
                 <a
                   href="https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className=""
                   style={{
                     display: "inline-block",
@@ -372,7 +372,7 @@ export const ProductsSection = () => {
 
                 <a
                   href="https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className=""
                   style={{
                     display: "inline-block",
@@ -469,7 +469,7 @@ export const ProductsSection = () => {
 
                 <a
                   href="https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className=""
                   style={{
                     display: "inline-block",
@@ -566,7 +566,7 @@ export const ProductsSection = () => {
 
                 <a
                   href="https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className=""
                   style={{
                     display: "inline-block",
@@ -674,7 +674,7 @@ export const ProductsSection = () => {
 
               <a
                 href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className=""
                 style={{
                   display: "block",
