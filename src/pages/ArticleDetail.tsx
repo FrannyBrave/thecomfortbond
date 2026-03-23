@@ -25,6 +25,16 @@ const ArticleDetail = () => {
     window.scrollTo(0, 0);
     if (article) {
       document.title = `${article.title} — The Comfort Bond™`;
+      const setMeta = (attr: string, key: string, content: string) => {
+        let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement;
+        if (!el) { el = document.createElement("meta"); el.setAttribute(attr, key); document.head.appendChild(el); }
+        el.setAttribute("content", content);
+      };
+      setMeta("name", "description", article.metaDescription);
+      setMeta("property", "og:description", article.metaDescription);
+      setMeta("name", "twitter:description", article.metaDescription);
+      setMeta("property", "og:title", `${article.title} — The Comfort Bond™`);
+      setMeta("name", "twitter:title", `${article.title} — The Comfort Bond™`);
     }
   }, [article]);
 

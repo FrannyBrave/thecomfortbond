@@ -7,6 +7,7 @@ export interface Article {
   excerpt: string;
   readTime: string;
   subtitle: string;
+  metaDescription: string;
   content: ArticleSection[];
 }
 
@@ -19,6 +20,7 @@ export interface ArticleSection {
 export const articles: Article[] = [
   {
     slug: "zero-prep-senior-living-activities",
+    metaDescription: "3 reliable, zero-prep activity ideas for senior living professionals when you're short-staffed. Engage residents instantly with no cutting or laminating.",
     title: "3 Zero-Prep Senior Living Activities for When You're Short-Staffed",
     category: "STAFFING & PREP",
     icon: "⚡",
@@ -67,6 +69,7 @@ export const articles: Article[] = [
   },
   {
     slug: "memory-care-activities-that-work",
+    metaDescription: "Practical strategies for engaging mixed cognitive levels in memory care group activities. Layered, failure-free approaches that work for every resident.",
     title: "Engaging Mixed Cognitive Levels: Memory Care Activities That Actually Work",
     category: "MEMORY CARE",
     icon: "🧠",
@@ -115,6 +118,7 @@ export const articles: Article[] = [
   },
   {
     slug: "beyond-bingo-for-seniors",
+    metaDescription: "Move beyond BINGO with meaningful engagement kits for senior living. Upgrade your activity calendar with conversation cards, trivia, word games, and more.",
     title: "Beyond BINGO for Seniors: Upgrading Your Calendar with Meaningful Engagement Kits",
     category: "PROGRAMMING",
     icon: "📋",
