@@ -308,7 +308,7 @@ const Index = () => {
               <div>
                 <div className="bundle-badge">The Full Comfort Bundle</div>
                 <h3 className="bundle-title">Every Kit.<br /><em>One price.</em></h3>
-                <div className="bundle-sub">All 4 engagement & activity kits — instant download</div>
+                <div className="bundle-sub">All 4 engagement kits — instant download</div>
               </div>
               <div className="bundle-pricing">
                 <div className="bundle-was">$104 if bought separately</div>
