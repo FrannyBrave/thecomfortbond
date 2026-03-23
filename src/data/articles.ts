@@ -154,6 +154,8 @@ export const articles: Article[] = [
     excerpt: "BINGO is a staple — but your residents deserve more variety. Here's how to upgrade your activity calendar with themed programming that fosters deeper connection, without adding to your workload.",
     readTime: "5 min read",
     subtitle: "How to upgrade your activity calendar with themed programming that fosters deeper connection.",
+    heroImage: beyondBingoHero,
+    heroAlt: "Senior living residents enjoying diverse engagement activities beyond traditional BINGO including conversation cards, trivia, and musical memory",
     content: [
       {
         type: 'paragraph',
