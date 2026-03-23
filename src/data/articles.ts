@@ -149,7 +149,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'You don\'t need a massive budget to throw an event. You just need a cohesive theme. Turn a standard Tuesday afternoon into a "1960s Nostalgia Hour" or a "Virtual Road Trip." By grouping activities around a single theme, the session feels like a premium event rather than just another time-filler.'
+        text: 'You don\'t need a massive budget to throw an event. You just need a cohesive theme. Turn a standard Tuesday afternoon into a "1960s Nostalgia Hour" with <a href="/#nostalgia-kit">The Nostalgia Kit</a> or a "Virtual Road Trip" with <a href="/#road-trip-kit">The Road Trip Kit</a>. By grouping activities around a single theme, the session feels like a premium event rather than just another time-filler.'
       },
       {
         type: 'heading',
@@ -157,7 +157,7 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Generic crosswords often end up in the trash. Upgrading to professionally designed **activity kits for seniors** gives your program a polished, dignified feel. High-quality materials signal to the residents (and their visiting families) that you value their engagement.'
+        text: 'Generic crosswords often end up in the trash. Upgrading to professionally designed <a href="/#products">activity kits for seniors</a> gives your program a polished, dignified feel. High-quality materials signal to the residents (and their visiting families) that you value their engagement.'
       },
       {
         type: 'heading',
@@ -165,11 +165,11 @@ export const articles: Article[] = [
       },
       {
         type: 'paragraph',
-        text: 'Your time is better spent building relationships with your residents, not scouring the internet for clip art. By investing in complete, done-for-you **senior engagement kits**, you can populate your monthly calendar in minutes, confident that every activity is purpose-built to inspire connection.'
+        text: 'Your time is better spent building relationships with your residents, not scouring the internet for clip art. By investing in complete, done-for-you <a href="/#products">senior engagement kits</a>, you can populate your monthly calendar in minutes, confident that every activity is purpose-built to inspire connection.'
       },
       {
         type: 'callout',
-        text: 'Ready to upgrade your activity calendar? Shop <a href="https://thecomfortbond.gumroad.com" target="_blank" rel="noopener noreferrer">The Comfort Bond™</a> for complete, ready-to-run thematic kits that your residents will love.'
+        text: 'Ready to upgrade your activity calendar? Browse <a href="/#bundle">The Full Comfort Bundle</a> — get all four thematic kits your residents will love, at a discount.'
       }
     ]
   }
