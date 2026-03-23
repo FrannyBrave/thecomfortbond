@@ -39,7 +39,7 @@ const Index = () => {
             </div>
           </a>
           <ul className="nav-links">
-            
+            <li><a href="#products">Engagement Kits</a></li>
             <li><a href="#who">Who It's For</a></li>
             <li><a href="#bundle">Pricing</a></li>
             <li><a href="#about">About</a></li>
@@ -57,10 +57,10 @@ const Index = () => {
           <div className="hero-content">
             <div className="hero-eyebrow">
               <span className="hero-eyebrow-dot" />
-              Engagement Kits for Senior Living
+              Engagement & Activity Kits for Senior Living
             </div>
-            <h1>Activity Kits for Senior Living,<br /><em>Ready to Use</em> Today.</h1>
-            <p className="hero-desc">Beautifully crafted kits that spark real conversation, warm memories, and genuine connection — designed for senior living teams and caring families.
+            <h1>Engagement Kits & Printable Activities for Senior Living,<br /><em>Ready to Use</em> Today.</h1>
+            <p className="hero-desc">Beautifully crafted engagement kits and printable activities that spark real conversation, warm memories, and genuine connection — designed for senior living professionals and caring families.
 
               </p>
             <div className="hero-actions">
@@ -132,11 +132,11 @@ const Index = () => {
                 Free download
               </div>
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "1rem" }}>
-                Get a free activity kit
+                Get a free engagement activity kit
                 <br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
               </h2>
               <p style={{ fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: "0.75rem" }}>
-                Sign up and we'll send you a free variety pack of engagement activities so you can experience The Comfort Bond before you buy.
+                Sign up and we'll send you a free variety pack of printable engagement activities so you can experience The Comfort Bond's activity kits before you buy.
               </p>
               <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, marginBottom: "1.75rem" }}>
                 No pressure, no spam. Just a warm welcome and something genuinely useful.
@@ -214,7 +214,7 @@ const Index = () => {
       <section className="tcb-section" id="who">
         <div className="section-inner">
           <div className="section-tag">Who it's for</div>
-          <h2 className="tcb-section-title">Built for the people<br />who show up every day</h2>
+          <h2 className="tcb-section-title">Engagement & Activity Kits Built for the People<br />Who Show Up Every Day</h2>
           <p className="section-sub">Whether you run activities for dozens of residents or you're simply trying to connect more deeply with a parent — The Comfort Bond meets you where you are.</p>
           <div className="audience-grid">
             <div className="audience-card primary">
@@ -257,8 +257,8 @@ const Index = () => {
       <section className="tcb-section products-bg" id="products">
         <div className="section-inner">
           <div className="section-tag">The full collection</div>
-          <h2 className="tcb-section-title">Five ways to nurture<br />comfort &amp; connection</h2>
-          <p className="section-sub">Each kit is a complete activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
+          <h2 className="tcb-section-title">Five Engagement Kits to Nurture<br />Comfort &amp; Connection</h2>
+          <p className="section-sub">Each engagement kit is a complete printable activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
           <div className="products-grid">
             {[
               { id: "road-trip-kit", emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
@@ -285,7 +285,7 @@ const Index = () => {
                     <div className="product-price">$26</div>
                     <div className="product-price-note">Instant download · PDF</div>
                   </div>
-                  <a href={kit.url} data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="product-cta">Get kit →</a>
+                  <a href={kit.url} data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="product-cta">{`Get The ${kit.name.replace('The ', '')} →`}</a>
                 </div>
               </div>
               )}
@@ -323,13 +323,13 @@ const Index = () => {
         <div className="section-inner">
           <div className="section-tag">Best value</div>
           <h2 className="tcb-section-title">All four kits, together —<br />for less</h2>
-          <p className="section-sub">Get every engagement kit in one download and save — then add The Serenity Suite whenever you're ready.</p>
+          <p className="section-sub">Get every engagement kit and activity resource in one download and save — then add The Serenity Suite whenever you're ready.</p>
           <div className="bundle-card">
             <div className="bundle-header">
               <div>
                 <div className="bundle-badge">The Full Comfort Bundle</div>
                 <h3 className="bundle-title">Every Kit.<br /><em>One price.</em></h3>
-                <div className="bundle-sub">All 4 engagement kits — instant download</div>
+                <div className="bundle-sub">All 4 engagement & activity kits — instant download</div>
               </div>
               <div className="bundle-pricing">
                 <div className="bundle-was">$104 if bought separately</div>
@@ -413,7 +413,7 @@ const Index = () => {
           <h2 className="tcb-section-title">Frequently Asked Questions</h2>
           <div style={{ marginTop: "2.5rem", display: "flex", flexDirection: "column", gap: 0 }}>
             {[
-              { q: "Is this a monthly subscription?", a: "No. All of our engagement kits and the Full Ecosystem Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to use forever." },
+              { q: "Is this a monthly subscription?", a: "No. All of our engagement kits, activity resources, and the Full Comfort Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to use forever." },
               { q: "What file format will I receive?", a: "Your kits are delivered as high-quality PDF files. The formatting, text size, and images look perfect on any computer or device." },
               { q: "Can I print these materials?", a: 'Yes! The kits are specifically designed to be printer-friendly on standard 8.5" x 11" paper. You can print BINGO cards, Trivia sheets, and Conversation prompts to hand out directly to residents.' },
               { q: "Are these kits reusable?", a: "Yes. Because these are digital downloads, you can print the materials as many times as you need. You can revisit the activities year after year." },
@@ -476,7 +476,7 @@ const Index = () => {
             <div className="about-visual">
               <div className="about-stat-card">
                 <div className="asc-num">5</div>
-                <div className="asc-label">Complete engagement products, ready to use today</div>
+                <div className="asc-label">Complete engagement kits & printable activities, ready to use today</div>
               </div>
               <div className="about-stat-card">
                 <div className="asc-num">89+</div>
@@ -500,8 +500,8 @@ const Index = () => {
       <section className="final-cta-section">
         <div className="final-cta-inner">
           <div className="fcs-eyebrow">The Comfort Bond™ · Ready when you are</div>
-          <h2 className="fcs-title">Start creating <em>real moments</em><br />today</h2>
-          <p className="fcs-desc">Download instantly, print what you need, and walk into your next session — or your next visit — with something genuinely beautiful to share.</p>
+          <h2 className="fcs-title">Start Creating <em>Real Moments</em> with Printable Activity Kits<br />Today</h2>
+          <p className="fcs-desc">Download your engagement kits instantly, print the activities you need, and walk into your next session — or your next visit — with something genuinely beautiful to share.</p>
           <div className="fcs-actions">
             <a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="btn-primary">
               Shop all kits
@@ -518,7 +518,7 @@ const Index = () => {
         <div className="footer-inner footer-inner-3col">
           <div className="footer-brand">
             <div style={{ fontFamily: "var(--font-serif)", fontSize: 18, color: "#fff", fontWeight: 600 }}>The Comfort Bond™</div>
-            <p>Nurturing Comfort, Inspiring Connection — high-quality engagement kits designed for senior living communities and caring families.</p>
+            <p>Nurturing Comfort, Inspiring Connection — high-quality engagement kits and printable activities designed for senior living communities and caring families.</p>
           </div>
           <div className="footer-col">
             <h4>Products</h4>

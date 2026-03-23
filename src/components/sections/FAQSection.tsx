@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Is this a monthly subscription?",
     answer:
-      "No. All of our engagement kits and the Full Ecosystem Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to use forever.",
+      "No. All of our engagement kits, activity resources, and the Full Comfort Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to use forever.",
   },
   {
     question: "Is this appropriate for memory care residents?",
