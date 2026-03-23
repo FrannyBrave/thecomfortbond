@@ -127,7 +127,7 @@ const ArticleDetail = () => {
 
           if (section.type === "callout") {
             return (
-              <div key={i} style={{
+              <div key={i} className="article-callout" style={{
                 background: "var(--forest)",
                 color: "var(--sand)",
                 borderRadius: 12,
