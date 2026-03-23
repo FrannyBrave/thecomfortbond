@@ -534,6 +534,7 @@ const Index = () => {
             <h4>Company</h4>
             <ul>
               <li><a href="#about">About Francesca</a></li>
+              <li><a href="/resources">Resources</a></li>
               <li><a href="mailto:hello@thecomfortbond.com">Contact</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>
