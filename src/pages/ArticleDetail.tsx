@@ -132,13 +132,21 @@ const ArticleDetail = () => {
           }}>
             {article.subtitle}
           </p>
-          <span style={{
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.5rem",
+            flexWrap: "wrap",
             fontSize: 13,
             fontWeight: 500,
             color: "var(--sand)",
           }}>
-            {article.readTime}
-          </span>
+            <span>{article.readTime}</span>
+            <span style={{ opacity: 0.5 }}>·</span>
+            <span>Published: {new Date(article.datePublished).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
+            <span style={{ opacity: 0.5 }}>·</span>
+            <span>Updated: {new Date(article.dateModified).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
+          </div>
         </div>
       </header>
 
