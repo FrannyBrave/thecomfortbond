@@ -413,7 +413,7 @@ const Index = () => {
           <h2 className="tcb-section-title">Frequently Asked Questions</h2>
           <div style={{ marginTop: "2.5rem", display: "flex", flexDirection: "column", gap: 0 }}>
             {[
-              { q: "Is this a monthly subscription?", a: "No. All of our engagement kits and the Full Ecosystem Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to use forever." },
+              { q: "Is this a monthly subscription?", a: "No. All of our engagement kits, activity resources, and the Full Comfort Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to use forever." },
               { q: "What file format will I receive?", a: "Your kits are delivered as high-quality PDF files. The formatting, text size, and images look perfect on any computer or device." },
               { q: "Can I print these materials?", a: 'Yes! The kits are specifically designed to be printer-friendly on standard 8.5" x 11" paper. You can print BINGO cards, Trivia sheets, and Conversation prompts to hand out directly to residents.' },
               { q: "Are these kits reusable?", a: "Yes. Because these are digital downloads, you can print the materials as many times as you need. You can revisit the activities year after year." },
