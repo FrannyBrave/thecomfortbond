@@ -180,7 +180,7 @@ export const HoneyPotSection = () => {
               <a
                 href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
                 data-gumroad-overlay-checkout="true"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className=""
                 style={{
                   display: "inline-block",

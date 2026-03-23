@@ -44,7 +44,7 @@ const Index = () => {
             <li><a href="#bundle">Pricing</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="/resources">Resources</a></li>
-            <li><a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="nav-cta">Shop Now</a></li>
+            <li><a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="nav-cta">Shop Now</a></li>
           </ul>
         </nav>
       </header>
@@ -167,7 +167,7 @@ const Index = () => {
               <a
                   href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
                   data-gumroad-overlay-checkout="true"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   style={{
                     background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
                     padding: "16px 28px", fontSize: 16, fontWeight: 500, fontFamily: "var(--font-sans)",
@@ -262,7 +262,7 @@ const Index = () => {
                     <div className="product-price">$26</div>
                     <div className="product-price-note">Instant download · PDF</div>
                   </div>
-                  <a href={kit.url} data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="product-cta">{`Get The ${kit.name.replace('The ', '')} →`}</a>
+                  <a href={kit.url} data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="product-cta">{`Get The ${kit.name.replace('The ', '')} →`}</a>
                 </div>
               </div>
               )}
@@ -280,7 +280,7 @@ const Index = () => {
                 </div>
                 <div>
                   <div className="serenity-price">$35 <span>one-time purchase</span></div>
-                  <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="serenity-cta">Get the Serenity Suite →</a>
+                  <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="serenity-cta">Get the Serenity Suite →</a>
                 </div>
               </div>
               <div className="serenity-scenes">
@@ -337,10 +337,10 @@ const Index = () => {
                     <div style={{ fontSize: 12, color: "var(--text-light)" }}>Add it separately for $35 — 10 nature scenes, 89 minutes</div>
                   </div>
                 </div>
-                <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 500, color: "var(--clay)", textDecoration: "none", whiteSpace: "nowrap" }}>Add Serenity Suite →</a>
+                <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" style={{ fontSize: 13, fontWeight: 500, color: "var(--clay)", textDecoration: "none", whiteSpace: "nowrap" }}>Add Serenity Suite →</a>
               </div>
               <div className="bundle-cta-row">
-                <a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="btn-primary">
+                <a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="btn-primary">
                   Get the full bundle — $95
                   <ArrowSvg />
                 </a>
@@ -470,7 +470,7 @@ const Index = () => {
           <h2 className="fcs-title">Start Creating <em>Real Moments</em><br />Today</h2>
           <p className="fcs-desc">Download your engagement kits instantly, print the activities you need, and walk into your next session — or your next visit — with something genuinely beautiful to share.</p>
           <div className="fcs-actions">
-            <a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="btn-primary">
               Shop all kits
               <ArrowSvg />
             </a>
