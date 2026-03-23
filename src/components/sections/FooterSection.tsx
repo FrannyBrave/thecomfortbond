@@ -74,6 +74,13 @@ export const FooterSection = () => {
           </a>
           <span className="hidden md:inline text-forest/30">|</span>
           <a
+            href="/resources"
+            className="text-sm text-forest hover:opacity-70 transition-opacity"
+          >
+            Resources
+          </a>
+          <span className="hidden md:inline text-forest/30">|</span>
+          <a
             href="/privacy-policy"
             className="text-sm text-forest hover:opacity-70 transition-opacity"
           >

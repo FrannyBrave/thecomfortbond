@@ -959,3 +959,21 @@ textarea:focus-visible,
 .faq-item summary::marker { display: none; content: ''; }
 .faq-item[open] summary span { transform: rotate(45deg); }
 .faq-item summary:hover { opacity: 0.8; }
+
+/* Article callout links */
+.article-callout a {
+  color: var(--sand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.article-callout a:hover { opacity: 0.8; }
+
+/* Article body clay links */
+.article-body a {
+  color: var(--clay);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.article-body a:hover { opacity: 0.8; }
