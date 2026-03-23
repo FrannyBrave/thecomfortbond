@@ -58,7 +58,7 @@ const Index = () => {
               <span className="hero-eyebrow-dot" />
               Engagement Kits for Senior Living
             </div>
-            <h1>Meaningful moments,<br /><em>ready to use</em> today</h1>
+            <h1>Activity Kits for Senior Living —<br />Meaningful Moments, <em>Ready to Use</em> Today.</h1>
             <p className="hero-desc">
               Beautifully crafted engagement kits that spark real conversation, warm memories, and genuine connection — designed for senior living professionals and caring families.
             </p>
