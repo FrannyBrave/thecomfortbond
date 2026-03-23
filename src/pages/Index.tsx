@@ -476,7 +476,7 @@ const Index = () => {
             <div className="about-visual">
               <div className="about-stat-card">
                 <div className="asc-num">5</div>
-                <div className="asc-label">Complete engagement products, ready to use today</div>
+                <div className="asc-label">Complete engagement kits & printable activities, ready to use today</div>
               </div>
               <div className="about-stat-card">
                 <div className="asc-num">89+</div>
