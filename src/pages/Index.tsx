@@ -59,8 +59,8 @@ const Index = () => {
               <span className="hero-eyebrow-dot" />
               Engagement & Activity Kits for Senior Living
             </div>
-            <h1>Engagement Kits & Printable Activities for Senior Living,<br /><em>Ready to Use</em> Today.</h1>
-            <p className="hero-desc">Beautifully crafted engagement kits and printable activities that spark real conversation, warm memories, and genuine connection — designed for senior living professionals and caring families.
+            <h1>Senior Living Engagement Kits,<br /><em>Ready to Use</em> Today.</h1>
+            <p className="hero-desc">Printable activity kits that spark real conversation, warm memories, and genuine connection — designed for senior living professionals and caring families.
 
               </p>
             <div className="hero-actions">
@@ -136,33 +136,12 @@ const Index = () => {
                 <br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
               </h2>
               <p style={{ fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: "0.75rem" }}>
-                Sign up and we'll send you a free variety pack of printable engagement activities so you can experience The Comfort Bond's activity kits before you buy.
+                Sign up and we'll send you a free printable activity kit so you can experience The Comfort Bond before you buy.
               </p>
               <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, marginBottom: "1.75rem" }}>
                 No pressure, no spam. Just a warm welcome and something genuinely useful.
               </p>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                {[
-                  { bold: "Then vs. Now · Guess the Era", desc: " — 5 pages across 4 topic categories with answer key" },
-                  { bold: "Discussion Circle Prompt Cards", desc: " — 5 pages covering home & family, school days, music, travel & career" },
-                  { bold: "Sequential Storytelling Cards", desc: " — 5 pages with 4 cut-and-laminate story themes to sequence & share" }].
-                  map((item, i) =>
-                  <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
-                      <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(198,123,92,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#C67B5C" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                      </span>
-                      <span><strong style={{ color: "rgba(255,255,255,0.9)" }}>{item.bold}</strong>{item.desc}</span>
-                    </div>
-                  )}
-
-                <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
-                  <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(198,123,92,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#C67B5C" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                  </span>
-                  15 print-ready pages — PDF instant delivery, no subscription needed
-                </div>
-              </div>
             </div>
 
             <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--radius)", padding: "2.5rem", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
@@ -214,8 +193,8 @@ const Index = () => {
       <section className="tcb-section" id="who">
         <div className="section-inner">
           <div className="section-tag">Who it's for</div>
-          <h2 className="tcb-section-title">Engagement & Activity Kits Built for the People<br />Who Show Up Every Day</h2>
-          <p className="section-sub">Whether you run activities for dozens of residents or you're simply trying to connect more deeply with a parent — The Comfort Bond meets you where you are.</p>
+          <h2 className="tcb-section-title">Built for the People<br />Who Show Up Every Day</h2>
+          <p className="section-sub">Whether you run engagement activities for dozens of residents or you're connecting with a loved one at home — these activity kits meet you where you are.</p>
           <div className="audience-grid">
             <div className="audience-card primary">
               <div className="audience-icon forest">
@@ -329,7 +308,7 @@ const Index = () => {
               <div>
                 <div className="bundle-badge">The Full Comfort Bundle</div>
                 <h3 className="bundle-title">Every Kit.<br /><em>One price.</em></h3>
-                <div className="bundle-sub">All 4 engagement & activity kits — instant download</div>
+                <div className="bundle-sub">All 4 engagement kits — instant download</div>
               </div>
               <div className="bundle-pricing">
                 <div className="bundle-was">$104 if bought separately</div>
@@ -382,7 +361,7 @@ const Index = () => {
         <div className="section-inner" style={{ maxWidth: 620, margin: "0 auto" }}>
           <div className="section-tag">Reviews</div>
           <h2 className="tcb-section-title">Be the first to share<br />your experience</h2>
-          <p className="section-sub">We're just getting started — and we'd love to hear from you. If you've used a kit, your words help other activity directors and families find what they need.</p>
+          <p className="section-sub">We'd love to hear from you.</p>
 
           <div style={{ marginTop: "2.5rem" }}>
             <div className="review-cta-card">
@@ -467,8 +446,7 @@ const Index = () => {
               <div className="about-tag">About the founder</div>
               <h2 className="about-title">Created with care,<br />by someone who<br /><em>truly understands</em></h2>
               <div className="about-body">
-                <p>Hi, I'm Francesca — the founder and sole creator behind The Comfort Bond. I built this because I know how hard it can be to find activities that actually feel meaningful, rather than just filling time.</p>
-                <p>Every kit is crafted with real intention: conversation prompts that open doors, games designed to spark joy without pressure, and activities that meet people exactly where they are — including residents living with memory challenges.</p>
+                <p>Hi, I'm Francesca — the founder behind The Comfort Bond. I built this because I know how hard it can be to find activities that feel meaningful rather than just filling time. Every kit is crafted with intention — prompts that open doors, games that spark joy, and activities that meet people where they are, including those with memory challenges.</p>
                 <p>My mission is simple: to make genuine connection feel easy and accessible, for the professionals who dedicate their days to seniors, and for the families who love them.</p>
               </div>
               <div className="about-sig">— Francesca</div>
@@ -482,15 +460,6 @@ const Index = () => {
                 <div className="asc-num">89+</div>
                 <div className="asc-label">Minutes of calming nature video in The Serenity Suite</div>
               </div>
-              <ul className="about-value-list">
-                {[
-                  "Every activity is designed to welcome all participants — no wrong answers, no pressure to perform",
-                  "Instant PDF download — in your inbox within minutes, not days",
-                  "One-time purchase — print and use as many times as you need, forever"].
-                  map((item, i) =>
-                  <li key={i}><span className="avl-dot" />{item}</li>
-                  )}
-              </ul>
             </div>
           </div>
         </div>
@@ -500,7 +469,7 @@ const Index = () => {
       <section className="final-cta-section">
         <div className="final-cta-inner">
           <div className="fcs-eyebrow">The Comfort Bond™ · Ready when you are</div>
-          <h2 className="fcs-title">Start Creating <em>Real Moments</em> with Printable Activity Kits<br />Today</h2>
+          <h2 className="fcs-title">Start Creating <em>Real Moments</em><br />Today</h2>
           <p className="fcs-desc">Download your engagement kits instantly, print the activities you need, and walk into your next session — or your next visit — with something genuinely beautiful to share.</p>
           <div className="fcs-actions">
             <a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer" className="btn-primary">
