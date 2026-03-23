@@ -260,12 +260,12 @@ const Index = () => {
           <p className="section-sub">Each kit is a complete activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
           <div className="products-grid">
             {[
-              { emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
-              { emoji: "📻", bg: "rgba(198,123,92,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
-              { emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true" },
-              { emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true" }].
+              { id: "road-trip-kit", emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
+              { id: "nostalgia-kit", emoji: "📻", bg: "rgba(198,123,92,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
+              { id: "kitchen-comfort-kit", emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true" },
+              { id: "holiday-traditions-kit", emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true" }].
               map((kit, i) =>
-              <div className="product-card" key={i}>
+              <div className="product-card" key={i} id={kit.id}>
                 <div className="product-header">
                   <div className="product-icon-row">
                     <div className="product-icon" style={{ background: kit.bg }}>{kit.emoji}</div>
@@ -290,7 +290,7 @@ const Index = () => {
               )}
 
             {/* Serenity Suite */}
-            <div className="serenity-card product-card">
+            <div className="serenity-card product-card" id="serenity-video-suite">
               <div>
                 <div className="serenity-label">Comfort Flow™ Video Experience</div>
                 <div className="serenity-title">The <em>Serenity</em> Suite</div>
@@ -469,11 +469,11 @@ const Index = () => {
           <div className="footer-col">
             <h4>Products</h4>
             <ul>
-              <li><a href="#">Road Trip Kit</a></li>
-              <li><a href="#">Nostalgia Kit</a></li>
-              <li><a href="#">Kitchen &amp; Comfort Kit</a></li>
-              <li><a href="#">Holiday Traditions Kit</a></li>
-              <li><a href="#">The Serenity Suite</a></li>
+              <li><a href="#road-trip-kit" onClick={(e) => { e.preventDefault(); document.getElementById('road-trip-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Road Trip Kit</a></li>
+              <li><a href="#nostalgia-kit" onClick={(e) => { e.preventDefault(); document.getElementById('nostalgia-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Nostalgia Kit</a></li>
+              <li><a href="#kitchen-comfort-kit" onClick={(e) => { e.preventDefault(); document.getElementById('kitchen-comfort-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Kitchen &amp; Comfort Kit</a></li>
+              <li><a href="#holiday-traditions-kit" onClick={(e) => { e.preventDefault(); document.getElementById('holiday-traditions-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Holiday Traditions Kit</a></li>
+              <li><a href="#serenity-video-suite" onClick={(e) => { e.preventDefault(); document.getElementById('serenity-video-suite')?.scrollIntoView({ behavior: 'smooth' }); }}>The Serenity Suite</a></li>
             </ul>
           </div>
           <div className="footer-col">
