@@ -469,11 +469,11 @@ const Index = () => {
           <div className="footer-col">
             <h4>Products</h4>
             <ul>
-              <li><a href="#">Road Trip Kit</a></li>
-              <li><a href="#">Nostalgia Kit</a></li>
-              <li><a href="#">Kitchen &amp; Comfort Kit</a></li>
-              <li><a href="#">Holiday Traditions Kit</a></li>
-              <li><a href="#">The Serenity Suite</a></li>
+              <li><a href="#road-trip-kit" onClick={(e) => { e.preventDefault(); document.getElementById('road-trip-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Road Trip Kit</a></li>
+              <li><a href="#nostalgia-kit" onClick={(e) => { e.preventDefault(); document.getElementById('nostalgia-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Nostalgia Kit</a></li>
+              <li><a href="#kitchen-comfort-kit" onClick={(e) => { e.preventDefault(); document.getElementById('kitchen-comfort-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Kitchen &amp; Comfort Kit</a></li>
+              <li><a href="#holiday-traditions-kit" onClick={(e) => { e.preventDefault(); document.getElementById('holiday-traditions-kit')?.scrollIntoView({ behavior: 'smooth' }); }}>Holiday Traditions Kit</a></li>
+              <li><a href="#serenity-video-suite" onClick={(e) => { e.preventDefault(); document.getElementById('serenity-video-suite')?.scrollIntoView({ behavior: 'smooth' }); }}>The Serenity Suite</a></li>
             </ul>
           </div>
           <div className="footer-col">
