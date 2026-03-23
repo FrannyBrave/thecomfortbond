@@ -9,16 +9,15 @@ import ArticleDetail from "./pages/ArticleDetail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
+import { useCanonical } from "./hooks/useCanonical";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
+function AppRoutes() {
+  useCanonical();
+  return (
+    <Routes>
+
           <Route path="/" element={<Index />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/:slug" element={<ArticleDetail />} />
