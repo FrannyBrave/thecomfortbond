@@ -153,9 +153,8 @@ const Index = () => {
                       </span>
                       <span><strong style={{ color: "rgba(255,255,255,0.9)" }}>{item.bold}</strong>{item.desc}</span>
                     </div>
-                  ))
+                  ))}
 
-                  )}
                 <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
                   <span style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(198,123,92,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#C67B5C" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
