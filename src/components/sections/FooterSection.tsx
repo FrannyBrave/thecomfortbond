@@ -1,9 +1,34 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 export const FooterSection = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const scrollToSection = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 800);
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const productLinks = [
+    { label: "Road Trip Kit", id: "road-trip-kit" },
+    { label: "Nostalgia Kit", id: "nostalgia-kit" },
+    { label: "Kitchen & Comfort Kit", id: "kitchen-comfort-kit" },
+    { label: "Holiday Traditions Kit", id: "holiday-traditions-kit" },
+    { label: "The Serenity Suite", id: "serenity-video-suite" },
+  ];
 
   return (
     <footer className="bg-cream border-t border-sage/40">
@@ -24,6 +49,19 @@ export const FooterSection = () => {
           <p className="text-sm text-forest/70 italic" style={{ fontFamily: "var(--font-serif)" }}>
             Nurturing Comfort, Inspiring Connection.
           </p>
+        </div>
+
+        {/* Product Links */}
+        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 mb-8">
+          {productLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollToSection(link.id)}
+              className="text-sm text-forest hover:text-terracotta transition-colors"
+            >
+              {link.label}
+            </button>
+          ))}
         </div>
 
         {/* Middle: Links + Contact in a row */}
