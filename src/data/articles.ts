@@ -183,6 +183,11 @@ export const articles: Article[] = [
         text: '2. Swap Generic Worksheets for Premium Activity Kits for Seniors'
       },
       {
+        type: 'image',
+        src: beyondBingoInline,
+        alt: 'Sample weekly activity calendar for senior living featuring themed days like Road Trip Tuesday, Nostalgia Hour, and Kitchen Memories Friday'
+      },
+      {
         type: 'paragraph',
         text: 'Generic crosswords often end up in the trash. Upgrading to professionally designed <a href="/#products">activity kits for seniors</a> gives your program a polished, dignified feel. High-quality materials signal to the residents (and their visiting families) that you value their engagement.'
       },
