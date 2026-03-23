@@ -446,8 +446,7 @@ const Index = () => {
               <div className="about-tag">About the founder</div>
               <h2 className="about-title">Created with care,<br />by someone who<br /><em>truly understands</em></h2>
               <div className="about-body">
-                <p>Hi, I'm Francesca — the founder and sole creator behind The Comfort Bond. I built this because I know how hard it can be to find activities that actually feel meaningful, rather than just filling time.</p>
-                <p>Every kit is crafted with real intention: conversation prompts that open doors, games designed to spark joy without pressure, and activities that meet people exactly where they are — including residents living with memory challenges.</p>
+                <p>Hi, I'm Francesca — the founder behind The Comfort Bond. I built this because I know how hard it can be to find activities that feel meaningful rather than just filling time. Every kit is crafted with intention — prompts that open doors, games that spark joy, and activities that meet people where they are, including those with memory challenges.</p>
                 <p>My mission is simple: to make genuine connection feel easy and accessible, for the professionals who dedicate their days to seniors, and for the families who love them.</p>
               </div>
               <div className="about-sig">— Francesca</div>
