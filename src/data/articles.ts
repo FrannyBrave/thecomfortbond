@@ -43,6 +43,8 @@ export const articles: Article[] = [
     excerpt: "When you're running the floor alone, you need activities that engage the room immediately — no cutting, laminating, or trivia research required. Here are three you can pull out at a moment's notice.",
     readTime: "4 min read",
     subtitle: "Reliable activities that engage the room immediately — no cutting, laminating, or trivia research required.",
+    heroImage: zeroPreoHero,
+    heroAlt: "Senior living activity room set up with printable engagement cards and game materials ready for a zero-prep group session",
     content: [
       {
         type: 'paragraph',
