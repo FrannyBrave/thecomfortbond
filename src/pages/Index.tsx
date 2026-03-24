@@ -49,7 +49,7 @@ const Index = () => {
             <li><a href="#bundle">Pricing</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="/resources">Resources</a></li>
-            <li><a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="nav-cta">Shop Now</a></li>
+            <li><button onClick={() => { setTimeout(() => { const w = window.open("about:blank", "_blank"); if (w) w.location.href = "https://thecomfortbond.gumroad.com/"; }, 0); }} className="nav-cta">Shop Now</button></li>
           </ul>
         </nav>
       </header>
