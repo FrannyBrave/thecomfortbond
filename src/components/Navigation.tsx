@@ -80,10 +80,8 @@ export const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button variant="cta" size="lg" asChild>
-              <a href="https://thecomfortbond.gumroad.com/" target="_blank" rel="noopener noreferrer" className="no-gumroad">
-                Shop Now
-              </a>
+            <Button variant="cta" size="lg" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer"); }}>
+              Shop Now
             </Button>
           </div>
 
