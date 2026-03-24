@@ -494,7 +494,7 @@ const Index = () => {
           <h2 className="fcs-title">Start Creating <em>Real Moments</em><br />Today</h2>
           <p className="fcs-desc">Download your engagement kits instantly, print the activities you need, and walk into your next session — or your next visit — with something genuinely beautiful to share.</p>
           <div className="fcs-actions">
-            <a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="btn-primary">
+            <a href="https://thecomfortbond.gumroad.com/" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Shop all kits
               <ArrowSvg />
             </a>
