@@ -263,14 +263,16 @@ const Index = () => {
                   <div className="product-icon-row">
                     <span className="product-tag">Kit</span>
                   </div>
-                  <div className="product-name">{kit.name}</div>
-                  {kit.rating && (
-                    <div style={{ display: "flex", alignItems: "center", gap: "6px", marginTop: "4px" }}>
-                      <span style={{ color: "#D4A259", fontSize: "15px", letterSpacing: "1px", lineHeight: 1 }}>★★★★★</span>
-                      <span style={{ fontSize: "13px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>{kit.rating.score}</span>
-                      <span style={{ fontSize: "11px", color: "#8B9E8F", fontFamily: "Georgia, serif" }}>({kit.rating.count} review)</span>
-                    </div>
-                  )}
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px", flexWrap: "wrap" }}>
+                    <div className="product-name" style={{ margin: 0 }}>{kit.name}</div>
+                    {kit.rating && (
+                      <div style={{ display: "flex", alignItems: "center", gap: "5px", flexShrink: 0 }}>
+                        <span style={{ color: "#D4A259", fontSize: "14px", letterSpacing: "1px", lineHeight: 1 }}>★★★★★</span>
+                        <span style={{ fontSize: "12px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>{kit.rating.score}</span>
+                        <span style={{ fontSize: "10px", color: "#8B9E8F", fontFamily: "Georgia, serif" }}>({kit.rating.count})</span>
+                      </div>
+                    )}
+                  </div>
                   <div className="product-desc">{kit.desc}</div>
                 </div>
                 <div className="product-body">
