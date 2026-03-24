@@ -80,8 +80,10 @@ export const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button variant="cta" size="lg" onClick={() => scrollToSection("#products")}>
-              Shop Bundle
+            <Button variant="cta" size="lg" asChild>
+              <a href="https://thecomfortbond.gumroad.com/" target="_blank" rel="noopener noreferrer">
+                Shop Now
+              </a>
             </Button>
           </div>
 
