@@ -284,6 +284,16 @@ const Index = () => {
 
             {/* Serenity Suite */}
             <div className="serenity-card product-card" id="serenity-video-suite">
+              <div style={{ width: "100%", borderRadius: "14px", overflow: "hidden", marginBottom: "20px" }}>
+                <img
+                  src={serenityPreview}
+                  alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
+                  loading="lazy"
+                  width={896}
+                  height={576}
+                  style={{ width: "100%", height: "auto", display: "block", aspectRatio: "896/576", objectFit: "cover" }}
+                />
+              </div>
               <div>
                 <div className="serenity-label">Comfort Flow™ Video Experience</div>
                 <div className="serenity-title">The <em>Serenity</em> Suite</div>
