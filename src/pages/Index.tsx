@@ -1,4 +1,9 @@
 import logoImg from "@/assets/logo.png";
+import roadTripPreview from "@/assets/road-trip-kit-preview.jpg";
+import nostalgiaPreview from "@/assets/nostalgia-kit-preview.jpg";
+import kitchenPreview from "@/assets/kitchen-kit-preview.jpg";
+import holidayPreview from "@/assets/holiday-kit-preview.jpg";
+import serenityPreview from "@/assets/serenity-suite-preview.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 
 const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
@@ -238,12 +243,22 @@ const Index = () => {
           <p className="section-sub">Each engagement kit is a complete printable activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
           <div className="products-grid">
             {[
-              { id: "road-trip-kit", emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true" },
-              { id: "nostalgia-kit", emoji: "📻", bg: "rgba(198,123,92,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true" },
-              { id: "kitchen-comfort-kit", emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true" },
-              { id: "holiday-traditions-kit", emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true" }].
+              { id: "road-trip-kit", emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true", preview: roadTripPreview, alt: "The Road Trip Kit — printable senior engagement activities including conversation cards, trivia, BINGO, and word games" },
+              { id: "nostalgia-kit", emoji: "📻", bg: "rgba(198,123,92,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true", preview: nostalgiaPreview, alt: "The Nostalgia Kit — printable memory lane activities with decade-by-decade conversation cards, trivia, and BINGO for seniors" },
+              { id: "kitchen-comfort-kit", emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true", preview: kitchenPreview, alt: "The Kitchen & Comfort Kit — printable senior activities featuring family recipe conversations, food trivia, and comfort food BINGO" },
+              { id: "holiday-traditions-kit", emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true", preview: holidayPreview, alt: "The Holiday Traditions Kit — printable holiday engagement activities with seasonal conversation cards, trivia, and celebration BINGO" }].
               map((kit, i) =>
               <div className="product-card" key={i} id={kit.id}>
+                <div style={{ width: "100%", borderRadius: "14px 14px 0 0", overflow: "hidden" }}>
+                  <img
+                    src={kit.preview}
+                    alt={kit.alt}
+                    loading="lazy"
+                    width={896}
+                    height={576}
+                    style={{ width: "100%", height: "auto", display: "block", aspectRatio: "896/576", objectFit: "cover" }}
+                  />
+                </div>
                 <div className="product-header">
                   <div className="product-icon-row">
                     <div className="product-icon" style={{ background: kit.bg }}>{kit.emoji}</div>
@@ -269,6 +284,16 @@ const Index = () => {
 
             {/* Serenity Suite */}
             <div className="serenity-card product-card" id="serenity-video-suite">
+              <div style={{ width: "100%", borderRadius: "14px", overflow: "hidden", marginBottom: "20px" }}>
+                <img
+                  src={serenityPreview}
+                  alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
+                  loading="lazy"
+                  width={896}
+                  height={576}
+                  style={{ width: "100%", height: "auto", display: "block", aspectRatio: "896/576", objectFit: "cover" }}
+                />
+              </div>
               <div>
                 <div className="serenity-label">Comfort Flow™ Video Experience</div>
                 <div className="serenity-title">The <em>Serenity</em> Suite</div>
