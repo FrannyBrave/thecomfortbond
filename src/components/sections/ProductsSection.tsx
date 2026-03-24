@@ -335,8 +335,15 @@ export const ProductsSection = () => {
           <div id="nostalgia-kit" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)" }}>
             <style>{`@media (min-width: 768px) { .nostalgia-grid { grid-template-columns: 1fr 1fr !important; } }`}</style>
             <div className="nostalgia-grid" style={{ display: "grid", gridTemplateColumns: "1fr", alignItems: "stretch", minHeight: "560px" }}>
-              <div style={{ height: "100%" }}>
-                <NostalgiaKitDisplay />
+              <div style={{ height: "100%", position: "relative", overflow: "hidden" }}>
+                <img
+                  src={nostalgiaPreview}
+                  alt="The Nostalgia Kit — printable memory lane activities with decade-by-decade conversation cards, trivia, and BINGO for seniors"
+                  loading="lazy"
+                  width={896}
+                  height={576}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
 
               <div style={{ background: "#FDFAF5", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "center", fontFamily: "Georgia, serif" }}>
