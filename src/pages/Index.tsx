@@ -261,7 +261,6 @@ const Index = () => {
                 </div>
                 <div className="product-header">
                   <div className="product-icon-row">
-                    <div className="product-icon" style={{ background: kit.bg }}>{kit.emoji}</div>
                     <span className="product-tag">Kit</span>
                   </div>
                   <div className="product-name">{kit.name}</div>
