@@ -1,4 +1,9 @@
 import logoImg from "@/assets/logo.png";
+import roadTripPreview from "@/assets/road-trip-kit-preview.jpg";
+import nostalgiaPreview from "@/assets/nostalgia-kit-preview.jpg";
+import kitchenPreview from "@/assets/kitchen-kit-preview.jpg";
+import holidayPreview from "@/assets/holiday-kit-preview.jpg";
+import serenityPreview from "@/assets/serenity-suite-preview.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 
 const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
