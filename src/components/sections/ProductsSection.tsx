@@ -11,6 +11,11 @@ import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
 import serenityImage from "@/assets/serenity-hero.png";
+import roadTripPreview from "@/assets/road-trip-kit-preview.jpg";
+import nostalgiaPreview from "@/assets/nostalgia-kit-preview.jpg";
+import kitchenPreview from "@/assets/kitchen-kit-preview.jpg";
+import holidayPreview from "@/assets/holiday-kit-preview.jpg";
+import serenityPreview from "@/assets/serenity-suite-preview.jpg";
 import { Button } from "@/components/ui/button";
 
 
