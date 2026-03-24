@@ -648,8 +648,11 @@ export const ProductsSection = () => {
             {/* Hero Image */}
             <div style={{ width: "100%", height: "0", paddingBottom: "55%", position: "relative", overflow: "hidden" }}>
               <img
-                src={serenityImage}
-                alt="The Serenity Video Suite"
+                src={serenityPreview}
+                alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
+                loading="lazy"
+                width={896}
+                height={576}
                 style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
               
             </div>
