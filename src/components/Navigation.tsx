@@ -81,7 +81,7 @@ export const Navigation = () => {
               </button>
             ))}
             <Button variant="cta" size="lg" asChild>
-              <a href="https://thecomfortbond.gumroad.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://thecomfortbond.gumroad.com/" target="_blank" rel="noopener noreferrer" className="no-gumroad">
                 Shop Now
               </a>
             </Button>
