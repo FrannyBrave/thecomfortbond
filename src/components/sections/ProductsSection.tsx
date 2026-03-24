@@ -467,6 +467,12 @@ export const ProductsSection = () => {
                   & Comfort Kit
                 </h2>
 
+                <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "16px" }}>
+                  <span style={{ color: "#D4A259", fontSize: "16px", letterSpacing: "1px" }}>★★★★★</span>
+                  <span style={{ fontSize: "14px", fontWeight: 700, color: "#2C3E2D" }}>5.0</span>
+                  <span style={{ fontSize: "12px", color: "#8B9E8F" }}>(1 review)</span>
+                </div>
+
                 <p style={{ fontSize: "15px", lineHeight: 1.6, color: "#5C6B5D", marginBottom: "28px" }}>
                   Pull up a chair and cook up some memories. 20+ pages of print-ready activities centered on family meals, comfort food traditions, and the heart of the American home.
                 </p>
