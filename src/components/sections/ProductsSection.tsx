@@ -231,8 +231,15 @@ export const ProductsSection = () => {
           <div id="road-trip-kit" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)" }}>
             <style>{`@media (min-width: 768px) { .roadtrip-grid { grid-template-columns: 1fr 1fr !important; } }`}</style>
             <div className="roadtrip-grid" style={{ display: "grid", gridTemplateColumns: "1fr", alignItems: "stretch", minHeight: "560px" }}>
-              <div style={{ height: "100%" }}>
-                <RoadTripKitDisplay />
+              <div style={{ height: "100%", position: "relative", overflow: "hidden" }}>
+                <img
+                  src={roadTripPreview}
+                  alt="The Road Trip Kit — printable senior engagement activities including conversation cards, trivia, BINGO, and word games"
+                  loading="lazy"
+                  width={896}
+                  height={576}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
 
               <div style={{ background: "#FDFAF5", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "center", fontFamily: "Georgia, serif" }}>
