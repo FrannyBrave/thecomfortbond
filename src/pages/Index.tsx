@@ -1,8 +1,8 @@
 import logoImg from "@/assets/logo.png";
-import roadTripPreview from "@/assets/road-trip-kit-preview.jpg";
-import nostalgiaPreview from "@/assets/nostalgia-kit-preview.jpg";
-import kitchenPreview from "@/assets/kitchen-kit-preview.jpg";
-import holidayPreview from "@/assets/holiday-kit-preview.jpg";
+import roadTripPreview from "@/assets/road-trip-kit-preview.png";
+import nostalgiaPreview from "@/assets/nostalgia-kit-preview.png";
+import kitchenPreview from "@/assets/kitchen-kit-preview.png";
+import holidayPreview from "@/assets/holiday-kit-preview.png";
 import serenityPreview from "@/assets/serenity-suite-preview.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 
