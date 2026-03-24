@@ -378,34 +378,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* REVIEWS */}
-      <section className="tcb-section" id="reviews" style={{ background: "var(--sand-pale)" }}>
-        <div className="section-inner" style={{ maxWidth: 620, margin: "0 auto" }}>
-          <div className="section-tag">Reviews</div>
-          <h2 className="tcb-section-title">Be the first to share<br />your experience</h2>
-          <p className="section-sub">We'd love to hear from you.</p>
-
-          <div style={{ marginTop: "2.5rem" }}>
-            <div className="review-cta-card">
-              <div>
-                <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "var(--sand)", marginBottom: "0.75rem" }}>Share your story</div>
-                <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontWeight: 600, color: "#fff", lineHeight: 1.25, marginBottom: "0.75rem" }}>
-                  Tried a kit?<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>We'd love to hear from you.</em>
-                </h3>
-                <p style={{ fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.65 }}>
-                  Your feedback helps other activity directors and families find what they need — and helps us keep improving every kit.
-                </p>
-              </div>
-              <a
-                  href="mailto:hello@thecomfortbond.com"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--clay)", color: "#fff", padding: "12px 22px", borderRadius: 100, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", width: "fit-content" }}>
-                Leave a review
-                <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section className="tcb-section" id="faq" style={{ background: "var(--sage-light, #e8eade)" }}>
