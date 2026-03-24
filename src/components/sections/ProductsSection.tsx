@@ -11,6 +11,11 @@ import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
 import serenityImage from "@/assets/serenity-hero.png";
+import roadTripPreview from "@/assets/road-trip-kit-preview.jpg";
+import nostalgiaPreview from "@/assets/nostalgia-kit-preview.jpg";
+import kitchenPreview from "@/assets/kitchen-kit-preview.jpg";
+import holidayPreview from "@/assets/holiday-kit-preview.jpg";
+import serenityPreview from "@/assets/serenity-suite-preview.jpg";
 import { Button } from "@/components/ui/button";
 
 
@@ -226,8 +231,15 @@ export const ProductsSection = () => {
           <div id="road-trip-kit" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)" }}>
             <style>{`@media (min-width: 768px) { .roadtrip-grid { grid-template-columns: 1fr 1fr !important; } }`}</style>
             <div className="roadtrip-grid" style={{ display: "grid", gridTemplateColumns: "1fr", alignItems: "stretch", minHeight: "560px" }}>
-              <div style={{ height: "100%" }}>
-                <RoadTripKitDisplay />
+              <div style={{ height: "100%", position: "relative", overflow: "hidden" }}>
+                <img
+                  src={roadTripPreview}
+                  alt="The Road Trip Kit — printable senior engagement activities including conversation cards, trivia, BINGO, and word games"
+                  loading="lazy"
+                  width={896}
+                  height={576}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
 
               <div style={{ background: "#FDFAF5", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "center", fontFamily: "Georgia, serif" }}>
@@ -323,8 +335,15 @@ export const ProductsSection = () => {
           <div id="nostalgia-kit" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)" }}>
             <style>{`@media (min-width: 768px) { .nostalgia-grid { grid-template-columns: 1fr 1fr !important; } }`}</style>
             <div className="nostalgia-grid" style={{ display: "grid", gridTemplateColumns: "1fr", alignItems: "stretch", minHeight: "560px" }}>
-              <div style={{ height: "100%" }}>
-                <NostalgiaKitDisplay />
+              <div style={{ height: "100%", position: "relative", overflow: "hidden" }}>
+                <img
+                  src={nostalgiaPreview}
+                  alt="The Nostalgia Kit — printable memory lane activities with decade-by-decade conversation cards, trivia, and BINGO for seniors"
+                  loading="lazy"
+                  width={896}
+                  height={576}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
 
               <div style={{ background: "#FDFAF5", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "center", fontFamily: "Georgia, serif" }}>
@@ -420,8 +439,15 @@ export const ProductsSection = () => {
           <div id="kitchen-comfort-kit" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)" }}>
             <style>{`@media (min-width: 768px) { .kitchen-grid { grid-template-columns: 1fr 1fr !important; } }`}</style>
             <div className="kitchen-grid" style={{ display: "grid", gridTemplateColumns: "1fr", alignItems: "stretch", minHeight: "560px" }}>
-              <div style={{ height: "100%" }}>
-                <KitchenKitDisplay />
+              <div style={{ height: "100%", position: "relative", overflow: "hidden" }}>
+                <img
+                  src={kitchenPreview}
+                  alt="The Kitchen & Comfort Kit — printable senior activities featuring family recipe conversations, food trivia, and comfort food BINGO"
+                  loading="lazy"
+                  width={896}
+                  height={576}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
 
               <div style={{ background: "#FDFAF5", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "center", fontFamily: "Georgia, serif" }}>
@@ -517,8 +543,15 @@ export const ProductsSection = () => {
           <div id="holiday-traditions-kit" className="max-w-5xl mx-auto" style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06)" }}>
             <style>{`@media (min-width: 768px) { .holiday-grid { grid-template-columns: 1fr 1fr !important; } }`}</style>
             <div className="holiday-grid" style={{ display: "grid", gridTemplateColumns: "1fr", alignItems: "stretch", minHeight: "560px" }}>
-              <div style={{ height: "100%" }}>
-                <HolidayKitDisplay />
+              <div style={{ height: "100%", position: "relative", overflow: "hidden" }}>
+                <img
+                  src={holidayPreview}
+                  alt="The Holiday Traditions Kit — printable holiday engagement activities with seasonal conversation cards, trivia, and celebration BINGO"
+                  loading="lazy"
+                  width={896}
+                  height={576}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
               </div>
 
               <div style={{ background: "#FDFAF5", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "center", fontFamily: "Georgia, serif" }}>
@@ -615,8 +648,11 @@ export const ProductsSection = () => {
             {/* Hero Image */}
             <div style={{ width: "100%", height: "0", paddingBottom: "55%", position: "relative", overflow: "hidden" }}>
               <img
-                src={serenityImage}
-                alt="The Serenity Video Suite"
+                src={serenityPreview}
+                alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
+                loading="lazy"
+                width={896}
+                height={576}
                 style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
               
             </div>
