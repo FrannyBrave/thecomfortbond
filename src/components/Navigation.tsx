@@ -137,10 +137,8 @@ export const Navigation = () => {
                 </button>
               ))}
               <div className="pt-2 px-2">
-                <Button variant="cta" size="lg" className="w-full" asChild>
-                  <a href="https://thecomfortbond.gumroad.com/" target="_blank" rel="noopener noreferrer">
-                    Shop Now
-                  </a>
+                <Button variant="cta" size="lg" className="w-full" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer"); setIsMobileMenuOpen(false); }}>
+                  Shop Now
                 </Button>
               </div>
             </div>
