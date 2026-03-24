@@ -80,7 +80,7 @@ export const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button variant="cta" size="lg" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer"); }}>
+            <Button variant="cta" size="lg" onClick={() => { setTimeout(() => { const w = window.open("about:blank", "_blank"); if (w) w.location.href = "https://thecomfortbond.gumroad.com/"; }, 0); }}>
               Shop Now
             </Button>
           </div>
