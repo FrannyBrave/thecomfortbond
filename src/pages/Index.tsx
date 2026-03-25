@@ -128,8 +128,6 @@ const Index = () => {
         </div>
       </div>
 
-      {/* PROMO BANNER */}
-      <PromoBanner />
 
       {/* FREE DOWNLOAD */}
       <section className="tcb-section" id="freebie" style={{ background: "var(--forest)" }}>
@@ -240,6 +238,9 @@ const Index = () => {
       </section>
 
       {/* PRODUCTS */}
+      {/* PROMO BANNER */}
+      <PromoBanner />
+
       <section className="tcb-section products-bg" id="products">
         <div className="section-inner">
           <div className="section-tag">The full collection</div>
