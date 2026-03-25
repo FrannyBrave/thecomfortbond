@@ -505,12 +505,12 @@
 .serenity-card {
   grid-column: 1 / -1;
   background: var(--forest) !important;
-  color: #fff;
-  border-radius: var(--radius);
-  padding: 2.5rem !important;
-  display: grid !important;
+  color: #fff !important;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem; align-items: center;
+  gap: 2rem;
+  padding: 2rem !important;
+  align-items: start;
   border: none !important;
 }
 .serenity-card:hover {
@@ -520,7 +520,7 @@
 .serenity-label {
   font-size: 10px; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--sand);
-  margin-bottom: 0.75rem;
+  font-weight: 500; margin-bottom: 0.5rem;
   display: flex; align-items: center; gap: 6px;
 }
 .serenity-label::before {
@@ -529,62 +529,61 @@
 }
 .serenity-title {
   font-family: var(--font-serif);
-  font-size: 2rem; font-weight: 600; line-height: 1.15;
-  color: #fff; margin-bottom: 1rem;
+  font-size: 1.7rem; font-weight: 600; line-height: 1.15;
+  color: #fff; margin-bottom: 0.6rem;
 }
 .serenity-title em { font-style: italic; color: var(--sand); }
 .serenity-desc {
-  font-size: 15px; color: rgba(255,255,255,0.75);
-  line-height: 1.7; margin-bottom: 1.5rem;
+  font-size: 14px; color: rgba(255,255,255,0.75);
+  line-height: 1.6; margin-bottom: 1rem;
 }
 .serenity-price {
   font-family: var(--font-serif);
-  font-size: 2.2rem; font-weight: 600; color: #fff;
+  font-size: 1.8rem; font-weight: 600; color: #fff;
   display: flex; align-items: baseline; gap: 8px;
 }
 .serenity-price span {
-  font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.6);
+  font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.6);
   font-family: var(--font-sans);
 }
 .serenity-cta {
   background: var(--clay);
   color: #fff;
   border: none; border-radius: 100px;
-  padding: 12px 28px;
-  font-size: 14px; font-weight: 500;
-  cursor: pointer; text-decoration: none;
-  transition: background 0.2s;
-  display: inline-block; margin-top: 1.25rem;
+  padding: 10px 22px;
+  font-size: 13px; font-weight: 500;
+  font-family: var(--font-sans);
+  cursor: pointer; transition: background 0.2s;
+  display: inline-block; margin-top: 0.75rem;
+  text-decoration: none;
 }
 .serenity-cta:hover { background: var(--clay-light); }
 .serenity-scenes {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
 }
 .scene-pill {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius-sm);
-  padding: 10px 14px;
-  font-size: 13px; color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px; padding: 8px 12px;
+  font-size: 12px; color: rgba(255,255,255,0.7);
   display: flex; align-items: center; gap: 8px;
 }
 .scene-num {
-  font-family: var(--font-serif);
-  font-style: italic; color: var(--sand);
-  font-size: 15px;
+  font-weight: 600; color: var(--sand);
+  font-size: 13px;
 }
 .serenity-stat-row {
-  display: flex; gap: 1.5rem; margin-top: 1.75rem;
+  display: flex; gap: 1.25rem; margin-top: 1rem; margin-bottom: 0.25rem;
 }
 .serenity-stat { display: flex; flex-direction: column; gap: 2px; }
 .serenity-stat-num {
   font-family: var(--font-serif);
-  font-size: 1.5rem; font-weight: 600;
+  font-size: 1.3rem; font-weight: 600;
   color: var(--sand);
 }
 .serenity-stat-label {
-  font-size: 11px; letter-spacing: 0.08em;
+  font-size: 10px; letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.75);
 }
