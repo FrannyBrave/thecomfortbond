@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X } from "lucide-react";
 
 export const StickyPromoBanner = () => {
@@ -6,6 +6,20 @@ export const StickyPromoBanner = () => {
     return !sessionStorage.getItem("promo-banner-dismissed");
   });
   const [copied, setCopied] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const update = () => {
+      const h = visible && ref.current ? ref.current.offsetHeight : 0;
+      document.documentElement.style.setProperty("--sticky-promo-height", `${h}px`);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("resize", update);
+      document.documentElement.style.setProperty("--sticky-promo-height", "0px");
+    };
+  }, [visible]);
 
   const handleDismiss = () => {
     sessionStorage.setItem("promo-banner-dismissed", "true");
@@ -22,13 +36,14 @@ export const StickyPromoBanner = () => {
 
   return (
     <div
+      ref={ref}
       id="sticky-promo"
       style={{
         position: "fixed",
         top: 0,
         left: 0,
         right: 0,
-        zIndex: 60,
+        zIndex: 110,
         background: "linear-gradient(135deg, #3D5A47 0%, #2D4A3E 50%, #263F33 100%)",
         boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
       }}
@@ -37,13 +52,12 @@ export const StickyPromoBanner = () => {
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          padding: "8px 16px",
+          padding: "8px 40px 8px 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           gap: "clamp(10px, 2vw, 24px)",
           flexWrap: "wrap",
-          position: "relative",
         }}
       >
         {/* Label + heading */}
