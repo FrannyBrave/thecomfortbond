@@ -20,7 +20,7 @@ export const PromoBanner = () => {
       className="w-full bg-[#FAF7F2]"
       style={{ padding: "clamp(2.5rem, 4vw, 4rem) 0" }}
     >
-      <div className="mx-auto px-6" style={{ maxWidth: 1100 }}>
+      <div className="mx-auto px-6" style={{ maxWidth: 780 }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
