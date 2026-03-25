@@ -309,18 +309,19 @@ const Index = () => {
               </div>
               <div>
                 <div className="serenity-label">Comfort Flow™ Video Experience</div>
-                <div className="serenity-title">The <em>Serenity</em> Suite</div>
+                <div className="serenity-title">
+
+The Serenity Suite<em>Serenity</em> Suite</div>
                 <p className="serenity-desc">
-                  <br /><br />
-                  A handcrafted collection of peaceful nature videos — gentle rain, ocean waves, mountain sunrises, flowing waterfalls, and more. Designed to promote calm, reduce anxiety, and spark warm memories in senior living environments.
-                </p>
+
+The Serenity Suite</p>
                 <div className="serenity-stat-row">
                   <div className="serenity-stat"><div className="serenity-stat-num">10</div><div className="serenity-stat-label">Nature Scenes</div></div>
                   <div className="serenity-stat"><div className="serenity-stat-num">89</div><div className="serenity-stat-label">Total Minutes</div></div>
                   <div className="serenity-stat"><div className="serenity-stat-num">∞</div><div className="serenity-stat-label">Continuous Loop</div></div>
                 </div>
                 <div>
-                  <div className="serenity-price">$35 <br /><span>one-time purchase</span></div>
+                  <div className="serenity-price">$35 <span>one-time purchase</span></div>
                   <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="serenity-cta">Get the Serenity Suite →</a>
                 </div>
               </div>
@@ -356,9 +357,7 @@ const Index = () => {
             <div className="bundle-body">
               <div className="bundle-includes-label">What's included</div>
               <div className="bundle-items">
-                {[
-                  { emoji: "🗺️", name: "The Road Trip Kit" },
-                  { emoji: "📻", name: "The Nostalgia Kit" },
+                {[{ emoji: "🗺️", name: "The Road Trip Kit" }, { emoji: "📻", name: "The Nostalgia Kit" },
                   { emoji: "🍳", name: "The Kitchen & Comfort Kit" },
                   { emoji: "🎄", name: "The Holiday Traditions Kit" }].
                   map((item, i) =>
