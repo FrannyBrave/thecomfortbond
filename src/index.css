@@ -80,7 +80,7 @@
 
 /* ---- NAV ---- */
 .tcb-nav {
-  position: sticky; top: 0; z-index: 100;
+  position: sticky; top: var(--sticky-promo-height, 0px); z-index: 100;
   background: rgba(250,247,242,0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
