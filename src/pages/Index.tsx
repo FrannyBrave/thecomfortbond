@@ -6,7 +6,6 @@ import holidayPreview from "@/assets/holiday-kit-preview.png";
 import serenityPreview from "@/assets/serenity-suite-preview.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 import { PromoBanner } from "@/components/sections/PromoBanner";
-import { StickyPromoBanner } from "@/components/StickyPromoBanner";
 
 const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
 <svg viewBox="0 0 10 10" fill="none">
@@ -34,7 +33,6 @@ const Index = () => {
 
   return (
     <div>
-      <StickyPromoBanner />
       <a href="#main" className="skip-nav">Skip to main content</a>
       {/* NAV */}
       <header>
@@ -52,7 +50,7 @@ const Index = () => {
             <li><a href="#bundle">Pricing</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="/resources">Resources</a></li>
-            <li><button onClick={() => { setTimeout(() => { const w = window.open("about:blank", "_blank"); if (w) w.location.href = "https://thecomfortbond.gumroad.com/"; }, 0); }} className="nav-cta">Shop Now</button></li>
+            <li><button onClick={() => {setTimeout(() => {const w = window.open("about:blank", "_blank");if (w) w.location.href = "https://thecomfortbond.gumroad.com/";}, 0);}} className="nav-cta">Shop Now</button></li>
           </ul>
         </nav>
       </header>
@@ -132,41 +130,42 @@ const Index = () => {
 
 
       {/* FREE DOWNLOAD */}
-      <section id="freebie" style={{ background: "var(--forest)", padding: "clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 4rem)" }}>
+      <section className="tcb-section" id="freebie" style={{ background: "var(--forest)" }}>
         <div className="section-inner" style={{ maxWidth: 1100 }}>
-          <div className="email-capture-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
+          <div className="email-capture-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
             <div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "rgba(232,201,154,0.15)", border: "1px solid rgba(232,201,154,0.25)", color: "var(--sand)", fontSize: 11, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase" as const, padding: "5px 12px", borderRadius: 100, marginBottom: "1rem" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "rgba(232,201,154,0.15)", border: "1px solid rgba(232,201,154,0.25)", color: "var(--sand)", fontSize: 11, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase" as const, padding: "6px 14px", borderRadius: 100, marginBottom: "1.5rem" }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--clay)", display: "inline-block" }} />
                 Free download
               </div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "0.75rem" }}>Get a free activity kit<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "1rem" }}>Get a free activity kit<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
               </h2>
-              <p style={{ fontSize: 15, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.65, marginBottom: "0.5rem" }}>
+              <p style={{ fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: "0.75rem" }}>
                 Sign up and we'll send you a free printable activity kit so you can experience The Comfort Bond before you buy.
               </p>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.45)", lineHeight: 1.5 }}>
+              <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, marginBottom: "1.75rem" }}>
                 No pressure, no spam. Just a warm welcome and something genuinely useful.
               </p>
+
             </div>
 
-            <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--radius)", padding: "1.5rem 1.75rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
+            <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--radius)", padding: "2.5rem", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               <div>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.25rem", fontStyle: "italic", color: "var(--sand)", marginBottom: "0.25rem" }}>The Founder's Sampler</p>
-                <p style={{ fontSize: 12, color: "rgba(255,255,255,0.45)" }}>16 pages · 3 activity types · Free PDF</p>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontStyle: "italic", color: "var(--sand)", marginBottom: "0.4rem" }}>The Founder's Sampler</p>
+                <p style={{ fontSize: 13, color: "rgba(255,255,255,0.45)" }}>16 pages · 3 activity types · Free PDF</p>
               </div>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {[
                   { emoji: "🎯", title: "Then vs. Now · Guess the Era", meta: "5 pages · 4 categories · Answer key included" },
                   { emoji: "💬", title: "Discussion Circle Prompt Cards", meta: "5 pages · Home, school, music, travel & career" },
                   { emoji: "🎬", title: "Sequential Storytelling Cards", meta: "5 pages · 4 story themes · Cut & laminate" }].
                   map((item, i) =>
-                  <div key={i} style={{ background: "rgba(255,255,255,0.05)", borderRadius: 10, padding: "10px 14px", display: "flex", alignItems: "center", gap: 12 }}>
-                    <span style={{ fontSize: 18, flexShrink: 0 }}>{item.emoji}</span>
+                  <div key={i} style={{ background: "rgba(255,255,255,0.05)", borderRadius: 12, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14 }}>
+                    <span style={{ fontSize: 20, flexShrink: 0 }}>{item.emoji}</span>
                     <div>
-                      <p style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.9)", marginBottom: 1 }}>{item.title}</p>
-                      <p style={{ fontSize: 11, color: "rgba(255,255,255,0.4)" }}>{item.meta}</p>
+                      <p style={{ fontSize: 14, fontWeight: 600, color: "rgba(255,255,255,0.9)", marginBottom: 2 }}>{item.title}</p>
+                      <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)" }}>{item.meta}</p>
                     </div>
                   </div>
                   )}
@@ -178,7 +177,7 @@ const Index = () => {
                   rel="noopener noreferrer nofollow"
                   style={{
                     background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
-                    padding: "13px 24px", fontSize: 15, fontWeight: 500, fontFamily: "var(--font-sans)",
+                    padding: "16px 28px", fontSize: 16, fontWeight: 500, fontFamily: "var(--font-sans)",
                     cursor: "pointer", transition: "background 0.2s", textAlign: "center",
                     display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                     textDecoration: "none"
@@ -187,7 +186,7 @@ const Index = () => {
                 Get the free kit <ArrowSvg />
               </a>
 
-              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", textAlign: "center", lineHeight: 1.4 }}>
+              <p style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", textAlign: "center", lineHeight: 1.5 }}>
                 Free via Gumroad · Instant PDF download
               </p>
             </div>
@@ -262,8 +261,8 @@ const Index = () => {
                     loading="lazy"
                     width={896}
                     height={576}
-                    style={{ width: "100%", height: "auto", display: "block", aspectRatio: "896/576", objectFit: "cover" }}
-                  />
+                    style={{ width: "100%", height: "auto", display: "block", aspectRatio: "896/576", objectFit: "cover" }} />
+                  
                 </div>
                 <div className="product-header">
                   <div className="product-icon-row">
@@ -271,13 +270,13 @@ const Index = () => {
                   </div>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px", flexWrap: "wrap" }}>
                     <div className="product-name" style={{ margin: 0 }}>{kit.name}</div>
-                    {kit.rating && (
-                      <div style={{ display: "flex", alignItems: "center", gap: "5px", flexShrink: 0 }}>
+                    {kit.rating &&
+                    <div style={{ display: "flex", alignItems: "center", gap: "5px", flexShrink: 0 }}>
                         <span style={{ color: "#D4A259", fontSize: "14px", letterSpacing: "1px", lineHeight: 1 }}>★★★★★</span>
                         <span style={{ fontSize: "12px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>{kit.rating.score}</span>
                         <span style={{ fontSize: "10px", color: "#8B9E8F", fontFamily: "Georgia, serif" }}>({kit.rating.count})</span>
                       </div>
-                    )}
+                    }
                   </div>
                   <div className="product-desc">{kit.desc}</div>
                 </div>
@@ -298,20 +297,22 @@ const Index = () => {
 
             {/* Serenity Suite */}
             <div className="serenity-card product-card" id="serenity-video-suite">
-              <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden", marginBottom: "14px", maxHeight: 240 }}>
+              <div style={{ width: "100%", borderRadius: "14px", overflow: "hidden", marginBottom: "20px" }}>
                 <img
-                  src={serenityPreview}
-                  alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
-                  loading="lazy"
-                  width={896}
-                  height={576}
-                  style={{ width: "100%", height: "100%", display: "block", objectFit: "cover" }}
-                />
+                    src={serenityPreview}
+                    alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
+                    loading="lazy"
+                    width={896}
+                    height={576}
+                    style={{ width: "100%", height: "auto", display: "block", aspectRatio: "896/576", objectFit: "cover" }} />
+                  
               </div>
               <div>
                 <div className="serenity-label">Comfort Flow™ Video Experience</div>
                 <div className="serenity-title">The <em>Serenity</em> Suite</div>
-                <p className="serenity-desc">A handcrafted collection of peaceful nature videos — gentle rain, ocean waves, mountain sunrises, flowing waterfalls, and more. Designed to promote calm, reduce anxiety, and spark warm memories in senior living environments.</p>
+                <p className="serenity-desc">
+
+The Serenity Suite</p>
                 <div className="serenity-stat-row">
                   <div className="serenity-stat"><div className="serenity-stat-num">10</div><div className="serenity-stat-label">Nature Scenes</div></div>
                   <div className="serenity-stat"><div className="serenity-stat-num">89</div><div className="serenity-stat-label">Total Minutes</div></div>
@@ -323,11 +324,9 @@ const Index = () => {
                 </div>
               </div>
               <div className="serenity-scenes">
-                {["Butterflies & Garden", "Clouds in the Sky", "Flowers Blooming", "Gentle Rain", "The Peaceful Lake", "Countryside View", "Forest Walk", "Mountain Sunrise", "Flowing Waterfalls", "Ocean Waves"].map((scene, i) =>
-                  <div className="scene-pill" key={i}>
+                {["Butterflies & Garden", "Clouds in the Sky", "Flowers Blooming", "Gentle Rain", "The Peaceful Lake", "Countryside View", "Forest Walk", "Mountain Sunrise", "Flowing Waterfalls", "Ocean Waves"].map((scene, i) => <div className="scene-pill" key={i}>
                     <span className="scene-num">{String(i + 1).padStart(2, "0")}</span> {scene}
-                  </div>
-                  )}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -481,7 +480,7 @@ const Index = () => {
           <h2 className="fcs-title">Start Creating <em>Real Moments</em><br />Today</h2>
           <p className="fcs-desc">Download your engagement kits instantly, print the activities you need, and walk into your next session — or your next visit — with something genuinely beautiful to share.</p>
           <div className="fcs-actions">
-            <button onClick={() => { setTimeout(() => { const w = window.open("about:blank", "_blank"); if (w) w.location.href = "https://thecomfortbond.gumroad.com/"; }, 0); }} className="btn-primary">
+            <button onClick={() => {setTimeout(() => {const w = window.open("about:blank", "_blank");if (w) w.location.href = "https://thecomfortbond.gumroad.com/";}, 0);}} className="btn-primary">
               Shop all kits
               <ArrowSvg />
             </button>
