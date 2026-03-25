@@ -298,14 +298,14 @@ const Index = () => {
 
             {/* Serenity Suite */}
             <div className="serenity-card product-card" id="serenity-video-suite">
-              <div style={{ width: "100%", borderRadius: "14px", overflow: "hidden", marginBottom: "20px" }}>
+              <div style={{ width: "100%", borderRadius: "12px", overflow: "hidden", marginBottom: "14px", maxHeight: 240 }}>
                 <img
                   src={serenityPreview}
                   alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
                   loading="lazy"
                   width={896}
                   height={576}
-                  style={{ width: "100%", height: "auto", display: "block", aspectRatio: "896/576", objectFit: "cover" }}
+                  style={{ width: "100%", height: "100%", display: "block", objectFit: "cover" }}
                 />
               </div>
               <div>
