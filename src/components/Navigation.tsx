@@ -5,22 +5,6 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
-const useStickyBannerHeight = () => {
-  const [height, setHeight] = useState(0);
-  useEffect(() => {
-    const update = () => {
-      const el = document.getElementById("sticky-promo");
-      setHeight(el ? el.offsetHeight : 0);
-    };
-    update();
-    const observer = new MutationObserver(update);
-    observer.observe(document.body, { childList: true, subtree: true });
-    window.addEventListener("resize", update);
-    return () => { observer.disconnect(); window.removeEventListener("resize", update); };
-  }, []);
-  return height;
-};
-
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -48,18 +32,12 @@ export const Navigation = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const bannerHeight = useStickyBannerHeight();
-
   return (
-    <>
-      {/* Spacer for sticky banner + nav */}
-      <div style={{ height: bannerHeight + 80 }} />
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="fixed left-0 right-0 z-50 bg-cream shadow-sm"
-        style={{ top: bannerHeight }}
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="fixed top-0 left-0 right-0 z-50 bg-cream shadow-sm"
     >
       <nav className="section-container">
         <div className="flex items-center justify-between h-20">
@@ -167,7 +145,6 @@ export const Navigation = () => {
           </motion.div>
         )}
       </nav>
-      </motion.header>
-    </>
+    </motion.header>
   );
 };
