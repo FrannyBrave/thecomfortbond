@@ -167,6 +167,7 @@ export const Navigation = () => {
           </motion.div>
         )}
       </nav>
-    </motion.header>
+      </motion.header>
+    </>
   );
 };
