@@ -6,6 +6,7 @@ import holidayPreview from "@/assets/holiday-kit-preview.png";
 import serenityPreview from "@/assets/serenity-suite-preview.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 import { PromoBanner } from "@/components/sections/PromoBanner";
+import { StickyPromoBanner } from "@/components/StickyPromoBanner";
 
 const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
 <svg viewBox="0 0 10 10" fill="none">
@@ -33,6 +34,7 @@ const Index = () => {
 
   return (
     <div>
+      <StickyPromoBanner />
       <a href="#main" className="skip-nav">Skip to main content</a>
       {/* NAV */}
       <header>
