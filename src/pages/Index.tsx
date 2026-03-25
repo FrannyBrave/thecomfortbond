@@ -127,6 +127,9 @@ const Index = () => {
         </div>
       </div>
 
+      {/* PROMO BANNER */}
+      <PromoBanner />
+
       {/* FREE DOWNLOAD */}
       <section className="tcb-section" id="freebie" style={{ background: "var(--forest)" }}>
         <div className="section-inner" style={{ maxWidth: 1100 }}>
