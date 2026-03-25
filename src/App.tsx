@@ -10,7 +10,6 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import { useCanonical } from "./hooks/useCanonical";
-import { StickyPromoBanner } from "./components/StickyPromoBanner";
 
 const queryClient = new QueryClient();
 
@@ -36,7 +35,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <StickyPromoBanner />
         <AppRoutes />
       </BrowserRouter>
     </TooltipProvider>
