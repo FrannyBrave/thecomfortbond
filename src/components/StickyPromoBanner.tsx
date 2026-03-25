@@ -2,13 +2,10 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
 export const StickyPromoBanner = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(() => {
+    return !sessionStorage.getItem("promo-banner-dismissed");
+  });
   const [copied, setCopied] = useState(false);
-
-  useEffect(() => {
-    const dismissed = sessionStorage.getItem("promo-banner-dismissed");
-    if (!dismissed) setVisible(true);
-  }, []);
 
   const handleDismiss = () => {
     sessionStorage.setItem("promo-banner-dismissed", "true");
