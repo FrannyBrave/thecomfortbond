@@ -140,7 +140,7 @@ const Index = () => {
               </div>
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem, 2.5vw, 2.2rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "0.75rem" }}>
                 Get a free activity kit<br />
-                <em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em><br /><br />
+                <em style={{ fontStyle: "italic", color: "var(--sand)" }}>straight to your inbox</em>
               </h2>
               <p style={{ fontSize: 15, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.65, marginBottom: "0.5rem" }}>
                 Sign up and we'll send you a free printable activity kit so you can experience The Comfort Bond before you buy.
@@ -313,7 +313,6 @@ const Index = () => {
                 <div className="serenity-label">Comfort Flow™ Video Experience</div>
                 <div className="serenity-title">The <em>Serenity</em> Suite</div>
                 <p className="serenity-desc">
-                  <br /><br />
                   A handcrafted collection of peaceful nature videos — gentle rain, ocean waves, mountain sunrises, flowing waterfalls, and more. Designed to promote calm, reduce anxiety, and spark warm memories in senior living environments.
                 </p>
                 <div className="serenity-stat-row">
