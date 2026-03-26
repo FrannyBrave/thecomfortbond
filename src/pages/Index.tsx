@@ -121,7 +121,7 @@ const Index = () => {
             <span className="tb-facility">Nursing Homes</span>
             
               
-            <span className="tb-facility">Assisted Living Centers</span>
+            <span className="tb-facility">Assisted Living & Memory Care Centers</span>
             <span className="tb-facility">In-Home Caregivers</span>
             <span className="tb-facility">Families &amp; Loved Ones</span>
           </div>
