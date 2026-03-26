@@ -243,7 +243,7 @@ const Index = () => {
       {/* PROMO BANNER */}
       <PromoBanner />
 
-      <section className="tcb-section products-bg" id="products">
+      <section className="tcb-section products-bg" id="products" style={{ paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
         <div className="section-inner">
           <div className="section-tag">The full collection</div>
           <h2 className="tcb-section-title">Five Engagement Kits to Nurture<br />Comfort &amp; Connection</h2>
