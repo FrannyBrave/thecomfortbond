@@ -299,17 +299,16 @@ const Index = () => {
 
             {/* Serenity Suite */}
             <div className="serenity-card product-card" id="serenity-video-suite">
-              <div style={{ width: "100%", borderRadius: "14px", overflow: "hidden", marginBottom: "20px" }}>
+              <div className="serenity-image-col">
                 <img
                     src={serenityPreview}
                     alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
                     loading="lazy"
                     width={896}
                     height={576}
-                    style={{ width: "100%", height: "auto", display: "block", aspectRatio: "896/576", objectFit: "cover" }} />
-                  
+                    style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "14px" }} />
               </div>
-              <div>
+              <div className="serenity-text-col">
                 <div className="serenity-label">Comfort Flow™ Video Experience</div>
                 <div className="serenity-title">The <em>Serenity</em> Suite</div>
                 <p className="serenity-desc">
@@ -320,15 +319,13 @@ const Index = () => {
                   <div className="serenity-stat"><div className="serenity-stat-num">89</div><div className="serenity-stat-label">Total Minutes</div></div>
                   <div className="serenity-stat"><div className="serenity-stat-num">∞</div><div className="serenity-stat-label">Continuous Loop</div></div>
                 </div>
-                <div>
+                <div className="serenity-scenes">
+                  {["Butterflies & Garden", "Clouds in the Sky", "Flowers Blooming", "Gentle Rain", "The Peaceful Lake", "Countryside View", "Forest Walk", "Mountain Sunrise", "Flowing Waterfalls", "Ocean Waves"].map((scene, i) => <div className="scene-pill" key={i}>{scene}</div>)}
+                </div>
+                <div className="serenity-bottom-row">
                   <div className="serenity-price">$35 <br /><span>one-time purchase</span></div>
                   <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="serenity-cta">Get the Serenity Suite →</a>
                 </div>
-              </div>
-              <div className="serenity-scenes">
-                {["Butterflies & Garden", "Clouds in the Sky", "Flowers Blooming", "Gentle Rain", "The Peaceful Lake", "Countryside View", "Forest Walk", "Mountain Sunrise", "Flowing Waterfalls", "Ocean Waves"].map((scene, i) => <div className="scene-pill" key={i}>
-                    <span className="scene-num">{String(i + 1).padStart(2, "0")}</span> {scene}
-                  </div>)}
               </div>
             </div>
           </div>
