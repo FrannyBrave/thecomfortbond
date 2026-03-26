@@ -939,8 +939,8 @@ textarea:focus-visible,
   top: 0;
   z-index: 9999;
   padding: 0.75rem 1.5rem;
-  background: hsl(var(--forest));
-  color: hsl(var(--cream));
+  background: var(--forest);
+  color: var(--cream);
   font-family: var(--font-sans);
   font-size: 0.875rem;
   font-weight: 500;
@@ -949,7 +949,7 @@ textarea:focus-visible,
 }
 .skip-nav:focus {
   left: 0;
-  outline: 2px solid hsl(var(--terracotta));
+  outline: 2px solid var(--clay);
   outline-offset: 2px;
 }
 
