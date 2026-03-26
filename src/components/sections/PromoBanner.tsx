@@ -21,7 +21,7 @@ export const PromoBanner = () => {
       style={{
         display: "flex",
         justifyContent: "center",
-        padding: "12px 20px",
+        padding: "32px 20px",
       }}
     >
       <div
