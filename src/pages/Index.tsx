@@ -118,7 +118,7 @@ const Index = () => {
         <div className="trusted-bar-inner">
           <div className="tb-label">Designed for</div>
           <div className="tb-facilities">
-            <span className="tb-facility">Senior Living Communities</span>
+            <span className="tb-facility">Nursing Homes</span>
             
               
             <span className="tb-facility">Assisted Living Centers</span>
