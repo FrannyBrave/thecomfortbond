@@ -310,7 +310,7 @@ const Index = () => {
               </div>
               <div className="serenity-text-col">
                 <div className="serenity-label">Comfort Flow™ Video Experience</div>
-                <div className="serenity-title">The <em>Serenity</em> Suite</div>
+                <div className="serenity-title">The <em>Serenity</em> Suite{"\n\n"}</div>
                 <p className="serenity-desc">
                   A handcrafted collection of peaceful nature videos — gentle rain, ocean waves, mountain sunrises, flowing waterfalls, and more. Designed to promote calm, reduce anxiety, and spark warm memories in senior living environments.
                 </p>
