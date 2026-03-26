@@ -50,7 +50,7 @@ export const Navigation = () => {
           </a>
 
           {/* Desktop Nav Links + CTA */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             {[
               { label: "How It Works", href: "#methodology" },
               { label: "Kits", href: "#road-trip-kit" },
@@ -88,7 +88,7 @@ export const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-forest hover:text-terracotta transition-colors"
+            className="lg:hidden p-2 text-forest hover:text-terracotta transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -102,7 +102,7 @@ export const Navigation = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-cream border-t border-sage/20 pb-6"
+            className="lg:hidden bg-cream border-t border-sage/20 pb-6"
           >
             <div className="flex flex-col gap-2 pt-4">
               {[
