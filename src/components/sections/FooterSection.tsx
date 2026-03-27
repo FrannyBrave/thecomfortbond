@@ -23,11 +23,12 @@ export const FooterSection = () => {
   };
 
   const productLinks = [
-    { label: "Road Trip Kit", id: "road-trip-kit" },
     { label: "Nostalgia Kit", id: "nostalgia-kit" },
-    { label: "Kitchen & Comfort Kit", id: "kitchen-comfort-kit" },
-    { label: "Holiday Traditions Kit", id: "holiday-traditions-kit" },
-    { label: "The Serenity Suite", id: "serenity-video-suite" },
+    { label: "Heart of the Home Kit", id: "heart-of-the-home-kit" },
+    { label: '"Are We There Yet?" Kit', id: "are-we-there-yet-kit" },
+    { label: "Heirloom Garden Kit", id: "heirloom-garden-kit" },
+    { label: "Makers & Menders Kit", id: "makers-and-menders-kit" },
+    { label: "Complete Bundle", id: "bundle" },
   ];
 
   return (

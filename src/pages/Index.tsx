@@ -1,9 +1,4 @@
 import logoImg from "@/assets/logo.png";
-import roadTripPreview from "@/assets/road-trip-kit-preview.png";
-import nostalgiaPreview from "@/assets/nostalgia-kit-preview.png";
-import kitchenPreview from "@/assets/kitchen-kit-preview.png";
-import holidayPreview from "@/assets/holiday-kit-preview.png";
-import serenityPreview from "@/assets/serenity-suite-preview.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 import { PromoBanner } from "@/components/sections/PromoBanner";
 
@@ -93,19 +88,20 @@ const Index = () => {
               <div className="hero-card-mid" />
               <div className="hero-card-main">
                 <div className="hc-label">The Comfort Bond™</div>
-                <div className="hc-title">The <span>Holiday<br />Traditions</span> Kit</div>
+                <div className="hc-title">The <span>Nostalgia</span> Kit</div>
                 <div className="hc-divider" />
                 <div className="hc-activities">
-                  <div className="hc-activity"><div className="hc-activity-dot" />Conversation Cards · 5 pages</div>
-                  <div className="hc-activity"><div className="hc-activity-dot" />Holiday Trivia · 31 questions</div>
-                  <div className="hc-activity"><div className="hc-activity-dot" />Word Link Game · 15 puzzles</div>
-                  <div className="hc-activity"><div className="hc-activity-dot" />Holiday Parade BINGO</div>
+                  <div className="hc-activity"><div className="hc-activity-dot" />15+ Conversation Starter Cards</div>
+                  <div className="hc-activity"><div className="hc-activity-dot" />20 Themed Trivia Questions</div>
+                  <div className="hc-activity"><div className="hc-activity-dot" />24-Term BINGO + Caller Prompts</div>
+                  <div className="hc-activity"><div className="hc-activity-dot" />Word Link Cognitive Game</div>
                   <div className="hc-activity"><div className="hc-activity-dot" />Musical Memory · Finish the Lyric</div>
+                  <div className="hc-activity"><div className="hc-activity-dot" />10 Bonus "Visual Spark" Cards</div>
                 </div>
                 <div className="hc-badge-row">
-                  <div className="hc-badge">PDF · Print-ready</div>
+                  <div className="hc-badge">PDF · Cut &amp; Laminate Ready</div>
                   <div className="hc-badge">Instant download</div>
-                  <div className="hc-badge">$26</div>
+                  <div className="hc-badge">$34.99</div>
                 </div>
               </div>
             </div>
@@ -243,147 +239,249 @@ const Index = () => {
       {/* PROMO BANNER */}
       <PromoBanner />
 
-      <section className="tcb-section products-bg" id="products" style={{ paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
-        <div className="section-inner">
+      <section id="products" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--sand-pale)", paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
+        <div className="max-w-[1200px] mx-auto">
           <div className="section-tag">The full collection</div>
-          <h2 className="tcb-section-title">Five Engagement Kits to Nurture<br />Comfort &amp; Connection</h2>
-          <p className="section-sub">Each engagement kit is a complete printable activity package — conversation cards, trivia, word games, BINGO, and musical memory — ready to print and use today.</p>
-          <div className="products-grid">
-            {[
-              { id: "road-trip-kit", emoji: "🗺️", bg: "rgba(45,74,62,0.1)", name: "The Road Trip Kit", desc: "Classic Americana road stories, map games, and open-road nostalgia", features: ["Conversation Cards — 4 categories", "Famous U.S. Highways Trivia", "State Nicknames BINGO", "Road Trip Word Links", "On-the-Road Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true", preview: roadTripPreview, alt: "The Road Trip Kit — printable senior engagement activities including conversation cards, trivia, BINGO, and word games", rating: { score: "5.0", count: 1 } },
-              { id: "nostalgia-kit", emoji: "📻", bg: "rgba(198,123,92,0.1)", name: "The Nostalgia Kit", desc: "Memory Lane from the 1950s through the 1990s — decades of rich shared history", features: ["Decade-by-decade Conversation Cards", "Historical Moments & Fashion Trivia", "Flashback Word Links — 15 puzzles", "Memory Lane BINGO", "Nostalgia Musical Memory"], url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true", preview: nostalgiaPreview, alt: "The Nostalgia Kit — printable memory lane activities with decade-by-decade conversation cards, trivia, and BINGO for seniors", rating: null },
-              { id: "kitchen-comfort-kit", emoji: "🍳", bg: "rgba(232,201,154,0.3)", name: "The Kitchen & Comfort Kit", desc: "Family recipes, kitchen memories, and the heart of every home", features: ["Family Table Conversation Cards", "Vintage Food Brands Trivia", "Kitchen & Comfort Food BINGO", "Pantry Word Links", "Sweet Tooth Humming Game"], url: "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true", preview: kitchenPreview, alt: "The Kitchen & Comfort Kit — printable senior activities featuring family recipe conversations, food trivia, and comfort food BINGO", rating: { score: "5.0", count: 1 } },
-              { id: "holiday-traditions-kit", emoji: "🎄", bg: "rgba(45,74,62,0.08)", name: "The Holiday Traditions Kit", desc: "Seasonal celebrations, shared rituals, and the magic of every holiday", features: ["Year of Celebration — 5 seasons", "Holiday Trivia — 31 questions", "Holiday Parade BINGO", "Celebration Word Links", "Musical Memory — Finish the Lyric"], url: "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true", preview: holidayPreview, alt: "The Holiday Traditions Kit — printable holiday engagement activities with seasonal conversation cards, trivia, and celebration BINGO", rating: { score: "5.0", count: 1 } }].
-              map((kit, i) =>
-              <div className="product-card" key={i} id={kit.id}>
-                <div style={{ width: "100%", borderRadius: "14px 14px 0 0", overflow: "hidden" }}>
-                  <img
-                    src={kit.preview}
-                    alt={kit.alt}
-                    loading="lazy"
-                    width={896}
-                    height={576}
-                    style={{ width: "100%", height: "auto", display: "block", aspectRatio: "896/576", objectFit: "cover" }} />
-                  
-                </div>
-                <div className="product-header">
-                  <div className="product-icon-row">
-                    <span className="product-tag">Kit</span>
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px", flexWrap: "wrap" }}>
-                    <div className="product-name" style={{ margin: 0 }}>{kit.name}</div>
-                    {kit.rating &&
-                    <div style={{ display: "flex", alignItems: "center", gap: "5px", flexShrink: 0 }}>
-                        <span style={{ color: "#D4A259", fontSize: "14px", letterSpacing: "1px", lineHeight: 1 }}>★★★★★</span>
-                        <span style={{ fontSize: "12px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>{kit.rating.score}</span>
-                        <span style={{ fontSize: "10px", color: "#8B9E8F", fontFamily: "Georgia, serif" }}>({kit.rating.count})</span>
-                      </div>
-                    }
-                  </div>
-                  <div className="product-desc">{kit.desc}</div>
-                </div>
-                <div className="product-body">
-                  <ul className="product-features">
-                    {kit.features.map((f, j) => <li key={j}>{f}</li>)}
-                  </ul>
-                </div>
-                <div className="product-footer">
-                  <div>
-                    <div className="product-price">$26</div>
-                    <div className="product-price-note">Instant download · PDF</div>
-                  </div>
-                  <a href={kit.url} data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="product-cta">{`Get The ${kit.name.replace('The ', '')} →`}</a>
-                </div>
-              </div>
-              )}
+          <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
+            Five Done-for-You Engagement Kits,<br /><em className="italic" style={{ color: "var(--clay)" }}>Ready to Print &amp; Facilitate Today</em>
+          </h2>
+          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[600px]" style={{ color: "var(--text-mid)" }}>
+            Each kit is a complete, themed activity package — zero prep, maximum engagement. Print what you need and walk into your next session with confidence.
+          </p>
 
-            {/* Serenity Suite */}
-            <div className="serenity-card product-card" id="serenity-video-suite">
-              <div className="serenity-image-col">
-                <img
-                    src={serenityPreview}
-                    alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
-                    loading="lazy"
-                    width={896}
-                    height={576}
-                    style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", borderRadius: "14px" }} />
-              </div>
-              <div className="serenity-text-col">
-                <div className="serenity-label">Comfort Flow™ Video Experience</div>
-                <div className="serenity-title">The <em>Serenity</em> Suite{"\n\n"}</div>
-                <p className="serenity-desc">
-                  A handcrafted collection of peaceful nature videos — gentle rain, ocean waves, mountain sunrises, flowing waterfalls, and more. Designed to promote calm, reduce anxiety, and spark warm memories in senior living environments.
-                </p>
-                <div className="serenity-stat-row">
-                  <div className="serenity-stat"><div className="serenity-stat-num">10</div><div className="serenity-stat-label">Nature Scenes</div></div>
-                  <div className="serenity-stat"><div className="serenity-stat-num">89</div><div className="serenity-stat-label">Total Minutes</div></div>
-                  <div className="serenity-stat"><div className="serenity-stat-num">∞</div><div className="serenity-stat-label">Continuous Loop</div></div>
-                </div>
-                <div className="serenity-scenes">
-                  {["Butterflies & Garden", "Clouds in the Sky", "Flowers Blooming", "Gentle Rain", "The Peaceful Lake", "Countryside View", "Forest Walk", "Mountain Sunrise", "Flowing Waterfalls", "Ocean Waves"].map((scene, i) => <div className="scene-pill" key={i}>{scene}</div>)}
-                </div>
-                <div className="serenity-bottom-row">
-                  <div className="serenity-price">$35 <br /><span>one-time purchase</span></div>
-                  <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="serenity-cta">Get the Serenity Suite →</a>
-                </div>
-              </div>
+          {/* Universal Features Banner */}
+          <div className="mt-10 rounded-2xl px-6 py-5 md:px-8 md:py-6" style={{ background: "var(--forest)" }}>
+            <div className="flex items-center gap-2 mb-4 text-[10px] font-medium tracking-[0.14em] uppercase" style={{ color: "var(--sand)" }}>
+              Included in every kit
+              <span className="flex-1 h-px bg-white/[0.12]" />
             </div>
+            <div className="flex flex-wrap gap-2">
+              {["15+ Conversation Starter Cards", "20 Themed Trivia Questions", "Word Link Cognitive Game", "24-Term BINGO + Caller Prompts", "Musical Memory Game", '10 Bonus "Visual Spark" Photo Cards', "Digital PDF · Cut & Laminate Ready"].map((feature, i) =>
+                <div key={i} className="inline-flex items-center gap-[7px] rounded-full px-3.5 py-1.5 text-xs text-white/[0.85] whitespace-nowrap bg-white/[0.07] border border-white/[0.1]">
+                  <span className="w-[5px] h-[5px] rounded-full flex-shrink-0" style={{ background: "var(--clay)" }} />
+                  {feature}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Product Grid — 5 Kits */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+            {[
+              {
+                id: "nostalgia-kit",
+                icon: "📻",
+                name: "The Nostalgia Kit",
+                theme: "1950s–1970s Pop Culture & Daily Life",
+                desc: "Take residents back to the golden age of drive-in movies, jukeboxes, and poodle skirts. Designed to spark joyful memories of 1950s–1970s pop culture and daily life.",
+                price: "$34.99",
+                url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true"
+              },
+              {
+                id: "heart-of-the-home-kit",
+                icon: "🍞",
+                name: "The Heart of the Home Kit",
+                theme: "Family Meals, Sunday Suppers & Baking Days",
+                desc: "Centered around the warmth of family meals, Sunday suppers, and baking days. Deeply comforting prompts to engage the senses and recall cherished culinary traditions.",
+                price: "$34.99",
+                url: "https://thecomfortbond.gumroad.com/l/heartofthehomekit?wanted=true"
+              },
+              {
+                id: "are-we-there-yet-kit",
+                icon: "🚗",
+                name: 'The "Are We There Yet?" Kit',
+                theme: "The Great American Road Trip",
+                desc: "The ultimate great American road trip in a box. From packed station wagons to roadside diners and national parks, this kit brings the adventure of summer vacations right to the table.",
+                price: "$34.99",
+                url: "https://thecomfortbond.gumroad.com/l/arewethereyetkit?wanted=true"
+              },
+              {
+                id: "heirloom-garden-kit",
+                icon: "🌻",
+                name: "The Heirloom Garden Kit",
+                theme: "Nature, Seasons & the Joy of Growing",
+                desc: "Grounded in nature and the changing seasons. Residents will connect over memories of planting spring bulbs, harvesting backyard vegetables, and the satisfaction of a well-tended garden.",
+                price: "$34.99",
+                url: "https://thecomfortbond.gumroad.com/l/heirloomgardenkit?wanted=true"
+              },
+              {
+                id: "makers-and-menders-kit",
+                icon: "🔧",
+                name: "The Makers & Menders Kit",
+                theme: "Hands-On Work, Craftsmanship & Things Built to Last",
+                desc: "Celebrating the pride of hands-on work. Bridges demographics by engaging both men and women with memories of the tool shed, the sewing basket, the garage, and things built to last.",
+                price: "$34.99",
+                url: "https://thecomfortbond.gumroad.com/l/makersandmenderskit?wanted=true"
+              }
+            ].map((kit, i) =>
+              <div
+                key={i}
+                id={kit.id}
+                className="bg-white border border-[rgba(45,74,62,0.12)] rounded-2xl overflow-hidden flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(45,74,62,0.1)]"
+              >
+                {/* Card Header */}
+                <div className="p-6 pb-4 border-b border-[rgba(45,74,62,0.12)]">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="w-11 h-11 rounded-xl flex items-center justify-center text-[22px] bg-[rgba(198,123,92,0.08)] border border-[rgba(198,123,92,0.15)]">
+                      {kit.icon}
+                    </span>
+                    <span className="text-[10px] font-medium tracking-[0.1em] uppercase px-2.5 py-1 rounded-full" style={{ color: "var(--clay)", background: "rgba(198,123,92,0.1)" }}>
+                      Engagement Kit
+                    </span>
+                  </div>
+                  <h3 className="font-serif text-[1.2rem] font-semibold leading-[1.2] mb-1" style={{ color: "var(--forest-dark)" }}>
+                    {kit.name}
+                  </h3>
+                  <div className="text-[11px] font-medium tracking-[0.06em] uppercase mb-2" style={{ color: "var(--clay)" }}>
+                    {kit.theme}
+                  </div>
+                  <p className="text-[13px] leading-[1.6] min-h-[3.2em]" style={{ color: "var(--text-mid)" }}>
+                    {kit.desc}
+                  </p>
+                </div>
+
+                {/* Card Body */}
+                <div className="px-6 py-4 flex-1">
+                  <div className="text-[10px] tracking-[0.1em] uppercase font-medium mb-3" style={{ color: "var(--text-light)" }}>
+                    What's inside
+                  </div>
+                  <ul className="flex flex-col gap-1.5 mb-4">
+                    {["15+ Conversation Starter Cards", "20 Themed Trivia Questions", "Word Link Cognitive Game", "24-Term BINGO + Caller Prompts", "Musical Memory (Finish the Lyric & Name That Tune)", '10 Bonus "Visual Spark" Photo Cards'].map((f, j) =>
+                      <li key={j} className="flex items-center gap-[7px] text-[12.5px]" style={{ color: "var(--text-mid)" }}>
+                        <span className="w-[5px] h-[5px] rounded-full flex-shrink-0" style={{ background: "var(--clay)" }} />
+                        {f}
+                      </li>
+                    )}
+                  </ul>
+                  <div className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-medium" style={{ background: "rgba(45,74,62,0.06)", color: "var(--forest)" }}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    Digital PDF · Print &amp; Laminate Ready
+                  </div>
+                </div>
+
+                {/* Card Footer */}
+                <div className="px-6 py-4 border-t border-[rgba(45,74,62,0.12)] flex items-center justify-between gap-3">
+                  <div>
+                    <div className="font-serif text-2xl font-semibold" style={{ color: "var(--forest-dark)" }}>{kit.price}</div>
+                    <div className="text-[11px] mt-0.5" style={{ color: "var(--text-mid)" }}>One-time purchase · Instant download</div>
+                  </div>
+                  <a
+                    href={kit.url}
+                    data-gumroad-overlay-checkout="true"
+                    rel="noopener noreferrer nofollow"
+                    className="inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-[13px] font-medium text-white no-underline whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5"
+                    style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
+                  >
+                    Get This Kit <ArrowSvg />
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
 
       {/* BUNDLE */}
-      <section className="tcb-section bundle-section" id="bundle">
-        <div className="section-inner">
+      <section id="bundle" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--clay-pale)" }}>
+        <div className="max-w-[1200px] mx-auto">
           <div className="section-tag">Best value</div>
-          <h2 className="tcb-section-title">All four kits, together —<br />for less</h2>
-          <p className="section-sub">Get every engagement kit and activity resource in one download and save — then add The Serenity Suite whenever you're ready.</p>
-          <div className="bundle-card">
-            <div className="bundle-header">
+          <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
+            The Complete Comfort Bundle<br /><em className="italic" style={{ color: "var(--clay)" }}>All 5 Kits + VIP Bonus</em>
+          </h2>
+          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[600px]" style={{ color: "var(--text-mid)" }}>
+            Over a month's worth of premium, done-for-you programming. Get all 5 themed kits in one download and win your time back.
+          </p>
+
+          <div className="bg-white rounded-2xl border border-[rgba(198,123,92,0.2)] overflow-hidden max-w-[900px] mx-auto mt-12">
+            {/* Bundle Header */}
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center p-8 md:p-10" style={{ background: "var(--forest)" }}>
               <div>
-                <div className="bundle-badge">The Full Comfort Bundle</div>
-                <h3 className="bundle-title">Every Kit.<br /><em>One price.</em></h3>
-                <div className="bundle-sub">All 4 engagement kits — instant download</div>
+                <span className="inline-block text-[11px] font-medium tracking-[0.08em] uppercase text-white px-3.5 py-1.5 rounded-full mb-4" style={{ background: "var(--clay)" }}>
+                  The Complete Comfort Bundle
+                </span>
+                <h3 className="font-serif text-[2rem] font-semibold text-white leading-[1.2] m-0">
+                  Every Kit. Every Activity.<br /><em className="italic" style={{ color: "var(--sand)" }}>One unbeatable price.</em>
+                </h3>
+                <div className="text-sm text-white/[0.65] mt-2">All 5 engagement kits + The Serenity Suite — instant download</div>
               </div>
-              <div className="bundle-pricing">
-                <div className="bundle-was">$104 if bought separately</div>
-                <div className="bundle-price">$95</div>
-                <div className="bundle-save">Save $9 — best value</div>
+              <div className="md:text-right">
+                <div className="text-sm text-white/70 line-through mb-1">$174.95 if bought separately</div>
+                <div className="font-serif text-5xl font-semibold leading-none" style={{ color: "var(--sand)" }}>$150.99</div>
+                <div className="text-xs mt-1 tracking-[0.05em]" style={{ color: "var(--sand)" }}>Save over $23 — best value</div>
               </div>
             </div>
-            <div className="bundle-body">
-              <div className="bundle-includes-label">What's included</div>
-              <div className="bundle-items">
+
+            {/* Bundle Body */}
+            <div className="p-8 md:p-10">
+              {/* Kit items label */}
+              <div className="flex items-center gap-2 text-[11px] tracking-[0.12em] uppercase mb-5" style={{ color: "var(--text-light)" }}>
+                All 5 kits included
+                <span className="flex-1 h-px" style={{ background: "var(--border)" }} />
+              </div>
+
+              {/* Kit items grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 mb-8">
                 {[
-                  { emoji: "🗺️", name: "The Road Trip Kit" },
                   { emoji: "📻", name: "The Nostalgia Kit" },
-                  { emoji: "🍳", name: "The Kitchen & Comfort Kit" },
-                  { emoji: "🎄", name: "The Holiday Traditions Kit" }].
-                  map((item, i) =>
-                  <div className="bundle-item" key={i}>
-                    <span className="bundle-item-icon">{item.emoji}</span>
+                  { emoji: "🍞", name: "The Heart of the Home Kit" },
+                  { emoji: "🚗", name: 'The "Are We There Yet?" Kit' },
+                  { emoji: "🌻", name: "The Heirloom Garden Kit" },
+                  { emoji: "🔧", name: "The Makers & Menders Kit" }
+                ].map((item, i) =>
+                  <div key={i} className="flex items-center gap-2.5 px-4 py-3 rounded-[10px] text-sm" style={{ background: "var(--sand-pale)", color: "var(--text-mid)" }}>
+                    <span className="text-xl">{item.emoji}</span>
                     {item.name}
                   </div>
-                  )}
+                )}
               </div>
-              <div style={{ background: "var(--sand-pale)", border: "1px solid rgba(198,123,92,0.18)", borderRadius: "var(--radius-sm)", padding: "14px 18px", marginBottom: "2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap" as const, gap: 10 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <span style={{ fontSize: 20 }}>🌿</span>
-                  <div>
-                    <div style={{ fontSize: 14, fontWeight: 500, color: "var(--forest-dark)" }}>Want The Serenity Suite too?</div>
-                    <div style={{ fontSize: 12, color: "var(--text-light)" }}>Add it separately for $35 — 10 nature scenes, 89 minutes</div>
+
+              {/* VIP Bonus — Serenity Suite */}
+              <div className="rounded-2xl overflow-hidden mb-8" style={{ background: "linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%)" }}>
+                {/* Bonus badge bar */}
+                <div className="flex items-center gap-2 px-6 py-2.5 text-[11px] font-semibold tracking-[0.1em] uppercase text-white" style={{ background: "var(--clay)" }}>
+                  <span className="text-xs">★</span>
+                  VIP Bonus — Included FREE
+                </div>
+                {/* Bonus content */}
+                <div className="relative p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6">
+                  {/* Subtle radial glow */}
+                  <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at top right, rgba(232,201,154,0.08) 0%, transparent 60%)" }} />
+                  <div className="relative flex-1">
+                    <h4 className="font-serif text-[1.25rem] font-semibold text-white mb-2">The Serenity Suite Video Library</h4>
+                    <p className="text-[13px] text-white/70 leading-[1.65] mb-3">
+                      10 cinematic, 8-minute relaxation and reminiscence videos — gentle rain, ocean waves, mountain sunrises, flowing waterfalls, and more. Designed to promote calm, reduce anxiety, and spark warm memories.
+                    </p>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      {["10 Nature Scenes", "80+ Minutes", "Lifetime Access"].map((stat, i) => (
+                        <span key={i} className="flex items-center gap-3">
+                          <span className="text-xs font-medium tracking-[0.03em]" style={{ color: "var(--sand)" }}>{stat}</span>
+                          {i < 2 && <span className="w-px h-3 bg-white/20" />}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="relative flex-shrink-0 text-center bg-white/[0.06] border border-white/[0.12] rounded-[10px] px-6 py-5 w-full md:w-auto">
+                    <div className="font-serif text-[2.5rem] font-semibold leading-none mb-1" style={{ color: "var(--sand)" }}>$150</div>
+                    <div className="text-[11px] text-white/60 uppercase tracking-[0.08em] font-medium">value — yours FREE</div>
                   </div>
                 </div>
-                <a href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" style={{ fontSize: 13, fontWeight: 500, color: "var(--clay)", textDecoration: "none", whiteSpace: "nowrap" }}>Add Serenity Suite →</a>
               </div>
-              <div className="bundle-cta-row">
-                <a href="https://thecomfortbond.gumroad.com/l/fullbundle" data-gumroad-overlay-checkout="true" rel="noopener noreferrer nofollow" className="btn-primary">
-                  Get the full bundle — $95
+
+              {/* Bundle CTA */}
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href="https://thecomfortbond.gumroad.com/l/fullbundle"
+                  data-gumroad-overlay-checkout="true"
+                  rel="noopener noreferrer nofollow"
+                  className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
+                  style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
+                >
+                  Get the Complete Bundle — $150.99
                   <ArrowSvg />
                 </a>
-                <div className="bundle-guarantee">
+                <div className="flex items-center gap-1.5 text-[13px]" style={{ color: "var(--text-light)" }}>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 3.5V7c0 2.8 2 5.3 5 6 3-0.7 5-3.2 5-6V3.5L7 1z" stroke="#7a8a7a" strokeWidth="1.2" /></svg>
-                  Instant delivery · PDF download
+                  Instant delivery · PDF &amp; video download · One-time purchase
                 </div>
               </div>
             </div>
@@ -461,11 +559,11 @@ const Index = () => {
             <div className="about-visual">
               <div className="about-stat-card">
                 <div className="asc-num">5</div>
-                <div className="asc-label">Complete engagement kits & printable activities, ready to use today</div>
+                <div className="asc-label">Complete themed engagement kits, each with 6 activity types — ready to use today</div>
               </div>
               <div className="about-stat-card">
-                <div className="asc-num">89+</div>
-                <div className="asc-label">Minutes of calming nature video in The Serenity Suite</div>
+                <div className="asc-num">30+</div>
+                <div className="asc-label">Activity sessions in the Complete Bundle — over a month of done-for-you programming</div>
               </div>
             </div>
           </div>
@@ -483,7 +581,7 @@ const Index = () => {
               Shop all kits
               <ArrowSvg />
             </button>
-            <a href="#bundle" className="btn-secondary">View bundle — $95</a>
+            <a href="#bundle" className="btn-secondary">View bundle — $150.99</a>
           </div>
         </div>
       </section>
@@ -499,11 +597,12 @@ const Index = () => {
           <div className="footer-col">
             <h4>Products</h4>
             <ul>
-              <li><a href="#road-trip-kit" onClick={(e) => {e.preventDefault();document.getElementById('road-trip-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Road Trip Kit</a></li>
               <li><a href="#nostalgia-kit" onClick={(e) => {e.preventDefault();document.getElementById('nostalgia-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Nostalgia Kit</a></li>
-              <li><a href="#kitchen-comfort-kit" onClick={(e) => {e.preventDefault();document.getElementById('kitchen-comfort-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Kitchen &amp; Comfort Kit</a></li>
-              <li><a href="#holiday-traditions-kit" onClick={(e) => {e.preventDefault();document.getElementById('holiday-traditions-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Holiday Traditions Kit</a></li>
-              <li><a href="#serenity-video-suite" onClick={(e) => {e.preventDefault();document.getElementById('serenity-video-suite')?.scrollIntoView({ behavior: 'smooth' });}}>The Serenity Suite</a></li>
+              <li><a href="#heart-of-the-home-kit" onClick={(e) => {e.preventDefault();document.getElementById('heart-of-the-home-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Heart of the Home Kit</a></li>
+              <li><a href="#are-we-there-yet-kit" onClick={(e) => {e.preventDefault();document.getElementById('are-we-there-yet-kit')?.scrollIntoView({ behavior: 'smooth' });}}>"Are We There Yet?" Kit</a></li>
+              <li><a href="#heirloom-garden-kit" onClick={(e) => {e.preventDefault();document.getElementById('heirloom-garden-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Heirloom Garden Kit</a></li>
+              <li><a href="#makers-and-menders-kit" onClick={(e) => {e.preventDefault();document.getElementById('makers-and-menders-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Makers &amp; Menders Kit</a></li>
+              <li><a href="#bundle" onClick={(e) => {e.preventDefault();document.getElementById('bundle')?.scrollIntoView({ behavior: 'smooth' });}}>Complete Bundle</a></li>
             </ul>
           </div>
           <div className="footer-col">
