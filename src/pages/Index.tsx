@@ -508,12 +508,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* WHO IT'S FOR — moved down as social validation after products/bundle */}
+      {/* WHO IT'S FOR */}
       <section className="tcb-section" id="who">
         <div className="section-inner">
-          <div className="section-tag">Who it's for</div>
-          <h2 className="tcb-section-title">Built for the People<br />Who Show Up Every Day</h2>
-          <p className="section-sub">Whether you run engagement activities for dozens of residents or you're connecting with a loved one at home — these kits meet you where you are.</p>
+          <div className="section-tag">Who this is for</div>
+          <h2 className="tcb-section-title">You're Running on Empty.<br /><em>We Built This for You.</em></h2>
+          <p className="section-sub">Whether you're planning activities for an entire floor or just trying to get through a Sunday visit without the silence — The Comfort Bond™ meets you exactly where you are right now.</p>
           <div className="audience-grid">
             <div className="audience-card primary">
               <div className="audience-icon forest">
@@ -523,11 +523,11 @@ const Index = () => {
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#2d4a3e" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
               </div>
-              <div className="audience-who">Senior Living Professionals</div>
-              <h3>Activity Directors &amp; Enrichment Teams</h3>
-              <p className="audience-desc">You need programming that's meaningful, easy to facilitate, and ready to go without hours of prep. These kits deliver.</p>
+              <div className="audience-who">For Senior Living Professionals</div>
+              <h3>Stop Scrambling. Start Facilitating.</h3>
+              <p className="audience-desc">You became an Activity Director to make a difference — not to spend every Sunday night on Pinterest searching for something, anything, that isn't a children's coloring page. Walk in Monday morning with a full week of programming, printed and ready.</p>
               <ul className="audience-list">
-                {["Ready-to-print, no prep required", "Works for all cognitive levels — no wrong answers", "One kit = 6 different activities to rotate through", "One-time purchase — use it forever"].map((item, i) =>
+                {["Zero prep required — just print and play", "Adaptable for all cognitive levels", "6 distinct activities per kit to prevent burnout", "One-time purchase — use it forever"].map((item, i) =>
                   <li key={i}><span className="check forest"><CheckSvg /></span>{item}</li>
                 )}
               </ul>
@@ -538,11 +538,11 @@ const Index = () => {
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="#C67B5C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <div className="audience-who">Families &amp; In-Home Caregivers</div>
-              <h3>Caring for a Loved One at Home</h3>
-              <p className="audience-desc">Visits don't have to be silent or awkward. These kits give you a natural, joyful way to connect and create shared memories.</p>
+              <div className="audience-who">For Families &amp; In-Home Caregivers</div>
+              <h3>End the Awkward Silence.</h3>
+              <p className="audience-desc">You drive an hour to visit Mom. You sit down. And then... nothing. Small talk fades in two minutes, and you leave feeling like you failed. These kits give you something real to do together — prompts that unlock stories, and moments you'll actually remember.</p>
               <ul className="audience-list">
-                {["Spark warm conversation with prompts that work", "Designed to include everyone — even with memory loss", "Available instantly — no waiting for shipping", "Thoughtful gift idea for aging parents"].map((item, i) =>
+                {["Instantly break the ice with visual prompts", "Designed for connection, even with memory loss", "Available instantly — no waiting for shipping", "A meaningful gift for aging parents"].map((item, i) =>
                   <li key={i}><span className="check clay"><CheckSvg color="#C67B5C" /></span>{item}</li>
                 )}
               </ul>
