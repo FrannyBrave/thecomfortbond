@@ -67,7 +67,7 @@ const Index = () => {
                 See the 5 kits
                 <ArrowSvg />
               </a>
-              <a href="#bundle" className="btn-secondary">Get all 5 for $150.99</a>
+              <a href="#bundle" className="btn-secondary">Get all 5 for $137</a>
             </div>
             <div className="hero-trust">
               <div className="trust-badges">
@@ -345,18 +345,22 @@ const Index = () => {
         <div className="max-w-[1200px] mx-auto">
           <div className="section-tag">Best value — most Activity Directors choose this</div>
           <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
-            30+ Sessions. 5 Themes. Zero Prep.<br /><em className="italic" style={{ color: "var(--clay)" }}>Less than $5 per activity session.</em>
+            30+ Sessions. 5 Themes. Zero Prep.<br /><em className="italic" style={{ color: "var(--clay)" }}>Less than $4.60 per activity session.</em>
           </h2>
           <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[620px]" style={{ color: "var(--text-mid)" }}>
             Get all 5 kits in one download and cover your programming calendar for over a month. One purchase replaces 30+ hours of activity planning.
           </p>
 
-          <div className="bg-white rounded-2xl border border-[rgba(198,123,92,0.2)] overflow-hidden max-w-[900px] mx-auto mt-12">
+          <div className="bg-white rounded-2xl overflow-hidden max-w-[900px] mx-auto mt-12 relative" style={{ border: "2px solid var(--clay)", boxShadow: "0 8px 40px rgba(198,123,92,0.15)" }}>
+            {/* Premium tier badge */}
+            <div className="flex items-center justify-center gap-2 py-2.5 text-[11px] font-semibold tracking-[0.12em] uppercase text-white" style={{ background: "linear-gradient(90deg, #C67B5C 0%, #D4A574 50%, #E8C99A 100%)" }}>
+              <span>★</span> Premium Tier — Our Complete Engagement System <span>★</span>
+            </div>
             {/* Bundle Header */}
             <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center p-8 md:p-10" style={{ background: "var(--forest)" }}>
               <div>
-                <span className="inline-block text-[11px] font-medium tracking-[0.08em] uppercase text-white px-3.5 py-1.5 rounded-full mb-4" style={{ background: "var(--clay)" }}>
-                  The Complete Comfort Bundle
+                <span className="inline-block text-[11px] font-medium tracking-[0.08em] uppercase px-3.5 py-1.5 rounded-full mb-4" style={{ background: "linear-gradient(135deg, #E8C99A 0%, #D4A574 100%)", color: "var(--forest-dark)" }}>
+                  The Comfort Bond™ Complete Engagement System
                 </span>
                 <h3 className="font-serif text-[2rem] font-semibold text-white leading-[1.2] m-0">
                   All 5 Kits + The Serenity Suite<br /><em className="italic" style={{ color: "var(--sand)" }}>Your entire activity library — done.</em>
@@ -365,8 +369,8 @@ const Index = () => {
               </div>
               <div className="md:text-right">
                 <div className="text-sm text-white/70 line-through mb-1">$174.95 if bought separately</div>
-                <div className="font-serif text-5xl font-semibold leading-none" style={{ color: "var(--sand)" }}>$150.99</div>
-                <div className="text-xs mt-1 tracking-[0.05em]" style={{ color: "var(--sand)" }}>That's less than $5 per session</div>
+                <div className="font-serif text-5xl font-semibold leading-none" style={{ color: "var(--sand)" }}>$137</div>
+                <div className="text-xs mt-1 tracking-[0.05em]" style={{ color: "var(--sand)" }}>That's less than $4.60 per session</div>
               </div>
             </div>
 
@@ -434,11 +438,11 @@ const Index = () => {
                   className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
                   style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
                 >
-                  Get All 5 Kits + Free Serenity Suite
+                  Get the Complete Engagement System
                   <ArrowSvg />
                 </a>
                 <div className="flex flex-col gap-1">
-                  <div className="text-sm font-semibold" style={{ color: "var(--forest-dark)" }}>$150.99 one-time · Instant download</div>
+                  <div className="text-sm font-semibold" style={{ color: "var(--forest-dark)" }}>$137 one-time · All 5 kits + Serenity Suite included</div>
                   <div className="flex items-center gap-1.5 text-[12px]" style={{ color: "var(--text-light)" }}>
                     <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 3.5V7c0 2.8 2 5.3 5 6 3-0.7 5-3.2 5-6V3.5L7 1z" stroke="#7a8a7a" strokeWidth="1.2" /></svg>
                     PDF &amp; video download · No subscription · Use forever
@@ -459,8 +463,8 @@ const Index = () => {
           <div style={{ marginTop: "2.5rem", display: "flex", flexDirection: "column", gap: 0 }}>
             {[
               { q: "Will these work for residents with dementia or memory loss?", a: "Yes. Every activity is designed with cognitive accessibility in mind. There are no wrong answers — just warm conversations, familiar music, and prompts that meet each person where they are. Activity Directors tell us these kits spark engagement even in residents who are usually withdrawn." },
-              { q: "How many sessions can I get out of one kit?", a: "Each kit includes 6 different activity types (conversation cards, trivia, BINGO, word link, musical memory, and visual spark cards). Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. The Complete Bundle gives you 30+ sessions across all 5 themes." },
-              { q: "Is this a monthly subscription?", a: "No. All of our engagement kits and the Complete Comfort Bundle are one-time purchases. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to print and use forever." },
+              { q: "How many sessions can I get out of one kit?", a: "Each kit includes 6 different activity types (conversation cards, trivia, BINGO, word link, musical memory, and visual spark cards). Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. The Complete Engagement System gives you 30+ sessions across all 5 themes." },
+              { q: "Is this a monthly subscription?", a: "No. All of our engagement kits and The Comfort Bond™ Complete Engagement System are one-time purchases. There are no hidden fees or recurring charges. Once you buy, it's yours to print and use forever." },
               { q: "Can I print these for my whole floor?", a: 'Yes! The kits are specifically designed to be printer-friendly on standard 8.5" x 11" paper. Print as many copies as you need — BINGO cards, trivia sheets, conversation prompts — and hand them out directly to residents. One purchase covers your entire community.' },
               { q: "How quickly will I get access?", a: "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be running an activity with your group five minutes later. No waiting for shipping." }].
               map((item, i) =>
@@ -647,7 +651,7 @@ const Index = () => {
               Browse all 5 kits
               <ArrowSvg />
             </a>
-            <a href="#bundle" className="btn-secondary">Or get everything — $150.99</a>
+            <a href="#bundle" className="btn-secondary">Or get the Complete System — $137</a>
           </div>
         </div>
       </section>
