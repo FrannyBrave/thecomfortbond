@@ -556,22 +556,25 @@ const Index = () => {
         <div className="section-inner" style={{ padding: 0 }}>
           <div className="about-inner">
             <div>
-              <div className="about-tag">About the founder</div>
-              <h2 className="about-title">Created with care,<br />by someone who<br /><em>truly understands</em></h2>
+              <div className="about-tag">Our story</div>
+              <h2 className="about-title">You Shouldn't Have to<br />Spend Your Weekends<br />Planning <em>Monday's Activities.</em></h2>
+              <p className="text-[15px] font-light leading-[1.7] mt-4 mb-6" style={{ color: "rgba(255,255,255,0.6)", maxWidth: 520 }}>
+                Activity Directors do some of the most important work in healthcare. You deserve better tools than Pinterest and a prayer.
+              </p>
               <div className="about-body">
-                <p>Hi, I'm Francesca — the founder behind The Comfort Bond. I built this because I know how hard it can be to find activities that feel meaningful rather than just filling time. Every kit is crafted with intention — prompts that open doors, games that spark joy, and activities that meet people where they are, including those with memory challenges.</p>
-                <p>My mission is simple: to make genuine connection feel easy and accessible, for the professionals who dedicate their days to seniors, and for the families who love them. <a href="/resources" style={{ color: "var(--clay)", textDecoration: "underline", textUnderlineOffset: 3 }}>Read our free guides for activity directors →</a></p>
+                <p>I'm Francesca, Founder of The Comfort Bond™. When I looked closely at the resources available for senior care, I saw a broken system. Professionals like you are tasked with keeping our elders engaged, connected, and dignified — yet you are expected to do it by endlessly scrolling Google, printing out generic worksheets, and working off the clock. That is not a staffing problem; that is a systems problem.</p>
+                <p>So, I built a system to fix it. Every kit in The Comfort Bond™ is designed around one principle: you should be able to walk into a session with zero prep and facilitate something genuinely meaningful. No infantilizing crafts. No hours of prep. Just open the PDF, print what you need, and spark real connection. Every activity respects the life experience of your residents, because dignity isn't a feature — it's the foundation. <a href="/resources" style={{ color: "var(--clay)", textDecoration: "underline", textUnderlineOffset: 3 }}>Read our free guides for Activity Directors →</a></p>
               </div>
-              <div className="about-sig">— Francesca</div>
+              <div className="about-sig">— Francesca Djoufack, Founder of The Comfort Bond™</div>
             </div>
             <div className="about-visual">
               <div className="about-stat-card">
-                <div className="asc-num">5</div>
-                <div className="asc-label">Complete themed engagement kits, each with 6 activity types — ready to use today</div>
+                <div className="asc-num">5 min</div>
+                <div className="asc-label">From download to facilitating — zero prep required</div>
               </div>
               <div className="about-stat-card">
                 <div className="asc-num">30+</div>
-                <div className="asc-label">Activity sessions in the Complete Bundle — over a month of done-for-you programming</div>
+                <div className="asc-label">Ready-to-run sessions in the Complete Engagement System</div>
               </div>
             </div>
           </div>
