@@ -76,7 +76,7 @@ export const PromoBanner = () => {
 
           {/* Heading */}
           <span style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(20px, 2.5vw, 26px)", fontWeight: 600, color: "#fff", textAlign: "center", lineHeight: 1.2, position: "relative", zIndex: 1 }}>
-            Save 10% on <em style={{ fontStyle: "italic", color: "#E8C99A" }}>All Kits</em>
+            Save 10% on <em style={{ fontStyle: "italic", color: "#E8C99A" }}>Any Individual Kit</em>
           </span>
 
           {/* Code + copy row */}
@@ -110,6 +110,11 @@ export const PromoBanner = () => {
               )}
             </button>
           </div>
+
+          {/* Disclaimer */}
+          <span style={{ fontFamily: "var(--font-sans)", fontSize: 10, color: "rgba(255,255,255,0.35)", textAlign: "center", position: "relative", zIndex: 1, marginTop: -4 }}>
+            (Applies to single kits. Excludes the Complete Engagement System bundle.)
+          </span>
 
           {/* CTA */}
           <a
