@@ -581,36 +581,33 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FREE DOWNLOAD — safety net for non-buyers, moved to bottom of page */}
+      {/* FREE DOWNLOAD — safety net for non-buyers */}
       <section className="tcb-section" id="freebie" style={{ background: "var(--forest)", padding: "clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem)" }}>
         <div className="section-inner" style={{ maxWidth: 1100 }}>
           <div className="email-capture-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
             <div>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "rgba(232,201,154,0.15)", border: "1px solid rgba(232,201,154,0.25)", color: "var(--sand)", fontSize: 11, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase" as const, padding: "5px 12px", borderRadius: 100, marginBottom: "1rem" }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--clay)", display: "inline-block" }} />
-                Not ready to buy yet?
+                Free download
               </div>
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem, 2.5vw, 2.2rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "0.75rem" }}>
-                Try a free activity kit<br />
-                <em style={{ fontStyle: "italic", color: "var(--sand)" }}>before you commit</em>
+                Try The Comfort Bond™ with Your Group This Week —<br />
+                <em style={{ fontStyle: "italic", color: "var(--sand)" }}>For Free.</em>
               </h2>
-              <p style={{ fontSize: 15, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.65, marginBottom: "0.5rem" }}>
-                Download The Founder's Sampler — 16 pages of real activities from our kits — and see for yourself how your residents respond.
-              </p>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.45)", lineHeight: 1.5, marginBottom: "1rem" }}>
-                No email required. Just a free PDF, instantly.
+              <p style={{ fontSize: 15, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.65, marginBottom: "1rem" }}>
+                Download The Morning Routine Sampler. It is a complete, zero-prep 30-minute engagement session themed around coffee, sunrises, and the start of every day. See for yourself how easily these prompts spark memories and meaningful connection.
               </p>
             </div>
             <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--radius)", padding: "1.5rem 1.75rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
               <div>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", fontStyle: "italic", color: "var(--sand)", marginBottom: "0.25rem" }}>The Founder's Sampler</p>
-                <p style={{ fontSize: 12, color: "rgba(255,255,255,0.45)" }}>16 pages · 3 activity types · Free PDF</p>
+                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", fontStyle: "italic", color: "var(--sand)", marginBottom: "0.25rem" }}>The Morning Routine Sampler</p>
+                <p style={{ fontSize: 12, color: "rgba(255,255,255,0.45)" }}>Complete 30-min session · Zero prep · Free PDF</p>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 {[
-                  { emoji: "🎯", title: "Then vs. Now · Guess the Era", meta: "5 pages · 4 categories · Answer key included" },
-                  { emoji: "💬", title: "Discussion Circle Prompt Cards", meta: "5 pages · Home, school, music, travel & career" },
-                  { emoji: "🎬", title: "Sequential Storytelling Cards", meta: "5 pages · 4 story themes · Cut & laminate" }
+                  { emoji: "💬", title: "8 Open-Ended Conversation Cards", meta: "Coffee, sunrises & morning routines" },
+                  { emoji: "📸", title: "6 Vintage Visual Spark Cards", meta: "Nostalgic images to prompt stories & memories" },
+                  { emoji: "🔗", title: "1 Quick Word Link Game", meta: "Cognitive engagement — themed & ready to go" }
                 ].map((item, i) =>
                   <div key={i} style={{ background: "rgba(255,255,255,0.05)", borderRadius: 10, padding: "10px 14px", display: "flex", alignItems: "center", gap: 12 }}>
                     <span style={{ fontSize: 18, flexShrink: 0 }}>{item.emoji}</span>
@@ -622,9 +619,8 @@ const Index = () => {
                 )}
               </div>
               <a
-                href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
-                data-gumroad-overlay-checkout="true"
-                rel="noopener noreferrer nofollow"
+                href="/The-Comfort-Bond-Morning-Routine-Sampler.pdf"
+                download
                 style={{
                   background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
                   padding: "13px 24px", fontSize: 15, fontWeight: 500, fontFamily: "var(--font-sans)",
@@ -633,10 +629,10 @@ const Index = () => {
                   textDecoration: "none"
                 }}
               >
-                Download free sampler <ArrowSvg />
+                Download My Free Sampler <ArrowSvg />
               </a>
               <p style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", textAlign: "center", lineHeight: 1.5 }}>
-                Free via Gumroad · Instant PDF download
+                Free PDF · Instant download · No email required
               </p>
             </div>
           </div>
