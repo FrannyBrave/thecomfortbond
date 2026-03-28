@@ -411,7 +411,7 @@ const Index = () => {
                   <div className="relative flex-1">
                     <h4 className="font-serif text-[1.25rem] font-semibold text-white mb-2">The Serenity Suite Video Library</h4>
                     <p className="text-[13px] text-white/70 leading-[1.65] mb-3">
-                      10 cinematic, 8-minute relaxation and reminiscence videos — gentle rain, ocean waves, mountain sunrises, flowing waterfalls, and more. Sold separately for $150. Yours free when you get the bundle.
+                      10 cinematic, 8-minute relaxation and reminiscence videos — gentle rain, ocean waves, mountain sunrises, flowing waterfalls, and more. Designed to promote calm, reduce anxiety, and bring peaceful moments to any room.
                     </p>
                     <div className="flex items-center gap-3 flex-wrap">
                       {["10 Nature Scenes", "80+ Minutes", "Lifetime Access"].map((stat, i) => (
@@ -423,8 +423,8 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="relative flex-shrink-0 text-center bg-white/[0.06] border border-white/[0.12] rounded-[10px] px-6 py-5 w-full md:w-auto">
-                    <div className="font-serif text-[2.5rem] font-semibold leading-none mb-1" style={{ color: "var(--sand)" }}>$150</div>
-                    <div className="text-[11px] text-white/60 uppercase tracking-[0.08em] font-medium">value — yours FREE</div>
+                    <div className="font-serif text-[2rem] font-semibold leading-none tracking-[0.04em] italic" style={{ color: "var(--sand)" }}>Included</div>
+                    <div className="text-[11px] text-white/50 uppercase tracking-[0.08em] font-medium mt-1.5">Lifetime Access</div>
                   </div>
                 </div>
               </div>
