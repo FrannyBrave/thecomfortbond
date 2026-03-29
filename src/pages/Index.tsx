@@ -675,7 +675,7 @@ const Index = () => {
               Browse all 5 kits
               <ArrowSvg />
             </a>
-            <a href="#bundle" className="btn-secondary">Or get the Complete System — $137</a>
+            <a href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem" target="_blank" rel="noopener noreferrer" className="btn-secondary">Or get the Complete System — $137</a>
           </div>
         </div>
       </section>
