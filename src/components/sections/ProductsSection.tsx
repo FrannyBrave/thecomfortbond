@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, type MouseEvent } from "react";
 import roadTripImage from "@/assets/road-trip-kit.png";
 import { FullBundleDisplay } from "./FullBundleDisplay";
 import { RoadTripKitDisplay } from "./RoadTripKitDisplay";
@@ -98,6 +98,19 @@ export const ProductsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const openCheckoutInNewTab = (url: string) => {
+    const newWindow = window.open("about:blank", "_blank", "noopener,noreferrer");
+    if (newWindow) {
+      newWindow.location.href = url;
+    }
+  };
+
+  const handleCheckoutClick = (event: MouseEvent<HTMLAnchorElement>, url: string) => {
+    event.preventDefault();
+    event.stopPropagation();
+    openCheckoutInNewTab(url);
+  };
+
   return (
     <section id="products" className="section-padding pb-6 md:pb-8 lg:pb-10 bg-cream" ref={ref}>
       <div className="section-container">
@@ -185,6 +198,7 @@ export const ProductsSection = () => {
                   href={featuredProduct.checkoutUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(event) => handleCheckoutClick(event, featuredProduct.checkoutUrl)}
                   style={{
                     display: "inline-block",
                     textAlign: "center",
@@ -296,6 +310,7 @@ export const ProductsSection = () => {
                   href="https://thecomfortbond.gumroad.com/l/arewethereyetkit?wanted=true"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/arewethereyetkit?wanted=true")}
                   className=""
                   style={{
                     display: "inline-block",
@@ -401,6 +416,7 @@ export const ProductsSection = () => {
                   href="https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true")}
                   className=""
                   style={{
                     display: "inline-block",
@@ -512,6 +528,7 @@ export const ProductsSection = () => {
                   href="https://thecomfortbond.gumroad.com/l/heartofthehomekit?wanted=true"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/heartofthehomekit?wanted=true")}
                   className=""
                   style={{
                     display: "inline-block",
@@ -623,6 +640,7 @@ export const ProductsSection = () => {
                   href="https://thecomfortbond.gumroad.com/l/heirloomgardenkit?wanted=true"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/heirloomgardenkit?wanted=true")}
                   className=""
                   style={{
                     display: "inline-block",
@@ -735,6 +753,7 @@ export const ProductsSection = () => {
                 href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true")}
                 className=""
                 style={{
                   display: "block",
