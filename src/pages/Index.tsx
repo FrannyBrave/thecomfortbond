@@ -182,7 +182,7 @@ const Index = () => {
                 name: "The Nostalgia Kit",
                 theme: "1950S–1980S POP CULTURE & DAILY LIFE",
                 desc: "Take residents back to the golden age of drive-in movies, jukeboxes, and poodle skirts. Designed to spark joyful memories of 1950s–1980s pop culture and daily life.",
-                highlights: ["Drive-In Movies vs. Streaming — Then & Now debate cards", "Name That Jukebox Tune — 1950s–70s hits", "Poodle Skirts to Bell Bottoms — fashion flashback trivia"],
+                highlights: ["Drive-In Movies vs. Streaming — Then & Now debate cards", "Name That Jukebox Tune — 1950s–80s hits", "Poodle Skirts to Bell Bottoms — fashion flashback trivia"],
                 bestFor: "Mixed groups, all cognitive levels",
                 popular: true,
                 price: "$34.99",
