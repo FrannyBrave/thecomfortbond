@@ -124,8 +124,8 @@ export const PromoBanner = () => {
             onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
               e.preventDefault();
               e.stopPropagation();
-              const w = window.open("about:blank", "_blank", "noopener,noreferrer");
-              if (w) w.location.href = "https://thecomfortbond.gumroad.com/";
+              window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer");
+              
             }}
             style={{
               display: "inline-flex",
