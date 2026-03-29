@@ -34,7 +34,7 @@ const featuredProduct = {
   originalPrice: "$104",
   badge: "Best Value",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
+  "https://thecomfortbond.gumroad.com/l/comfortengagementsystem"
 };
 
 const products = [
@@ -46,7 +46,7 @@ const products = [
   description: "Hit the open road through decades of American travel memories, from Route 66 to family road trips. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$26",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/arewethereyetkit?wanted=true",
+  "https://thecomfortbond.gumroad.com/l/arewethereyetkit",
   image: roadTripImage
 },
 {
@@ -57,7 +57,7 @@ const products = [
   description: "A walk down memory lane from the 1950s through the 1990s, sparking stories, smiles, and sing-alongs. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$26",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true",
+  "https://thecomfortbond.gumroad.com/l/nostalgiakit",
   image: nostalgiaImage
 },
 {
@@ -68,7 +68,7 @@ const products = [
   description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$26",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/heartofthehomekit?wanted=true",
+  "https://thecomfortbond.gumroad.com/l/heartofthehomekit",
   image: kitchenImage
 },
 {
@@ -79,7 +79,7 @@ const products = [
   description: "Spanning holidays across the entire year, from New Year's to Christmas and everything in between. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$26",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/heirloomgardenkit?wanted=true",
+  "https://thecomfortbond.gumroad.com/l/heirloomgardenkit",
   image: holidayImage
 },
 {
@@ -307,10 +307,10 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://thecomfortbond.gumroad.com/l/arewethereyetkit?wanted=true"
+                  href="https://thecomfortbond.gumroad.com/l/arewethereyetkit"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/arewethereyetkit?wanted=true")}
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/arewethereyetkit")}
                   className=""
                   style={{
                     display: "inline-block",
@@ -413,10 +413,10 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true"
+                  href="https://thecomfortbond.gumroad.com/l/nostalgiakit"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true")}
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/nostalgiakit")}
                   className=""
                   style={{
                     display: "inline-block",
@@ -525,10 +525,10 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://thecomfortbond.gumroad.com/l/heartofthehomekit?wanted=true"
+                  href="https://thecomfortbond.gumroad.com/l/heartofthehomekit"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/heartofthehomekit?wanted=true")}
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/heartofthehomekit")}
                   className=""
                   style={{
                     display: "inline-block",
@@ -637,10 +637,10 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://thecomfortbond.gumroad.com/l/heirloomgardenkit?wanted=true"
+                  href="https://thecomfortbond.gumroad.com/l/heirloomgardenkit"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/heirloomgardenkit?wanted=true")}
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/heirloomgardenkit")}
                   className=""
                   style={{
                     display: "inline-block",
