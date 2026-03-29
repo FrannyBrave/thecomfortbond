@@ -36,9 +36,9 @@ export const CTASection = () => {
               asChild
             >
               <a
-                href="https://thecomfortbond.gumroad.com/l/fullbundle"
-                data-gumroad-overlay-checkout="true"
-                rel="noopener noreferrer nofollow"
+                href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Shop the Kits
               </a>
@@ -50,9 +50,9 @@ export const CTASection = () => {
               asChild
             >
               <a
-                href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
-                data-gumroad-overlay-checkout="true"
-                rel="noopener noreferrer nofollow"
+                href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Get the Free Sample
               </a>

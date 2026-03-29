@@ -178,9 +178,9 @@ export const HoneyPotSection = () => {
               </div>
 
               <a
-                href="https://thecomfortbond.gumroad.com/l/foundersampler?wanted=true"
-                data-gumroad-overlay-checkout="true"
-                rel="noopener noreferrer nofollow"
+                href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 className=""
                 style={{
                   display: "inline-block",
