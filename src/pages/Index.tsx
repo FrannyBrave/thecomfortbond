@@ -277,8 +277,8 @@ const Index = () => {
                   </div>
                   <a
                     href={kit.url}
-                    data-gumroad-overlay-checkout="true"
-                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-[13px] font-medium text-white no-underline whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5"
                     style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
                   >
@@ -432,9 +432,9 @@ const Index = () => {
               {/* Bundle CTA — action separated from price */}
               <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
                 <a
-                  href="https://thecomfortbond.gumroad.com/l/fullbundle"
-                  data-gumroad-overlay-checkout="true"
-                  rel="noopener noreferrer nofollow"
+                  href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
                   style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
                 >

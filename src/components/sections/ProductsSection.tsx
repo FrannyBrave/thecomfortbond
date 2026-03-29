@@ -34,7 +34,7 @@ const featuredProduct = {
   originalPrice: "$104",
   badge: "Best Value",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/fullbundle"
+  "https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
 };
 
 const products = [
@@ -46,7 +46,7 @@ const products = [
   description: "Hit the open road through decades of American travel memories, from Route 66 to family road trips. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$26",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true",
+  "https://thecomfortbond.gumroad.com/l/arewethereyetkit?wanted=true",
   image: roadTripImage
 },
 {
@@ -68,7 +68,7 @@ const products = [
   description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$26",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true",
+  "https://thecomfortbond.gumroad.com/l/heartofthehomekit?wanted=true",
   image: kitchenImage
 },
 {
@@ -79,7 +79,7 @@ const products = [
   description: "Spanning holidays across the entire year, from New Year's to Christmas and everything in between. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
   price: "$26",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true",
+  "https://thecomfortbond.gumroad.com/l/heirloomgardenkit?wanted=true",
   image: holidayImage
 },
 {
@@ -292,8 +292,9 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://thecomfortbond.gumroad.com/l/theroadtripkit?wanted=true"
-                  rel="noopener noreferrer nofollow"
+                  href="https://thecomfortbond.gumroad.com/l/arewethereyetkit?wanted=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className=""
                   style={{
                     display: "inline-block",
@@ -397,7 +398,8 @@ export const ProductsSection = () => {
 
                 <a
                   href="https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true"
-                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className=""
                   style={{
                     display: "inline-block",
@@ -506,8 +508,9 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://thecomfortbond.gumroad.com/l/kitchencomfortkit?wanted=true"
-                  rel="noopener noreferrer nofollow"
+                  href="https://thecomfortbond.gumroad.com/l/heartofthehomekit?wanted=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className=""
                   style={{
                     display: "inline-block",
@@ -616,8 +619,9 @@ export const ProductsSection = () => {
                 </div>
 
                 <a
-                  href="https://thecomfortbond.gumroad.com/l/holidaytraditionskit?wanted=true"
-                  rel="noopener noreferrer nofollow"
+                  href="https://thecomfortbond.gumroad.com/l/heirloomgardenkit?wanted=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className=""
                   style={{
                     display: "inline-block",
@@ -728,7 +732,8 @@ export const ProductsSection = () => {
 
               <a
                 href="https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true"
-                rel="noopener noreferrer nofollow"
+                target="_blank"
+                rel="noopener noreferrer"
                 className=""
                 style={{
                   display: "block",
