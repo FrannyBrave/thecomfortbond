@@ -84,11 +84,11 @@ const Index = () => {
                 <ArrowSvg />
               </a>
               <a
-                href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
+                href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
-                onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true")}
+                onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem")}
               >
                 Get all 5 for $137
               </a>
@@ -189,7 +189,7 @@ const Index = () => {
                 bestFor: "Mixed groups, all cognitive levels",
                 popular: true,
                 price: "$34.99",
-                url: "https://thecomfortbond.gumroad.com/l/nostalgiakit?wanted=true"
+                url: "https://thecomfortbond.gumroad.com/l/nostalgiakit"
               },
               {
                 id: "heart-of-the-home-kit",
@@ -201,7 +201,7 @@ const Index = () => {
                 bestFor: "Women's groups, sensory engagement",
                 popular: false,
                 price: "$34.99",
-                url: "https://thecomfortbond.gumroad.com/l/heartofthehomekit?wanted=true"
+                url: "https://thecomfortbond.gumroad.com/l/heartofthehomekit"
               },
               {
                 id: "are-we-there-yet-kit",
@@ -213,7 +213,7 @@ const Index = () => {
                 bestFor: "High-energy sessions, mixed groups",
                 popular: false,
                 price: "$34.99",
-                url: "https://thecomfortbond.gumroad.com/l/arewethereyetkit?wanted=true"
+                url: "https://thecomfortbond.gumroad.com/l/arewethereyetkit"
               },
               {
                 id: "heirloom-garden-kit",
@@ -225,7 +225,7 @@ const Index = () => {
                 bestFor: "Spring/summer programming, garden clubs",
                 popular: false,
                 price: "$34.99",
-                url: "https://thecomfortbond.gumroad.com/l/heirloomgardenkit?wanted=true"
+                url: "https://thecomfortbond.gumroad.com/l/heirloomgardenkit"
               },
               {
                 id: "makers-and-menders-kit",
@@ -237,7 +237,7 @@ const Index = () => {
                 bestFor: "Co-ed groups, bridging demographics",
                 popular: false,
                 price: "$34.99",
-                url: "https://thecomfortbond.gumroad.com/l/makersandmenderskit?wanted=true"
+                url: "https://thecomfortbond.gumroad.com/l/makersandmenderskit"
               }
             ].map((kit, i) =>
               <div
@@ -457,10 +457,10 @@ const Index = () => {
               {/* Bundle CTA — action separated from price */}
               <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
                 <a
-                  href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
+                  href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true")}
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem")}
                   className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
                   style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
                 >
