@@ -619,8 +619,9 @@ const Index = () => {
                 )}
               </div>
               <a
-                href="/The-Comfort-Bond-Morning-Routine-Sampler.pdf"
-                download
+                href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
                   padding: "13px 24px", fontSize: 15, fontWeight: 500, fontFamily: "var(--font-sans)",

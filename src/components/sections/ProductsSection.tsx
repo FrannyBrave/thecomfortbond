@@ -183,7 +183,8 @@ export const ProductsSection = () => {
 
                 <a
                   href={featuredProduct.checkoutUrl}
-                  className=""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     display: "inline-block",
                     textAlign: "center",
