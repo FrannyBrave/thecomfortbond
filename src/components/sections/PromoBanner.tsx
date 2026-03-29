@@ -121,6 +121,12 @@ export const PromoBanner = () => {
             href="https://thecomfortbond.gumroad.com/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+              e.preventDefault();
+              e.stopPropagation();
+              const w = window.open("about:blank", "_blank", "noopener,noreferrer");
+              if (w) w.location.href = "https://thecomfortbond.gumroad.com/";
+            }}
             style={{
               display: "inline-flex",
               alignItems: "center",

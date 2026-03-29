@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, type MouseEvent } from "react";
 import { Button } from "@/components/ui/button";
 
 export const CTASection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const handleCheckoutClick = (event: MouseEvent<HTMLAnchorElement>, url: string) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const newWindow = window.open("about:blank", "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.location.href = url;
+  };
 
   return (
     <section className="section-padding relative overflow-hidden" ref={ref}>
@@ -39,6 +46,7 @@ export const CTASection = () => {
                 href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => handleCheckoutClick(e, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true")}
               >
                 Shop the Kits
               </a>
@@ -53,6 +61,7 @@ export const CTASection = () => {
                 href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => handleCheckoutClick(e, "https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true")}
               >
                 Get the Free Sample
               </a>

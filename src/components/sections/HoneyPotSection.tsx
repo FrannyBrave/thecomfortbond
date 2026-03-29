@@ -181,7 +181,6 @@ export const HoneyPotSection = () => {
                 href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=""
                 style={{
                   display: "inline-block",
                   textAlign: "center",
@@ -197,6 +196,12 @@ export const HoneyPotSection = () => {
                   transition: "all 0.3s ease",
                   boxShadow: "0 4px 14px rgba(193,113,79,0.3)",
                   textDecoration: "none",
+                }}
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  const w = window.open("about:blank", "_blank", "noopener,noreferrer");
+                  if (w) w.location.href = "https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true";
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-2px)";
