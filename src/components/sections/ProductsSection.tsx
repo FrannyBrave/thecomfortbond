@@ -99,10 +99,7 @@ export const ProductsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const openCheckoutInNewTab = (url: string) => {
-    const newWindow = window.open("about:blank", "_blank", "noopener,noreferrer");
-    if (newWindow) {
-      newWindow.location.href = url;
-    }
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   const handleCheckoutClick = (event: MouseEvent<HTMLAnchorElement>, url: string) => {
