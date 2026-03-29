@@ -26,6 +26,22 @@ const StarSvg = ({ fill }: {fill: string;}) =>
 
 const Index = () => {
 
+  const openCheckoutInNewTab = (url: string) => {
+    const newWindow = window.open("about:blank", "_blank", "noopener,noreferrer");
+    if (newWindow) {
+      newWindow.location.href = url;
+    }
+  };
+
+  const handleCheckoutClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    url: string,
+  ) => {
+    event.preventDefault();
+    event.stopPropagation();
+    openCheckoutInNewTab(url);
+  };
+
   return (
     <div>
       <a href="#main" className="skip-nav">Skip to main content</a>
@@ -67,7 +83,15 @@ const Index = () => {
                 See the 5 kits
                 <ArrowSvg />
               </a>
-              <a href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true" target="_blank" rel="noopener noreferrer" className="btn-secondary">Get all 5 for $137</a>
+              <a
+                href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+                onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true")}
+              >
+                Get all 5 for $137
+              </a>
             </div>
             <div className="hero-trust">
               <div className="trust-badges">
@@ -279,6 +303,7 @@ const Index = () => {
                     href={kit.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(event) => handleCheckoutClick(event, kit.url)}
                     className="inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-[13px] font-medium text-white no-underline whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5"
                     style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
                   >
@@ -435,6 +460,7 @@ const Index = () => {
                   href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true")}
                   className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
                   style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
                 >
@@ -622,6 +648,7 @@ const Index = () => {
                 href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true")}
                 style={{
                   background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
                   padding: "13px 24px", fontSize: 15, fontWeight: 500, fontFamily: "var(--font-sans)",
