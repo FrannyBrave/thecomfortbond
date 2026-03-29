@@ -10,8 +10,8 @@ export const CTASection = () => {
   const handleCheckoutClick = (event: MouseEvent<HTMLAnchorElement>, url: string) => {
     event.preventDefault();
     event.stopPropagation();
-    const newWindow = window.open("about:blank", "_blank", "noopener,noreferrer");
-    if (newWindow) newWindow.location.href = url;
+    window.open(url, "_blank", "noopener,noreferrer");
+    
   };
 
   return (

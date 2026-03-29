@@ -80,7 +80,7 @@ export const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button variant="cta" size="lg" onClick={() => { setTimeout(() => { const w = window.open("about:blank", "_blank"); if (w) w.location.href = "https://thecomfortbond.gumroad.com/"; }, 0); }}>
+            <Button variant="cta" size="lg" onClick={() => { setTimeout(() => { window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer");  }, 0); }}>
               Shop Now
             </Button>
           </div>
@@ -137,7 +137,7 @@ export const Navigation = () => {
                 </button>
               ))}
               <div className="pt-2 px-2">
-                <Button variant="cta" size="lg" className="w-full" onClick={() => { setIsMobileMenuOpen(false); setTimeout(() => { const w = window.open("about:blank", "_blank"); if (w) w.location.href = "https://thecomfortbond.gumroad.com/"; }, 0); }}>
+                <Button variant="cta" size="lg" className="w-full" onClick={() => { setIsMobileMenuOpen(false); setTimeout(() => { window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer");  }, 0); }}>
                   Shop Now
                 </Button>
               </div>
