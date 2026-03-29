@@ -27,10 +27,7 @@ const StarSvg = ({ fill }: {fill: string;}) =>
 const Index = () => {
 
   const openCheckoutInNewTab = (url: string) => {
-    const newWindow = window.open("about:blank", "_blank", "noopener,noreferrer");
-    if (newWindow) {
-      newWindow.location.href = url;
-    }
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   const handleCheckoutClick = (
