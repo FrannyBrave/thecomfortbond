@@ -1,7 +1,6 @@
-import { useState } from "react";
 import logoImg from "@/assets/logo.png";
 import { CookieConsent } from "@/components/CookieConsent";
-import { PromoBanner } from "@/components/sections/PromoBanner";
+
 
 const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
 <svg viewBox="0 0 10 10" fill="none">
@@ -22,26 +21,15 @@ const StarSvg = ({ fill }: {fill: string;}) =>
     <polygon points="7,1 9,5.5 14,6 10.5,9.5 11.5,14 7,11.5 2.5,14 3.5,9.5 0,6 5,5.5" fill={fill} />
   </svg>;
 
-const KITS_FOR_PICKER = [
-  { id: "nostalgia", icon: "📻", name: "The Nostalgia Kit" },
-  { id: "heart-of-home", icon: "🍞", name: "The Heart of the Home Kit" },
-  { id: "are-we-there-yet", icon: "🚗", name: 'The "Are We There Yet?" Kit' },
-  { id: "heirloom-garden", icon: "🌻", name: "The Heirloom Garden Kit" },
-  { id: "makers-menders", icon: "🔧", name: "The Makers & Menders Kit" },
+const BUNDLE_KITS = [
+  { icon: "📻", name: "The Nostalgia Kit" },
+  { icon: "🍞", name: "The Heart of the Home Kit" },
+  { icon: "🚗", name: 'The "Are We There Yet?" Kit' },
+  { icon: "🌻", name: "The Heirloom Garden Kit" },
+  { icon: "🔧", name: "The Makers & Menders Kit" },
 ];
 
 const Index = () => {
-  const [selectedKits, setSelectedKits] = useState<string[]>([]);
-
-  const toggleKit = (id: string) => {
-    setSelectedKits(prev =>
-      prev.includes(id)
-        ? prev.filter(k => k !== id)
-        : prev.length < 3
-          ? [...prev, id]
-          : prev
-    );
-  };
 
   const openCheckoutInNewTab = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
@@ -59,6 +47,15 @@ const Index = () => {
   return (
     <div>
       <a href="#main" className="skip-nav">Skip to main content</a>
+
+      {/* GLOBAL ANNOUNCEMENT BANNER */}
+      <div className="text-center py-2.5 px-4" style={{ background: "var(--forest-dark)", color: "var(--sand)", fontSize: 13, fontFamily: "var(--font-sans)", letterSpacing: "0.02em" }}>
+        <span className="font-medium">Build Your Own Library:</span>
+        {" "}Get 10% off any order of 3 or more kits. Use code{" "}
+        <span className="font-bold tracking-wider" style={{ color: "#fff" }}>COMFORT10</span>
+        {" "}at checkout.
+      </div>
+
       {/* NAV */}
       <header>
         <nav className="tcb-nav">
@@ -152,9 +149,7 @@ const Index = () => {
       </div>
 
 
-      {/* PRODUCTS — moved up, first thing after trusted bar */}
-      <PromoBanner />
-
+      {/* PRODUCTS */}
       <section id="products" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--sand-pale)", paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="section-tag">The full collection</div>
@@ -323,96 +318,15 @@ const Index = () => {
       {/* BUNDLE OFFERS */}
       <section id="bundles" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--clay-pale)" }}>
         <div className="max-w-[1200px] mx-auto">
-          <div className="section-tag">Save when you bundle</div>
+          <div className="section-tag">Best value</div>
           <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
-            More Kits, More Sessions,<br /><em className="italic" style={{ color: "var(--clay)" }}>Better Price Per Activity.</em>
+            All 5 Kits. 30+ Sessions.<br /><em className="italic" style={{ color: "var(--clay)" }}>One price. Zero prep.</em>
           </h2>
           <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[620px]" style={{ color: "var(--text-mid)" }}>
-            Each kit gives you 6+ sessions. Bundle them together and cover your programming calendar for weeks — at a fraction of the individual price.
+            Get every themed kit in one download and cover your programming calendar for over a month. Or mix and match individual kits — use code <strong style={{ color: "var(--forest-dark)" }}>COMFORT10</strong> at checkout to save 10% on any order of 3 or more.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12">
-
-            {/* --- BUILD YOUR OWN: ANY 3 KITS --- */}
-            <div className="bg-white rounded-2xl border border-[rgba(45,74,62,0.12)] overflow-hidden flex flex-col">
-              <div className="p-6 md:p-8" style={{ background: "var(--forest)", color: "#fff" }}>
-                <div className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-3" style={{ color: "var(--sand)" }}>
-                  Build Your Own Bundle
-                </div>
-                <h3 className="font-serif text-[1.6rem] font-semibold leading-[1.2] m-0 text-white">
-                  Pick Any 3 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$98</em>
-                </h3>
-                <div className="text-sm text-white/60 mt-2">
-                  <span className="line-through">$104.97 individually</span>
-                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$7</span>
-                </div>
-              </div>
-
-              <div className="p-6 md:p-8 flex-1 flex flex-col">
-                <div className="text-[10px] tracking-[0.1em] uppercase font-medium mb-4" style={{ color: "var(--text-light)" }}>
-                  Select 3 kits ({selectedKits.length}/3)
-                </div>
-                <div className="flex flex-col gap-2 mb-6">
-                  {KITS_FOR_PICKER.map(kit => {
-                    const isSelected = selectedKits.includes(kit.id);
-                    const isDisabled = !isSelected && selectedKits.length >= 3;
-                    return (
-                      <button
-                        key={kit.id}
-                        onClick={() => toggleKit(kit.id)}
-                        disabled={isDisabled}
-                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-left text-sm transition-all duration-150 border"
-                        style={{
-                          background: isSelected ? "rgba(198,123,92,0.08)" : "var(--sand-pale)",
-                          borderColor: isSelected ? "var(--clay)" : "transparent",
-                          color: isDisabled ? "var(--text-light)" : "var(--text-dark)",
-                          opacity: isDisabled ? 0.5 : 1,
-                          cursor: isDisabled ? "not-allowed" : "pointer",
-                          fontFamily: "var(--font-sans)",
-                        }}
-                      >
-                        <span className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 text-xs border transition-all duration-150"
-                          style={{
-                            background: isSelected ? "var(--clay)" : "transparent",
-                            borderColor: isSelected ? "var(--clay)" : "var(--border)",
-                            color: isSelected ? "#fff" : "transparent",
-                          }}
-                        >
-                          {isSelected && "✓"}
-                        </span>
-                        <span className="text-lg">{kit.icon}</span>
-                        <span className="font-medium">{kit.name}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <div className="mt-auto">
-                  <a
-                    href={selectedKits.length === 3 ? "https://thecomfortbond.gumroad.com/l/customtriobundle" : undefined}
-                    target={selectedKits.length === 3 ? "_blank" : undefined}
-                    rel={selectedKits.length === 3 ? "noopener noreferrer" : undefined}
-                    onClick={(e) => { if (selectedKits.length < 3) e.preventDefault(); }}
-                    className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-medium text-white no-underline transition-all duration-200"
-                    style={{
-                      background: selectedKits.length === 3 ? "var(--clay)" : "var(--text-light)",
-                      cursor: selectedKits.length === 3 ? "pointer" : "not-allowed",
-                      fontFamily: "var(--font-sans)",
-                    }}
-                  >
-                    {selectedKits.length === 3
-                      ? <>Get My 3 Kits — $98 <ArrowSvg /></>
-                      : `Select ${3 - selectedKits.length} more kit${3 - selectedKits.length !== 1 ? 's' : ''}`
-                    }
-                  </a>
-                  <p className="text-[11px] text-center mt-2" style={{ color: "var(--text-light)" }}>
-                    Specify your 3 chosen kits at checkout · Instant PDF download
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* --- COMPLETE ENGAGEMENT SYSTEM --- */}
+          <div className="max-w-[580px] mx-auto mt-12">
             <div className="rounded-2xl overflow-hidden flex flex-col relative" style={{ border: "2px solid var(--clay)", boxShadow: "0 8px 40px rgba(198,123,92,0.12)" }}>
               {/* Premium badge */}
               <div className="flex items-center justify-center gap-2 py-2 text-[10px] font-semibold tracking-[0.12em] uppercase text-white" style={{ background: "linear-gradient(90deg, #C67B5C 0%, #D4A574 50%, #E8C99A 100%)" }}>
@@ -437,8 +351,8 @@ const Index = () => {
                   Everything included
                 </div>
                 <div className="flex flex-col gap-2 mb-6">
-                  {KITS_FOR_PICKER.map(kit => (
-                    <div key={kit.id} className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm" style={{ background: "var(--sand-pale)", color: "var(--text-dark)" }}>
+                  {BUNDLE_KITS.map((kit, i) => (
+                    <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm" style={{ background: "var(--sand-pale)", color: "var(--text-dark)" }}>
                       <span className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 text-xs text-white" style={{ background: "var(--forest)" }}>✓</span>
                       <span className="text-lg">{kit.icon}</span>
                       <span className="font-medium" style={{ fontFamily: "var(--font-sans)" }}>{kit.name}</span>
@@ -470,7 +384,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -742,7 +655,6 @@ const Index = () => {
               <li><a href="#are-we-there-yet-kit" onClick={(e) => {e.preventDefault();document.getElementById('are-we-there-yet-kit')?.scrollIntoView({ behavior: 'smooth' });}}>"Are We There Yet?" Kit</a></li>
               <li><a href="#heirloom-garden-kit" onClick={(e) => {e.preventDefault();document.getElementById('heirloom-garden-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Heirloom Garden Kit</a></li>
               <li><a href="#makers-and-menders-kit" onClick={(e) => {e.preventDefault();document.getElementById('makers-and-menders-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Makers &amp; Menders Kit</a></li>
-              <li><a href="#bundles" onClick={(e) => {e.preventDefault();document.getElementById('bundles')?.scrollIntoView({ behavior: 'smooth' });}}>Any 3 Kits — $98</a></li>
               <li><a href="#bundles" onClick={(e) => {e.preventDefault();document.getElementById('bundles')?.scrollIntoView({ behavior: 'smooth' });}}>All 5 Kits — $150.99</a></li>
             </ul>
           </div>
