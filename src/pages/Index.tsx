@@ -389,7 +389,7 @@ const Index = () => {
 
                 <div className="mt-auto">
                   <a
-                    href={selectedKits.length === 3 ? "https://thecomfortbond.gumroad.com/l/anythreekits?wanted=true" : undefined}
+                    href={selectedKits.length === 3 ? "https://thecomfortbond.gumroad.com/l/customtriobundle" : undefined}
                     target={selectedKits.length === 3 ? "_blank" : undefined}
                     rel={selectedKits.length === 3 ? "noopener noreferrer" : undefined}
                     onClick={(e) => { if (selectedKits.length < 3) e.preventDefault(); }}
