@@ -456,7 +456,7 @@ const Index = () => {
 
                 <div className="mt-auto">
                   <a
-                    href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
+                    href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
