@@ -28,7 +28,8 @@ export const FooterSection = () => {
     { label: '"Are We There Yet?" Kit', id: "are-we-there-yet-kit" },
     { label: "Heirloom Garden Kit", id: "heirloom-garden-kit" },
     { label: "Makers & Menders Kit", id: "makers-and-menders-kit" },
-    { label: "Complete Engagement System", id: "bundle" },
+    { label: "Any 3 Kits — $98", id: "bundles" },
+    { label: "All 5 Kits — $150.99", id: "bundles" },
   ];
 
   return (

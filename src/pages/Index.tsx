@@ -1,3 +1,4 @@
+import { useState } from "react";
 import logoImg from "@/assets/logo.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { PromoBanner } from "@/components/sections/PromoBanner";
@@ -6,7 +7,6 @@ const CheckSvg = ({ color = "#2d4a3e" }: {color?: string;}) =>
 <svg viewBox="0 0 10 10" fill="none">
     <path d="M2 5l2.5 2.5 3.5-4" stroke={color} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
   </svg>;
-
 
 import React from "react";
 
@@ -17,14 +17,31 @@ const ArrowSvg = React.forwardRef<SVGSVGElement, {color?: string;}>(({ color = "
 );
 ArrowSvg.displayName = "ArrowSvg";
 
-
 const StarSvg = ({ fill }: {fill: string;}) =>
 <svg width="18" height="18" viewBox="0 0 14 14">
     <polygon points="7,1 9,5.5 14,6 10.5,9.5 11.5,14 7,11.5 2.5,14 3.5,9.5 0,6 5,5.5" fill={fill} />
   </svg>;
 
+const KITS_FOR_PICKER = [
+  { id: "nostalgia", icon: "📻", name: "The Nostalgia Kit" },
+  { id: "heart-of-home", icon: "🍞", name: "The Heart of the Home Kit" },
+  { id: "are-we-there-yet", icon: "🚗", name: 'The "Are We There Yet?" Kit' },
+  { id: "heirloom-garden", icon: "🌻", name: "The Heirloom Garden Kit" },
+  { id: "makers-menders", icon: "🔧", name: "The Makers & Menders Kit" },
+];
 
 const Index = () => {
+  const [selectedKits, setSelectedKits] = useState<string[]>([]);
+
+  const toggleKit = (id: string) => {
+    setSelectedKits(prev =>
+      prev.includes(id)
+        ? prev.filter(k => k !== id)
+        : prev.length < 3
+          ? [...prev, id]
+          : prev
+    );
+  };
 
   const openCheckoutInNewTab = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
@@ -54,9 +71,8 @@ const Index = () => {
           </a>
           <ul className="nav-links">
             <li><a href="#products">Engagement Kits</a></li>
+            <li><a href="#bundles">Bundles</a></li>
             <li><a href="#who">Who It's For</a></li>
-            <li><a href="#bundle">Pricing</a></li>
-            
             <li><a href="/resources">Resources</a></li>
             <li><a href="#products" className="nav-cta">Shop Now</a></li>
           </ul>
@@ -80,15 +96,7 @@ const Index = () => {
                 See the 5 kits
                 <ArrowSvg />
               </a>
-              <a
-                href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-                onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem")}
-              >
-                Get all 5 for $137
-              </a>
+              <a href="#bundles" className="btn-secondary">Save with bundles</a>
             </div>
             <div className="hero-trust">
               <div className="trust-badges">
@@ -300,7 +308,6 @@ const Index = () => {
                     href={kit.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(event) => handleCheckoutClick(event, kit.url)}
                     className="inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-[13px] font-medium text-white no-underline whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5"
                     style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
                   >
@@ -309,6 +316,161 @@ const Index = () => {
                 </div>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* BUNDLE OFFERS */}
+      <section id="bundles" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--clay-pale)" }}>
+        <div className="max-w-[1200px] mx-auto">
+          <div className="section-tag">Save when you bundle</div>
+          <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
+            More Kits, More Sessions,<br /><em className="italic" style={{ color: "var(--clay)" }}>Better Price Per Activity.</em>
+          </h2>
+          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[620px]" style={{ color: "var(--text-mid)" }}>
+            Each kit gives you 6+ sessions. Bundle them together and cover your programming calendar for weeks — at a fraction of the individual price.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12">
+
+            {/* --- BUILD YOUR OWN: ANY 3 KITS --- */}
+            <div className="bg-white rounded-2xl border border-[rgba(45,74,62,0.12)] overflow-hidden flex flex-col">
+              <div className="p-6 md:p-8" style={{ background: "var(--forest)", color: "#fff" }}>
+                <div className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-3" style={{ color: "var(--sand)" }}>
+                  Build Your Own Bundle
+                </div>
+                <h3 className="font-serif text-[1.6rem] font-semibold leading-[1.2] m-0 text-white">
+                  Pick Any 3 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$98</em>
+                </h3>
+                <div className="text-sm text-white/60 mt-2">
+                  <span className="line-through">$104.97 individually</span>
+                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$7</span>
+                </div>
+              </div>
+
+              <div className="p-6 md:p-8 flex-1 flex flex-col">
+                <div className="text-[10px] tracking-[0.1em] uppercase font-medium mb-4" style={{ color: "var(--text-light)" }}>
+                  Select 3 kits ({selectedKits.length}/3)
+                </div>
+                <div className="flex flex-col gap-2 mb-6">
+                  {KITS_FOR_PICKER.map(kit => {
+                    const isSelected = selectedKits.includes(kit.id);
+                    const isDisabled = !isSelected && selectedKits.length >= 3;
+                    return (
+                      <button
+                        key={kit.id}
+                        onClick={() => toggleKit(kit.id)}
+                        disabled={isDisabled}
+                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-left text-sm transition-all duration-150 border"
+                        style={{
+                          background: isSelected ? "rgba(198,123,92,0.08)" : "var(--sand-pale)",
+                          borderColor: isSelected ? "var(--clay)" : "transparent",
+                          color: isDisabled ? "var(--text-light)" : "var(--text-dark)",
+                          opacity: isDisabled ? 0.5 : 1,
+                          cursor: isDisabled ? "not-allowed" : "pointer",
+                          fontFamily: "var(--font-sans)",
+                        }}
+                      >
+                        <span className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 text-xs border transition-all duration-150"
+                          style={{
+                            background: isSelected ? "var(--clay)" : "transparent",
+                            borderColor: isSelected ? "var(--clay)" : "var(--border)",
+                            color: isSelected ? "#fff" : "transparent",
+                          }}
+                        >
+                          {isSelected && "✓"}
+                        </span>
+                        <span className="text-lg">{kit.icon}</span>
+                        <span className="font-medium">{kit.name}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="mt-auto">
+                  <a
+                    href={selectedKits.length === 3 ? "https://thecomfortbond.gumroad.com/l/anythreekits?wanted=true" : undefined}
+                    target={selectedKits.length === 3 ? "_blank" : undefined}
+                    rel={selectedKits.length === 3 ? "noopener noreferrer" : undefined}
+                    onClick={(e) => { if (selectedKits.length < 3) e.preventDefault(); }}
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-medium text-white no-underline transition-all duration-200"
+                    style={{
+                      background: selectedKits.length === 3 ? "var(--clay)" : "var(--text-light)",
+                      cursor: selectedKits.length === 3 ? "pointer" : "not-allowed",
+                      fontFamily: "var(--font-sans)",
+                    }}
+                  >
+                    {selectedKits.length === 3
+                      ? <>Get My 3 Kits — $98 <ArrowSvg /></>
+                      : `Select ${3 - selectedKits.length} more kit${3 - selectedKits.length !== 1 ? 's' : ''}`
+                    }
+                  </a>
+                  <p className="text-[11px] text-center mt-2" style={{ color: "var(--text-light)" }}>
+                    Specify your 3 chosen kits at checkout · Instant PDF download
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* --- COMPLETE ENGAGEMENT SYSTEM --- */}
+            <div className="rounded-2xl overflow-hidden flex flex-col relative" style={{ border: "2px solid var(--clay)", boxShadow: "0 8px 40px rgba(198,123,92,0.12)" }}>
+              {/* Premium badge */}
+              <div className="flex items-center justify-center gap-2 py-2 text-[10px] font-semibold tracking-[0.12em] uppercase text-white" style={{ background: "linear-gradient(90deg, #C67B5C 0%, #D4A574 50%, #E8C99A 100%)" }}>
+                <span>★</span> Best Value — Most Activity Directors Choose This <span>★</span>
+              </div>
+
+              <div className="p-6 md:p-8" style={{ background: "var(--forest)", color: "#fff" }}>
+                <div className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-3" style={{ color: "var(--sand)" }}>
+                  The Comfort Bond™ Complete Engagement System
+                </div>
+                <h3 className="font-serif text-[1.6rem] font-semibold leading-[1.2] m-0 text-white">
+                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$150.99</em>
+                </h3>
+                <div className="text-sm text-white/60 mt-2">
+                  <span className="line-through">$174.95 individually</span>
+                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$24</span>
+                </div>
+              </div>
+
+              <div className="p-6 md:p-8 bg-white flex-1 flex flex-col">
+                <div className="text-[10px] tracking-[0.1em] uppercase font-medium mb-4" style={{ color: "var(--text-light)" }}>
+                  Everything included
+                </div>
+                <div className="flex flex-col gap-2 mb-6">
+                  {KITS_FOR_PICKER.map(kit => (
+                    <div key={kit.id} className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm" style={{ background: "var(--sand-pale)", color: "var(--text-dark)" }}>
+                      <span className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 text-xs text-white" style={{ background: "var(--forest)" }}>✓</span>
+                      <span className="text-lg">{kit.icon}</span>
+                      <span className="font-medium" style={{ fontFamily: "var(--font-sans)" }}>{kit.name}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Per-session math */}
+                <div className="flex items-center gap-2 rounded-xl px-4 py-3 mb-6" style={{ background: "rgba(45,74,62,0.05)" }}>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 3.5V7c0 2.8 2 5.3 5 6 3-0.7 5-3.2 5-6V3.5L7 1z" stroke="var(--forest)" strokeWidth="1.2" /></svg>
+                  <span className="text-[13px] font-medium" style={{ color: "var(--forest)" }}>
+                    30+ sessions · Less than $5 each · Covers a full month of programming
+                  </span>
+                </div>
+
+                <div className="mt-auto">
+                  <a
+                    href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
+                    style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
+                  >
+                    Get All 5 Kits — $150.99 <ArrowSvg />
+                  </a>
+                  <p className="text-[11px] text-center mt-2" style={{ color: "var(--text-light)" }}>
+                    One-time purchase · Instant PDF download · Use forever
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -350,7 +512,7 @@ const Index = () => {
           <div className="mt-8 flex flex-wrap justify-center gap-8 md:gap-16">
             {[
               { num: "30+", label: "Hours of planning replaced per month" },
-              { num: "<$5", label: "Per activity session with the bundle" },
+              { num: "<$6", label: "Per activity session per kit" },
               { num: "5 min", label: "From download to facilitating" }
             ].map((stat, i) =>
               <div key={i} className="text-center">
@@ -358,121 +520,6 @@ const Index = () => {
                 <div className="text-[12px] mt-1" style={{ color: "var(--text-light)" }}>{stat.label}</div>
               </div>
             )}
-          </div>
-        </div>
-      </section>
-
-      {/* BUNDLE */}
-      <section id="bundle" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--clay-pale)" }}>
-        <div className="max-w-[1200px] mx-auto">
-          <div className="section-tag">Best value — most Activity Directors choose this</div>
-          <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
-            30+ Sessions. 5 Themes. Zero Prep.<br /><em className="italic" style={{ color: "var(--clay)" }}>Less than $4.60 per activity session.</em>
-          </h2>
-          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[620px]" style={{ color: "var(--text-mid)" }}>
-            Get all 5 kits in one download and cover your programming calendar for over a month. One purchase replaces 30+ hours of activity planning.
-          </p>
-
-          <div className="bg-white rounded-2xl overflow-hidden max-w-[900px] mx-auto mt-12 relative" style={{ border: "2px solid var(--clay)", boxShadow: "0 8px 40px rgba(198,123,92,0.15)" }}>
-            {/* Premium tier badge */}
-            <div className="flex items-center justify-center gap-2 py-2.5 text-[11px] font-semibold tracking-[0.12em] uppercase text-white" style={{ background: "linear-gradient(90deg, #C67B5C 0%, #D4A574 50%, #E8C99A 100%)" }}>
-              <span>★</span> Premium Tier — Our Complete Engagement System <span>★</span>
-            </div>
-            {/* Bundle Header */}
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center p-8 md:p-10" style={{ background: "var(--forest)" }}>
-              <div>
-                <span className="inline-block text-[11px] font-medium tracking-[0.08em] uppercase px-3.5 py-1.5 rounded-full mb-4" style={{ background: "linear-gradient(135deg, #E8C99A 0%, #D4A574 100%)", color: "var(--forest-dark)" }}>
-                  The Comfort Bond™ Complete Engagement System
-                </span>
-                <h3 className="font-serif text-[2rem] font-semibold text-white leading-[1.2] m-0">
-                  All 5 Kits + The Serenity Suite<br /><em className="italic" style={{ color: "var(--sand)" }}>Your entire activity library — done.</em>
-                </h3>
-                <div className="text-sm text-white/[0.65] mt-2">5 themed kits × 6 activities each = 30+ ready-to-run sessions</div>
-              </div>
-              <div className="md:text-right">
-                <div className="text-sm text-white/70 line-through mb-1">$174.95 if bought separately</div>
-                <div className="font-serif text-5xl font-semibold leading-none" style={{ color: "var(--sand)" }}>$137</div>
-                <div className="text-xs mt-1 tracking-[0.05em]" style={{ color: "var(--sand)" }}>That's less than $4.60 per session</div>
-              </div>
-            </div>
-
-            {/* Bundle Body */}
-            <div className="p-8 md:p-10">
-              {/* Kit items label */}
-              <div className="flex items-center gap-2 text-[11px] tracking-[0.12em] uppercase mb-5" style={{ color: "var(--text-light)" }}>
-                All 5 kits included
-                <span className="flex-1 h-px" style={{ background: "var(--border)" }} />
-              </div>
-
-              {/* Kit items grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 mb-8">
-                {[
-                  { emoji: "📻", name: "The Nostalgia Kit" },
-                  { emoji: "🍞", name: "The Heart of the Home Kit" },
-                  { emoji: "🚗", name: 'The "Are We There Yet?" Kit' },
-                  { emoji: "🌻", name: "The Heirloom Garden Kit" },
-                  { emoji: "🔧", name: "The Makers & Menders Kit" }
-                ].map((item, i) =>
-                  <div key={i} className="flex items-center gap-2.5 px-4 py-3 rounded-[10px] text-sm" style={{ background: "var(--sand-pale)", color: "var(--text-mid)" }}>
-                    <span className="text-xl">{item.emoji}</span>
-                    {item.name}
-                  </div>
-                )}
-              </div>
-
-              {/* VIP Bonus — Serenity Suite */}
-              <div className="rounded-2xl overflow-hidden mb-8" style={{ background: "linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%)" }}>
-                {/* Bonus badge bar */}
-                <div className="flex items-center gap-2 px-6 py-2.5 text-[11px] font-semibold tracking-[0.1em] uppercase text-white" style={{ background: "var(--clay)" }}>
-                  <span className="text-xs">★</span>
-                  VIP Bonus — Included FREE with your bundle
-                </div>
-                {/* Bonus content */}
-                <div className="relative p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6">
-                  <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at top right, rgba(232,201,154,0.08) 0%, transparent 60%)" }} />
-                  <div className="relative flex-1">
-                    <h4 className="font-serif text-[1.25rem] font-semibold text-white mb-2">The Serenity Suite Video Library</h4>
-                    <p className="text-[13px] text-white/70 leading-[1.65] mb-3">
-                      10 cinematic, 8-minute relaxation and reminiscence videos — gentle rain, ocean waves, mountain sunrises, flowing waterfalls, and more. Designed to promote calm, reduce anxiety, and bring peaceful moments to any room.
-                    </p>
-                    <div className="flex items-center gap-3 flex-wrap">
-                      {["10 Nature Scenes", "80+ Minutes", "Lifetime Access"].map((stat, i) => (
-                        <span key={i} className="flex items-center gap-3">
-                          <span className="text-xs font-medium tracking-[0.03em]" style={{ color: "var(--sand)" }}>{stat}</span>
-                          {i < 2 && <span className="w-px h-3 bg-white/20" />}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="relative flex-shrink-0 text-center bg-white/[0.06] border border-white/[0.12] rounded-[10px] px-6 py-5 w-full md:w-auto">
-                    <div className="font-serif text-[2rem] font-semibold leading-none tracking-[0.04em] italic" style={{ color: "var(--sand)" }}>Included</div>
-                    <div className="text-[11px] text-white/50 uppercase tracking-[0.08em] font-medium mt-1.5">Lifetime Access</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bundle CTA — action separated from price */}
-              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
-                <a
-                  href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem")}
-                  className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
-                  style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
-                >
-                  Get the Complete Engagement System
-                  <ArrowSvg />
-                </a>
-                <div className="flex flex-col gap-1">
-                  <div className="text-sm font-semibold" style={{ color: "var(--forest-dark)" }}>$137 one-time · All 5 kits + Serenity Suite included</div>
-                  <div className="flex items-center gap-1.5 text-[12px]" style={{ color: "var(--text-light)" }}>
-                    <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 3.5V7c0 2.8 2 5.3 5 6 3-0.7 5-3.2 5-6V3.5L7 1z" stroke="#7a8a7a" strokeWidth="1.2" /></svg>
-                    PDF &amp; video download · No subscription · Use forever
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -486,8 +533,8 @@ const Index = () => {
           <div style={{ marginTop: "2.5rem", display: "flex", flexDirection: "column", gap: 0 }}>
             {[
               { q: "Will these work for residents with dementia or memory loss?", a: "Yes. Every activity is designed with cognitive accessibility in mind. There are no wrong answers — just warm conversations, familiar music, and prompts that meet each person where they are. Activity Directors tell us these kits spark engagement even in residents who are usually withdrawn." },
-              { q: "How many sessions can I get out of one kit?", a: "Each kit includes 6 different activity types (conversation cards, trivia, BINGO, word link, musical memory, and visual spark cards). Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. The Complete Engagement System gives you 30+ sessions across all 5 themes." },
-              { q: "Is this a monthly subscription?", a: "No. All of our engagement kits and The Comfort Bond™ Complete Engagement System are one-time purchases. There are no hidden fees or recurring charges. Once you buy, it's yours to print and use forever." },
+              { q: "How many sessions can I get out of one kit?", a: "Each kit includes 6 different activity types (conversation cards, trivia, BINGO, word link, musical memory, and visual spark cards). Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. Pick any 3 kits for $98, or get all 5 for $150.99 and cover 30+ sessions." },
+              { q: "Is this a monthly subscription?", a: "No. Every kit and bundle is a one-time purchase. There are no hidden fees or recurring charges. Once you buy, it's yours to print and use forever." },
               { q: "Can I print these for my whole floor?", a: 'Yes! The kits are specifically designed to be printer-friendly on standard 8.5" x 11" paper. Print as many copies as you need — BINGO cards, trivia sheets, conversation prompts — and hand them out directly to residents. One purchase covers your entire community.' },
               { q: "How quickly will I get access?", a: "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be running an activity with your group five minutes later. No waiting for shipping." }].
               map((item, i) =>
@@ -597,7 +644,7 @@ const Index = () => {
               </div>
               <div className="about-stat-card">
                 <div className="asc-num">30+</div>
-                <div className="asc-label">Ready-to-run sessions in the Complete Engagement System</div>
+                <div className="asc-label">Ready-to-run sessions across all 5 themed kits</div>
               </div>
             </div>
           </div>
@@ -645,7 +692,6 @@ const Index = () => {
                 href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true")}
                 style={{
                   background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
                   padding: "13px 24px", fontSize: 15, fontWeight: 500, fontFamily: "var(--font-sans)",
@@ -675,7 +721,7 @@ const Index = () => {
               Browse all 5 kits
               <ArrowSvg />
             </a>
-            <a href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem" target="_blank" rel="noopener noreferrer" className="btn-secondary">Or get the Complete System — $137</a>
+            <a href="#bundles" className="btn-secondary">Save with bundles</a>
           </div>
         </div>
       </section>
@@ -696,7 +742,8 @@ const Index = () => {
               <li><a href="#are-we-there-yet-kit" onClick={(e) => {e.preventDefault();document.getElementById('are-we-there-yet-kit')?.scrollIntoView({ behavior: 'smooth' });}}>"Are We There Yet?" Kit</a></li>
               <li><a href="#heirloom-garden-kit" onClick={(e) => {e.preventDefault();document.getElementById('heirloom-garden-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Heirloom Garden Kit</a></li>
               <li><a href="#makers-and-menders-kit" onClick={(e) => {e.preventDefault();document.getElementById('makers-and-menders-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Makers &amp; Menders Kit</a></li>
-              <li><a href="#bundle" onClick={(e) => {e.preventDefault();document.getElementById('bundle')?.scrollIntoView({ behavior: 'smooth' });}}>Complete Bundle</a></li>
+              <li><a href="#bundles" onClick={(e) => {e.preventDefault();document.getElementById('bundles')?.scrollIntoView({ behavior: 'smooth' });}}>Any 3 Kits — $98</a></li>
+              <li><a href="#bundles" onClick={(e) => {e.preventDefault();document.getElementById('bundles')?.scrollIntoView({ behavior: 'smooth' });}}>All 5 Kits — $150.99</a></li>
             </ul>
           </div>
           <div className="footer-col">

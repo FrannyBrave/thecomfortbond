@@ -111,12 +111,7 @@ export const PromoBanner = () => {
             </button>
           </div>
 
-          {/* Disclaimer */}
-          <span style={{ fontFamily: "var(--font-sans)", fontSize: 10, color: "rgba(255,255,255,0.35)", textAlign: "center", position: "relative", zIndex: 1, marginTop: -4 }}>
-            (Applies to single kits. Excludes the Complete Engagement System bundle.)
-          </span>
-
-          {/* CTA */}
+{/* CTA */}
           <a
             href="https://thecomfortbond.gumroad.com/"
             target="_blank"

@@ -123,8 +123,8 @@ const PrivacyPolicy = () => {
                 <li>Payments and file delivery are handled by Gumroad.</li>
                 <li>Website hosting and presentation are handled by Lovable.</li>
                 <li>
-                  Some video content (such as the Serenity Suite) is hosted on YouTube. Viewing this 
-                  content is subject to YouTube's own Terms of Service and Privacy Policy.
+                  Some content may be hosted on third-party platforms such as YouTube. Viewing this
+                  content is subject to that platform's own Terms of Service and Privacy Policy.
                 </li>
               </ul>
               <p>

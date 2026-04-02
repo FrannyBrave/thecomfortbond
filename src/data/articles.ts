@@ -405,7 +405,7 @@ export const articles: Article[] = [
       },
       {
         type: 'callout',
-        text: 'Ready to upgrade your activity calendar and get your time back? Browse <a href="/#bundle">The Full Comfort Bundle</a> — get all four thematic kits that your residents and your team will love, at a discount.'
+        text: 'Ready to upgrade your activity calendar and get your time back? Browse <a href="/#products">our themed engagement kits</a> — five done-for-you kits that your residents and your team will love.'
       }
     ]
   }

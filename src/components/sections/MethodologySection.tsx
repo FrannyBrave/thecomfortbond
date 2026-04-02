@@ -35,7 +35,7 @@ const steps = [
 {
   number: 5,
   title: "Rest",
-  subtext: "Serenity Suite (Calm)",
+  subtext: "Gentle wind-down",
   icon: Leaf,
   isHighlight: false
 }];

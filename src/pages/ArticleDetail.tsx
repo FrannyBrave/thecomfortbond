@@ -337,10 +337,10 @@ const ArticleDetail = () => {
             lineHeight: 1.7,
             margin: "0 0 2rem",
           }}>
-            Get all four engagement kits in one bundle and save — printable, ready to use, no prep needed.
+            Five themed engagement kits — printable, ready to use, no prep needed. Browse the full collection.
           </p>
           <Link
-            to="/#bundle"
+            to="/#products"
             style={{
               display: "inline-block",
               background: "var(--forest)",

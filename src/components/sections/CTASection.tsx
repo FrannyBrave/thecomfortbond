@@ -43,10 +43,10 @@ export const CTASection = () => {
               asChild
             >
               <a
-                href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem"
+                href="https://thecomfortbond.gumroad.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => handleCheckoutClick(e, "https://thecomfortbond.gumroad.com/l/comfortengagementsystem")}
+                onClick={(e) => handleCheckoutClick(e, "https://thecomfortbond.gumroad.com/")}
               >
                 Shop the Kits
               </a>

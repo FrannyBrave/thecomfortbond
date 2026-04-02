@@ -10,12 +10,10 @@ import { HolidayKitDisplay } from "./HolidayKitDisplay";
 import nostalgiaImage from "@/assets/nostalgia-kit.png";
 import kitchenImage from "@/assets/kitchen-kit.png";
 import holidayImage from "@/assets/holiday-kit.png";
-import serenityImage from "@/assets/serenity-hero.png";
 import roadTripPreview from "@/assets/road-trip-kit-preview.jpg";
 import nostalgiaPreview from "@/assets/nostalgia-kit-preview.jpg";
 import kitchenPreview from "@/assets/kitchen-kit-preview.jpg";
 import holidayPreview from "@/assets/holiday-kit-preview.jpg";
-import serenityPreview from "@/assets/serenity-suite-preview.jpg";
 import { Button } from "@/components/ui/button";
 
 
@@ -34,7 +32,7 @@ const featuredProduct = {
   originalPrice: "$104",
   badge: "Best Value",
   checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/comfortengagementsystem"
+  "https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
 };
 
 const products = [
@@ -82,16 +80,7 @@ const products = [
   "https://thecomfortbond.gumroad.com/l/heirloomgardenkit",
   image: holidayImage
 },
-{
-  id: 5,
-  name: "Serenity Video Suite",
-  anchorId: "serenity-video-suite",
-  description: "Designed to ease sundowning restlessness and calm the room between activities. Calming nature videos that provide gentle resets during quiet moments or help wind down a session naturally.",
-  price: "$35",
-  checkoutUrl:
-  "https://thecomfortbond.gumroad.com/l/serenityvideosuite?wanted=true",
-  image: serenityImage
-}];
+];
 
 
 export const ProductsSection = () => {
