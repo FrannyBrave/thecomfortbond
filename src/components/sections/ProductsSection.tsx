@@ -675,7 +675,7 @@ export const ProductsSection = () => {
             {/* Hero Image */}
             <div style={{ width: "100%", height: "0", paddingBottom: "55%", position: "relative", overflow: "hidden" }}>
               <img
-                src={serenityPreview}
+                src="/placeholder.svg"
                 alt="The Serenity Suite — calming nature video collection for senior living featuring ocean waves, gentle rain, and mountain sunrises"
                 loading="lazy"
                 width={896}
