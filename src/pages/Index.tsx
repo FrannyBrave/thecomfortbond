@@ -1,4 +1,7 @@
 import logoImg from "@/assets/logo.png";
+import mockupNostalgia from "@/assets/mockup-nostalgia.png";
+import mockupHome from "@/assets/mockup-home.png";
+import mockupBingo from "@/assets/mockup-bingo.png";
 import { CookieConsent } from "@/components/CookieConsent";
 
 
@@ -16,10 +19,6 @@ const ArrowSvg = React.forwardRef<SVGSVGElement, {color?: string;}>(({ color = "
 );
 ArrowSvg.displayName = "ArrowSvg";
 
-const StarSvg = ({ fill }: {fill: string;}) =>
-<svg width="18" height="18" viewBox="0 0 14 14">
-    <polygon points="7,1 9,5.5 14,6 10.5,9.5 11.5,14 7,11.5 2.5,14 3.5,9.5 0,6 5,5.5" fill={fill} />
-  </svg>;
 
 const BUNDLE_KITS = [
   { icon: "📻", name: "The Nostalgia Kit" },
@@ -152,24 +151,8 @@ const Index = () => {
             Each kit is a complete, themed activity package — zero prep, maximum engagement. Print what you need and walk into your next session with confidence.
           </p>
 
-          {/* Universal Features Banner */}
-          <div className="mt-10 rounded-2xl px-6 py-5 md:px-8 md:py-6" style={{ background: "var(--forest)" }}>
-            <div className="flex items-center gap-2 mb-4 text-[10px] font-medium tracking-[0.14em] uppercase" style={{ color: "var(--sand)" }}>
-              Included in every kit
-              <span className="flex-1 h-px bg-white/[0.12]" />
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {["15+ Conversation Starter Cards", "20 Themed Trivia Questions", "Word Link Cognitive Game", "24-Term BINGO + Caller Prompts", "Musical Memory Game", '10 Bonus "Visual Spark" Photo Cards', "Digital PDF · Cut & Laminate Ready"].map((feature, i) =>
-                <div key={i} className="inline-flex items-center gap-[7px] rounded-full px-3.5 py-1.5 text-xs text-white/[0.85] whitespace-nowrap bg-white/[0.07] border border-white/[0.1]">
-                  <span className="w-[5px] h-[5px] rounded-full flex-shrink-0" style={{ background: "var(--clay)" }} />
-                  {feature}
-                </div>
-              )}
-            </div>
-          </div>
-
           {/* Product Grid — 5 Kits */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {[
               {
                 id: "nostalgia-kit",
@@ -307,6 +290,43 @@ const Index = () => {
         </div>
       </section>
 
+      {/* SEE INSIDE — product preview */}
+      <section className="py-16 md:py-20 px-6 md:px-16" style={{ background: "var(--cream)" }}>
+        <div className="max-w-[1000px] mx-auto">
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.4rem)] font-semibold leading-[1.2] text-center mt-0 mb-12" style={{ color: "var(--forest-dark)" }}>
+            Designed to spark <em className="italic" style={{ color: "var(--clay)" }}>real connection.</em>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 see-inside-grid">
+            {[
+              { src: mockupNostalgia, alt: "Conversation Card preview from The Nostalgia Kit — 1950s drive-in movie prompt", caption: "Conversation Card", kit: "The Nostalgia Kit" },
+              { src: mockupHome, alt: "Visual Spark Card preview from The Heart of the Home Kit — vintage kitchen scene", caption: "Visual Spark Card", kit: "The Heart of the Home Kit" },
+              { src: mockupBingo, alt: "Themed BINGO card preview from The Are We There Yet Kit — road trip edition", caption: "Themed BINGO", kit: "The 'Are We There Yet?' Kit" },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <div
+                  className="w-full rounded-xl overflow-hidden"
+                  style={{
+                    aspectRatio: "4 / 5",
+                    boxShadow: "0 8px 24px rgba(45,74,62,0.08), 0 2px 8px rgba(0,0,0,0.04)",
+                  }}
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                </div>
+                <p className="mt-3 text-center" style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "var(--text-mid)", lineHeight: 1.4 }}>
+                  <span style={{ fontWeight: 500, color: "var(--forest-dark)" }}>{item.caption}</span>
+                  <span style={{ color: "var(--text-light)" }}> · {item.kit}</span>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* BUNDLE OFFERS */}
       <section id="bundles" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--clay-pale)" }}>
         <div className="max-w-[1200px] mx-auto">
@@ -379,56 +399,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* SOCIAL PROOF — testimonial strip */}
-      <section className="py-12 md:py-16 px-6 md:px-16" style={{ background: "var(--cream)" }}>
-        <div className="max-w-[1000px] mx-auto">
-          <div className="text-center mb-8">
-            <div className="section-tag" style={{ display: "flex", justifyContent: "center" }}>What Activity Directors are saying</div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                quote: "I used to spend my entire Sunday planning the week's activities. Now I print a kit Monday morning and I'm ready for the whole week. My residents are more engaged than they've been in months.",
-                name: "Activity Director",
-                facility: "Assisted Living Community, Ohio"
-              },
-              {
-                quote: "The conversation cards are a game-changer. Even my residents with advanced memory loss light up when we start talking about drive-in movies or Sunday suppers. There are no wrong answers — everyone can participate.",
-                name: "Life Enrichment Manager",
-                facility: "Memory Care Center, Florida"
-              }
-            ].map((t, i) =>
-              <div key={i} className="bg-white rounded-2xl border border-[rgba(45,74,62,0.1)] p-6 md:p-8 flex flex-col">
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map(s => <StarSvg key={s} fill="#D4A574" />)}
-                </div>
-                <blockquote className="text-[15px] leading-[1.75] flex-1 mb-4 italic" style={{ color: "var(--text-mid)", fontFamily: "var(--font-serif)" }}>
-                  "{t.quote}"
-                </blockquote>
-                <div>
-                  <div className="text-[13px] font-semibold" style={{ color: "var(--forest-dark)" }}>{t.name}</div>
-                  <div className="text-[12px]" style={{ color: "var(--text-light)" }}>{t.facility}</div>
-                </div>
-              </div>
-            )}
-          </div>
-          {/* ROI stat bar */}
-          <div className="mt-8 flex flex-wrap justify-center gap-8 md:gap-16">
-            {[
-              { num: "30+", label: "Hours of planning replaced per month" },
-              { num: "<$6", label: "Per activity session per kit" },
-              { num: "5 min", label: "From download to facilitating" }
-            ].map((stat, i) =>
-              <div key={i} className="text-center">
-                <div className="font-serif text-[2rem] font-semibold" style={{ color: "var(--forest)" }}>{stat.num}</div>
-                <div className="text-[12px] mt-1" style={{ color: "var(--text-light)" }}>{stat.label}</div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
 
       {/* FAQ */}
       <section className="tcb-section" id="faq" style={{ background: "var(--sage-light, #e8eade)" }}>
