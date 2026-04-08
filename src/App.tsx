@@ -8,6 +8,7 @@ import Resources from "./pages/Resources";
 import ArticleDetail from "./pages/ArticleDetail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
+import OurStory from "./pages/OurStory";
 import NotFound from "./pages/NotFound";
 import { useCanonical } from "./hooks/useCanonical";
 
@@ -23,6 +24,7 @@ function AppRoutes() {
           <Route path="/resources/:slug" element={<ArticleDetail />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/about" element={<OurStory />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

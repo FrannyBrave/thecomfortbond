@@ -930,6 +930,10 @@
   .fcs-actions { flex-direction: column; align-items: center; }
 }
 
+@media (max-width: 640px) {
+  .about-features-grid { grid-template-columns: 1fr !important; }
+}
+
 /* ---- GLOBAL FOCUS INDICATORS (WCAG 2.1 AA) ---- */
 a:focus-visible,
 button:focus-visible,

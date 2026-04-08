@@ -61,7 +61,7 @@ const Index = () => {
           <ul className="nav-links">
             <li><a href="#products">Engagement Kits</a></li>
             <li><a href="#bundles">Bundles</a></li>
-            <li><a href="#who">Who It's For</a></li>
+            <li><a href="/about">Our Story</a></li>
             <li><a href="/resources">Resources</a></li>
             <li><a href="#products" className="nav-cta">Shop Now</a></li>
           </ul>
@@ -483,78 +483,108 @@ const Index = () => {
         </div>
       </section>
 
-      {/* WHO IT'S FOR */}
-      <section className="tcb-section" id="who">
-        <div className="section-inner">
-          <div className="section-tag">Who this is for</div>
-          <h2 className="tcb-section-title">You're Running on Empty.<br /><em>We Built This for You.</em></h2>
-          <p className="section-sub">Whether you're planning activities for an entire floor or just trying to get through a Sunday visit without the silence — The Comfort Bond™ meets you exactly where you are right now.</p>
-          <div className="audience-grid">
-            <div className="audience-card primary">
-              <div className="audience-icon forest">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#2d4a3e" strokeWidth="1.5" strokeLinecap="round" />
-                  <circle cx="9" cy="7" r="4" stroke="#2d4a3e" strokeWidth="1.5" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#2d4a3e" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div className="audience-who">For Senior Living Professionals</div>
-              <h3>Stop Scrambling. Start Facilitating.</h3>
-              <p className="audience-desc">You became an Activity Director to make a difference — not to spend every Sunday night on Pinterest searching for something, anything, that isn't a children's coloring page. Walk in Monday morning with a full week of programming, printed and ready.</p>
-              <ul className="audience-list">
-                {["Zero prep required — just print and play", "Adaptable for all cognitive levels", "6 distinct activities per kit to prevent burnout", "One-time purchase — use it forever"].map((item, i) =>
-                  <li key={i}><span className="check forest"><CheckSvg /></span>{item}</li>
-                )}
-              </ul>
-            </div>
-            <div className="audience-card secondary">
-              <div className="audience-icon clay">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="#C67B5C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <div className="audience-who">For Families &amp; In-Home Caregivers</div>
-              <h3>End the Awkward Silence.</h3>
-              <p className="audience-desc">You drive an hour to visit Mom. You sit down. And then... nothing. Small talk fades in two minutes, and you leave feeling like you failed. These kits give you something real to do together — prompts that unlock stories, and moments you'll actually remember.</p>
-              <ul className="audience-list">
-                {["Instantly break the ice with visual prompts", "Designed for connection, even with memory loss", "Available instantly — no waiting for shipping", "A meaningful gift for aging parents"].map((item, i) =>
-                  <li key={i}><span className="check clay"><CheckSvg color="#C67B5C" /></span>{item}</li>
-                )}
-              </ul>
-            </div>
+      {/* ABOUT */}
+      <section className="tcb-section about-section" id="about">
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 clamp(1.5rem,5vw,4rem)" }}>
+          <div className="about-tag">Our story</div>
+          <h2 className="about-title">You Shouldn't Have to<br />Spend Your Weekends<br />Planning <em>Monday's Activities.</em></h2>
+
+          <div className="about-body" style={{ marginTop: "2rem" }}>
+            <p>You didn't choose this work to spend Sunday nights searching for something that might work.</p>
+            <p style={{ color: "rgba(255,255,255,0.5)", fontStyle: "italic" }}>Scrolling. Printing. Rewriting.</p>
+            <p>Trying to turn generic ideas into something your residents will actually connect with.</p>
+
+            <p style={{ fontFamily: "var(--font-serif)", fontWeight: 600, color: "#fff", fontSize: "1.05rem", marginTop: "2rem" }}>Here's the reality:</p>
+            <p>You're running multiple sessions a day — and still expected to create meaningful activities from scratch.</p>
+            <p>So you piece things together.</p>
+            <p>And even when it "works"... you know it wasn't built for them.</p>
+
+            <p style={{ fontFamily: "var(--font-serif)", fontWeight: 600, color: "#fff", fontSize: "1.05rem", marginTop: "2rem" }}>This is not a you problem.</p>
+            <p>You're not behind. You're not underprepared.</p>
+            <p>You've been given no real system to work with.</p>
+            <p style={{ color: "#fff", fontWeight: 400 }}>So we built one.</p>
+          </div>
+
+          <div className="about-sig" style={{ marginTop: "2rem" }}>— Francesca, Founder of The Comfort Bond™</div>
+        </div>
+      </section>
+
+      {/* SOLUTION */}
+      <section style={{ background: "var(--cream)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <div className="about-body" style={{ color: "var(--text-mid)" }}>
+            <p>The Comfort Bond™ is a structured library of ready-to-use engagement kits designed for senior living and memory care.</p>
+            <p style={{ color: "var(--text-light)", fontStyle: "italic" }}>No adapting. No guesswork. No late-night planning.</p>
+            <p>Open the file. Print what you need. Walk into your session ready.</p>
+            <p>And the focus goes back where it belongs:</p>
+            <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", fontWeight: 600, color: "var(--forest-dark)", fontStyle: "italic" }}>Connection. Conversation. Presence.</p>
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="tcb-section about-section" id="about">
-        <div className="section-inner" style={{ padding: 0 }}>
-          <div className="about-inner">
-            <div>
-              <div className="about-tag">Our story</div>
-              <h2 className="about-title">You Shouldn't Have to<br />Spend Your Weekends<br />Planning <em>Monday's Activities.</em></h2>
-              <p className="text-[15px] font-light leading-[1.7] mt-4 mb-6" style={{ color: "rgba(255,255,255,0.6)", maxWidth: 520 }}>
-                Activity Directors do some of the most important work in healthcare. You deserve better tools than Pinterest and a prayer.
-              </p>
-              <div className="about-body">
-                <p>I'm Francesca, Founder of The Comfort Bond™. When I looked closely at the resources available for senior care, I saw a broken system. Professionals like you are tasked with keeping our elders engaged, connected, and dignified — yet you are expected to do it by endlessly scrolling Google, printing out generic worksheets, and working off the clock. That is not a staffing problem; that is a systems problem.</p>
-                <p>So, I built a system to fix it. Every kit in The Comfort Bond™ is designed around one principle: you should be able to walk into a session with zero prep and facilitate something genuinely meaningful. No infantilizing crafts. No hours of prep. Just open the PDF, print what you need, and spark real connection. Every activity respects the life experience of your residents, because dignity isn't a feature — it's the foundation. <a href="/resources" style={{ color: "var(--clay)", textDecoration: "underline", textUnderlineOffset: 3 }}>Read our free guides for Activity Directors →</a></p>
+      {/* FEATURE CARDS — What this looks like in practice */}
+      <section style={{ background: "var(--sand-pale)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+          <div className="section-tag" style={{ textAlign: "center", display: "flex", justifyContent: "center" }}>In practice</div>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 600, lineHeight: 1.2, color: "var(--forest-dark)", textAlign: "center", marginTop: 0, marginBottom: "3rem" }}>
+            What this looks like <em style={{ fontStyle: "italic", color: "var(--clay)" }}>in practice</em>
+          </h2>
+          <div className="about-features-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
+            {[
+              { num: "5 Minutes", title: "From Download to Facilitation", desc: "No prep required." },
+              { num: "30+ Sessions", title: "A Growing Library", desc: "You can rely on — this week and beyond." },
+              { num: "100%", title: "Adult-Centered", desc: "No crafts. No coloring pages. No compromise on dignity." },
+            ].map((card, i) => (
+              <div key={i} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "var(--radius)", padding: "2rem", textAlign: "center" }}>
+                <div style={{ fontFamily: "var(--font-serif)", fontSize: "2rem", fontWeight: 600, color: "var(--forest)", lineHeight: 1, marginBottom: "0.75rem" }}>{card.num}</div>
+                <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", fontWeight: 600, color: "var(--forest-dark)", marginBottom: "0.5rem" }}>{card.title}</div>
+                <div style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: "var(--text-mid)", lineHeight: 1.6 }}>{card.desc}</div>
               </div>
-              <div className="about-sig">— Francesca Djoufack, Founder of The Comfort Bond™</div>
-            </div>
-            <div className="about-visual">
-              <div className="about-stat-card">
-                <div className="asc-num">5 min</div>
-                <div className="asc-label">From download to facilitating — zero prep required</div>
-              </div>
-              <div className="about-stat-card">
-                <div className="asc-num">30+</div>
-                <div className="asc-label">Ready-to-run sessions across all 5 themed kits</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* ABOUT CTA */}
+      <section style={{ background: "var(--forest)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)", textAlign: "center" }}>
+        <div style={{ maxWidth: 600, margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3vw,2.4rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginTop: 0, marginBottom: "1rem" }}>
+            See it for <em style={{ fontStyle: "italic", color: "var(--sand)" }}>yourself.</em>
+          </h2>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.7, marginBottom: "2rem" }}>
+            Start with The Morning Routine Sampler — a free, session-ready kit you can use immediately.
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
+            <a
+              href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+              style={{ fontSize: 16, padding: "14px 32px" }}
+            >
+              Download the Free Sampler <ArrowSvg />
+            </a>
+            <a href="/about" style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: "var(--sand)", textDecoration: "underline", textUnderlineOffset: 3, transition: "opacity 0.2s" }}>
+              Read the Full Story →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAMILIES CALLOUT */}
+      <div style={{ background: "var(--clay-pale)", padding: "clamp(2rem,4vw,3rem) clamp(1.5rem,5vw,4rem)" }}>
+        <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
+          <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.2rem,2vw,1.5rem)", fontWeight: 600, color: "var(--forest-dark)", marginTop: 0, marginBottom: "0.75rem" }}>
+            Not a professional?
+          </h3>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 300, color: "var(--text-mid)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
+            The Comfort Bond™ kits are also the perfect tool for families and in-home caregivers navigating visits with aging parents. End the awkward silence and spark memories you'll actually want to hold onto.
+          </p>
+          <a href="/#products" style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: "var(--clay)", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6, transition: "opacity 0.2s" }}>
+            See how families use our kits <span style={{ fontSize: 16 }}>&rarr;</span>
+          </a>
+        </div>
+      </div>
 
       {/* FREE DOWNLOAD — safety net for non-buyers */}
       <section className="tcb-section" id="freebie" style={{ background: "var(--forest)", padding: "clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem)" }}>
@@ -653,7 +683,7 @@ const Index = () => {
           <div className="footer-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="#about">About Francesca</a></li>
+              <li><a href="/about">Our Story</a></li>
               <li><a href="/resources">Resources</a></li>
               <li><a href="mailto:hello@thecomfortbond.com">Contact</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
