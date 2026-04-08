@@ -75,10 +75,10 @@ const Index = () => {
           <div className="hero-content">
             <div className="hero-eyebrow">
               <span className="hero-eyebrow-dot" />
-              Trusted by Activity Directors Nationwide
+              Built for Activity Directors & Life Enrichment Teams
             </div>
             <h1>Your Next 30 Days<br />of Activities — <em>Done.</em></h1>
-            <p className="hero-desc">Print-ready engagement kits built for Activity Directors who are tired of scrambling. Conversation cards, trivia, BINGO, music games — themed, tested, and ready to facilitate in 5 minutes.</p>
+            <p className="hero-desc">Print-ready engagement kits built for Activity Directors who are tired of scrambling. Conversation cards, Visual spark cards, Trivia, BINGO, Musical Memory games — themed, tested, and ready to facilitate in 5 minutes.</p>
             <div className="hero-actions">
               <a href="#products" className="btn-primary">
                 See the 5 kits
