@@ -94,6 +94,13 @@ export const FooterSection = () => {
           >
             Terms
           </a>
+          <span className="hidden md:inline text-forest/30">|</span>
+          <a
+            href="/families"
+            className="text-sm text-forest hover:opacity-70 transition-opacity"
+          >
+            For Families & Individuals
+          </a>
         </div>
 
         {/* Bottom: Trust + Legal + Copyright */}

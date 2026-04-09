@@ -2,6 +2,9 @@ import logoImg from "@/assets/logo.png";
 import mockupNostalgia from "@/assets/mockup-nostalgia.png";
 import mockupHome from "@/assets/mockup-home.png";
 import mockupBingo from "@/assets/mockup-bingo.png";
+import bundleVolume from "@/assets/bundle-volume-flatlay.png";
+import bundleGroup from "@/assets/bundle-group-activity.png";
+import bundleStack from "@/assets/bundle-content-stack.png";
 import { CookieConsent } from "@/components/CookieConsent";
 
 
@@ -262,9 +265,17 @@ const Index = () => {
                     )}
                   </ul>
                   {/* Best For tag */}
-                  <div className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-medium" style={{ background: "rgba(45,74,62,0.06)", color: "var(--forest)" }}>
+                  <div className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-medium mb-4" style={{ background: "rgba(45,74,62,0.06)", color: "var(--forest)" }}>
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v4M6 11v-2M1 6h4M11 6H9M2.5 2.5l2 2M9.5 9.5l-2-2M2.5 9.5l2-2M9.5 2.5l-2 2" stroke="var(--forest)" strokeWidth="1.2" strokeLinecap="round" /></svg>
                     Best for: {kit.bestFor}
+                  </div>
+
+                  {/* Facilitator's Note */}
+                  <div className="rounded-lg px-3.5 py-3" style={{ borderLeft: "3px solid var(--clay)", background: "rgba(198,123,92,0.04)" }}>
+                    <p className="text-[11.5px] leading-[1.6] m-0" style={{ color: "var(--text-mid)" }}>
+                      <span className="font-semibold" style={{ color: "var(--forest-dark)" }}>Facilitator's Note:</span>{" "}
+                      Every kit includes a one-page facilitator guide with session flow, adaptation tips for different cognitive levels, and prompts you can read verbatim.
+                    </p>
                   </div>
                 </div>
 
@@ -338,18 +349,21 @@ const Index = () => {
             Get every themed kit in one download and cover your programming calendar for over a month — at a fraction of the individual price.
           </p>
 
-          <div className="max-w-[580px] mx-auto mt-12">
-            <div className="rounded-2xl overflow-hidden flex flex-col relative" style={{ border: "2px solid var(--clay)", boxShadow: "0 8px 40px rgba(198,123,92,0.12)" }}>
-              {/* Premium badge */}
-              <div className="flex items-center justify-center gap-2 py-2 text-[10px] font-semibold tracking-[0.12em] uppercase text-white" style={{ background: "linear-gradient(90deg, #C67B5C 0%, #D4A574 50%, #E8C99A 100%)" }}>
-                <span>★</span> Best Value — Most Activity Directors Choose This <span>★</span>
-              </div>
+          {/* === TOP UI ROW === */}
+          <div className="mt-12 rounded-2xl overflow-hidden" style={{ border: "2px solid var(--clay)", boxShadow: "0 8px 40px rgba(198,123,92,0.12)" }}>
+            {/* Premium badge */}
+            <div className="flex items-center justify-center gap-2 py-2 text-[10px] font-semibold tracking-[0.12em] uppercase text-white" style={{ background: "linear-gradient(90deg, #C67B5C 0%, #D4A574 50%, #E8C99A 100%)" }}>
+              <span>★</span> Best Value — Most Activity Directors Choose This <span>★</span>
+            </div>
 
-              <div className="p-6 md:p-8" style={{ background: "var(--forest)", color: "#fff" }}>
-                <div className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-3" style={{ color: "var(--sand)" }}>
+            {/* Horizontal 3-col UI */}
+            <div className="bundle-ui-row" style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr 1fr", background: "var(--forest)" }}>
+              {/* Left — Price */}
+              <div className="p-6 md:p-8 flex flex-col justify-center" style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}>
+                <div className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-2" style={{ color: "var(--sand)" }}>
                   The Comfort Bond™ Complete Engagement System
                 </div>
-                <h3 className="font-serif text-[1.6rem] font-semibold leading-[1.2] m-0 text-white">
+                <h3 className="font-serif text-[clamp(1.4rem,2.5vw,1.8rem)] font-semibold leading-[1.2] m-0 text-white">
                   All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$137.99</em>
                 </h3>
                 <div className="text-sm text-white/60 mt-2">
@@ -358,44 +372,71 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="p-6 md:p-8 bg-white flex-1 flex flex-col">
-                <div className="text-[10px] tracking-[0.1em] uppercase font-medium mb-4" style={{ color: "var(--text-light)" }}>
+              {/* Middle — Checklist (compact grid) */}
+              <div className="p-6 md:p-8 flex flex-col justify-center" style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}>
+                <div className="text-[10px] tracking-[0.1em] uppercase font-medium mb-3" style={{ color: "var(--sand)" }}>
                   Everything included
                 </div>
-                <div className="flex flex-col gap-2 mb-6">
+                <div className="grid grid-cols-2 gap-x-3 gap-y-2 bundle-checklist-grid">
                   {BUNDLE_KITS.map((kit, i) => (
-                    <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm" style={{ background: "var(--sand-pale)", color: "var(--text-dark)" }}>
-                      <span className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 text-xs text-white" style={{ background: "var(--forest)" }}>✓</span>
-                      <span className="text-lg">{kit.icon}</span>
-                      <span className="font-medium" style={{ fontFamily: "var(--font-sans)" }}>{kit.name}</span>
+                    <div key={i} className="flex items-center gap-2 text-[12px]" style={{ color: "rgba(255,255,255,0.85)" }}>
+                      <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0 text-[9px] text-white" style={{ background: "var(--clay)" }}>✓</span>
+                      <span>{kit.icon} {kit.name}</span>
                     </div>
                   ))}
                 </div>
+              </div>
 
-                {/* Per-session math */}
-                <div className="flex items-center gap-2 rounded-xl px-4 py-3 mb-6" style={{ background: "rgba(45,74,62,0.05)" }}>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 3.5V7c0 2.8 2 5.3 5 6 3-0.7 5-3.2 5-6V3.5L7 1z" stroke="var(--forest)" strokeWidth="1.2" /></svg>
-                  <span className="text-[13px] font-medium" style={{ color: "var(--forest)" }}>
-                    30+ sessions · Less than $5 each · Covers a full month of programming
+              {/* Right — Badge + CTA */}
+              <div className="p-6 md:p-8 flex flex-col items-center justify-center gap-4 text-center">
+                <div className="flex items-center gap-2 rounded-lg px-3 py-2" style={{ background: "rgba(232,201,154,0.12)" }}>
+                  <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 3.5V7c0 2.8 2 5.3 5 6 3-0.7 5-3.2 5-6V3.5L7 1z" stroke="var(--sand)" strokeWidth="1.2" /></svg>
+                  <span className="text-[11px] font-medium" style={{ color: "var(--sand)" }}>
+                    30+ sessions
                   </span>
                 </div>
-
-                <div className="mt-auto">
-                  <a
-                    href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
-                    style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
-                  >
-                    Get All 5 Kits — $137.99 <ArrowSvg />
-                  </a>
-                  <p className="text-[11px] text-center mt-2" style={{ color: "var(--text-light)" }}>
-                    One-time purchase · Instant PDF download · Use forever
-                  </p>
-                </div>
+                <a
+                  href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[14px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap"
+                  style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
+                >
+                  Get All 5 Kits <ArrowSvg />
+                </a>
+                <p className="text-[10px] m-0" style={{ color: "rgba(255,255,255,0.4)" }}>
+                  $137.99 · One-time · Instant download
+                </p>
               </div>
             </div>
+          </div>
+
+          {/* === BOTTOM GALLERY ROW === */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8 bundle-gallery-row">
+            {[
+              { src: bundleVolume, alt: "Expansive flat-lay of conversation cards, trivia pages, and activity sheets from all 5 Comfort Bond engagement kits spread across a table", num: "1", title: "Total System Volume", desc: "Experience the breadth of all 5 Kits spread out." },
+              { src: bundleGroup, alt: "Activity Director facilitating a BINGO session with residents using The Comfort Bond engagement kit materials", num: "2", title: "Focused Group Engagement", desc: "Real-world interaction with BINGO and games." },
+              { src: bundleStack, alt: "Dense stack of conversation cards, visual spark photo cards, and BINGO sheets from The Comfort Bond kits", num: "3", title: "Unmistakable Content Bulk", desc: "The physical height and density of dense card decks." },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col">
+                <div className="rounded-xl overflow-hidden" style={{ aspectRatio: "4 / 3", boxShadow: "0 4px 16px rgba(45,74,62,0.08)" }}>
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover block"
+                  />
+                </div>
+                <div className="mt-3 text-center">
+                  <div className="text-[11px] font-semibold tracking-[0.08em] uppercase" style={{ color: "var(--forest-dark)" }}>
+                    {item.num}. {item.title}
+                  </div>
+                  <div className="text-[13px] mt-1" style={{ color: "var(--text-mid)", fontFamily: "var(--font-sans)" }}>
+                    {item.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -541,21 +582,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAMILIES CALLOUT */}
-      <div style={{ background: "var(--clay-pale)", padding: "clamp(2rem,4vw,3rem) clamp(1.5rem,5vw,4rem)" }}>
-        <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
-          <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.2rem,2vw,1.5rem)", fontWeight: 600, color: "var(--forest-dark)", marginTop: 0, marginBottom: "0.75rem" }}>
-            Not a professional?
-          </h3>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 300, color: "var(--text-mid)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-            The Comfort Bond™ kits are also the perfect tool for families and in-home caregivers navigating visits with aging parents. End the awkward silence and spark memories you'll actually want to hold onto.
-          </p>
-          <a href="/#products" style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: "var(--clay)", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6, transition: "opacity 0.2s" }}>
-            See how families use our kits <span style={{ fontSize: 16 }}>&rarr;</span>
-          </a>
-        </div>
-      </div>
-
       {/* FREE DOWNLOAD — safety net for non-buyers */}
       <section className="tcb-section" id="freebie" style={{ background: "var(--forest)", padding: "clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem)" }}>
         <div className="section-inner" style={{ maxWidth: 1100 }}>
@@ -658,6 +684,7 @@ const Index = () => {
               <li><a href="mailto:hello@thecomfortbond.com">Contact</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>
+              <li><a href="/families">For Families &amp; Individuals</a></li>
             </ul>
           </div>
         </div>
