@@ -414,9 +414,9 @@ const Index = () => {
           {/* === BOTTOM GALLERY ROW === */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8 bundle-gallery-row">
             {[
-              { src: bundleVolume, alt: "Expansive flat-lay of conversation cards, trivia pages, and activity sheets from all 5 Comfort Bond engagement kits spread across a table", num: "1", title: "Total System Volume", desc: "Experience the breadth of all 5 Kits spread out." },
-              { src: bundleGroup, alt: "Activity Director facilitating a BINGO session with residents using The Comfort Bond engagement kit materials", num: "2", title: "Focused Group Engagement", desc: "Real-world interaction with BINGO and games." },
-              { src: bundleStack, alt: "Dense stack of conversation cards, visual spark photo cards, and BINGO sheets from The Comfort Bond kits", num: "3", title: "Unmistakable Content Bulk", desc: "The physical height and density of dense card decks." },
+              { src: bundleVolume, alt: "Expansive flat-lay of conversation cards, trivia pages, and activity sheets from all 5 Comfort Bond engagement kits spread across a table", title: "A Complete Programming Library", desc: "Everything you need to run engaging sessions, all in one place." },
+              { src: bundleGroup, alt: "Activity Director facilitating a BINGO session with residents using The Comfort Bond engagement kit materials", title: "Meaningful Group Engagement", desc: "Interactive games designed to spark real connection." },
+              { src: bundleStack, alt: "Dense stack of conversation cards, visual spark photo cards, and BINGO sheets from The Comfort Bond kits", title: "Months of Zero-Prep Material", desc: "Enough premium activities to confidently fill your calendar." },
             ].map((item, i) => (
               <div key={i} className="flex flex-col">
                 <div className="rounded-xl overflow-hidden" style={{ aspectRatio: "4 / 3", boxShadow: "0 4px 16px rgba(45,74,62,0.08)" }}>
@@ -429,7 +429,7 @@ const Index = () => {
                 </div>
                 <div className="mt-3 text-center">
                   <div className="text-[11px] font-semibold tracking-[0.08em] uppercase" style={{ color: "var(--forest-dark)" }}>
-                    {item.num}. {item.title}
+                    {item.title}
                   </div>
                   <div className="text-[13px] mt-1" style={{ color: "var(--text-mid)", fontFamily: "var(--font-sans)" }}>
                     {item.desc}
