@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { articles } from "@/data/articles";
+import { FreeSamplerCTA } from "@/components/FreeSamplerCTA";
 
 function renderBoldText(text: string) {
   const parts = text.split(/\*\*(.*?)\*\*/g);
@@ -312,6 +313,9 @@ const ArticleDetail = () => {
           );
         })()}
       </main>
+
+      {/* Free Sampler CTA — auto-injected after every article */}
+      <FreeSamplerCTA />
 
       {/* CTA Banner */}
       <section style={{
