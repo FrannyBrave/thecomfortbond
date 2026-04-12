@@ -8,8 +8,8 @@ const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
 
 const OurStory = () => {
   return (
-    <div>
-      {/* NAV — minimal */}
+    <div style={{ background: "var(--cream, #FAF7F2)" }}>
+      {/* NAV */}
       <header>
         <nav className="tcb-nav">
           <a href="/" className="nav-logo">
@@ -30,216 +30,94 @@ const OurStory = () => {
       </header>
 
       <main>
-        {/* EDITORIAL LETTER */}
-        <section style={{ background: "var(--forest-dark)", color: "#fff", padding: "clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5rem)" }}>
-          <div style={{ maxWidth: 720, margin: "0 auto" }}>
-            {/* Tag */}
-            <div className="about-tag">Our story</div>
+        {/* HERO */}
+        <section style={{ background: "var(--forest-dark, #2D4A3E)", color: "#fff", padding: "clamp(5rem,12vw,10rem) clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5rem)" }}>
+          <div className="story-container">
+            <div className="story-tag">Our story</div>
+            <h1 className="story-hero-heading">Our Story</h1>
+          </div>
+        </section>
 
-            {/* Headline */}
-            <h1 style={{
-              fontFamily: "var(--font-serif)",
-              fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 600,
-              lineHeight: 1.15,
-              color: "#fff",
-              marginTop: 0,
-              marginBottom: "2.5rem",
-            }}>
-              You Shouldn't Have to Spend<br />Your Weekends Planning<br /><em style={{ fontStyle: "italic", color: "var(--sand)" }}>Monday's Activities.</em>
-            </h1>
+        {/* EDITORIAL BODY */}
+        <section style={{ padding: "clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem)" }}>
+          <div className="story-container">
 
-            {/* Letter body */}
-            <div style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 17,
-              fontWeight: 300,
-              color: "rgba(255,255,255,0.78)",
-              lineHeight: 1.85,
-            }}>
-              <p>You didn't choose this work to spend Sunday nights searching for something that might work.</p>
-              <p style={{ paddingLeft: "1.5rem", borderLeft: "2px solid var(--clay)", margin: "2rem 0", color: "rgba(255,255,255,0.6)", fontStyle: "italic", lineHeight: 1.7 }}>
-                Scrolling Pinterest.<br />
-                Opening ten tabs.<br />
-                Printing something that doesn't quite fit — then rewriting it anyway.
-              </p>
-              <p>You deserve better than a search engine and a prayer.</p>
+            {/* Section: She Was My Last One */}
+            <h2 className="story-section-heading">She Was My Last One</h2>
+            <p className="story-body">My grandmother was the kind of person who made you feel like the most important person in the room — even when the room was full.</p>
+            <p className="story-body">She was my mum's mum. My last living grandparent. And for most of my life, she was my anchor.</p>
+            <p className="story-body">During her final years, I wasn't able to see her the way I wanted to. Life, distance, circumstances — the reasons don't matter as much as the weight of them. But I called her. Every time, I made sure she knew how deeply I loved her. How much I looked forward to the next time I'd hear her voice in person, not just through a phone.</p>
+            <p className="story-body">She became ill. And then she was gone.</p>
+            <p className="story-body">There's a particular kind of quiet that follows losing someone like that. Not loud grief — just stillness. The kind that makes you look at your life and ask what you're building, and who it's for.</p>
 
-              <div style={{ width: 40, height: 1, background: "rgba(255,255,255,0.15)", margin: "2.5rem 0" }} />
+            <div className="story-divider" />
 
-              <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", fontWeight: 600, color: "var(--sand)", fontStyle: "italic", marginBottom: "1.5rem" }}>
-                Here's the reality most people never say out loud:
-              </p>
+            {/* Section: Something Worth Building */}
+            <h2 className="story-section-heading">Something Worth Building</h2>
+            <p className="story-body">About fourteen months after she passed, I made a decision. I wanted to build something meaningful — not just a business, but something that mattered in the kind of way she would have understood.</p>
+            <p className="story-body">The first place my mind went was seniors.</p>
+            <p className="story-body">Not because it was a smart market. Because it was personal. Because the people who shaped me most — who loved me longest, who gave me the most — were the ones society seemed to quietly forget.</p>
+            <p className="story-body">I started with an idea for families. Tools that could help them stay connected with their loved ones during visits — conversation starters, memory prompts, small bridges across the silence that sometimes settles when someone you love is aging and you don't quite know what to say anymore.</p>
+            <p className="story-body">It was a good idea. But it wasn't the right one.</p>
 
-              <p>You're running multiple sessions a day. You're managing personalities, energy levels, and expectations. And somehow, you're still expected to create meaningful programming from scratch — every single week.</p>
+            <div className="story-divider" />
 
-              <p>So you piece things together. A worksheet here. An idea there. And more often than not, it feels... off.</p>
+            {/* Section: The People No One Sees */}
+            <h2 className="story-section-heading">The People No One Sees</h2>
+            <p className="story-body">As I researched further, I discovered something that changed everything.</p>
+            <p className="story-body">Families visit. But they go home.</p>
+            <p className="story-body">The people who show up every single day — who carry the responsibility of creating joy, sparking connection, and preserving dignity for dozens of residents at a time — are Activity Directors and Life Enrichment Coordinators.</p>
+            <p className="story-body">They are the ones facilitating meaningful engagement in senior living communities and memory care neighborhoods, day in and day out. And almost no one is building for them.</p>
+            <p className="story-body">That realization stopped me.</p>
 
-              <p>Because it wasn't built for them. It was built for convenience.</p>
+            <div className="story-divider" />
 
-              <p>Meanwhile, your residents — people who lived full, complex lives — deserve something that actually meets them where they are.</p>
+            {/* Section: The Weight They Carry */}
+            <h2 className="story-section-heading">The Weight They Carry</h2>
+            <p className="story-body">Here's what I learned the more I listened:</p>
+            <p className="story-body">These professionals are deeply committed to the people in their care. They don't see residents as room numbers. They see Margaret, who used to teach piano. James, who can still tell you every play from the '72 World Series. Helen, who lights up when someone asks about her garden.</p>
+            <p className="story-body">But the systems around them aren't built to support that kind of care.</p>
+            <p className="story-body">They're running multiple sessions a day with limited budgets and even more limited time. They're planning senior living activities on their lunch breaks. Searching for resources on Sunday nights. Printing things designed for children and spending hours adapting them — because what's available doesn't reflect the adults in front of them.</p>
+            <p className="story-body">They do this work because they believe in it. But belief doesn't prevent burnout. And passion doesn't replace proper tools.</p>
 
-              <p>And you feel that.</p>
+            <div className="story-divider" />
 
-              <div style={{ width: 40, height: 1, background: "rgba(255,255,255,0.15)", margin: "2.5rem 0" }} />
+            {/* Section: Why This Became My Work */}
+            <h2 className="story-section-heading">Why This Became My Work</h2>
+            <p className="story-body">I couldn't unhear what I'd learned.</p>
+            <p className="story-body">The gap between what Activity Directors are expected to deliver and what they're given to work with — that gap is where dignity gets lost. Not because anyone intends it. But because no one has built something that truly respects both the professionals and the people they serve.</p>
+            <p className="story-body">My grandmother deserved to be seen as a whole person in every stage of her life. So does every resident sitting in a community room right now, waiting for someone to offer them something that honors who they are — not just who they've become.</p>
+            <p className="story-body">That's the thread that connects my story to yours.</p>
+            <p className="story-body">If you're someone who spends your energy creating moments of real connection for seniors — this was built with you in mind.</p>
 
-              <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", fontWeight: 600, color: "#fff", marginBottom: "1.5rem" }}>
-                Let's be clear:
-              </p>
+            <div className="story-divider" />
 
-              <p><strong style={{ color: "#fff", fontWeight: 500 }}>This is not a you problem.</strong></p>
-              <p>You are not behind. You are not underperforming. You are operating inside a system that never gave you the tools to match the standard you're held to.</p>
-              <p>That's not a staffing issue. It's a systems failure.</p>
+            {/* Section: What The Comfort Bond Is */}
+            <h2 className="story-section-heading">What The Comfort Bond™ Is</h2>
+            <p className="story-body">The Comfort Bond™ is a collection of done-for-you engagement kits designed for the people who do this work every day.</p>
+            <p className="story-body">Each kit is structured, print-ready, and built for adults with rich life experience. Discussion prompts that invite real conversation. Storytelling exercises that honor memory. Reminiscence activities designed for life enrichment programming — including those supporting memory care engagement — without requiring hours of preparation or adaptation.</p>
+            <p className="story-body">Everything is grounded in one principle: dignity is not optional.</p>
+            <p className="story-body">These are not crafts borrowed from a children's curriculum. They are intentional tools created for professionals who understand that meaningful activity is not decoration — it's care.</p>
 
-              <div style={{ width: 40, height: 1, background: "rgba(255,255,255,0.15)", margin: "2.5rem 0" }} />
+            <div className="story-divider" />
 
-              <p>When I looked at what was available, I expected gaps.</p>
-              <p>What I found was nothing that truly respected the work.</p>
-
-              <p style={{ paddingLeft: "1.5rem", borderLeft: "2px solid rgba(255,255,255,0.12)", margin: "2rem 0", color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}>
-                Resources that felt generic.<br />
-                Activities that felt infantilizing.<br />
-                Materials that required more prep than they saved.
-              </p>
-
-              <p>And professionals like you — doing deeply meaningful work — left to figure it out alone.</p>
-              <p>That didn't sit right with me.</p>
-              <p style={{ color: "#fff", fontWeight: 400 }}>So I built what should have existed all along.</p>
-            </div>
+            {/* Section: What I Believe */}
+            <h2 className="story-section-heading">What I Believe</h2>
+            <p className="story-body">I believe the final years of a person's life should be filled with warmth, laughter, and genuine human connection.</p>
+            <p className="story-body">I believe the people responsible for creating those moments deserve to be supported — not just thanked.</p>
+            <p className="story-body">And I believe that when we build something with real intention, it shows. In every page. In every prompt. In every quiet moment where a resident smiles because someone finally asked them the right question.</p>
+            <p className="story-body">That's what The Comfort Bond™ is for.</p>
+            <p className="story-body">Not to replace what you do — but to make sure you never have to do it alone.</p>
 
             {/* Signature */}
-            <div style={{
-              fontFamily: "var(--font-serif)",
-              fontSize: "1.5rem",
-              fontStyle: "italic",
-              color: "var(--sand)",
-              marginTop: "3rem",
-            }}>
+            <div className="story-signature">
               — Francesca, Founder of The Comfort Bond™
             </div>
           </div>
         </section>
 
-        {/* SOLUTION SECTION */}
-        <section style={{ background: "var(--cream)", padding: "clamp(3rem,7vw,6rem) clamp(1.5rem,5vw,4rem)" }}>
-          <div style={{ maxWidth: 720, margin: "0 auto" }}>
-            <div className="section-tag">The solution</div>
-            <h2 style={{
-              fontFamily: "var(--font-serif)",
-              fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
-              fontWeight: 600,
-              lineHeight: 1.2,
-              color: "var(--forest-dark)",
-              marginTop: 0,
-              marginBottom: "2rem",
-            }}>
-              A system you can <em style={{ fontStyle: "italic", color: "var(--clay)" }}>actually rely on.</em>
-            </h2>
-
-            <div style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 17,
-              fontWeight: 300,
-              color: "var(--text-mid)",
-              lineHeight: 1.85,
-            }}>
-              <p>The Comfort Bond™ is a structured library of engagement kits designed specifically for senior living and memory care.</p>
-              <p>Each kit is fully built, fully organized, and ready to use. No adapting. No guessing. No late-night planning.</p>
-              <p>You open the file. You print what you need. You walk into the session ready.</p>
-              <p>And for the first time, the focus shifts back where it belongs:</p>
-              <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", fontWeight: 600, color: "var(--forest-dark)", fontStyle: "italic", margin: "1.5rem 0" }}>
-                Connection. Conversation. Presence.
-              </p>
-
-              <div style={{ width: 40, height: 1, background: "var(--border)", margin: "2.5rem 0" }} />
-
-              <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", fontWeight: 600, color: "var(--forest-dark)", marginBottom: "1rem" }}>
-                Every detail is intentional.
-              </p>
-              <p>These are not activities to "fill time." They are designed to spark recognition, memory, and real engagement.</p>
-              <p>Because your residents are not children. They are adults with history, identity, and stories that still deserve to be seen.</p>
-              <p>And everything you use with them should reflect that.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* FEATURE CARDS */}
-        <section style={{ background: "var(--sand-pale)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
-          <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-            <div className="section-tag" style={{ textAlign: "center", display: "flex", justifyContent: "center" }}>In practice</div>
-            <h2 style={{
-              fontFamily: "var(--font-serif)",
-              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
-              fontWeight: 600,
-              lineHeight: 1.2,
-              color: "var(--forest-dark)",
-              textAlign: "center",
-              marginTop: 0,
-              marginBottom: "3rem",
-            }}>
-              What this actually looks like <em style={{ fontStyle: "italic", color: "var(--clay)" }}>in practice</em>
-            </h2>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }} className="feature-cards-grid">
-              {[
-                {
-                  num: "5 Minutes",
-                  title: "From Download to Facilitation",
-                  desc: "No prep. No reworking. Just ready.",
-                },
-                {
-                  num: "30+ Sessions",
-                  title: "A Growing Library",
-                  desc: "You can rely on this week, next week, and beyond.",
-                },
-                {
-                  num: "100%",
-                  title: "Adult-Centered",
-                  desc: "No crafts. No coloring pages. No compromise on dignity.",
-                },
-              ].map((card, i) => (
-                <div key={i} style={{
-                  background: "#fff",
-                  border: "1px solid var(--border)",
-                  borderRadius: "var(--radius)",
-                  padding: "2rem",
-                  textAlign: "center",
-                }}>
-                  <div style={{
-                    fontFamily: "var(--font-serif)",
-                    fontSize: "2rem",
-                    fontWeight: 600,
-                    color: "var(--forest)",
-                    lineHeight: 1,
-                    marginBottom: "0.75rem",
-                  }}>
-                    {card.num}
-                  </div>
-                  <div style={{
-                    fontFamily: "var(--font-serif)",
-                    fontSize: "1.1rem",
-                    fontWeight: 600,
-                    color: "var(--forest-dark)",
-                    marginBottom: "0.5rem",
-                  }}>
-                    {card.title}
-                  </div>
-                  <div style={{
-                    fontFamily: "var(--font-sans)",
-                    fontSize: 14,
-                    color: "var(--text-mid)",
-                    lineHeight: 1.6,
-                  }}>
-                    {card.desc}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA SECTION */}
-        <section style={{ background: "var(--forest)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)", textAlign: "center" }}>
+        {/* CTA SECTION — kept as-is */}
+        <section style={{ background: "var(--forest, #3D6455)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)", textAlign: "center" }}>
           <div style={{ maxWidth: 600, margin: "0 auto" }}>
             <h2 style={{
               fontFamily: "var(--font-serif)",
@@ -294,8 +172,66 @@ const OurStory = () => {
       </footer>
 
       <style>{`
-        @media (max-width: 640px) {
-          .feature-cards-grid { grid-template-columns: 1fr !important; }
+        .story-container {
+          max-width: 680px;
+          margin: 0 auto;
+        }
+
+        .story-tag {
+          font-family: var(--font-sans);
+          font-size: 0.75rem;
+          font-weight: 500;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: var(--sand, #E8C99A);
+          margin-bottom: 1.5rem;
+        }
+
+        .story-hero-heading {
+          font-family: var(--font-serif);
+          font-size: clamp(2.4rem, 5vw, 3.6rem);
+          font-weight: 600;
+          line-height: 1.1;
+          color: #fff;
+          margin: 0;
+          letter-spacing: -0.01em;
+        }
+
+        .story-section-heading {
+          font-family: var(--font-serif);
+          font-size: clamp(1.6rem, 3vw, 2.2rem);
+          font-weight: 600;
+          line-height: 1.25;
+          color: var(--forest-dark, #2D4A3E);
+          margin-top: 0;
+          margin-bottom: 1.75rem;
+          letter-spacing: -0.01em;
+        }
+
+        .story-body {
+          font-family: var(--font-serif);
+          font-size: clamp(1.05rem, 1.8vw, 1.15rem);
+          font-weight: 400;
+          color: var(--text-mid, #4A5548);
+          line-height: 2;
+          margin-bottom: 1.5rem;
+        }
+
+        .story-divider {
+          width: 48px;
+          height: 1px;
+          background: var(--clay, #C67B5C);
+          opacity: 0.4;
+          margin: 3.5rem 0;
+        }
+
+        .story-signature {
+          font-family: var(--font-serif);
+          font-size: 1.4rem;
+          font-style: italic;
+          color: var(--clay, #C67B5C);
+          margin-top: 3.5rem;
+          line-height: 1.6;
         }
       `}</style>
     </div>
