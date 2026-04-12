@@ -66,6 +66,7 @@ const Index = () => {
             <li><a href="/about">Our Story</a></li>
             <li><a href="/resources">Resources</a></li>
             <li><a href="/blueprint" className="nav-blueprint">Free Blueprint</a></li>
+            <li><a href="/free-sampler">Free Sampler</a></li>
             <li><a href="#products" className="nav-cta">Shop Now</a></li>
           </ul>
         </nav>
@@ -557,64 +558,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FREE DOWNLOAD — safety net for non-buyers */}
-      <section className="tcb-section" id="freebie" style={{ background: "var(--forest)", padding: "clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem)" }}>
-        <div className="section-inner" style={{ maxWidth: 1100 }}>
-          <div className="email-capture-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
-            <div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "rgba(232,201,154,0.15)", border: "1px solid rgba(232,201,154,0.25)", color: "var(--sand)", fontSize: 11, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase" as const, padding: "5px 12px", borderRadius: 100, marginBottom: "1rem" }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--clay)", display: "inline-block" }} />
-                Free download
-              </div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem, 2.5vw, 2.2rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginBottom: "0.75rem" }}>
-                Try The Comfort Bond™ with Your Group This Week —<br />
-                <em style={{ fontStyle: "italic", color: "var(--sand)" }}>For Free.</em>
-              </h2>
-              <p style={{ fontSize: 15, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.65, marginBottom: "1rem" }}>
-                Download The Morning Routine Sampler. It is a complete, zero-prep 30-minute engagement session themed around coffee, sunrises, and the start of every day. See for yourself how easily these prompts spark memories and meaningful connection.
-              </p>
-            </div>
-            <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--radius)", padding: "1.5rem 1.75rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
-              <div>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", fontStyle: "italic", color: "var(--sand)", marginBottom: "0.25rem" }}>The Morning Routine Sampler</p>
-                <p style={{ fontSize: 12, color: "rgba(255,255,255,0.45)" }}>Complete 30-min session · Zero prep · Free PDF</p>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {[
-                  { emoji: "💬", title: "8 Open-Ended Conversation Cards", meta: "Coffee, sunrises & morning routines" },
-                  { emoji: "📸", title: "6 Vintage Visual Spark Cards", meta: "Nostalgic images to prompt stories & memories" },
-                  { emoji: "🔗", title: "1 Quick Word Link Game", meta: "Cognitive engagement — themed & ready to go" }
-                ].map((item, i) =>
-                  <div key={i} style={{ background: "rgba(255,255,255,0.05)", borderRadius: 10, padding: "10px 14px", display: "flex", alignItems: "center", gap: 12 }}>
-                    <span style={{ fontSize: 18, flexShrink: 0 }}>{item.emoji}</span>
-                    <div>
-                      <p style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.9)", marginBottom: 1 }}>{item.title}</p>
-                      <p style={{ fontSize: 11, color: "rgba(255,255,255,0.4)" }}>{item.meta}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-              <a
-                href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  background: "var(--clay)", color: "#fff", border: "none", borderRadius: 100,
-                  padding: "13px 24px", fontSize: 15, fontWeight: 500, fontFamily: "var(--font-sans)",
-                  cursor: "pointer", transition: "background 0.2s", textAlign: "center",
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  textDecoration: "none"
-                }}
-              >
-                Download My Free Sampler <ArrowSvg />
-              </a>
-              <p style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", textAlign: "center", lineHeight: 1.5 }}>
-                Free PDF · Instant download · No email required
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FINAL CTA */}
       <section className="final-cta-section">
