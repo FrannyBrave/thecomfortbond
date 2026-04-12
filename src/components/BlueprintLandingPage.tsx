@@ -202,14 +202,43 @@ function Section({
 export default function BlueprintLandingPage() {
   return (
     <div style={{ fontFamily: sans, color: c.body, backgroundColor: c.cream }}>
-      {/* ── Back to Home ── */}
+      {/* ── Header ── */}
       <div
         style={{
           maxWidth: "1060px",
           margin: "0 auto",
           padding: "1.25rem clamp(1.25rem, 5vw, 3rem) 0",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
+        <Link
+          to="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.6rem",
+            textDecoration: "none",
+          }}
+        >
+          <img
+            src={logo}
+            alt="The Comfort Bond logo"
+            style={{ width: "36px", height: "36px", borderRadius: "50%" }}
+          />
+          <span
+            style={{
+              fontFamily: serif,
+              fontSize: "1rem",
+              fontWeight: 600,
+              color: c.teal,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            The Comfort Bond™
+          </span>
+        </Link>
         <Link
           to="/"
           style={{
