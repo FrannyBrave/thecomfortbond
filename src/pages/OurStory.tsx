@@ -263,9 +263,7 @@ const OurStory = () => {
               Start with The Morning Routine Sampler — a free, session-ready kit you can use immediately. No commitment. No guesswork. Just something you can open and run.
             </p>
             <a
-              href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/free-sampler"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
