@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
+import samplerHero from "@/assets/morning-sampler-hero.png";
 
 /* ─── Palette ─── */
 const c = {
@@ -281,25 +282,21 @@ export default function MorningSamplerLandingPage() {
         </div>
       </section>
 
-      {/* ── Image placeholder ── */}
+      {/* ── Hero Image ── */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-        <div
+        <img
+          src={samplerHero}
+          alt="The Morning Routine Sampler — conversation cards and visual sparks beside a coffee cup on a warm kitchen table"
           style={{
-            background: "linear-gradient(135deg, #F0E5D8 0%, #E8D5C4 40%, #DFC8B4 100%)",
+            width: "100%",
+            height: "auto",
             borderRadius: "10px",
-            padding: "60px 40px",
-            textAlign: "center",
+            boxShadow: "0 8px 30px rgba(61,43,31,0.1)",
+            display: "block",
             margin: "48px auto",
             maxWidth: 640,
-            border: `1px solid ${c.borderWarm}`,
           }}
-        >
-          <p style={{ fontStyle: "italic", color: c.warmGray, fontSize: "14px", lineHeight: 1.8, margin: 0 }}>
-            <strong>Image Direction:</strong> Flat-lay photograph in warm 1960s Kodachrome tones. A
-            worn wooden kitchen table bathed in early morning light. Two printed Conversation Cards
-            and a Visual Spark Card laid casually beside a ceramic coffee cup, half-full.
-          </p>
-        </div>
+        />
       </div>
 
       {/* ── Set the Scene ── */}
