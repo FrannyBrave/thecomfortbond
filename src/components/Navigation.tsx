@@ -27,9 +27,13 @@ export const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const scrollToTop = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
   };
 
   return (
@@ -42,7 +46,12 @@ export const Navigation = () => {
       <nav className="section-container">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" onClick={scrollToTop} className="flex items-center gap-3 py-2">
+          <a
+            href="/"
+            onClick={handleLogoClick}
+            className="flex items-center gap-3 py-2 no-underline cursor-pointer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
             <img src={logo} alt="The Comfort Bond" className="h-16 md:h-20 w-auto" />
             <span className="text-xl md:text-2xl font-serif font-semibold text-forest tracking-tight">
               The Comfort Bond
