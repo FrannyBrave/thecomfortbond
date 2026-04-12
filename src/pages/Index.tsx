@@ -62,7 +62,7 @@ const Index = () => {
           </a>
           <ul className="nav-links">
             <li><a href="#products">Engagement Kits</a></li>
-            <li><a href="#bundles">Bundles</a></li>
+            
             <li><a href="/about">Our Story</a></li>
             <li><a href="/resources">Resources</a></li>
             <li><a href="/blueprint" className="nav-blueprint">Free Blueprint</a></li>
