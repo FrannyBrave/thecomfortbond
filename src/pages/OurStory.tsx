@@ -85,7 +85,7 @@ const OurStory = () => {
             {/* Section: Why This Became My Work */}
             <h2 className="story-section-heading">Why This Became My Work</h2>
             <p className="story-body">I couldn't unhear what I'd learned.</p>
-            <p className="story-body">The gap between what Activity Directors are expected to deliver and what they're given to work with — that gap is where dignity gets lost. Not because anyone intends it. But because no one has built something that truly respects both the professionals and the people they serve.</p>
+            <p className="story-body">The gap between what Activity Directors are expected to deliver and what they're given to work with — that gap is where dignity gets lost. Not because anyone intends it. But because there isn't something that truly respects both the professionals and the people they serve.</p>
             <p className="story-body">My grandmother deserved to be seen as a whole person in every stage of her life. So does every resident sitting in a community room right now, waiting for someone to offer them something that honors who they are — not just who they've become.</p>
             <p className="story-body">That's the thread that connects my story to yours.</p>
             <p className="story-body">If you're someone who spends your energy creating moments of real connection for seniors — this was built with you in mind.</p>
