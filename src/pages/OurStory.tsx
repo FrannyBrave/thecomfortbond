@@ -56,7 +56,7 @@ const OurStory = () => {
             <h2 className="story-section-heading">Something Worth Building</h2>
             <p className="story-body">About fourteen months after she passed, I made a decision. I wanted to build something meaningful — not just a business, but something that mattered in the kind of way she would have understood.</p>
             <p className="story-body">The first place my mind went was seniors.</p>
-            <p className="story-body">Not because it was a smart market. Because it was personal. Because the people who shaped me most — who loved me longest, who gave me the most — were the ones society seemed to quietly forget.</p>
+            <p className="story-body">Not just because I was looking for a business opportunity. Because it was deeply personal. Because the people who shaped me most — who loved me longest, who gave me the most — were the ones society seemed to quietly forget.</p>
             <p className="story-body">I started with an idea for families. Tools that could help them stay connected with their loved ones during visits — conversation starters, memory prompts, small bridges across the silence that sometimes settles when someone you love is aging and you don't quite know what to say anymore.</p>
             <p className="story-body">It was a good idea. But it wasn't the right one.</p>
 
