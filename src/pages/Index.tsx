@@ -600,7 +600,7 @@ const Index = () => {
               <li><a href="/blueprint">Free Blueprint</a></li>
               <li><a href="/free-sampler">Free Sampler</a></li>
               <li><a href="/resources">Blog</a></li>
-              <li><a href="/free-sampler">Free Sampler</a></li>
+              <li><a href="/free-sampler"></a></li>
             </ul>
           </div>
           <div className="footer-col">
