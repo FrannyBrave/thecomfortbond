@@ -36,16 +36,8 @@ function EmailCapture({ id }: { id: string }) {
     setStatus("loading");
     setErrorMsg("");
 
-    const formId = import.meta.env.VITE_KIT_FORM_ID;
-    const apiKey = import.meta.env.VITE_KIT_API_KEY;
-
-    console.log("Kit API Key:", apiKey ? "Loaded" : "Missing", "Form ID:", formId);
-
-    if (!formId || !apiKey) {
-      setStatus("error");
-      setErrorMsg("Email service is not configured. Please contact us directly.");
-      return;
-    }
+    const formId = "9317013";
+    const apiKey = "LyFHhQ8J1GJ27wcL4mq-uQ";
 
     try {
       const res = await fetch(
