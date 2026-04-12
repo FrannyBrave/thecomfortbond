@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import samplerHero from "@/assets/morning-sampler-hero.png";
+import logo from "@/assets/logo.png";
 
 /* ─── Palette ─── */
 const c = {
@@ -199,8 +200,10 @@ export default function MorningSamplerLandingPage() {
       {/* ── Brand Bar ── */}
       <div
         style={{
-          padding: "20px 0",
-          textAlign: "center",
+          padding: "14px 28px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
           borderBottom: `1px solid ${c.borderWarm}`,
           background: c.warmWhite,
         }}
@@ -208,16 +211,39 @@ export default function MorningSamplerLandingPage() {
         <Link
           to="/"
           style={{
-            fontFamily: sans,
-            fontSize: "11px",
-            fontWeight: 600,
-            letterSpacing: "4px",
-            textTransform: "uppercase",
-            color: c.goldMuted,
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
             textDecoration: "none",
           }}
         >
-          The Comfort Bond&trade;
+          <img src={logo} alt="The Comfort Bond" style={{ height: 40, width: 40, borderRadius: "50%", objectFit: "cover" }} />
+          <span
+            style={{
+              fontFamily: serif,
+              fontSize: "1.1rem",
+              fontWeight: 600,
+              color: c.deepBrown,
+              letterSpacing: "-0.3px",
+            }}
+          >
+            The Comfort Bond™
+          </span>
+        </Link>
+        <Link
+          to="/"
+          style={{
+            fontFamily: sans,
+            fontSize: "13px",
+            fontWeight: 500,
+            color: c.softGray,
+            textDecoration: "none",
+            transition: "color 0.2s",
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.color = c.terracotta; }}
+          onMouseLeave={(e) => { e.currentTarget.style.color = c.softGray; }}
+        >
+          ← Back to Home
         </Link>
       </div>
 
