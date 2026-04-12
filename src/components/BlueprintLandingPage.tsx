@@ -1,11 +1,12 @@
 import { useState, type FormEvent } from "react";
+import { Link } from "react-router-dom";
 
 /* ─── Brand tokens ─── */
 const c = {
   cream: "#F5F0EB",
   creamAlt: "#EDE8E2",
-  teal: "#1B3A4B",
-  tealLight: "#254E63",
+  teal: "#2d4a3e",
+  tealLight: "#3d6455",
   bronze: "#8B6F47",
   terracotta: "#C4956A",
   charcoal: "#2E2E2E",
@@ -117,10 +118,35 @@ function Section({
 export default function BlueprintLandingPage() {
   return (
     <div style={{ fontFamily: sans, color: c.body, backgroundColor: c.cream }}>
+      {/* ── Back to Home ── */}
+      <div
+        style={{
+          maxWidth: "1060px",
+          margin: "0 auto",
+          padding: "1.25rem clamp(1.25rem, 5vw, 3rem) 0",
+        }}
+      >
+        <Link
+          to="/"
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 500,
+            color: c.mutedWarm,
+            textDecoration: "none",
+            letterSpacing: "0.02em",
+            transition: "color 0.15s",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = c.teal)}
+          onMouseLeave={(e) => (e.currentTarget.style.color = c.mutedWarm)}
+        >
+          &larr; Back to Home
+        </Link>
+      </div>
+
       {/* ════════════════════════════════════════════
           SECTION 1 — HERO
          ════════════════════════════════════════════ */}
-      <Section>
+      <Section style={{ paddingTop: "clamp(1.5rem, 4vw, 2.5rem)" }}>
         <div
           style={{
             display: "grid",

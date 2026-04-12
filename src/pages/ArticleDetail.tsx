@@ -89,10 +89,33 @@ const ArticleDetail = () => {
     <div style={{ background: "var(--cream)", minHeight: "100vh" }}>
       <Navigation />
 
+      {/* Breadcrumb */}
+      <div style={{
+        maxWidth: 720,
+        margin: "0 auto",
+        padding: "6.5rem 1.5rem 0",
+      }}>
+        <Link
+          to="/resources"
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 500,
+            color: "var(--text-light)",
+            textDecoration: "none",
+            letterSpacing: "0.02em",
+            transition: "color 0.15s",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "var(--forest)")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-light)")}
+        >
+          &larr; Back to Articles
+        </Link>
+      </div>
+
       {/* Hero Banner */}
       <header style={{
         background: "var(--forest)",
-        paddingTop: "clamp(7rem, 12vw, 10rem)",
+        paddingTop: "clamp(2rem, 4vw, 3rem)",
         paddingBottom: "clamp(3rem, 6vw, 4.5rem)",
         paddingLeft: "1.5rem",
         paddingRight: "1.5rem",

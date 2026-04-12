@@ -124,6 +124,16 @@
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--forest); }
+.nav-blueprint {
+  border: 1.5px solid #8B6F47;
+  color: #8B6F47 !important;
+  padding: 7px 18px;
+  border-radius: 100px;
+  font-weight: 600 !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+.nav-blueprint:hover { background: #8B6F47; color: #fff !important; }
+
 .nav-cta {
   background: var(--clay);
   color: #fff !important;
@@ -803,7 +813,7 @@
   gap: 3rem;
 }
 .footer-inner-3col {
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
 }
 .footer-brand p {
   font-size: 13px; color: rgba(255,255,255,0.45);

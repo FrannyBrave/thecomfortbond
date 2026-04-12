@@ -80,6 +80,14 @@ export const Navigation = () => {
                 {link.label}
               </button>
             ))}
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => navigate("/blueprint")}
+              className="border-terracotta text-terracotta hover:bg-terracotta hover:text-cream font-semibold"
+            >
+              Free Blueprint
+            </Button>
             <Button variant="cta" size="lg" onClick={() => { setTimeout(() => { window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer"); }, 0); }}>
               Shop Now
             </Button>
@@ -137,6 +145,16 @@ export const Navigation = () => {
                 </button>
               ))}
               <div className="pt-2 px-2">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full border-terracotta text-terracotta hover:bg-terracotta hover:text-cream font-semibold mb-2"
+                  onClick={() => { navigate("/blueprint"); setIsMobileMenuOpen(false); }}
+                >
+                  Free Blueprint
+                </Button>
+              </div>
+              <div className="pt-0 px-2">
                 <Button variant="cta" size="lg" className="w-full" onClick={() => { setIsMobileMenuOpen(false); setTimeout(() => { window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer"); }, 0); }}>
                   Shop Now
                 </Button>

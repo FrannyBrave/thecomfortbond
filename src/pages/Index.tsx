@@ -65,6 +65,7 @@ const Index = () => {
             <li><a href="#bundles">Bundles</a></li>
             <li><a href="/about">Our Story</a></li>
             <li><a href="/resources">Resources</a></li>
+            <li><a href="/blueprint" className="nav-blueprint">Free Blueprint</a></li>
             <li><a href="#products" className="nav-cta">Shop Now</a></li>
           </ul>
         </nav>
@@ -677,10 +678,17 @@ const Index = () => {
             </ul>
           </div>
           <div className="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/blueprint">Free Blueprint</a></li>
+              <li><a href="/resources">Blog</a></li>
+              <li><a href="#honey-pot" onClick={(e) => {e.preventDefault();document.getElementById('honey-pot')?.scrollIntoView({ behavior: 'smooth' });}}>Free Sample</a></li>
+            </ul>
+          </div>
+          <div className="footer-col">
             <h4>Company</h4>
             <ul>
               <li><a href="/about">Our Story</a></li>
-              <li><a href="/resources">Resources</a></li>
               <li><a href="mailto:hello@thecomfortbond.com">Contact</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>

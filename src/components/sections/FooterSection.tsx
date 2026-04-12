@@ -52,48 +52,74 @@ export const FooterSection = () => {
           </p>
         </div>
 
-        {/* Product Links */}
-        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 mb-8">
-          {productLinks.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => scrollToSection(link.id)}
-              className="text-sm text-forest hover:text-terracotta transition-colors"
-            >
-              {link.label}
-            </button>
-          ))}
-        </div>
+        {/* Footer Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Products Column */}
+          <div className="text-center md:text-left">
+            <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Products</h4>
+            <div className="flex flex-col gap-2">
+              {productLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-sm text-forest/80 hover:text-terracotta transition-colors text-center md:text-left"
+                >
+                  {link.label}
+                </button>
+              ))}
+            </div>
+          </div>
 
-        {/* Middle: Links + Contact in a row */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-8">
-          <a
-            href="mailto:hello@thecomfortbond.com"
-            className="text-sm text-forest underline underline-offset-2 hover:opacity-70 transition-opacity"
-          >
-            hello@thecomfortbond.com
-          </a>
-          <span className="hidden md:inline text-forest/30">|</span>
-          <a
-            href="/resources"
-            className="text-sm text-forest hover:opacity-70 transition-opacity"
-          >
-            Resources
-          </a>
-          <span className="hidden md:inline text-forest/30">|</span>
-          <a
-            href="/privacy-policy"
-            className="text-sm text-forest hover:opacity-70 transition-opacity"
-          >
-            Privacy Policy
-          </a>
-          <span className="hidden md:inline text-forest/30">|</span>
-          <a
-            href="/terms"
-            className="text-sm text-forest hover:opacity-70 transition-opacity"
-          >
-            Terms
-          </a>
+          {/* Resources Column */}
+          <div className="text-center md:text-left">
+            <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Resources</h4>
+            <div className="flex flex-col gap-2">
+              <a
+                href="/blueprint"
+                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
+              >
+                Free Blueprint
+              </a>
+              <a
+                href="/resources"
+                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
+              >
+                Blog
+              </a>
+              <a
+                href="#honey-pot"
+                onClick={(e) => { e.preventDefault(); scrollToSection("honey-pot"); }}
+                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
+              >
+                Free Sample
+              </a>
+            </div>
+          </div>
+
+          {/* Contact & Legal Column */}
+          <div className="text-center md:text-left">
+            <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Company</h4>
+            <div className="flex flex-col gap-2">
+              <a
+                href="mailto:hello@thecomfortbond.com"
+                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
+              >
+                hello@thecomfortbond.com
+              </a>
+              <a
+                href="/privacy-policy"
+                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="/terms"
+                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
+              >
+                Terms
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Bottom: Trust + Legal + Copyright */}

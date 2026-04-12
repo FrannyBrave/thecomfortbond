@@ -39,7 +39,7 @@ export default function BlueprintCover() {
             fontFamily: '"Playfair Display", Georgia, serif',
             fontSize: "clamp(2rem, 5vw, 2.75rem)",
             fontWeight: 600,
-            color: "#1B3A4B",
+            color: "#2d4a3e",
             margin: "0 0 0.625rem",
             lineHeight: 1.15,
             letterSpacing: "-0.015em",
