@@ -10,6 +10,9 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import OurStory from "./pages/OurStory";
 import NotFound from "./pages/NotFound";
+import BlueprintTest from "./pages/BlueprintTest";
+import BlueprintDocument from "./pages/BlueprintDocument";
+import BlueprintLandingPage from "./components/BlueprintLandingPage";
 import { useCanonical } from "./hooks/useCanonical";
 
 const queryClient = new QueryClient();
@@ -25,6 +28,9 @@ function AppRoutes() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/about" element={<OurStory />} />
+          <Route path="/blueprint-test" element={<BlueprintTest />} />
+          <Route path="/blueprint-pdf" element={<BlueprintDocument />} />
+          <Route path="/blueprint" element={<BlueprintLandingPage />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
