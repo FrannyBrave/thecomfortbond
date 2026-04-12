@@ -96,7 +96,7 @@ const OurStory = () => {
             <h2 className="story-section-heading">What The Comfort Bond™ Is</h2>
             <p className="story-body">The Comfort Bond™ is a collection of done-for-you engagement kits designed for the people who do this work every day.</p>
             <p className="story-body">Each kit is structured, print-ready, and built for adults with rich life experience. Discussion prompts that invite real conversation. Storytelling exercises that honor memory. Reminiscence activities designed for life enrichment programming — including those supporting memory care engagement — without requiring hours of preparation or adaptation.</p>
-            <p className="story-body">Everything is grounded in one principle: dignity is not optional.</p>
+            
             <p className="story-body">These are not crafts borrowed from a children's curriculum. They are intentional tools created for professionals who understand that meaningful activity is not decoration — it's care.</p>
 
             <div className="story-divider" />
