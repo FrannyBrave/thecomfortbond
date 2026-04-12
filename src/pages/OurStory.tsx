@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import logoImg from "@/assets/logo.png";
 
 const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
@@ -7,6 +8,17 @@ const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
 );
 
 const OurStory = () => {
+  useEffect(() => {
+    document.title = "Our Story | The Comfort Bond™";
+    let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+    meta.content = "The true story behind The Comfort Bond™. Discover why we build dignified, done-for-you engagement kits and memory care activities for senior living professionals.";
+  }, []);
+
   return (
     <div style={{ background: "var(--cream, #FAF7F2)" }}>
       {/* NAV */}
