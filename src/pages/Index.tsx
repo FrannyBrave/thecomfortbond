@@ -61,7 +61,7 @@ const Index = () => {
             </div>
           </a>
           <ul className="nav-links">
-            <li><a href="#products">Engagement Kits</a></li>
+            <li><a href="#products"></a></li>
             
             <li><a href="/about">Our Story</a></li>
             <li><a href="/resources">Resources</a></li>
