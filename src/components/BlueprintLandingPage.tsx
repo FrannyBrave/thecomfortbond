@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
+import blueprintHero from "@/assets/blueprint-hero-mockup.png";
 
 /* ─── Brand tokens ─── */
 const c = {
@@ -191,30 +192,17 @@ export default function BlueprintLandingPage() {
           </div>
 
           {/* Right — image placeholder */}
-          <div
+          <img
+            src={blueprintHero}
+            alt="Premium mockup of The Programming Blueprint and Engagement Balance Wheel"
             style={{
-              aspectRatio: "4 / 3",
-              backgroundColor: c.creamAlt,
-              border: `1px solid ${c.gridline}`,
+              width: "100%",
+              height: "auto",
               borderRadius: "10px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "2rem",
-              textAlign: "center",
+              boxShadow: "0 8px 30px rgba(45,74,62,0.12)",
+              display: "block",
             }}
-          >
-            <span
-              style={{
-                fontSize: "0.8rem",
-                color: c.mutedWarm,
-                fontStyle: "italic",
-                maxWidth: "260px",
-              }}
-            >
-              Premium mockup of The Programming Blueprint and Engagement Balance Wheel
-            </span>
-          </div>
+          />
         </div>
       </Section>
 
