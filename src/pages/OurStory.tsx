@@ -74,7 +74,7 @@ const OurStory = () => {
 
             {/* Section: The Weight They Carry */}
             <h2 className="story-section-heading">The Weight They Carry</h2>
-            <p className="story-body">Here's what I learned the more I listened:</p>
+            <p className="story-body">Here's what I learned the more I researched:</p>
             <p className="story-body">These professionals are deeply committed to the people in their care. They don't see residents as room numbers. They see Margaret, who used to teach piano. James, who can still tell you every play from the '72 World Series. Helen, who lights up when someone asks about her garden.</p>
             <p className="story-body">But the systems around them aren't built to support that kind of care.</p>
             <p className="story-body">They're running multiple sessions a day with limited budgets and even more limited time. They're planning senior living activities on their lunch breaks. Searching for resources on Sunday nights. Printing things designed for children and spending hours adapting them — because what's available doesn't reflect the adults in front of them.</p>
