@@ -23,15 +23,84 @@ const c = {
 const serif = '"Playfair Display", Georgia, serif';
 const sans = '"DM Sans", system-ui, sans-serif';
 
+
 /* ─── Reusable email form ─── */
 function EmailCapture({ id }: { id: string }) {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // TODO: wire to email provider
-    console.log(`[${id}] submit:`, email);
+    console.log("Button was clicked! Starting submission...");
+    setStatus("loading");
+    setErrorMsg("");
+
+    const formId = import.meta.env.VITE_KIT_FORM_ID;
+    const apiKey = import.meta.env.VITE_KIT_API_KEY;
+
+    console.log("Kit API Key:", apiKey ? "Loaded" : "Missing", "Form ID:", formId);
+
+    if (!formId || !apiKey) {
+      setStatus("error");
+      setErrorMsg("Email service is not configured. Please contact us directly.");
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        "https://api.convertkit.com/v3/forms/" + formId + "/subscribe",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ api_key: apiKey, email }),
+        }
+      );
+
+      if (!res.ok) {
+        const body = await res.text();
+        console.error("[EmailCapture] API error:", res.status, body);
+        throw new Error("Subscription failed");
+      }
+
+      setStatus("success");
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg("Something went wrong. Please try again.");
+      console.error("[EmailCapture]", err);
+    }
   };
+
+  if (status === "success") {
+    return (
+      <div
+        style={{
+          maxWidth: "420px",
+          width: "100%",
+          backgroundColor: c.calloutBg,
+          border: `1px solid ${c.calloutBorder}`,
+          borderRadius: "8px",
+          padding: "1.25rem 1.5rem",
+          textAlign: "center",
+        }}
+      >
+        <p
+          style={{
+            fontFamily: serif,
+            fontSize: "1.05rem",
+            fontWeight: 600,
+            color: c.teal,
+            margin: "0 0 0.35rem",
+          }}
+        >
+          Success!
+        </p>
+        <p style={{ fontSize: "0.875rem", color: c.body, margin: 0, lineHeight: 1.6 }}>
+          Check your inbox to download your Blueprint.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} style={{ maxWidth: "420px", width: "100%" }}>
@@ -43,6 +112,7 @@ function EmailCapture({ id }: { id: string }) {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email Address"
           aria-label="Email Address"
+          disabled={status === "loading"}
           style={{
             flex: "1 1 220px",
             fontFamily: sans,
@@ -53,10 +123,13 @@ function EmailCapture({ id }: { id: string }) {
             backgroundColor: c.white,
             color: c.charcoal,
             outline: "none",
+            opacity: status === "loading" ? 0.6 : 1,
           }}
         />
         <button
           type="submit"
+          disabled={status === "loading"}
+          onClick={() => console.log("[EmailCapture] Button onClick fired")}
           style={{
             fontFamily: sans,
             fontSize: "0.85rem",
@@ -65,18 +138,35 @@ function EmailCapture({ id }: { id: string }) {
             padding: "0.8rem 1.5rem",
             border: "none",
             borderRadius: "6px",
-            backgroundColor: c.teal,
+            backgroundColor: status === "loading" ? c.tealLight : c.teal,
             color: c.white,
-            cursor: "pointer",
+            cursor: status === "loading" ? "not-allowed" : "pointer",
             whiteSpace: "nowrap",
             transition: "background-color 0.15s",
+            opacity: status === "loading" ? 0.7 : 1,
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = c.tealLight)}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = c.teal)}
+          onMouseEnter={(e) => {
+            if (status !== "loading") e.currentTarget.style.backgroundColor = c.tealLight;
+          }}
+          onMouseLeave={(e) => {
+            if (status !== "loading") e.currentTarget.style.backgroundColor = c.teal;
+          }}
         >
-          Download Your Free Blueprint
+          {status === "loading" ? "Sending..." : "Download Your Free Blueprint"}
         </button>
       </div>
+      {status === "error" && (
+        <p
+          style={{
+            fontSize: "0.775rem",
+            color: "#b44",
+            marginTop: "0.5rem",
+            marginBottom: 0,
+          }}
+        >
+          {errorMsg}
+        </p>
+      )}
       <p
         style={{
           fontSize: "0.7rem",
