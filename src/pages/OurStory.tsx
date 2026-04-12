@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import logoImg from "@/assets/logo.png";
 
 const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
