@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import BlueprintTest from "./pages/BlueprintTest";
 import BlueprintDocument from "./pages/BlueprintDocument";
 import BlueprintLandingPage from "./components/BlueprintLandingPage";
+import MorningSamplerLandingPage from "./components/MorningSamplerLandingPage";
 import { useCanonical } from "./hooks/useCanonical";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ function AppRoutes() {
           <Route path="/blueprint-test" element={<BlueprintTest />} />
           <Route path="/blueprint-pdf" element={<BlueprintDocument />} />
           <Route path="/blueprint" element={<BlueprintLandingPage />} />
+          <Route path="/free-sampler" element={<MorningSamplerLandingPage />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

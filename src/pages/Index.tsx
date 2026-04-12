@@ -557,32 +557,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ABOUT CTA */}
-      <section style={{ background: "var(--forest)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)", textAlign: "center" }}>
-        <div style={{ maxWidth: 600, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3vw,2.4rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", marginTop: 0, marginBottom: "1rem" }}>
-            See it for <em style={{ fontStyle: "italic", color: "var(--sand)" }}>yourself.</em>
-          </h2>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, fontWeight: 300, color: "rgba(255,255,255,0.7)", lineHeight: 1.7, marginBottom: "2rem" }}>
-            Start with The Morning Routine Sampler — a free, session-ready kit you can use immediately.
-          </p>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
-            <a
-              href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-              style={{ fontSize: 16, padding: "14px 32px" }}
-            >
-              Download the Free Sampler <ArrowSvg />
-            </a>
-            <a href="/about" style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: "var(--sand)", textDecoration: "underline", textUnderlineOffset: 3, transition: "opacity 0.2s" }}>
-              Read the Full Story →
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* FREE DOWNLOAD — safety net for non-buyers */}
       <section className="tcb-section" id="freebie" style={{ background: "var(--forest)", padding: "clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem)" }}>
         <div className="section-inner" style={{ maxWidth: 1100 }}>
@@ -681,6 +655,7 @@ const Index = () => {
             <h4>Resources</h4>
             <ul>
               <li><a href="/blueprint">Free Blueprint</a></li>
+              <li><a href="/free-sampler">Free Sampler</a></li>
               <li><a href="/resources">Blog</a></li>
               <li><a href="#honey-pot" onClick={(e) => {e.preventDefault();document.getElementById('honey-pot')?.scrollIntoView({ behavior: 'smooth' });}}>Free Sample</a></li>
             </ul>

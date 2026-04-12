@@ -81,6 +81,12 @@ export const FooterSection = () => {
                 Free Blueprint
               </a>
               <a
+                href="/free-sampler"
+                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
+              >
+                Free Sampler
+              </a>
+              <a
                 href="/resources"
                 className="text-sm text-forest/80 hover:text-terracotta transition-colors"
               >
