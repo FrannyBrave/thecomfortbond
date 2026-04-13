@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import samplerHero from "@/assets/sampler-breakfast-scene.png";
 import samplerMoments from "@/assets/sampler-sparks-moments.png";
+import samplerActivities from "@/assets/sampler-activities-overview.png";
 import logo from "@/assets/logo.png";
 
 /* ─── Palette ─── */
@@ -416,6 +417,23 @@ export default function MorningSamplerLandingPage() {
           </h2>
         </div>
       </section>
+
+      {/* ── Activities Overview Image ── */}
+      <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px 48px" }}>
+        <img
+          src={samplerActivities}
+          alt="The Morning Routine Sampler activities — Conversation Starters card, Word Link game, and Visual Spark photos laid out on a linen surface"
+          style={{
+            width: "100%",
+            height: "auto",
+            borderRadius: "10px",
+            boxShadow: "0 8px 30px rgba(61,43,31,0.1)",
+            display: "block",
+            maxWidth: 640,
+            margin: "0 auto",
+          }}
+        />
+      </div>
 
       {/* ── What's Inside + How It Works (forest green section) ── */}
       <section style={{ padding: "64px 0", background: "#2D4A3E" }}>
