@@ -427,8 +427,8 @@ export default function MorningSamplerLandingPage() {
         </div>
       </section>
 
-      {/* ── What's Inside ── */}
-      <section style={{ padding: "64px 0", background: c.sectionAlt }}>
+      {/* ── What's Inside + How It Works (forest green section) ── */}
+      <section style={{ padding: "64px 0", background: "#2D4A3E" }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
           <span
             style={{
@@ -437,7 +437,7 @@ export default function MorningSamplerLandingPage() {
               fontWeight: 500,
               letterSpacing: "3px",
               textTransform: "uppercase",
-              color: c.terracotta,
+              color: c.terracottaLight,
               marginBottom: "16px",
               display: "block",
               textAlign: "center",
@@ -451,7 +451,7 @@ export default function MorningSamplerLandingPage() {
               fontSize: "clamp(26px, 4vw, 30px)",
               fontWeight: 500,
               lineHeight: 1.35,
-              color: c.deepBrown,
+              color: c.cream,
               marginBottom: "24px",
               textAlign: "center",
             }}
@@ -464,9 +464,10 @@ export default function MorningSamplerLandingPage() {
                 key={item.title}
                 style={{
                   background: c.warmWhite,
-                  border: `1px solid ${c.borderWarm}`,
+                  border: "none",
                   borderRadius: "10px",
                   padding: "32px",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
                 }}
               >
                 <h3
@@ -484,12 +485,9 @@ export default function MorningSamplerLandingPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* ── How It Works ── */}
-      <section style={{ padding: "64px 0" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
+          <div style={{ width: 48, height: 1, background: "rgba(250,246,240,0.2)", margin: "56px auto" }} />
+
           <span
             style={{
               fontFamily: sans,
@@ -497,7 +495,7 @@ export default function MorningSamplerLandingPage() {
               fontWeight: 500,
               letterSpacing: "3px",
               textTransform: "uppercase",
-              color: c.terracotta,
+              color: c.terracottaLight,
               marginBottom: "16px",
               display: "block",
               textAlign: "center",
@@ -511,7 +509,7 @@ export default function MorningSamplerLandingPage() {
               fontSize: "clamp(26px, 4vw, 30px)",
               fontWeight: 500,
               lineHeight: 1.35,
-              color: c.deepBrown,
+              color: c.cream,
               marginBottom: "24px",
               textAlign: "center",
             }}
@@ -528,7 +526,7 @@ export default function MorningSamplerLandingPage() {
                     height: 40,
                     borderRadius: "50%",
                     background: c.terracotta,
-                    color: "#fff",
+                    color: c.cream,
                     fontFamily: serif,
                     fontSize: "18px",
                     fontWeight: 600,
@@ -540,10 +538,10 @@ export default function MorningSamplerLandingPage() {
                   {i + 1}
                 </div>
                 <div>
-                  <h3 style={{ fontFamily: serif, fontSize: "17px", fontWeight: 600, color: c.terracotta, marginBottom: "4px" }}>
+                  <h3 style={{ fontFamily: serif, fontSize: "17px", fontWeight: 600, color: c.terracottaLight, marginBottom: "4px" }}>
                     {step.title}
                   </h3>
-                  <p style={{ fontSize: "15px", color: c.warmGray, margin: 0 }}>{step.desc}</p>
+                  <p style={{ fontSize: "15px", color: "rgba(250,246,240,0.75)", margin: 0 }}>{step.desc}</p>
                 </div>
               </div>
             ))}
