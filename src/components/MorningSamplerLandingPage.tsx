@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import samplerHero from "@/assets/sampler-breakfast-scene.png";
 import samplerMoments from "@/assets/sampler-sparks-moments.png";
+import samplerActivities from "@/assets/sampler-activities-overview.png";
 import logo from "@/assets/logo.png";
 
 /* ─── Palette ─── */
