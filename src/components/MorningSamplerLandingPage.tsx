@@ -367,11 +367,12 @@ export default function MorningSamplerLandingPage() {
               <li
                 key={i}
                 style={{
-                  fontSize: "16px",
-                  lineHeight: 1.65,
-                  color: c.warmGray,
-                  padding: "6px 0",
-                  paddingLeft: "20px",
+                  fontSize: "17px",
+                  lineHeight: 1.7,
+                  color: "#1B3A4B",
+                  fontWeight: 500,
+                  padding: "7px 0",
+                  paddingLeft: "22px",
                   position: "relative" as const,
                 }}
               >
