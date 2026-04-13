@@ -360,21 +360,22 @@ export default function MorningSamplerLandingPage() {
       </section>
 
       {/* ── Pain ── */}
-      <section style={{ padding: "64px 0", background: c.sectionAlt }}>
+      <section style={{ padding: "48px 0", background: c.sectionAlt }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-          <ul style={{ listStyle: "none", padding: 0, maxWidth: 580, margin: "0 auto" }}>
+          <ul style={{ padding: 0, maxWidth: 560, margin: "0 auto", listStyle: "none" }}>
             {PAIN.map((text, i) => (
               <li
                 key={i}
                 style={{
-                  fontSize: "17px",
-                  lineHeight: 1.75,
+                  fontSize: "16px",
+                  lineHeight: 1.65,
                   color: c.warmGray,
-                  padding: "14px 0",
-                  borderBottom: i < PAIN.length - 1 ? `1px solid ${c.borderWarm}` : "none",
-                  textAlign: "center",
+                  padding: "6px 0",
+                  paddingLeft: "20px",
+                  position: "relative" as const,
                 }}
               >
+                <span style={{ position: "absolute", left: 0, color: c.terracotta }}>•</span>
                 {text}
               </li>
             ))}
@@ -412,18 +413,6 @@ export default function MorningSamplerLandingPage() {
             The Morning Routine Sampler&trade;
           </h2>
           <div style={{ width: 48, height: 1, background: c.borderWarm, margin: "40px auto" }} />
-          <div style={{ fontSize: "18px", lineHeight: 1.85, color: c.warmGray, maxWidth: 600, margin: "0 auto" }}>
-            <p style={{ marginBottom: "20px" }}>
-              A gentle starting point for your mornings. Three printable activity types &mdash;
-              designed to fill that quiet window with warmth, memory, and connection. No binder to
-              read. No setup to manage. Just print, sit down, and begin.
-            </p>
-            <p style={{ marginBottom: 0 }}>
-              The prompts are built around the universal rhythm of morning routines &mdash; the smell
-              of coffee, the sound of the radio, the chaos of getting out the door. They meet
-              residents in a place they already know.
-            </p>
-          </div>
         </div>
       </section>
 
