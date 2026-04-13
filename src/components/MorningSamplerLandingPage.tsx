@@ -360,21 +360,23 @@ export default function MorningSamplerLandingPage() {
       </section>
 
       {/* ── Pain ── */}
-      <section style={{ padding: "64px 0", background: c.sectionAlt }}>
+      <section style={{ padding: "48px 0", background: c.sectionAlt }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-          <ul style={{ listStyle: "none", padding: 0, maxWidth: 580, margin: "0 auto" }}>
+          <ul style={{ padding: 0, maxWidth: 440, margin: "0 auto", listStyle: "none" }}>
             {PAIN.map((text, i) => (
               <li
                 key={i}
                 style={{
                   fontSize: "17px",
-                  lineHeight: 1.75,
-                  color: c.warmGray,
-                  padding: "14px 0",
-                  borderBottom: i < PAIN.length - 1 ? `1px solid ${c.borderWarm}` : "none",
-                  textAlign: "center",
+                  lineHeight: 1.7,
+                  color: "#1B3A4B",
+                  fontWeight: 500,
+                  padding: "7px 0",
+                  paddingLeft: "22px",
+                  position: "relative" as const,
                 }}
               >
+                <span style={{ position: "absolute", left: 0, color: c.terracotta }}>•</span>
                 {text}
               </li>
             ))}
@@ -383,7 +385,7 @@ export default function MorningSamplerLandingPage() {
       </section>
 
       {/* ── Introduce the Sampler ── */}
-      <section style={{ padding: "64px 0" }}>
+      <section style={{ padding: "48px 0 24px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px", textAlign: "center" }}>
           <span
             style={{
@@ -411,24 +413,11 @@ export default function MorningSamplerLandingPage() {
           >
             The Morning Routine Sampler&trade;
           </h2>
-          <div style={{ width: 48, height: 1, background: c.borderWarm, margin: "40px auto" }} />
-          <div style={{ fontSize: "18px", lineHeight: 1.85, color: c.warmGray, maxWidth: 600, margin: "0 auto" }}>
-            <p style={{ marginBottom: "20px" }}>
-              A gentle starting point for your mornings. Three printable activity types &mdash;
-              designed to fill that quiet window with warmth, memory, and connection. No binder to
-              read. No setup to manage. Just print, sit down, and begin.
-            </p>
-            <p style={{ marginBottom: 0 }}>
-              The prompts are built around the universal rhythm of morning routines &mdash; the smell
-              of coffee, the sound of the radio, the chaos of getting out the door. They meet
-              residents in a place they already know.
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* ── What's Inside ── */}
-      <section style={{ padding: "64px 0", background: c.sectionAlt }}>
+      {/* ── What's Inside + How It Works (forest green section) ── */}
+      <section style={{ padding: "64px 0", background: "#2D4A3E" }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
           <span
             style={{
@@ -437,7 +426,7 @@ export default function MorningSamplerLandingPage() {
               fontWeight: 500,
               letterSpacing: "3px",
               textTransform: "uppercase",
-              color: c.terracotta,
+              color: c.terracottaLight,
               marginBottom: "16px",
               display: "block",
               textAlign: "center",
@@ -451,7 +440,7 @@ export default function MorningSamplerLandingPage() {
               fontSize: "clamp(26px, 4vw, 30px)",
               fontWeight: 500,
               lineHeight: 1.35,
-              color: c.deepBrown,
+              color: c.cream,
               marginBottom: "24px",
               textAlign: "center",
             }}
@@ -464,9 +453,10 @@ export default function MorningSamplerLandingPage() {
                 key={item.title}
                 style={{
                   background: c.warmWhite,
-                  border: `1px solid ${c.borderWarm}`,
+                  border: "none",
                   borderRadius: "10px",
                   padding: "32px",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
                 }}
               >
                 <h3
@@ -484,12 +474,9 @@ export default function MorningSamplerLandingPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* ── How It Works ── */}
-      <section style={{ padding: "64px 0" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
+          <div style={{ width: 48, height: 1, background: "rgba(250,246,240,0.2)", margin: "56px auto" }} />
+
           <span
             style={{
               fontFamily: sans,
@@ -497,7 +484,7 @@ export default function MorningSamplerLandingPage() {
               fontWeight: 500,
               letterSpacing: "3px",
               textTransform: "uppercase",
-              color: c.terracotta,
+              color: c.terracottaLight,
               marginBottom: "16px",
               display: "block",
               textAlign: "center",
@@ -511,7 +498,7 @@ export default function MorningSamplerLandingPage() {
               fontSize: "clamp(26px, 4vw, 30px)",
               fontWeight: 500,
               lineHeight: 1.35,
-              color: c.deepBrown,
+              color: c.cream,
               marginBottom: "24px",
               textAlign: "center",
             }}
@@ -528,7 +515,7 @@ export default function MorningSamplerLandingPage() {
                     height: 40,
                     borderRadius: "50%",
                     background: c.terracotta,
-                    color: "#fff",
+                    color: c.cream,
                     fontFamily: serif,
                     fontSize: "18px",
                     fontWeight: 600,
@@ -540,10 +527,10 @@ export default function MorningSamplerLandingPage() {
                   {i + 1}
                 </div>
                 <div>
-                  <h3 style={{ fontFamily: serif, fontSize: "17px", fontWeight: 600, color: c.terracotta, marginBottom: "4px" }}>
+                  <h3 style={{ fontFamily: serif, fontSize: "17px", fontWeight: 600, color: c.terracottaLight, marginBottom: "4px" }}>
                     {step.title}
                   </h3>
-                  <p style={{ fontSize: "15px", color: c.warmGray, margin: 0 }}>{step.desc}</p>
+                  <p style={{ fontSize: "15px", color: "rgba(250,246,240,0.75)", margin: 0 }}>{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -552,13 +539,14 @@ export default function MorningSamplerLandingPage() {
       </section>
 
       {/* ── CTA Section ── */}
-      <section style={{ padding: "64px 0", background: c.sectionAlt }}>
+      <section style={{ padding: "64px 0", background: "#E8D5C4" }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
           <div
             style={{
-              background: c.warmWhite,
-              border: `1px solid ${c.borderWarm}`,
+              background: c.cream,
+              border: "none",
               borderRadius: "12px",
+              boxShadow: "0 6px 24px rgba(61,43,31,0.12)",
               padding: "clamp(36px, 5vw, 52px) clamp(24px, 4vw, 40px)",
               textAlign: "center",
               maxWidth: 600,

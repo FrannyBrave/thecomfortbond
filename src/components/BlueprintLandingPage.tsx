@@ -462,14 +462,14 @@ export default function BlueprintLandingPage() {
       {/* ════════════════════════════════════════════
           SECTION 4 — WHAT'S INSIDE & HOW IT WORKS
          ════════════════════════════════════════════ */}
-      <Section bg={c.creamAlt}>
+      <Section bg={c.teal}>
         {/* What's Inside */}
         <h2
           style={{
             fontFamily: serif,
             fontSize: "clamp(1.35rem, 3vw, 1.75rem)",
             fontWeight: 600,
-            color: c.teal,
+            color: c.cream,
             textAlign: "center",
             margin: "0 0 2rem",
           }}
@@ -507,9 +507,10 @@ export default function BlueprintLandingPage() {
               key={i}
               style={{
                 backgroundColor: c.cream,
-                border: `1px solid ${c.gridline}`,
+                border: "none",
                 borderRadius: "8px",
                 padding: "1.5rem",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
               }}
             >
               <h3
@@ -537,7 +538,7 @@ export default function BlueprintLandingPage() {
               fontFamily: serif,
               fontSize: "clamp(1.15rem, 2.5vw, 1.4rem)",
               fontWeight: 600,
-              color: c.teal,
+              color: c.cream,
               margin: "0 0 2rem",
             }}
           >
@@ -564,7 +565,8 @@ export default function BlueprintLandingPage() {
                     fontSize: "1.75rem",
                     fontWeight: 600,
                     color: c.terracotta,
-                    opacity: 0.45,
+                    opacity: 1,
+                    
                     lineHeight: 1,
                     flexShrink: 0,
                     minWidth: "1.75rem",
@@ -573,7 +575,7 @@ export default function BlueprintLandingPage() {
                 >
                   {i + 1}
                 </span>
-                <span style={{ fontSize: "0.925rem", lineHeight: 1.6, color: c.body }}>
+                <span style={{ fontSize: "0.925rem", lineHeight: 1.6, color: "rgba(245,240,235,0.85)" }}>
                   {step}
                 </span>
               </div>
