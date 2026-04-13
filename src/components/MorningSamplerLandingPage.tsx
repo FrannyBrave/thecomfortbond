@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import samplerHero from "@/assets/morning-sampler-hero.png";
+import samplerHero from "@/assets/sampler-breakfast-scene.png";
+import samplerMoments from "@/assets/sampler-sparks-moments.png";
 import logo from "@/assets/logo.png";
 
 /* ─── Palette ─── */
@@ -537,6 +538,23 @@ export default function MorningSamplerLandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Emotional Image ── */}
+      <div style={{ maxWidth: 720, margin: "0 auto", padding: "48px 28px 0" }}>
+        <img
+          src={samplerMoments}
+          alt="A senior's hands holding a visual spark card — this sparks real moments between people"
+          style={{
+            width: "100%",
+            height: "auto",
+            borderRadius: "10px",
+            boxShadow: "0 8px 30px rgba(61,43,31,0.1)",
+            display: "block",
+            maxWidth: 640,
+            margin: "0 auto",
+          }}
+        />
+      </div>
 
       {/* ── CTA Section ── */}
       <section style={{ padding: "64px 0", background: "#E8D5C4" }}>
