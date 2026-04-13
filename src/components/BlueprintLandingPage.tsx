@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import blueprintHero from "@/assets/blueprint-hero-mockup.png";
+import blueprintCalm from "@/assets/blueprint-monday-calm.png";
 import logo from "@/assets/logo.png";
 
 /* ─── Brand tokens ─── */
