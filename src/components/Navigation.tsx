@@ -66,6 +66,7 @@ export const Navigation = () => {
               { label: "FAQ", href: "#faq" },
               { label: "Resources", href: "/resources" },
               { label: "Free Sample", href: "#honey-pot" },
+              { label: "Blueprint Pro", href: "/blueprint-pro" },
             ].map((link) => (
               <button
                 key={link.href}
@@ -128,6 +129,7 @@ export const Navigation = () => {
                 { label: "FAQ", href: "#faq" },
                 { label: "Resources", href: "/resources" },
                 { label: "Free Sample", href: "#honey-pot" },
+                { label: "Blueprint Pro", href: "/blueprint-pro" },
               ].map((link) => (
                 <button
                   key={link.href}
