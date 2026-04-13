@@ -552,13 +552,14 @@ export default function MorningSamplerLandingPage() {
       </section>
 
       {/* ── CTA Section ── */}
-      <section style={{ padding: "64px 0", background: c.sectionAlt }}>
+      <section style={{ padding: "64px 0", background: "#E8D5C4" }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
           <div
             style={{
-              background: c.warmWhite,
-              border: `1px solid ${c.borderWarm}`,
+              background: c.cream,
+              border: "none",
               borderRadius: "12px",
+              boxShadow: "0 6px 24px rgba(61,43,31,0.12)",
               padding: "clamp(36px, 5vw, 52px) clamp(24px, 4vw, 40px)",
               textAlign: "center",
               maxWidth: 600,
