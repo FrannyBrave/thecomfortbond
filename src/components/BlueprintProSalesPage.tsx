@@ -424,7 +424,7 @@ export default function BlueprintProSalesPage() {
           </div>
           {/* Pro card */}
           <div style={{ backgroundColor: c.forest, borderRadius: "14px", padding: "2rem", position: "relative", overflow: "hidden" }}>
-            <div style={{ position: "absolute", top: "0.75rem", right: "1rem", fontFamily: sans, fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: c.forest, backgroundColor: c.terracotta, padding: "0.25rem 0.75rem", borderRadius: "100px", color: "#fff" } as React.CSSProperties}>
+            <div style={{ position: "absolute", top: "0.75rem", right: "1rem", fontFamily: sans, fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", backgroundColor: c.terracotta, padding: "0.25rem 0.75rem", borderRadius: "100px", color: "#fff" }}>
               Recommended
             </div>
             <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.terracottaLight, margin: "0 0 0.5rem" }}>
