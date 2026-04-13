@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import blueprintHero from "@/assets/blueprint-hero-mockup.png";
+import blueprintCalm from "@/assets/blueprint-monday-calm.png";
 import logo from "@/assets/logo.png";
 
 /* ─── Brand tokens ─── */
@@ -350,6 +351,23 @@ export default function BlueprintLandingPage() {
           </p>
         </div>
       </Section>
+
+      {/* ═══════ EDITORIAL IMAGE — MONDAY CALM ═══════ */}
+      <section style={{ backgroundColor: c.cream, padding: "0 clamp(1.25rem, 5vw, 3rem)" }}>
+        <div style={{ maxWidth: "740px", margin: "0 auto" }}>
+          <img
+            src={blueprintCalm}
+            alt="The Monday Morning Calm — your week is already planned with The Programming Blueprint"
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: "14px",
+              boxShadow: "0 8px 30px rgba(45,74,62,0.1)",
+              display: "block",
+            }}
+          />
+        </div>
+      </section>
 
       {/* ═══════ WHAT'S INSIDE & HOW IT WORKS ═══════ */}
       <section style={{
