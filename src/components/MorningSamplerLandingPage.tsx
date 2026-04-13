@@ -362,7 +362,7 @@ export default function MorningSamplerLandingPage() {
       {/* ── Pain ── */}
       <section style={{ padding: "48px 0", background: c.sectionAlt }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-          <ul style={{ padding: 0, maxWidth: 560, margin: "0 auto", listStyle: "none" }}>
+          <ul style={{ padding: 0, maxWidth: 440, margin: "0 auto", listStyle: "none" }}>
             {PAIN.map((text, i) => (
               <li
                 key={i}
@@ -384,7 +384,7 @@ export default function MorningSamplerLandingPage() {
       </section>
 
       {/* ── Introduce the Sampler ── */}
-      <section style={{ padding: "64px 0" }}>
+      <section style={{ padding: "48px 0 24px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px", textAlign: "center" }}>
           <span
             style={{
@@ -412,7 +412,6 @@ export default function MorningSamplerLandingPage() {
           >
             The Morning Routine Sampler&trade;
           </h2>
-          <div style={{ width: 48, height: 1, background: c.borderWarm, margin: "40px auto" }} />
         </div>
       </section>
 
