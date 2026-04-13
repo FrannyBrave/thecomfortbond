@@ -462,7 +462,7 @@ export default function BlueprintLandingPage() {
       {/* ════════════════════════════════════════════
           SECTION 4 — WHAT'S INSIDE & HOW IT WORKS
          ════════════════════════════════════════════ */}
-      <Section bg="#1B3A4B">
+      <Section bg={c.teal}>
         {/* What's Inside */}
         <h2
           style={{
