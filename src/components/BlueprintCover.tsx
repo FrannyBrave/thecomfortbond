@@ -1,3 +1,6 @@
+import logo from "@/assets/logo.png";
+import balanceWheel from "@/assets/image_35.png";
+
 export default function BlueprintCover() {
   return (
     <div
@@ -12,27 +15,55 @@ export default function BlueprintCover() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-between",
-        padding: "clamp(2.5rem, 6vw, 4rem) clamp(2rem, 5vw, 3.5rem)",
-        position: "relative",
+        padding: "clamp(2.5rem, 5vw, 3.5rem) clamp(2rem, 5vw, 3.5rem) clamp(2rem, 4vw, 3rem)",
       }}
     >
-      {/* ── Brand Mark ── */}
-      <p
-        style={{
-          fontFamily: '"Playfair Display", Georgia, serif',
-          fontSize: "clamp(0.65rem, 1.2vw, 0.75rem)",
-          fontWeight: 600,
-          letterSpacing: "0.3em",
-          textTransform: "uppercase",
-          color: "#8B6F47",
-          margin: 0,
-        }}
-      >
-        The Comfort Bond™
-      </p>
+      {/* ── 1. Header Logo Block ── */}
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }}>
+        <img
+          src={logo}
+          alt="The Comfort Bond"
+          style={{
+            width: "clamp(48px, 6vw, 60px)",
+            height: "clamp(48px, 6vw, 60px)",
+            borderRadius: "50%",
+            objectFit: "cover",
+          }}
+        />
+        <p
+          style={{
+            fontFamily: '"Playfair Display", Georgia, serif',
+            fontSize: "clamp(0.6rem, 1vw, 0.7rem)",
+            fontWeight: 600,
+            letterSpacing: "0.35em",
+            textTransform: "uppercase",
+            color: "#2d4a3e",
+            margin: 0,
+          }}
+        >
+          The Comfort Bond&trade;
+        </p>
+      </div>
 
-      {/* ── Title Block — vertically centered via flex ── */}
+      {/* ── 2. Breathing Room ── */}
+      <div style={{ flex: "1 1 0" }} />
+
+      {/* ── 3. Balance Wheel Hero ── */}
+      <img
+        src={balanceWheel}
+        alt="Engagement Balance Wheel — Physical, Mental, Social, Emotional, Purposeful, Creative, Learning, Spiritual"
+        style={{
+          width: "clamp(240px, 42vw, 340px)",
+          height: "auto",
+          display: "block",
+          borderRadius: "8px",
+        }}
+      />
+
+      {/* ── Spacer between wheel and title ── */}
+      <div style={{ height: "clamp(1.75rem, 4vw, 2.75rem)" }} />
+
+      {/* ── 4. Main Title Block ── */}
       <div style={{ textAlign: "center", maxWidth: "520px" }}>
         <h1
           style={{
@@ -40,9 +71,10 @@ export default function BlueprintCover() {
             fontSize: "clamp(2rem, 5vw, 2.75rem)",
             fontWeight: 600,
             color: "#2d4a3e",
-            margin: "0 0 0.625rem",
+            margin: "0 0 0.5rem",
             lineHeight: 1.15,
             letterSpacing: "-0.015em",
+            fontStyle: "italic",
           }}
         >
           The Weekly Blueprint
@@ -51,8 +83,8 @@ export default function BlueprintCover() {
         <p
           style={{
             fontFamily: '"DM Sans", system-ui, sans-serif',
-            fontSize: "clamp(0.95rem, 1.8vw, 1.125rem)",
-            fontWeight: 300,
+            fontSize: "clamp(0.9rem, 1.7vw, 1.05rem)",
+            fontWeight: 400,
             color: "#6B5D4F",
             margin: "0 0 1.5rem",
             letterSpacing: "0.02em",
@@ -63,17 +95,18 @@ export default function BlueprintCover() {
 
         <div
           style={{
-            width: "3.5rem",
-            height: "1px",
+            width: "3rem",
+            height: "1.5px",
             backgroundColor: "#8B6F47",
             margin: "0 auto 1.5rem",
+            borderRadius: "1px",
           }}
         />
 
         <p
           style={{
             fontFamily: '"Playfair Display", Georgia, serif',
-            fontSize: "clamp(0.825rem, 1.5vw, 0.95rem)",
+            fontSize: "clamp(0.8rem, 1.4vw, 0.925rem)",
             fontStyle: "italic",
             fontWeight: 400,
             color: "#9A8E80",
@@ -85,10 +118,12 @@ export default function BlueprintCover() {
         </p>
       </div>
 
-      {/* ── Footer URL ── */}
+      {/* ── 5. Bottom spacer + footer ── */}
+      <div style={{ flex: "1 1 0" }} />
+
       <p
         style={{
-          fontSize: "clamp(0.6rem, 1vw, 0.675rem)",
+          fontSize: "clamp(0.55rem, 0.9vw, 0.625rem)",
           fontWeight: 400,
           color: "#A89E92",
           margin: 0,
@@ -106,7 +141,7 @@ export default function BlueprintCover() {
             max-width: 100% !important;
             height: 100vh;
             aspect-ratio: auto !important;
-            padding: 3rem 2.5rem !important;
+            padding: 2.5rem !important;
             break-after: page;
           }
         }

@@ -155,16 +155,7 @@ export default function WeeklyReflectionNotes() {
       </div>
 
       {/* ── Balance Check ── */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "0.75rem",
-          margin: "1.25rem 0",
-          flexShrink: 0,
-        }}
-      >
+      <div style={{ margin: "1.25rem 0", flexShrink: 0 }}>
         <span
           style={{
             fontSize: "0.65rem",
@@ -172,32 +163,51 @@ export default function WeeklyReflectionNotes() {
             textTransform: "uppercase",
             letterSpacing: "0.06em",
             color: colors.terracotta,
-            marginRight: "0.25rem",
+            display: "block",
+            marginBottom: "0.6rem",
+            textAlign: "center",
           }}
         >
           Balance Check
         </span>
-        {DIMENSIONS.map((d) => (
-          <div
-            key={d}
-            title={DIMENSION_LABELS[d]}
-            style={{
-              width: "2rem",
-              height: "2rem",
-              borderRadius: "50%",
-              border: `1.25px solid ${colors.gridline}`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "0.625rem",
-              fontWeight: 600,
-              color: colors.teal,
-              cursor: "default",
-            }}
-          >
-            {d}
-          </div>
-        ))}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "0.5rem 1.25rem",
+          }}
+        >
+          {DIMENSIONS.map((d) => (
+            <div
+              key={d}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.4rem",
+              }}
+            >
+              <div
+                style={{
+                  width: "0.85rem",
+                  height: "0.85rem",
+                  border: `1.25px solid ${colors.gridline}`,
+                  borderRadius: "2px",
+                  flexShrink: 0,
+                }}
+              />
+              <span
+                style={{
+                  fontSize: "0.75rem",
+                  fontWeight: 500,
+                  color: colors.teal,
+                }}
+              >
+                {DIMENSION_LABELS[d]}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* ── Divider ── */}

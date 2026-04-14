@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] as const;
+const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] as const;
 const DIMENSIONS = ["C", "So", "Se", "P", "Cr", "Sp"] as const;
 
 const colors = {

@@ -1,3 +1,5 @@
+import kitsImage from "@/assets/image_66.png";
+
 const KITS = [
   {
     name: "The Nostalgia Kit",
@@ -48,11 +50,25 @@ export default function BlueprintEcosystem() {
         backgroundColor: colors.cream,
         fontFamily: '"DM Sans", system-ui, sans-serif',
         color: colors.textBody,
-        padding: "clamp(2rem, 5vw, 3.5rem)",
+        padding: "3rem 2.25rem 2rem",
         display: "flex",
         flexDirection: "column",
       }}
     >
+      {/* ── Hero Image ── */}
+      <img
+        src={kitsImage}
+        alt="Comfort Bond engagement kit pages and conversation cards laid out on a warm surface"
+        style={{
+          width: "100%",
+          height: "auto",
+          borderRadius: "8px",
+          marginBottom: "1.25rem",
+          display: "block",
+          boxShadow: "0 4px 16px rgba(27,58,75,0.08)",
+        }}
+      />
+
       {/* ── Header ── */}
       <h1
         style={{
@@ -72,7 +88,7 @@ export default function BlueprintEcosystem() {
           width: "2.5rem",
           height: "1.5px",
           backgroundColor: colors.terracotta,
-          marginBottom: "1.75rem",
+          marginBottom: "1rem",
           borderRadius: "1px",
         }}
       />
@@ -84,7 +100,7 @@ export default function BlueprintEcosystem() {
           lineHeight: 1.8,
           color: colors.textBody,
           maxWidth: "640px",
-          margin: "0 0 2.25rem",
+          margin: "0 0 1.25rem",
         }}
       >
         The Weekly Blueprint helps you plan. But every plan needs content to fill it. The Comfort

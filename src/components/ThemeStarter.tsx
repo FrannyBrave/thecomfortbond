@@ -109,55 +109,27 @@ export default function ThemeStarter() {
 
         <ol
           style={{
-            listStyle: "none",
             margin: 0,
             padding: 0,
+            paddingLeft: "1.5rem",
             display: "flex",
             flexDirection: "column",
-            gap: "0.625rem",
+            gap: "0.75rem",
+            listStyleType: "decimal",
           }}
         >
           {PROMPTS.map((prompt, i) => (
             <li
               key={i}
               style={{
-                display: "flex",
-                gap: "1rem",
-                alignItems: "baseline",
-                padding: "1rem 1.25rem",
-                borderRadius: "8px",
-                backgroundColor: i % 2 === 0 ? colors.cardAlt : "transparent",
-                border: i % 2 === 1 ? `1px solid ${colors.gridline}` : "1px solid transparent",
+                fontSize: "clamp(0.9rem, 1.6vw, 1.025rem)",
+                lineHeight: 1.7,
+                color: colors.teal,
+                fontWeight: 400,
+                paddingLeft: "0.5rem",
               }}
             >
-              {/* Number */}
-              <span
-                style={{
-                  fontFamily: '"Playfair Display", Georgia, serif',
-                  fontSize: "1.5rem",
-                  fontWeight: 600,
-                  lineHeight: 1,
-                  color: colors.terracotta,
-                  opacity: 0.55,
-                  flexShrink: 0,
-                  minWidth: "1.5rem",
-                  textAlign: "right",
-                }}
-              >
-                {i + 1}
-              </span>
-
-              {/* Prompt text */}
-              <span
-                style={{
-                  fontSize: "clamp(0.9rem, 1.6vw, 1.025rem)",
-                  lineHeight: 1.65,
-                  color: colors.teal,
-                  fontWeight: 400,
-                }}
-              >
-                {`\u201C${prompt}\u201D`}
-              </span>
+              {`\u201C${prompt}\u201D`}
             </li>
           ))}
         </ol>

@@ -1,4 +1,7 @@
 import logo from "@/assets/logo.png";
+import transitionThemes from "@/assets/image_48.png";
+import transitionResources from "@/assets/image_49.png";
+import closingImage from "@/assets/image_47.png";
 import content from "../../blueprint_pro_q3_content_v2.json";
 
 /* ─── Design tokens ─── */
@@ -18,7 +21,7 @@ const c = {
 const serif = '"Playfair Display", Georgia, serif';
 const sans = '"DM Sans", system-ui, sans-serif';
 
-const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const DIMS = [
   { key: "C", label: "Cognitive", color: "#4A7C9B" },
   { key: "So", label: "Social", color: "#7B6B8A" },
@@ -71,10 +74,10 @@ function Rule() {
   return <div style={{ width: "2.5rem", height: "1.5px", backgroundColor: c.terracotta, margin: "0.75rem 0", borderRadius: "1px" }} />;
 }
 
-function Foot({ children }: { children: React.ReactNode }) {
+function Foot({ children, page }: { children: React.ReactNode; page?: number }) {
   return (
     <p style={{ fontFamily: sans, fontSize: "0.55rem", color: c.muted, textAlign: "center", margin: "auto 0 0", paddingTop: "0.75rem" }}>
-      {children}
+      {children}{page != null && <> &nbsp;|&nbsp; Page {page}</>}
     </p>
   );
 }
@@ -150,7 +153,7 @@ function WelcomePage() {
           ))}
         </ol>
       </div>
-      <Foot>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
+      <Foot page={2}>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
     </Page>
   );
 }
@@ -238,7 +241,7 @@ function BalanceWheelPage() {
           </div>
         ))}
       </div>
-      <Foot>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
+      <Foot page={3}>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
     </Page>
   );
 }
@@ -267,7 +270,7 @@ function QuarterlyOverviewPage() {
           </div>
         ))}
       </div>
-      <Foot>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
+      <Foot page={4}>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
     </Page>
   );
 }
@@ -275,7 +278,7 @@ function QuarterlyOverviewPage() {
 /* ═══════════════════════════════════════════
    PAGES 5-17 — WEEKLY PLANNING PAGES
    ═══════════════════════════════════════════ */
-function WeeklyPlanningPage({ week }: { week: Week }) {
+function WeeklyPlanningPage({ week, pageNum }: { week: Week; pageNum: number }) {
   return (
     <Page>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", borderBottom: `1.5px solid ${c.terracotta}`, paddingBottom: "0.5rem", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
@@ -321,7 +324,7 @@ function WeeklyPlanningPage({ week }: { week: Week }) {
         <span style={{ flex: 1, borderBottom: `1.5px dotted ${c.gridline}` }}>&nbsp;</span>
       </div>
 
-      <Foot>Week {week.week} &middot; The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
+      <Foot page={pageNum}>Week {week.week} &middot; The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
     </Page>
   );
 }
@@ -379,7 +382,7 @@ function ThemeGuideBlock({ week, isFirst }: { week: Week; isFirst: boolean }) {
   );
 }
 
-function ThemeGuidePage({ weeks, pageLabel }: { weeks: Week[]; pageLabel: string }) {
+function ThemeGuidePage({ weeks, pageLabel, pageNum }: { weeks: Week[]; pageLabel: string; pageNum: number }) {
   return (
     <Page>
       <SectionLabel>Theme Guides</SectionLabel>
@@ -388,7 +391,7 @@ function ThemeGuidePage({ weeks, pageLabel }: { weeks: Week[]; pageLabel: string
       <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
         {weeks.map((w, i) => <ThemeGuideBlock key={w.week} week={w} isFirst={i === 0} />)}
       </div>
-      <Foot>{pageLabel} &middot; The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
+      <Foot page={pageNum}>{pageLabel} &middot; The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
     </Page>
   );
 }
@@ -396,7 +399,7 @@ function ThemeGuidePage({ weeks, pageLabel }: { weeks: Week[]; pageLabel: string
 /* ═══════════════════════════════════════════
    PAGES 25-27 — RESOURCE INTEGRATION GUIDE
    ═══════════════════════════════════════════ */
-function ResourceGuidePage({ weeks, pageNum }: { weeks: Week[]; pageNum: number }) {
+function ResourceGuidePage({ weeks, pageNum, globalPage }: { weeks: Week[]; pageNum: number; globalPage: number }) {
   return (
     <Page>
       {pageNum === 1 && (
@@ -434,7 +437,7 @@ function ResourceGuidePage({ weeks, pageNum }: { weeks: Week[]; pageNum: number 
           </div>
         ))}
       </div>
-      <Foot>Resource Guide &middot; The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
+      <Foot page={globalPage}>Resource Guide &middot; The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
     </Page>
   );
 }
@@ -455,7 +458,7 @@ function NotesPage() {
       <p style={{ fontFamily: sans, fontSize: "0.5rem", color: c.muted, textAlign: "center", fontStyle: "italic", margin: "0.75rem 0 0" }}>
         Supply lists, activity variations, resident preferences, family follow-ups, ideas for next quarter…
       </p>
-      <Foot>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
+      <Foot page={30}>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
     </Page>
   );
 }
@@ -477,13 +480,48 @@ function NextQuarterPage() {
           Thirteen new themes, coaching tips, and resource connections — delivered before you need them.
         </p>
         <p style={{ fontFamily: sans, fontSize: "0.7rem", color: c.bronze, fontWeight: 500 }}>Your next edition arrives by August 30, 2026.</p>
-        <div style={{ width: "3rem", height: "1.5px", backgroundColor: c.terracotta, margin: "2rem auto", borderRadius: "1px" }} />
+        {/* Closing visual */}
+        <img
+          src={closingImage}
+          alt="Activity Director and senior resident watching an autumn sunset together"
+          style={{
+            width: "100%",
+            maxWidth: "380px",
+            height: "auto",
+            borderRadius: "10px",
+            margin: "1.5rem auto",
+            display: "block",
+            boxShadow: "0 4px 16px rgba(27,58,75,0.08)",
+          }}
+        />
         <p style={{ fontFamily: serif, fontSize: "0.8rem", fontStyle: "italic", color: c.muted, maxWidth: "400px" }}>
-          "Your residents deserve more than random activities. They deserve a system."
+          Your residents deserve more than random activities. They deserve a system.
         </p>
         <p style={{ fontFamily: sans, fontSize: "0.65rem", color: c.bronze, marginTop: "1.5rem" }}>www.thecomfortbond.com/blueprint-pro</p>
       </div>
-      <Foot>The Programming Blueprint™ Pro &middot; The Comfort Bond™</Foot>
+      <Foot page={31}>The Programming Blueprint™ Pro &middot; The Comfort Bond™</Foot>
+    </Page>
+  );
+}
+
+/* ─── Transition image pages ─── */
+function TransitionImagePage({ src, alt, pageNum }: { src: string; alt: string; pageNum: number }) {
+  return (
+    <Page>
+      <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", padding: "1.5rem 0" }}>
+        <img
+          src={src}
+          alt={alt}
+          style={{
+            width: "100%",
+            height: "auto",
+            borderRadius: "10px",
+            display: "block",
+            boxShadow: "0 6px 24px rgba(27,58,75,0.08)",
+          }}
+        />
+      </div>
+      <Foot page={pageNum}>The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
     </Page>
   );
 }
@@ -512,11 +550,18 @@ export default function BlueprintProDocument() {
         <WelcomePage />
         <BalanceWheelPage />
         <QuarterlyOverviewPage />
-        {content.map((w) => <WeeklyPlanningPage key={w.week} week={w} />)}
+        {/* Pages 5–17: Weekly Planning */}
+        {content.map((w) => <WeeklyPlanningPage key={w.week} week={w} pageNum={4 + w.week} />)}
+        {/* Page 18: Transition — before Theme Guides */}
+        <TransitionImagePage src={transitionThemes} alt="Green leather notebook flat lay with planning materials" pageNum={18} />
+        {/* Pages 19–25: Theme Guides */}
         {themePages.map((pair, i) => (
-          <ThemeGuidePage key={i} weeks={pair} pageLabel={`Themes ${pair[0].week}${pair[1] ? `\u2013${pair[1].week}` : ""}`} />
+          <ThemeGuidePage key={i} weeks={pair} pageLabel={`Themes ${pair[0].week}${pair[1] ? `\u2013${pair[1].week}` : ""}`} pageNum={19 + i} />
         ))}
-        {resPages.map((chunk, i) => <ResourceGuidePage key={i} weeks={chunk} pageNum={i + 1} />)}
+        {/* Page 26: Transition — before Resource Guide */}
+        <TransitionImagePage src={transitionResources} alt="Organized wooden box with engagement cards and activity materials" pageNum={26} />
+        {/* Pages 27–29: Resource Guide */}
+        {resPages.map((chunk, i) => <ResourceGuidePage key={i} weeks={chunk} pageNum={i + 1} globalPage={27 + i} />)}
         <NotesPage />
         <NextQuarterPage />
       </div>

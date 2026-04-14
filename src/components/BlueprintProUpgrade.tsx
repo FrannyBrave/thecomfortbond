@@ -1,3 +1,5 @@
+import proImage from "@/assets/image_67.png";
+
 const FEATURES = [
   {
     title: "13-Week Quarterly Planning Framework",
@@ -18,11 +20,6 @@ const FEATURES = [
     title: "Seasonal Theme Calendar",
     detail:
       "With national observances, heritage months, and ready-made theme ideas for every single week",
-  },
-  {
-    title: "The Planning Community",
-    detail:
-      "A private group of Activity Directors using the system, sharing ideas, and supporting each other",
   },
   {
     title: "Priority Access",
@@ -54,13 +51,27 @@ export default function BlueprintProUpgrade() {
         backgroundColor: colors.cream,
         fontFamily: '"DM Sans", system-ui, sans-serif',
         color: colors.textBody,
-        padding: "clamp(2rem, 5vw, 3.5rem)",
+        padding: "3rem 2.25rem 2rem",
         display: "flex",
         flexDirection: "column",
       }}
     >
+      {/* ── Hero Image ── */}
+      <img
+        src={proImage}
+        alt="The Programming Blueprint Pro quarterly planner with dark leather notebook and gold pen"
+        style={{
+          width: "100%",
+          height: "auto",
+          borderRadius: "8px",
+          marginBottom: "1.25rem",
+          display: "block",
+          boxShadow: "0 4px 16px rgba(27,58,75,0.08)",
+        }}
+      />
+
       {/* ── Header ── */}
-      <header style={{ marginBottom: "2rem" }}>
+      <header style={{ marginBottom: "1.25rem" }}>
         <h1
           style={{
             fontFamily: '"Playfair Display", Georgia, serif',
@@ -97,7 +108,7 @@ export default function BlueprintProUpgrade() {
       </header>
 
       {/* ── What's Included ── */}
-      <section style={{ marginBottom: "2rem" }}>
+      <section style={{ marginBottom: "1.25rem" }}>
         <h2
           style={{
             fontFamily: '"Playfair Display", Georgia, serif',
@@ -119,7 +130,7 @@ export default function BlueprintProUpgrade() {
             padding: 0,
             display: "flex",
             flexDirection: "column",
-            gap: "0.875rem",
+            gap: "0.65rem",
           }}
         >
           {FEATURES.map((feat, i) => (
@@ -169,42 +180,6 @@ export default function BlueprintProUpgrade() {
           ))}
         </ul>
       </section>
-
-      {/* ── Price Statement ── */}
-      <div
-        style={{
-          borderTop: `1px solid ${colors.gridline}`,
-          borderBottom: `1px solid ${colors.gridline}`,
-          padding: "1.25rem 0",
-          marginBottom: "1.5rem",
-          maxWidth: "560px",
-        }}
-      >
-        <p
-          style={{
-            fontFamily: '"Playfair Display", Georgia, serif',
-            fontSize: "clamp(1rem, 2vw, 1.15rem)",
-            fontWeight: 600,
-            color: colors.teal,
-            margin: "0 0 0.5rem",
-            lineHeight: 1.35,
-          }}
-        >
-          $99/year. Four quarterly editions. One system that changes how you plan.
-        </p>
-        <p
-          style={{
-            fontSize: "clamp(0.8rem, 1.4vw, 0.875rem)",
-            lineHeight: 1.65,
-            color: colors.muted,
-            margin: 0,
-            fontStyle: "italic",
-          }}
-        >
-          That's $1.90 per week&nbsp;— less than the coffee you're drinking while you scramble to
-          plan tomorrow's activities.
-        </p>
-      </div>
 
       {/* ── CTA Link ── */}
       <p
