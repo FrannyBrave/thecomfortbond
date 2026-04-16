@@ -56,25 +56,28 @@ const PrivacyPolicy = () => {
 
             {/* Section 2 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">2. Merchant of Record (Gumroad)</h2>
+              <h2 className="font-display text-xl text-forest">2. Merchant of Record (Paddle)</h2>
               <p>
-                Our store uses Gumroad as our Merchant of Record.
+                We use Paddle.com as our Merchant of Record and payment processor. When you make a
+                purchase, your payment data (such as credit card information) is collected and
+                processed securely directly by Paddle. We do not store or process your raw payment
+                details on our servers.
               </p>
               <p>This means that:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Gumroad securely processes all payments.</li>
+                <li>Paddle securely processes all payments and handles global tax compliance.</li>
                 <li>We do not collect, store, or have access to your credit card or banking details.</li>
-                <li>Transactional emails (receipts, download links) are sent directly by Gumroad.</li>
+                <li>Transactional emails (receipts, download links) are sent directly by Paddle.</li>
               </ul>
               <p>
-                For details on how financial information is handled, please review{" "}
-                <a 
-                  href="https://gumroad.com/privacy" 
-                  target="_blank" 
+                You can review Paddle's Privacy Policy at{" "}
+                <a
+                  href="https://www.paddle.com/legal/privacy"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-sage hover:text-forest underline transition-colors"
                 >
-                  Gumroad's Privacy Policy
+                  paddle.com/legal/privacy
                 </a>.
               </p>
             </section>
@@ -120,7 +123,7 @@ const PrivacyPolicy = () => {
               </p>
               <p><strong>Third-Party Services:</strong></p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Payments and file delivery are handled by Gumroad.</li>
+                <li>Payments, tax compliance, and file delivery are handled by Paddle.com.</li>
                 <li>Website hosting and presentation are handled by Lovable.</li>
                 <li>
                   Some content may be hosted on third-party platforms such as YouTube. Viewing this
