@@ -166,7 +166,7 @@ export const Navigation = () => {
                 </Button>
               </div>
               <div className="pt-0 px-2">
-                <Button variant="cta" size="lg" className="w-full" onClick={() => { setIsMobileMenuOpen(false); setTimeout(() => { window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer"); }, 0); }}>
+                <Button variant="cta" size="lg" className="w-full" onClick={() => { setIsMobileMenuOpen(false); navigate("/kits"); }}>
                   Shop Now
                 </Button>
               </div>
