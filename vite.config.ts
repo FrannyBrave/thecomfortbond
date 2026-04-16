@@ -50,6 +50,9 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    headers: {
+      // Headers are applied globally in dev; production headers need deployment config
+    },
   },
   plugins: [react(), sitemapPlugin(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
