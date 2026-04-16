@@ -19,6 +19,7 @@ import BlueprintProSalesPage from "./components/BlueprintProSalesPage";
 import Kits from "./pages/Kits";
 import RefundPolicy from "./pages/RefundPolicy";
 import BundleAccess from "./pages/BundleAccess";
+import ThankYou from "./pages/ThankYou";
 import { useCanonical } from "./hooks/useCanonical";
 import { useEffect } from "react";
 import { preloadPaddle } from "./lib/paddle";
@@ -48,6 +49,7 @@ function AppRoutes() {
           <Route path="/kits" element={<Kits />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/bundle-access" element={<BundleAccess />} />
+          <Route path="/thank-you/:slug" element={<ThankYou />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

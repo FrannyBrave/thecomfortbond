@@ -12,17 +12,17 @@ const CLIENT_TOKEN = "live_bd95fc6721aad743909ee0f4cbd";
 /** Map of Paddle Price ID → secure post-purchase download URL. */
 export const PRICE_REDIRECTS: Record<string, string> = {
   // The Programming Blueprint™ Pro
-  pri_01kpagj5jtaxcnkbtjctq616k4: "/downloads/blueprint-pro.pdf",
+  pri_01kpagj5jtaxcnkbtjctq616k4: "/thank-you/blueprint-pro",
   // The Nostalgia Kit
-  pri_01kpafx84h0z9z11fwc5m84dam: "/downloads/nostalgia-kit.pdf",
+  pri_01kpafx84h0z9z11fwc5m84dam: "/thank-you/nostalgia-kit",
   // The Heirloom Garden Kit
-  pri_01kpafvx3erd68458p4em99141: "/downloads/heirloom-garden-kit.pdf",
+  pri_01kpafvx3erd68458p4em99141: "/thank-you/heirloom-garden-kit",
   // The Makers & Menders Kit
-  pri_01kpafv0r50q149ctgje0dmn0q: "/downloads/makers-menders-kit.pdf",
+  pri_01kpafv0r50q149ctgje0dmn0q: "/thank-you/makers-and-menders-kit",
   // The "Are We There Yet?" Kit
-  pri_01kpafwqs0wwzatbs5721cyfmk: "/downloads/Are-We-There-Yet.pdf",
+  pri_01kpafwqs0wwzatbs5721cyfmk: "/thank-you/are-we-there-yet-kit",
   // The Heart of the Home Kit
-  pri_01kpafxq9xrqg0qhqfttzdjswf: "/downloads/Heart-of-the-Home.pdf",
+  pri_01kpafxq9xrqg0qhqfttzdjswf: "/thank-you/heart-of-the-home-kit",
   // The 5-Kit Bundle (Complete Engagement System) — routes to a hidden access hub
   pri_01kpafqz2tc4pfc262j1dnh531: "/bundle-access",
 };
