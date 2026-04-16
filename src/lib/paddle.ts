@@ -106,6 +106,12 @@ async function initPaddle(): Promise<void> {
   initialized = true;
 }
 
+/** Map of Paddle Price ID → Discount ID to auto-apply at checkout. */
+const PRICE_DISCOUNTS: Record<string, string> = {
+  // The 5-Kit Bundle — 10% off
+  pri_01kpafqz2tc4pfc262j1dnh531: "dsc_01kpbrz4n63ahb07e9dvwbjb0n",
+};
+
 /**
  * Open the Paddle Billing overlay checkout for a single Price ID.
  * Auto-loads + initializes Paddle.js on first call.
@@ -114,8 +120,10 @@ export async function openPaddleCheckout(priceId: string): Promise<void> {
   try {
     await initPaddle();
     if (!window.Paddle) throw new Error("Paddle not available");
+    const discountId = PRICE_DISCOUNTS[priceId];
     window.Paddle.Checkout.open({
       items: [{ priceId, quantity: 1 }],
+      ...(discountId ? { discountId } : {}),
     });
   } catch (err) {
     console.error("[Paddle] Failed to open checkout", err);
