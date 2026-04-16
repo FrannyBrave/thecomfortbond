@@ -109,7 +109,7 @@ export const articles: Article[] = [
   {
     slug: "beyond-bingo-for-seniors",
     metaDescription: "End weekend handoff anxiety. Learn how facilitator-ready engagement kits turn volunteers and part-time staff into confident activity leaders in senior living communities.",
-    datePublished: "2026-02-05",
+    datePublished: "2026-03-06",
     dateModified: "2026-04-10",
     title: "Empowering Weekend Staff and Volunteers Without the Risk",
     category: "PROGRAMMING",
