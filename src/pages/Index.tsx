@@ -122,7 +122,7 @@ const Index = () => {
                 <div className="hc-badge-row">
                   <div className="hc-badge">PDF · Print &amp; Go</div>
                   <div className="hc-badge">All cognitive levels</div>
-                  <div className="hc-badge">From $35.99</div>
+                  <div className="hc-badge">From $32.99</div>
                 </div>
               </div>
             </div>
@@ -169,7 +169,7 @@ const Index = () => {
                 highlights: ["Drive-In Movies vs. Streaming — Then & Now debate cards", "Name That Jukebox Tune — 1950s–80s hits", "Poodle Skirts to Bell Bottoms — fashion flashback trivia"],
                 bestFor: "Mixed groups, all cognitive levels",
                 popular: true,
-                price: "$35.99",
+                price: "$32.99",
                 url: "https://thecomfortbond.gumroad.com/l/nostalgiakit"
               },
               {
@@ -181,7 +181,7 @@ const Index = () => {
                 highlights: ["Sunday Supper memories — what was on your table?", "Vintage kitchen gadgets trivia — name that tool", "Comfort food BINGO — from pot roast to pie"],
                 bestFor: "Women's groups, sensory engagement",
                 popular: false,
-                price: "$35.99",
+                price: "$32.99",
                 url: "https://thecomfortbond.gumroad.com/l/heartofthehomekit"
               },
               {
@@ -193,7 +193,7 @@ const Index = () => {
                 highlights: ["Station wagon packing list — what did you bring?", "Roadside diner trivia — Route 66 & beyond", "National parks BINGO — from Yellowstone to Yosemite"],
                 bestFor: "High-energy sessions, mixed groups",
                 popular: false,
-                price: "$35.99",
+                price: "$32.99",
                 url: "https://thecomfortbond.gumroad.com/l/arewethereyetkit"
               },
               {
@@ -205,7 +205,7 @@ const Index = () => {
                 highlights: ["Spring planting memories — what grew in your yard?", "Farmer's almanac trivia — weather, seasons & folklore", "Backyard harvest BINGO — tomatoes to tulips"],
                 bestFor: "Spring/summer programming, garden clubs",
                 popular: false,
-                price: "$35.99",
+                price: "$32.99",
                 url: "https://thecomfortbond.gumroad.com/l/heirloomgardenkit"
               },
               {
@@ -217,7 +217,7 @@ const Index = () => {
                 highlights: ["Tool shed vs. sewing basket — what did you make?", "Fix-it or toss-it debate cards — things built to last", "Vintage trades trivia — from blacksmiths to seamstresses"],
                 bestFor: "Co-ed groups, bridging demographics",
                 popular: false,
-                price: "$35.99",
+                price: "$32.99",
                 url: "https://thecomfortbond.gumroad.com/l/makersandmenderskit"
               }
             ].map((kit, i) =>
@@ -367,11 +367,11 @@ const Index = () => {
                   The Comfort Bond™ Complete Engagement System
                 </div>
                 <h3 className="font-serif text-[clamp(1.4rem,2.5vw,1.8rem)] font-semibold leading-[1.2] m-0 text-white">
-                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$137.99</em>
+                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$130.99</em>
                 </h3>
                 <div className="text-sm text-white/60 mt-2">
-                  <span className="line-through">$179.95 individually</span>
-                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$42</span>
+                  <span className="line-through">$164.95 individually</span>
+                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$34</span>
                 </div>
               </div>
 
@@ -408,7 +408,7 @@ const Index = () => {
                   Get All 5 Kits <ArrowSvg />
                 </a>
                 <p className="text-[10px] m-0" style={{ color: "rgba(255,255,255,0.4)" }}>
-                  $137.99 · One-time · Instant download
+                  $130.99 · One-time · Instant download
                 </p>
               </div>
             </div>
@@ -452,7 +452,7 @@ const Index = () => {
           <div style={{ marginTop: "2.5rem", display: "flex", flexDirection: "column", gap: 0 }}>
             {[
               { q: "Will these work for residents with dementia or memory loss?", a: "Yes. Every activity is designed with cognitive accessibility in mind. There are no wrong answers — just warm conversations, familiar music, and prompts that meet each person where they are. Activity Directors tell us these kits spark engagement even in residents who are usually withdrawn." },
-              { q: "How many sessions can I get out of one kit?", a: "Each kit includes 6 different activity types (conversation cards, trivia, BINGO, word link, musical memory, and visual spark cards). Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. Get all 5 kits for $137.99 and cover 30+ sessions across every theme." },
+              { q: "How many sessions can I get out of one kit?", a: "Each kit includes 6 different activity types (conversation cards, trivia, BINGO, word link, musical memory, and visual spark cards). Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. Get all 5 kits for $130.99 and cover 30+ sessions across every theme." },
               { q: "Is this a monthly subscription?", a: "No. Every kit and bundle is a one-time purchase. There are no hidden fees or recurring charges. Once you buy, it's yours to print and use forever." },
               { q: "Can I print these for my whole floor?", a: 'Yes! The kits are specifically designed to be printer-friendly on standard 8.5" x 11" paper. Print as many copies as you need — BINGO cards, trivia sheets, conversation prompts — and hand them out directly to residents. One purchase covers your entire community.' },
               { q: "How quickly will I get access?", a: "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be running an activity with your group five minutes later. No waiting for shipping." }].
@@ -592,7 +592,7 @@ const Index = () => {
               <li><a href="#are-we-there-yet-kit" onClick={(e) => {e.preventDefault();document.getElementById('are-we-there-yet-kit')?.scrollIntoView({ behavior: 'smooth' });}}>"Are We There Yet?" Kit</a></li>
               <li><a href="#heirloom-garden-kit" onClick={(e) => {e.preventDefault();document.getElementById('heirloom-garden-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Heirloom Garden Kit</a></li>
               <li><a href="#makers-and-menders-kit" onClick={(e) => {e.preventDefault();document.getElementById('makers-and-menders-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Makers &amp; Menders Kit</a></li>
-              <li><a href="#bundles" onClick={(e) => {e.preventDefault();document.getElementById('bundles')?.scrollIntoView({ behavior: 'smooth' });}}>All 5 Kits — $137.99</a></li>
+              <li><a href="#bundles" onClick={(e) => {e.preventDefault();document.getElementById('bundles')?.scrollIntoView({ behavior: 'smooth' });}}>All 5 Kits — $130.99</a></li>
             </ul>
           </div>
           <div className="footer-col">
