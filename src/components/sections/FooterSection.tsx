@@ -124,6 +124,12 @@ export const FooterSection = () => {
               >
                 Terms
               </a>
+              <a
+                href="/refund-policy"
+                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
+              >
+                Refund Policy
+              </a>
             </div>
           </div>
         </div>

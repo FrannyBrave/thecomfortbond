@@ -611,7 +611,7 @@ const Index = () => {
               <li><a href="mailto:hello@thecomfortbond.com">Contact</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>
-              <li><a href="/families"></a></li>
+              <li><a href="/refund-policy">Refund Policy</a></li>
             </ul>
           </div>
         </div>

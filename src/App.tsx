@@ -17,6 +17,7 @@ import BlueprintProDocument from "./pages/BlueprintProDocument";
 import MorningSamplerLandingPage from "./components/MorningSamplerLandingPage";
 import BlueprintProSalesPage from "./components/BlueprintProSalesPage";
 import Kits from "./pages/Kits";
+import RefundPolicy from "./pages/RefundPolicy";
 import { useCanonical } from "./hooks/useCanonical";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ function AppRoutes() {
           <Route path="/blueprint-pro-pdf" element={<BlueprintProDocument />} />
           <Route path="/blueprint-pro" element={<BlueprintProSalesPage />} />
           <Route path="/kits" element={<Kits />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
