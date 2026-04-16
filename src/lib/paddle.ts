@@ -38,6 +38,7 @@ declare global {
       Checkout: {
         open: (opts: {
           items: Array<{ priceId: string; quantity?: number }>;
+          discountId?: string;
           settings?: Record<string, unknown>;
         }) => void;
       };
