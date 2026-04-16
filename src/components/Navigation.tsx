@@ -98,7 +98,7 @@ export const Navigation = () => {
             >
               Free Blueprint
             </Button>
-            <Button variant="cta" size="lg" onClick={() => { setTimeout(() => { window.open("https://thecomfortbond.gumroad.com/", "_blank", "noopener,noreferrer"); }, 0); }}>
+            <Button variant="cta" size="lg" onClick={() => navigate("/kits")}>
               Shop Now
             </Button>
           </div>
