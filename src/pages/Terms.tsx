@@ -53,22 +53,28 @@ const Terms = () => {
 
             {/* Section 2 */}
             <section className="space-y-4">
-              <h2 className="font-display text-xl text-forest">2. Merchant of Record (Gumroad)</h2>
-              <p>Our store uses Gumroad as our Merchant of Record. This means:</p>
+              <h2 className="font-display text-xl text-forest">2. Merchant of Record (Paddle)</h2>
+              <p>
+                Our order process is conducted by our online reseller Paddle.com. Paddle.com is the
+                Merchant of Record for all our orders. Paddle handles all payment processing and
+                global tax compliance. Your credit card statement will show a charge from
+                PADDLE.NET* THECOMFORTBOND.
+              </p>
+              <p>This means:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Gumroad processes payments and may handle tax/VAT where applicable.</li>
+                <li>Paddle processes payments and handles tax/VAT where applicable.</li>
                 <li>We do not store or have access to your full payment card details.</li>
-                <li>You will receive order confirmations and download delivery emails from Gumroad.</li>
+                <li>You will receive order confirmations and download delivery emails from Paddle.</li>
               </ul>
               <p>
                 For more information, please review{" "}
                 <a
-                  href="https://gumroad.com/terms"
+                  href="https://www.paddle.com/legal/terms"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sage hover:text-forest underline transition-colors"
                 >
-                  Gumroad's terms and policies
+                  Paddle's terms and policies
                 </a>.
               </p>
             </section>
