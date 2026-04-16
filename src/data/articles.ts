@@ -71,8 +71,8 @@ export const articles: Article[] = [
   {
     slug: "memory-care-activities-that-work",
     metaDescription: "Discover why consistency and structured engagement matter more than constant novelty in memory care. Learn how adult-centered, familiar activities stabilize residents and reduce staff stress.",
-    datePublished: "2026-01-20",
-    dateModified: "2026-04-10",
+    datePublished: "2026-03-19",
+    dateModified: "2026-04-13",
     title: "Why Consistency Matters More Than Creativity in Memory Care",
     category: "MEMORY CARE",
     icon: "🧠",
