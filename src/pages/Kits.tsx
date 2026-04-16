@@ -169,9 +169,9 @@ export default function Kits() {
                     <div className="font-serif text-2xl font-semibold" style={{ color: "var(--forest-dark)" }}>{kit.price}</div>
                     <div className="text-[11px] mt-0.5" style={{ color: "var(--text-mid)" }}>One-time purchase · Instant download</div>
                   </div>
-                  <a href={kit.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-[13px] font-medium text-white no-underline whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}>
-                    Get This Kit <ArrowSvg />
-                  </a>
+                  <button type="button" onClick={() => openPaddleCheckout(kit.priceId)} className="inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-[13px] font-medium text-white whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 cursor-pointer border-0" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}>
+                    Buy Now <ArrowSvg />
+                  </button>
                 </div>
               </div>
             ))}
