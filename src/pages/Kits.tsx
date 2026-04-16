@@ -223,11 +223,11 @@ export default function Kits() {
               <div className="p-6 md:p-8 flex flex-col justify-center" style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}>
                 <div className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-2" style={{ color: "var(--sand)" }}>The Comfort Bond™ Complete Engagement System</div>
                 <h3 className="font-serif text-[clamp(1.4rem,2.5vw,1.8rem)] font-semibold leading-[1.2] m-0 text-white">
-                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$137.99</em>
+                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$130.99</em>
                 </h3>
                 <div className="text-sm text-white/60 mt-2">
-                  <span className="line-through">$179.95 individually</span>
-                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$42</span>
+                  <span className="line-through">$164.95 individually</span>
+                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$34</span>
                 </div>
               </div>
               <div className="p-6 md:p-8 flex flex-col justify-center" style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}>
@@ -249,7 +249,7 @@ export default function Kits() {
                 <a href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[14px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}>
                   Get All 5 Kits <ArrowSvg />
                 </a>
-                <p className="text-[10px] m-0" style={{ color: "rgba(255,255,255,0.4)" }}>$137.99 · One-time · Instant download</p>
+                <p className="text-[10px] m-0" style={{ color: "rgba(255,255,255,0.4)" }}>$130.99 · One-time · Instant download</p>
               </div>
             </div>
           </div>
