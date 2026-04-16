@@ -36,7 +36,7 @@ const OurStory = () => {
             <li><a href="/#bundles">Bundles</a></li>
             <li><a href="/#who">Who It's For</a></li>
             <li><a href="/resources">Resources</a></li>
-            <li><a href="/#products" className="nav-cta">Shop Now</a></li>
+            <li><a href="/kits" className="nav-cta">Shop Now</a></li>
           </ul>
         </nav>
       </header>
