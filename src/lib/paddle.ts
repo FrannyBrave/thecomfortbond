@@ -23,6 +23,8 @@ export const PRICE_REDIRECTS: Record<string, string> = {
   pri_01kpafwqs0wwzatbs5721cyfmk: "/downloads/Are-We-There-Yet.pdf",
   // The Heart of the Home Kit
   pri_01kpafxq9xrqg0qhqfttzdjswf: "/downloads/Heart-of-the-Home.pdf",
+  // The 5-Kit Bundle (Complete Engagement System) — routes to a hidden access hub
+  pri_01kpafqz2tc4pfc262j1dnh531: "/bundle-access",
 };
 
 declare global {

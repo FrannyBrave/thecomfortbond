@@ -247,9 +247,9 @@ export default function Kits() {
                   <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 3.5V7c0 2.8 2 5.3 5 6 3-0.7 5-3.2 5-6V3.5L7 1z" stroke="var(--sand)" strokeWidth="1.2" /></svg>
                   <span className="text-[11px] font-medium" style={{ color: "var(--sand)" }}>30+ sessions</span>
                 </div>
-                <a href="https://thecomfortbond.gumroad.com/l/comfortengagementsystem?wanted=true" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[14px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}>
+                <button type="button" onClick={() => openPaddleCheckout("pri_01kpafqz2tc4pfc262j1dnh531")} className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[14px] font-medium text-white border-0 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}>
                   Get All 5 Kits <ArrowSvg />
-                </a>
+                </button>
                 <p className="text-[10px] m-0" style={{ color: "rgba(255,255,255,0.4)" }}>$130.99 · One-time · Instant download</p>
               </div>
             </div>
