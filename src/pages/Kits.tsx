@@ -8,6 +8,7 @@ import bundleGroup from "@/assets/bundle-group-activity.png";
 import bundleStack from "@/assets/bundle-content-stack.png";
 import { FooterSection } from "@/components/sections/FooterSection";
 import React from "react";
+import { openPaddleCheckout } from "@/lib/paddle";
 
 const ArrowSvg = React.forwardRef<SVGSVGElement, { color?: string }>(
   ({ color = "#fff", ...props }, ref) => (
@@ -37,7 +38,7 @@ const KITS = [
     bestFor: "Mixed groups, all cognitive levels",
     popular: true,
     price: "$32.99",
-    url: "https://thecomfortbond.gumroad.com/l/nostalgiakit",
+    priceId: "pri_01kpafx84h0z9z11fwc5m84dam",
   },
   {
     id: "heart-of-the-home-kit",
@@ -49,7 +50,7 @@ const KITS = [
     bestFor: "Women\u2019s groups, sensory engagement",
     popular: false,
     price: "$32.99",
-    url: "https://thecomfortbond.gumroad.com/l/heartofthehomekit",
+    priceId: "pri_01kpafxq9xrqg0qhqfttzdjswf",
   },
   {
     id: "are-we-there-yet-kit",
@@ -61,7 +62,7 @@ const KITS = [
     bestFor: "High-energy sessions, mixed groups",
     popular: false,
     price: "$32.99",
-    url: "https://thecomfortbond.gumroad.com/l/arewethereyetkit",
+    priceId: "pri_01kpafwqs0wwzatbs5721cyfmk",
   },
   {
     id: "heirloom-garden-kit",
@@ -73,7 +74,7 @@ const KITS = [
     bestFor: "Spring/summer programming, garden clubs",
     popular: false,
     price: "$32.99",
-    url: "https://thecomfortbond.gumroad.com/l/heirloomgardenkit",
+    priceId: "pri_01kpafvx3erd68458p4em99141",
   },
   {
     id: "makers-and-menders-kit",
@@ -85,7 +86,7 @@ const KITS = [
     bestFor: "Co-ed groups, bridging demographics",
     popular: false,
     price: "$32.99",
-    url: "https://thecomfortbond.gumroad.com/l/makersandmenderskit",
+    priceId: "pri_01kpafv0r50q149ctgje0dmn0q",
   },
 ];
 
@@ -168,9 +169,9 @@ export default function Kits() {
                     <div className="font-serif text-2xl font-semibold" style={{ color: "var(--forest-dark)" }}>{kit.price}</div>
                     <div className="text-[11px] mt-0.5" style={{ color: "var(--text-mid)" }}>One-time purchase · Instant download</div>
                   </div>
-                  <a href={kit.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-[13px] font-medium text-white no-underline whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}>
-                    Get This Kit <ArrowSvg />
-                  </a>
+                  <button type="button" onClick={() => openPaddleCheckout(kit.priceId)} className="inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-[13px] font-medium text-white whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 cursor-pointer border-0" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}>
+                    Buy Now <ArrowSvg />
+                  </button>
                 </div>
               </div>
             ))}

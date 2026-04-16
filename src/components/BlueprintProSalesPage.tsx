@@ -4,6 +4,7 @@ import logo from "@/assets/logo.png";
 import heroMockup from "@/assets/hero-mockup.png";
 import beforeAfter from "@/assets/before-after.png";
 import balanceWheel from "@/assets/balance-wheel.png";
+import { openPaddleCheckout } from "@/lib/paddle";
 
 /* ─── Palette ─── */
 const c = {
@@ -24,16 +25,15 @@ const c = {
 const serif = '"Playfair Display", Georgia, serif';
 const sans = '"DM Sans", system-ui, sans-serif';
 
-const GUMROAD_URL = "https://thecomfortbond.gumroad.com/l/blueprint-pro";
+const BLUEPRINT_PRO_PRICE_ID = "pri_01kpagj5jtaxcnkbtjctq616k4";
 
 /* ─── CTA Button (terracotta) ─── */
 function Cta({ children, large, variant = "primary" }: { children: React.ReactNode; large?: boolean; variant?: "primary" | "outline" }) {
   const isPrimary = variant === "primary";
   return (
-    <a
-      href={GUMROAD_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+    <button
+      type="button"
+      onClick={() => openPaddleCheckout(BLUEPRINT_PRO_PRICE_ID)}
       style={{
         display: "inline-block",
         fontFamily: sans,
@@ -45,6 +45,7 @@ function Cta({ children, large, variant = "primary" }: { children: React.ReactNo
         border: isPrimary ? "none" : `2px solid ${c.terracotta}`,
         padding: large ? "1rem 2.5rem" : "0.85rem 1.75rem",
         borderRadius: "100px",
+        cursor: "pointer",
         textDecoration: "none",
         transition: "all 0.2s ease",
         boxShadow: isPrimary ? "0 4px 16px rgba(198,123,92,0.3)" : "none",
@@ -73,7 +74,7 @@ function Cta({ children, large, variant = "primary" }: { children: React.ReactNo
       }}
     >
       {children}
-    </a>
+    </button>
   );
 }
 
@@ -489,10 +490,9 @@ export default function BlueprintProSalesPage() {
           <p style={{ fontSize: "0.8rem", color: c.terracottaLight, fontWeight: 500, margin: "0 0 2rem" }}>
             One quarter. Completely handled.
           </p>
-          <a
-            href={GUMROAD_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={() => openPaddleCheckout(BLUEPRINT_PRO_PRICE_ID)}
             style={{
               display: "inline-block",
               fontFamily: sans,
@@ -500,8 +500,10 @@ export default function BlueprintProSalesPage() {
               fontWeight: 600,
               color: c.forest,
               backgroundColor: c.cream,
+              border: "none",
               padding: "1rem 2.5rem",
               borderRadius: "100px",
+              cursor: "pointer",
               textDecoration: "none",
               transition: "all 0.2s",
               boxShadow: "0 4px 16px rgba(0,0,0,0.15)",
@@ -518,7 +520,7 @@ export default function BlueprintProSalesPage() {
             }}
           >
             Get the Q3 2026 Edition
-          </a>
+          </button>
           <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.4)", marginTop: "1.25rem" }}>
             Q4 edition arrives by August 30, 2026 &mdash; before you need it.
           </p>

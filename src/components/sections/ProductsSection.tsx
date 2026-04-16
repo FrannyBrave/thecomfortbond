@@ -15,6 +15,7 @@ import nostalgiaPreview from "@/assets/nostalgia-kit-preview.jpg";
 import kitchenPreview from "@/assets/kitchen-kit-preview.jpg";
 import holidayPreview from "@/assets/holiday-kit-preview.jpg";
 import { Button } from "@/components/ui/button";
+import { openPaddleCheckout } from "@/lib/paddle";
 
 
 const featuredProduct = {
@@ -292,12 +293,9 @@ export const ProductsSection = () => {
                   <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$32.99</span>
                 </div>
 
-                <a
-                  href="https://thecomfortbond.gumroad.com/l/arewethereyetkit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/arewethereyetkit")}
-                  className=""
+                <button
+                  type="button"
+                  onClick={() => openPaddleCheckout("pri_01kpafwqs0wwzatbs5721cyfmk")}
                   style={{
                     display: "inline-block",
                     textAlign: "center",
@@ -322,9 +320,8 @@ export const ProductsSection = () => {
                     e.currentTarget.style.transform = "translateY(0)";
                     e.currentTarget.style.boxShadow = "0 4px 14px rgba(193,113,79,0.3)";
                   }}>
-                  
-                  Purchase Kit
-                </a>
+                  Buy Now
+                </button>
 
                 <p style={{ fontSize: "11px", color: "#8B9E8F", marginTop: "12px", textAlign: "center" }}>
                   Instant digital download · Print as many copies as you need
@@ -398,12 +395,9 @@ export const ProductsSection = () => {
                   <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$32.99</span>
                 </div>
 
-                <a
-                  href="https://thecomfortbond.gumroad.com/l/nostalgiakit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/nostalgiakit")}
-                  className=""
+                <button
+                  type="button"
+                  onClick={() => openPaddleCheckout("pri_01kpafx84h0z9z11fwc5m84dam")}
                   style={{
                     display: "inline-block",
                     textAlign: "center",
@@ -428,9 +422,8 @@ export const ProductsSection = () => {
                     e.currentTarget.style.transform = "translateY(0)";
                     e.currentTarget.style.boxShadow = "0 4px 14px rgba(193,113,79,0.3)";
                   }}>
-                  
-                  Purchase Kit
-                </a>
+                  Buy Now
+                </button>
 
                 <p style={{ fontSize: "11px", color: "#8B9E8F", marginTop: "12px", textAlign: "center" }}>
                   Instant digital download · Print as many copies as you need
@@ -510,12 +503,9 @@ export const ProductsSection = () => {
                   <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$32.99</span>
                 </div>
 
-                <a
-                  href="https://thecomfortbond.gumroad.com/l/heartofthehomekit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/heartofthehomekit")}
-                  className=""
+                <button
+                  type="button"
+                  onClick={() => openPaddleCheckout("pri_01kpafxq9xrqg0qhqfttzdjswf")}
                   style={{
                     display: "inline-block",
                     textAlign: "center",
@@ -540,9 +530,8 @@ export const ProductsSection = () => {
                     e.currentTarget.style.transform = "translateY(0)";
                     e.currentTarget.style.boxShadow = "0 4px 14px rgba(193,113,79,0.3)";
                   }}>
-                  
-                  Purchase Kit
-                </a>
+                  Buy Now
+                </button>
 
                 <p style={{ fontSize: "11px", color: "#8B9E8F", marginTop: "12px", textAlign: "center" }}>
                   Instant digital download · Print as many copies as you need
@@ -622,12 +611,9 @@ export const ProductsSection = () => {
                   <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$32.99</span>
                 </div>
 
-                <a
-                  href="https://thecomfortbond.gumroad.com/l/heirloomgardenkit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(event) => handleCheckoutClick(event, "https://thecomfortbond.gumroad.com/l/heirloomgardenkit")}
-                  className=""
+                <button
+                  type="button"
+                  onClick={() => openPaddleCheckout("pri_01kpafvx3erd68458p4em99141")}
                   style={{
                     display: "inline-block",
                     textAlign: "center",
@@ -652,9 +638,8 @@ export const ProductsSection = () => {
                     e.currentTarget.style.transform = "translateY(0)";
                     e.currentTarget.style.boxShadow = "0 4px 14px rgba(193,113,79,0.3)";
                   }}>
-                  
-                  Purchase Kit
-                </a>
+                  Buy Now
+                </button>
 
                 <p style={{ fontSize: "11px", color: "#8B9E8F", marginTop: "12px", textAlign: "center" }}>
                   Instant digital download · Print as many copies as you need
