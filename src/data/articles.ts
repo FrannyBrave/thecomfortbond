@@ -34,7 +34,7 @@ export const articles: Article[] = [
   {
     slug: "zero-prep-senior-living-activities",
     metaDescription: "Are you an overworked Activity Director? Learn how to eliminate the hidden costs of prep time and prevent burnout with zero-prep, read-aloud ready engagement systems for senior living.",
-    datePublished: "2026-01-15",
+    datePublished: "2026-03-04",
     dateModified: "2026-04-10",
     title: 'The Hidden Cost of "Prep Time" in Senior Living',
     category: "STAFFING & PREP",
