@@ -19,11 +19,16 @@ import BlueprintProSalesPage from "./components/BlueprintProSalesPage";
 import Kits from "./pages/Kits";
 import RefundPolicy from "./pages/RefundPolicy";
 import { useCanonical } from "./hooks/useCanonical";
+import { useEffect } from "react";
+import { preloadPaddle } from "./lib/paddle";
 
 const queryClient = new QueryClient();
 
 function AppRoutes() {
   useCanonical();
+  useEffect(() => {
+    preloadPaddle();
+  }, []);
   return (
     <Routes>
 
