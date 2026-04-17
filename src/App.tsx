@@ -37,6 +37,7 @@ function AppRoutes() {
           <Route path="/" element={<Index />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/:slug" element={<ArticleDetail />} />
+          <Route path="/blog/:slug" element={<ArticleDetail />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/about" element={<OurStory />} />
