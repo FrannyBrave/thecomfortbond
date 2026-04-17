@@ -61,10 +61,10 @@ export const Navigation = () => {
           {/* Desktop Nav Links + CTA */}
           <div className="hidden lg:flex items-center gap-8">
             {[
-              { label: "How It Works", href: "#methodology" },
-              { label: "Kits", href: "#road-trip-kit" },
-              { label: "FAQ", href: "#faq" },
-              { label: "Resources", href: "/resources" },
+              { label: "", href: "#methodology" },
+              { label: "", href: "#road-trip-kit" },
+              { label: "", href: "#faq" },
+              { label: "", href: "/resources" },
               { label: "For Families", href: "/family-visits" },
               { label: "Free Sample", href: "#honey-pot" },
               { label: "Blueprint Pro", href: "/blueprint-pro" },
@@ -125,10 +125,10 @@ export const Navigation = () => {
           >
             <div className="flex flex-col gap-2 pt-4">
               {[
-                { label: "How It Works", href: "#methodology" },
-                { label: "Kits", href: "#road-trip-kit" },
-                { label: "FAQ", href: "#faq" },
-                { label: "Resources", href: "/resources" },
+                { label: "", href: "#methodology" },
+                { label: "", href: "#road-trip-kit" },
+                { label: "", href: "#faq" },
+                { label: "", href: "/resources" },
                 { label: "For Families", href: "/family-visits" },
                 { label: "Free Sample", href: "#honey-pot" },
                 { label: "Blueprint Pro", href: "/blueprint-pro" },
