@@ -14,6 +14,12 @@ function renderBoldText(text: string) {
   );
 }
 
+function renderParagraphContent(text: string) {
+  // Convert **bold** markdown to <strong> while preserving any inline HTML (e.g. <a>, <br/>, <strong>)
+  const html = text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--text-dark); font-weight: 600;">$1</strong>');
+  return <span dangerouslySetInnerHTML={{ __html: html }} />;
+}
+
 function renderHtmlContent(html: string) {
   return <span dangerouslySetInnerHTML={{ __html: html }} />;
 }
