@@ -9,7 +9,7 @@ const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-80px" },
-  transition: { duration: 0.7, ease: "easeOut" },
+  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
 };
 
 const FamilyVisits = () => {
@@ -41,7 +41,7 @@ const FamilyVisits = () => {
             </motion.h1>
             <motion.p
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="text-text-mid text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10"
             >
               Gentle, guided tools that turn quiet visits with an aging parent
@@ -49,7 +49,7 @@ const FamilyVisits = () => {
             </motion.p>
             <motion.div
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Button asChild variant="cta" size="xl">
@@ -88,7 +88,7 @@ const FamilyVisits = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.6, delay: i * 0.08, ease: "easeOut" }}
+                  transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                   className="font-serif italic text-text-dark text-xl md:text-2xl leading-relaxed"
                 >
                   {line}
@@ -106,14 +106,14 @@ const FamilyVisits = () => {
             </motion.p>
             <motion.p
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="font-serif text-forest text-2xl md:text-3xl leading-snug"
             >
               You were never given the tools to do this well.
             </motion.p>
             <motion.p
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="font-serif italic text-clay text-2xl md:text-3xl leading-snug"
             >
               Connection, when memory is fading, can be guided.
@@ -132,14 +132,14 @@ const FamilyVisits = () => {
             </motion.p>
             <motion.h2
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="font-serif text-forest text-4xl md:text-5xl mb-8"
             >
               The Comfort Bond™
             </motion.h2>
             <motion.div
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="space-y-5 text-text-mid text-lg leading-relaxed"
             >
               <p>
@@ -166,14 +166,14 @@ const FamilyVisits = () => {
             </motion.p>
             <motion.h2
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="font-serif text-forest text-4xl md:text-5xl mb-6"
             >
               The Visit Starter Guide
             </motion.h2>
             <motion.p
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="text-text-mid text-lg md:text-xl leading-relaxed mb-10"
             >
               Three simple connection tools to help your next visit feel
@@ -181,7 +181,7 @@ const FamilyVisits = () => {
             </motion.p>
             <motion.ul
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="text-left space-y-4 mb-10 max-w-xl mx-auto"
             >
               <li className="flex gap-3">
@@ -197,7 +197,7 @@ const FamilyVisits = () => {
                 <span className="text-text-dark">A 5-minute presence ritual you can use, even on the hardest days.</span>
               </li>
             </motion.ul>
-            <motion.div {...fadeUp} transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}>
+            <motion.div {...fadeUp} transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}>
               <Button asChild variant="cta" size="xl">
                 <Link to="/free-sampler">Download the Free Guide</Link>
               </Button>
@@ -239,7 +239,7 @@ const FamilyVisits = () => {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
+                  transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                 >
                   <p className="text-clay font-sans text-sm uppercase tracking-[0.2em] mb-2">
                     Step {i + 1}
@@ -291,7 +291,7 @@ const FamilyVisits = () => {
 
               <motion.article
                 {...fadeUp}
-                transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+                transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                 className="bg-card border border-border rounded-2xl p-8 md:p-10 flex flex-col"
               >
                 <p className="text-clay font-sans text-xs uppercase tracking-[0.2em] mb-3">
@@ -325,14 +325,14 @@ const FamilyVisits = () => {
             </motion.p>
             <motion.p
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="font-serif italic text-forest text-2xl md:text-3xl"
             >
               There are still moments.
             </motion.p>
             <motion.p
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="font-serif italic text-forest text-2xl md:text-3xl leading-relaxed"
             >
               You can leave their room feeling like you reached them — even
@@ -352,14 +352,14 @@ const FamilyVisits = () => {
             </motion.h2>
             <motion.p
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="text-cream/80 text-lg md:text-xl mb-10"
             >
               Start with the free guide. Use it once. See what happens.
             </motion.p>
             <motion.div
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Button asChild variant="cta" size="xl">
