@@ -131,7 +131,7 @@ const Resources = () => {
           {filteredArticles.map((article) => (
             <Link
               key={article.slug}
-              to={`/resources/${article.slug}`}
+              to={article.slug === "13-week-memory-care-activity-calendar" ? `/blog/${article.slug}` : `/resources/${article.slug}`}
               style={{ textDecoration: "none", display: "flex" }}
             >
               <article style={{

@@ -144,5 +144,69 @@ export const articles: Article[] = [
       { type: 'paragraph', text: 'If you want to see what facilitator-ready actually feels like, <a href="/free-sampler">The Comfort Bond\'s Free 3-Activity Sampler</a> is a quick way to test it. Hand it to a weekend aide or a volunteer. Don\'t explain anything. Just give them the kit and see what happens. That\'s the standard your programming deserves: good enough to work without you in the room.' },
       { type: 'callout', text: '➡ <a href="/free-sampler">Download the Free 3-Activity Sampler</a>' }
     ]
+  },
+  {
+    slug: "13-week-memory-care-activity-calendar",
+    metaDescription: "A quarterly programming framework for Activity Directors — build a memory care activity calendar across six wellness dimensions.",
+    datePublished: "2026-04-17",
+    dateModified: "2026-04-17",
+    title: "The Activity Director's Guide to Building a 13-Week Memory Care Curriculum",
+    category: "PROGRAMMING",
+    icon: "📅",
+    headerDark: false,
+    excerpt: "A quarterly programming framework for Activity Directors — build a memory care activity calendar across six wellness dimensions.",
+    readTime: "10 min read",
+    subtitle: "How quarterly planning turns reactive scheduling into professional, defensible programming.",
+    heroImage: "",
+    heroAlt: "Activity Director planning a 13-week memory care curriculum across six wellness dimensions",
+    content: [
+      { type: 'paragraph', text: "There is a particular kind of Sunday evening that Activity Directors know well. The week's calendar is mostly empty, a resident's daughter has emailed asking what is planned for Mother's Day, and the printer is out of toner. You have been promising yourself you would sit down and plan the quarter for months. Instead, you open a blank grid and start filling in Monday." },
+      { type: 'paragraph', text: "If this sounds familiar, you are not planning poorly. You are planning reactively — and there is a meaningful difference. Reactive programming is a survival strategy. It works until it doesn't, and the moments when it stops working (a surprise survey, a census spike in memory care, a long holiday weekend with short staffing) tend to arrive all at once." },
+      { type: 'paragraph', text: "The shift from week-to-week planning to a structured 13-week memory care curriculum is one of the highest-leverage changes an Activity Director can make. It is not about working harder. It is about building a system that quietly does some of the thinking for you." },
+
+      { type: 'heading', text: "Why Week-to-Week Planning Quietly Breaks Programming" },
+      { type: 'paragraph', text: "Randomness is expensive. When every week is designed from scratch, four costs compound." },
+      { type: 'paragraph', text: "The first is decision fatigue. Choosing activities on Tuesday for the following Monday means making hundreds of small decisions a month — each of which drains creative energy that should be going toward execution, staff coaching, and time with residents." },
+      { type: 'paragraph', text: "The second is uneven coverage. Without a framework, most weeks over-index on whatever is easiest to pull off in a given month. Craft-heavy programming lands in October. Music-heavy programming dominates December. Meanwhile, spiritual wellness or sensory engagement goes weeks without intentional attention." },
+      { type: 'paragraph', text: "The third is duplication. Activities get recycled too quickly because you cannot see the last quarter at a glance. Residents and families notice." },
+      { type: 'paragraph', text: "The fourth cost is harder to name but the most important: reactive planning tends to produce programming that feels like filler. Dignified engagement requires intention, and intention requires lead time." },
+
+      { type: 'heading', text: "The Case for Thinking in Quarters" },
+      { type: 'paragraph', text: "A 13-week curriculum — one full quarter — is long enough to build meaningful arcs and short enough to stay responsive. It aligns naturally with seasons, survey cycles, and the pace at which most senior living communities actually operate." },
+      { type: 'paragraph', text: "Quarterly planning also gives you something that weekly planning never can: a visible pattern. When the whole quarter is laid out in front of you, gaps become obvious. Over-reliance on one dimension of wellness becomes obvious. Opportunities to tie programming to a national observance three weeks out become obvious." },
+      { type: 'paragraph', text: "You do not need to know exactly what will happen on a Tuesday in week nine. You need to know the theme, the wellness dimension in focus, and the kind of engagement the day is meant to produce. The specifics fill in closer to execution." },
+
+      { type: 'heading', text: "What a 13-Week Curriculum Actually Looks Like" },
+      { type: 'paragraph', text: "A strong quarterly curriculum is built in three layers." },
+
+      { type: 'heading', text: "Layer One: The Six Wellness Dimensions" },
+      { type: 'paragraph', text: "Every week should touch each of <a href=\"/about\">six wellness dimensions</a> at least once:" },
+      { type: 'paragraph', text: "<strong>Cognitive</strong> — discussion circles, memory prompts, word play, light trivia.<br/><strong>Social</strong> — group conversations, intergenerational visits, small-group rituals.<br/><strong>Sensory</strong> — tactile objects, aromatics, textured fabrics, music with specific era cues.<br/><strong>Physical</strong> — seated movement, balloon work, walking clubs, gentle stretch.<br/><strong>Creative</strong> — guided art, storytelling, music-making, arranging.<br/><strong>Spiritual</strong> — reflection, legacy conversations, hymns, quiet nature observation." },
+      { type: 'paragraph', text: "Six dimensions, five weekdays. That math is intentional. One dimension gets a double-touch each week, and that double-touch rotates through the quarter so every dimension receives extra attention roughly twice over 13 weeks. Nothing goes dormant." },
+
+      { type: 'heading', text: "Layer Two: Anchoring to Observances and Seasonal Cues" },
+      { type: 'paragraph', text: "Each of the 13 weeks gets a theme. Some themes are borrowed from the national calendar — National Gardening Week in April, Older Americans Month in May, National Family Caregivers Month in November. Others are seasonal: the first frost, early harvest, the shift into longer evenings. A few are drawn from your community's heritage and the demographics of the residents actually in your neighborhood." },
+      { type: 'paragraph', text: "Themes do the heavy lifting in a curriculum because they make individual activities feel connected. A Tuesday reminiscence session and a Thursday sensory tray that both sit under a \"Heritage Gardens\" theme reinforce each other in a way two unrelated activities never will — especially for residents with memory impairment, where repetition and thematic echo support recognition and recall. <a href=\"/kits\">Thematic sensory programming</a> like the Nostalgia Kit is purpose-built for this kind of layered reinforcement." },
+
+      { type: 'heading', text: "Layer Three: Weekly Rhythm and Predictability" },
+      { type: 'paragraph', text: "Residents in memory care benefit from rhythm. A curriculum that places reminiscence on Tuesday mornings and movement on Wednesday afternoons — consistently, quarter after quarter — builds something closer to a felt sense of the week. Families notice it during visits. Staff float between units more easily. New residents settle faster." },
+      { type: 'paragraph', text: "Rhythm does not mean rigidity. It means the skeleton stays still while the content refreshes." },
+
+      { type: 'heading', text: "A Sample Week Inside a 13-Week Framework" },
+      { type: 'paragraph', text: "Here is what a single week might look like in week four of a spring quarter, themed \"Heritage Gardens.\"" },
+      { type: 'paragraph', text: "<strong>Monday (Cognitive + Social):</strong> Discussion circle on the first vegetables planted each spring. Prompt cards distributed to staff the Friday before.<br/><strong>Tuesday (Sensory):</strong> A tray of seed packets, dried lavender, a small watering can, and a single garden glove. Small-group rotation, fifteen minutes per group.<br/><strong>Wednesday (Physical):</strong> Seated \"planting\" with weighted beanbags and low containers. Music from the 1960s plays quietly in the background.<br/><strong>Thursday (Creative):</strong> Pressed-flower cards — residents arrange, staff assist with adhesive.<br/><strong>Friday (Spiritual):</strong> A quiet observation session near the window or courtyard. One reading, one song, no discussion required." },
+      { type: 'paragraph', text: "Nothing in this week is complicated. Nothing is random, either. Every session reinforces the theme. Every dimension is touched. And a family member asking \"what's happening this week?\" gets a coherent answer rather than a list." },
+
+      { type: 'heading', text: "From Planner to Programming Strategist" },
+      { type: 'paragraph', text: "Activity Directors who move to quarterly planning describe the same shift: they stop feeling like they are scrambling and start feeling like they are designing. The work does not get easier — residents still need care, staff still need direction, surveys still happen — but the nature of the work changes. You become the architect of the resident experience rather than its Sunday-night emergency planner." },
+      { type: 'paragraph', text: "This is also when programming becomes defensible. When a surveyor, an executive director, or a family member asks why a particular activity sits on the calendar, you can answer in the language of a system: which wellness dimension, which theme, which arc in the quarter." },
+      { type: 'paragraph', text: "That is the quiet difference between good programming and professional programming." },
+
+      { type: 'heading', text: "If You'd Rather Not Build This From Scratch" },
+      { type: 'paragraph', text: "Building a 13-week curriculum the first time takes real hours. Most Activity Directors we speak with do not have those hours spare, even though they know the investment would pay back several times over." },
+      { type: 'paragraph', text: "That is why we built <strong>The Programming Blueprint™ Pro</strong> — <a href=\"/blueprint-pro\">a full 13-week memory care curriculum</a> already mapped across all six wellness dimensions, anchored to the national calendar, and designed to be copied directly into your existing planning template. It is the framework outlined in this article, fully executed, ready to adapt to your community." },
+      { type: 'paragraph', text: "You can absolutely build this yourself. Many Activity Directors do, and do it well. The Blueprint simply exists for the quarters when you would rather spend those hours with residents than with a spreadsheet." },
+      { type: 'callout', text: '➡ <a href="/blueprint-pro">See what\'s inside The Programming Blueprint™ Pro</a>' }
+    ]
   }
 ];
