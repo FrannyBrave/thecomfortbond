@@ -4,15 +4,50 @@ import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/family-visits-hero.jpg";
+import bookletImage from "@/assets/family-visits-booklet.jpg";
+import kitImage from "@/assets/family-visits-kit.jpg";
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 const fadeUp = {
-  initial: { opacity: 0, y: 30 },
+  initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-80px" },
-  transition: { duration: 0.7, ease: easeOut },
+  transition: { duration: 0.8, ease: easeOut },
 };
+
+const fadeIn = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 1.1, ease: easeOut },
+};
+
+/* Decorative sun-cross ornament — repeated through the page like a printer's mark */
+const Ornament = ({ className = "" }: { className?: string }) => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 40 40"
+    className={`inline-block ${className}`}
+    fill="none"
+  >
+    <circle cx="20" cy="20" r="3" fill="currentColor" />
+    <circle cx="20" cy="20" r="9" stroke="currentColor" strokeWidth="0.6" />
+    <line x1="20" y1="0" x2="20" y2="9" stroke="currentColor" strokeWidth="0.6" />
+    <line x1="20" y1="31" x2="20" y2="40" stroke="currentColor" strokeWidth="0.6" />
+    <line x1="0" y1="20" x2="9" y2="20" stroke="currentColor" strokeWidth="0.6" />
+    <line x1="31" y1="20" x2="40" y2="20" stroke="currentColor" strokeWidth="0.6" />
+  </svg>
+);
+
+const Eyebrow = ({ children }: { children: React.ReactNode }) => (
+  <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta inline-flex items-center gap-3 justify-center">
+    <span aria-hidden="true" className="inline-block w-8 h-px bg-terracotta opacity-60" />
+    <span>{children}</span>
+    <span aria-hidden="true" className="inline-block w-8 h-px bg-terracotta opacity-60" />
+  </span>
+);
 
 const FamilyVisits = () => {
   useEffect(() => {
@@ -29,55 +64,104 @@ const FamilyVisits = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-cream overflow-x-hidden">
       <Navigation />
 
       <main>
-        {/* SECTION 1 — HERO */}
-        <section className="px-6 pt-20 pb-24 md:pt-28 md:pb-32">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.h1
-              {...fadeUp}
-              className="font-serif italic text-forest text-4xl md:text-6xl leading-[1.15] mb-8"
-            >
-              You sit down beside them… and you don't know what to say.
-            </motion.h1>
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.15, ease: easeOut }}
-              className="text-foreground/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10"
-            >
-              Gentle, guided tools that turn quiet visits with an aging parent
-              into moments of real connection — even when memory is fading.
-            </motion.p>
+        {/* SECTION 1 — HERO (asymmetric editorial split) */}
+        <section className="relative px-6 lg:px-12 pt-24 pb-20 md:pt-32 md:pb-28">
+          {/* soft warm vignette */}
+          <div
+            className="pointer-events-none absolute inset-0 -z-10"
+            style={{
+              background:
+                "radial-gradient(1200px 600px at 20% 0%, rgba(198,123,92,0.08), transparent 60%), radial-gradient(900px 500px at 100% 100%, rgba(45,74,62,0.06), transparent 60%)",
+            }}
+          />
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* LEFT — copy (7 cols) */}
             <motion.div
               {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: easeOut }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="lg:col-span-7 order-2 lg:order-1"
             >
-              <Button asChild variant="cta" size="xl">
-                <Link to="/free-sampler">Get the Free Sampler</Link>
-              </Button>
-              <Button asChild variant="cta-outline" size="xl">
-                <a href="#free-guide">Make Your Next Visit Meaningful</a>
-              </Button>
+              <Eyebrow>For families · A quiet guide</Eyebrow>
+              <h1 className="mt-6 font-serif text-forest text-[2.5rem] sm:text-5xl lg:text-[4.25rem] leading-[1.05] tracking-tight">
+                You sit down beside them
+                <span className="italic text-forest/90">
+                  {" "}
+                  …and you don't know what to say.
+                </span>
+              </h1>
+              <div className="mt-8 flex items-start gap-5 max-w-xl">
+                <span className="mt-3 block w-10 h-px bg-terracotta flex-shrink-0" />
+                <p className="text-foreground/75 text-lg md:text-xl leading-[1.7] font-light">
+                  Gentle, guided tools that turn quiet visits with an aging
+                  parent into moments of real connection — even when memory
+                  is fading.
+                </p>
+              </div>
+              <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <Button asChild variant="cta" size="xl">
+                  <Link to="/free-sampler">Get the Free Sampler</Link>
+                </Button>
+                <Button asChild variant="cta-outline" size="xl">
+                  <a href="#free-guide">Make Your Next Visit Meaningful</a>
+                </Button>
+              </div>
+              <p className="text-muted-foreground text-xs mt-6 tracking-wide">
+                Free download · No credit card · Instant access
+              </p>
             </motion.div>
-            <p className="text-muted-foreground text-sm mt-6">
-              Free download. No credit card. Instant access.
-            </p>
+
+            {/* RIGHT — image (5 cols) framed */}
+            <motion.div
+              {...fadeIn}
+              className="lg:col-span-5 order-1 lg:order-2 relative"
+            >
+              <div className="relative">
+                {/* framed cream mat */}
+                <div className="relative bg-cream-dark/70 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.35)]">
+                  <div className="aspect-[4/5] overflow-hidden rounded-sm">
+                    <img
+                      src={heroImage}
+                      alt="An adult daughter sits beside her aging mother in soft afternoon light, holding her hand at a linen-covered table."
+                      width={1080}
+                      height={1350}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                {/* corner ornament */}
+                <Ornament className="absolute -top-5 -left-5 w-10 h-10 text-terracotta" />
+                <Ornament className="absolute -bottom-5 -right-5 w-10 h-10 text-forest/60" />
+                {/* caption */}
+                <p className="mt-5 font-serif italic text-sm text-foreground/55 text-center tracking-wide">
+                  — A Tuesday afternoon. Light through the window. Hands held.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* SECTION 2 — RELATABLE PAIN */}
-        <section className="px-6 py-24 md:py-32 bg-cream-dark/60">
-          <div className="max-w-2xl mx-auto text-center">
-            <motion.h2
-              {...fadeUp}
-              className="font-serif italic text-forest text-3xl md:text-4xl mb-12"
-            >
-              If any of this sounds familiar…
-            </motion.h2>
-            <ul className="space-y-6">
+        {/* hairline divider */}
+        <div className="px-6 lg:px-12">
+          <div className="max-w-7xl mx-auto flex items-center gap-6">
+            <span className="h-px flex-1 bg-forest/15" />
+            <Ornament className="w-5 h-5 text-forest/40" />
+            <span className="h-px flex-1 bg-forest/15" />
+          </div>
+        </div>
+
+        {/* SECTION 2 — RELATABLE PAIN (intimate column with hairlines) */}
+        <section className="px-6 py-24 md:py-32 bg-cream-dark/30">
+          <div className="max-w-2xl mx-auto">
+            <motion.div {...fadeUp} className="text-center mb-16">
+              <Eyebrow>Recognition</Eyebrow>
+              <h2 className="mt-6 font-serif italic text-forest text-3xl md:text-[2.75rem] leading-[1.15]">
+                If any of this sounds familiar…
+              </h2>
+            </motion.div>
+            <ul className="divide-y divide-forest/10 border-y border-forest/10">
               {[
                 "You sit down… and don't know what to say.",
                 "The conversation ends after a few short minutes.",
@@ -88,13 +172,18 @@ const FamilyVisits = () => {
               ].map((line, i) => (
                 <motion.li
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.6, delay: i * 0.08, ease: easeOut }}
-                  className="font-serif italic text-foreground text-xl md:text-2xl leading-relaxed"
+                  transition={{ duration: 0.6, delay: i * 0.06, ease: easeOut }}
+                  className="py-6 md:py-7 flex items-baseline gap-5"
                 >
-                  {line}
+                  <span className="font-serif italic text-terracotta/70 text-sm tabular-nums w-6 flex-shrink-0">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="font-serif italic text-foreground text-xl md:text-[1.6rem] leading-[1.4]">
+                    {line}
+                  </span>
                 </motion.li>
               ))}
             </ul>
@@ -102,140 +191,155 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION 3 — REFRAME */}
-        <section className="px-6 py-24 md:py-32">
-          <div className="max-w-2xl mx-auto text-center space-y-8">
-            <motion.p
-              {...fadeUp}
-              className="font-serif text-forest text-2xl md:text-3xl leading-snug"
-            >
-              It's not that you don't care. It's not that you aren't trying.
-            </motion.p>
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.15, ease: easeOut }}
-              className="font-serif text-forest text-2xl md:text-3xl leading-snug"
-            >
-              You were never given the tools to do this well.
-            </motion.p>
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: easeOut }}
-              className="font-serif italic text-terracotta text-2xl md:text-3xl leading-snug"
-            >
-              Connection, when memory is fading, can be guided.
-            </motion.p>
-          </div>
-        </section>
-
-        {/* SECTION 4 — SOLUTION INTRO */}
-        <section className="px-6 py-24 md:py-32 bg-cream-dark">
+        <section className="px-6 py-28 md:py-40">
           <div className="max-w-2xl mx-auto text-center">
-            <motion.p
-              {...fadeUp}
-              className="text-terracotta font-sans text-sm uppercase tracking-[0.2em] mb-4"
-            >
-              Introducing
-            </motion.p>
-            <motion.h2
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.1, ease: easeOut }}
-              className="font-serif text-forest text-4xl md:text-5xl mb-8"
-            >
-              The Comfort Bond™
-            </motion.h2>
-            <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.2, ease: easeOut }}
-              className="space-y-5 text-foreground/80 text-lg leading-relaxed"
-            >
-              <p>
-                A gentle, simple way to bring real connection back into the
-                room — without trying harder, talking more, or pretending
-                everything is okay.
+            <motion.div {...fadeUp} className="space-y-10">
+              <p className="font-serif text-forest text-2xl md:text-[2rem] leading-[1.4]">
+                It's not that you don't care.
+                <br />
+                It's not that you aren't trying.
               </p>
-              <p>No scripts. No pressure. No awkward silence to fill.</p>
-              <p className="font-serif italic text-foreground text-xl">
-                Just simple tools that meet your parent where they are today.
+              <div className="flex items-center justify-center gap-6">
+                <span className="h-px w-16 bg-forest/20" />
+                <Ornament className="w-6 h-6 text-terracotta" />
+                <span className="h-px w-16 bg-forest/20" />
+              </div>
+              <p className="font-serif text-forest text-2xl md:text-[2rem] leading-[1.4]">
+                You were never given the tools to do this well.
+              </p>
+              <p className="font-serif italic text-terracotta text-3xl md:text-[2.5rem] leading-[1.3] pt-4">
+                Connection, when memory is fading,
+                <br />
+                can be guided.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* SECTION 5 — FREE OFFER */}
-        <section id="free-guide" className="px-6 py-24 md:py-32">
-          <div className="max-w-2xl mx-auto text-center">
-            <motion.p
-              {...fadeUp}
-              className="text-terracotta font-sans text-sm uppercase tracking-[0.2em] mb-4"
-            >
-              Free Download
-            </motion.p>
-            <motion.h2
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.1, ease: easeOut }}
-              className="font-serif text-forest text-4xl md:text-5xl mb-6"
-            >
-              The Visit Starter Guide
-            </motion.h2>
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.2, ease: easeOut }}
-              className="text-foreground/80 text-lg md:text-xl leading-relaxed mb-10"
-            >
-              Three simple connection tools to help your next visit feel
-              different — even when words are hard to find.
-            </motion.p>
-            <motion.ul
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: easeOut }}
-              className="text-left space-y-4 mb-10 max-w-xl mx-auto"
-            >
-              <li className="flex gap-3">
-                <span className="text-terracotta flex-shrink-0">—</span>
-                <span className="text-foreground">A gentle conversation prompt that works when memory doesn't.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-terracotta flex-shrink-0">—</span>
-                <span className="text-foreground">A sensory tool that brings calm and quiet familiarity into the room.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-terracotta flex-shrink-0">—</span>
-                <span className="text-foreground">A 5-minute presence ritual you can use, even on the hardest days.</span>
-              </li>
-            </motion.ul>
-            <motion.div {...fadeUp} transition={{ duration: 0.7, delay: 0.4, ease: easeOut }}>
-              <Button asChild variant="cta" size="xl">
-                <Link to="/free-sampler">Download the Free Guide</Link>
-              </Button>
-              <p className="text-muted-foreground text-sm mt-4">
-                Sent straight to your inbox. No spam, ever.
-              </p>
+        {/* SECTION 4 — SOLUTION INTRO (warm panel) */}
+        <section className="relative px-6 py-28 md:py-36 bg-cream-dark">
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.04]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, var(--forest) 1px, transparent 0)",
+              backgroundSize: "24px 24px",
+            }}
+          />
+          <div className="relative max-w-2xl mx-auto text-center">
+            <motion.div {...fadeUp}>
+              <Eyebrow>Introducing</Eyebrow>
+              <h2 className="mt-8 font-serif text-forest text-5xl md:text-7xl tracking-tight">
+                The Comfort Bond
+                <span className="text-terracotta align-top text-2xl md:text-3xl ml-1">™</span>
+              </h2>
+              <div className="mt-8 mx-auto w-16 h-px bg-forest/30" />
+              <div className="mt-10 space-y-6 text-foreground/75 text-lg md:text-xl leading-[1.8] font-light">
+                <p>
+                  A gentle, simple way to bring real connection back into the
+                  room — without trying harder, talking more, or pretending
+                  everything is okay.
+                </p>
+                <p className="text-foreground/60">
+                  No scripts. No pressure. No awkward silence to fill.
+                </p>
+                <p className="font-serif italic text-forest text-xl md:text-2xl pt-4">
+                  Just simple tools that meet your parent
+                  <br className="hidden md:block" />
+                  {" "}where they are today.
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
 
-        {/* SECTION 6 — HOW IT WORKS */}
-        <section className="px-6 py-24 md:py-32 bg-cream-dark/60">
-          <div className="max-w-3xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-16">
-              <h2 className="font-serif text-forest text-4xl md:text-5xl mb-4">
+        {/* SECTION 5 — FREE OFFER (split with booklet image) */}
+        <section id="free-guide" className="px-6 lg:px-12 py-28 md:py-36">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <motion.div {...fadeIn} className="order-2 lg:order-1 relative">
+              <div className="relative bg-cream-dark/60 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.3)]">
+                <div className="aspect-square overflow-hidden rounded-sm">
+                  <img
+                    src={bookletImage}
+                    alt="A cream-colored booklet on linen beside a teacup, reading glasses, and dried lavender."
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <Ornament className="absolute -bottom-5 -left-5 w-10 h-10 text-terracotta" />
+            </motion.div>
+
+            <motion.div {...fadeUp} className="order-1 lg:order-2">
+              <Eyebrow>Free download</Eyebrow>
+              <h2 className="mt-6 font-serif text-forest text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1]">
+                The Visit
+                <br />
+                <span className="italic">Starter Guide</span>
+              </h2>
+              <p className="mt-6 text-foreground/75 text-lg leading-[1.7] font-light max-w-md">
+                Three simple connection tools to help your next visit feel
+                different — even when words are hard to find.
+              </p>
+
+              <ul className="mt-10 space-y-6">
+                {[
+                  "A gentle conversation prompt that works when memory doesn't.",
+                  "A sensory tool that brings calm and quiet familiarity into the room.",
+                  "A 5-minute presence ritual you can use, even on the hardest days.",
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-5 items-baseline">
+                    <span className="font-serif italic text-terracotta text-2xl leading-none flex-shrink-0 w-6">
+                      {["i", "ii", "iii"][i]}.
+                    </span>
+                    <span className="text-foreground text-base md:text-lg leading-[1.65] font-light">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-12">
+                <Button asChild variant="cta" size="xl">
+                  <Link to="/free-sampler">Download the Free Guide</Link>
+                </Button>
+                <p className="text-muted-foreground text-xs mt-4 tracking-wide">
+                  Sent straight to your inbox · No spam, ever
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* SECTION 6 — HOW IT WORKS (three serif numerals) */}
+        <section className="px-6 py-28 md:py-36 bg-cream-dark/30">
+          <div className="max-w-5xl mx-auto">
+            <motion.div {...fadeUp} className="text-center mb-20">
+              <Eyebrow>The practice</Eyebrow>
+              <h2 className="mt-6 font-serif text-forest text-4xl md:text-5xl">
                 How it works
               </h2>
-              <p className="text-foreground/80 text-lg italic">
+              <p className="mt-5 text-foreground/65 text-base md:text-lg italic font-serif">
                 Effortless. Designed for the energy you actually have.
               </p>
             </motion.div>
-            <div className="space-y-12 max-w-2xl mx-auto">
+
+            <div className="grid md:grid-cols-3 gap-12 md:gap-8">
               {[
                 {
+                  numeral: "I",
                   title: "Open the guide",
                   body: "One page. No reading homework. Skim it in the parking lot before you walk in.",
                 },
                 {
+                  numeral: "II",
                   title: "Choose a prompt",
                   body: "Pick the one that feels right for the day. Some days are talking days. Some days are quiet days.",
                 },
                 {
+                  numeral: "III",
                   title: "Connect, naturally",
                   body: "Sit beside them and let the tool do the work. You don't have to perform. You just have to be there.",
                 },
@@ -245,140 +349,209 @@ const FamilyVisits = () => {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.6, delay: i * 0.1, ease: easeOut }}
+                  transition={{ duration: 0.7, delay: i * 0.12, ease: easeOut }}
+                  className="text-center md:text-left"
                 >
-                  <p className="text-terracotta font-sans text-sm uppercase tracking-[0.2em] mb-2">
-                    Step {i + 1}
-                  </p>
-                  <h3 className="font-serif text-forest text-2xl md:text-3xl mb-3">
+                  <div className="font-serif italic text-terracotta/80 text-6xl md:text-7xl leading-none mb-6">
+                    {step.numeral}
+                  </div>
+                  <div className="w-10 h-px bg-forest/30 mb-6 mx-auto md:mx-0" />
+                  <h3 className="font-serif text-forest text-2xl md:text-[1.65rem] mb-4 leading-tight">
                     {step.title}
                   </h3>
-                  <p className="text-foreground/80 text-lg leading-relaxed">{step.body}</p>
+                  <p className="text-foreground/70 text-base md:text-[1.05rem] leading-[1.7] font-light">
+                    {step.body}
+                  </p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* SECTION 7 — PRODUCT BRIDGE */}
-        <section className="px-6 py-24 md:py-32">
-          <div className="max-w-5xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-16 max-w-2xl mx-auto">
-              <h2 className="font-serif text-forest text-4xl md:text-5xl mb-6">
-                If you want more than a single visit…
+        {/* SECTION 7 — PRODUCT BRIDGE (image-topped cards) */}
+        <section className="px-6 lg:px-12 py-28 md:py-36">
+          <div className="max-w-6xl mx-auto">
+            <motion.div {...fadeUp} className="text-center mb-20 max-w-2xl mx-auto">
+              <Eyebrow>For something deeper</Eyebrow>
+              <h2 className="mt-6 font-serif text-forest text-4xl md:text-[3rem] leading-[1.15]">
+                If you want more than
+                <br />
+                <span className="italic">a single visit…</span>
               </h2>
-              <p className="text-foreground/80 text-lg leading-relaxed">
+              <p className="mt-6 text-foreground/70 text-lg leading-[1.7] font-light">
                 For families who want a steady, ongoing way to feel close —
                 not just one good afternoon.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+              {/* Card 1 — 90-Day */}
               <motion.article
                 {...fadeUp}
-                className="bg-card border border-border rounded-2xl p-8 md:p-10 flex flex-col"
+                className="group bg-cream-dark/40 rounded-sm overflow-hidden flex flex-col border border-forest/10 hover:border-terracotta/40 transition-colors duration-500"
               >
-                <p className="text-terracotta font-sans text-xs uppercase tracking-[0.2em] mb-3">
-                  Deep Connection
-                </p>
-                <h3 className="font-serif text-forest text-2xl md:text-3xl mb-4">
-                  The 90-Day Meaningful Visit System
-                </h3>
-                <p className="text-foreground/80 leading-relaxed mb-8 flex-1">
-                  A gentle, week-by-week framework that walks you through
-                  three months of meaningful visits — with prompts, simple
-                  rituals, and quiet structure for the days you don't know
-                  where to begin.
-                </p>
-                <Button asChild variant="cta-outline" size="lg" className="self-start">
-                  <Link to="/blueprint">Learn More →</Link>
-                </Button>
+                <div className="aspect-[16/10] bg-cream-dark relative overflow-hidden">
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, hsl(var(--card)) 0%, var(--cream-dark) 100%)",
+                    }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="font-serif italic text-forest text-7xl leading-none">
+                        90
+                      </div>
+                      <div className="font-sans text-[10px] uppercase tracking-[0.4em] text-forest/60 mt-3">
+                        Days · A Practice
+                      </div>
+                    </div>
+                  </div>
+                  <Ornament className="absolute top-5 right-5 w-6 h-6 text-terracotta/70" />
+                </div>
+                <div className="p-8 md:p-10 flex flex-col flex-1">
+                  <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
+                    Deep Connection
+                  </p>
+                  <h3 className="font-serif text-forest text-2xl md:text-[1.75rem] leading-tight mb-4">
+                    The 90-Day Meaningful Visit System
+                  </h3>
+                  <p className="text-foreground/70 leading-[1.7] font-light mb-8 flex-1">
+                    A gentle, week-by-week framework that walks you through
+                    three months of meaningful visits — with prompts, simple
+                    rituals, and quiet structure for the days you don't know
+                    where to begin.
+                  </p>
+                  <Link
+                    to="/blueprint"
+                    className="inline-flex items-center gap-3 font-serif italic text-forest hover:text-terracotta transition-colors text-lg group/link"
+                  >
+                    Learn more
+                    <span className="transition-transform group-hover/link:translate-x-1">
+                      →
+                    </span>
+                  </Link>
+                </div>
               </motion.article>
 
+              {/* Card 2 — Kits with photo */}
               <motion.article
                 {...fadeUp}
-                transition={{ duration: 0.7, delay: 0.15, ease: easeOut }}
-                className="bg-card border border-border rounded-2xl p-8 md:p-10 flex flex-col"
+                transition={{ duration: 0.8, delay: 0.12, ease: easeOut }}
+                className="group bg-cream-dark/40 rounded-sm overflow-hidden flex flex-col border border-forest/10 hover:border-terracotta/40 transition-colors duration-500"
               >
-                <p className="text-terracotta font-sans text-xs uppercase tracking-[0.2em] mb-3">
-                  Tactile, Familiar, Real
-                </p>
-                <h3 className="font-serif text-forest text-2xl md:text-3xl mb-4">
-                  Memory & Connection Kits
-                </h3>
-                <p className="text-foreground/80 leading-relaxed mb-3 flex-1">
-                  Themed boxes designed to spark recognition through touch,
-                  scent, and memory — gentle, dignified, and made for moments
-                  when words aren't enough.
-                </p>
-                <p className="font-serif italic text-foreground mb-8">
-                  Themes: Nostalgia · Garden · Kitchen & Home · Travel ·
-                  Makers & Menders
-                </p>
-                <Button asChild variant="cta-outline" size="lg" className="self-start">
-                  <Link to="/kits">Explore the Kits →</Link>
-                </Button>
+                <div className="aspect-[16/10] overflow-hidden relative">
+                  <img
+                    src={kitImage}
+                    alt="A craft cardboard memory kit box on linen, holding an embroidered handkerchief, vintage tin, pansy flower, and wooden spool."
+                    width={1024}
+                    height={640}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                  />
+                  <Ornament className="absolute top-5 right-5 w-6 h-6 text-cream drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" />
+                </div>
+                <div className="p-8 md:p-10 flex flex-col flex-1">
+                  <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
+                    Tactile · Familiar · Real
+                  </p>
+                  <h3 className="font-serif text-forest text-2xl md:text-[1.75rem] leading-tight mb-4">
+                    Memory & Connection Kits
+                  </h3>
+                  <p className="text-foreground/70 leading-[1.7] font-light mb-3 flex-1">
+                    Themed boxes designed to spark recognition through touch,
+                    scent, and memory — gentle, dignified, and made for
+                    moments when words aren't enough.
+                  </p>
+                  <p className="font-serif italic text-foreground/60 text-sm mb-8 leading-relaxed">
+                    Nostalgia · Garden · Kitchen & Home · Travel · Makers &amp; Menders
+                  </p>
+                  <Link
+                    to="/kits"
+                    className="inline-flex items-center gap-3 font-serif italic text-forest hover:text-terracotta transition-colors text-lg group/link"
+                  >
+                    Explore the kits
+                    <span className="transition-transform group-hover/link:translate-x-1">
+                      →
+                    </span>
+                  </Link>
+                </div>
               </motion.article>
             </div>
           </div>
         </section>
 
-        {/* SECTION 8 — EMOTIONAL CLOSE */}
-        <section className="px-6 py-24 md:py-32 bg-cream-dark">
-          <div className="max-w-2xl mx-auto text-center space-y-8">
-            <motion.p {...fadeUp} className="font-serif italic text-forest text-2xl md:text-3xl">
-              There is still time.
-            </motion.p>
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.15, ease: easeOut }}
-              className="font-serif italic text-forest text-2xl md:text-3xl"
-            >
-              There are still moments.
-            </motion.p>
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: easeOut }}
-              className="font-serif italic text-forest text-2xl md:text-3xl leading-relaxed"
-            >
-              You can leave their room feeling like you reached them — even
-              when the words couldn't.
-            </motion.p>
+        {/* SECTION 8 — EMOTIONAL CLOSE (centered, ornament punctuation) */}
+        <section className="px-6 py-28 md:py-40 bg-cream-dark/40">
+          <div className="max-w-2xl mx-auto text-center">
+            <motion.div {...fadeUp} className="space-y-10">
+              <Ornament className="w-7 h-7 text-terracotta mx-auto" />
+              <p className="font-serif italic text-forest text-2xl md:text-[2rem] leading-[1.5]">
+                There is still time.
+              </p>
+              <p className="font-serif italic text-forest text-2xl md:text-[2rem] leading-[1.5]">
+                There are still moments.
+              </p>
+              <div className="flex items-center justify-center gap-6 pt-2">
+                <span className="h-px w-16 bg-forest/20" />
+                <span className="h-px w-16 bg-forest/20" />
+              </div>
+              <p className="font-serif italic text-forest text-2xl md:text-[2.25rem] leading-[1.45]">
+                You can leave their room feeling
+                <br />
+                like you reached them — even when
+                <br />
+                the words couldn't.
+              </p>
+            </motion.div>
           </div>
         </section>
 
-        {/* SECTION 9 — FINAL CTA */}
-        <section className="px-6 py-24 md:py-32 bg-forest">
-          <div className="max-w-2xl mx-auto text-center">
-            <motion.h2
-              {...fadeUp}
-              className="font-serif italic text-cream text-4xl md:text-5xl mb-6 leading-tight"
-            >
-              Make your next visit feel different.
-            </motion.h2>
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.15, ease: easeOut }}
-              className="text-cream text-lg md:text-xl mb-10 opacity-80"
-            >
-              Start with the free guide. Use it once. See what happens.
-            </motion.p>
-            <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: 0.3, ease: easeOut }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
-            >
-              <Button asChild variant="cta" size="xl">
-                <Link to="/free-sampler">Start with the Free Guide</Link>
-              </Button>
-              <Button
-                asChild
-                variant="cta-outline"
-                size="xl"
-                className="border-cream text-cream hover:bg-cream hover:text-forest"
-              >
-                <Link to="/kits">Explore the Connection Kits</Link>
-              </Button>
+        {/* SECTION 9 — FINAL CTA (forest panel, inscription feel) */}
+        <section className="relative px-6 py-28 md:py-36 bg-forest overflow-hidden">
+          {/* subtle warm glow */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-50"
+            style={{
+              background:
+                "radial-gradient(800px 400px at 50% 0%, rgba(198,123,92,0.18), transparent 60%)",
+            }}
+          />
+          {/* dot grid texture */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, var(--cream) 1px, transparent 0)",
+              backgroundSize: "28px 28px",
+            }}
+          />
+          <div className="relative max-w-2xl mx-auto text-center">
+            <motion.div {...fadeUp}>
+              <Ornament className="w-7 h-7 text-cream/60 mx-auto mb-8" />
+              <h2 className="font-serif italic text-cream text-4xl md:text-[3.5rem] leading-[1.15] mb-8">
+                Make your next visit
+                <br />
+                feel different.
+              </h2>
+              <div className="mx-auto w-16 h-px bg-cream/30 mb-8" />
+              <p className="text-cream text-lg md:text-xl mb-12 opacity-80 font-light leading-[1.7]">
+                Start with the free guide. Use it once. See what happens.
+              </p>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+                <Button asChild variant="cta" size="xl">
+                  <Link to="/free-sampler">Start with the Free Guide</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="cta-outline"
+                  size="xl"
+                  className="border-cream text-cream hover:bg-cream hover:text-forest"
+                >
+                  <Link to="/kits">Explore the Connection Kits</Link>
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
