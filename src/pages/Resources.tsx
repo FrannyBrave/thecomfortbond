@@ -216,7 +216,7 @@ const Resources = () => {
                 </div>
               </article>
             </Link>
-          ))}
+          );})}
         </div>
       </section>
 
