@@ -128,10 +128,13 @@ const Resources = () => {
           gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
           gap: "1.5rem",
         }}>
-          {filteredArticles.map((article) => (
+          {filteredArticles.map((article) => {
+            const blogSlugs = ["13-week-memory-care-activity-calendar", "sensory-rich-reminiscence-therapy-dementia-care"];
+            const href = blogSlugs.includes(article.slug) ? `/blog/${article.slug}` : `/resources/${article.slug}`;
+            return (
             <Link
               key={article.slug}
-              to={article.slug === "13-week-memory-care-activity-calendar" ? `/blog/${article.slug}` : `/resources/${article.slug}`}
+              to={href}
               style={{ textDecoration: "none", display: "flex" }}
             >
               <article style={{
