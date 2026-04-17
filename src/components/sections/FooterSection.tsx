@@ -93,6 +93,12 @@ export const FooterSection = () => {
                 Blog
               </a>
               <a
+                href="/family-visits"
+                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
+              >
+                For Families
+              </a>
+              <a
                 href="#honey-pot"
                 onClick={(e) => { e.preventDefault(); scrollToSection("honey-pot"); }}
                 className="text-sm text-forest/80 hover:text-terracotta transition-colors"
