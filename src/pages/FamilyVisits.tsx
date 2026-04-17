@@ -42,11 +42,11 @@ const Ornament = ({ className = "" }: { className?: string }) => (
 );
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
-  <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta inline-flex items-center gap-3">
-    <span className="block w-8 h-px bg-terracotta/60" />
-    {children}
-    <span className="block w-8 h-px bg-terracotta/60" />
-  </p>
+  <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta inline-flex items-center gap-3 justify-center">
+    <span aria-hidden="true" className="inline-block w-8 h-px bg-terracotta opacity-60" />
+    <span>{children}</span>
+    <span aria-hidden="true" className="inline-block w-8 h-px bg-terracotta opacity-60" />
+  </span>
 );
 
 const FamilyVisits = () => {
