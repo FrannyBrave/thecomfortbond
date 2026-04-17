@@ -66,6 +66,7 @@ const Index = () => {
             
             <li><a href="/about">Our Story</a></li>
             <li><a href="/resources"></a></li>
+            <li><a href="/family-visits">For Families</a></li>
             <li><a href="/blueprint-pro" className="nav-blueprint">Blueprint Pro</a></li>
             <li><a href="/blueprint" className="nav-blueprint">Free Blueprint</a></li>
             <li><a href="/free-sampler" className="nav-blueprint">Free Sampler</a></li>
@@ -600,7 +601,7 @@ const Index = () => {
               <li><a href="/blueprint">Free Blueprint</a></li>
               <li><a href="/free-sampler">Free Sampler</a></li>
               <li><a href="/resources">Blog</a></li>
-              <li><a href="/free-sampler"></a></li>
+              <li><a href="/family-visits">For Families</a></li>
             </ul>
           </div>
           <div className="footer-col">
