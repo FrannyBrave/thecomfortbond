@@ -65,7 +65,7 @@ const Index = () => {
             <li><a href="#products"></a></li>
             
             <li><a href="/about">Our Story</a></li>
-            <li><a href="/resources">Resources</a></li>
+            <li><a href="/resources"></a></li>
             <li><a href="/blueprint-pro" className="nav-blueprint">Blueprint Pro</a></li>
             <li><a href="/blueprint" className="nav-blueprint">Free Blueprint</a></li>
             <li><a href="/free-sampler" className="nav-blueprint">Free Sampler</a></li>
