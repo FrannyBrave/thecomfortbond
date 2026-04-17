@@ -359,7 +359,7 @@ const FamilyVisits = () => {
             <motion.p
               {...fadeUp}
               transition={{ duration: 0.7, delay: 0.15, ease: easeOut }}
-              className="text-cream/80 text-lg md:text-xl mb-10"
+              className="text-cream text-lg md:text-xl mb-10 opacity-80"
             >
               Start with the free guide. Use it once. See what happens.
             </motion.p>
