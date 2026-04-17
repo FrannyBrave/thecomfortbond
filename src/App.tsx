@@ -20,6 +20,7 @@ import Kits from "./pages/Kits";
 import RefundPolicy from "./pages/RefundPolicy";
 import BundleAccess from "./pages/BundleAccess";
 import ThankYou from "./pages/ThankYou";
+import FamilyVisits from "./pages/FamilyVisits";
 import { useCanonical } from "./hooks/useCanonical";
 import { useEffect } from "react";
 import { preloadPaddle } from "./lib/paddle";
@@ -51,6 +52,7 @@ function AppRoutes() {
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/bundle-access" element={<BundleAccess />} />
           <Route path="/thank-you/:slug" element={<ThankYou />} />
+          <Route path="/family-visits" element={<FamilyVisits />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
