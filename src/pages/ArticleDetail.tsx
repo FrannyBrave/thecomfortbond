@@ -282,7 +282,7 @@ const ArticleDetail = () => {
               lineHeight: 1.8,
               margin: "0 0 1.25rem",
             }}>
-              {renderBoldText(section.text || "")}
+              {renderParagraphContent(section.text || "")}
             </p>
           );
         })}
