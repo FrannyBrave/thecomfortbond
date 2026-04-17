@@ -68,7 +68,7 @@ export const Navigation = () => {
               { label: "For Families", href: "/family-visits" },
               { label: "Free Sample", href: "#honey-pot" },
               { label: "Blueprint Pro", href: "/blueprint-pro" },
-            ].map((link) => (
+            ].filter((link) => link.label).map((link) => (
               <button
                 key={link.href}
                 onClick={() => {
