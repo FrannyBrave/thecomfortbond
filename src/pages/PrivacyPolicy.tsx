@@ -39,7 +39,7 @@ const PrivacyPolicy = () => {
           </h1>
 
           <p className="text-sm text-forest/60 mb-10">
-            Last Updated: January 14, 2026
+            Last Updated: March 14, 2026
           </p>
 
           <div className="space-y-10 text-forest/80">
