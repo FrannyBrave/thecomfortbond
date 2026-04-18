@@ -37,7 +37,7 @@ const KITS = [
     highlights: ["Drive-In Movies vs. Streaming \u2014 Then & Now debate cards", "Name That Jukebox Tune \u2014 1950s\u201380s hits", "Poodle Skirts to Bell Bottoms \u2014 fashion flashback trivia"],
     bestFor: "Mixed groups, all cognitive levels",
     popular: true,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafx84h0z9z11fwc5m84dam",
   },
   {
@@ -49,7 +49,7 @@ const KITS = [
     highlights: ["Sunday Supper memories \u2014 what was on your table?", "Vintage kitchen gadgets trivia \u2014 name that tool", "Comfort food BINGO \u2014 from pot roast to pie"],
     bestFor: "Women\u2019s groups, sensory engagement",
     popular: false,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafxq9xrqg0qhqfttzdjswf",
   },
   {
@@ -61,7 +61,7 @@ const KITS = [
     highlights: ["Station wagon packing list \u2014 what did you bring?", "Roadside diner trivia \u2014 Route 66 & beyond", "National parks BINGO \u2014 from Yellowstone to Yosemite"],
     bestFor: "High-energy sessions, mixed groups",
     popular: false,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafwqs0wwzatbs5721cyfmk",
   },
   {
@@ -73,7 +73,7 @@ const KITS = [
     highlights: ["Spring planting memories \u2014 what grew in your yard?", "Farmer\u2019s almanac trivia \u2014 weather, seasons & folklore", "Backyard harvest BINGO \u2014 tomatoes to tulips"],
     bestFor: "Spring/summer programming, garden clubs",
     popular: false,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafvx3erd68458p4em99141",
   },
   {
@@ -85,7 +85,7 @@ const KITS = [
     highlights: ["Tool shed vs. sewing basket \u2014 what did you make?", "Fix-it or toss-it debate cards \u2014 things built to last", "Vintage trades trivia \u2014 from blacksmiths to seamstresses"],
     bestFor: "Co-ed groups, bridging demographics",
     popular: false,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafv0r50q149ctgje0dmn0q",
   },
 ];

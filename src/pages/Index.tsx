@@ -124,7 +124,7 @@ const Index = () => {
                 <div className="hc-badge-row">
                   <div className="hc-badge">PDF · Print &amp; Go</div>
                   <div className="hc-badge">All cognitive levels</div>
-                  <div className="hc-badge">From $32.99</div>
+                  <div className="hc-badge">From $27</div>
                 </div>
               </div>
             </div>
@@ -171,7 +171,7 @@ const Index = () => {
                 highlights: ["Drive-In Movies vs. Streaming — Then & Now debate cards", "Name That Jukebox Tune — 1950s–80s hits", "Poodle Skirts to Bell Bottoms — fashion flashback trivia"],
                 bestFor: "Mixed groups, all cognitive levels",
                 popular: true,
-                price: "$32.99",
+                price: "$27",
                 priceId: "pri_01kpafx84h0z9z11fwc5m84dam"
               },
               {
@@ -183,7 +183,7 @@ const Index = () => {
                 highlights: ["Sunday Supper memories — what was on your table?", "Vintage kitchen gadgets trivia — name that tool", "Comfort food BINGO — from pot roast to pie"],
                 bestFor: "Women's groups, sensory engagement",
                 popular: false,
-                price: "$32.99",
+                price: "$27",
                 priceId: "pri_01kpafxq9xrqg0qhqfttzdjswf"
               },
               {
@@ -195,7 +195,7 @@ const Index = () => {
                 highlights: ["Station wagon packing list — what did you bring?", "Roadside diner trivia — Route 66 & beyond", "National parks BINGO — from Yellowstone to Yosemite"],
                 bestFor: "High-energy sessions, mixed groups",
                 popular: false,
-                price: "$32.99",
+                price: "$27",
                 priceId: "pri_01kpafwqs0wwzatbs5721cyfmk"
               },
               {
@@ -207,7 +207,7 @@ const Index = () => {
                 highlights: ["Spring planting memories — what grew in your yard?", "Farmer's almanac trivia — weather, seasons & folklore", "Backyard harvest BINGO — tomatoes to tulips"],
                 bestFor: "Spring/summer programming, garden clubs",
                 popular: false,
-                price: "$32.99",
+                price: "$27",
                 priceId: "pri_01kpafvx3erd68458p4em99141"
               },
               {
@@ -219,7 +219,7 @@ const Index = () => {
                 highlights: ["Tool shed vs. sewing basket — what did you make?", "Fix-it or toss-it debate cards — things built to last", "Vintage trades trivia — from blacksmiths to seamstresses"],
                 bestFor: "Co-ed groups, bridging demographics",
                 popular: false,
-                price: "$32.99",
+                price: "$27",
                 priceId: "pri_01kpafv0r50q149ctgje0dmn0q"
               }
             ].map((kit, i) =>

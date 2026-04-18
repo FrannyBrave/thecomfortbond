@@ -203,7 +203,7 @@ export default function BlueprintProSalesPage() {
               connection. Ready the moment you open it.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
-              <Cta large>Get the Q3 2026 Edition — $32.99</Cta>
+              <Cta large>Get the Q3 2026 Edition — $27</Cta>
               <Cta large variant="outline">See What's Inside ↓</Cta>
             </div>
           </div>
@@ -485,7 +485,7 @@ export default function BlueprintProSalesPage() {
             July – September &middot; 13 weeks &middot; Fully planned
           </p>
           <p style={{ fontFamily: serif, fontSize: "clamp(2.75rem, 7vw, 3.5rem)", fontWeight: 600, color: "#fff", margin: "0 0 0.25rem", lineHeight: 1 }}>
-            $32.99
+            $27
           </p>
           <p style={{ fontSize: "0.8rem", color: c.terracottaLight, fontWeight: 500, margin: "0 0 2rem" }}>
             One quarter. Completely handled.
@@ -566,7 +566,7 @@ export default function BlueprintProSalesPage() {
           <p style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: "#fff", margin: "0 0 2rem" }}>
             You handle the moments that matter.
           </p>
-          <Cta large>Get Your Q3 Blueprint — $32.99</Cta>
+          <Cta large>Get Your Q3 Blueprint — $27</Cta>
         </div>
       </section>
 
