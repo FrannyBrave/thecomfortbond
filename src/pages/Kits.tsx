@@ -37,7 +37,7 @@ const KITS = [
     highlights: ["Drive-In Movies vs. Streaming \u2014 Then & Now debate cards", "Name That Jukebox Tune \u2014 1950s\u201380s hits", "Poodle Skirts to Bell Bottoms \u2014 fashion flashback trivia"],
     bestFor: "Mixed groups, all cognitive levels",
     popular: true,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafx84h0z9z11fwc5m84dam",
   },
   {
@@ -49,7 +49,7 @@ const KITS = [
     highlights: ["Sunday Supper memories \u2014 what was on your table?", "Vintage kitchen gadgets trivia \u2014 name that tool", "Comfort food BINGO \u2014 from pot roast to pie"],
     bestFor: "Women\u2019s groups, sensory engagement",
     popular: false,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafxq9xrqg0qhqfttzdjswf",
   },
   {
@@ -61,7 +61,7 @@ const KITS = [
     highlights: ["Station wagon packing list \u2014 what did you bring?", "Roadside diner trivia \u2014 Route 66 & beyond", "National parks BINGO \u2014 from Yellowstone to Yosemite"],
     bestFor: "High-energy sessions, mixed groups",
     popular: false,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafwqs0wwzatbs5721cyfmk",
   },
   {
@@ -73,7 +73,7 @@ const KITS = [
     highlights: ["Spring planting memories \u2014 what grew in your yard?", "Farmer\u2019s almanac trivia \u2014 weather, seasons & folklore", "Backyard harvest BINGO \u2014 tomatoes to tulips"],
     bestFor: "Spring/summer programming, garden clubs",
     popular: false,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafvx3erd68458p4em99141",
   },
   {
@@ -85,7 +85,7 @@ const KITS = [
     highlights: ["Tool shed vs. sewing basket \u2014 what did you make?", "Fix-it or toss-it debate cards \u2014 things built to last", "Vintage trades trivia \u2014 from blacksmiths to seamstresses"],
     bestFor: "Co-ed groups, bridging demographics",
     popular: false,
-    price: "$32.99",
+    price: "$27",
     priceId: "pri_01kpafv0r50q149ctgje0dmn0q",
   },
 ];
@@ -224,11 +224,11 @@ export default function Kits() {
               <div className="p-6 md:p-8 flex flex-col justify-center" style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}>
                 <div className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-2" style={{ color: "var(--sand)" }}>The Comfort Bond™ Complete Engagement System</div>
                 <h3 className="font-serif text-[clamp(1.4rem,2.5vw,1.8rem)] font-semibold leading-[1.2] m-0 text-white">
-                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$130.99</em>
+                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$97</em>
                 </h3>
                 <div className="text-sm text-white/60 mt-2">
-                  <span className="line-through">$164.95 individually</span>
-                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$34</span>
+                  <span className="line-through">$135 individually</span>
+                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$38</span>
                 </div>
               </div>
               <div className="p-6 md:p-8 flex flex-col justify-center" style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}>
@@ -250,7 +250,7 @@ export default function Kits() {
                 <button type="button" onClick={() => openPaddleCheckout("pri_01kpafqz2tc4pfc262j1dnh531")} className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[14px] font-medium text-white border-0 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}>
                   Get All 5 Kits <ArrowSvg />
                 </button>
-                <p className="text-[10px] m-0" style={{ color: "rgba(255,255,255,0.4)" }}>$130.99 · One-time · Instant download</p>
+                <p className="text-[10px] m-0" style={{ color: "rgba(255,255,255,0.4)" }}>$97 · One-time · Instant download</p>
               </div>
             </div>
           </div>
