@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/family-visits-hero.jpg";
 import bookletImage from "@/assets/family-visits-booklet.jpg";
 import kitImage from "@/assets/family-visits-kit.jpg";
+import mothersDayHero from "@/assets/blog-mothers-day-memory-care-hero.jpg";
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -552,6 +553,51 @@ const FamilyVisits = () => {
                   <Link to="/kits">Explore the Connection Kits</Link>
                 </Button>
               </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* SECTION 10 — RELATED READING */}
+        <section className="relative px-6 py-24 md:py-28 bg-cream">
+          <div className="max-w-5xl mx-auto">
+            <motion.div {...fadeUp} className="text-center mb-14">
+              <Eyebrow>Related Reading</Eyebrow>
+              <h2 className="font-serif text-forest text-3xl md:text-4xl mt-6 leading-[1.2]">
+                For the visits we don't know
+                <br className="hidden md:block" /> how to prepare for.
+              </h2>
+            </motion.div>
+
+            <motion.div {...fadeIn}>
+              <Link
+                to="/blog/mothers-day-memory-care-family-guide"
+                className="group block rounded-[20px] overflow-hidden bg-forest shadow-[0_8px_28px_rgba(45,74,62,0.12)] hover:shadow-[0_20px_48px_rgba(45,74,62,0.18)] transition-all duration-300 hover:-translate-y-1"
+              >
+                <article className="grid md:grid-cols-[1.05fr_1fr] min-h-[300px]">
+                  <div
+                    className="min-h-[220px] md:min-h-full bg-center bg-cover"
+                    style={{ backgroundImage: `url(${mothersDayHero})` }}
+                    aria-hidden="true"
+                  />
+                  <div className="p-8 md:p-12 flex flex-col justify-center text-cream">
+                    <span className="font-sans text-[10px] font-semibold tracking-[0.16em] uppercase text-sand mb-4 inline-flex items-center gap-2">
+                      <span className="inline-block w-4 h-px bg-sand" />
+                      Featured · For Families
+                    </span>
+                    <h3 className="font-serif text-2xl md:text-[2rem] leading-[1.2] mb-4 -tracking-[0.005em]">
+                      Mother's Day in Memory Care: A Family Caregiver's Guide
+                    </h3>
+                    <p className="font-serif italic text-base text-cream/80 leading-[1.65] mb-6 font-normal">
+                      A working document for the visits we do not know how to
+                      prepare for — what to bring, what to say, and what to
+                      release before you walk in.
+                    </p>
+                    <span className="font-sans text-sm font-medium text-sand inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                      Read the guide →
+                    </span>
+                  </div>
+                </article>
+              </Link>
             </motion.div>
           </div>
         </section>
