@@ -65,7 +65,7 @@ export const Navigation = () => {
               { label: "", href: "#road-trip-kit" },
               { label: "", href: "#faq" },
               { label: "", href: "/resources" },
-              { label: "For Families", href: "/family-visits" },
+              { label: "", href: "/family-visits" },
               { label: "Free Sample", href: "#honey-pot" },
               { label: "Blueprint Pro", href: "/blueprint-pro" },
             ].map((link) => (
@@ -129,7 +129,7 @@ export const Navigation = () => {
                 { label: "", href: "#road-trip-kit" },
                 { label: "", href: "#faq" },
                 { label: "", href: "/resources" },
-                { label: "For Families", href: "/family-visits" },
+                { label: "", href: "/family-visits" },
                 { label: "Free Sample", href: "#honey-pot" },
                 { label: "Blueprint Pro", href: "/blueprint-pro" },
               ].map((link) => (
