@@ -1,87 +1,129 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { articles } from "@/data/articles";
 import { FreeSamplerCTA } from "@/components/FreeSamplerCTA";
 
-function renderBoldText(text: string) {
-  const parts = text.split(/\*\*(.*?)\*\*/g);
-  return parts.map((part, i) =>
-    i % 2 === 1
-      ? <strong key={i} style={{ color: "var(--text-dark)", fontWeight: 600 }}>{part}</strong>
-      : <span key={i}>{part}</span>
+/* ---------- helpers ---------- */
+
+function renderInlineHtml(text: string) {
+  // Convert **bold** markdown to <strong> while preserving inline HTML (e.g. <a>, <br/>, <strong>).
+  const html = text.replace(
+    /\*\*(.*?)\*\*/g,
+    '<strong style="color: var(--forest); font-weight: 600;">$1</strong>',
   );
-}
-
-function renderParagraphContent(text: string) {
-  // Convert **bold** markdown to <strong> while preserving any inline HTML (e.g. <a>, <br/>, <strong>)
-  const html = text.replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--text-dark); font-weight: 600;">$1</strong>');
   return <span dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-function renderHtmlContent(html: string) {
+function renderHtml(html: string) {
   return <span dangerouslySetInnerHTML={{ __html: html }} />;
 }
+
+function slugify(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/<[^>]*>/g, "")
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
+
+/* ---------- component ---------- */
 
 const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
-  const article = articles.find(a => a.slug === slug);
+  const article = articles.find((a) => a.slug === slug);
+
+  // Build TOC entries from heading sections.
+  const toc = useMemo(() => {
+    if (!article) return [] as { id: string; text: string }[];
+    return article.content
+      .filter((s) => s.type === "heading" && s.text)
+      .map((s) => ({ id: slugify(s.text || ""), text: (s.text || "").replace(/<[^>]*>/g, "") }));
+  }, [article]);
+
+  const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (article) {
-      document.title = `${article.title} — The Comfort Bond™`;
-      const setMeta = (attr: string, key: string, content: string) => {
-        let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement;
-        if (!el) { el = document.createElement("meta"); el.setAttribute(attr, key); document.head.appendChild(el); }
-        el.setAttribute("content", content);
-      };
-      setMeta("name", "description", article.metaDescription);
-      setMeta("property", "og:description", article.metaDescription);
-      setMeta("name", "twitter:description", article.metaDescription);
-      setMeta("property", "og:title", `${article.title} — The Comfort Bond™`);
-      setMeta("name", "twitter:title", `${article.title} — The Comfort Bond™`);
+    if (!article) return;
 
-      // BlogPosting JSON-LD
-      const ldId = "article-jsonld";
-      let script = document.getElementById(ldId) as HTMLScriptElement;
-      if (!script) {
-        script = document.createElement("script");
-        script.id = ldId;
-        script.type = "application/ld+json";
-        document.head.appendChild(script);
+    document.title = `${article.title} — The Comfort Bond™`;
+    const setMeta = (attr: string, key: string, content: string) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement;
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
       }
-      script.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": article.title,
-        "description": article.metaDescription,
-        "author": { "@type": "Person", "name": "Francesca" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "The Comfort Bond",
-          "logo": { "@type": "ImageObject", "url": "https://thecomfortbond.com/logo.png" }
-        },
-        "datePublished": article.datePublished,
-        "dateModified": article.dateModified,
-        "mainEntityOfPage": `https://thecomfortbond.com/resources/${article.slug}`,
-        "image": "https://thecomfortbond.com/og-image.jpg"
-      });
+      el.setAttribute("content", content);
+    };
+    setMeta("name", "description", article.metaDescription);
+    setMeta("property", "og:description", article.metaDescription);
+    setMeta("name", "twitter:description", article.metaDescription);
+    setMeta("property", "og:title", `${article.title} — The Comfort Bond™`);
+    setMeta("name", "twitter:title", `${article.title} — The Comfort Bond™`);
 
-      return () => {
-        const el = document.getElementById(ldId);
-        if (el) el.remove();
-      };
+    // BlogPosting JSON-LD
+    const ldId = "article-jsonld";
+    let script = document.getElementById(ldId) as HTMLScriptElement;
+    if (!script) {
+      script = document.createElement("script");
+      script.id = ldId;
+      script.type = "application/ld+json";
+      document.head.appendChild(script);
     }
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: article.title,
+      description: article.metaDescription,
+      author: { "@type": "Person", "name": "Francesca" },
+      publisher: {
+        "@type": "Organization",
+        name: "The Comfort Bond",
+        logo: { "@type": "ImageObject", url: "https://thecomfortbond.com/logo.png" },
+      },
+      datePublished: article.datePublished,
+      dateModified: article.dateModified,
+      mainEntityOfPage: `https://thecomfortbond.com/resources/${article.slug}`,
+      image: "https://thecomfortbond.com/og-image.jpg",
+    });
+
+    return () => {
+      const el = document.getElementById(ldId);
+      if (el) el.remove();
+    };
   }, [article]);
+
+  // Scroll-spy for TOC active state.
+  useEffect(() => {
+    if (!toc.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length) {
+          // Pick the topmost visible heading.
+          visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          setActiveId(visible[0].target.id);
+        }
+      },
+      { rootMargin: "-96px 0px -70% 0px", threshold: 0 },
+    );
+    toc.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [toc]);
 
   if (!article) {
     return (
-      <div style={{ background: "var(--cream)", minHeight: "100vh" }}>
+      <div style={{ background: "#fff", minHeight: "100vh" }}>
         <Navigation />
         <div style={{ textAlign: "center", padding: "10rem 2rem" }}>
-          <h1 style={{ fontFamily: "var(--font-serif)", color: "var(--text-dark)" }}>Article not found</h1>
+          <h1 style={{ fontFamily: "var(--font-serif)", color: "var(--forest)" }}>Article not found</h1>
           <Link to="/resources" style={{ color: "var(--clay)", marginTop: "1rem", display: "inline-block" }}>
             ← Back to Resources
           </Link>
@@ -91,328 +133,471 @@ const ArticleDetail = () => {
     );
   }
 
+  /* ---------- render ---------- */
+
   return (
-    <div style={{ background: "var(--cream)", minHeight: "100vh" }}>
+    <div style={{ background: "#ffffff", minHeight: "100vh" }}>
       <Navigation />
 
+      {/* Scoped responsive styles */}
+      <style>{`
+        .article-shell {
+          display: grid;
+          grid-template-columns: 240px minmax(0, 1fr);
+          gap: clamp(2rem, 5vw, 4rem);
+          max-width: 1180px;
+          margin: 0 auto;
+          padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 4vw, 2.5rem) clamp(3rem, 6vw, 5rem);
+        }
+        .article-toc {
+          position: sticky;
+          top: 96px;
+          align-self: start;
+          max-height: calc(100vh - 120px);
+          overflow-y: auto;
+          padding-right: 0.5rem;
+        }
+        .article-toc-title {
+          font-family: var(--font-sans);
+          font-size: 11px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--clay);
+          font-weight: 600;
+          margin: 0 0 1rem;
+        }
+        .article-toc-link {
+          display: block;
+          font-family: var(--font-sans);
+          font-size: 13.5px;
+          line-height: 1.5;
+          color: rgba(45,74,62,0.65);
+          text-decoration: none;
+          padding: 8px 0 8px 14px;
+          border-left: 2px solid rgba(45,74,62,0.1);
+          transition: color 0.15s, border-color 0.15s;
+        }
+        .article-toc-link:hover { color: var(--forest); }
+        .article-toc-link.is-active {
+          color: var(--forest);
+          font-weight: 600;
+          border-left-color: var(--clay);
+        }
+        .article-body { min-width: 0; max-width: 720px; }
+        .article-body p {
+          font-family: var(--font-sans);
+          font-size: 17px;
+          font-weight: 400;
+          color: #1f2d28;
+          line-height: 1.8;
+          margin: 0 0 1.25rem;
+        }
+        .article-body p a, .article-body li a {
+          color: var(--clay);
+          text-decoration: none;
+          border-bottom: 1px solid rgba(198,123,92,0.35);
+          transition: border-color 0.15s, color 0.15s;
+        }
+        .article-body p a:hover, .article-body li a:hover {
+          border-bottom-color: var(--clay);
+          color: var(--forest);
+        }
+        .article-body h2.section-heading {
+          font-family: var(--font-serif);
+          font-size: clamp(1.5rem, 2.6vw, 1.85rem);
+          font-weight: 600;
+          color: var(--forest);
+          line-height: 1.25;
+          margin: 3rem 0 1.25rem;
+          letter-spacing: -0.01em;
+          scroll-margin-top: 96px;
+        }
+        .article-body h2.section-heading::before {
+          content: "";
+          display: block;
+          width: 36px;
+          height: 3px;
+          background: var(--clay);
+          margin-bottom: 14px;
+          border-radius: 2px;
+        }
+        .article-figure {
+          margin: 2.5rem 0;
+        }
+        .article-figure img {
+          width: 100%;
+          height: auto;
+          border-radius: 12px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 24px rgba(45,74,62,0.08);
+          display: block;
+        }
+        .article-figure figcaption {
+          font-family: var(--font-sans);
+          font-size: 13px;
+          color: rgba(45,74,62,0.6);
+          margin-top: 10px;
+          text-align: center;
+          font-style: italic;
+        }
+        .article-callout {
+          background: #f6f4ef;
+          border-left: 4px solid var(--clay);
+          color: var(--forest);
+          border-radius: 8px;
+          padding: 1.25rem 1.5rem;
+          margin: 2rem 0;
+          font-family: var(--font-sans);
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.7;
+        }
+        .article-callout a { color: var(--clay); font-weight: 600; text-decoration: underline; }
+
+        .article-hero {
+          background: linear-gradient(180deg, #f8f8f5 0%, #ffffff 100%);
+          border-bottom: 1px solid rgba(45,74,62,0.08);
+        }
+        .article-hero-inner {
+          max-width: 1180px;
+          margin: 0 auto;
+          padding: clamp(5.5rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2.5rem) clamp(2.5rem, 4vw, 3.5rem);
+          display: grid;
+          grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+          gap: clamp(2rem, 5vw, 4rem);
+          align-items: center;
+        }
+        .article-hero-eyebrow {
+          display: inline-block;
+          font-family: var(--font-sans);
+          font-size: 11px;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--clay);
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+        .article-hero h1 {
+          font-family: var(--font-serif);
+          font-size: clamp(2rem, 4.2vw, 3.1rem);
+          font-weight: 600;
+          line-height: 1.15;
+          color: var(--forest);
+          margin: 0 0 1rem;
+          letter-spacing: -0.015em;
+        }
+        .article-hero-subtitle {
+          font-family: var(--font-sans);
+          font-size: clamp(16px, 1.6vw, 18px);
+          font-weight: 400;
+          color: rgba(45,74,62,0.75);
+          line-height: 1.6;
+          margin: 0 0 1.5rem;
+          max-width: 520px;
+        }
+        .article-hero-meta {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem 0.75rem;
+          font-family: var(--font-sans);
+          font-size: 13px;
+          color: rgba(45,74,62,0.55);
+        }
+        .article-hero-meta .dot { opacity: 0.4; }
+        .article-hero-image img {
+          width: 100%;
+          height: auto;
+          border-radius: 14px;
+          box-shadow: 0 10px 40px rgba(45,74,62,0.18);
+          display: block;
+        }
+
+        @media (max-width: 960px) {
+          .article-hero-inner { grid-template-columns: 1fr; }
+          .article-hero-image { order: -1; }
+          .article-shell { grid-template-columns: 1fr; }
+          .article-toc { display: none; }
+        }
+      `}</style>
+
       {/* Breadcrumb */}
-      <div style={{
-        maxWidth: 720,
-        margin: "0 auto",
-        padding: "6.5rem 1.5rem 0",
-      }}>
+      <div
+        style={{
+          maxWidth: 1180,
+          margin: "0 auto",
+          padding: "5.5rem 1.5rem 0",
+        }}
+      >
         <Link
           to="/resources"
           style={{
-            fontSize: "0.75rem",
+            fontFamily: "var(--font-sans)",
+            fontSize: 13,
             fontWeight: 500,
-            color: "var(--text-light)",
+            color: "rgba(45,74,62,0.6)",
             textDecoration: "none",
             letterSpacing: "0.02em",
-            transition: "color 0.15s",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "var(--forest)")}
-          onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-light)")}
         >
-          &larr; Back to Articles
+          ← Back to Resources
         </Link>
       </div>
 
-      {/* Hero Banner */}
-      <header style={{
-        background: "var(--forest)",
-        paddingTop: "clamp(2rem, 4vw, 3rem)",
-        paddingBottom: "clamp(3rem, 6vw, 4.5rem)",
-        paddingLeft: "1.5rem",
-        paddingRight: "1.5rem",
-      }}>
-        <div style={{ maxWidth: 720, margin: "0 auto" }}>
-          <span style={{
-            display: "inline-block",
-            fontSize: 10,
-            fontWeight: 500,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase" as const,
-            color: "var(--forest)",
-            background: "var(--sand)",
-            padding: "4px 14px",
-            borderRadius: 100,
-            marginBottom: "1.5rem",
-          }}>
-            {article.category}
-          </span>
-          <h1 style={{
-            fontFamily: "var(--font-serif)",
-            fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-            fontWeight: 600,
-            lineHeight: 1.2,
-            color: "#fff",
-            margin: "0 0 1rem",
-          }}>
-            {article.title}
-          </h1>
-          <p style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 17,
-            fontWeight: 300,
-            color: "rgba(255,255,255,0.7)",
-            lineHeight: 1.7,
-            margin: "0 0 1.25rem",
-            maxWidth: 600,
-          }}>
-            {article.subtitle}
-          </p>
-          <div style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            flexWrap: "wrap",
-            fontSize: 13,
-            fontWeight: 500,
-            color: "var(--sand)",
-          }}>
-            <span>{article.readTime}</span>
-            <span style={{ opacity: 0.5 }}>·</span>
-            <span>Published: {new Date(article.datePublished).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
-            <span style={{ opacity: 0.5 }}>·</span>
-            <span>Updated: {new Date(article.dateModified).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
+      {/* Hero */}
+      <header className="article-hero">
+        <div className="article-hero-inner">
+          <div>
+            <span className="article-hero-eyebrow">{article.category}</span>
+            <h1>{article.title}</h1>
+            <p className="article-hero-subtitle">{article.subtitle}</p>
+            <div className="article-hero-meta">
+              <span>{article.readTime}</span>
+              <span className="dot">·</span>
+              <span>
+                Updated{" "}
+                {new Date(article.dateModified).toLocaleDateString("en-US", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+              </span>
+            </div>
           </div>
+          {article.heroImage && (
+            <div className="article-hero-image">
+              <img src={article.heroImage} alt={article.heroAlt} width={1280} height={720} />
+            </div>
+          )}
         </div>
       </header>
 
-      {/* Hero Image */}
-      {article.heroImage && (
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 1.5rem" }}>
-          <img
-            src={article.heroImage}
-            alt={article.heroAlt}
-            width={1280}
-            height={720}
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: 12,
-              marginTop: "clamp(-2rem, -3vw, -3rem)",
-              boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
-            }}
-          />
-        </div>
-      )}
+      {/* Body + TOC */}
+      <div className="article-shell">
+        <aside className="article-toc" aria-label="Table of contents">
+          <p className="article-toc-title">In this article</p>
+          <nav>
+            {toc.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className={`article-toc-link${activeId === item.id ? " is-active" : ""}`}
+              >
+                {item.text}
+              </a>
+            ))}
+          </nav>
+        </aside>
 
-      {/* Article Body */}
-      <main style={{
-        maxWidth: 720,
-        margin: "0 auto",
-        padding: "clamp(2.5rem, 5vw, 4rem) 1.5rem",
-      }}>
-        {article.content.map((section, i) => {
-          if (section.type === "image") {
+        <main className="article-body">
+          {article.content.map((section, i) => {
+            if (section.type === "image") {
+              return (
+                <figure key={i} className="article-figure">
+                  <img
+                    src={section.src}
+                    alt={section.alt}
+                    loading="lazy"
+                    width={1280}
+                    height={720}
+                  />
+                  {section.alt && <figcaption>{section.alt}</figcaption>}
+                </figure>
+              );
+            }
+
+            if (section.type === "heading") {
+              const id = slugify(section.text || "");
+              return (
+                <h2 key={i} id={id} className="section-heading">
+                  {section.text}
+                </h2>
+              );
+            }
+
+            if (section.type === "callout") {
+              return (
+                <div key={i} className="article-callout">
+                  {renderHtml(section.text || "")}
+                </div>
+              );
+            }
+
+            return <p key={i}>{renderInlineHtml(section.text || "")}</p>;
+          })}
+
+          {/* Related Articles */}
+          {(() => {
+            const related = articles.filter((a) => a.slug !== article.slug).slice(0, 3);
             return (
-              <figure key={i} style={{ margin: "2rem 0" }}>
-                <img
-                  src={section.src}
-                  alt={section.alt}
-                  loading="lazy"
-                  width={1280}
-                  height={720}
+              <section
+                style={{
+                  marginTop: "3.5rem",
+                  paddingTop: "2rem",
+                  borderTop: "1px solid rgba(45,74,62,0.12)",
+                }}
+              >
+                <h3
                   style={{
-                    width: "100%",
-                    height: "auto",
-                    borderRadius: 10,
-                    boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
-                  }}
-                />
-                {section.alt && (
-                  <figcaption style={{
                     fontFamily: "var(--font-sans)",
-                    fontSize: 13,
-                    color: "rgba(45,74,62,0.55)",
-                    marginTop: 8,
-                    textAlign: "center",
-                    fontStyle: "italic",
-                  }}>
-                    {section.alt}
-                  </figcaption>
-                )}
-              </figure>
+                    fontSize: 11,
+                    fontWeight: 600,
+                    letterSpacing: "0.14em",
+                    textTransform: "uppercase",
+                    color: "var(--clay)",
+                    margin: "0 0 1.25rem",
+                  }}
+                >
+                  Continue reading
+                </h3>
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                    gap: "1rem",
+                  }}
+                >
+                  {related.map((r) => (
+                    <Link
+                      key={r.slug}
+                      to={`/resources/${r.slug}`}
+                      style={{
+                        display: "block",
+                        padding: "1.25rem",
+                        background: "#fafaf7",
+                        border: "1px solid rgba(45,74,62,0.08)",
+                        borderRadius: 10,
+                        textDecoration: "none",
+                        transition: "border-color 0.2s, transform 0.2s",
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.currentTarget as HTMLElement).style.borderColor = "var(--clay)";
+                        (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLElement).style.borderColor = "rgba(45,74,62,0.08)";
+                        (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: "var(--font-sans)",
+                          fontSize: 10,
+                          fontWeight: 600,
+                          letterSpacing: "0.12em",
+                          textTransform: "uppercase",
+                          color: "var(--clay)",
+                          display: "block",
+                          marginBottom: 8,
+                        }}
+                      >
+                        {r.category}
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: "var(--font-serif)",
+                          fontSize: 16,
+                          fontWeight: 600,
+                          color: "var(--forest)",
+                          lineHeight: 1.35,
+                          display: "block",
+                        }}
+                      >
+                        {r.title}
+                      </span>
+                      <span
+                        style={{
+                          display: "block",
+                          fontFamily: "var(--font-sans)",
+                          fontSize: 12,
+                          color: "rgba(45,74,62,0.5)",
+                          marginTop: 8,
+                        }}
+                      >
+                        {r.readTime}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
             );
-          }
+          })()}
+        </main>
+      </div>
 
-          if (section.type === "heading") {
-            return (
-              <h3 key={i} style={{
-                fontFamily: "var(--font-serif)",
-                fontSize: "1.35rem",
-                fontWeight: 600,
-                color: "var(--text-dark)",
-                margin: "2.5rem 0 1rem",
-                paddingLeft: 16,
-                borderLeft: "3px solid var(--clay)",
-                lineHeight: 1.3,
-              }}>
-                {section.text}
-              </h3>
-            );
-          }
-
-          if (section.type === "callout") {
-            return (
-              <div key={i} className="article-callout" style={{
-                background: "var(--forest)",
-                color: "var(--sand)",
-                borderRadius: 12,
-                padding: "1.5rem 2rem",
-                margin: "2rem 0",
-                fontFamily: "var(--font-sans)",
-                fontSize: 16,
-                fontWeight: 400,
-                lineHeight: 1.7,
-              }}>
-                {renderHtmlContent(section.text || "")}
-              </div>
-            );
-          }
-
-          return (
-            <p key={i} style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 17,
-              fontWeight: 400,
-              color: "var(--text-dark)",
-              lineHeight: 1.8,
-              margin: "0 0 1.25rem",
-            }}>
-              {renderParagraphContent(section.text || "")}
-            </p>
-          );
-        })}
-
-        {/* Related Articles */}
-        {(() => {
-          const related = articles.filter(a => a.slug !== article.slug);
-          return (
-            <section style={{ marginTop: "3rem", paddingTop: "2rem", borderTop: "1px solid rgba(45,74,62,0.15)" }}>
-              <h3 style={{
-                fontFamily: "var(--font-serif)",
-                fontSize: "1.25rem",
-                fontWeight: 600,
-                color: "var(--text-dark)",
-                margin: "0 0 1.25rem",
-              }}>
-                Related Articles
-              </h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                {related.map(r => (
-                  <Link
-                    key={r.slug}
-                    to={`/resources/${r.slug}`}
-                    style={{
-                      display: "block",
-                      padding: "1rem 1.25rem",
-                      background: "rgba(45,74,62,0.05)",
-                      borderRadius: 10,
-                      textDecoration: "none",
-                      transition: "background 0.2s",
-                    }}
-                    onMouseEnter={e => (e.currentTarget.style.background = "rgba(45,74,62,0.1)")}
-                    onMouseLeave={e => (e.currentTarget.style.background = "rgba(45,74,62,0.05)")}
-                  >
-                    <span style={{
-                      fontFamily: "var(--font-serif)",
-                      fontSize: 16,
-                      fontWeight: 600,
-                      color: "var(--text-dark)",
-                      lineHeight: 1.4,
-                    }}>
-                      {r.title}
-                    </span>
-                    <span style={{
-                      display: "block",
-                      fontFamily: "var(--font-sans)",
-                      fontSize: 13,
-                      color: "var(--clay)",
-                      marginTop: 4,
-                    }}>
-                      {r.readTime}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          );
-        })()}
-      </main>
-
-      {/* Free Sampler CTA — auto-injected after every article */}
+      {/* Free Sampler CTA */}
       <FreeSamplerCTA />
 
       {/* CTA Banner */}
-      <section style={{
-        background: "var(--clay)",
-        padding: "clamp(3rem, 6vw, 4.5rem) 1.5rem",
-        textAlign: "center" as const,
-      }}>
-        <div style={{ maxWidth: 600, margin: "0 auto" }}>
-          <h2 style={{
-            fontFamily: "var(--font-serif)",
-            fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
-            fontWeight: 600,
-            color: "#fff",
-            margin: "0 0 0.75rem",
-          }}>
-            Ready to explore the full collection?
+      <section
+        style={{
+          background: "var(--forest)",
+          padding: "clamp(3.5rem, 6vw, 5rem) 1.5rem",
+          textAlign: "center" as const,
+        }}
+      >
+        <div style={{ maxWidth: 640, margin: "0 auto" }}>
+          <span
+            style={{
+              display: "inline-block",
+              fontFamily: "var(--font-sans)",
+              fontSize: 11,
+              fontWeight: 600,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase" as const,
+              color: "var(--sand)",
+              marginBottom: "1rem",
+            }}
+          >
+            For Activity Directors
+          </span>
+          <h2
+            style={{
+              fontFamily: "var(--font-serif)",
+              fontSize: "clamp(1.7rem, 3vw, 2.3rem)",
+              fontWeight: 600,
+              color: "#fff",
+              margin: "0 0 0.85rem",
+              lineHeight: 1.2,
+            }}
+          >
+            Ready to retire DIY activity prep?
           </h2>
-          <p style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 16,
-            fontWeight: 300,
-            color: "rgba(255,255,255,0.85)",
-            lineHeight: 1.7,
-            margin: "0 0 2rem",
-          }}>
-            Five themed engagement kits — printable, ready to use, no prep needed. Browse the full collection.
+          <p
+            style={{
+              fontFamily: "var(--font-sans)",
+              fontSize: 16,
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.8)",
+              lineHeight: 1.7,
+              margin: "0 0 2rem",
+            }}
+          >
+            Five themed engagement kits — printable, facilitator-ready, designed specifically for senior living. Built to be opened and used the same day.
           </p>
           <Link
             to="/#products"
             style={{
               display: "inline-block",
-              background: "var(--forest)",
+              background: "var(--clay)",
               color: "#fff",
               fontFamily: "var(--font-sans)",
               fontSize: 15,
-              fontWeight: 500,
+              fontWeight: 600,
               padding: "14px 32px",
-              borderRadius: 100,
+              borderRadius: 8,
               textDecoration: "none",
               transition: "background 0.2s, transform 0.15s",
             }}
-            onMouseEnter={e => {
-              (e.currentTarget as HTMLElement).style.background = "var(--forest-light)";
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "#b56c4f";
               (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
             }}
-            onMouseLeave={e => {
-              (e.currentTarget as HTMLElement).style.background = "var(--forest)";
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "var(--clay)";
               (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
             }}
           >
-            See the Full Comfort Bundle →
+            Explore the Engagement Kits →
           </Link>
-          <div style={{ marginTop: "1.5rem" }}>
-            <Link
-              to="/resources"
-              style={{
-                color: "rgba(255,255,255,0.7)",
-                fontFamily: "var(--font-sans)",
-                fontSize: 14,
-                textDecoration: "none",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
-              onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
-            >
-              ← Back to Resources
-            </Link>
-          </div>
         </div>
       </section>
 
