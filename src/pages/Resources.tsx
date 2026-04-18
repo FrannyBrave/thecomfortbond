@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { articles } from "@/data/articles";
+import mothersDayHero from "@/assets/blog-mothers-day-memory-care-hero.jpg";
 
 const categories = ["ALL", "STAFFING & PREP", "MEMORY CARE", "PROGRAMMING"];
 
@@ -221,6 +222,14 @@ const Resources = () => {
       </section>
 
       <FooterSection />
+
+      <style>{`
+        @media (max-width: 720px) {
+          .featured-article {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };
