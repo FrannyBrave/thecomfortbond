@@ -4,6 +4,10 @@ import memoryCareHero from "@/assets/blog-memory-care-consistency-hero.png";
 import memoryCareInline from "@/assets/blog-adult-centered-engagement.png";
 import beyondBingoHero from "@/assets/blog-weekend-staff-empowerment-hero.png";
 import beyondBingoInline from "@/assets/blog-volunteer-facilitator-ready.png";
+import curriculumHero from "@/assets/blog-13-week-curriculum-hero.jpg";
+import curriculumInline from "@/assets/blog-13-week-curriculum-inline.jpg";
+import sensoryHero from "@/assets/blog-sensory-reminiscence-hero.jpg";
+import sensoryInline from "@/assets/blog-sensory-reminiscence-inline.jpg";
 
 export interface Article {
   slug: string;
@@ -157,8 +161,8 @@ export const articles: Article[] = [
     excerpt: "A quarterly programming framework for Activity Directors — build a memory care activity calendar across six wellness dimensions.",
     readTime: "10 min read",
     subtitle: "How quarterly planning turns reactive scheduling into professional, defensible programming.",
-    heroImage: "",
-    heroAlt: "Activity Director planning a 13-week memory care curriculum across six wellness dimensions",
+    heroImage: curriculumHero,
+    heroAlt: "Activity Director mapping a 13-week memory care curriculum on a wall planner in a bright modern senior living office",
     content: [
       { type: 'paragraph', text: "There is a particular kind of Sunday evening that Activity Directors know well. The week's calendar is mostly empty, a resident's daughter has emailed asking what is planned for Mother's Day, and the printer is out of toner. You have been promising yourself you would sit down and plan the quarter for months. Instead, you open a blank grid and start filling in Monday." },
       { type: 'paragraph', text: "If this sounds familiar, you are not planning poorly. You are planning reactively — and there is a meaningful difference. Reactive programming is a survival strategy. It works until it doesn't, and the moments when it stops working (a surprise survey, a census spike in memory care, a long holiday weekend with short staffing) tend to arrive all at once." },
@@ -178,6 +182,7 @@ export const articles: Article[] = [
 
       { type: 'heading', text: "What a 13-Week Curriculum Actually Looks Like" },
       { type: 'paragraph', text: "A strong quarterly curriculum is built in three layers." },
+      { type: 'image', src: curriculumInline, alt: 'Open quarterly planner with color-coded weekly schedules and a laptop on a clean white desk — illustrating structured 13-week programming for senior living' },
 
       { type: 'heading', text: "Layer One: The Six Wellness Dimensions" },
       { type: 'paragraph', text: "Every week should touch each of <a href=\"/about\">six wellness dimensions</a> at least once:" },
@@ -221,8 +226,8 @@ export const articles: Article[] = [
     excerpt: "A guide for Activity Directors on designing sensory-rich reminiscence therapy activities that move beyond surface-level nostalgia questions.",
     readTime: "9 min read",
     subtitle: "Why sensory and emotional memory reach residents that verbal recall cannot.",
-    heroImage: "",
-    heroAlt: "Activity Director leading a sensory-rich reminiscence therapy session in memory care",
+    heroImage: sensoryHero,
+    heroAlt: "Professional caregiver guiding a senior resident through a sensory-rich reminiscence tray in a bright modern memory care community",
     content: [
       { type: 'paragraph', text: "Every Activity Director has lived this moment. You are running a reminiscence circle. You ask a resident about her wedding day. Silence. You rephrase. She looks past you. The session moves on, and you quietly conclude she is \"not having a good day.\"" },
       { type: 'paragraph', text: "Sometimes that is true. More often, the question was the problem." },
@@ -239,6 +244,7 @@ export const articles: Article[] = [
 
       { type: 'heading', text: "The Anatomy of a Multi-Layered Reminiscence Activity" },
       { type: 'paragraph', text: "A strong session layers four elements. When all four are present, the activity stops being a quiz and becomes an invitation." },
+      { type: 'image', src: sensoryInline, alt: 'Curated sensory reminiscence kit flat-lay — wooden darning egg, threaded needle card, vintage handkerchief, dried lavender, and fabric swatch on linen' },
 
       { type: 'heading', text: "1. A Tactile Anchor" },
       { type: 'paragraph', text: "Something to hold. A wooden darning egg. A folded handkerchief. A seed packet. The hand knows things the mouth has forgotten, and the simple act of holding an object removes the verbal pressure that so often stalls traditional reminiscence work." },
