@@ -4,6 +4,12 @@ import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { articles } from "@/data/articles";
 import { FreeSamplerCTA } from "@/components/FreeSamplerCTA";
+import { FreeBlueprintCTA } from "@/components/FreeBlueprintCTA";
+
+const BLUEPRINT_CTA_SLUGS = new Set([
+  "beyond-bingo-for-seniors",
+  "13-week-memory-care-activity-calendar",
+]);
 
 /* ---------- helpers ---------- */
 
@@ -523,8 +529,8 @@ const ArticleDetail = () => {
         </main>
       </div>
 
-      {/* Free Sampler CTA */}
-      <FreeSamplerCTA />
+      {/* Lead-magnet CTA — Blueprint for select articles, Sampler otherwise */}
+      {BLUEPRINT_CTA_SLUGS.has(article.slug) ? <FreeBlueprintCTA /> : <FreeSamplerCTA />}
 
       {/* CTA Banner */}
       <section
