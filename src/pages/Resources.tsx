@@ -222,6 +222,14 @@ const Resources = () => {
       </section>
 
       <FooterSection />
+
+      <style>{`
+        @media (max-width: 720px) {
+          .featured-article {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };
