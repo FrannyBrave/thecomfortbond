@@ -66,7 +66,7 @@ export const Navigation = () => {
               { label: "", href: "#faq" },
               { label: "", href: "/resources" },
               { label: "", href: "/family-visits" },
-              { label: "Free Sample", href: "#honey-pot" },
+              { label: "Free Sampler", href: "/free-sampler" },
               { label: "Blueprint Pro", href: "/blueprint-pro" },
             ].map((link) => (
               <button
@@ -130,7 +130,7 @@ export const Navigation = () => {
                 { label: "", href: "#faq" },
                 { label: "", href: "/resources" },
                 { label: "", href: "/family-visits" },
-                { label: "Free Sample", href: "#honey-pot" },
+                { label: "Free Sampler", href: "/free-sampler" },
                 { label: "Blueprint Pro", href: "/blueprint-pro" },
               ].map((link) => (
                 <button
