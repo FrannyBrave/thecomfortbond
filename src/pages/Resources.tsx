@@ -118,6 +118,105 @@ const Resources = () => {
         ))}
       </div>
 
+      {/* Featured Article — Mother's Day */}
+      {activeFilter === "ALL" && (
+        <section style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "0 1.5rem 2.5rem",
+        }}>
+          <Link
+            to="/blog/mothers-day-memory-care-family-guide"
+            style={{ textDecoration: "none", display: "block" }}
+          >
+            <article
+              className="featured-article"
+              style={{
+                background: "var(--forest)",
+                borderRadius: 20,
+                overflow: "hidden",
+                display: "grid",
+                gridTemplateColumns: "minmax(0, 1.05fr) minmax(0, 1fr)",
+                minHeight: 320,
+                position: "relative",
+                transition: "transform 0.2s, box-shadow 0.2s",
+                boxShadow: "0 8px 28px rgba(45,74,62,0.12)",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 48px rgba(45,74,62,0.18)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 28px rgba(45,74,62,0.12)";
+              }}
+            >
+              <div style={{
+                background: `url(${mothersDayHero}) center/cover`,
+                minHeight: 240,
+              }} />
+              <div style={{
+                padding: "clamp(2rem, 4vw, 3rem)",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                color: "#fff",
+              }}>
+                <span style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontSize: 10,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--sand)",
+                  marginBottom: "1rem",
+                  fontFamily: "var(--font-sans)",
+                }}>
+                  <span style={{ width: 18, height: 2, background: "var(--sand)", display: "inline-block" }} />
+                  Featured · For Families
+                </span>
+                <h2 style={{
+                  fontFamily: "var(--font-serif)",
+                  fontSize: "clamp(1.5rem, 2.6vw, 2rem)",
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                  color: "#fff",
+                  margin: "0 0 1rem",
+                  letterSpacing: "-0.005em",
+                }}>
+                  Mother's Day in Memory Care: A Family Caregiver's Guide
+                </h2>
+                <p style={{
+                  fontFamily: "var(--font-serif)",
+                  fontStyle: "italic",
+                  fontSize: 16,
+                  color: "rgba(255,255,255,0.82)",
+                  lineHeight: 1.65,
+                  margin: "0 0 1.5rem",
+                  fontWeight: 400,
+                }}>
+                  A working document for the visits we do not know how to prepare for —
+                  what to bring, what to say, and what to release before you walk in.
+                </p>
+                <span style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
+                  fontFamily: "var(--font-sans)",
+                  fontSize: 14,
+                  fontWeight: 500,
+                  color: "var(--sand)",
+                }}>
+                  Read the guide →
+                </span>
+              </div>
+            </article>
+          </Link>
+        </section>
+      )}
+
       {/* Article Grid */}
       <section style={{
         maxWidth: 1200,
