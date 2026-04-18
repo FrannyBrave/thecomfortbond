@@ -21,6 +21,7 @@ import RefundPolicy from "./pages/RefundPolicy";
 import BundleAccess from "./pages/BundleAccess";
 import ThankYou from "./pages/ThankYou";
 import FamilyVisits from "./pages/FamilyVisits";
+import MothersDayMemoryCare from "./pages/MothersDayMemoryCare";
 import { useCanonical } from "./hooks/useCanonical";
 import { useEffect } from "react";
 import { preloadPaddle } from "./lib/paddle";
@@ -38,6 +39,7 @@ function AppRoutes() {
           <Route path="/" element={<Index />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/:slug" element={<ArticleDetail />} />
+          <Route path="/blog/mothers-day-memory-care-family-guide" element={<MothersDayMemoryCare />} />
           <Route path="/blog/:slug" element={<ArticleDetail />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
