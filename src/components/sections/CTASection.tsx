@@ -58,12 +58,9 @@ export const CTASection = () => {
               asChild
             >
               <a
-                href="https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => handleCheckoutClick(e, "https://thecomfortbond.gumroad.com/l/morningroutinesampler?wanted=true")}
+                href="/free-sampler"
               >
-                Get the Free Sample
+                Get the Free Sampler
               </a>
             </Button>
           </div>
