@@ -4,6 +4,10 @@ import memoryCareHero from "@/assets/blog-memory-care-consistency-hero.png";
 import memoryCareInline from "@/assets/blog-adult-centered-engagement.png";
 import beyondBingoHero from "@/assets/blog-weekend-staff-empowerment-hero.png";
 import beyondBingoInline from "@/assets/blog-volunteer-facilitator-ready.png";
+import curriculumHero from "@/assets/blog-13-week-curriculum-hero.jpg";
+import curriculumInline from "@/assets/blog-13-week-curriculum-inline.jpg";
+import sensoryHero from "@/assets/blog-sensory-reminiscence-hero.jpg";
+import sensoryInline from "@/assets/blog-sensory-reminiscence-inline.jpg";
 
 export interface Article {
   slug: string;
