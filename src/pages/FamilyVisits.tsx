@@ -138,6 +138,10 @@ const FamilyVisits = () => {
               <p className="text-muted-foreground text-xs mt-5 md:mt-6 tracking-wide">
                 Free download · No credit card · Instant access
               </p>
+              <p className="font-serif italic text-terracotta/80 text-xs md:text-sm mt-2 tracking-wide inline-flex items-center gap-1.5">
+                <span aria-hidden="true">🌸</span>
+                Download by May 8 so you have time to plan your visit.
+              </p>
             </motion.div>
 
             {/* RIGHT — image (5 cols) framed — appears SECOND on mobile */}
