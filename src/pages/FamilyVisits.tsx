@@ -191,11 +191,8 @@ const FamilyVisits = () => {
             <ul className="divide-y divide-forest/10 border-y border-forest/10">
               {[
                 "You sit down… and don't know what to say.",
-                "The conversation ends after a few short minutes.",
                 "You watch them stare out the window, and it aches.",
-                "You leave feeling like you should have done more.",
                 "You wonder if they even know you came.",
-                "You drive home in silence, carrying the weight of another short visit.",
               ].map((line, i) => (
                 <motion.li
                   key={i}
