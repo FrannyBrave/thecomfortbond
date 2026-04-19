@@ -499,6 +499,10 @@ const FamilyVisits = () => {
                   <Link to="/kits">Explore the Connection Kits</Link>
                 </Button>
               </div>
+              <p className="font-serif italic text-cream/70 text-sm mt-8 tracking-wide inline-flex items-center gap-1.5">
+                <span aria-hidden="true">🌸</span>
+                Download by May 8 so you have time to plan your visit.
+              </p>
             </motion.div>
           </div>
         </section>
