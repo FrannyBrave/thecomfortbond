@@ -152,13 +152,21 @@ const FamilyVisits = () => {
               <div className="relative">
                 {/* framed cream mat */}
                 <div className="relative bg-cream-dark/70 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.35)]">
-                  <div className="aspect-[4/5] overflow-hidden rounded-sm">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
                     <img
                       src={heroImage}
-                      alt="An adult daughter sits beside her aging mother in soft afternoon light, holding her hand at a linen-covered table."
-                      width={1080}
-                      height={1350}
-                      className="w-full h-full object-cover"
+                      alt="An adult daughter in a mustard sweater sits beside her silver-haired mother at a sunlit wooden table, smiling together over a spread of memory conversation cards."
+                      width={1920}
+                      height={1080}
+                      className="absolute inset-0 w-full h-full object-cover scale-[1.35] md:scale-[1.25]"
+                      style={{ objectPosition: "58% 50%" }}
+                      loading="eager"
+                      decoding="async"
+                    />
+                    {/* soft readability gradient — warms the lower edge for caption tonal harmony, keeps faces untouched */}
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest/25 via-transparent to-cream/10"
                     />
                   </div>
                 </div>
