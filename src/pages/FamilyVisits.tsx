@@ -337,61 +337,6 @@ const FamilyVisits = () => {
           </div>
         </section>
 
-        {/* SECTION 6 — HOW IT WORKS (three serif numerals) */}
-        <section className="px-6 py-28 md:py-36 bg-cream-dark/30">
-          <div className="max-w-5xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-20">
-              <Eyebrow>The practice</Eyebrow>
-              <h2 className="mt-6 font-serif text-forest text-4xl md:text-5xl">
-                How it works
-              </h2>
-              <p className="mt-5 text-foreground/65 text-base md:text-lg italic font-serif">
-                Effortless. Designed for the energy you actually have.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-12 md:gap-8">
-              {[
-                {
-                  numeral: "I",
-                  title: "Open the guide",
-                  body: "One page. No reading homework. Skim it in the parking lot before you walk in.",
-                },
-                {
-                  numeral: "II",
-                  title: "Choose a prompt",
-                  body: "Pick the one that feels right for the day. Some days are talking days. Some days are quiet days.",
-                },
-                {
-                  numeral: "III",
-                  title: "Connect, naturally",
-                  body: "Sit beside them and let the tool do the work. You don't have to perform. You just have to be there.",
-                },
-              ].map((step, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.7, delay: i * 0.12, ease: easeOut }}
-                  className="text-center md:text-left"
-                >
-                  <div className="font-serif italic text-terracotta/80 text-6xl md:text-7xl leading-none mb-6">
-                    {step.numeral}
-                  </div>
-                  <div className="w-10 h-px bg-forest/30 mb-6 mx-auto md:mx-0" />
-                  <h3 className="font-serif text-forest text-2xl md:text-[1.65rem] mb-4 leading-tight">
-                    {step.title}
-                  </h3>
-                  <p className="text-foreground/70 text-base md:text-[1.05rem] leading-[1.7] font-light">
-                    {step.body}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* SECTION 7 — PRODUCT BRIDGE (image-topped cards) */}
         <section className="px-6 lg:px-12 py-28 md:py-36">
           <div className="max-w-6xl mx-auto">
