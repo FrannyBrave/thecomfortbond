@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/family-visits-hero.jpg";
 import bookletImage from "@/assets/family-visits-booklet.jpg";
