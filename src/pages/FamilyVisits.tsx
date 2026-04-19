@@ -121,7 +121,7 @@ const FamilyVisits = () => {
 
               {/* Single primary CTA on mobile; dual on desktop */}
               <div className="mt-7 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <Button asChild variant="cta" size="xl" className="w-full sm:w-auto">
+                <Button asChild variant="cta-poppy" size="xl" className="w-full sm:w-auto">
                   <Link to="/free-sampler">Get the Free Mother's Day Guide</Link>
                 </Button>
                 <Button asChild variant="cta-outline" size="xl" className="hidden sm:inline-flex">
