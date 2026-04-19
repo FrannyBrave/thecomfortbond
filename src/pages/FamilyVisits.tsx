@@ -70,7 +70,7 @@ const FamilyVisits = () => {
 
       <main>
         {/* SECTION 1 — HERO (asymmetric editorial split) */}
-        <section className="relative px-6 lg:px-12 pt-24 pb-20 md:pt-32 md:pb-28">
+        <section className="relative px-6 lg:px-12 pt-20 pb-12 md:pt-32 md:pb-28">
           {/* soft warm vignette */}
           <div
             className="pointer-events-none absolute inset-0 -z-10"
@@ -79,45 +79,70 @@ const FamilyVisits = () => {
                 "radial-gradient(1200px 600px at 20% 0%, rgba(198,123,92,0.08), transparent 60%), radial-gradient(900px 500px at 100% 100%, rgba(45,74,62,0.06), transparent 60%)",
             }}
           />
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            {/* LEFT — copy (7 cols) */}
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            {/* LEFT — copy (7 cols) — appears FIRST on mobile */}
             <motion.div
               {...fadeUp}
-              className="lg:col-span-7 order-2 lg:order-1"
+              className="lg:col-span-7 order-1 lg:order-1"
             >
-              <Eyebrow>For families · A quiet guide</Eyebrow>
-              <h1 className="mt-6 font-serif text-forest text-[2.5rem] sm:text-5xl lg:text-[4.25rem] leading-[1.05] tracking-tight">
-                You sit down beside them
-                <span className="italic text-forest/90">
-                  {" "}
-                  …and you don't know what to say.
+              {/* Mother's Day seasonal eyebrow */}
+              <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta inline-flex items-center gap-3 justify-center">
+                <span aria-hidden="true" className="inline-block w-8 h-px bg-terracotta opacity-60" />
+                <span className="inline-flex items-center gap-1.5">
+                  <span aria-hidden="true">🌸</span>
+                  Mother's Day · May 11
+                </span>
+                <span aria-hidden="true" className="inline-block w-8 h-px bg-terracotta opacity-60" />
+              </span>
+
+              {/* Mobile-first short headline; longer poetic version on desktop */}
+              <h1 className="mt-5 font-serif text-forest leading-[1.05] tracking-tight">
+                {/* Mobile headline */}
+                <span className="block lg:hidden text-[2.25rem] sm:text-[2.75rem]">
+                  You sit beside her.
+                  <span className="block italic text-forest/90">The words won't come.</span>
+                </span>
+                {/* Desktop headline (original) */}
+                <span className="hidden lg:block text-[4.25rem]">
+                  You sit down beside them
+                  <span className="italic text-forest/90"> …and you don't know what to say.</span>
                 </span>
               </h1>
-              <div className="mt-8 flex items-start gap-5 max-w-xl">
-                <span className="mt-3 block w-10 h-px bg-terracotta flex-shrink-0" />
-                <p className="text-foreground/75 text-lg md:text-xl leading-[1.7] font-light">
-                  Gentle, guided tools that turn quiet visits with an aging
-                  parent into moments of real connection — even when memory
-                  is fading.
+
+              <div className="mt-6 md:mt-8 flex items-start gap-5 max-w-xl">
+                <span className="mt-3 hidden md:block w-10 h-px bg-terracotta flex-shrink-0" />
+                <p className="text-foreground/75 text-base md:text-xl leading-[1.65] md:leading-[1.7] font-light">
+                  A gentler way to be with her this Mother's Day — guided tools
+                  that turn quiet visits into moments of real connection, even
+                  when memory is fading.
                 </p>
               </div>
-              <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <Button asChild variant="cta" size="xl">
-                  <Link to="/free-sampler">Get the Free Sampler</Link>
+
+              {/* Single primary CTA on mobile; dual on desktop */}
+              <div className="mt-7 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <Button asChild variant="cta" size="xl" className="w-full sm:w-auto">
+                  <Link to="/free-sampler">Get the Free Mother's Day Guide</Link>
                 </Button>
-                <Button asChild variant="cta-outline" size="xl">
+                <Button asChild variant="cta-outline" size="xl" className="hidden sm:inline-flex">
                   <a href="#free-guide">Make Your Next Visit Meaningful</a>
                 </Button>
               </div>
-              <p className="text-muted-foreground text-xs mt-6 tracking-wide">
+              {/* Secondary action as quiet text link on mobile */}
+              <a
+                href="#free-guide"
+                className="sm:hidden mt-4 inline-block font-sans text-sm text-forest/70 underline underline-offset-4 decoration-terracotta/40 hover:text-terracotta transition-colors"
+              >
+                or learn how it works →
+              </a>
+              <p className="text-muted-foreground text-xs mt-5 md:mt-6 tracking-wide">
                 Free download · No credit card · Instant access
               </p>
             </motion.div>
 
-            {/* RIGHT — image (5 cols) framed */}
+            {/* RIGHT — image (5 cols) framed — appears SECOND on mobile */}
             <motion.div
               {...fadeIn}
-              className="lg:col-span-5 order-1 lg:order-2 relative"
+              className="lg:col-span-5 order-2 lg:order-2 relative"
             >
               <div className="relative">
                 {/* framed cream mat */}
