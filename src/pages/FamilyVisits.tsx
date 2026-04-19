@@ -506,32 +506,6 @@ const FamilyVisits = () => {
           </div>
         </section>
 
-        {/* SECTION 8 — EMOTIONAL CLOSE (centered, ornament punctuation) */}
-        <section className="px-6 py-28 md:py-40 bg-cream-dark/40">
-          <div className="max-w-2xl mx-auto text-center">
-            <motion.div {...fadeUp} className="space-y-10">
-              <Ornament className="w-7 h-7 text-terracotta mx-auto" />
-              <p className="font-serif italic text-forest text-2xl md:text-[2rem] leading-[1.5]">
-                There is still time.
-              </p>
-              <p className="font-serif italic text-forest text-2xl md:text-[2rem] leading-[1.5]">
-                There are still moments.
-              </p>
-              <div className="flex items-center justify-center gap-6 pt-2">
-                <span className="h-px w-16 bg-forest/20" />
-                <span className="h-px w-16 bg-forest/20" />
-              </div>
-              <p className="font-serif italic text-forest text-2xl md:text-[2.25rem] leading-[1.45]">
-                You can leave their room feeling
-                <br />
-                like you reached them — even when
-                <br />
-                the words couldn't.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
         {/* SECTION 9 — FINAL CTA (forest panel, inscription feel) */}
         <section className="relative px-6 py-28 md:py-36 bg-forest overflow-hidden">
           {/* subtle warm glow */}
