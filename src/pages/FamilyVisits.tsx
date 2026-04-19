@@ -285,6 +285,102 @@ const FamilyVisits = () => {
           </div>
         </section>
 
+        {/* SECTION — PRODUCT BRIDGE (moved up: directly after Free Guide) */}
+        <section className="px-6 lg:px-12 py-28 md:py-36 bg-cream-dark/20">
+          <div className="max-w-6xl mx-auto">
+            <motion.div {...fadeUp} className="text-center mb-16 max-w-2xl mx-auto">
+              <Eyebrow>For something deeper</Eyebrow>
+              <h2 className="mt-6 font-serif text-forest text-4xl md:text-[3rem] leading-[1.15]">
+                If you want more than
+                <br />
+                <span className="italic">a single visit…</span>
+              </h2>
+              <p className="mt-6 text-foreground/70 text-lg leading-[1.7] font-light">
+                For families who want a steady, ongoing way to feel close —
+                not just one good afternoon.
+              </p>
+            </motion.div>
+
+            <div className="max-w-2xl mx-auto">
+              {/* Card — Memory & Connection Kits (5-Kit Bundle + individual kits) */}
+              <motion.article
+                {...fadeUp}
+                className="group bg-cream rounded-sm overflow-hidden flex flex-col border border-forest/10 hover:border-terracotta/40 transition-colors duration-500 shadow-[0_20px_60px_-30px_rgba(45,74,62,0.25)]"
+              >
+                <div className="aspect-[16/10] overflow-hidden relative">
+                  <img
+                    src={kitImage}
+                    alt="A craft cardboard memory kit box on linen, holding an embroidered handkerchief, vintage tin, pansy flower, and wooden spool."
+                    width={1024}
+                    height={640}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                  />
+                  <Ornament className="absolute top-5 right-5 w-6 h-6 text-cream drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" />
+                </div>
+                <div className="p-8 md:p-12 flex flex-col flex-1">
+                  <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
+                    Tactile · Familiar · Real
+                  </p>
+                  <h3 className="font-serif text-forest text-2xl md:text-[1.75rem] leading-tight mb-4">
+                    The 5-Kit Bundle &amp; Individual Themed Kits
+                  </h3>
+                  <p className="text-foreground/70 leading-[1.7] font-light mb-5 flex-1">
+                    Themed boxes designed to spark recognition through touch,
+                    scent, and memory — gentle, dignified, and made for
+                    moments when words aren't enough. Save when you get all
+                    five together, or start with the one that feels most like her.
+                  </p>
+                  <p className="font-serif italic text-foreground/60 text-sm mb-6 leading-relaxed">
+                    Nostalgia · Garden · Kitchen &amp; Home · Travel · Makers &amp; Menders
+                  </p>
+
+                  {/* Price anchoring */}
+                  <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1 mb-6 pb-6 border-b border-forest/10">
+                    <span className="font-serif text-forest text-3xl md:text-[2.25rem] leading-none">
+                      $97
+                    </span>
+                    <span className="font-sans text-sm text-foreground/50 line-through">
+                      $140 value
+                    </span>
+                    <span className="font-sans text-[11px] uppercase tracking-[0.2em] text-[#D75A4A] font-semibold">
+                      Save $43
+                    </span>
+                  </div>
+
+                  {/* Testimonial */}
+                  <figure className="mb-6 pl-5 border-l-2 border-terracotta/40">
+                    <blockquote className="font-serif italic text-forest/85 text-base md:text-[1.05rem] leading-[1.6]">
+                      "I sat down with the Nostalgia Kit and for the first time in
+                      months, my mom looked at me — really looked at me — and
+                      smiled. We talked for almost an hour."
+                    </blockquote>
+                    <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.18em] text-foreground/60">
+                      — Sarah M., daughter &amp; family caregiver
+                    </figcaption>
+                  </figure>
+
+                  {/* Trust line */}
+                  <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-forest/55 text-center mb-6 inline-flex items-center justify-center gap-2 self-center">
+                    <span aria-hidden="true" className="inline-block w-6 h-px bg-forest/25" />
+                    Trusted by 2,400+ families
+                    <span aria-hidden="true" className="inline-block w-6 h-px bg-forest/25" />
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button asChild variant="cta-poppy" size="lg">
+                      <Link to="/kits">Get All 5 Kits for $97</Link>
+                    </Button>
+                    <Button asChild variant="cta-outline" size="lg">
+                      <Link to="/kits">Explore the Kits</Link>
+                    </Button>
+                  </div>
+                </div>
+              </motion.article>
+            </div>
+          </div>
+        </section>
+
         {/* SECTION 3 — REFRAME */}
         <section className="px-6 py-28 md:py-40">
           <div className="max-w-2xl mx-auto text-center">
@@ -345,69 +441,6 @@ const FamilyVisits = () => {
                 </p>
               </div>
             </motion.div>
-          </div>
-        </section>
-
-        {/* SECTION 7 — PRODUCT BRIDGE (image-topped cards) */}
-        <section className="px-6 lg:px-12 py-28 md:py-36">
-          <div className="max-w-6xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-20 max-w-2xl mx-auto">
-              <Eyebrow>For something deeper</Eyebrow>
-              <h2 className="mt-6 font-serif text-forest text-4xl md:text-[3rem] leading-[1.15]">
-                If you want more than
-                <br />
-                <span className="italic">a single visit…</span>
-              </h2>
-              <p className="mt-6 text-foreground/70 text-lg leading-[1.7] font-light">
-                For families who want a steady, ongoing way to feel close —
-                not just one good afternoon.
-              </p>
-            </motion.div>
-
-            <div className="max-w-2xl mx-auto">
-              {/* Card — Memory & Connection Kits (5-Kit Bundle + individual kits) */}
-              <motion.article
-                {...fadeUp}
-                className="group bg-cream-dark/40 rounded-sm overflow-hidden flex flex-col border border-forest/10 hover:border-terracotta/40 transition-colors duration-500"
-              >
-                <div className="aspect-[16/10] overflow-hidden relative">
-                  <img
-                    src={kitImage}
-                    alt="A craft cardboard memory kit box on linen, holding an embroidered handkerchief, vintage tin, pansy flower, and wooden spool."
-                    width={1024}
-                    height={640}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
-                  />
-                  <Ornament className="absolute top-5 right-5 w-6 h-6 text-cream drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" />
-                </div>
-                <div className="p-8 md:p-12 flex flex-col flex-1">
-                  <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
-                    Tactile · Familiar · Real
-                  </p>
-                  <h3 className="font-serif text-forest text-2xl md:text-[1.75rem] leading-tight mb-4">
-                    The 5-Kit Bundle &amp; Individual Themed Kits
-                  </h3>
-                  <p className="text-foreground/70 leading-[1.7] font-light mb-3 flex-1">
-                    Themed boxes designed to spark recognition through touch,
-                    scent, and memory — gentle, dignified, and made for
-                    moments when words aren't enough. Save when you get all
-                    five together, or start with the one that feels most like her.
-                  </p>
-                  <p className="font-serif italic text-foreground/60 text-sm mb-8 leading-relaxed">
-                    Nostalgia · Garden · Kitchen &amp; Home · Travel · Makers &amp; Menders
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild variant="cta-poppy" size="lg">
-                      <Link to="/kits">Get All 5 Kits for $97</Link>
-                    </Button>
-                    <Button asChild variant="cta-outline" size="lg">
-                      <Link to="/kits">Explore the Kits</Link>
-                    </Button>
-                  </div>
-                </div>
-              </motion.article>
-            </div>
           </div>
         </section>
 
