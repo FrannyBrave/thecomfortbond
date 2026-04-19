@@ -121,7 +121,7 @@ const FamilyVisits = () => {
 
               {/* Single primary CTA on mobile; dual on desktop */}
               <div className="mt-7 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <Button asChild variant="cta" size="xl" className="w-full sm:w-auto">
+                <Button asChild variant="cta-poppy" size="xl" className="w-full sm:w-auto">
                   <Link to="/free-sampler">Get the Free Mother's Day Guide</Link>
                 </Button>
                 <Button asChild variant="cta-outline" size="xl" className="hidden sm:inline-flex">
@@ -274,7 +274,7 @@ const FamilyVisits = () => {
               </ul>
 
               <div className="mt-12">
-                <Button asChild variant="cta" size="xl">
+                <Button asChild variant="cta-poppy" size="xl">
                   <Link to="/free-sampler">Download the Free Guide</Link>
                 </Button>
                 <p className="text-muted-foreground text-xs mt-4 tracking-wide">
@@ -364,61 +364,10 @@ const FamilyVisits = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-              {/* Card 1 — 90-Day */}
+            <div className="max-w-2xl mx-auto">
+              {/* Card — Memory & Connection Kits (5-Kit Bundle + individual kits) */}
               <motion.article
                 {...fadeUp}
-                className="group bg-cream-dark/40 rounded-sm overflow-hidden flex flex-col border border-forest/10 hover:border-terracotta/40 transition-colors duration-500"
-              >
-                <div className="aspect-[16/10] bg-cream-dark relative overflow-hidden">
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, hsl(var(--card)) 0%, var(--cream-dark) 100%)",
-                    }}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="font-serif italic text-forest text-7xl leading-none">
-                        90
-                      </div>
-                      <div className="font-sans text-[10px] uppercase tracking-[0.4em] text-forest/60 mt-3">
-                        Days · A Practice
-                      </div>
-                    </div>
-                  </div>
-                  <Ornament className="absolute top-5 right-5 w-6 h-6 text-terracotta/70" />
-                </div>
-                <div className="p-8 md:p-10 flex flex-col flex-1">
-                  <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
-                    Deep Connection
-                  </p>
-                  <h3 className="font-serif text-forest text-2xl md:text-[1.75rem] leading-tight mb-4">
-                    The 90-Day Meaningful Visit System
-                  </h3>
-                  <p className="text-foreground/70 leading-[1.7] font-light mb-8 flex-1">
-                    A gentle, week-by-week framework that walks you through
-                    three months of meaningful visits — with prompts, simple
-                    rituals, and quiet structure for the days you don't know
-                    where to begin.
-                  </p>
-                  <Link
-                    to="/blueprint"
-                    className="inline-flex items-center gap-3 font-serif italic text-forest hover:text-terracotta transition-colors text-lg group/link"
-                  >
-                    Learn more
-                    <span className="transition-transform group-hover/link:translate-x-1">
-                      →
-                    </span>
-                  </Link>
-                </div>
-              </motion.article>
-
-              {/* Card 2 — Kits with photo */}
-              <motion.article
-                {...fadeUp}
-                transition={{ duration: 0.8, delay: 0.12, ease: easeOut }}
                 className="group bg-cream-dark/40 rounded-sm overflow-hidden flex flex-col border border-forest/10 hover:border-terracotta/40 transition-colors duration-500"
               >
                 <div className="aspect-[16/10] overflow-hidden relative">
@@ -432,30 +381,30 @@ const FamilyVisits = () => {
                   />
                   <Ornament className="absolute top-5 right-5 w-6 h-6 text-cream drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" />
                 </div>
-                <div className="p-8 md:p-10 flex flex-col flex-1">
+                <div className="p-8 md:p-12 flex flex-col flex-1">
                   <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
                     Tactile · Familiar · Real
                   </p>
                   <h3 className="font-serif text-forest text-2xl md:text-[1.75rem] leading-tight mb-4">
-                    Memory & Connection Kits
+                    The 5-Kit Bundle &amp; Individual Themed Kits
                   </h3>
                   <p className="text-foreground/70 leading-[1.7] font-light mb-3 flex-1">
                     Themed boxes designed to spark recognition through touch,
                     scent, and memory — gentle, dignified, and made for
-                    moments when words aren't enough.
+                    moments when words aren't enough. Save when you get all
+                    five together, or start with the one that feels most like her.
                   </p>
                   <p className="font-serif italic text-foreground/60 text-sm mb-8 leading-relaxed">
-                    Nostalgia · Garden · Kitchen & Home · Travel · Makers &amp; Menders
+                    Nostalgia · Garden · Kitchen &amp; Home · Travel · Makers &amp; Menders
                   </p>
-                  <Link
-                    to="/kits"
-                    className="inline-flex items-center gap-3 font-serif italic text-forest hover:text-terracotta transition-colors text-lg group/link"
-                  >
-                    Explore the kits
-                    <span className="transition-transform group-hover/link:translate-x-1">
-                      →
-                    </span>
-                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button asChild variant="cta-poppy" size="lg">
+                      <Link to="/kits">Get All 5 Kits for $97</Link>
+                    </Button>
+                    <Button asChild variant="cta-outline" size="lg">
+                      <Link to="/kits">Explore the Kits</Link>
+                    </Button>
+                  </div>
                 </div>
               </motion.article>
             </div>
@@ -494,7 +443,7 @@ const FamilyVisits = () => {
                 Start with the free guide. Use it once. See what happens.
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-                <Button asChild variant="cta" size="xl">
+                <Button asChild variant="cta-poppy" size="xl">
                   <Link to="/free-sampler">Start with the Free Guide</Link>
                 </Button>
                 <Button
