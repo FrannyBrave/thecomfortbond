@@ -214,6 +214,66 @@ const FamilyVisits = () => {
           </div>
         </section>
 
+        {/* SECTION 5 — FREE OFFER (split with booklet image) */}
+        <section id="free-guide" className="px-6 lg:px-12 py-28 md:py-36">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <motion.div {...fadeIn} className="order-2 lg:order-1 relative">
+              <div className="relative bg-cream-dark/60 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.3)]">
+                <div className="aspect-square overflow-hidden rounded-sm">
+                  <img
+                    src={bookletImage}
+                    alt="A cream-colored booklet on linen beside a teacup, reading glasses, and dried lavender."
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <Ornament className="absolute -bottom-5 -left-5 w-10 h-10 text-terracotta" />
+            </motion.div>
+
+            <motion.div {...fadeUp} className="order-1 lg:order-2">
+              <Eyebrow>Free download</Eyebrow>
+              <h2 className="mt-6 font-serif text-forest text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1]">
+                The Visit
+                <br />
+                <span className="italic">Starter Guide</span>
+              </h2>
+              <p className="mt-6 text-foreground/75 text-lg leading-[1.7] font-light max-w-md">
+                Three simple connection tools to help your next visit feel
+                different — even when words are hard to find.
+              </p>
+
+              <ul className="mt-10 space-y-6">
+                {[
+                  "A gentle conversation prompt that works when memory doesn't.",
+                  "A sensory tool that brings calm and quiet familiarity into the room.",
+                  "A 5-minute presence ritual you can use, even on the hardest days.",
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-5 items-baseline">
+                    <span className="font-serif italic text-terracotta text-2xl leading-none flex-shrink-0 w-6">
+                      {["i", "ii", "iii"][i]}.
+                    </span>
+                    <span className="text-foreground text-base md:text-lg leading-[1.65] font-light">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-12">
+                <Button asChild variant="cta" size="xl">
+                  <Link to="/free-sampler">Download the Free Guide</Link>
+                </Button>
+                <p className="text-muted-foreground text-xs mt-4 tracking-wide">
+                  Sent straight to your inbox · No spam, ever
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* SECTION 3 — REFRAME */}
         <section className="px-6 py-28 md:py-40">
           <div className="max-w-2xl mx-auto text-center">
@@ -271,66 +331,6 @@ const FamilyVisits = () => {
                   Just simple tools that meet your parent
                   <br className="hidden md:block" />
                   {" "}where they are today.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* SECTION 5 — FREE OFFER (split with booklet image) */}
-        <section id="free-guide" className="px-6 lg:px-12 py-28 md:py-36">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <motion.div {...fadeIn} className="order-2 lg:order-1 relative">
-              <div className="relative bg-cream-dark/60 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.3)]">
-                <div className="aspect-square overflow-hidden rounded-sm">
-                  <img
-                    src={bookletImage}
-                    alt="A cream-colored booklet on linen beside a teacup, reading glasses, and dried lavender."
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <Ornament className="absolute -bottom-5 -left-5 w-10 h-10 text-terracotta" />
-            </motion.div>
-
-            <motion.div {...fadeUp} className="order-1 lg:order-2">
-              <Eyebrow>Free download</Eyebrow>
-              <h2 className="mt-6 font-serif text-forest text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1]">
-                The Visit
-                <br />
-                <span className="italic">Starter Guide</span>
-              </h2>
-              <p className="mt-6 text-foreground/75 text-lg leading-[1.7] font-light max-w-md">
-                Three simple connection tools to help your next visit feel
-                different — even when words are hard to find.
-              </p>
-
-              <ul className="mt-10 space-y-6">
-                {[
-                  "A gentle conversation prompt that works when memory doesn't.",
-                  "A sensory tool that brings calm and quiet familiarity into the room.",
-                  "A 5-minute presence ritual you can use, even on the hardest days.",
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-5 items-baseline">
-                    <span className="font-serif italic text-terracotta text-2xl leading-none flex-shrink-0 w-6">
-                      {["i", "ii", "iii"][i]}.
-                    </span>
-                    <span className="text-foreground text-base md:text-lg leading-[1.65] font-light">
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-12">
-                <Button asChild variant="cta" size="xl">
-                  <Link to="/free-sampler">Download the Free Guide</Link>
-                </Button>
-                <p className="text-muted-foreground text-xs mt-4 tracking-wide">
-                  Sent straight to your inbox · No spam, ever
                 </p>
               </div>
             </motion.div>
