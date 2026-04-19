@@ -191,11 +191,8 @@ const FamilyVisits = () => {
             <ul className="divide-y divide-forest/10 border-y border-forest/10">
               {[
                 "You sit down… and don't know what to say.",
-                "The conversation ends after a few short minutes.",
                 "You watch them stare out the window, and it aches.",
-                "You leave feeling like you should have done more.",
                 "You wonder if they even know you came.",
-                "You drive home in silence, carrying the weight of another short visit.",
               ].map((line, i) => (
                 <motion.li
                   key={i}
@@ -214,69 +211,6 @@ const FamilyVisits = () => {
                 </motion.li>
               ))}
             </ul>
-          </div>
-        </section>
-
-        {/* SECTION 3 — REFRAME */}
-        <section className="px-6 py-28 md:py-40">
-          <div className="max-w-2xl mx-auto text-center">
-            <motion.div {...fadeUp} className="space-y-10">
-              <p className="font-serif text-forest text-2xl md:text-[2rem] leading-[1.4]">
-                It's not that you don't care.
-                <br />
-                It's not that you aren't trying.
-              </p>
-              <div className="flex items-center justify-center gap-6">
-                <span className="h-px w-16 bg-forest/20" />
-                <Ornament className="w-6 h-6 text-terracotta" />
-                <span className="h-px w-16 bg-forest/20" />
-              </div>
-              <p className="font-serif text-forest text-2xl md:text-[2rem] leading-[1.4]">
-                You were never given the tools to do this well.
-              </p>
-              <p className="font-serif italic text-terracotta text-3xl md:text-[2.5rem] leading-[1.3] pt-4">
-                Connection, when memory is fading,
-                <br />
-                can be guided.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* SECTION 4 — SOLUTION INTRO (warm panel) */}
-        <section className="relative px-6 py-28 md:py-36 bg-cream-dark">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.04]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, var(--forest) 1px, transparent 0)",
-              backgroundSize: "24px 24px",
-            }}
-          />
-          <div className="relative max-w-2xl mx-auto text-center">
-            <motion.div {...fadeUp}>
-              <Eyebrow>Introducing</Eyebrow>
-              <h2 className="mt-8 font-serif text-forest text-5xl md:text-7xl tracking-tight">
-                The Comfort Bond
-                <span className="text-terracotta align-top text-2xl md:text-3xl ml-1">™</span>
-              </h2>
-              <div className="mt-8 mx-auto w-16 h-px bg-forest/30" />
-              <div className="mt-10 space-y-6 text-foreground/75 text-lg md:text-xl leading-[1.8] font-light">
-                <p>
-                  A gentle, simple way to bring real connection back into the
-                  room — without trying harder, talking more, or pretending
-                  everything is okay.
-                </p>
-                <p className="text-foreground/60">
-                  No scripts. No pressure. No awkward silence to fill.
-                </p>
-                <p className="font-serif italic text-forest text-xl md:text-2xl pt-4">
-                  Just simple tools that meet your parent
-                  <br className="hidden md:block" />
-                  {" "}where they are today.
-                </p>
-              </div>
-            </motion.div>
           </div>
         </section>
 
@@ -340,58 +274,66 @@ const FamilyVisits = () => {
           </div>
         </section>
 
-        {/* SECTION 6 — HOW IT WORKS (three serif numerals) */}
-        <section className="px-6 py-28 md:py-36 bg-cream-dark/30">
-          <div className="max-w-5xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-20">
-              <Eyebrow>The practice</Eyebrow>
-              <h2 className="mt-6 font-serif text-forest text-4xl md:text-5xl">
-                How it works
-              </h2>
-              <p className="mt-5 text-foreground/65 text-base md:text-lg italic font-serif">
-                Effortless. Designed for the energy you actually have.
+        {/* SECTION 3 — REFRAME */}
+        <section className="px-6 py-28 md:py-40">
+          <div className="max-w-2xl mx-auto text-center">
+            <motion.div {...fadeUp} className="space-y-10">
+              <p className="font-serif text-forest text-2xl md:text-[2rem] leading-[1.4]">
+                It's not that you don't care.
+                <br />
+                It's not that you aren't trying.
+              </p>
+              <div className="flex items-center justify-center gap-6">
+                <span className="h-px w-16 bg-forest/20" />
+                <Ornament className="w-6 h-6 text-terracotta" />
+                <span className="h-px w-16 bg-forest/20" />
+              </div>
+              <p className="font-serif text-forest text-2xl md:text-[2rem] leading-[1.4]">
+                You were never given the tools to do this well.
+              </p>
+              <p className="font-serif italic text-terracotta text-3xl md:text-[2.5rem] leading-[1.3] pt-4">
+                Connection, when memory is fading,
+                <br />
+                can be guided.
               </p>
             </motion.div>
+          </div>
+        </section>
 
-            <div className="grid md:grid-cols-3 gap-12 md:gap-8">
-              {[
-                {
-                  numeral: "I",
-                  title: "Open the guide",
-                  body: "One page. No reading homework. Skim it in the parking lot before you walk in.",
-                },
-                {
-                  numeral: "II",
-                  title: "Choose a prompt",
-                  body: "Pick the one that feels right for the day. Some days are talking days. Some days are quiet days.",
-                },
-                {
-                  numeral: "III",
-                  title: "Connect, naturally",
-                  body: "Sit beside them and let the tool do the work. You don't have to perform. You just have to be there.",
-                },
-              ].map((step, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.7, delay: i * 0.12, ease: easeOut }}
-                  className="text-center md:text-left"
-                >
-                  <div className="font-serif italic text-terracotta/80 text-6xl md:text-7xl leading-none mb-6">
-                    {step.numeral}
-                  </div>
-                  <div className="w-10 h-px bg-forest/30 mb-6 mx-auto md:mx-0" />
-                  <h3 className="font-serif text-forest text-2xl md:text-[1.65rem] mb-4 leading-tight">
-                    {step.title}
-                  </h3>
-                  <p className="text-foreground/70 text-base md:text-[1.05rem] leading-[1.7] font-light">
-                    {step.body}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
+        {/* SECTION 4 — SOLUTION INTRO (warm panel) */}
+        <section className="relative px-6 py-28 md:py-36 bg-cream-dark">
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.04]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, var(--forest) 1px, transparent 0)",
+              backgroundSize: "24px 24px",
+            }}
+          />
+          <div className="relative max-w-2xl mx-auto text-center">
+            <motion.div {...fadeUp}>
+              <Eyebrow>Introducing</Eyebrow>
+              <h2 className="mt-8 font-serif text-forest text-5xl md:text-7xl tracking-tight">
+                The Comfort Bond
+                <span className="text-terracotta align-top text-2xl md:text-3xl ml-1">™</span>
+              </h2>
+              <div className="mt-8 mx-auto w-16 h-px bg-forest/30" />
+              <div className="mt-10 space-y-6 text-foreground/75 text-lg md:text-xl leading-[1.8] font-light">
+                <p>
+                  A gentle, simple way to bring real connection back into the
+                  room — without trying harder, talking more, or pretending
+                  everything is okay.
+                </p>
+                <p className="text-foreground/60">
+                  No scripts. No pressure. No awkward silence to fill.
+                </p>
+                <p className="font-serif italic text-forest text-xl md:text-2xl pt-4">
+                  Just simple tools that meet your parent
+                  <br className="hidden md:block" />
+                  {" "}where they are today.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -506,32 +448,6 @@ const FamilyVisits = () => {
                 </div>
               </motion.article>
             </div>
-          </div>
-        </section>
-
-        {/* SECTION 8 — EMOTIONAL CLOSE (centered, ornament punctuation) */}
-        <section className="px-6 py-28 md:py-40 bg-cream-dark/40">
-          <div className="max-w-2xl mx-auto text-center">
-            <motion.div {...fadeUp} className="space-y-10">
-              <Ornament className="w-7 h-7 text-terracotta mx-auto" />
-              <p className="font-serif italic text-forest text-2xl md:text-[2rem] leading-[1.5]">
-                There is still time.
-              </p>
-              <p className="font-serif italic text-forest text-2xl md:text-[2rem] leading-[1.5]">
-                There are still moments.
-              </p>
-              <div className="flex items-center justify-center gap-6 pt-2">
-                <span className="h-px w-16 bg-forest/20" />
-                <span className="h-px w-16 bg-forest/20" />
-              </div>
-              <p className="font-serif italic text-forest text-2xl md:text-[2.25rem] leading-[1.45]">
-                You can leave their room feeling
-                <br />
-                like you reached them — even when
-                <br />
-                the words couldn't.
-              </p>
-            </motion.div>
           </div>
         </section>
 
