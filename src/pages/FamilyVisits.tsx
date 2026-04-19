@@ -248,20 +248,19 @@ const FamilyVisits = () => {
             <motion.div {...fadeUp} className="order-1 lg:order-2">
               <Eyebrow>Free download</Eyebrow>
               <h2 className="mt-6 font-serif text-forest text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1]">
-                The Visit
+                The Free Visit
                 <br />
                 <span className="italic">Starter Guide</span>
               </h2>
               <p className="mt-6 text-foreground/75 text-lg leading-[1.7] font-light max-w-md">
-                Three simple connection tools to help your next visit feel
-                different — even when words are hard to find.
+                Don't let your next visit default to sitting in silence or asking the same three questions. This free printable guide gives you gentle, dignified tools to spark real connection and joy with your loved one.
               </p>
 
               <ul className="mt-10 space-y-6">
                 {[
-                  "A gentle conversation prompt that works when memory doesn't.",
-                  "A sensory tool that brings calm and quiet familiarity into the room.",
-                  "A 5-minute presence ritual you can use, even on the hardest days.",
+                  "Conversation starter cards",
+                  "Visual spark cards",
+                  "Word link game",
                 ].map((item, i) => (
                   <li key={i} className="flex gap-5 items-baseline">
                     <span className="font-serif italic text-terracotta text-2xl leading-none flex-shrink-0 w-6">
