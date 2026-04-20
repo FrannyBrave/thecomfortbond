@@ -111,17 +111,7 @@ export default function Kits() {
       </nav>
 
       {/* ── Products Section ── */}
-      <section
-        id="products"
-        className="px-6 md:px-16"
-        style={{
-          background: "linear-gradient(180deg, #f1e8db 0%, #ede2d1 100%)",
-          paddingTop: "clamp(4rem, 8vw, 7rem)",
-          paddingBottom: "clamp(4rem, 8vw, 7rem)",
-          borderTop: "1px solid rgba(45,74,62,0.06)",
-          borderBottom: "1px solid rgba(45,74,62,0.06)",
-        }}
-      >
+      <section id="products" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--sand-pale)", paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="section-tag">The full collection</div>
           <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
@@ -137,7 +127,7 @@ export default function Kits() {
               <div
                 key={i}
                 id={kit.id}
-                className="bg-white border border-[rgba(45,74,62,0.08)] rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_56px_-16px_rgba(45,74,62,0.25)] relative shadow-[0_10px_32px_-12px_rgba(45,74,62,0.18),0_2px_6px_rgba(45,74,62,0.06)]"
+                className="bg-white border border-[rgba(45,74,62,0.12)] rounded-2xl overflow-hidden flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(45,74,62,0.1)] relative"
               >
                 {kit.popular && (
                   <div className="absolute top-0 left-0 right-0 text-center py-1.5 text-[10px] font-semibold tracking-[0.1em] uppercase text-white z-10" style={{ background: "var(--clay)" }}>
