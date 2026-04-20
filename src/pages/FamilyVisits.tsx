@@ -6,7 +6,7 @@ import { FooterSection } from "@/components/sections/FooterSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/family-visits-hero.jpg";
-import bookletImage from "@/assets/family-visits-booklet.jpg";
+import bookletImage from "@/assets/family-visits-free-guide.jpg";
 import kitImage from "@/assets/family-visits-kits.png";
 import mothersDayHero from "@/assets/blog-mothers-day-memory-care-hero.jpg";
 
@@ -234,9 +234,9 @@ const FamilyVisits = () => {
                 <div className="aspect-square overflow-hidden rounded-sm">
                   <img
                     src={bookletImage}
-                    alt="A cream-colored booklet on linen beside a teacup, reading glasses, and dried lavender."
-                    width={1024}
-                    height={1024}
+                    alt="An older mother's hands and her adult daughter's hands resting at a sunlit kitchen table with printed conversation cards, a warm cup of tea, eucalyptus, and reading glasses."
+                    width={1280}
+                    height={1280}
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
