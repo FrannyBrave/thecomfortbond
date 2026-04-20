@@ -177,6 +177,37 @@ const OurStory = () => {
 
       {/* FOOTER */}
       <footer className="tcb-footer">
+        <div className="footer-inner footer-inner-3col">
+          <div className="footer-brand">
+            <div style={{ fontFamily: "var(--font-serif)", fontSize: 18, color: "#fff", fontWeight: 600 }}>The Comfort Bond™</div>
+            <p>high-quality engagement kits and printable activities designed for senior living communities and caring families.</p>
+          </div>
+          <div className="footer-col">
+            <h4>Products</h4>
+            <ul>
+              <li><a href="/kits">Engagement Kits</a></li>
+              <li><a href="/blueprint-pro">Blueprint Pro</a></li>
+              <li><a href="/family-visits">For Families</a></li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/blueprint">Free Blueprint</a></li>
+              <li><a href="/free-sampler">Free Sampler</a></li>
+              <li><a href="/resources">Blog</a></li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="mailto:hello@thecomfortbond.com">hello@thecomfortbond.com</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms</a></li>
+              <li><a href="/refund-policy">Refund Policy</a></li>
+            </ul>
+          </div>
+        </div>
         <div className="footer-bottom">
           <span className="footer-copy">&copy; 2026 The Comfort Bond™ &middot; All rights reserved</span>
           <a href="mailto:hello@thecomfortbond.com" className="footer-email">hello@thecomfortbond.com</a>
