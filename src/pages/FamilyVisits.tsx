@@ -359,7 +359,7 @@ const FamilyVisits = () => {
                   {/* Trust line */}
                   <p className="font-sans text-[11px] uppercase tracking-[0.28em] !text-cream/70 text-center mb-6 inline-flex items-center justify-center gap-2 self-center">
                     <span aria-hidden="true" className="inline-block w-6 h-px bg-cream/30" />
-                    Trusted by 2,400+ families
+                    {"\n"}
                     <span aria-hidden="true" className="inline-block w-6 h-px bg-cream/30" />
                   </p>
 
