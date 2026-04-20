@@ -23,12 +23,9 @@ export const FooterSection = () => {
   };
 
   const productLinks = [
-    { label: "Nostalgia Kit", id: "nostalgia-kit" },
-    { label: "Heart of the Home Kit", id: "heart-of-the-home-kit" },
-    { label: '"Are We There Yet?" Kit', id: "are-we-there-yet-kit" },
-    { label: "Heirloom Garden Kit", id: "heirloom-garden-kit" },
-    { label: "Makers & Menders Kit", id: "makers-and-menders-kit" },
-    { label: "All 5 Kits — $97", id: "bundles" },
+    { label: "Engagement Kits", path: "/kits" },
+    { label: "Blueprint Pro", path: "/blueprint-pro" },
+    { label: "For Families", path: "/family-visits" },
   ];
 
   return (
@@ -60,8 +57,8 @@ export const FooterSection = () => {
             <div className="flex flex-col gap-2">
               {productLinks.map((link) => (
                 <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
+                  key={link.path}
+                  onClick={() => { navigate(link.path); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                   className="text-sm text-forest/80 hover:text-terracotta transition-colors text-center md:text-left"
                 >
                   {link.label}
@@ -97,13 +94,6 @@ export const FooterSection = () => {
                 className="text-sm text-forest/80 hover:text-terracotta transition-colors"
               >
                 For Families
-              </a>
-              <a
-                href="#honey-pot"
-                onClick={(e) => { e.preventDefault(); scrollToSection("honey-pot"); }}
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
-                {"\n"}
               </a>
             </div>
           </div>
