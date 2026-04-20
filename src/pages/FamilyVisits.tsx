@@ -228,35 +228,19 @@ const FamilyVisits = () => {
 
         {/* SECTION 5 — FREE OFFER (split with booklet image) */}
         <section id="free-guide" className="px-6 lg:px-12 py-28 md:py-36">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <motion.div {...fadeIn} className="order-2 lg:order-1 relative">
-              <div className="relative bg-cream-dark/60 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.3)]">
-                <div className="aspect-[3/2] overflow-hidden rounded-sm">
-                  <img
-                    src={bookletImage}
-                    alt="An older mother's hand resting on her adult daughter's hand at a sunlit wooden kitchen table, with The Comfort Bond Conversation Starter Cards and Visual Spark Cards spread out alongside vintage family photos and a teacup."
-                    width={1920}
-                    height={1280}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <Ornament className="absolute -bottom-5 -left-5 w-10 h-10 text-terracotta" />
-            </motion.div>
-
-            <motion.div {...fadeUp} className="order-1 lg:order-2">
+          <div className="max-w-2xl mx-auto text-center">
+            <motion.div {...fadeUp}>
               <Eyebrow>Free download</Eyebrow>
               <h2 className="mt-6 font-serif text-forest text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1]">
                 The Free Visit
                 <br />
                 <span className="italic">Starter Guide</span>
               </h2>
-              <p className="mt-6 text-foreground/75 text-lg leading-[1.7] font-light max-w-md">
+              <p className="mt-6 text-foreground/75 text-lg leading-[1.7] font-light mx-auto">
                 Don't let your next visit default to sitting in silence or asking the same three questions. This free printable guide gives you gentle, dignified tools to spark real connection and joy with your loved one.
               </p>
 
-              <ul className="mt-10 space-y-6">
+              <ul className="mt-10 space-y-6 text-left max-w-md mx-auto">
                 {[
                   "Conversation starter cards",
                   "Visual spark cards",
