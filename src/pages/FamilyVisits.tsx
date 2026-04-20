@@ -6,7 +6,7 @@ import { FooterSection } from "@/components/sections/FooterSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/family-visits-hero.jpg";
-import bookletImage from "@/assets/family-visits-free-guide.jpg";
+import bookletImage from "@/assets/family-visits-free-guide.png";
 import kitImage from "@/assets/family-visits-kits.png";
 import mothersDayHero from "@/assets/blog-mothers-day-memory-care-hero.jpg";
 
@@ -231,11 +231,11 @@ const FamilyVisits = () => {
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div {...fadeIn} className="order-2 lg:order-1 relative">
               <div className="relative bg-cream-dark/60 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.3)]">
-                <div className="aspect-square overflow-hidden rounded-sm">
+                <div className="aspect-[3/2] overflow-hidden rounded-sm">
                   <img
                     src={bookletImage}
-                    alt="An older mother's hands and her adult daughter's hands resting at a sunlit kitchen table with printed conversation cards, a warm cup of tea, eucalyptus, and reading glasses."
-                    width={1280}
+                    alt="An older mother's hand resting on her adult daughter's hand at a sunlit wooden kitchen table, with The Comfort Bond Conversation Starter Cards and Visual Spark Cards spread out alongside vintage family photos and a teacup."
+                    width={1920}
                     height={1280}
                     loading="lazy"
                     className="w-full h-full object-cover"
