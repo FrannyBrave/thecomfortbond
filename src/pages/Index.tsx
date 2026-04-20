@@ -587,12 +587,9 @@ const Index = () => {
           <div className="footer-col">
             <h4>Products</h4>
             <ul>
-              <li><a href="#nostalgia-kit" onClick={(e) => {e.preventDefault();document.getElementById('nostalgia-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Nostalgia Kit</a></li>
-              <li><a href="#heart-of-the-home-kit" onClick={(e) => {e.preventDefault();document.getElementById('heart-of-the-home-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Heart of the Home Kit</a></li>
-              <li><a href="#are-we-there-yet-kit" onClick={(e) => {e.preventDefault();document.getElementById('are-we-there-yet-kit')?.scrollIntoView({ behavior: 'smooth' });}}>"Are We There Yet?" Kit</a></li>
-              <li><a href="#heirloom-garden-kit" onClick={(e) => {e.preventDefault();document.getElementById('heirloom-garden-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Heirloom Garden Kit</a></li>
-              <li><a href="#makers-and-menders-kit" onClick={(e) => {e.preventDefault();document.getElementById('makers-and-menders-kit')?.scrollIntoView({ behavior: 'smooth' });}}>Makers &amp; Menders Kit</a></li>
-              <li><a href="#bundles" onClick={(e) => {e.preventDefault();document.getElementById('bundles')?.scrollIntoView({ behavior: 'smooth' });}}>All 5 Kits — $97</a></li>
+              <li><a href="/kits">Engagement Kits</a></li>
+              <li><a href="/blueprint-pro">Blueprint Pro</a></li>
+              <li><a href="/family-visits">For Families</a></li>
             </ul>
           </div>
           <div className="footer-col">
@@ -601,14 +598,12 @@ const Index = () => {
               <li><a href="/blueprint">Free Blueprint</a></li>
               <li><a href="/free-sampler">Free Sampler</a></li>
               <li><a href="/resources">Blog</a></li>
-              <li><a href="/family-visits">For Families</a></li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="/about">Our Story</a></li>
-              <li><a href="mailto:hello@thecomfortbond.com">Contact</a></li>
+              <li><a href="mailto:hello@thecomfortbond.com">hello@thecomfortbond.com</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>
               <li><a href="/refund-policy">Refund Policy</a></li>
