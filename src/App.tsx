@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import Resources from "./pages/Resources";
 import ArticleDetail from "./pages/ArticleDetail";
@@ -25,14 +25,21 @@ import MothersDayMemoryCare from "./pages/MothersDayMemoryCare";
 import { useCanonical } from "./hooks/useCanonical";
 import { useEffect } from "react";
 import { preloadPaddle } from "./lib/paddle";
+import { trackPinterestPage } from "./lib/pinterest";
 
 const queryClient = new QueryClient();
 
 function AppRoutes() {
   useCanonical();
+  const location = useLocation();
   useEffect(() => {
     preloadPaddle();
   }, []);
+  // Pinterest SPA page-visit event — fires on every route change
+  // (initial mount + every subsequent client-side navigation).
+  useEffect(() => {
+    trackPinterestPage();
+  }, [location.pathname, location.search]);
   return (
     <Routes>
 

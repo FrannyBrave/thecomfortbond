@@ -53,6 +53,9 @@ function SamplerEmailCapture({
       );
       if (!res.ok) throw new Error("Subscription failed");
       setStatus("success");
+      // Pinterest 'signup' event — only after a confirmed successful submit.
+      const { trackPinterestEvent } = await import("@/lib/pinterest");
+      trackPinterestEvent("signup", { lead_type: "free-sampler" }, `signup:sampler:${email}`);
     } catch (err) {
       setStatus("error");
       setErrorMsg("Something went wrong. Please try again.");
