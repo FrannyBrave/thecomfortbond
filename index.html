@@ -216,7 +216,20 @@
 </script>
 
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gumroad.com https://assets.gumroad.com https://cdn.paddle.com https://*.paddle.com; style-src 'self' 'unsafe-inline' https://*.paddle.com; img-src 'self' data: https:; connect-src 'self' https://gumroad.com https://assets.gumroad.com https://api.convertkit.com https://*.paddle.com https://checkout-service.paddle.com; frame-src https://gumroad.com https://*.paddle.com https://buy.paddle.com; font-src 'self' https:;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gumroad.com https://assets.gumroad.com https://cdn.paddle.com https://*.paddle.com https://s.pinimg.com; style-src 'self' 'unsafe-inline' https://*.paddle.com; img-src 'self' data: https:; connect-src 'self' https://gumroad.com https://assets.gumroad.com https://api.convertkit.com https://*.paddle.com https://checkout-service.paddle.com https://ct.pinterest.com https://s.pinimg.com; frame-src https://gumroad.com https://*.paddle.com https://buy.paddle.com; font-src 'self' https:;" />
+
+    <!-- Pinterest Tag -->
+    <script>
+      !function(e){if(!window.pintrk){window.pintrk = function () {
+      window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+        n=window.pintrk;n.queue=[],n.version="3.0";var
+        t=document.createElement("script");t.async=!0,t.src=e;var
+        r=document.getElementsByTagName("script")[0];
+        r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+      pintrk('load', '2612856976747');
+      pintrk('page');
+    </script>
+    <!-- end Pinterest Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Engagement Kits & Printable Activities for Senior Care | The Comfort Bond™</title>
     <meta name="description" content="Printable engagement kits and activity resources for senior living communities, memory care, and in-home caregivers. Ready to use in minutes — no prep needed." />
@@ -248,6 +261,11 @@
     
   </head>
   <body>
+    <!-- Pinterest Tag (noscript fallback) -->
+    <noscript>
+      <img height="1" width="1" style="display:none;" alt=""
+        src="https://ct.pinterest.com/v3/?event=init&tid=2612856976747&noscript=1" />
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
