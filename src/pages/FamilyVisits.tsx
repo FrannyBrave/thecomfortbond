@@ -303,7 +303,7 @@ const FamilyVisits = () => {
                 <br />
                 <span className="italic text-sand">a single visit…</span>
               </h2>
-              <p className="mt-6 text-cream/75 text-lg leading-[1.7] font-light">
+              <p className="mt-6 !text-cream text-lg leading-[1.7] font-light">
                 For families who want a steady, ongoing way to feel close —
                 not just one good afternoon.
               </p>
