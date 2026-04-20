@@ -6,6 +6,8 @@
  * mapped from the purchased Price ID.
  */
 
+import { trackPinterestEvent } from "./pinterest";
+
 const PADDLE_JS_SRC = "https://cdn.paddle.com/paddle/v2/paddle.js";
 const CLIENT_TOKEN = "live_bd95fc6721aad743909ee0f4cbd";
 
@@ -87,12 +89,27 @@ async function initPaddle(): Promise<void> {
     eventCallback: (event) => {
       if (event?.name !== "checkout.completed") return;
       const data = event.data as
-        | { items?: Array<{ price_id?: string; priceId?: string }> }
+        | {
+            id?: string;
+            transaction_id?: string;
+            items?: Array<{ price_id?: string; priceId?: string }>;
+          }
         | undefined;
       const purchasedId = data?.items?.find(
         (it) => it.price_id || it.priceId
       );
       const priceId = purchasedId?.price_id ?? purchasedId?.priceId;
+
+      // Pinterest 'purchase' event — fires only on a confirmed Paddle
+      // checkout.completed event. De-duplicated by transaction id so
+      // re-rendering or repeat callbacks never double-fire.
+      const txId = data?.transaction_id ?? data?.id ?? priceId ?? "unknown";
+      trackPinterestEvent(
+        "purchase",
+        priceId ? { line_items: [{ product_id: priceId, quantity: 1 }] } : undefined,
+        `purchase:${txId}`
+      );
+
       const target = priceId ? PRICE_REDIRECTS[priceId] : undefined;
       if (target) {
         // Brief delay so Paddle can finish its overlay close animation.
@@ -117,6 +134,11 @@ const PRICE_DISCOUNTS: Record<string, string> = {
  * Auto-loads + initializes Paddle.js on first call.
  */
 export async function openPaddleCheckout(priceId: string): Promise<void> {
+  // Pinterest 'checkout' event — fires the moment the user intentionally
+  // initiates a Paddle checkout (button click), before the overlay opens.
+  trackPinterestEvent("checkout", {
+    line_items: [{ product_id: priceId, quantity: 1 }],
+  });
   try {
     await initPaddle();
     if (!window.Paddle) throw new Error("Paddle not available");

@@ -50,6 +50,9 @@ function EmailCapture({ id, variant = "default" }: { id: string; variant?: "defa
       );
       if (!res.ok) throw new Error("Subscription failed");
       setStatus("success");
+      // Pinterest 'signup' event — only after a confirmed successful submit.
+      const { trackPinterestEvent } = await import("@/lib/pinterest");
+      trackPinterestEvent("signup", { lead_type: "free-blueprint" }, `signup:blueprint:${email}`);
     } catch (err) {
       setStatus("error");
       setErrorMsg("Something went wrong. Please try again.");
