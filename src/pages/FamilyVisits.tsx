@@ -6,7 +6,7 @@ import { FooterSection } from "@/components/sections/FooterSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/family-visits-hero.jpg";
-import bookletImage from "@/assets/family-visits-free-guide.png";
+
 import kitImage from "@/assets/family-visits-kits.png";
 import mothersDayHero from "@/assets/blog-mothers-day-memory-care-hero.jpg";
 
