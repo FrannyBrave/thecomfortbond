@@ -111,7 +111,17 @@ export default function Kits() {
       </nav>
 
       {/* ── Products Section ── */}
-      <section id="products" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--sand-pale)", paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
+      <section
+        id="products"
+        className="px-6 md:px-16"
+        style={{
+          background: "linear-gradient(180deg, #f1e8db 0%, #ede2d1 100%)",
+          paddingTop: "clamp(4rem, 8vw, 7rem)",
+          paddingBottom: "clamp(4rem, 8vw, 7rem)",
+          borderTop: "1px solid rgba(45,74,62,0.06)",
+          borderBottom: "1px solid rgba(45,74,62,0.06)",
+        }}
+      >
         <div className="max-w-[1200px] mx-auto">
           <div className="section-tag">The full collection</div>
           <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
