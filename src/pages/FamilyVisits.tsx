@@ -354,18 +354,6 @@ const FamilyVisits = () => {
                     </span>
                   </div>
 
-                  {/* Testimonial */}
-                  <figure className="mb-6 pl-5 border-l-2 border-terracotta/40">
-                    <blockquote className="font-serif italic text-forest/85 text-base md:text-[1.05rem] leading-[1.6]">
-                      "I sat down with the Nostalgia Kit and for the first time in
-                      months, my mom looked at me — really looked at me — and
-                      smiled. We talked for almost an hour."
-                    </blockquote>
-                    <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.18em] text-foreground/60">
-                      — Sarah M., daughter &amp; family caregiver
-                    </figcaption>
-                  </figure>
-
                   {/* Trust line */}
                   <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-forest/55 text-center mb-6 inline-flex items-center justify-center gap-2 self-center">
                     <span aria-hidden="true" className="inline-block w-6 h-px bg-forest/25" />
@@ -383,6 +371,68 @@ const FamilyVisits = () => {
                   </div>
                 </div>
               </motion.article>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 2.5 — FAMILY TESTIMONIALS */}
+        <section className="px-6 py-20 md:py-28 bg-cream/40 border-y border-forest/10">
+          <div className="max-w-6xl mx-auto">
+            <motion.div {...fadeUp} className="text-center mb-12 md:mb-16">
+              <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
+                What Families Are Saying
+              </p>
+              <h2 className="font-serif text-forest text-3xl md:text-[2.5rem] leading-[1.2] max-w-2xl mx-auto">
+                Quiet moments, finally returned.
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {[
+                {
+                  quote:
+                    "I sat down with the Nostalgia Kit and for the first time in months, my mom looked at me — really looked at me — and smiled. We talked for almost an hour.",
+                  name: "Sarah M.",
+                  role: "Daughter & family caregiver",
+                },
+                {
+                  quote:
+                    "My dad hadn't said much in weeks. We opened the Kitchen & Home Kit together, he picked up the rolling pin, and started telling me about my grandmother's bread. I cried in the car on the way home.",
+                  name: "Rebecca T.",
+                  role: "Daughter, visits weekly",
+                },
+                {
+                  quote:
+                    "I'm 22 and I never knew what to do when I visited Grandma. The Garden Kit gave us something to hold and talk about. She told me a story I'd never heard before — about her first job at a flower shop.",
+                  name: "Mia K.",
+                  role: "Granddaughter",
+                },
+              ].map((t, i) => (
+                <motion.figure
+                  key={i}
+                  {...fadeUp}
+                  transition={{ ...fadeUp.transition, delay: i * 0.1 }}
+                  className="bg-background rounded-2xl p-7 md:p-8 shadow-[0_4px_24px_-12px_rgba(45,74,62,0.18)] ring-1 ring-forest/10 flex flex-col"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="font-serif text-terracotta/40 text-5xl leading-none mb-2 select-none"
+                  >
+                    &ldquo;
+                  </div>
+                  <blockquote className="font-serif italic text-forest/85 text-[1.02rem] md:text-[1.05rem] leading-[1.65] flex-1">
+                    {t.quote}
+                  </blockquote>
+                  <figcaption className="mt-6 pt-5 border-t border-forest/10">
+                    <div className="font-sans text-sm font-semibold text-forest tracking-[0.02em]">
+                      {t.name}
+                    </div>
+                    <div className="mt-1 font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/55">
+                      {t.role}
+                    </div>
+                  </figcaption>
+                </motion.figure>
+              ))}
             </div>
           </div>
         </section>
