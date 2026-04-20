@@ -95,13 +95,6 @@ export const FooterSection = () => {
               >
                 For Families
               </a>
-              <a
-                href="#honey-pot"
-                onClick={(e) => { e.preventDefault(); scrollToSection("honey-pot"); }}
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
-                {"\n"}
-              </a>
             </div>
           </div>
 
