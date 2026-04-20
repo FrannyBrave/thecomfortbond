@@ -192,9 +192,9 @@ const FamilyVisits = () => {
         </div>
 
         {/* SECTION 2 — RELATABLE PAIN (intimate column with hairlines) */}
-        <section className="px-6 py-24 md:py-32 bg-cream-dark/30">
+        <section className="px-6 py-14 md:py-32 bg-cream-dark/30">
           <div className="max-w-2xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-16">
+            <motion.div {...fadeUp} className="text-center mb-10 md:mb-16">
               <Eyebrow>Recognition</Eyebrow>
               <h2 className="mt-6 font-serif italic text-forest text-3xl md:text-[2.75rem] leading-[1.15]">
                 If any of this sounds familiar…
@@ -227,7 +227,7 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION 5 — FREE OFFER (split with booklet image) */}
-        <section id="free-guide" className="px-6 lg:px-12 pt-28 md:pt-36 pb-12 md:pb-36">
+        <section id="free-guide" className="px-6 lg:px-12 pt-16 md:pt-36 pb-10 md:pb-36">
           <div className="max-w-2xl mx-auto text-center">
             <motion.div {...fadeUp}>
               <Eyebrow>Free download</Eyebrow>
@@ -270,9 +270,9 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION — PRODUCT BRIDGE (moved up: directly after Free Guide) */}
-        <section className="px-6 lg:px-12 pt-12 md:pt-36 pb-28 md:pb-36 bg-cream-dark/20">
+        <section className="px-6 lg:px-12 pt-10 md:pt-36 pb-16 md:pb-36 bg-cream-dark/20">
           <div className="max-w-6xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-16 max-w-2xl mx-auto">
+            <motion.div {...fadeUp} className="text-center mb-10 md:mb-16 max-w-2xl mx-auto">
               <Eyebrow>For something deeper</Eyebrow>
               <h2 className="mt-6 font-serif text-forest text-4xl md:text-[3rem] leading-[1.15]">
                 If you want more than
@@ -302,7 +302,7 @@ const FamilyVisits = () => {
                   />
                   <Ornament className="absolute top-5 right-5 w-6 h-6 text-cream drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" />
                 </div>
-                <div className="p-8 md:p-12 flex flex-col flex-1">
+                <div className="p-6 md:p-12 flex flex-col flex-1">
                   <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
                     Tactile · Familiar · Real
                   </p>
@@ -366,9 +366,9 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION 3 — REFRAME */}
-        <section className="px-6 py-28 md:py-40">
+        <section className="px-6 py-16 md:py-40">
           <div className="max-w-2xl mx-auto text-center">
-            <motion.div {...fadeUp} className="space-y-10">
+            <motion.div {...fadeUp} className="space-y-7 md:space-y-10">
               <p className="font-serif text-forest text-2xl md:text-[2rem] leading-[1.4]">
                 It's not that you don't care.
                 <br />
@@ -392,7 +392,7 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION 4 — SOLUTION INTRO (warm panel) */}
-        <section className="relative px-6 py-28 md:py-36 bg-cream-dark">
+        <section className="relative px-6 py-16 md:py-36 bg-cream-dark">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.04]"
             style={{
@@ -429,7 +429,7 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION 9 — FINAL CTA (forest panel, inscription feel) */}
-        <section className="relative px-6 py-28 md:py-36 bg-forest overflow-hidden">
+        <section className="relative px-6 py-16 md:py-36 bg-forest overflow-hidden">
           {/* subtle warm glow */}
           <div
             className="pointer-events-none absolute inset-0 opacity-50"
@@ -481,9 +481,9 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION 10 — RELATED READING */}
-        <section className="relative px-6 py-24 md:py-28 bg-cream">
+        <section className="relative px-6 py-14 md:py-28 bg-cream">
           <div className="max-w-5xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-14">
+            <motion.div {...fadeUp} className="text-center mb-10 md:mb-14">
               <Eyebrow>Related Reading</Eyebrow>
               <h2 className="font-serif text-forest text-3xl md:text-4xl mt-6 leading-[1.2]">
                 For the visits we don't know
