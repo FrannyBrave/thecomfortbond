@@ -227,7 +227,7 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION 5 — FREE OFFER (split with booklet image) */}
-        <section id="free-guide" className="px-6 lg:px-12 py-28 md:py-36">
+        <section id="free-guide" className="px-6 lg:px-12 pt-28 md:pt-36 pb-12 md:pb-36">
           <div className="max-w-2xl mx-auto text-center">
             <motion.div {...fadeUp}>
               <Eyebrow>Free download</Eyebrow>
@@ -270,7 +270,7 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION — PRODUCT BRIDGE (moved up: directly after Free Guide) */}
-        <section className="px-6 lg:px-12 py-28 md:py-36 bg-cream-dark/20">
+        <section className="px-6 lg:px-12 pt-12 md:pt-36 pb-28 md:pb-36 bg-cream-dark/20">
           <div className="max-w-6xl mx-auto">
             <motion.div {...fadeUp} className="text-center mb-16 max-w-2xl mx-auto">
               <Eyebrow>For something deeper</Eyebrow>
