@@ -270,22 +270,16 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION — PRODUCT BRIDGE (moved up: directly after Free Guide) */}
-        <section className="px-6 lg:px-12 pt-10 md:pt-36 pb-16 md:pb-36 bg-forest relative overflow-hidden">
-          {/* Subtle texture accents */}
-          <div aria-hidden="true" className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-cream/5 blur-2xl" />
-          <div aria-hidden="true" className="absolute -bottom-24 -right-16 w-80 h-80 rounded-full bg-terracotta/10 blur-3xl" />
-
-          <div className="max-w-6xl mx-auto relative">
+        <section className="px-6 lg:px-12 pt-10 md:pt-36 pb-16 md:pb-36 bg-cream-dark/20">
+          <div className="max-w-6xl mx-auto">
             <motion.div {...fadeUp} className="text-center mb-10 md:mb-16 max-w-2xl mx-auto">
-              <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
-                For something deeper
-              </p>
-              <h2 className="mt-6 font-serif text-cream text-4xl md:text-[3rem] leading-[1.15]">
+              <Eyebrow>For something deeper</Eyebrow>
+              <h2 className="mt-6 font-serif text-forest text-4xl md:text-[3rem] leading-[1.15]">
                 If you want more than
                 <br />
                 <span className="italic">a single visit…</span>
               </h2>
-              <p className="mt-6 text-cream/75 text-lg leading-[1.7] font-light">
+              <p className="mt-6 text-foreground/70 text-lg leading-[1.7] font-light">
                 For families who want a steady, ongoing way to feel close —
                 not just one good afternoon.
               </p>
