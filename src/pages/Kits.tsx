@@ -137,7 +137,7 @@ export default function Kits() {
               <div
                 key={i}
                 id={kit.id}
-                className="bg-white border border-[rgba(45,74,62,0.12)] rounded-2xl overflow-hidden flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(45,74,62,0.1)] relative"
+                className="bg-white border border-[rgba(45,74,62,0.08)] rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_56px_-16px_rgba(45,74,62,0.25)] relative shadow-[0_10px_32px_-12px_rgba(45,74,62,0.18),0_2px_6px_rgba(45,74,62,0.06)]"
               >
                 {kit.popular && (
                   <div className="absolute top-0 left-0 right-0 text-center py-1.5 text-[10px] font-semibold tracking-[0.1em] uppercase text-white z-10" style={{ background: "var(--clay)" }}>
