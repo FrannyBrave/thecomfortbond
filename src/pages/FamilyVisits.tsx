@@ -292,16 +292,18 @@ const FamilyVisits = () => {
         </section>
 
         {/* SECTION — PRODUCT BRIDGE (moved up: directly after Free Guide) */}
-        <section className="px-6 lg:px-12 pt-10 md:pt-36 pb-16 md:pb-36 bg-cream-dark/20">
+        <section className="px-6 lg:px-12 py-24 md:py-40 bg-forest">
           <div className="max-w-6xl mx-auto">
             <motion.div {...fadeUp} className="text-center mb-10 md:mb-16 max-w-2xl mx-auto">
-              <Eyebrow>For something deeper</Eyebrow>
-              <h2 className="mt-6 font-serif text-forest text-4xl md:text-[3rem] leading-[1.15]">
+              <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-sand mb-4">
+                For something deeper
+              </p>
+              <h2 className="mt-6 font-serif text-cream text-4xl md:text-[3rem] leading-[1.15]">
                 If you want more than
                 <br />
-                <span className="italic">a single visit…</span>
+                <span className="italic text-sand">a single visit…</span>
               </h2>
-              <p className="mt-6 text-foreground/70 text-lg leading-[1.7] font-light">
+              <p className="mt-6 text-cream/75 text-lg leading-[1.7] font-light">
                 For families who want a steady, ongoing way to feel close —
                 not just one good afternoon.
               </p>
@@ -311,7 +313,7 @@ const FamilyVisits = () => {
               {/* Card — Memory & Connection Kits (5-Kit Bundle + individual kits) */}
               <motion.article
                 {...fadeUp}
-                className="group bg-cream rounded-sm overflow-hidden flex flex-col border border-forest/10 hover:border-terracotta/40 transition-colors duration-500 shadow-[0_20px_60px_-30px_rgba(45,74,62,0.25)]"
+                className="group bg-forest/40 backdrop-blur-sm rounded-sm overflow-hidden flex flex-col border border-cream/15 hover:border-sand/50 transition-colors duration-500 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.5)]"
               >
                 <div className="aspect-[16/10] overflow-hidden relative">
                   <img
@@ -325,47 +327,47 @@ const FamilyVisits = () => {
                   <Ornament className="absolute top-5 right-5 w-6 h-6 text-cream drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" />
                 </div>
                 <div className="p-6 md:p-12 flex flex-col flex-1">
-                  <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
+                  <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-sand mb-4">
                     Tactile · Familiar · Real
                   </p>
-                  <h3 className="font-serif text-forest text-2xl md:text-[1.75rem] leading-tight mb-4">
+                  <h3 className="font-serif text-cream text-2xl md:text-[1.75rem] leading-tight mb-4">
                     The 5-Kit Bundle &amp; Individual Themed Kits
                   </h3>
-                  <p className="text-foreground/70 leading-[1.7] font-light mb-5 flex-1">
+                  <p className="text-cream/75 leading-[1.7] font-light mb-5 flex-1">
                     Themed boxes designed to spark recognition through touch,
                     scent, and memory — gentle, dignified, and made for
                     moments when words aren't enough. Save when you get all
                     five together, or start with the one that feels most like her.
                   </p>
-                  <p className="font-serif italic text-foreground/60 text-sm mb-6 leading-relaxed">
+                  <p className="font-serif italic text-cream/60 text-sm mb-6 leading-relaxed">
                     Nostalgia · Garden · Kitchen &amp; Home · Travel · Makers &amp; Menders
                   </p>
 
                   {/* Price anchoring */}
-                  <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1 mb-6 pb-6 border-b border-forest/10">
-                    <span className="font-serif text-forest text-3xl md:text-[2.25rem] leading-none">
+                  <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1 mb-6 pb-6 border-b border-cream/15">
+                    <span className="font-serif text-cream text-3xl md:text-[2.25rem] leading-none">
                       $97
                     </span>
-                    <span className="font-sans text-sm text-foreground/50 line-through">
+                    <span className="font-sans text-sm text-cream/50 line-through">
                       $140 value
                     </span>
-                    <span className="font-sans text-[11px] uppercase tracking-[0.2em] text-[#D75A4A] font-semibold">
+                    <span className="font-sans text-[11px] uppercase tracking-[0.2em] text-sand font-semibold">
                       Save $43
                     </span>
                   </div>
 
                   {/* Trust line */}
-                  <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-forest/55 text-center mb-6 inline-flex items-center justify-center gap-2 self-center">
-                    <span aria-hidden="true" className="inline-block w-6 h-px bg-forest/25" />
+                  <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-cream/55 text-center mb-6 inline-flex items-center justify-center gap-2 self-center">
+                    <span aria-hidden="true" className="inline-block w-6 h-px bg-cream/25" />
                     Trusted by 2,400+ families
-                    <span aria-hidden="true" className="inline-block w-6 h-px bg-forest/25" />
+                    <span aria-hidden="true" className="inline-block w-6 h-px bg-cream/25" />
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild variant="cta-poppy" size="lg">
                       <Link to="/kits">Get All 5 Kits for $97</Link>
                     </Button>
-                    <Button asChild variant="cta-outline" size="lg">
+                    <Button asChild size="lg" className="bg-transparent border-2 border-sand text-sand hover:bg-sand hover:text-forest active:scale-[0.98]">
                       <Link to="/kits">Explore the Kits</Link>
                     </Button>
                   </div>
