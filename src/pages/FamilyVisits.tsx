@@ -7,7 +7,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/family-visits-hero.jpg";
 import bookletImage from "@/assets/family-visits-booklet.jpg";
-import kitImage from "@/assets/family-visits-kit.jpg";
+import kitImage from "@/assets/family-visits-kits.png";
 import mothersDayHero from "@/assets/blog-mothers-day-memory-care-hero.jpg";
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -310,9 +310,9 @@ const FamilyVisits = () => {
                 <div className="aspect-[16/10] overflow-hidden relative">
                   <img
                     src={kitImage}
-                    alt="A craft cardboard memory kit box on linen, holding an embroidered handkerchief, vintage tin, pansy flower, and wooden spool."
-                    width={1024}
-                    height={640}
+                    alt="An open keepsake box on a linen-covered table holding Conversation Starter Cards and Visual Spark Cards, with vintage photo cards fanned out beside it in warm window light."
+                    width={1820}
+                    height={1138}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
                   />
