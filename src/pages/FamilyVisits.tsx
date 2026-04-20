@@ -354,18 +354,6 @@ const FamilyVisits = () => {
                     </span>
                   </div>
 
-                  {/* Testimonial */}
-                  <figure className="mb-6 pl-5 border-l-2 border-terracotta/40">
-                    <blockquote className="font-serif italic text-forest/85 text-base md:text-[1.05rem] leading-[1.6]">
-                      "I sat down with the Nostalgia Kit and for the first time in
-                      months, my mom looked at me — really looked at me — and
-                      smiled. We talked for almost an hour."
-                    </blockquote>
-                    <figcaption className="mt-3 font-sans text-xs uppercase tracking-[0.18em] text-foreground/60">
-                      — Sarah M., daughter &amp; family caregiver
-                    </figcaption>
-                  </figure>
-
                   {/* Trust line */}
                   <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-forest/55 text-center mb-6 inline-flex items-center justify-center gap-2 self-center">
                     <span aria-hidden="true" className="inline-block w-6 h-px bg-forest/25" />
