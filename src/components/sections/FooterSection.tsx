@@ -89,12 +89,6 @@ export const FooterSection = () => {
               >
                 Blog
               </a>
-              <a
-                href="/family-visits"
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
-                For Families
-              </a>
             </div>
           </div>
 
