@@ -128,6 +128,24 @@ const FamilyVisits = () => {
                   <a href="#free-guide">Make Your Next Visit Meaningful</a>
                 </Button>
               </div>
+              {/* Subtle social proof — centered on mobile, left-aligned on desktop */}
+              <div className="mt-5 flex items-center justify-center sm:justify-start gap-2">
+                <div className="flex items-center gap-0.5" aria-hidden="true">
+                  {[0, 1, 2, 3, 4].map((i) => (
+                    <svg
+                      key={i}
+                      className="w-3.5 h-3.5 text-gold fill-current"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.79L10 14.77l-5.2 2.74.99-5.79L1.58 7.62l5.82-.85L10 1.5z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="font-sans text-xs text-forest/70 tracking-wide">
+                  Trusted by 2,400+ families
+                </span>
+              </div>
+
               {/* Secondary action as quiet text link on mobile */}
               <a
                 href="#free-guide"
