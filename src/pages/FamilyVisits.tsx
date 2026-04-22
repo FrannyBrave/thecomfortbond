@@ -443,19 +443,13 @@ const FamilyVisits = () => {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
               {[
                 {
                   quote:
                     "I sat down with the Nostalgia Kit and for the first time in months, my mom looked at me — really looked at me — and smiled. We talked for almost an hour.",
-                  name: "Sarah M.",
+                  name: "Ashley G.",
                   role: "Daughter & family caregiver",
-                },
-                {
-                  quote:
-                    "My dad hadn't said much in weeks. We opened the Kitchen & Home Kit together, he picked up the rolling pin, and started telling me about my grandmother's bread. I cried in the car on the way home.",
-                  name: "Rebecca T.",
-                  role: "Daughter, visits weekly",
                 },
                 {
                   quote:
