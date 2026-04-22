@@ -203,10 +203,6 @@ const FamilyVisits = () => {
                 {/* corner ornament */}
                 <Ornament className="absolute -top-5 -left-5 w-10 h-10 text-terracotta" />
                 <Ornament className="absolute -bottom-5 -right-5 w-10 h-10 text-forest/60" />
-                {/* caption */}
-                <p className="mt-5 font-serif italic text-sm text-foreground/55 text-center tracking-wide">
-                  — A Tuesday afternoon. Light through the window. Hands held.
-                </p>
               </div>
             </motion.div>
           </div>
