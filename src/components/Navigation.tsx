@@ -10,6 +10,7 @@ export const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const isMothersDayLanding = location.pathname === "/family-visits";
 
   useEffect(() => {
     const handleScroll = () => {
