@@ -310,21 +310,20 @@ const FamilyVisits = () => {
           <div className="max-w-6xl mx-auto">
             <motion.div {...fadeUp} className="text-center mb-10 md:mb-16 max-w-2xl mx-auto">
               <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-sand mb-4">
-                For something deeper
+                The Complete Experience
               </p>
               <h2 className="mt-6 font-serif text-cream text-4xl md:text-[3rem] leading-[1.15]">
-                If you want more than
+                Make this Mother's Day
                 <br />
-                <span className="italic text-sand">a single visit…</span>
+                <span className="italic text-sand">Meaningful</span>
               </h2>
               <p className="mt-6 !text-cream text-lg leading-[1.7] font-light">
-                For families who want a steady, ongoing way to feel close —
-                not just one good afternoon.
+                You have the plan. This is everything you need to make the moment real.
               </p>
             </motion.div>
 
             <div className="max-w-2xl mx-auto [&_*]:!text-cream">
-              {/* Card — Memory & Connection Kits (5-Kit Bundle + individual kits) */}
+              {/* Card — Mother's Day Connection Kit */}
               <motion.article
                 {...fadeUp}
                 className="group bg-transparent rounded-sm overflow-hidden flex flex-col border border-cream/20 hover:border-sand/50 transition-colors duration-500 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.5)]"
@@ -332,7 +331,7 @@ const FamilyVisits = () => {
                 <div className="aspect-[16/10] overflow-hidden relative">
                   <img
                     src={kitImage}
-                    alt="An open keepsake box on a linen-covered table holding Conversation Starter Cards and Visual Spark Cards, with vintage photo cards fanned out beside it in warm window light."
+                    alt="The Mother's Day Connection Kit with conversation cards, visual spark cards, playlist guide, letter template, and morning ritual guide arranged on a linen-covered table in warm window light."
                     width={1820}
                     height={1138}
                     loading="lazy"
@@ -342,47 +341,64 @@ const FamilyVisits = () => {
                 </div>
                 <div className="p-6 md:p-12 flex flex-col flex-1">
                   <p className="font-sans text-[11px] uppercase tracking-[0.32em] !text-sand mb-4">
-                    Tactile · Familiar · Real
+                    The Mother's Day Connection Kit
                   </p>
                   <h3 className="font-serif !text-cream text-2xl md:text-[1.75rem] leading-tight mb-4">
-                    The 5-Kit Bundle &amp; Individual Themed Kits
+                    Everything You Need for a Day of Presence
                   </h3>
-                  <p className="!text-cream/90 leading-[1.7] font-light mb-5 flex-1">
-                    Themed boxes designed to spark recognition through touch,
-                    scent, and memory — gentle, dignified, and made for
-                    moments when words aren't enough. Save when you get all
-                    five together, or start with the one that feels most like her.
-                  </p>
-                  <p className="font-serif italic !text-cream/75 text-sm mb-6 leading-relaxed">
-                    Nostalgia · Garden · Kitchen &amp; Home · Travel · Makers &amp; Menders
-                  </p>
+
+                  {/* Feature list with Roman checkmarks */}
+                  <ul className="mb-6 space-y-4">
+                    {[
+                      "20 Conversation Cards: Gentle, poetic prompts that open connection without asking her to remember facts.",
+                      "15 Visual Spark Cards: Beautiful, familiar images to sit with together when words feel like too much.",
+                      "The Decade-by-Decade Playlist Guide: A simple way to find her \"imprint years\" and build music that reaches her.",
+                      "A Letter to My Mother: A guided space to write the words that feel too heavy to say out loud.",
+                      "The Morning Ritual Guide: A calm, step-by-step walkthrough so you know exactly what to do from the moment you arrive.",
+                    ].map((item, i) => (
+                      <li key={i} className="flex gap-4 items-baseline">
+                        <span className="font-serif italic text-sand text-xl leading-none flex-shrink-0 w-6">
+                          {["i", "ii", "iii", "iv", "v"][i]}.
+                        </span>
+                        <span className="!text-cream/90 text-base leading-[1.65] font-light">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
 
                   {/* Price anchoring */}
                   <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1 mb-6 pb-6 border-b border-cream/20">
                     <span className="font-serif !text-cream text-3xl md:text-[2.25rem] leading-none">
-                      $97
+                      $37
                     </span>
                     <span className="font-sans text-sm !text-cream/60 line-through">
-                      $140 value
+                      $47 value
                     </span>
                     <span className="font-sans text-[11px] uppercase tracking-[0.2em] !text-sand font-semibold">
-                      Save $43
+                      Special Mother's Day Price
                     </span>
                   </div>
 
                   {/* Trust line */}
                   <p className="font-sans text-[11px] uppercase tracking-[0.28em] !text-cream/70 text-center mb-6 inline-flex items-center justify-center gap-2 self-center">
                     <span aria-hidden="true" className="inline-block w-6 h-px bg-cream/30" />
-                    {"\n"}
+                    <span>Instant digital download</span>
                     <span aria-hidden="true" className="inline-block w-6 h-px bg-cream/30" />
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild variant="cta-poppy" size="lg">
-                      <Link to="/kits">Get All 5 Kits for $97</Link>
+                      <a
+                        href="https://thecomfortbond.gumroad.com/l/mothers-day-connection-kit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Get the Full Mother's Day Kit
+                      </a>
                     </Button>
                     <Button asChild size="lg" className="bg-transparent border-2 border-sand text-sand hover:bg-sand hover:text-forest active:scale-[0.98]">
-                      <Link to="/kits">Explore the Kits</Link>
+                      <Link to="/kits">Explore other everyday kits</Link>
                     </Button>
                   </div>
                 </div>
