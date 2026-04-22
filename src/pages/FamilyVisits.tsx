@@ -143,7 +143,14 @@ const FamilyVisits = () => {
               {/* Single primary CTA on mobile; dual on desktop */}
               <div className="mt-7 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <Button asChild variant="cta-poppy" size="xl" className="w-full sm:w-auto">
-                  <Link to="/free-sampler">Get the Free Mother's Day Guide</Link>
+                  <a
+                    href="/downloads/The_Mothers_Day_Connection_Plan_v3.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    Get the Free Mother's Day Guide
+                  </a>
                 </Button>
                 <Button asChild variant="cta-outline" size="xl" className="hidden sm:inline-flex">
                   <a href="#free-guide">Make Your Next Visit Meaningful</a>
@@ -281,7 +288,14 @@ const FamilyVisits = () => {
 
               <div className="mt-12">
                 <Button asChild variant="cta-poppy" size="xl">
-                  <Link to="/free-sampler">Download the Free Guide</Link>
+                  <a
+                    href="/downloads/The_Mothers_Day_Connection_Plan_v3.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    Download the Free Guide
+                  </a>
                 </Button>
                 <p className="text-muted-foreground text-xs mt-4 tracking-wide">
                   Sent straight to your inbox · No spam, ever
