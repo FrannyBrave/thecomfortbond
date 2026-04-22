@@ -696,7 +696,7 @@ const FamilyVisits = () => {
                 </Button>
               </div>
               {days > 0 && days <= 30 && (
-                <p className="font-serif italic text-cream/70 text-sm mt-8 tracking-wide inline-flex items-center gap-1.5">
+                <p className="font-serif italic text-cream text-sm mt-8 tracking-wide inline-flex items-center gap-1.5">
                   <span aria-hidden="true">{"\n"}</span>
                   {days} {days === 1 ? "day" : "days"} until Mother's Day · Download now so you have time to prepare.
                 </p>
