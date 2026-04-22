@@ -616,7 +616,7 @@ const FamilyVisits = () => {
                       className={`grid transition-all duration-500 ease-out ${isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"}`}
                     >
                       <div className="overflow-hidden">
-                        <p className="text-foreground/75 text-base leading-[1.7] font-light pr-8">
+                        <p className="text-foreground/75 text-base leading-[1.7] font-light pr-8 whitespace-pre-line">
                           {faq.a}
                         </p>
                       </div>
