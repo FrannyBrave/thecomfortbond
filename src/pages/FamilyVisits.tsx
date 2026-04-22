@@ -372,7 +372,7 @@ const FamilyVisits = () => {
                     </a>
                   </Button>
                   <p className="text-muted-foreground text-[11px] mt-3 tracking-wide text-center">
-                    Instant PDF · No email required
+                    Instant PDF · Sent to your inbox
                   </p>
                 </div>
               </motion.div>
