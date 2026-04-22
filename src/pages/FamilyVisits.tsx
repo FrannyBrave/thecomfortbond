@@ -289,29 +289,6 @@ const FamilyVisits = () => {
           </div>
         </section>
 
-        {/* SECTION — REFRAME (moved up to flow from pain → reframe → solution) */}
-        <section className="px-6 py-16 md:py-32">
-          <div className="max-w-2xl mx-auto text-center">
-            <motion.div {...fadeUp} className="space-y-7 md:space-y-10">
-              <p className="font-serif text-forest text-2xl md:text-[2rem] leading-[1.4]">
-                It's not that you don't care.
-                <br />
-                It's not that you aren't trying.
-              </p>
-              <div className="flex items-center justify-center gap-6">
-                <span className="h-px w-16 bg-forest/20" />
-                <Ornament className="w-6 h-6 text-terracotta" />
-                <span className="h-px w-16 bg-forest/20" />
-              </div>
-              <p className="font-serif italic text-terracotta text-3xl md:text-[2.5rem] leading-[1.3] pt-4">
-                Connection, when memory is fading,
-                <br />
-                can be guided.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
         {/* NEW SECTION — TWO PATHS (the conversion fork: free vs paid, side-by-side) */}
         <section id="two-paths" className="relative px-6 lg:px-12 py-16 md:py-32 bg-cream-dark">
           <div
