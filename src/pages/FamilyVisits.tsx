@@ -128,7 +128,7 @@ const FamilyVisits = () => {
                   Mother's Day · {dateLabel}
                   {days > 0 && days <= 60 && (
                     <span className="text-terracotta/70 normal-case tracking-normal font-serif italic ml-1.5">
-                      · {days} {days === 1 ? "day" : "days"} away
+                      {"\n"}
                     </span>
                   )}
                 </span>
