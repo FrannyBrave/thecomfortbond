@@ -555,7 +555,7 @@ const FamilyVisits = () => {
                       $27
                     </span>
                     <span className="font-sans text-[11px] uppercase tracking-[0.2em] !text-sand font-semibold">
-                      One-time · Instant download
+                      One-time · Instant download · iPad/Tablet friendly
                     </span>
                   </div>
 
