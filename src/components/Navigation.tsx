@@ -94,14 +94,16 @@ export const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => navigate("/blueprint")}
-              className="border-terracotta text-terracotta hover:bg-terracotta hover:text-cream font-semibold"
-            >
-              Free Blueprint
-            </Button>
+            {!isMothersDayLanding && (
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => navigate("/blueprint")}
+                className="border-terracotta text-terracotta hover:bg-terracotta hover:text-cream font-semibold"
+              >
+                Free Blueprint
+              </Button>
+            )}
             <Button variant="cta" size="lg" onClick={() => navigate("/kits")}>
               Shop Now
             </Button>
