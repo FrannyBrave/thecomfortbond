@@ -67,8 +67,10 @@ export const Navigation = () => {
               { label: "", href: "#faq" },
               { label: "", href: "/resources" },
               { label: "", href: "/family-visits" },
-              { label: "Free Sampler", href: "/free-sampler" },
-              { label: "Blueprint Pro", href: "/blueprint-pro" },
+              ...(isMothersDayLanding ? [] : [
+                { label: "Free Sampler", href: "/free-sampler" },
+                { label: "Blueprint Pro", href: "/blueprint-pro" },
+              ]),
             ].map((link) => (
               <button
                 key={link.href}
