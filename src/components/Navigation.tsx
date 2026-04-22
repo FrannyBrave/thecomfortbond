@@ -10,6 +10,7 @@ export const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const isMothersDayLanding = location.pathname === "/family-visits";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,8 +67,10 @@ export const Navigation = () => {
               { label: "", href: "#faq" },
               { label: "", href: "/resources" },
               { label: "", href: "/family-visits" },
-              { label: "Free Sampler", href: "/free-sampler" },
-              { label: "Blueprint Pro", href: "/blueprint-pro" },
+              ...(isMothersDayLanding ? [] : [
+                { label: "Free Sampler", href: "/free-sampler" },
+                { label: "Blueprint Pro", href: "/blueprint-pro" },
+              ]),
             ].map((link) => (
               <button
                 key={link.href}
@@ -91,14 +94,16 @@ export const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => navigate("/blueprint")}
-              className="border-terracotta text-terracotta hover:bg-terracotta hover:text-cream font-semibold"
-            >
-              Free Blueprint
-            </Button>
+            {!isMothersDayLanding && (
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => navigate("/blueprint")}
+                className="border-terracotta text-terracotta hover:bg-terracotta hover:text-cream font-semibold"
+              >
+                Free Blueprint
+              </Button>
+            )}
             <Button variant="cta" size="lg" onClick={() => navigate("/kits")}>
               Shop Now
             </Button>
@@ -130,8 +135,10 @@ export const Navigation = () => {
                 { label: "", href: "#faq" },
                 { label: "", href: "/resources" },
                 { label: "", href: "/family-visits" },
-                { label: "Free Sampler", href: "/free-sampler" },
-                { label: "Blueprint Pro", href: "/blueprint-pro" },
+                ...(isMothersDayLanding ? [] : [
+                  { label: "Free Sampler", href: "/free-sampler" },
+                  { label: "Blueprint Pro", href: "/blueprint-pro" },
+                ]),
               ].map((link) => (
                 <button
                   key={link.href}
@@ -157,16 +164,18 @@ export const Navigation = () => {
                   {link.label}
                 </button>
               ))}
-              <div className="pt-2 px-2">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full border-terracotta text-terracotta hover:bg-terracotta hover:text-cream font-semibold mb-2"
-                  onClick={() => { navigate("/blueprint"); setIsMobileMenuOpen(false); }}
-                >
-                  Free Blueprint
-                </Button>
-              </div>
+              {!isMothersDayLanding && (
+                <div className="pt-2 px-2">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="w-full border-terracotta text-terracotta hover:bg-terracotta hover:text-cream font-semibold mb-2"
+                    onClick={() => { navigate("/blueprint"); setIsMobileMenuOpen(false); }}
+                  >
+                    Free Blueprint
+                  </Button>
+                </div>
+              )}
               <div className="pt-0 px-2">
                 <Button variant="cta" size="lg" className="w-full" onClick={() => { setIsMobileMenuOpen(false); navigate("/kits"); }}>
                   Shop Now
