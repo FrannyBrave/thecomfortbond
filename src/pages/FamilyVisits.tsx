@@ -172,7 +172,7 @@ const FamilyVisits = () => {
                   </div>
                   <span aria-hidden="true" className="h-3 w-px bg-cream/25" />
                   <span className="font-sans text-[12px] text-cream tracking-[0.04em]">
-                    Trusted by <span className="font-semibold">2,400+</span> families
+                    For daughters and sons of aging parents.
                   </span>
                 </div>
               </div>
