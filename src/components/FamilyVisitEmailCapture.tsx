@@ -106,16 +106,16 @@ export const FamilyVisitEmailCapture = ({
   }
 
   const inputClass = isDark
-    ? "flex-1 min-w-0 h-14 px-4 rounded-md border-[1.5px] border-cream/30 bg-cream/10 text-cream placeholder:text-cream/60 font-sans text-sm focus:outline-none focus:border-cream focus:ring-0 transition disabled:opacity-60"
-    : "flex-1 min-w-0 h-14 px-4 rounded-md border-[1.5px] border-[#C86552]/40 bg-background text-forest placeholder:text-[#8C8579] font-sans text-sm focus:outline-none focus:border-[#C86552] focus:ring-0 transition disabled:opacity-60";
+    ? "w-full h-16 px-5 rounded-md border-[1.5px] border-cream/30 bg-cream/10 text-cream placeholder:text-cream/60 font-sans text-base focus:outline-none focus:border-cream focus:shadow-[0_0_0_4px_rgba(253,247,235,0.15)] focus:ring-0 transition disabled:opacity-60"
+    : "w-full h-16 px-5 rounded-md border-[1.5px] border-[#C86552]/40 bg-background text-forest placeholder:text-[#8C8579] font-sans text-base focus:outline-none focus:border-[#C86552] focus:shadow-[0_0_0_4px_rgba(200,101,82,0.12)] focus:ring-0 transition disabled:opacity-60";
 
   const buttonClass = isDark
-    ? "h-14 px-5 rounded-md bg-terracotta text-cream font-sans font-medium text-sm whitespace-nowrap hover:bg-[#B86A4D] active:scale-[0.98] transition disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_6px_20px_-6px_rgba(198,123,92,0.55)]"
-    : "h-14 px-5 rounded-md bg-forest text-cream font-sans font-medium text-sm whitespace-nowrap hover:bg-forest/90 active:scale-[0.98] transition disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_6px_20px_-6px_rgba(45,74,62,0.45)]";
+    ? "w-full h-16 px-5 rounded-md bg-terracotta text-cream font-sans font-medium text-base whitespace-nowrap hover:bg-[#B86A4D] active:scale-[0.98] transition disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_6px_20px_-6px_rgba(198,123,92,0.55)]"
+    : "w-full h-16 px-5 rounded-md bg-forest text-cream font-sans font-medium text-base whitespace-nowrap hover:bg-forest/90 active:scale-[0.98] transition disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_6px_20px_-6px_rgba(45,74,62,0.45)]";
 
   return (
     <form onSubmit={handleSubmit} noValidate className="w-full">
-      <div className="flex flex-col sm:flex-row gap-2">
+      <div className="flex flex-col gap-3">
         <label htmlFor={`fv-email-${source}`} className="sr-only">
           Email address
         </label>
