@@ -5,6 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Button } from "@/components/ui/button";
+import { openPaddleCheckout } from "@/lib/paddle";
 import heroImage from "@/assets/family-visits-hero.jpg";
 
 import kitImage from "@/assets/family-visits-kits.png";
