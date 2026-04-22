@@ -449,7 +449,7 @@ const FamilyVisits = () => {
                   quote:
                     "I sat down with the Nostalgia Kit and for the first time in months, my mom looked at me — really looked at me — and smiled. We talked for almost an hour.",
                   name: "Ashley G.",
-                  role: "Daughter & family caregiver",
+                  role: "DAUGHTER",
                 },
                 {
                   quote:
