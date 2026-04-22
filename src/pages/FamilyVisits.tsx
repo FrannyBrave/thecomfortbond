@@ -564,7 +564,7 @@ const FamilyVisits = () => {
                     {[
                       { label: "Instant download", icon: "♡" },
                       { label: "Print at home", icon: "✦" },
-                      { label: "Memory-care safe", icon: "✿" },
+                      { label: "iPad/Tablet friendly", icon: "▭" },
                     ].map((item, i) => (
                       <div key={i} className="flex flex-col items-center gap-1.5">
                         <span aria-hidden="true" className="!text-sand text-base">{item.icon}</span>
