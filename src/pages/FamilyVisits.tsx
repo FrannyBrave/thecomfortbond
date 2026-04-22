@@ -143,13 +143,8 @@ const FamilyVisits = () => {
             >
               {/* Mother's Day countdown strip — editorial, two-line layout with breathing room */}
               <div className="flex justify-center sm:justify-start">
-                <div className="inline-flex flex-col items-center sm:items-start gap-1.5 rounded-2xl bg-gradient-to-r from-terracotta/10 via-terracotta/5 to-transparent px-5 py-3 ring-1 ring-terracotta/20">
-                  <span className="font-sans text-[10px] uppercase tracking-[0.32em] text-terracotta/80 inline-flex items-center gap-2">
-                    <span aria-hidden="true" className="inline-block w-5 h-px bg-terracotta/40" />
-                    <span aria-hidden="true">🌸</span>
-                    Mother's Day is coming
-                    <span aria-hidden="true" className="inline-block w-5 h-px bg-terracotta/40" />
-                  </span>
+                <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-terracotta/10 via-terracotta/5 to-transparent px-5 py-2 ring-1 ring-terracotta/20">
+                  <span aria-hidden="true">🌸</span>
                   <span className="font-serif text-[15px] sm:text-[16px] text-forest leading-snug">
                     {days > 0 ? (
                       <>
