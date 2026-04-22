@@ -220,28 +220,20 @@ const FamilyVisits = () => {
                 </p>
               </div>
 
-              {/* Single primary CTA on mobile; dual on desktop */}
-              <div className="mt-7 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <Button asChild variant="cta-poppy" size="xl" className="w-full sm:w-auto">
-                  <a href="#two-paths">
-                    Start with the Free Guide
-                  </a>
-                </Button>
-                <Button asChild variant="cta-outline" size="xl" className="hidden sm:inline-flex">
-                  <a href="#mothers-day-kit">See the Mother's Day Kit</a>
-                </Button>
+              {/* Hero email capture — replaces the previous CTA buttons.
+                  Delivers the free guide via ConvertKit incentive email. */}
+              <div id="hero-capture" className="mt-7 md:mt-10 max-w-xl scroll-mt-24">
+                <FamilyVisitEmailCapture variant="light" source="hero" />
               </div>
 
-              {/* Secondary action as quiet text link on mobile */}
+              {/* Soft secondary — for paid-intent visitors who'd rather skip the form */}
               <a
-                href="#path-two"
-                className="sm:hidden mt-4 inline-block font-sans text-sm text-forest/70 underline underline-offset-4 decoration-terracotta/40 hover:text-terracotta transition-colors"
+                href="#mothers-day-kit"
+                className="mt-5 inline-flex items-center gap-1.5 font-sans text-sm text-forest/70 hover:text-terracotta transition-colors underline underline-offset-4 decoration-terracotta/40"
               >
-                or see the full Mother's Day Kit →
+                or see the full Mother's Day Kit
+                <span aria-hidden="true">→</span>
               </a>
-              <p className="text-muted-foreground text-xs mt-5 md:mt-6 tracking-wide">
-                Instant access · No credit card · Print at home
-              </p>
             </motion.div>
 
             {/* RIGHT — image (5 cols) framed — appears SECOND on mobile */}
