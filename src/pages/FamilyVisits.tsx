@@ -72,9 +72,9 @@ const FamilyVisits = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   useEffect(() => {
-    document.title = "Make Your Next Visit Meaningful | The Comfort Bond";
+    document.title = "Mother's Day Ideas for Elderly Mom | The Comfort Bond™";
     const desc =
-      "Gentle, guided tools that turn quiet visits with an aging parent into moments of real connection — even when memory is fading.";
+      "Not sure what to do or say this Mother's Day? Simple, meaningful ways to connect with your mom — even through memory loss, dementia, or quiet moments. Free guide.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
