@@ -166,18 +166,23 @@ const FamilyVisits = () => {
                 </div>
               </div>
 
-              {/* Social proof badge — bold forest pill, first trust signal after the seasonal eyebrow */}
+              {/* Social proof badge — refined editorial line, gold accent on cream */}
               <div className="mt-6 flex justify-center sm:justify-start">
-                <div className="inline-flex items-center gap-2.5 rounded-full bg-forest px-4 py-1 shadow-[0_6px_20px_-8px_rgba(45,74,62,0.45)] ring-1 ring-forest/20">
+                <div className="inline-flex items-center gap-3">
                   <span
                     aria-hidden="true"
-                    className="font-serif text-gold text-[13px] tracking-[0.35em] leading-none drop-shadow-[0_1px_0_rgba(0,0,0,0.15)]"
+                    className="text-gold text-[10px] tracking-[0.4em] leading-none"
                   >
-                    ✦ ✦ ✦
+                    ✦
                   </span>
-                  <span aria-hidden="true" className="h-3 w-px bg-cream/25" />
-                  <span className="font-sans text-[12px] text-cream tracking-[0.04em]">
-                    For daughters and sons who don't know what to say anymore.
+                  <span className="font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.18em] text-forest/80">
+                    For daughters and sons who don't know what to say anymore
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="text-gold text-[10px] tracking-[0.4em] leading-none"
+                  >
+                    ✦
                   </span>
                 </div>
               </div>
