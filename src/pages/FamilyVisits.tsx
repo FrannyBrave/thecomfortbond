@@ -394,7 +394,9 @@ const FamilyVisits = () => {
                       Get the Full Mother's Day Kit
                     </Button>
                     <Button asChild size="lg" className="bg-transparent border-2 border-sand text-sand hover:bg-sand hover:text-forest active:scale-[0.98]">
-                      <Link to="/kits">Explore other everyday kits</Link>
+                      <Link to="/kits" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        Explore other everyday kits
+                      </Link>
                     </Button>
                   </div>
                 </div>
