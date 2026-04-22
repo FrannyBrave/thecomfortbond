@@ -82,6 +82,27 @@ const FamilyVisits = () => {
       document.head.appendChild(meta);
     }
     meta.setAttribute("content", desc);
+
+    // Open Graph tags for social sharing
+    const ogTags: Array<[string, string]> = [
+      ["og:title", "Make This Mother's Day Meaningful | The Comfort Bond™"],
+      [
+        "og:description",
+        "If you're not sure what to say this Mother's Day, this helps. Simple, meaningful ways to connect with your mom — even in quiet moments.",
+      ],
+      ["og:image", "https://thecomfortbond.com/og-family-visits.png"],
+      ["og:type", "website"],
+      ["og:url", "https://thecomfortbond.com/family-visits"],
+    ];
+    ogTags.forEach(([property, content]) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("property", property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    });
   }, []);
 
   const faqs = [
