@@ -271,9 +271,9 @@ const FamilyVisits = () => {
 
               <ul className="mt-10 space-y-6 text-left max-w-md mx-auto">
                 {[
-                  "Conversation starter cards",
-                  "Visual spark cards",
-                  "Word link game",
+                  "A 7-Day Preparation Path: Short, 10-minute daily practices to help you emotionally prepare and leave caregiver guilt behind.",
+                  "Sensory Connection Strategies: How to use familiar music and meaningful objects to reach her when conversation is hard.",
+                  "The \"Presence Practice\" Framework: A calm, pressure-free routine for the first two minutes of your visit to eliminate anxiety.",
                 ].map((item, i) => (
                   <li key={i} className="flex gap-5 items-baseline">
                     <span className="font-serif italic text-terracotta text-2xl leading-none flex-shrink-0 w-6">
