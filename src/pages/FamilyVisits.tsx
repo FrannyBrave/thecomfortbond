@@ -156,17 +156,12 @@ const FamilyVisits = () => {
               {/* Social proof badge — bold forest pill, first trust signal after the seasonal eyebrow */}
               <div className="mt-5 flex justify-center sm:justify-start">
                 <div className="inline-flex items-center gap-2.5 rounded-full bg-forest px-4 py-2 shadow-[0_6px_20px_-8px_rgba(45,74,62,0.45)] ring-1 ring-forest/20">
-                  <div className="flex items-center gap-[2px]" aria-hidden="true">
-                    {[0, 1, 2, 3, 4].map((i) => (
-                      <svg
-                        key={i}
-                        className="w-3.5 h-3.5 text-gold fill-current drop-shadow-[0_1px_0_rgba(0,0,0,0.15)]"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.79L10 14.77l-5.2 2.74.99-5.79L1.58 7.62l5.82-.85L10 1.5z" />
-                      </svg>
-                    ))}
-                  </div>
+                  <span
+                    aria-hidden="true"
+                    className="font-serif text-gold text-[13px] tracking-[0.35em] leading-none drop-shadow-[0_1px_0_rgba(0,0,0,0.15)]"
+                  >
+                    ✦ ✦ ✦
+                  </span>
                   <span aria-hidden="true" className="h-3 w-px bg-cream/25" />
                   <span className="font-sans text-[12px] text-cream tracking-[0.04em]">
                     For daughters and sons of aging parents.
