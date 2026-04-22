@@ -163,7 +163,7 @@ export const FamilyVisitEmailCapture = ({
       )}
       <p
         className={`mt-3 text-[11px] font-sans font-semibold tracking-wide text-center ${
-          isDark ? "text-cream/60" : "text-muted-foreground"
+          isDark ? "text-cream" : "text-muted-foreground"
         }`}
       >
         Free PDF · Sent straight to your inbox · Unsubscribe anytime
