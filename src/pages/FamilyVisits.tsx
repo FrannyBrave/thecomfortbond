@@ -184,7 +184,7 @@ const FamilyVisits = () => {
               </div>
 
               {/* Mobile-first short headline; longer poetic version on desktop */}
-              <h1 className="mt-5 font-serif text-forest leading-[1.05] tracking-tight">
+              <h1 className="mt-5 font-serif text-forest leading-[0.95] tracking-tight">
                 {/* Mobile headline */}
                 <span className="block lg:hidden text-[2.25rem] sm:text-[2.75rem]">
                   You sit beside her.
