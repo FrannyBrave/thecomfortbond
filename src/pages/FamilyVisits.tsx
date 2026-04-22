@@ -97,10 +97,6 @@ const FamilyVisits = () => {
       q: "Is this a digital download or a physical product?",
       a: "Both items are instant digital downloads (PDF). You print at home on regular paper — no special supplies needed. Most families print on cardstock for the cards, but plain paper works beautifully too.",
     },
-    {
-      q: "What if it doesn't feel right for my family?",
-      a: "Email me at francesca@thecomfortbond.com within 30 days and I'll refund you, no questions. I'd rather you keep the kit and try it once before you decide — even one card, one song, one quiet moment is often enough.",
-    },
   ];
 
   return (
@@ -428,7 +424,7 @@ const FamilyVisits = () => {
                     Get the Full Kit · $27
                   </Button>
                   <p className="text-cream/60 text-[11px] mt-3 tracking-wide text-center">
-                    Instant download · 30-day refund · Print at home
+                    Instant download · Print at home
                   </p>
                 </div>
               </motion.div>
@@ -573,7 +569,7 @@ const FamilyVisits = () => {
                   {/* Reassurance row — three small trust signals */}
                   <div className="grid grid-cols-3 gap-3 mb-7 text-center">
                     {[
-                      { label: "30-day refund", icon: "♡" },
+                      { label: "Instant download", icon: "♡" },
                       { label: "Print at home", icon: "✦" },
                       { label: "Memory-care safe", icon: "✿" },
                     ].map((item, i) => (
@@ -603,33 +599,6 @@ const FamilyVisits = () => {
                 </div>
               </motion.article>
             </div>
-          </div>
-        </section>
-
-        {/* SECTION — A NOTE FROM FRANCESCA (founder warmth — humanizes the brand right before FAQ) */}
-        <section className="px-6 py-16 md:py-32">
-          <div className="max-w-2xl mx-auto text-center">
-            <motion.div {...fadeUp}>
-              <Eyebrow>A note from Francesca</Eyebrow>
-              <div className="mt-10 space-y-6 font-serif text-forest/85 text-lg md:text-xl leading-[1.75] font-light">
-                <p>
-                  I made these tools after my own mother started slipping away
-                  from me. I'd drive home and cry because I didn't know how to
-                  reach her anymore.
-                </p>
-                <p>
-                  What I learned — slowly, painfully — is that connection
-                  doesn't require memory. It requires presence, gentleness,
-                  and a few quiet things to hold between you.
-                </p>
-                <p className="font-serif italic text-terracotta pt-2">
-                  This kit is what I wish I'd had on Mother's Day, four years ago.
-                </p>
-              </div>
-              <p className="mt-10 font-sans text-[11px] uppercase tracking-[0.28em] text-forest/50">
-                — Francesca, founder
-              </p>
-            </motion.div>
           </div>
         </section>
 
