@@ -80,22 +80,30 @@ export const FamilyVisitEmailCapture = ({
       <div
         className={
           isDark
-            ? "rounded-md border border-cream/25 bg-cream/10 px-5 py-4 text-center"
-            : "rounded-md border border-forest/15 bg-cream-dark/50 px-5 py-4 text-center"
+            ? "rounded-md border-[1.5px] border-cream/30 bg-cream/10 px-7 py-9 md:py-10 text-center animate-in fade-in slide-in-from-bottom-2 duration-300"
+            : "rounded-md border-[1.5px] border-[#C86552] bg-[#EFE6D3] px-7 py-9 md:py-10 text-center animate-in fade-in slide-in-from-bottom-2 duration-300"
         }
         role="status"
         aria-live="polite"
       >
-        <p
-          className={`font-serif text-base md:text-lg ${
-            isDark ? "text-cream" : "text-forest"
-          } mb-1`}
+        <div
+          className={`font-serif text-[26px] md:text-[28px] leading-none mb-3 ${
+            isDark ? "text-cream" : "text-[#C86552]"
+          }`}
+          aria-hidden="true"
         >
-          ✓ Check your inbox
+          ✓
+        </div>
+        <p
+          className={`font-serif text-[22px] md:text-[26px] leading-tight ${
+            isDark ? "text-cream" : "text-forest"
+          } mb-3`}
+        >
+          Check your inbox
         </p>
         <p
-          className={`font-sans text-xs md:text-sm leading-relaxed ${
-            isDark ? "text-cream/80" : "text-foreground/70"
+          className={`font-sans text-sm md:text-base leading-relaxed ${
+            isDark ? "text-cream/80" : "text-foreground/75"
           }`}
         >
           We just emailed you the link to download your free Mother's Day Visit
