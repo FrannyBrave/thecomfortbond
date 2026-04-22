@@ -95,7 +95,7 @@ const FamilyVisits = () => {
     },
     {
       q: "Is this a digital download or a physical product?",
-      a: "Both items are instant digital downloads (PDF). You print at home on regular paper — no special supplies needed. Most families print on cardstock for the cards, but plain paper works beautifully too.",
+      a: "Both items are instant digital downloads. The Free 7-Day Plan is a single PDF file, while the full Mother's Day Connection Kit is delivered as a .zip file containing all 5 premium PDFs.\n\nYou can print everything at home on standard 8.5x11\" paper—no special supplies needed. For the Conversation and Visual Spark cards, we recommend printing on heavy cream cardstock for a beautiful, lasting feel.\n\nPrefer not to print? The guides and visual cards are perfectly optimized to offer a beautiful, crisp experience when viewed directly on an iPad or tablet. You can easily save the files and bring your device right into the room with you.",
     },
   ];
 
