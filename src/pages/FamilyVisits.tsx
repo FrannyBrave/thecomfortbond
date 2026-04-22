@@ -371,10 +371,7 @@ const FamilyVisits = () => {
                   {/* Price anchoring */}
                   <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1 mb-6 pb-6 border-b border-cream/20">
                     <span className="font-serif !text-cream text-3xl md:text-[2.25rem] leading-none">
-                      $37
-                    </span>
-                    <span className="font-sans text-sm !text-cream/60 line-through">
-                      $47 value
+                      $27
                     </span>
                     <span className="font-sans text-[11px] uppercase tracking-[0.2em] !text-sand font-semibold">
                       Special Mother's Day Price
