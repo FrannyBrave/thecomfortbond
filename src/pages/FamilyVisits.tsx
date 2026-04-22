@@ -219,7 +219,7 @@ const FamilyVisits = () => {
 
               {/* Secondary action as quiet text link on mobile */}
               <a
-                href="#two-paths"
+                href="#mothers-day-kit"
                 className="sm:hidden mt-4 inline-block font-sans text-sm text-forest/70 underline underline-offset-4 decoration-terracotta/40 hover:text-terracotta transition-colors"
               >
                 or see the full Mother's Day Kit →
