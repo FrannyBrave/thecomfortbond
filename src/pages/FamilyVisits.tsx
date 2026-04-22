@@ -147,7 +147,7 @@ const FamilyVisits = () => {
                   <span className="font-sans text-[10px] uppercase tracking-[0.32em] text-terracotta/80 inline-flex items-center gap-2">
                     <span aria-hidden="true" className="inline-block w-5 h-px bg-terracotta/40" />
                     <span aria-hidden="true">🌸</span>
-                    Mother's Day Countdown
+                    Mother's Day is coming
                     <span aria-hidden="true" className="inline-block w-5 h-px bg-terracotta/40" />
                   </span>
                   <span className="font-serif text-[15px] sm:text-[16px] text-forest leading-snug">
@@ -200,9 +200,8 @@ const FamilyVisits = () => {
               <div className="mt-6 md:mt-8 flex items-start gap-5 max-w-xl">
                 <span className="mt-3 hidden md:block w-10 h-px bg-terracotta flex-shrink-0" />
                 <p className="text-foreground/75 text-base md:text-xl leading-[1.65] md:leading-[1.7] font-light">
-                  A gentler way to be with her this Mother's Day — guided tools
-                  that turn quiet visits into moments of real connection, even
-                  when memory is fading.
+                  A gentler way to be with her this Mother's Day. Guided tools
+                  for visits when words feel hard — even when memory is fading.
                 </p>
               </div>
 
