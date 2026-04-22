@@ -166,24 +166,34 @@ const FamilyVisits = () => {
                 </div>
               </div>
 
-              {/* Social proof badge — refined editorial line, gold accent on cream */}
+              {/* Social proof badge — editorial standfirst framed by terracotta hairlines */}
               <div className="mt-6 flex justify-center sm:justify-start">
-                <div className="inline-flex items-center gap-3">
+                <div className="inline-flex flex-col items-center sm:items-start gap-2 py-3">
                   <span
                     aria-hidden="true"
-                    className="text-gold text-[10px] tracking-[0.4em] leading-none"
-                  >
-                    ✦
-                  </span>
-                  <span className="font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.18em] text-forest/80">
-                    For daughters and sons who don't know what to say anymore
-                  </span>
+                    className="block h-px w-16 bg-terracotta/50"
+                  />
+                  <div className="inline-flex items-center gap-3 px-1">
+                    <span
+                      aria-hidden="true"
+                      className="text-gold text-[10px] tracking-[0.4em] leading-none"
+                    >
+                      ✦
+                    </span>
+                    <span className="font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.18em] text-forest/80">
+                      For daughters and sons who don't know what to say anymore
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="text-gold text-[10px] tracking-[0.4em] leading-none"
+                    >
+                      ✦
+                    </span>
+                  </div>
                   <span
                     aria-hidden="true"
-                    className="text-gold text-[10px] tracking-[0.4em] leading-none"
-                  >
-                    ✦
-                  </span>
+                    className="block h-px w-16 bg-terracotta/50"
+                  />
                 </div>
               </div>
 
