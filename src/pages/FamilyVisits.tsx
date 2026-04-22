@@ -219,7 +219,7 @@ const FamilyVisits = () => {
 
               {/* Secondary action as quiet text link on mobile */}
               <a
-                href="#mothers-day-kit"
+                href="#path-two"
                 className="sm:hidden mt-4 inline-block font-sans text-sm text-forest/70 underline underline-offset-4 decoration-terracotta/40 hover:text-terracotta transition-colors"
               >
                 or see the full Mother's Day Kit →
@@ -384,9 +384,10 @@ const FamilyVisits = () => {
 
               {/* Path B — Paid Kit (recommended) */}
               <motion.div
+                id="path-two"
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: 0.1 }}
-                className="relative bg-forest rounded-sm p-8 md:p-10 ring-1 ring-forest shadow-[0_20px_60px_-20px_rgba(45,74,62,0.4)] flex flex-col text-cream"
+                className="relative bg-forest rounded-sm p-8 md:p-10 ring-1 ring-forest shadow-[0_20px_60px_-20px_rgba(45,74,62,0.4)] flex flex-col text-cream scroll-mt-24"
               >
                 {/* Recommended ribbon */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
