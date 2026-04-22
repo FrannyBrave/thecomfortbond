@@ -168,12 +168,12 @@ const FamilyVisits = () => {
 
               {/* Social proof badge — editorial standfirst framed by terracotta hairlines */}
               <div className="mt-6 flex justify-center sm:justify-start">
-                <div className="inline-flex flex-col items-center sm:items-start gap-2 py-3">
+                <div className="inline-flex flex-col items-stretch gap-2.5 py-3">
                   <span
                     aria-hidden="true"
-                    className="block h-px w-16 bg-terracotta/50"
+                    className="block h-[1.5px] w-full bg-terracotta"
                   />
-                  <div className="inline-flex items-center gap-3 px-1">
+                  <div className="inline-flex items-center justify-center gap-3 px-1">
                     <span
                       aria-hidden="true"
                       className="text-gold text-[10px] tracking-[0.4em] leading-none"
@@ -192,7 +192,7 @@ const FamilyVisits = () => {
                   </div>
                   <span
                     aria-hidden="true"
-                    className="block h-px w-16 bg-terracotta/50"
+                    className="block h-[1.5px] w-full bg-terracotta"
                   />
                 </div>
               </div>
