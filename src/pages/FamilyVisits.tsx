@@ -127,7 +127,7 @@ const FamilyVisits = () => {
                 </span>
                 {/* Desktop headline (original) */}
                 <span className="hidden lg:block text-[4.25rem]">
-                  You sit down beside them
+                  You sit down beside her
                   <span className="italic text-forest/90"> …and you don't know what to say.</span>
                 </span>
               </h1>
