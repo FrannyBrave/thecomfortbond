@@ -27,6 +27,8 @@ export const PRICE_REDIRECTS: Record<string, string> = {
   pri_01kpafxq9xrqg0qhqfttzdjswf: "/thank-you/heart-of-the-home-kit",
   // The 5-Kit Bundle (Complete Engagement System) — routes to a hidden access hub
   pri_01kpafqz2tc4pfc262j1dnh531: "/bundle-access",
+  // The Mother's Day Connection Kit
+  pri_01kpsqv8dq9e08sjnpgpzs0a7v: "/thank-you/mothers-day-kit",
 };
 
 declare global {
