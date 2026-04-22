@@ -766,7 +766,7 @@ const FamilyVisits = () => {
       </main>
 
       <FooterSection />
-      <StickyMobileCTA href="#two-paths" label="Choose your starting point" />
+      <StickyMobileCTA href="#hero-capture" label="Get the Free Visit Guide" />
     </div>
   );
 };
