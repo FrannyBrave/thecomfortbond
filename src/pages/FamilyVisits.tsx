@@ -423,7 +423,7 @@ const FamilyVisits = () => {
                     Get the Full Kit · $27
                   </Button>
                   <p className="text-cream/60 text-[11px] mt-3 tracking-wide text-center">
-                    Instant download · Print at home
+                    Instant download · printable · ipad/tablet friendly
                   </p>
                 </div>
               </motion.div>
