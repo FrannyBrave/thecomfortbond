@@ -270,14 +270,6 @@ const FamilyVisits = () => {
           </div>
         </section>
 
-        {/* hairline divider */}
-        <div className="px-6 lg:px-12">
-          <div className="max-w-7xl mx-auto flex items-center gap-6">
-            <span className="h-px flex-1 bg-forest/15" />
-            <Ornament className="w-5 h-5 text-forest/40" />
-            <span className="h-px flex-1 bg-forest/15" />
-          </div>
-        </div>
 
         {/* SECTION 2 — RELATABLE PAIN (intimate column with hairlines) */}
         <section className="px-6 py-14 md:py-32 bg-cream-dark/30">
