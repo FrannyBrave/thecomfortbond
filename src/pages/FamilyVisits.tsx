@@ -389,14 +389,12 @@ const FamilyVisits = () => {
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild variant="cta-poppy" size="lg">
-                      <a
-                        href="https://thecomfortbond.gumroad.com/l/mothers-day-connection-kit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Get the Full Mother's Day Kit
-                      </a>
+                    <Button
+                      variant="cta-poppy"
+                      size="lg"
+                      onClick={() => openPaddleCheckout("pri_01kpsqv8dq9e08sjnpgpzs0a7v")}
+                    >
+                      Get the Full Mother's Day Kit
                     </Button>
                     <Button asChild size="lg" className="bg-transparent border-2 border-sand text-sand hover:bg-sand hover:text-forest active:scale-[0.98]">
                       <Link to="/kits">Explore other everyday kits</Link>
