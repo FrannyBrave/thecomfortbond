@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 
-// TODO: Replace with the final hosted ZIP URL when provided.
-const ZIP_DOWNLOAD_URL = "/downloads/mothers-day-connection-kit.zip";
-const ZIP_FILENAME = "mothers-day-connection-kit.zip";
+const ZIP_DOWNLOAD_URL = "/downloads/The-Mothers-Day-Connection-Kit.zip";
+const ZIP_FILENAME = "The-Mothers-Day-Connection-Kit.zip";
 
 const DownloadIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
