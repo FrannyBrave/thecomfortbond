@@ -141,20 +141,17 @@ const FamilyVisits = () => {
               {...fadeUp}
               className="lg:col-span-7 order-1 lg:order-1"
             >
-              {/* Mother's Day seasonal eyebrow with gentle live counter */}
-              <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta inline-flex items-center gap-3 justify-center">
-                <span aria-hidden="true" className="inline-block w-8 h-px bg-terracotta opacity-60" />
-                <span className="inline-flex items-center gap-1.5">
+              {/* Mother's Day countdown strip */}
+              <div className="flex justify-center sm:justify-start">
+                <div className="inline-flex items-center gap-2 rounded-full bg-terracotta/10 px-4 py-1.5 ring-1 ring-terracotta/25">
                   <span aria-hidden="true">🌸</span>
-                  Mother's Day · {dateLabel}
-                  {days > 0 && days <= 60 && (
-                    <span className="text-terracotta/70 normal-case tracking-normal font-serif italic ml-1.5">
-                      {"\n"}
-                    </span>
-                  )}
-                </span>
-                <span aria-hidden="true" className="inline-block w-8 h-px bg-terracotta opacity-60" />
-              </span>
+                  <span className="font-sans text-[12px] sm:text-[13px] text-terracotta tracking-[0.04em]">
+                    {days > 0
+                      ? <>Mother's Day is in <span className="font-semibold">{days} {days === 1 ? "day" : "days"}</span> — be ready for the moment.</>
+                      : <>Mother's Day is <span className="font-semibold">today</span> — be ready for the moment.</>}
+                  </span>
+                </div>
+              </div>
 
               {/* Social proof badge — bold forest pill, first trust signal after the seasonal eyebrow */}
               <div className="mt-5 flex justify-center sm:justify-start">
