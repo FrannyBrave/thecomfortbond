@@ -17,7 +17,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         // The Comfort Bond custom variants
         cta: "bg-terracotta text-cream hover:bg-terracotta/90 hover:shadow-lg hover:shadow-terracotta/20 active:scale-[0.98]",
-        "cta-poppy": "bg-[#D75A4A] text-cream hover:bg-[#C24A3B] hover:shadow-lg hover:shadow-[#D75A4A]/25 active:scale-[0.98]",
+        "cta-poppy": "bg-terracotta text-cream hover:bg-terracotta/90 hover:shadow-lg hover:shadow-terracotta/20 active:scale-[0.98]",
         "cta-outline": "border-2 border-terracotta text-terracotta bg-transparent hover:bg-terracotta hover:text-cream active:scale-[0.98]",
         nav: "text-forest hover:text-terracotta bg-transparent font-medium",
         subtle: "bg-cream-dark text-forest hover:bg-sage/30"
