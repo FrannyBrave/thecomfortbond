@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FamilyVisitEmailCapture } from "@/components/FamilyVisitEmailCapture";
 import { Button } from "@/components/ui/button";
 import { openPaddleCheckout } from "@/lib/paddle";
 import heroImage from "@/assets/family-visits-hero.jpg";
@@ -380,19 +381,7 @@ const FamilyVisits = () => {
                   <li className="flex gap-3"><span className="text-terracotta">·</span> The "Presence Practice" framework</li>
                 </ul>
                 <div className="mt-auto">
-                  <Button asChild variant="cta-outline" size="lg" className="w-full">
-                    <a
-                      href="/downloads/The_Mothers_Day_Connection_Plan_v3.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      download
-                    >
-                      Download Free Guide
-                    </a>
-                  </Button>
-                  <p className="text-muted-foreground text-[11px] mt-3 tracking-wide text-center">
-                    Instant PDF · Sent to your inbox
-                  </p>
+                  <FamilyVisitEmailCapture variant="light" source="path-one" />
                 </div>
               </motion.div>
 
@@ -700,17 +689,17 @@ const FamilyVisits = () => {
               <p className="text-cream text-lg md:text-xl mb-12 opacity-80 font-light leading-[1.7]">
                 Start with the free guide. Use it once. See what happens.
               </p>
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-                <Button asChild variant="cta-poppy" size="xl">
-                  <a
-                    href="/downloads/The_Mothers_Day_Connection_Plan_v3.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    download
-                  >
-                    Download the Free Guide
-                  </a>
-                </Button>
+              <div className="max-w-md mx-auto mb-6">
+                <FamilyVisitEmailCapture variant="dark" source="footer-cta" />
+              </div>
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <span aria-hidden="true" className="h-px w-10 bg-cream/25" />
+                <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-cream/55">
+                  or
+                </span>
+                <span aria-hidden="true" className="h-px w-10 bg-cream/25" />
+              </div>
+              <div className="flex justify-center">
                 <Button
                   variant="cta-outline"
                   size="xl"
