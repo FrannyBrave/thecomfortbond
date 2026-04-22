@@ -141,24 +141,28 @@ const FamilyVisits = () => {
               {...fadeUp}
               className="lg:col-span-7 order-1 lg:order-1"
             >
-              {/* Mother's Day countdown strip — editorial, two-line layout with breathing room */}
+              {/* Mother's Day countdown strip — minimal editorial marker */}
               <div className="flex justify-center sm:justify-start">
-                <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-terracotta/10 via-terracotta/5 to-transparent px-5 py-2 ring-1 ring-terracotta/20">
-                  <span aria-hidden="true">🌸</span>
-                  <span className="font-serif text-[15px] sm:text-[16px] text-forest leading-snug">
-                    {days > 0 ? (
-                      <>
-                        <span className="font-semibold text-terracotta">{days}</span>{" "}
-                        {days === 1 ? "day" : "days"} away
-                        <span className="text-forest/60"> · be ready for the moment.</span>
-                      </>
-                    ) : (
-                      <>
-                        <span className="font-semibold text-terracotta">Today</span>
-                        <span className="text-forest/60"> · be present for the moment.</span>
-                      </>
-                    )}
-                  </span>
+                <div className="inline-flex items-baseline gap-3 border-l-2 border-terracotta/50 pl-3">
+                  {days > 0 ? (
+                    <>
+                      <span className="font-serif text-[22px] sm:text-[24px] font-semibold text-terracotta leading-none tabular-nums">
+                        {days}
+                      </span>
+                      <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-forest/70">
+                        {days === 1 ? "day" : "days"} until Mother's Day
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="font-serif text-[22px] sm:text-[24px] font-semibold text-terracotta leading-none">
+                        Today
+                      </span>
+                      <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-forest/70">
+                        Mother's Day · be present
+                      </span>
+                    </>
+                  )}
                 </div>
               </div>
 
