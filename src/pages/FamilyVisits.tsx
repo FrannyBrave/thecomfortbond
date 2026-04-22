@@ -141,20 +141,34 @@ const FamilyVisits = () => {
               {...fadeUp}
               className="lg:col-span-7 order-1 lg:order-1"
             >
-              {/* Mother's Day countdown strip */}
+              {/* Mother's Day countdown strip — editorial, two-line layout with breathing room */}
               <div className="flex justify-center sm:justify-start">
-                <div className="inline-flex items-center gap-2 rounded-full bg-terracotta/10 px-4 py-1.5 ring-1 ring-terracotta/25">
-                  <span aria-hidden="true">🌸</span>
-                  <span className="font-sans text-[12px] sm:text-[13px] text-terracotta tracking-[0.04em]">
-                    {days > 0
-                      ? <>Mother's Day is in <span className="font-semibold">{days} {days === 1 ? "day" : "days"}</span> — be ready for the moment.</>
-                      : <>Mother's Day is <span className="font-semibold">today</span> — be ready for the moment.</>}
+                <div className="inline-flex flex-col items-center sm:items-start gap-1.5 rounded-2xl bg-gradient-to-r from-terracotta/10 via-terracotta/5 to-transparent px-5 py-3 ring-1 ring-terracotta/20">
+                  <span className="font-sans text-[10px] uppercase tracking-[0.32em] text-terracotta/80 inline-flex items-center gap-2">
+                    <span aria-hidden="true" className="inline-block w-5 h-px bg-terracotta/40" />
+                    <span aria-hidden="true">🌸</span>
+                    Mother's Day Countdown
+                    <span aria-hidden="true" className="inline-block w-5 h-px bg-terracotta/40" />
+                  </span>
+                  <span className="font-serif text-[15px] sm:text-[16px] text-forest leading-snug">
+                    {days > 0 ? (
+                      <>
+                        <span className="font-semibold text-terracotta">{days}</span>{" "}
+                        {days === 1 ? "day" : "days"} away
+                        <span className="text-forest/60"> · be ready for the moment.</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="font-semibold text-terracotta">Today</span>
+                        <span className="text-forest/60"> · be present for the moment.</span>
+                      </>
+                    )}
                   </span>
                 </div>
               </div>
 
               {/* Social proof badge — bold forest pill, first trust signal after the seasonal eyebrow */}
-              <div className="mt-5 flex justify-center sm:justify-start">
+              <div className="mt-6 flex justify-center sm:justify-start">
                 <div className="inline-flex items-center gap-2.5 rounded-full bg-forest px-4 py-2 shadow-[0_6px_20px_-8px_rgba(45,74,62,0.45)] ring-1 ring-forest/20">
                   <span
                     aria-hidden="true"
@@ -164,7 +178,7 @@ const FamilyVisits = () => {
                   </span>
                   <span aria-hidden="true" className="h-3 w-px bg-cream/25" />
                   <span className="font-sans text-[12px] text-cream tracking-[0.04em]">
-                    For daughters and sons of aging parents.
+                    For daughters and sons who don't know what to say anymore.
                   </span>
                 </div>
               </div>
