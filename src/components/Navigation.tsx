@@ -55,7 +55,7 @@ export const Navigation = () => {
           >
             <img src={logo} alt="The Comfort Bond" className="h-16 md:h-20 w-auto" />
             <span className="text-xl md:text-2xl font-serif font-semibold text-forest tracking-tight">
-              The Comfort Bond
+              The Comfort Bond<sup className="text-[0.5em] font-sans font-medium ml-0.5 align-super">™</sup>
             </span>
           </a>
 
