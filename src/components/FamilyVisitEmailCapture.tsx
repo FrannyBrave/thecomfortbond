@@ -162,7 +162,7 @@ export const FamilyVisitEmailCapture = ({
         </p>
       )}
       <p
-        className={`mt-3 text-[11px] font-sans tracking-wide text-center ${
+        className={`mt-3 text-[11px] font-sans font-semibold tracking-wide text-center ${
           isDark ? "text-cream/60" : "text-muted-foreground"
         }`}
       >
