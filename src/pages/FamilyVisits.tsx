@@ -169,7 +169,7 @@ const FamilyVisits = () => {
 
               {/* Social proof badge — bold forest pill, first trust signal after the seasonal eyebrow */}
               <div className="mt-6 flex justify-center sm:justify-start">
-                <div className="inline-flex items-center gap-2.5 rounded-full bg-forest px-4 py-2 shadow-[0_6px_20px_-8px_rgba(45,74,62,0.45)] ring-1 ring-forest/20">
+                <div className="inline-flex items-center gap-2.5 rounded-full bg-forest px-4 py-1 shadow-[0_6px_20px_-8px_rgba(45,74,62,0.45)] ring-1 ring-forest/20">
                   <span
                     aria-hidden="true"
                     className="font-serif text-gold text-[13px] tracking-[0.35em] leading-none drop-shadow-[0_1px_0_rgba(0,0,0,0.15)]"
