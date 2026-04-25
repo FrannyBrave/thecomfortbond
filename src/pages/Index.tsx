@@ -530,7 +530,7 @@ const Index = () => {
             <p style={{ fontStyle: "italic" }}>Visiting shouldn't feel this hard.</p>
             <p>The Comfort Bond™ offers ready-to-use engagement kits for senior living, memory care, and families supporting aging parents.</p>
             <p style={{ color: "var(--text-light)", fontStyle: "italic" }}>No adapting. No guesswork. No late-night planning.</p>
-            <p>Open it on your tablet—or print what you need—and walk into your visit ready.</p>
+            <p>Open it on your tablet—or print what you need and walk into your visit ready.</p>
             <p>And bring the focus back where it belongs:</p>
             <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", color: "var(--clay)", fontSize: "1.25em" }}>Connection. Conversation. Presence.</p>
           </div>
