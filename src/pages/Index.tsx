@@ -527,11 +527,9 @@ const Index = () => {
       <section style={{ background: "var(--cream)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div className="about-body" style={{ color: "var(--text-mid)" }}>
-            <p>The Comfort Bond™ is a structured library of ready-to-use engagement kits designed for senior living and memory care.</p>
-            <p style={{ color: "var(--text-light)", fontStyle: "italic" }}>No adapting. No guesswork. No late-night planning.</p>
-            <p>Open the file. Print what you need. Walk into your session ready.</p>
-            <p>And the focus goes back where it belongs:</p>
-            <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", fontWeight: 600, color: "var(--forest-dark)", fontStyle: "italic" }}>Connection. Conversation. Presence.</p>
+            <p>Ready-to-use engagement kits for senior living and memory care.</p>
+            <p style={{ color: "var(--text-light)", fontStyle: "italic" }}>No adapting. No guesswork.</p>
+            <p>Walk into every session prepared—with tools designed for connection, conversation, and presence.</p>
           </div>
         </div>
       </section>
