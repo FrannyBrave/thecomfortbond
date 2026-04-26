@@ -41,41 +41,45 @@ const ThankYouConnectionKit = () => {
             fontWeight: 600,
           }}
         >
-          Your Connection Kit is almost here! 🤍
+          Thank you — your kit is on its way 🤍
         </h1>
 
         <p
-          className="text-[16px] md:text-[18px] max-w-[560px] mx-auto m-0 mb-10"
+          className="text-[16px] md:text-[18px] max-w-[560px] mx-auto m-0 mb-6"
           style={{
             color: "#2D4A3E",
             lineHeight: 1.7,
             fontFamily: "'DM Sans', system-ui, sans-serif",
           }}
         >
-          Thank you so much for your purchase. To ensure your digital files arrive
-          safely, please confirm the email address you used at checkout by entering
-          it below. I will instantly send your secure download link directly to your
-          inbox so you can start preparing for a peaceful, meaningful visit.
+          Your secure download link is being sent to the email address you
+          entered at checkout. It should arrive within the next few minutes.
         </p>
 
-        <a
-          href="https://the-comfort-bond-2.kit.com/bafbbac71d"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block w-full md:w-auto px-10 py-5 rounded-lg text-[17px] md:text-[19px] font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98]"
+        <div
+          className="rounded-xl px-6 py-5 mb-8 text-left max-w-[520px] mx-auto"
           style={{
-            background: "#C67B5C",
-            color: "#FAF7F2",
-            fontFamily: "'DM Sans', system-ui, sans-serif",
-            boxShadow: "0 8px 24px -8px rgba(198,123,92,0.5)",
-            letterSpacing: "0.01em",
+            background: "rgba(198,123,92,0.08)",
+            border: "1px solid rgba(198,123,92,0.18)",
           }}
         >
-          Click Here to Enter Your Email & Get Your Kit →
-        </a>
+          <p
+            className="text-[14px] md:text-[15px] m-0"
+            style={{
+              color: "#2D4A3E",
+              lineHeight: 1.65,
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+            }}
+          >
+            <strong style={{ color: "#C67B5C" }}>Don't see it yet?</strong>{" "}
+            Please check your spam, promotions, or junk folder — and add{" "}
+            <strong>francesca@thecomfortbond.com</strong> to your contacts so
+            future emails land safely in your inbox.
+          </p>
+        </div>
 
         <p
-          className="text-[13px] md:text-[14px] mt-8 m-0 max-w-[480px] mx-auto"
+          className="text-[13px] md:text-[14px] m-0 max-w-[480px] mx-auto"
           style={{
             color: "rgba(45,74,62,0.7)",
             lineHeight: 1.6,
