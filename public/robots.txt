@@ -1,8 +1,24 @@
 User-agent: Googlebot
 Allow: /
+Disallow: /downloads/
+Disallow: /bundle-access
+Disallow: /thank-you
+Disallow: /thank-you/
+Disallow: /thank-you-mothers-day
+Disallow: /blueprint-pdf
+Disallow: /blueprint-pro-pdf
+Disallow: /blueprint-test
 
 User-agent: Bingbot
 Allow: /
+Disallow: /downloads/
+Disallow: /bundle-access
+Disallow: /thank-you
+Disallow: /thank-you/
+Disallow: /thank-you-mothers-day
+Disallow: /blueprint-pdf
+Disallow: /blueprint-pro-pdf
+Disallow: /blueprint-test
 
 User-agent: Twitterbot
 Allow: /
@@ -14,5 +30,11 @@ User-agent: *
 Allow: /
 Disallow: /downloads/
 Disallow: /bundle-access
+Disallow: /thank-you
+Disallow: /thank-you/
+Disallow: /thank-you-mothers-day
+Disallow: /blueprint-pdf
+Disallow: /blueprint-pro-pdf
+Disallow: /blueprint-test
 
 Sitemap: https://thecomfortbond.com/sitemap.xml
