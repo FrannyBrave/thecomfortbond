@@ -146,8 +146,15 @@ const PRICE_SUCCESS_URLS: Record<string, string> = {
 /**
  * Open the Paddle Billing overlay checkout for a single Price ID.
  * Auto-loads + initializes Paddle.js on first call.
+ *
+ * Optional `customer` prefills the checkout email field and is also
+ * forwarded into Paddle `customData` so the values are available on
+ * the resulting transaction (webhook + dashboard).
  */
-export async function openPaddleCheckout(priceId: string): Promise<void> {
+export async function openPaddleCheckout(
+  priceId: string,
+  customer?: { email?: string; firstName?: string }
+): Promise<void> {
   // Pinterest 'checkout' event — fires the moment the user intentionally
   // initiates a Paddle checkout (button click), before the overlay opens.
   trackPinterestEvent("checkout", {
@@ -158,10 +165,22 @@ export async function openPaddleCheckout(priceId: string): Promise<void> {
     if (!window.Paddle) throw new Error("Paddle not available");
     const discountId = PRICE_DISCOUNTS[priceId];
     const successUrl = PRICE_SUCCESS_URLS[priceId];
+    const email = customer?.email?.trim();
+    const firstName = customer?.firstName?.trim();
+    const hasCustomData = Boolean(email || firstName);
     window.Paddle.Checkout.open({
       items: [{ priceId, quantity: 1 }],
       ...(discountId ? { discountId } : {}),
       ...(successUrl ? { settings: { successUrl } } : {}),
+      ...(email ? { customer: { email } } : {}),
+      ...(hasCustomData
+        ? {
+            customData: {
+              ...(email ? { email } : {}),
+              ...(firstName ? { first_name: firstName } : {}),
+            },
+          }
+        : {}),
     });
   } catch (err) {
     console.error("[Paddle] Failed to open checkout", err);
