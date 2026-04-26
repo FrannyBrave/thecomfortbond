@@ -7,6 +7,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FamilyVisitEmailCapture } from "@/components/FamilyVisitEmailCapture";
 import { Button } from "@/components/ui/button";
 import { openPaddleCheckout } from "@/lib/paddle";
+import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
 import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
 
 import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.png";
