@@ -6,7 +6,6 @@ import { FooterSection } from "@/components/sections/FooterSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FamilyVisitEmailCapture } from "@/components/FamilyVisitEmailCapture";
 import { Button } from "@/components/ui/button";
-import { openPaddleCheckout } from "@/lib/paddle";
 import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
 import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
 
@@ -753,6 +752,11 @@ const FamilyVisits = () => {
 
       <FooterSection />
       <StickyMobileCTA href="#hero-capture" label="Get the Free Visit Guide" />
+      <MothersDayCheckoutModal
+        open={checkoutOpen}
+        onOpenChange={setCheckoutOpen}
+        source={checkoutSource}
+      />
     </div>
   );
 };
