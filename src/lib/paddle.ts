@@ -44,6 +44,8 @@ declare global {
           items: Array<{ priceId: string; quantity?: number }>;
           discountId?: string;
           settings?: Record<string, unknown>;
+          customer?: { email?: string };
+          customData?: Record<string, unknown>;
         }) => void;
       };
     };
