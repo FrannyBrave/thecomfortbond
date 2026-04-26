@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import blueprintHero from "@/assets/blueprint-hero-mockup.png";
-import blueprintCalm from "@/assets/blueprint-monday-calm.png";
+import blueprintHero from "@/assets/stress-free-activity-planning-senior-living-weekly.png";
+import blueprintCalm from "@/assets/senior-living-programming-calendar-blueprint.png";
 import logo from "@/assets/the-comfort-bond-logo.png";
 
 /* ─── Brand tokens ─── */
