@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@/assets/the-comfort-bond-logo.png";
 import balanceWheel from "@/assets/image_35.png";
 
 export default function BlueprintCover() {

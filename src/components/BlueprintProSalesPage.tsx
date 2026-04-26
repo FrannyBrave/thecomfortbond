@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/the-comfort-bond-logo.png";
 import heroMockup from "@/assets/hero-mockup.png";
 import beforeAfter from "@/assets/before-after.png";
 import balanceWheel from "@/assets/balance-wheel.png";

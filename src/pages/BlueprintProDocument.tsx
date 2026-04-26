@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@/assets/the-comfort-bond-logo.png";
 import transitionThemes from "@/assets/image_48.png";
 import transitionResources from "@/assets/image_49.png";
 import closingImage from "@/assets/image_47.png";

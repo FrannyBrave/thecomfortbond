@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import blueprintHero from "@/assets/blueprint-hero-mockup.png";
 import blueprintCalm from "@/assets/blueprint-monday-calm.png";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/the-comfort-bond-logo.png";
 
 /* ─── Brand tokens ─── */
 const c = {

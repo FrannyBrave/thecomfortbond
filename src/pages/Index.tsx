@@ -1,4 +1,4 @@
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/the-comfort-bond-logo.png";
 import mockupNostalgia from "@/assets/mockup-nostalgia.png";
 import mockupHome from "@/assets/mockup-home.png";
 import mockupBingo from "@/assets/mockup-bingo.png";
