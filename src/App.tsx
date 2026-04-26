@@ -21,6 +21,7 @@ import RefundPolicy from "./pages/RefundPolicy";
 import BundleAccess from "./pages/BundleAccess";
 import ThankYou from "./pages/ThankYou";
 import ThankYouMothersDay from "./pages/ThankYouMothersDay";
+import ThankYouConnectionKit from "./pages/ThankYouConnectionKit";
 import FamilyVisits from "./pages/FamilyVisits";
 import MothersDayMemoryCare from "./pages/MothersDayMemoryCare";
 import { useCanonical } from "./hooks/useCanonical";
@@ -62,6 +63,7 @@ function AppRoutes() {
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/bundle-access" element={<BundleAccess />} />
           <Route path="/thank-you" element={<ThankYouMothersDay />} />
+          <Route path="/thank-you-connection-kit" element={<ThankYouConnectionKit />} />
           <Route path="/thank-you/:slug" element={<ThankYou />} />
           <Route path="/family-visits" element={<FamilyVisits />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
