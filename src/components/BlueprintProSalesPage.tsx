@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/the-comfort-bond-logo.png";
 import heroMockup from "@/assets/hero-mockup.png";
 import beforeAfter from "@/assets/before-after.png";
 import balanceWheel from "@/assets/balance-wheel.png";
@@ -169,7 +169,7 @@ export default function BlueprintProSalesPage() {
         }}
       >
         <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.6rem", textDecoration: "none" }}>
-          <img src={logo} alt="The Comfort Bond" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
+          <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
           <span style={{ fontFamily: serif, fontSize: "1.1rem", fontWeight: 600, color: c.forest, letterSpacing: "-0.3px" }}>
             The Comfort Bond&trade;
           </span>

@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/the-comfort-bond-logo.png";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,7 +53,7 @@ export const Navigation = () => {
             className="flex items-center gap-3 py-2 no-underline cursor-pointer"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <img src={logo} alt="The Comfort Bond" className="h-16 md:h-20 w-auto" />
+            <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" className="h-16 md:h-20 w-auto" />
             <span className="text-xl md:text-2xl font-serif font-semibold text-forest tracking-tight">
               The Comfort Bond<sup className="text-[0.5em] font-sans font-medium ml-0.5 align-super">™</sup>
             </span>

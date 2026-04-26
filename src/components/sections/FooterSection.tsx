@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/the-comfort-bond-logo.png";
 
 export const FooterSection = () => {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ export const FooterSection = () => {
           >
             <img
               src={logo}
-              alt="The Comfort Bond"
+              alt="The Comfort Bond logo — dignified engagement activities for senior living"
               className="w-32 md:w-36 h-auto"
             />
           </button>

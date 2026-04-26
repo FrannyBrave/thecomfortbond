@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/the-comfort-bond-logo.png";
 
 const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -25,7 +25,7 @@ const OurStory = () => {
       <header>
         <nav className="tcb-nav">
           <a href="/" className="nav-logo">
-            <img src={logoImg} alt="The Comfort Bond logo" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
+            <img src={logoImg} alt="The Comfort Bond logo — dignified engagement activities for senior living" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
             <div className="nav-brand">
               <span className="nav-brand-name">The Comfort Bond™</span>
               <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>
