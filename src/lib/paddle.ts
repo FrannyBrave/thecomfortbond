@@ -112,8 +112,12 @@ async function initPaddle(): Promise<void> {
         `purchase:${txId}`
       );
 
+      // If this price uses Paddle's native successUrl, let Paddle handle the
+      // redirect — do NOT run our own JS redirect (it would race and win on
+      // the current host, sending users to the wrong domain).
+      const hasSuccessUrl = priceId ? Boolean(PRICE_SUCCESS_URLS[priceId]) : false;
       const target = priceId ? PRICE_REDIRECTS[priceId] : undefined;
-      if (target) {
+      if (target && !hasSuccessUrl) {
         // Brief delay so Paddle can finish its overlay close animation.
         setTimeout(() => {
           window.location.href = target;
