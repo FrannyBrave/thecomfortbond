@@ -1,10 +1,10 @@
 import logoImg from "@/assets/the-comfort-bond-logo.png";
-import mockupNostalgia from "@/assets/mockup-nostalgia.png";
-import mockupHome from "@/assets/mockup-home.png";
-import mockupBingo from "@/assets/mockup-bingo.png";
-import bundleVolume from "@/assets/bundle-volume-flatlay.png";
-import bundleGroup from "@/assets/bundle-group-activity.png";
-import bundleStack from "@/assets/bundle-content-stack.png";
+import mockupNostalgia from "@/assets/nostalgia-activity-kit-for-seniors-memory-care.png";
+import mockupHome from "@/assets/assisted-living-activity-kit-home-comfort-theme.png";
+import mockupBingo from "@/assets/interactive-bingo-activity-kit-for-seniors.png";
+import bundleVolume from "@/assets/senior-living-activity-bundle-programming-tools.png";
+import bundleGroup from "@/assets/group-activities-for-seniors-memory-care-engagement.png";
+import bundleStack from "@/assets/printable-senior-activity-kit-pages-overview.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { openPaddleCheckout } from "@/lib/paddle";
 
