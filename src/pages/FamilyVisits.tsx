@@ -7,9 +7,9 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FamilyVisitEmailCapture } from "@/components/FamilyVisitEmailCapture";
 import { Button } from "@/components/ui/button";
 import { openPaddleCheckout } from "@/lib/paddle";
-import heroImage from "@/assets/family-visits-hero.jpg";
+import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
 
-import kitImage from "@/assets/family-visits-kits.png";
+import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.png";
 import mothersDayHero from "@/assets/blog-mothers-day-memory-care-hero.jpg";
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -247,7 +247,7 @@ const FamilyVisits = () => {
                   <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
                     <img
                       src={heroImage}
-                      alt="An adult daughter in a mustard sweater sits beside her silver-haired mother at a sunlit wooden table, smiling together over a spread of memory conversation cards."
+                      alt="Mother's Day visit idea for an aging parent: adult daughter and her silver-haired mother sharing memory conversation cards from The Comfort Bond Connection Kit at a sunlit wooden table."
                       width={1920}
                       height={1080}
                       className="absolute inset-0 w-full h-full object-cover scale-[1.35] md:scale-[1.25]"
@@ -505,7 +505,7 @@ const FamilyVisits = () => {
                 <div className="aspect-[16/10] overflow-hidden relative">
                   <img
                     src={kitImage}
-                    alt="The Mother's Day Connection Kit with conversation cards, visual spark cards, playlist guide, letter template, and morning ritual guide arranged on a linen-covered table in warm window light."
+                    alt="Mother's Day Connection Kit for seniors with dementia — conversation cards, visual spark cards, playlist guide, letter template, and morning ritual guide laid out on a linen-covered table in warm window light."
                     width={1820}
                     height={1138}
                     loading="lazy"
