@@ -159,6 +159,7 @@ const FamilyVisits = () => {
   return (
     <div className="min-h-screen bg-cream overflow-x-hidden">
       <Navigation />
+      <ExitIntentModal />
 
       <main>
         {/* SECTION 1 — HERO (asymmetric editorial split) */}
