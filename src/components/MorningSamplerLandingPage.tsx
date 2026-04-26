@@ -1,8 +1,8 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import samplerHero from "@/assets/sampler-breakfast-scene.png";
-import samplerMoments from "@/assets/sampler-sparks-moments.png";
-import samplerActivities from "@/assets/sampler-activities-overview.png";
+import samplerHero from "@/assets/memory-care-morning-activity-routine-seniors.png";
+import samplerMoments from "@/assets/dementia-friendly-activity-cards-for-engagement.png";
+import samplerActivities from "@/assets/senior-living-activity-printable-kit-overview.png";
 import logo from "@/assets/logo.png";
 
 /* ─── Brand palette ─── */
@@ -188,7 +188,7 @@ export default function MorningSamplerLandingPage() {
       {/* ── Hero Image ── */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
         <img src={samplerHero}
-          alt="The Morning Routine Sampler — conversation cards and visual sparks beside a coffee cup"
+          alt="Memory care morning activity routine for seniors: conversation cards and visual sparks from The Morning Routine Sampler beside a coffee cup in a calm day room"
           style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block", margin: "48px auto", maxWidth: 640 }}
         />
       </div>
@@ -256,7 +256,7 @@ export default function MorningSamplerLandingPage() {
       {/* ── Activities Overview Image ── */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px 48px" }}>
         <img src={samplerActivities}
-          alt="The Morning Routine Sampler activities laid out on a linen surface"
+          alt="Senior living activity printable kit overview: The Morning Routine Sampler conversation cards, visual sparks, and word link game laid out on a linen surface"
           style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block", maxWidth: 640, margin: "0 auto" }}
         />
       </div>
@@ -342,7 +342,7 @@ export default function MorningSamplerLandingPage() {
       {/* ── Emotional Image ── */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "48px 28px 0" }}>
         <img src={samplerMoments}
-          alt="A senior's hands holding a visual spark card — this sparks real moments between people"
+          alt="Dementia-friendly activity cards for engagement: a senior resident's hands holding a visual spark card during a guided memory care conversation"
           style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block", maxWidth: 640, margin: "0 auto" }}
         />
       </div>
