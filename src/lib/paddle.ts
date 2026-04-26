@@ -27,8 +27,8 @@ export const PRICE_REDIRECTS: Record<string, string> = {
   pri_01kpafxq9xrqg0qhqfttzdjswf: "/thank-you/heart-of-the-home-kit",
   // The 5-Kit Bundle (Complete Engagement System) — routes to a hidden access hub
   pri_01kpafqz2tc4pfc262j1dnh531: "/bundle-access",
-  // The Mother's Day Connection Kit
-  pri_01kpsqv8dq9e08sjnpgpzs0a7v: "/thank-you/mothers-day-kit",
+  // The Mother's Day Connection Kit — handled exclusively by Paddle settings.successUrl
+  // (see PRICE_SUCCESS_URLS below). Intentionally omitted here to avoid a redirect race.
 };
 
 declare global {
@@ -112,8 +112,12 @@ async function initPaddle(): Promise<void> {
         `purchase:${txId}`
       );
 
+      // If this price uses Paddle's native successUrl, let Paddle handle the
+      // redirect — do NOT run our own JS redirect (it would race and win on
+      // the current host, sending users to the wrong domain).
+      const hasSuccessUrl = priceId ? Boolean(PRICE_SUCCESS_URLS[priceId]) : false;
       const target = priceId ? PRICE_REDIRECTS[priceId] : undefined;
-      if (target) {
+      if (target && !hasSuccessUrl) {
         // Brief delay so Paddle can finish its overlay close animation.
         setTimeout(() => {
           window.location.href = target;
