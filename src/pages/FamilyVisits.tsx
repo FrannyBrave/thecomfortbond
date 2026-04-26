@@ -6,7 +6,7 @@ import { FooterSection } from "@/components/sections/FooterSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FamilyVisitEmailCapture } from "@/components/FamilyVisitEmailCapture";
 import { Button } from "@/components/ui/button";
-import { openPaddleCheckout } from "@/lib/paddle";
+import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
 import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
 
 import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.png";
@@ -71,6 +71,13 @@ const useDaysUntilMothersDay = () => {
 const FamilyVisits = () => {
   const { days, dateLabel } = useDaysUntilMothersDay();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [checkoutSource, setCheckoutSource] = useState("path-two");
+
+  const openCheckoutModal = (source: string) => {
+    setCheckoutSource(source);
+    setCheckoutOpen(true);
+  };
 
   useEffect(() => {
     document.title = "Mother's Day Ideas for Elderly Mom | The Comfort Bond™";
@@ -410,7 +417,7 @@ const FamilyVisits = () => {
                     variant="cta-poppy"
                     size="lg"
                     className="w-full"
-                    onClick={() => openPaddleCheckout("pri_01kpsqv8dq9e08sjnpgpzs0a7v")}
+                    onClick={() => openCheckoutModal("path-two-card")}
                   >
                     Get the Full Kit · $27
                   </Button>
@@ -571,7 +578,7 @@ const FamilyVisits = () => {
                     <Button
                       variant="cta-poppy"
                       size="lg"
-                      onClick={() => openPaddleCheckout("pri_01kpsqv8dq9e08sjnpgpzs0a7v")}
+                      onClick={() => openCheckoutModal("kit-detail")}
                     >
                       Get the Full Mother's Day Kit
                     </Button>
@@ -682,7 +689,7 @@ const FamilyVisits = () => {
                   variant="cta-outline"
                   size="xl"
                   className="border-cream text-cream hover:bg-cream hover:text-forest"
-                  onClick={() => openPaddleCheckout("pri_01kpsqv8dq9e08sjnpgpzs0a7v")}
+                  onClick={() => openCheckoutModal("footer-cta")}
                 >
                   Get the Full Kit · $27
                 </Button>
@@ -745,6 +752,11 @@ const FamilyVisits = () => {
 
       <FooterSection />
       <StickyMobileCTA href="#hero-capture" label="Get the Free Visit Guide" />
+      <MothersDayCheckoutModal
+        open={checkoutOpen}
+        onOpenChange={setCheckoutOpen}
+        source={checkoutSource}
+      />
     </div>
   );
 };
