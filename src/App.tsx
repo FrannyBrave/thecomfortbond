@@ -62,8 +62,8 @@ function AppRoutes() {
           <Route path="/kits" element={<Kits />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/bundle-access" element={<BundleAccess />} />
-          <Route path="/thank-you" element={<ThankYouMothersDay />} />
-          <Route path="/thank-you-connection-kit" element={<ThankYouConnectionKit />} />
+          <Route path="/thank-you" element={<ThankYouConnectionKit />} />
+          <Route path="/thank-you-mothers-day" element={<ThankYouMothersDay />} />
           <Route path="/thank-you/:slug" element={<ThankYou />} />
           <Route path="/family-visits" element={<FamilyVisits />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
