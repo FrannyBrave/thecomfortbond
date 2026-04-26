@@ -133,8 +133,8 @@ const PRICE_DISCOUNTS: Record<string, string> = {
 
 /** Map of Paddle Price ID → external success URL (overrides PRICE_REDIRECTS). */
 const PRICE_SUCCESS_URLS: Record<string, string> = {
-  // The Mother's Day Connection Kit — Kit (ConvertKit) delivery page
-  pri_01kpsqv8dq9e08sjnpgpzs0a7v: "https://the-comfort-bond-2.kit.com/bafbbac71d",
+  // The Mother's Day Connection Kit — own-domain thank-you page
+  pri_01kpsqv8dq9e08sjnpgpzs0a7v: "https://thecomfortbond.com/thank-you",
 };
 
 /**
