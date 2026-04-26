@@ -79,6 +79,21 @@ const FamilyVisits = () => {
     setCheckoutOpen(true);
   };
 
+  const faqs = [
+    {
+      q: "Will this work if my mom has dementia or memory loss?",
+      a: "Yes — every prompt and ritual was designed with memory care in mind. Nothing asks her to recall facts or dates. The tools meet her where she is today, using sensory cues, familiar music, and gentle observation rather than memory tests.",
+    },
+    {
+      q: "What's the difference between the Free Guide and the $27 Kit?",
+      a: "The Free Guide is a 7-day preparation path — it helps you arrive calm and ready. The $27 Kit is what you actually bring with you on the day: 20 conversation cards, 15 visual spark cards, a playlist guide, a guided letter template, and a morning ritual walkthrough.",
+    },
+    {
+      q: "Is this a digital download or a physical product?",
+      a: "Both items are instant digital downloads. The Free 7-Day Plan is a single PDF file, while the full Mother's Day Connection Kit is delivered as a .zip file containing all 5 premium PDFs.\n\nYou can print everything at home on standard 8.5x11\" paper—no special supplies needed. For the Conversation and Visual Spark cards, we recommend printing on heavy cream cardstock for a beautiful, lasting feel.\n\nPrefer not to print? The guides and visual cards are perfectly optimized to offer a beautiful, crisp experience when viewed directly on an iPad or tablet. You can easily save the files and bring your device right into the room with you.",
+    },
+  ];
+
   useEffect(() => {
     document.title = "Mother's Day Ideas for Elderly Mom | The Comfort Bond™";
     const desc =
@@ -111,22 +126,34 @@ const FamilyVisits = () => {
       }
       tag.setAttribute("content", content);
     });
-  }, []);
 
-  const faqs = [
-    {
-      q: "Will this work if my mom has dementia or memory loss?",
-      a: "Yes — every prompt and ritual was designed with memory care in mind. Nothing asks her to recall facts or dates. The tools meet her where she is today, using sensory cues, familiar music, and gentle observation rather than memory tests.",
-    },
-    {
-      q: "What's the difference between the Free Guide and the $27 Kit?",
-      a: "The Free Guide is a 7-day preparation path — it helps you arrive calm and ready. The $27 Kit is what you actually bring with you on the day: 20 conversation cards, 15 visual spark cards, a playlist guide, a guided letter template, and a morning ritual walkthrough.",
-    },
-    {
-      q: "Is this a digital download or a physical product?",
-      a: "Both items are instant digital downloads. The Free 7-Day Plan is a single PDF file, while the full Mother's Day Connection Kit is delivered as a .zip file containing all 5 premium PDFs.\n\nYou can print everything at home on standard 8.5x11\" paper—no special supplies needed. For the Conversation and Visual Spark cards, we recommend printing on heavy cream cardstock for a beautiful, lasting feel.\n\nPrefer not to print? The guides and visual cards are perfectly optimized to offer a beautiful, crisp experience when viewed directly on an iPad or tablet. You can easily save the files and bring your device right into the room with you.",
-    },
-  ];
+    // FAQPage JSON-LD — eligibility for Google rich results
+    const FAQ_SCHEMA_ID = "faq-schema-family-visits";
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.a,
+        },
+      })),
+    };
+    let schemaScript = document.getElementById(FAQ_SCHEMA_ID) as HTMLScriptElement | null;
+    if (!schemaScript) {
+      schemaScript = document.createElement("script");
+      schemaScript.type = "application/ld+json";
+      schemaScript.id = FAQ_SCHEMA_ID;
+      document.head.appendChild(schemaScript);
+    }
+    schemaScript.textContent = JSON.stringify(faqSchema);
+
+    return () => {
+      document.getElementById(FAQ_SCHEMA_ID)?.remove();
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-cream overflow-x-hidden">
