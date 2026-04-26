@@ -5,6 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FamilyVisitEmailCapture } from "@/components/FamilyVisitEmailCapture";
+import { ExitIntentModal } from "@/components/ExitIntentModal";
 import { Button } from "@/components/ui/button";
 import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
 import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
