@@ -5,6 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FamilyVisitEmailCapture } from "@/components/FamilyVisitEmailCapture";
+import { ExitIntentModal } from "@/components/ExitIntentModal";
 import { Button } from "@/components/ui/button";
 import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
 import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
@@ -158,6 +159,7 @@ const FamilyVisits = () => {
   return (
     <div className="min-h-screen bg-cream overflow-x-hidden">
       <Navigation />
+      <ExitIntentModal />
 
       <main>
         {/* SECTION 1 — HERO (asymmetric editorial split) */}
