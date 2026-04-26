@@ -72,6 +72,13 @@ const useDaysUntilMothersDay = () => {
 const FamilyVisits = () => {
   const { days, dateLabel } = useDaysUntilMothersDay();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [checkoutSource, setCheckoutSource] = useState("path-two");
+
+  const openCheckoutModal = (source: string) => {
+    setCheckoutSource(source);
+    setCheckoutOpen(true);
+  };
 
   useEffect(() => {
     document.title = "Mother's Day Ideas for Elderly Mom | The Comfort Bond™";
