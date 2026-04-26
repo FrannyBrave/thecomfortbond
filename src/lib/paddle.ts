@@ -131,6 +131,12 @@ const PRICE_DISCOUNTS: Record<string, string> = {
   pri_01kpafqz2tc4pfc262j1dnh531: "dsc_01kpbrz4n63ahb07e9dvwbjb0n",
 };
 
+/** Map of Paddle Price ID → external success URL (overrides PRICE_REDIRECTS). */
+const PRICE_SUCCESS_URLS: Record<string, string> = {
+  // The Mother's Day Connection Kit — Kit (ConvertKit) delivery page
+  pri_01kpsqv8dq9e08sjnpgpzs0a7v: "https://the-comfort-bond-2.kit.com/bafbbac71d",
+};
+
 /**
  * Open the Paddle Billing overlay checkout for a single Price ID.
  * Auto-loads + initializes Paddle.js on first call.
@@ -145,9 +151,11 @@ export async function openPaddleCheckout(priceId: string): Promise<void> {
     await initPaddle();
     if (!window.Paddle) throw new Error("Paddle not available");
     const discountId = PRICE_DISCOUNTS[priceId];
+    const successUrl = PRICE_SUCCESS_URLS[priceId];
     window.Paddle.Checkout.open({
       items: [{ priceId, quantity: 1 }],
       ...(discountId ? { discountId } : {}),
+      ...(successUrl ? { settings: { successUrl } } : {}),
     });
   } catch (err) {
     console.error("[Paddle] Failed to open checkout", err);
