@@ -8,7 +8,7 @@ const ZIP_FILENAME = "The-Mothers-Day-Connection-Kit.zip";
 // you create in ConvertKit (the one that has the kit's ZIP attached as
 // the "incentive" download). API key is the same public ConvertKit v3 key
 // already used by the family-visits capture.
-const CONVERTKIT_FORM_ID = "9358638"; // TODO: swap to the new Mother's Day incentive form ID
+const CONVERTKIT_FORM_ID = "9369936"; // Mother's Day Connection Kit incentive form
 const CONVERTKIT_API_KEY = "LyFHhQ8J1GJ27wcL4mq-uQ";
 
 const DownloadIcon = () => (
