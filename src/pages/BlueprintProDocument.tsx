@@ -89,7 +89,7 @@ function CoverPage() {
   return (
     <Page pad={false}>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", height: "11in", padding: "3rem 2.5rem", textAlign: "center" }}>
-        <img src={logo} alt="The Comfort Bond" style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover" }} />
+        <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover" }} />
         <div>
           <p style={{ fontFamily: sans, fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.3em", textTransform: "uppercase", color: c.bronze, margin: "0 0 1rem" }}>
             The Comfort Bond™

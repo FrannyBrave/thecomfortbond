@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
           <Link to="/" className="inline-block">
             <img
               src={logo}
-              alt="The Comfort Bond"
+              alt="The Comfort Bond logo — dignified engagement activities for senior living"
               className="w-28 md:w-32 h-auto"
             />
           </Link>

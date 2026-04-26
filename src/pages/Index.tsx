@@ -55,7 +55,7 @@ const Index = () => {
       <header>
         <nav className="tcb-nav">
           <a href="#" className="nav-logo">
-            <img src={logoImg} alt="The Comfort Bond logo" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
+            <img src={logoImg} alt="The Comfort Bond logo — dignified engagement activities for senior living" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
             <div className="nav-brand">
               <span className="nav-brand-name">The Comfort Bond™</span>
               <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>

@@ -190,7 +190,7 @@ export default function BlueprintLandingPage() {
         }}
       >
         <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.6rem", textDecoration: "none" }}>
-          <img src={logo} alt="The Comfort Bond logo" style={{ width: "36px", height: "36px", borderRadius: "50%" }} />
+          <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" style={{ width: "36px", height: "36px", borderRadius: "50%" }} />
           <span style={{ fontFamily: serif, fontSize: "1rem", fontWeight: 600, color: c.forest, letterSpacing: "-0.01em" }}>
             The Comfort Bond™
           </span>

@@ -96,7 +96,7 @@ export default function Kits() {
       {/* ── Nav ── */}
       <nav className="flex items-center justify-between max-w-[1200px] mx-auto px-6 py-4">
         <Link to="/" className="flex items-center gap-3 no-underline">
-          <img src={logoImg} alt="The Comfort Bond" className="h-12 w-auto rounded-full" />
+          <img src={logoImg} alt="The Comfort Bond logo — dignified engagement activities for senior living" className="h-12 w-auto rounded-full" />
           <span className="font-serif text-lg font-semibold" style={{ color: "var(--forest-dark)" }}>
             The Comfort Bond
           </span>

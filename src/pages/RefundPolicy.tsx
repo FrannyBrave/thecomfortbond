@@ -18,7 +18,7 @@ const RefundPolicy = () => {
       <header className="border-b border-sage/40 bg-cream">
         <div className="container mx-auto px-6 py-6">
           <Link to="/" className="inline-block">
-            <img src={logo} alt="The Comfort Bond" className="w-28 md:w-32 h-auto" />
+            <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" className="w-28 md:w-32 h-auto" />
           </Link>
         </div>
       </header>

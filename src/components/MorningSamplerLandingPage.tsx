@@ -142,7 +142,7 @@ export default function MorningSamplerLandingPage() {
         justifyContent: "space-between", background: c.warmWhite, borderBottom: `1px solid ${c.borderWarm}`,
       }}>
         <Link to="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-          <img src={logo} alt="The Comfort Bond" style={{ height: 36, width: 36, borderRadius: "50%", objectFit: "cover" }} />
+          <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" style={{ height: 36, width: 36, borderRadius: "50%", objectFit: "cover" }} />
           <span style={{ fontFamily: serif, fontSize: "1rem", fontWeight: 600, color: c.forest, letterSpacing: "-0.01em" }}>
             The Comfort Bond™
           </span>

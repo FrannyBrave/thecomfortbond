@@ -22,7 +22,7 @@ export default function BlueprintCover() {
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }}>
         <img
           src={logo}
-          alt="The Comfort Bond"
+          alt="The Comfort Bond logo — dignified engagement activities for senior living"
           style={{
             width: "clamp(48px, 6vw, 60px)",
             height: "clamp(48px, 6vw, 60px)",

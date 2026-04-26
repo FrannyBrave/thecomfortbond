@@ -40,7 +40,7 @@ export const FooterSection = () => {
           >
             <img
               src={logo}
-              alt="The Comfort Bond"
+              alt="The Comfort Bond logo — dignified engagement activities for senior living"
               className="w-32 md:w-36 h-auto"
             />
           </button>
