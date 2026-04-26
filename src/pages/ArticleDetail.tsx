@@ -71,7 +71,24 @@ const ArticleDetail = () => {
     setMeta("property", "og:title", `${article.title} — The Comfort Bond™`);
     setMeta("name", "twitter:title", `${article.title} — The Comfort Bond™`);
 
-    // BlogPosting JSON-LD
+    // Build absolute URLs that respect the actual route the user is on
+    // (/resources/:slug or /blog/:slug) so schema mainEntityOfPage matches
+    // the canonical page URL.
+    const SITE = "https://thecomfortbond.com";
+    const pathname = typeof window !== "undefined" ? window.location.pathname : `/resources/${article.slug}`;
+    const canonicalUrl = `${SITE}${pathname}`;
+    const heroAbsolute = article.heroImage?.startsWith("http")
+      ? article.heroImage
+      : `${SITE}${article.heroImage}`;
+
+    // Update og:image + og:url to match this specific article (not the
+    // generic site-wide image set elsewhere).
+    setMeta("property", "og:image", heroAbsolute);
+    setMeta("name", "twitter:image", heroAbsolute);
+    setMeta("property", "og:url", canonicalUrl);
+    setMeta("property", "og:type", "article");
+
+    // BlogPosting + BreadcrumbList JSON-LD (combined @graph for cleaner DOM)
     const ldId = "article-jsonld";
     let script = document.getElementById(ldId) as HTMLScriptElement;
     if (!script) {
@@ -82,19 +99,46 @@ const ArticleDetail = () => {
     }
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      headline: article.title,
-      description: article.metaDescription,
-      author: { "@type": "Person", "name": "Francesca" },
-      publisher: {
-        "@type": "Organization",
-        name: "The Comfort Bond",
-        logo: { "@type": "ImageObject", url: "https://thecomfortbond.com/logo.png" },
-      },
-      datePublished: article.datePublished,
-      dateModified: article.dateModified,
-      mainEntityOfPage: `https://thecomfortbond.com/resources/${article.slug}`,
-      image: "https://thecomfortbond.com/og-image.jpg",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          headline: article.title,
+          description: article.metaDescription,
+          author: {
+            "@type": "Person",
+            name: "Francesca",
+            url: `${SITE}/about`,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "The Comfort Bond",
+            logo: {
+              "@type": "ImageObject",
+              url: `${SITE}/logo.png`,
+            },
+          },
+          datePublished: article.datePublished,
+          dateModified: article.dateModified,
+          mainEntityOfPage: canonicalUrl,
+          url: canonicalUrl,
+          image: {
+            "@type": "ImageObject",
+            url: heroAbsolute,
+            width: 1280,
+            height: 720,
+          },
+          articleSection: article.category,
+          inLanguage: "en-US",
+        },
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+            { "@type": "ListItem", position: 2, name: "Resources", item: `${SITE}/resources` },
+            { "@type": "ListItem", position: 3, name: article.title, item: canonicalUrl },
+          ],
+        },
+      ],
     });
 
     return () => {
