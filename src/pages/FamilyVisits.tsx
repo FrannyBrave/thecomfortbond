@@ -418,7 +418,7 @@ const FamilyVisits = () => {
                     variant="cta-poppy"
                     size="lg"
                     className="w-full"
-                    onClick={() => openPaddleCheckout("pri_01kpsqv8dq9e08sjnpgpzs0a7v")}
+                    onClick={() => openCheckoutModal("path-two-card")}
                   >
                     Get the Full Kit · $27
                   </Button>
@@ -579,7 +579,7 @@ const FamilyVisits = () => {
                     <Button
                       variant="cta-poppy"
                       size="lg"
-                      onClick={() => openPaddleCheckout("pri_01kpsqv8dq9e08sjnpgpzs0a7v")}
+                      onClick={() => openCheckoutModal("kit-detail")}
                     >
                       Get the Full Mother's Day Kit
                     </Button>
@@ -690,7 +690,7 @@ const FamilyVisits = () => {
                   variant="cta-outline"
                   size="xl"
                   className="border-cream text-cream hover:bg-cream hover:text-forest"
-                  onClick={() => openPaddleCheckout("pri_01kpsqv8dq9e08sjnpgpzs0a7v")}
+                  onClick={() => openCheckoutModal("footer-cta")}
                 >
                   Get the Full Kit · $27
                 </Button>
