@@ -2,6 +2,7 @@ import logoImg from "@/assets/the-comfort-bond-logo.png";
 import bundleVolume from "@/assets/senior-living-activity-bundle-programming-tools.png";
 import bundleGroup from "@/assets/group-activities-for-seniors-memory-care-engagement.png";
 import bundleStack from "@/assets/printable-senior-activity-kit-pages-overview.png";
+import heroPhoto from "@/assets/activity-director-tools-senior-engagement-cards-bingo.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { openPaddleCheckout } from "@/lib/paddle";
@@ -112,27 +113,14 @@ const Index = () => {
             </div>
           </div>
           <div className="hero-visual">
-            <div className="hero-card-stack">
-              <div className="hero-card-bg" />
-              <div className="hero-card-mid" />
-              <div className="hero-card-main">
-                <div className="hc-label">What's inside every kit</div>
-                <div className="hc-title">6 Activities,<br /><span>Zero Prep</span></div>
-                <div className="hc-divider" />
-                <div className="hc-activities">
-                  <div className="hc-activity"><div className="hc-activity-dot" />15+ Conversation Starter Cards</div>
-                  <div className="hc-activity"><div className="hc-activity-dot" />20 Themed Trivia Questions</div>
-                  <div className="hc-activity"><div className="hc-activity-dot" />24-Term BINGO + Caller Prompts</div>
-                  <div className="hc-activity"><div className="hc-activity-dot" />Word Link Cognitive Game</div>
-                  <div className="hc-activity"><div className="hc-activity-dot" />Musical Memory · Finish the Lyric</div>
-                  <div className="hc-activity"><div className="hc-activity-dot" />10 Bonus "Visual Spark" Cards</div>
-                </div>
-                <div className="hc-badge-row">
-                  <div className="hc-badge">PDF · Print &amp; Go</div>
-                  <div className="hc-badge">All cognitive levels</div>
-                  <div className="hc-badge">From $27</div>
-                </div>
-              </div>
+            <div className="hero-photo-wrap">
+              <img
+                src={heroPhoto}
+                alt="Activity director leading senior residents using conversation cards, visual spark cards, trivia, and bingo for engagement in memory care"
+                className="hero-photo"
+                loading="eager"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
