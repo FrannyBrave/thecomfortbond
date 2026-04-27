@@ -5,11 +5,62 @@ import { FooterSection } from "@/components/sections/FooterSection";
 import { articles } from "@/data/articles";
 import { FreeSamplerCTA } from "@/components/FreeSamplerCTA";
 import { FreeBlueprintCTA } from "@/components/FreeBlueprintCTA";
+import { RecommendedKit, type RecommendedKitData } from "@/components/RecommendedKit";
 
 const BLUEPRINT_CTA_SLUGS = new Set([
   "beyond-bingo-for-seniors",
   "13-week-memory-care-activity-calendar",
 ]);
+
+/**
+ * Per-article "Recommended kit" map.
+ *
+ * Each entry routes a finished reader to the kit/bundle/blueprint most
+ * topically aligned with the article they just read. Anchor text is kept
+ * descriptive (kit name + outcome) for SEO weight to the destination.
+ */
+const RECOMMENDED_KIT_BY_SLUG: Record<string, RecommendedKitData> = {
+  "zero-prep-senior-living-activities": {
+    eyebrow: "Recommended next step",
+    title: "The Comfort Bond™ 5-Kit Bundle",
+    description:
+      "Five themed, facilitator-ready engagement kits — printable and built specifically to retire the Sunday-night Pinterest scroll. Open the bundle, choose a kit, run the session.",
+    href: "/kits",
+    ctaLabel: "Explore the 5-Kit Bundle",
+  },
+  "memory-care-activities-that-work": {
+    eyebrow: "Built for memory care",
+    title: "The Nostalgia Kit — sensory-rich, decade-anchored reminiscence",
+    description:
+      "A complete session built around a specific lived decade rather than vague nostalgia — designed for the consistency and thematic echo that residents in memory care actually respond to.",
+    href: "/kits",
+    ctaLabel: "See the Nostalgia Kit",
+  },
+  "beyond-bingo-for-seniors": {
+    eyebrow: "For weekend handoffs",
+    title: "Hand a weekend aide a kit, not a binder",
+    description:
+      "Each Comfort Bond kit ships with read-aloud prompts, a natural activity arc, and zero training required — the same standard you set, delivered without you in the room.",
+    href: "/kits",
+    ctaLabel: "Browse the Engagement Kits",
+  },
+  "13-week-memory-care-activity-calendar": {
+    eyebrow: "Skip the spreadsheet",
+    title: "The Programming Blueprint™ Pro — a complete 13-week curriculum",
+    description:
+      "A full quarter of memory care programming, mapped across all six wellness dimensions and anchored to the national calendar — copy it straight into your planning template.",
+    href: "/blueprint-pro",
+    ctaLabel: "See what's inside the Blueprint Pro",
+  },
+  "sensory-rich-reminiscence-therapy-dementia-care": {
+    eyebrow: "Recommended next step",
+    title: "The Comfort Bond™ 5-Kit Bundle — including the Nostalgia, Heirloom Garden & Makers & Menders kits",
+    description:
+      "The complete sensory-rich reminiscence system referenced throughout this guide — three signature kits plus two more, built to replace the surface-level reminiscence hour with something residents and families can actually feel.",
+    href: "/kits",
+    ctaLabel: "Explore the 5-Kit Bundle",
+  },
+};
 
 /* ---------- helpers ---------- */
 
