@@ -88,7 +88,6 @@ const Index = () => {
               Built for Activity Directors & Life Enrichment Teams
             </div>
             <h1>Your Next 30 Days<br />of Activities — <em>Done.</em></h1>
-            <p className="hero-desc">Print-ready engagement kits built for Activity Directors who are tired of scrambling. Conversation cards, Visual spark cards, Trivia, BINGO, Musical Memory games — themed, tested, and ready to facilitate in 5 minutes.</p>
             <div className="hero-actions">
               <a href="#products" className="btn-primary">
                 See the 5 kits
@@ -159,6 +158,9 @@ const Index = () => {
           </h2>
           <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[600px]" style={{ color: "var(--text-mid)" }}>
             Each kit is a complete, themed activity package — zero prep, maximum engagement. Print what you need and walk into your next session with confidence.
+          </p>
+          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[600px]" style={{ color: "var(--text-mid)" }}>
+            Each one includes conversation cards, visual spark prompts, trivia, BINGO, and music-based memory activities — carefully structured to keep residents engaged while making facilitation effortless.
           </p>
 
           {/* Product Grid — 5 Kits */}
