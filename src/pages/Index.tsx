@@ -1,7 +1,4 @@
 import logoImg from "@/assets/the-comfort-bond-logo.png";
-import mockupNostalgia from "@/assets/nostalgia-activity-kit-for-seniors-memory-care.png";
-import mockupHome from "@/assets/assisted-living-activity-kit-home-comfort-theme.png";
-import mockupBingo from "@/assets/interactive-bingo-activity-kit-for-seniors.png";
 import bundleVolume from "@/assets/senior-living-activity-bundle-programming-tools.png";
 import bundleGroup from "@/assets/group-activities-for-seniors-memory-care-engagement.png";
 import bundleStack from "@/assets/printable-senior-activity-kit-pages-overview.png";
@@ -310,44 +307,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* SEE INSIDE — product preview */}
-      <section className="py-16 md:py-20 px-6 md:px-16" style={{ background: "var(--cream)" }}>
-        <div className="max-w-[1000px] mx-auto">
-          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.4rem)] font-semibold leading-[1.2] text-center mt-0 mb-12" style={{ color: "var(--forest-dark)" }}>
-            Designed to spark <em className="italic" style={{ color: "var(--clay)" }}>real connection.</em>
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 see-inside-grid">
-            {[
-              { src: mockupNostalgia, alt: "Conversation Card preview from The Nostalgia Kit — 1950s drive-in movie prompt", caption: "Conversation Card", kit: "The Nostalgia Kit" },
-              { src: mockupHome, alt: "Visual Spark Card preview from The Heart of the Home Kit — vintage kitchen scene", caption: "Visual Spark Card", kit: "The Heart of the Home Kit" },
-              { src: mockupBingo, alt: "Themed BINGO card preview from The Are We There Yet Kit — road trip edition", caption: "Themed BINGO", kit: "The 'Are We There Yet?' Kit" },
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <div
-                  className="w-full rounded-xl overflow-hidden"
-                  style={{
-                    aspectRatio: "4 / 5",
-                    boxShadow: "0 8px 24px rgba(45,74,62,0.08), 0 2px 8px rgba(0,0,0,0.04)",
-                  }}
-                >
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    loading="lazy"
-                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                  />
-                </div>
-                <p className="mt-3 text-center" style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "var(--text-mid)", lineHeight: 1.4 }}>
-                  <span style={{ fontWeight: 500, color: "var(--forest-dark)" }}>{item.caption}</span>
-                  <span style={{ color: "var(--text-light)" }}> · {item.kit}</span>
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* BUNDLE OFFERS */}
       <section id="bundles" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--clay-pale)" }}>
         <div className="max-w-[1200px] mx-auto">
