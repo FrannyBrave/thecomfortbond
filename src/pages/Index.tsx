@@ -63,10 +63,8 @@ const Index = () => {
             </div>
           </a>
           <ul className="nav-links">
-            <li><a href="#products"></a></li>
-            
             <li><a href="/about">Our Story</a></li>
-            <li><a href="/resources"></a></li>
+            <li><a href="/resources">Resources</a></li>
             <li><a href="/family-visits" className="nav-blueprint">For Families</a></li>
             <li><a href="/blueprint-pro" className="nav-blueprint">Blueprint Pro</a></li>
             <li><a href="/blueprint" className="nav-blueprint">Free Blueprint</a></li>
@@ -139,11 +137,8 @@ const Index = () => {
           <div className="tb-label">Designed for</div>
           <div className="tb-facilities">
             <span className="tb-facility">Nursing Homes</span>
-            
-              
             <span className="tb-facility">Assisted Living & Memory Care Centers</span>
             <span className="tb-facility">In-Home Caregivers</span>
-            <span className="tb-facility">Families &amp; Loved Ones</span>
           </div>
         </div>
       </div>
@@ -156,11 +151,8 @@ const Index = () => {
           <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
             Five Done-for-You Engagement Kits,<br /><em className="italic" style={{ color: "var(--clay)" }}>Ready to Print &amp; Facilitate Today</em>
           </h2>
-          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[600px]" style={{ color: "var(--text-mid)" }}>
-            Each kit is a complete, themed activity package — zero prep, maximum engagement. Print what you need and walk into your next session with confidence.
-          </p>
-          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[600px]" style={{ color: "var(--text-mid)" }}>
-            Each one includes conversation cards, visual spark prompts, trivia, BINGO, and music-based memory activities — carefully structured to keep residents engaged while making facilitation effortless.
+          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[640px]" style={{ color: "var(--text-mid)" }}>
+            Each kit is a complete, themed activity package — zero prep, maximum engagement. Inside you'll find conversation cards, visual spark prompts, trivia, BINGO, and music-based memory activities, all carefully structured to keep residents engaged while making facilitation effortless.
           </p>
 
           {/* Product Grid — 5 Kits */}
