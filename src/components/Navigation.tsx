@@ -1,9 +1,45 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Heart, Layers, Package, Gift, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import logo from "@/assets/the-comfort-bond-logo.png";
+
+// Primary mobile / tablet destinations — the 4 high-intent routes
+// surfaced in the slide-out side drawer.
+const MOBILE_PRIMARY_LINKS = [
+  {
+    label: "For Families",
+    description: "Mother's Day visit guide & memory care support",
+    href: "/family-visits",
+    icon: Heart,
+  },
+  {
+    label: "Blueprint Pro",
+    description: "13-week activity curriculum for facilities",
+    href: "/blueprint-pro",
+    icon: Layers,
+  },
+  {
+    label: "Engagement Kits",
+    description: "Print-ready themed kits — shop the full collection",
+    href: "/kits",
+    icon: Package,
+  },
+  {
+    label: "Free Sampler",
+    description: "Try a kit free — no credit card required",
+    href: "/free-sampler",
+    icon: Gift,
+  },
+] as const;
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
