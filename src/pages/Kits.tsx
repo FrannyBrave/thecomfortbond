@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import logoImg from "@/assets/the-comfort-bond-logo.png";
-import mockupNostalgia from "@/assets/nostalgia-activity-kit-for-seniors-memory-care.png";
-import mockupHome from "@/assets/assisted-living-activity-kit-home-comfort-theme.png";
-import mockupBingo from "@/assets/interactive-bingo-activity-kit-for-seniors.png";
 import bundleVolume from "@/assets/senior-living-activity-bundle-programming-tools.png";
 import bundleGroup from "@/assets/group-activities-for-seniors-memory-care-engagement.png";
 import bundleStack from "@/assets/printable-senior-activity-kit-pages-overview.png";
@@ -126,6 +123,66 @@ export default function Kits() {
             Each kit is a complete, themed activity package — zero prep, maximum engagement. Print what you need and walk into your next session with confidence.
           </p>
 
+          {/* What's in every kit — unified contents card */}
+          <div className="mt-10 rounded-2xl overflow-hidden" style={{ background: "var(--forest-dark)", border: "1px solid var(--forest-dark)", boxShadow: "0 8px 32px rgba(45,74,62,0.18)" }}>
+            <div className="px-6 md:px-8 py-4 flex items-center justify-between gap-4 flex-wrap" style={{ background: "rgba(255,255,255,0.04)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+              <div className="flex items-center gap-3">
+                <span className="w-9 h-9 rounded-lg flex items-center justify-center text-[16px]" style={{ background: "var(--clay)", color: "#fff" }}>📦</span>
+                <div>
+                  <div className="text-[10px] font-semibold tracking-[0.12em] uppercase" style={{ color: "var(--sand)" }}>What's in every kit</div>
+                  <h3 className="font-serif text-[1.15rem] md:text-[1.3rem] font-semibold leading-tight m-0 text-white">
+                    A complete, ready-to-facilitate session pack
+                  </h3>
+                </div>
+              </div>
+              <div className="text-[11px] font-medium tracking-[0.08em] uppercase px-3 py-1.5 rounded-full" style={{ color: "var(--sand)", background: "rgba(232,201,154,0.18)" }}>
+                ~6 hours of programming
+              </div>
+            </div>
+
+            <div className="px-6 md:px-8 py-6">
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { icon: "💬", label: "15+ Conversation Starter Cards" },
+                  { icon: "🧠", label: "20 Themed Trivia Questions" },
+                  { icon: "🎯", label: "24-Term BINGO + Caller Prompts" },
+                  { icon: "🔗", label: "Word Link Cognitive Game" },
+                  { icon: "🎵", label: "Musical Memory · Finish the Lyric" },
+                  { icon: "🖼️", label: "10 Visual Spark Cards" },
+                  { icon: "📋", label: "Facilitator's Guide" },
+                ].map((item, i) => (
+                  <span
+                    key={i}
+                    className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] font-medium"
+                    style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(232,201,154,0.25)", color: "#fff" }}
+                  >
+                    <span className="text-[14px] leading-none">{item.icon}</span>
+                    {item.label}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-5 pt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11.5px]" style={{ borderTop: "1px dashed rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.75)" }}>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
+                  Print-ready PDF
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
+                  Instant download
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
+                  Zero prep
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
+                  Reuse anytime
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {KITS.map((kit, i) => (
               <div
@@ -183,31 +240,6 @@ export default function Kits() {
         </div>
       </section>
 
-      {/* ── See Inside ── */}
-      <section className="py-16 md:py-20 px-6 md:px-16" style={{ background: "var(--cream)" }}>
-        <div className="max-w-[1000px] mx-auto">
-          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.4rem)] font-semibold leading-[1.2] text-center mt-0 mb-12" style={{ color: "var(--forest-dark)" }}>
-            Designed to spark <em className="italic" style={{ color: "var(--clay)" }}>real connection.</em>
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 see-inside-grid">
-            {[
-              { src: mockupNostalgia, alt: "Conversation Card preview from The Nostalgia Kit", caption: "Conversation Card", kit: "The Nostalgia Kit" },
-              { src: mockupHome, alt: "Visual Spark Card preview from The Heart of the Home Kit", caption: "Visual Spark Card", kit: "The Heart of the Home Kit" },
-              { src: mockupBingo, alt: "Themed BINGO card preview from The Are We There Yet Kit", caption: "Themed BINGO", kit: "The 'Are We There Yet?' Kit" },
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <div className="w-full rounded-xl overflow-hidden" style={{ aspectRatio: "4 / 5", boxShadow: "0 8px 24px rgba(45,74,62,0.08), 0 2px 8px rgba(0,0,0,0.04)" }}>
-                  <img src={item.src} alt={item.alt} loading="lazy" className="w-full h-full object-cover block" />
-                </div>
-                <p className="mt-3 text-center" style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "var(--text-mid)", lineHeight: 1.4 }}>
-                  <span style={{ fontWeight: 500, color: "var(--forest-dark)" }}>{item.caption}</span>
-                  <span style={{ color: "var(--text-light)" }}> · {item.kit}</span>
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── Bundle Offers ── */}
       <section id="bundles" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--clay-pale)" }}>
