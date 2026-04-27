@@ -66,7 +66,7 @@ export const MobileMenuDrawer = ({
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <button
-          className={`lg:hidden inline-flex items-center justify-center p-2 rounded-md text-forest hover:text-terracotta hover:bg-sage/10 transition-colors ${triggerClassName}`}
+          className={`mobile-menu-trigger inline-flex items-center justify-center p-2 rounded-md text-forest hover:text-terracotta hover:bg-sage/10 transition-colors ${triggerClassName}`}
           aria-label={ariaLabel}
           type="button"
         >
