@@ -242,6 +242,52 @@
 }
 .trust-badge svg { width: 11px; height: 11px; }
 
+/* Hero bundle pill — signals primary offer above CTAs */
+.hero-bundle-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(198, 123, 92, 0.08);
+  border: 1px solid rgba(198, 123, 92, 0.25);
+  border-radius: 100px;
+  padding: 6px 14px 6px 6px;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-mid);
+}
+.hero-bundle-pill-tag {
+  background: var(--clay);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+.hero-bundle-pill-text strong { color: var(--forest-dark); font-weight: 600; }
+.hero-bundle-pill-strike { color: var(--text-light); text-decoration: line-through; margin-left: 4px; font-size: 12px; }
+
+/* Primary CTA in hero takes clay accent to match bundle */
+.tcb-hero .hero-actions .btn-primary { background: var(--clay); }
+.tcb-hero .hero-actions .btn-primary:hover { background: var(--clay-light, #d68a6c); }
+
+/* Scroll hint under hero CTAs */
+.hero-scroll-hint {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.hero-scroll-hint:hover { color: var(--clay); }
+.hero-scroll-hint svg { animation: heroScrollBounce 1.8s ease-in-out infinite; }
+@keyframes heroScrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
 /* Hero visual */
 .hero-visual {
   position: relative;
