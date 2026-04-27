@@ -1007,8 +1007,29 @@
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 900px) {
-  .tcb-hero { grid-template-columns: 1fr; gap: 3rem; }
-  .hero-visual { display: none; }
+  .tcb-hero {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 5vw, 2rem) clamp(2rem, 6vw, 4rem);
+  }
+  /* Show hero photo on mobile, but compact and ABOVE the headline */
+  .hero-visual { display: flex; order: -1; }
+  .hero-photo-wrap { max-width: 260px; }
+  .hero-photo {
+    aspect-ratio: 4 / 5;
+    border-radius: 18px;
+    box-shadow: 0 14px 36px -10px rgba(0,0,0,0.35), 0 6px 16px -6px rgba(0,0,0,0.2);
+  }
+  /* Tighten H1 + vertical rhythm */
+  .tcb-hero h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .hero-eyebrow { margin-bottom: 1rem; }
+  .hero-bundle-pill { margin-bottom: 1rem; }
+  .hero-trust { margin-top: 1.25rem; }
+
   .audience-grid { grid-template-columns: 1fr; }
   .bundle-header { grid-template-columns: 1fr; }
   .bundle-pricing { text-align: left; }
@@ -1018,11 +1039,35 @@
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .nav-links { display: none; }
   .email-capture-grid { grid-template-columns: 1fr !important; }
+
+  /* Trusted bar — stack vertically with bullet separators */
+  .trusted-bar-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .tb-facilities { gap: 0.4rem 1rem; justify-content: center; }
+  .tb-facility { position: relative; padding-right: 1rem; }
+  .tb-facility:not(:last-child)::after {
+    content: '·';
+    position: absolute;
+    right: 0;
+    color: rgba(255,255,255,0.3);
+  }
 }
 
 @media (max-width: 600px) {
   .footer-inner { grid-template-columns: 1fr; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
+  /* Mobile CTA hierarchy: primary full-width, secondary as text link */
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+  .hero-actions .btn-primary { width: 100%; justify-content: center; padding: 16px 24px; font-size: 16px; }
+  .hero-actions .btn-secondary {
+    background: transparent;
+    border: none;
+    color: var(--forest);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    padding: 4px 0;
+    font-size: 14px;
+    align-self: center;
+  }
+  .hero-actions .btn-secondary:hover { background: transparent; color: var(--clay); }
   .fcs-actions { flex-direction: column; align-items: center; }
 }
 
