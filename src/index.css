@@ -148,6 +148,12 @@
 }
 .nav-cta:hover { background: var(--clay-light) !important; color: #fff !important; }
 
+/* Mobile menu trigger — visible only when the desktop nav links are hidden (<=900px). */
+.mobile-menu-trigger { display: none; }
+@media (max-width: 900px) {
+  .mobile-menu-trigger { display: inline-flex; }
+}
+
 /* ---- HERO ---- */
 .tcb-hero {
   padding: clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem) clamp(3rem,8vw,6rem);
