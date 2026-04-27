@@ -203,7 +203,7 @@ const FamilyVisits = () => {
                 </div>
               </div>
 
-              {/* Social proof badge — editorial standfirst framed by terracotta hairlines */}
+              {/* Audience standfirst — editorial line framed by terracotta hairlines */}
               <div className="mt-6 flex justify-center sm:justify-start">
                 <div className="inline-flex flex-col items-stretch gap-2.5 py-3">
                   <span
@@ -218,7 +218,7 @@ const FamilyVisits = () => {
                       ✦
                     </span>
                     <span className="font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.18em] text-forest/80">
-                      For daughters and sons who don't know what to say anymore
+                      For the visit when words feel hard
                     </span>
                     <span
                       aria-hidden="true"
@@ -234,31 +234,34 @@ const FamilyVisits = () => {
                 </div>
               </div>
 
-              {/* Mobile-first short headline; longer poetic version on desktop */}
+              {/* Mobile-first benefit-led headline; longer poetic version on desktop */}
               <h1 className="mt-5 font-serif text-forest leading-[0.95] tracking-tight">
-                {/* Mobile headline */}
+                {/* Mobile headline — outcome-led, fits above the fold */}
                 <span className="block lg:hidden text-[2.25rem] sm:text-[2.75rem]">
-                  You sit beside her.
-                  <span className="block italic text-forest/90">The words won't come.</span>
+                  Make this Mother's Day
+                  <span className="block italic text-forest/90">feel close again.</span>
                 </span>
-                {/* Desktop headline (original) */}
+                {/* Desktop headline — keeps the emotional pull, adds the promise */}
                 <span className="hidden lg:block text-[4.25rem]">
-                  You sit down beside her…
-                  <span className="block italic text-forest/90">and you don't know what to say.</span>
+                  When words won't come,
+                  <span className="block italic text-forest/90">presence still can.</span>
                 </span>
               </h1>
 
               <div className="mt-6 md:mt-8 flex items-start gap-5 max-w-xl">
                 <span className="mt-3 hidden md:block w-10 h-px bg-terracotta flex-shrink-0" />
                 <p className="text-foreground/75 text-base md:text-xl leading-[1.65] md:leading-[1.7] font-light">
-                  A gentler way to be with her this Mother's Day. Guided tools
-                  for visits when words feel hard — even when memory is fading.
+                  A free 7-day plan to help you arrive calm, connected, and
+                  ready — even through memory loss, long silences, or quiet
+                  rooms.
                 </p>
               </div>
 
-              {/* Hero email capture — replaces the previous CTA buttons.
-                  Delivers the free guide via ConvertKit incentive email. */}
+              {/* Hero email capture — value bridge above the field warms up the ask */}
               <div id="hero-capture" className="mt-7 md:mt-10 max-w-xl scroll-mt-24">
+                <p className="mb-3 font-sans text-[12px] sm:text-[13px] uppercase tracking-[0.22em] text-forest/70">
+                  Get the free 7-day visit plan
+                </p>
                 <FamilyVisitEmailCapture variant="light" source="hero" />
               </div>
 
@@ -267,7 +270,7 @@ const FamilyVisits = () => {
                 href="#mothers-day-kit"
                 className="mt-5 inline-flex items-center gap-1.5 font-sans text-sm text-forest/70 hover:text-terracotta transition-colors underline underline-offset-4 decoration-terracotta/40"
               >
-                or see the full Mother's Day Kit
+                Already ready? See the full Mother's Day Kit
                 <span aria-hidden="true">→</span>
               </a>
             </motion.div>
