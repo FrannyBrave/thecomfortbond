@@ -525,6 +525,12 @@ const ArticleDetail = () => {
             return <p key={i}>{renderInlineHtml(section.text || "")}</p>;
           })}
 
+          {/* Recommended Kit — per-article curated link to product/blueprint
+              for SEO topical relevance + reader conversion at end-of-article. */}
+          {RECOMMENDED_KIT_BY_SLUG[article.slug] && (
+            <RecommendedKit kit={RECOMMENDED_KIT_BY_SLUG[article.slug]} />
+          )}
+
           {/* Related Articles */}
           {(() => {
             const related = articles.filter((a) => a.slug !== article.slug).slice(0, 3);
