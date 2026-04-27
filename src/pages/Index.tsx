@@ -170,11 +170,12 @@ const Index = () => {
             <div className="p-6 md:p-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
                 {[
-                  { icon: "💬", title: "Conversation Cards", desc: "Open-ended prompts to spark memories and storytelling." },
-                  { icon: "🖼️", title: "Visual Spark Cards", desc: "Vintage imagery to trigger recognition and discussion." },
-                  { icon: "🧠", title: "Themed Trivia", desc: "Multi-level questions calibrated for mixed cognitive groups." },
-                  { icon: "🎯", title: "Themed BINGO Boards", desc: "Multiple printable cards for group play." },
-                  { icon: "🎵", title: "Music & Memory Prompts", desc: "Era-specific song cues to anchor reminiscence." },
+                  { icon: "💬", title: "15+ Conversation Starter Cards", desc: "Open-ended prompts to spark memories and storytelling." },
+                  { icon: "🧠", title: "20 Themed Trivia Questions", desc: "Multi-level questions calibrated for mixed cognitive groups." },
+                  { icon: "🎯", title: "24-Term BINGO + Caller Prompts", desc: "Printable boards with ready-to-read caller prompts for group play." },
+                  { icon: "🔗", title: "Word Link Cognitive Game", desc: "Light cognitive exercise that keeps minds active and engaged." },
+                  { icon: "🎵", title: "Musical Memory · Finish the Lyric", desc: "Era-specific song cues to anchor reminiscence and singalongs." },
+                  { icon: "🖼️", title: "10 Visual Spark Cards", desc: "Vintage imagery to trigger recognition and discussion." },
                   { icon: "📋", title: "Facilitator's Guide", desc: "One-page session flow with adaptation tips & verbatim prompts." },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
