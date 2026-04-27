@@ -311,6 +311,257 @@ const Index = () => {
         </div>
       </section>
 
+      {/* SEE INSIDE — product preview */}
+      <section className="py-16 md:py-20 px-6 md:px-16" style={{ background: "var(--cream)" }}>
+        <div className="max-w-[1000px] mx-auto">
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.4rem)] font-semibold leading-[1.2] text-center mt-0 mb-12" style={{ color: "var(--forest-dark)" }}>
+            Designed to spark <em className="italic" style={{ color: "var(--clay)" }}>real connection.</em>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 see-inside-grid">
+            {[
+              { src: mockupNostalgia, alt: "Conversation Card preview from The Nostalgia Kit — 1950s drive-in movie prompt", caption: "Conversation Card", kit: "The Nostalgia Kit" },
+              { src: mockupHome, alt: "Visual Spark Card preview from The Heart of the Home Kit — vintage kitchen scene", caption: "Visual Spark Card", kit: "The Heart of the Home Kit" },
+              { src: mockupBingo, alt: "Themed BINGO card preview from The Are We There Yet Kit — road trip edition", caption: "Themed BINGO", kit: "The 'Are We There Yet?' Kit" },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <div
+                  className="w-full rounded-xl overflow-hidden"
+                  style={{
+                    aspectRatio: "4 / 5",
+                    boxShadow: "0 8px 24px rgba(45,74,62,0.08), 0 2px 8px rgba(0,0,0,0.04)",
+                  }}
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                </div>
+                <p className="mt-3 text-center" style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "var(--text-mid)", lineHeight: 1.4 }}>
+                  <span style={{ fontWeight: 500, color: "var(--forest-dark)" }}>{item.caption}</span>
+                  <span style={{ color: "var(--text-light)" }}> · {item.kit}</span>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BUNDLE OFFERS */}
+      <section id="bundles" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--clay-pale)" }}>
+        <div className="max-w-[1200px] mx-auto">
+          <div className="section-tag">Best value</div>
+          <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
+            All 5 Kits. 30+ Sessions.<br /><em className="italic" style={{ color: "var(--clay)" }}>One price. Zero prep.</em>
+          </h2>
+          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[620px]" style={{ color: "var(--text-mid)" }}>
+            Get every themed kit in one download and cover your programming calendar for over a month — at a fraction of the individual price.
+          </p>
+
+          {/* === TOP UI ROW === */}
+          <div className="mt-12 rounded-2xl overflow-hidden" style={{ border: "2px solid var(--clay)", boxShadow: "0 8px 40px rgba(198,123,92,0.12)" }}>
+            {/* Premium badge */}
+            <div className="flex items-center justify-center gap-2 py-2 text-[10px] font-semibold tracking-[0.12em] uppercase text-white" style={{ background: "linear-gradient(90deg, #C67B5C 0%, #D4A574 50%, #E8C99A 100%)" }}>
+              <span>★</span> Best Value — Most Activity Directors Choose This <span>★</span>
+            </div>
+
+            {/* Horizontal 3-col UI */}
+            <div className="bundle-ui-row" style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr 1fr", background: "var(--forest)" }}>
+              {/* Left — Price */}
+              <div className="p-6 md:p-8 flex flex-col justify-center" style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}>
+                <div className="text-[10px] font-semibold tracking-[0.12em] uppercase mb-2" style={{ color: "var(--sand)" }}>
+                  The Comfort Bond™ Complete Engagement System
+                </div>
+                <h3 className="font-serif text-[clamp(1.4rem,2.5vw,1.8rem)] font-semibold leading-[1.2] m-0 text-white">
+                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$97</em>
+                </h3>
+                <div className="text-sm text-white/60 mt-2">
+                  <span className="line-through">$135 individually</span>
+                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$38</span>
+                </div>
+              </div>
+
+              {/* Middle — Checklist (compact grid) */}
+              <div className="p-6 md:p-8 flex flex-col justify-center" style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}>
+                <div className="text-[10px] tracking-[0.1em] uppercase font-medium mb-3" style={{ color: "var(--sand)" }}>
+                  Everything included
+                </div>
+                <div className="grid grid-cols-2 gap-x-3 gap-y-2 bundle-checklist-grid">
+                  {BUNDLE_KITS.map((kit, i) => (
+                    <div key={i} className="flex items-center gap-2 text-[12px]" style={{ color: "rgba(255,255,255,0.85)" }}>
+                      <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0 text-[9px] text-white" style={{ background: "var(--clay)" }}>✓</span>
+                      <span>{kit.icon} {kit.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right — Badge + CTA */}
+              <div className="p-6 md:p-8 flex flex-col items-center justify-center gap-4 text-center">
+                <div className="flex items-center gap-2 rounded-lg px-3 py-2" style={{ background: "rgba(232,201,154,0.12)" }}>
+                  <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 3.5V7c0 2.8 2 5.3 5 6 3-0.7 5-3.2 5-6V3.5L7 1z" stroke="var(--sand)" strokeWidth="1.2" /></svg>
+                  <span className="text-[11px] font-medium" style={{ color: "var(--sand)" }}>
+                    30+ sessions
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => openPaddleCheckout("pri_01kpafqz2tc4pfc262j1dnh531")}
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[14px] font-medium text-white border-0 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap"
+                  style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}
+                >
+                  Get All 5 Kits <ArrowSvg />
+                </button>
+                <p className="text-[10px] m-0" style={{ color: "rgba(255,255,255,0.4)" }}>
+                  $97 · One-time · Instant download
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* === BOTTOM GALLERY ROW === */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8 bundle-gallery-row">
+            {[
+              { src: bundleVolume, alt: "Expansive flat-lay of conversation cards, trivia pages, and activity sheets from all 5 Comfort Bond engagement kits spread across a table", title: "A Complete Programming Library", desc: "Everything you need to run engaging sessions, all in one place." },
+              { src: bundleGroup, alt: "Activity Director facilitating a BINGO session with residents using The Comfort Bond engagement kit materials", title: "Meaningful Group Engagement", desc: "Interactive games designed to spark real connection." },
+              { src: bundleStack, alt: "Dense stack of conversation cards, visual spark photo cards, and BINGO sheets from The Comfort Bond kits", title: "Months of Zero-Prep Material", desc: "Enough premium activities to confidently fill your calendar." },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col">
+                <div className="rounded-xl overflow-hidden" style={{ aspectRatio: "4 / 3", boxShadow: "0 4px 16px rgba(45,74,62,0.08)" }}>
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover block"
+                  />
+                </div>
+                <div className="mt-3 text-center">
+                  <div className="text-[11px] font-semibold tracking-[0.08em] uppercase" style={{ color: "var(--forest-dark)" }}>
+                    {item.title}
+                  </div>
+                  <div className="text-[13px] mt-1" style={{ color: "var(--text-mid)", fontFamily: "var(--font-sans)" }}>
+                    {item.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="tcb-section" id="faq" style={{ background: "var(--sage-light, #e8eade)" }}>
+        <div className="section-inner" style={{ maxWidth: 760, margin: "0 auto" }}>
+          <div className="section-tag">Common questions</div>
+          <h2 className="tcb-section-title">Frequently Asked Questions</h2>
+          <div style={{ marginTop: "2.5rem", display: "flex", flexDirection: "column", gap: 0 }}>
+            {[
+              { q: "Will these work for residents with dementia or memory loss?", a: "Yes. Every activity is designed with cognitive accessibility in mind. There are no wrong answers — just warm conversations, familiar music, and prompts that meet each person where they are. Activity Directors tell us these kits spark engagement even in residents who are usually withdrawn." },
+              { q: "How many sessions can I get out of one kit?", a: "Each kit includes 6 different activity types (conversation cards, trivia, BINGO, word link, musical memory, and visual spark cards). Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. Get all 5 kits for $97 and cover 30+ sessions across every theme." },
+              { q: "Is this a monthly subscription?", a: "No. Every kit and bundle is a one-time purchase. There are no hidden fees or recurring charges. Once you buy, it's yours to print and use forever." },
+              { q: "Can I print these for my whole floor?", a: 'Yes! The kits are specifically designed to be printer-friendly on standard 8.5" x 11" paper. Print as many copies as you need — BINGO cards, trivia sheets, conversation prompts — and hand them out directly to residents. One purchase covers your entire community.' },
+              { q: "How quickly will I get access?", a: "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be running an activity with your group five minutes later. No waiting for shipping." }].
+              map((item, i) =>
+              <details
+                key={i}
+                className="faq-item"
+                style={{
+                  borderBottom: "1px solid rgba(45,74,62,0.15)"
+                }}>
+                
+                <summary
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    cursor: "pointer",
+                    padding: "1.25rem 0",
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "var(--forest)",
+                    listStyle: "none"
+                  }}>
+                  
+                  {item.q}
+                  <span style={{ flexShrink: 0, marginLeft: 16, fontSize: 18, color: "var(--clay)", transition: "transform 0.2s" }}>+</span>
+                </summary>
+                <div
+                  style={{
+                    paddingBottom: "1.25rem",
+                    fontSize: 15,
+                    lineHeight: 1.7,
+                    color: "rgba(45,74,62,0.75)"
+                  }}>
+                  
+                  {item.a}
+                </div>
+              </details>
+              )}
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="tcb-section about-section" id="about">
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 clamp(1.5rem,5vw,4rem)" }}>
+          <div className="about-tag">Our story</div>
+          <h2 className="about-title">You Shouldn't Have to<br />Spend Your Weekends<br />Figuring Out <em>Monday.</em></h2>
+
+          <div className="about-body" style={{ marginTop: "2rem" }}>
+            <p>You're running multiple sessions a day, trying to keep residents engaged, while piecing together activities that were never designed for your environment.</p>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontStyle: "italic" }}>Some days it works. Most days, it's exhausting.</p>
+            <p>Not because you're unprepared—but because you've never been given a real system.</p>
+            <p>You care about your residents. You just need something that works consistently.</p>
+            <p style={{ color: "#fff", fontWeight: 400, marginTop: "1.5rem" }}>That's why The Comfort Bond™ exists.</p>
+          </div>
+
+          <div className="about-sig" style={{ marginTop: "2rem" }}>— Francesca, Founder</div>
+
+          <div style={{ marginTop: "1.5rem" }}>
+            <a
+              href="/our-story"
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: 15,
+                fontWeight: 500,
+                color: "var(--sand, #E8C99A)",
+                textDecoration: "none",
+                borderBottom: "1px solid rgba(232,201,154,0.4)",
+                paddingBottom: 2,
+              }}
+            >
+              Read the full story →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE CARDS — What this looks like in practice */}
+      <section style={{ background: "var(--sand-pale)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+          <div className="section-tag" style={{ textAlign: "center", display: "flex", justifyContent: "center" }}>In practice</div>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 600, lineHeight: 1.2, color: "var(--forest-dark)", textAlign: "center", marginTop: 0, marginBottom: "3rem" }}>
+            What this looks like <em style={{ fontStyle: "italic", color: "var(--clay)" }}>in practice</em>
+          </h2>
+          <div className="about-features-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
+            {[
+              { num: "5 Minutes", title: "From Download to Facilitation", desc: "No prep required." },
+              { num: "30+ Sessions", title: "A Growing Library", desc: "You can rely on — this week and beyond." },
+              { num: "100%", title: "Adult-Centered", desc: "No crafts. No coloring pages. No compromise on dignity." },
+            ].map((card, i) => (
+              <div key={i} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "var(--radius)", padding: "2rem", textAlign: "center" }}>
+                <div style={{ fontFamily: "var(--font-serif)", fontSize: "2rem", fontWeight: 600, color: "var(--forest)", lineHeight: 1, marginBottom: "0.75rem" }}>{card.num}</div>
+                <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", fontWeight: 600, color: "var(--forest-dark)", marginBottom: "0.5rem" }}>{card.title}</div>
+                <div style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: "var(--text-mid)", lineHeight: 1.6 }}>{card.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* FINAL CTA */}
       <section className="final-cta-section">
         <div className="final-cta-inner">
