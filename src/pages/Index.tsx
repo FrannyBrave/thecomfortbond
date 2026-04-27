@@ -507,38 +507,33 @@ const Index = () => {
       <section className="tcb-section about-section" id="about">
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 clamp(1.5rem,5vw,4rem)" }}>
           <div className="about-tag">Our story</div>
-          <h2 className="about-title">You Shouldn't Have to<br />Spend Your Weekends<br />Planning <em>Monday's Activities.</em></h2>
+          <h2 className="about-title">You Shouldn't Have to<br />Spend Your Weekends<br />Figuring Out <em>Monday.</em></h2>
 
           <div className="about-body" style={{ marginTop: "2rem" }}>
-            <p>You didn't choose this work to spend Sunday nights searching for something that might work.</p>
-            <p style={{ color: "rgba(255,255,255,0.5)", fontStyle: "italic" }}>Scrolling. Printing. Rewriting.</p>
-            <p>Trying to turn generic ideas into something your residents will actually connect with.</p>
-
-            <p style={{ fontFamily: "var(--font-serif)", fontWeight: 600, color: "#fff", fontSize: "1.05rem", marginTop: "2rem" }}>Here's the reality:</p>
-            <p>You're running multiple sessions a day — and still expected to create meaningful activities from scratch.</p>
-            <p>So you piece things together.</p>
-            <p>And even when it "works"... you know it wasn't built for them.</p>
-
-            <p style={{ fontFamily: "var(--font-serif)", fontWeight: 600, color: "#fff", fontSize: "1.05rem", marginTop: "2rem" }}>This is not a you problem.</p>
-            <p>You're not behind. You're not underprepared.</p>
-            <p>You've been given no real system to work with.</p>
-            <p style={{ color: "#fff", fontWeight: 400 }}>So we built one.</p>
+            <p>You're running multiple sessions a day, trying to keep residents engaged, while piecing together activities that were never designed for your environment.</p>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontStyle: "italic" }}>Some days it works. Most days, it's exhausting.</p>
+            <p>Not because you're unprepared—but because you've never been given a real system.</p>
+            <p>You care about your residents. You just need something that works consistently.</p>
+            <p style={{ color: "#fff", fontWeight: 400, marginTop: "1.5rem" }}>That's why The Comfort Bond™ exists.</p>
           </div>
 
-          <div className="about-sig" style={{ marginTop: "2rem" }}>— Francesca, Founder of The Comfort Bond™</div>
-        </div>
-      </section>
+          <div className="about-sig" style={{ marginTop: "2rem" }}>— Francesca, Founder</div>
 
-      {/* SOLUTION */}
-      <section style={{ background: "var(--cream)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto" }}>
-          <div className="about-body" style={{ color: "var(--text-mid)" }}>
-            <p style={{ fontStyle: "italic" }}>Visiting shouldn't feel this hard.</p>
-            <p>The Comfort Bond™ offers ready-to-use engagement kits for senior living, memory care, and families supporting aging parents.</p>
-            <p style={{ color: "var(--text-light)", fontStyle: "italic" }}>No adapting. No guesswork. No late-night planning.</p>
-            <p>Open it on your tablet—or print what you need and walk into your visit ready.</p>
-            <p>And bring the focus back where it belongs:</p>
-            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", color: "var(--clay)", fontSize: "1.25em" }}>Connection. Conversation. Presence.</p>
+          <div style={{ marginTop: "1.5rem" }}>
+            <a
+              href="/our-story"
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: 15,
+                fontWeight: 500,
+                color: "var(--sand, #E8C99A)",
+                textDecoration: "none",
+                borderBottom: "1px solid rgba(232,201,154,0.4)",
+                paddingBottom: 2,
+              }}
+            >
+              Read the full story →
+            </a>
           </div>
         </div>
       </section>
