@@ -150,6 +150,66 @@ const Index = () => {
             Each kit is a complete, themed activity package — zero prep, maximum engagement. Inside you'll find conversation cards, visual spark prompts, trivia, BINGO, and music-based memory activities, all carefully structured to keep residents engaged while making facilitation effortless.
           </p>
 
+          {/* What's in every kit — unified contents card */}
+          <div className="mt-10 rounded-2xl overflow-hidden bg-white" style={{ border: "1px solid rgba(45,74,62,0.12)", boxShadow: "0 4px 20px rgba(45,74,62,0.06)" }}>
+            <div className="px-6 md:px-8 py-4 flex items-center justify-between gap-4 flex-wrap" style={{ background: "rgba(45,74,62,0.04)", borderBottom: "1px solid rgba(45,74,62,0.08)" }}>
+              <div className="flex items-center gap-3">
+                <span className="w-9 h-9 rounded-lg flex items-center justify-center text-[16px]" style={{ background: "var(--clay)", color: "#fff" }}>📦</span>
+                <div>
+                  <div className="text-[10px] font-semibold tracking-[0.12em] uppercase" style={{ color: "var(--clay)" }}>What's in every kit</div>
+                  <h3 className="font-serif text-[1.15rem] md:text-[1.3rem] font-semibold leading-tight m-0" style={{ color: "var(--forest-dark)" }}>
+                    A complete, ready-to-facilitate session pack
+                  </h3>
+                </div>
+              </div>
+              <div className="text-[11px] font-medium tracking-[0.08em] uppercase px-3 py-1.5 rounded-full" style={{ color: "var(--forest)", background: "rgba(232,201,154,0.4)" }}>
+                ~6 hours of programming
+              </div>
+            </div>
+
+            <div className="p-6 md:p-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+                {[
+                  { icon: "💬", title: "Conversation Cards", desc: "Open-ended prompts to spark memories and storytelling." },
+                  { icon: "🖼️", title: "Visual Spark Cards", desc: "Vintage imagery to trigger recognition and discussion." },
+                  { icon: "🧠", title: "Themed Trivia", desc: "Multi-level questions calibrated for mixed cognitive groups." },
+                  { icon: "🎯", title: "Themed BINGO Boards", desc: "Multiple printable cards for group play." },
+                  { icon: "🎵", title: "Music & Memory Prompts", desc: "Era-specific song cues to anchor reminiscence." },
+                  { icon: "📋", title: "Facilitator's Guide", desc: "One-page session flow with adaptation tips & verbatim prompts." },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="w-9 h-9 rounded-lg flex items-center justify-center text-[16px] flex-shrink-0" style={{ background: "rgba(198,123,92,0.08)", border: "1px solid rgba(198,123,92,0.15)" }}>
+                      {item.icon}
+                    </span>
+                    <div>
+                      <div className="text-[13px] font-semibold leading-tight mb-1" style={{ color: "var(--forest-dark)" }}>{item.title}</div>
+                      <div className="text-[12px] leading-[1.5]" style={{ color: "var(--text-mid)" }}>{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 pt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px]" style={{ borderTop: "1px dashed rgba(45,74,62,0.15)", color: "var(--text-mid)" }}>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[9px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  Print-ready PDF
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[9px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  Instant download
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[9px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  Zero prep required
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[9px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  Reuse session after session
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Product Grid — 5 Kits */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {[
