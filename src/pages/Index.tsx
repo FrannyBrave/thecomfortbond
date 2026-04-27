@@ -86,13 +86,23 @@ const Index = () => {
               Built for Activity Directors & Life Enrichment Teams
             </div>
             <h1>Your Next 30 Days<br />of Activities — <em>Done.</em></h1>
+            <div className="hero-bundle-pill">
+              <span className="hero-bundle-pill-tag">Best value</span>
+              <span className="hero-bundle-pill-text">All 5 Kits · 30+ sessions · <strong>$97</strong> <span className="hero-bundle-pill-strike">$135</span></span>
+            </div>
             <div className="hero-actions">
-              <a href="#products" className="btn-primary">
-                See the 5 kits
+              <a href="#bundles" className="btn-primary">
+                Get all 5 kits — $97
                 <ArrowSvg />
               </a>
-              <a href="#bundles" className="btn-secondary">Save with bundles</a>
+              <a href="#products" className="btn-secondary">Browse individual kits</a>
             </div>
+            <a href="#bundles" className="hero-scroll-hint" aria-label="Scroll to bundle section">
+              <span>See what's in the bundle</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M6 2v8M3 7l3 3 3-3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
             <div className="hero-trust">
               <div className="trust-badges">
                 <div className="trust-badge">
