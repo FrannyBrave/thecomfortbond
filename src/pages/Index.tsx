@@ -167,46 +167,45 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="p-6 md:p-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+            <div className="px-6 md:px-8 py-6">
+              <div className="flex flex-wrap gap-2">
                 {[
-                  { icon: "💬", title: "15+ Conversation Starter Cards", desc: "Open-ended prompts to spark memories and storytelling." },
-                  { icon: "🧠", title: "20 Themed Trivia Questions", desc: "Multi-level questions calibrated for mixed cognitive groups." },
-                  { icon: "🎯", title: "24-Term BINGO + Caller Prompts", desc: "Printable boards with ready-to-read caller prompts for group play." },
-                  { icon: "🔗", title: "Word Link Cognitive Game", desc: "Light cognitive exercise that keeps minds active and engaged." },
-                  { icon: "🎵", title: "Musical Memory · Finish the Lyric", desc: "Era-specific song cues to anchor reminiscence and singalongs." },
-                  { icon: "🖼️", title: "10 Visual Spark Cards", desc: "Vintage imagery to trigger recognition and discussion." },
-                  { icon: "📋", title: "Facilitator's Guide", desc: "One-page session flow with adaptation tips & verbatim prompts." },
+                  { icon: "💬", label: "15+ Conversation Starter Cards" },
+                  { icon: "🧠", label: "20 Themed Trivia Questions" },
+                  { icon: "🎯", label: "24-Term BINGO + Caller Prompts" },
+                  { icon: "🔗", label: "Word Link Cognitive Game" },
+                  { icon: "🎵", label: "Musical Memory · Finish the Lyric" },
+                  { icon: "🖼️", label: "10 Visual Spark Cards" },
+                  { icon: "📋", label: "Facilitator's Guide" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="w-9 h-9 rounded-lg flex items-center justify-center text-[16px] flex-shrink-0" style={{ background: "rgba(198,123,92,0.08)", border: "1px solid rgba(198,123,92,0.15)" }}>
-                      {item.icon}
-                    </span>
-                    <div>
-                      <div className="text-[13px] font-semibold leading-tight mb-1" style={{ color: "var(--forest-dark)" }}>{item.title}</div>
-                      <div className="text-[12px] leading-[1.5]" style={{ color: "var(--text-mid)" }}>{item.desc}</div>
-                    </div>
-                  </div>
+                  <span
+                    key={i}
+                    className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] font-medium"
+                    style={{ background: "rgba(198,123,92,0.08)", border: "1px solid rgba(198,123,92,0.18)", color: "var(--forest-dark)" }}
+                  >
+                    <span className="text-[14px] leading-none">{item.icon}</span>
+                    {item.label}
+                  </span>
                 ))}
               </div>
 
-              <div className="mt-6 pt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px]" style={{ borderTop: "1px dashed rgba(45,74,62,0.15)", color: "var(--text-mid)" }}>
-                <div className="flex items-center gap-1.5">
-                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[9px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+              <div className="mt-5 pt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11.5px]" style={{ borderTop: "1px dashed rgba(45,74,62,0.15)", color: "var(--text-mid)" }}>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--forest)" }}>✓</span>
                   Print-ready PDF
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[9px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--forest)" }}>✓</span>
                   Instant download
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[9px] text-white" style={{ background: "var(--forest)" }}>✓</span>
-                  Zero prep required
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="w-4 h-4 rounded-full flex items-center justify-center text-[9px] text-white" style={{ background: "var(--forest)" }}>✓</span>
-                  Reuse session after session
-                </div>
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  Zero prep
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  Reuse anytime
+                </span>
               </div>
             </div>
           </div>
