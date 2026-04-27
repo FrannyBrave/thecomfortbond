@@ -7,6 +7,7 @@ import bundleVolume from "@/assets/senior-living-activity-bundle-programming-too
 import bundleGroup from "@/assets/group-activities-for-seniors-memory-care-engagement.png";
 import bundleStack from "@/assets/printable-senior-activity-kit-pages-overview.png";
 import { FooterSection } from "@/components/sections/FooterSection";
+import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import React from "react";
 import { openPaddleCheckout } from "@/lib/paddle";
 
@@ -101,13 +102,16 @@ export default function Kits() {
             The Comfort Bond
           </span>
         </Link>
-        <Link
-          to="/"
-          className="text-sm no-underline transition-colors hover:opacity-70"
-          style={{ color: "var(--text-light)", fontFamily: "var(--font-sans)" }}
-        >
-          &larr; Back to Home
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link
+            to="/"
+            className="hidden lg:inline-block text-sm no-underline transition-colors hover:opacity-70"
+            style={{ color: "var(--text-light)", fontFamily: "var(--font-sans)" }}
+          >
+            &larr; Back to Home
+          </Link>
+          <MobileMenuDrawer />
+        </div>
       </nav>
 
       {/* ── Products Section ── */}

@@ -6,6 +6,7 @@ import bundleVolume from "@/assets/senior-living-activity-bundle-programming-too
 import bundleGroup from "@/assets/group-activities-for-seniors-memory-care-engagement.png";
 import bundleStack from "@/assets/printable-senior-activity-kit-pages-overview.png";
 import { CookieConsent } from "@/components/CookieConsent";
+import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { openPaddleCheckout } from "@/lib/paddle";
 
 
@@ -72,6 +73,7 @@ const Index = () => {
             <li><a href="/free-sampler" className="nav-blueprint">Free Sampler</a></li>
             <li><a href="/kits" className="nav-cta">Shop Now</a></li>
           </ul>
+          <MobileMenuDrawer />
         </nav>
       </header>
 
