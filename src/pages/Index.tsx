@@ -151,18 +151,18 @@ const Index = () => {
           </p>
 
           {/* What's in every kit — unified contents card */}
-          <div className="mt-10 rounded-2xl overflow-hidden bg-white" style={{ border: "1px solid rgba(45,74,62,0.12)", boxShadow: "0 4px 20px rgba(45,74,62,0.06)" }}>
-            <div className="px-6 md:px-8 py-4 flex items-center justify-between gap-4 flex-wrap" style={{ background: "rgba(45,74,62,0.04)", borderBottom: "1px solid rgba(45,74,62,0.08)" }}>
+          <div className="mt-10 rounded-2xl overflow-hidden" style={{ background: "var(--forest-dark)", border: "1px solid var(--forest-dark)", boxShadow: "0 8px 32px rgba(45,74,62,0.18)" }}>
+            <div className="px-6 md:px-8 py-4 flex items-center justify-between gap-4 flex-wrap" style={{ background: "rgba(255,255,255,0.04)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
               <div className="flex items-center gap-3">
                 <span className="w-9 h-9 rounded-lg flex items-center justify-center text-[16px]" style={{ background: "var(--clay)", color: "#fff" }}>📦</span>
                 <div>
-                  <div className="text-[10px] font-semibold tracking-[0.12em] uppercase" style={{ color: "var(--clay)" }}>What's in every kit</div>
-                  <h3 className="font-serif text-[1.15rem] md:text-[1.3rem] font-semibold leading-tight m-0" style={{ color: "var(--forest-dark)" }}>
+                  <div className="text-[10px] font-semibold tracking-[0.12em] uppercase" style={{ color: "var(--sand)" }}>What's in every kit</div>
+                  <h3 className="font-serif text-[1.15rem] md:text-[1.3rem] font-semibold leading-tight m-0 text-white">
                     A complete, ready-to-facilitate session pack
                   </h3>
                 </div>
               </div>
-              <div className="text-[11px] font-medium tracking-[0.08em] uppercase px-3 py-1.5 rounded-full" style={{ color: "var(--forest)", background: "rgba(232,201,154,0.4)" }}>
+              <div className="text-[11px] font-medium tracking-[0.08em] uppercase px-3 py-1.5 rounded-full" style={{ color: "var(--sand)", background: "rgba(232,201,154,0.18)" }}>
                 ~6 hours of programming
               </div>
             </div>
@@ -181,7 +181,7 @@ const Index = () => {
                   <span
                     key={i}
                     className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] font-medium"
-                    style={{ background: "rgba(198,123,92,0.08)", border: "1px solid rgba(198,123,92,0.18)", color: "var(--forest-dark)" }}
+                    style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(232,201,154,0.25)", color: "#fff" }}
                   >
                     <span className="text-[14px] leading-none">{item.icon}</span>
                     {item.label}
@@ -189,21 +189,21 @@ const Index = () => {
                 ))}
               </div>
 
-              <div className="mt-5 pt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11.5px]" style={{ borderTop: "1px dashed rgba(45,74,62,0.15)", color: "var(--text-mid)" }}>
+              <div className="mt-5 pt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11.5px]" style={{ borderTop: "1px dashed rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.75)" }}>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
                   Print-ready PDF
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
                   Instant download
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
                   Zero prep
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--forest)" }}>✓</span>
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
                   Reuse anytime
                 </span>
               </div>
