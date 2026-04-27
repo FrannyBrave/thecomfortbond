@@ -84,10 +84,6 @@ const Index = () => {
               Built for Activity Directors & Life Enrichment Teams
             </div>
             <h1>Your Next 30 Days<br />of Activities — <em>Done.</em></h1>
-            <div className="hero-bundle-pill">
-              <span className="hero-bundle-pill-tag">Best value</span>
-              <span className="hero-bundle-pill-text">All 5 Kits · 30+ sessions · <strong>$97</strong> <span className="hero-bundle-pill-strike">$135</span></span>
-            </div>
             <div className="hero-actions">
               <a href="#bundles" className="btn-primary">
                 Get all 5 kits — $97
