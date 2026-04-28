@@ -147,13 +147,23 @@ export default function MorningSamplerLandingPage() {
             The Comfort Bond™
           </span>
         </Link>
-        <Link
-          to="/" style={{ fontFamily: sans, fontSize: "0.75rem", fontWeight: 500, color: c.softGray, textDecoration: "none", transition: "color 0.15s" }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = c.forest)}
-          onMouseLeave={(e) => (e.currentTarget.style.color = c.softGray)}
-        >
-          ← Back to Home
-        </Link>
+        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <Link
+            to="/kits"
+            style={{ fontFamily: sans, fontSize: "0.8rem", fontWeight: 600, color: c.terracotta, textDecoration: "none", transition: "color 0.15s" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = c.forest)}
+            onMouseLeave={(e) => (e.currentTarget.style.color = c.terracotta)}
+          >
+            Upgrade to Engagement Kits →
+          </Link>
+          <Link
+            to="/" style={{ fontFamily: sans, fontSize: "0.75rem", fontWeight: 500, color: c.softGray, textDecoration: "none", transition: "color 0.15s" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = c.forest)}
+            onMouseLeave={(e) => (e.currentTarget.style.color = c.softGray)}
+          >
+            ← Back to Home
+          </Link>
+        </div>
       </div>
 
       {/* ── Hero ── */}
