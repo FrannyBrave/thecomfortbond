@@ -137,32 +137,37 @@ export default function MorningSamplerLandingPage() {
   return (
     <div style={{ fontFamily: sans, color: c.deepBrown, background: c.cream, lineHeight: 1.75 }}>
       {/* ── Brand Bar ── */}
-      <div style={{
-        padding: "14px clamp(1.25rem, 5vw, 3rem)", display: "flex", alignItems: "center",
-        justifyContent: "space-between", background: c.warmWhite, borderBottom: `1px solid ${c.borderWarm}`,
-      }}>
-        <Link to="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-          <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" style={{ height: 36, width: 36, borderRadius: "50%", objectFit: "cover" }} />
-          <span style={{ fontFamily: serif, fontSize: "1rem", fontWeight: 600, color: c.forest, letterSpacing: "-0.01em" }}>
-            The Comfort Bond™
-          </span>
+      <style>{`
+        .sampler-navbar { padding: 12px clamp(1rem, 4vw, 3rem); display: flex; align-items: center; justify-content: space-between; gap: 12px; background: ${c.warmWhite}; border-bottom: 1px solid ${c.borderWarm}; position: sticky; top: 0; z-index: 50; }
+        .sampler-navbar__brand-text { font-family: ${serif}; font-size: 1rem; font-weight: 600; color: ${c.forest}; letter-spacing: -0.01em; white-space: nowrap; }
+        .sampler-navbar__actions { display: flex; align-items: center; gap: 10px; }
+        .sampler-navbar__upgrade { font-family: ${sans}; font-size: 0.8rem; font-weight: 600; color: ${c.cream}; background: ${c.terracotta}; text-decoration: none; padding: 10px 14px; border-radius: 999px; min-height: 40px; display: inline-flex; align-items: center; line-height: 1; transition: background 0.15s; white-space: nowrap; }
+        .sampler-navbar__upgrade:hover { background: ${c.forest}; }
+        .sampler-navbar__back { font-family: ${sans}; font-size: 0.8rem; font-weight: 500; color: ${c.softGray}; text-decoration: none; padding: 8px 4px; min-height: 40px; display: inline-flex; align-items: center; transition: color 0.15s; white-space: nowrap; }
+        .sampler-navbar__back:hover { color: ${c.forest}; }
+        .sampler-navbar__upgrade-short { display: none; }
+        @media (max-width: 640px) {
+          .sampler-navbar__brand-text { font-size: 0.9rem; }
+          .sampler-navbar__back { display: none; }
+          .sampler-navbar__upgrade-full { display: none; }
+          .sampler-navbar__upgrade-short { display: inline; }
+          .sampler-navbar__upgrade { padding: 9px 12px; font-size: 0.78rem; }
+        }
+        @media (max-width: 380px) {
+          .sampler-navbar__brand-text { display: none; }
+        }
+      `}</style>
+      <div className="sampler-navbar">
+        <Link to="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", minWidth: 0 }}>
+          <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" style={{ height: 36, width: 36, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
+          <span className="sampler-navbar__brand-text">The Comfort Bond™</span>
         </Link>
-        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <Link
-            to="/kits"
-            style={{ fontFamily: sans, fontSize: "0.8rem", fontWeight: 600, color: c.terracotta, textDecoration: "none", transition: "color 0.15s" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = c.forest)}
-            onMouseLeave={(e) => (e.currentTarget.style.color = c.terracotta)}
-          >
-            Upgrade to Engagement Kits →
+        <div className="sampler-navbar__actions">
+          <Link to="/kits" className="sampler-navbar__upgrade" aria-label="Upgrade to Engagement Kits">
+            <span className="sampler-navbar__upgrade-full">Upgrade to Engagement Kits →</span>
+            <span className="sampler-navbar__upgrade-short">Upgrade →</span>
           </Link>
-          <Link
-            to="/" style={{ fontFamily: sans, fontSize: "0.75rem", fontWeight: 500, color: c.softGray, textDecoration: "none", transition: "color 0.15s" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = c.forest)}
-            onMouseLeave={(e) => (e.currentTarget.style.color = c.softGray)}
-          >
-            ← Back to Home
-          </Link>
+          <Link to="/" className="sampler-navbar__back">← Home</Link>
         </div>
       </div>
 
