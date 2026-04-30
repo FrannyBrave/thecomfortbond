@@ -390,52 +390,19 @@ export default function MorningSamplerLandingPage() {
         </div>
       </section>
 
-      {/* ── Brand Positioning ── */}
-      <section style={{ padding: "64px 0" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px", textAlign: "center" }}>
-          <span style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, marginBottom: "16px", display: "block",
-          }}>
-            The Comfort Bond™
-          </span>
-          <div style={{ width: 3, height: 40, background: c.terracotta, margin: "0 auto 2rem", borderRadius: "2px" }} />
-          {[
-            <>Designed <em style={{ color: c.terracotta, fontStyle: "normal", fontWeight: 600 }}>specifically</em> for senior living professionals.</>,
-            "Built with dignity, warmth, and the understanding that your residents deserve something better than busy work.",
-            "Not generic. Not childish. Not borrowed from a classroom.",
-          ].map((text, i) => (
-            <p key={i} style={{ fontSize: "17px", lineHeight: 1.8, textAlign: "center", color: c.warmGray, maxWidth: 520, margin: "0 auto 12px" }}>
-              {text}
-            </p>
-          ))}
-          <p style={{ fontSize: "17px", lineHeight: 1.8, textAlign: "center", color: c.warmGray, maxWidth: 520, margin: "20px auto 0" }}>
-            <em style={{ color: c.terracotta, fontStyle: "normal", fontWeight: 600 }}>
-              Made for the work you actually do.
-            </em>
-          </p>
-        </div>
-      </section>
-
       {/* ── Final Close ── */}
       <section style={{
-        padding: "80px 0", textAlign: "center",
+        padding: "64px 0", textAlign: "center",
         background: `linear-gradient(135deg, ${c.forest} 0%, ${c.forestLight} 100%)`,
       }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-          {[
-            "Mornings don't have to feel rushed.",
-            "Connection can start with a single question.",
-            "And the smallest moments — a story shared, a memory recalled, a room that feels a little warmer — are often the ones that matter most.",
-          ].map((text, i) => (
-            <p key={i} style={{
-              fontFamily: serif, fontSize: "20px", lineHeight: 1.8,
-              color: "rgba(250,247,242,0.9)", maxWidth: 500, margin: "0 auto 16px",
-            }}>
-              {text}
-            </p>
-          ))}
-          <p style={{ fontSize: "16px", fontStyle: "italic", color: c.terracotta, marginTop: "36px" }}>
+          <p style={{
+            fontFamily: serif, fontSize: "22px", lineHeight: 1.6, fontStyle: "italic",
+            color: "rgba(250,247,242,0.95)", maxWidth: 520, margin: "0 auto",
+          }}>
+            Mornings don't have to feel rushed. Connection can start with a single question.
+          </p>
+          <p style={{ fontSize: "14px", fontStyle: "italic", color: c.terracotta, marginTop: "24px" }}>
             — Francesca, Founder of The Comfort Bond™
           </p>
         </div>
