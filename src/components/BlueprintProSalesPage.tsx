@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/the-comfort-bond-logo.png";
 import heroMockup from "@/assets/memory-care-activity-calendar-template.png";
