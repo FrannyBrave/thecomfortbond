@@ -592,6 +592,22 @@ export default function BlueprintProSalesPage() {
         </div>
         <div style={{ borderTop: `1px solid ${c.gridline}` }}>
           <FaqItem
+            q={"How will I receive the Blueprint?"}
+            a={"Instantly. As soon as checkout is complete, you\u2019ll receive an email with your download link. The Blueprint is delivered as a high-quality PDF you can open on any device \u2014 laptop, tablet, or phone \u2014 within minutes of purchase."}
+          />
+          <FaqItem
+            q={"Can I print it, or is it only digital?"}
+            a={"Both. The Blueprint is designed to look beautiful on a tablet or laptop, and it\u2019s fully optimized for printing on standard 8.5\u00d711\u201d paper. Many Activity Directors print just the current week and keep it on their desk or clipboard. Print as many times as you need \u2014 it\u2019s yours."}
+          />
+          <FaqItem
+            q={"Does this work for assisted living, not just memory care?"}
+            a={"Yes. The Blueprint is designed for the full range of senior living \u2014 independent living, assisted living, memory care, and adult day programs. The themes are adult-centered and the coaching notes include guidance for adapting depth and pacing to your residents\u2019 cognitive levels."}
+          />
+          <FaqItem
+            q={"Do you offer refunds?"}
+            a={"Because The Programming Blueprint\u2122 Pro is an instant digital download, all sales are final once the file has been delivered. We don\u2019t offer refunds on downloaded digital products \u2014 but if something isn\u2019t working (a broken link, a missing file), email us and we\u2019ll make it right immediately."}
+          />
+          <FaqItem
             q={"\u201CI don\u2019t have time to learn a new system.\u201D"}
             a={"Open the Blueprint. Turn to this week\u2019s page. Read the theme and the coaching tip. Fill in your activities. Five minutes. No onboarding, no training, no learning curve."}
           />
@@ -603,6 +619,14 @@ export default function BlueprintProSalesPage() {
             q={"\u201CAre these activities childish?\u201D"}
             a={"No. Every theme and conversation starter was designed for adults with rich life histories. County fairs, kitchen tables, Sunday drives, handwritten letters. No coloring pages. No patronizing language."}
           />
+        </div>
+
+        {/* Buy button after FAQ */}
+        <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+          <Cta large>Get My 13-Week Plan — $27</Cta>
+          <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, marginTop: "0.65rem" }}>
+            Instant download · All sales final on digital products
+          </p>
         </div>
       </Narrow>
 
