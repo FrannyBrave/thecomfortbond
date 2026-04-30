@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import samplerHero from "@/assets/memory-care-morning-activity-routine-seniors.png";
 import samplerMoments from "@/assets/dementia-friendly-activity-cards-for-engagement.png";
