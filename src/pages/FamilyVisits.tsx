@@ -371,7 +371,7 @@ const FamilyVisits = () => {
                       <p className="font-serif text-cream text-lg md:text-xl leading-tight mb-1.5">
                         {item.t}
                       </p>
-                      <p className="font-sans text-cream/75 text-[15px] leading-[1.65] font-light">
+                      <p className="font-sans text-[rgba(250,247,242,0.8)] text-[15px] leading-[1.65] font-light">
                         {item.d}
                       </p>
                     </div>
