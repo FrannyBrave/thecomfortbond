@@ -1,17 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { FooterSection } from "@/components/sections/FooterSection";
-import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import { FamilyVisitEmailCapture } from "@/components/FamilyVisitEmailCapture";
 import { ExitIntentModal } from "@/components/ExitIntentModal";
 import { Button } from "@/components/ui/button";
 import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
 import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
-
 import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.png";
-import mothersDayHero from "@/assets/blog-mothers-day-memory-care-hero.jpg";
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -54,26 +49,30 @@ const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   </span>
 );
 
-/* Gentle days-until-Mother's-Day counter — calm urgency, not a pressure timer */
+/* Gentle days-until-Mother's-Day counter — calm urgency */
 const useDaysUntilMothersDay = () => {
   return useMemo(() => {
     const today = new Date();
-    // Mother's Day US 2026: May 10. Falls back to next year after the date passes.
     let target = new Date(today.getFullYear(), 4, 10);
     if (today > target) {
       target = new Date(today.getFullYear() + 1, 4, 10);
     }
-    const ms = target.getTime() - new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime();
+    const ms =
+      target.getTime() -
+      new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime();
     const days = Math.max(0, Math.round(ms / (1000 * 60 * 60 * 24)));
-    return { days, dateLabel: target.toLocaleDateString("en-US", { month: "long", day: "numeric" }) };
+    return {
+      days,
+      dateLabel: target.toLocaleDateString("en-US", { month: "long", day: "numeric" }),
+    };
   }, []);
 };
 
 const FamilyVisits = () => {
-  const { days, dateLabel } = useDaysUntilMothersDay();
+  const { days } = useDaysUntilMothersDay();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [checkoutOpen, setCheckoutOpen] = useState(false);
-  const [checkoutSource, setCheckoutSource] = useState("path-two");
+  const [checkoutSource, setCheckoutSource] = useState("hero");
 
   const openCheckoutModal = (source: string) => {
     setCheckoutSource(source);
@@ -86,19 +85,19 @@ const FamilyVisits = () => {
       a: "Yes — every prompt and ritual was designed with memory care in mind. Nothing asks her to recall facts or dates. The tools meet her where she is today, using sensory cues, familiar music, and gentle observation rather than memory tests.",
     },
     {
-      q: "What's the difference between the Free Guide and the $27 Kit?",
-      a: "The Free Guide is a 7-day preparation path — it helps you arrive calm and ready. The $27 Kit is what you actually bring with you on the day: 20 conversation cards, 15 visual spark cards, a playlist guide, a guided letter template, and a morning ritual walkthrough.",
+      q: "Is this a digital download or a physical product?",
+      a: "It's an instant digital download — a .zip file containing 5 premium PDFs. You can print everything at home on standard 8.5×11\" paper, or use it directly on your phone or tablet with no printing required.",
     },
     {
-      q: "Is this a digital download or a physical product?",
-      a: "Both items are instant digital downloads. The Free 7-Day Plan is a single PDF file, while the full Mother's Day Connection Kit is delivered as a .zip file containing all 5 premium PDFs.\n\nYou can print everything at home on standard 8.5x11\" paper—no special supplies needed. For the Conversation and Visual Spark cards, we recommend printing on heavy cream cardstock for a beautiful, lasting feel.\n\nPrefer not to print? The guides and visual cards are perfectly optimized to offer a beautiful, crisp experience when viewed directly on an iPad or tablet. You can easily save the files and bring your device right into the room with you.",
+      q: "When will I get access?",
+      a: "Immediately. The download link is delivered to your inbox the moment your purchase completes. You can use the kit the same day you visit.",
     },
   ];
 
   useEffect(() => {
-    document.title = "Mother's Day Ideas for Elderly Mom | The Comfort Bond™";
+    document.title = "The Mother's Day Connection Kit — $27 | The Comfort Bond™";
     const desc =
-      "Not sure what to do or say this Mother's Day? Simple, meaningful ways to connect with your mom — even through memory loss, dementia, or quiet moments. Free guide.";
+      "A simple way to make your Mother's Day visit meaningful — even if you don't know what to say. Gentle prompts, visual cards, music guidance & a visit plan. $27. Available until May 10.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -107,12 +106,11 @@ const FamilyVisits = () => {
     }
     meta.setAttribute("content", desc);
 
-    // Open Graph tags for social sharing
     const ogTags: Array<[string, string]> = [
-      ["og:title", "Make This Mother's Day Meaningful | The Comfort Bond™"],
+      ["og:title", "The Mother's Day Connection Kit — $27 | The Comfort Bond™"],
       [
         "og:description",
-        "If you're not sure what to say this Mother's Day, this helps. Simple, meaningful ways to connect with your mom — even in quiet moments.",
+        "Gentle prompts, visual cards, music guidance, and a simple visit plan so you can walk in feeling prepared, present, and connected.",
       ],
       ["og:image", "https://thecomfortbond.com/og-family-visits.png"],
       ["og:type", "website"],
@@ -128,7 +126,6 @@ const FamilyVisits = () => {
       tag.setAttribute("content", content);
     });
 
-    // FAQPage JSON-LD — eligibility for Google rich results
     const FAQ_SCHEMA_ID = "faq-schema-family-visits";
     const faqSchema = {
       "@context": "https://schema.org",
@@ -136,10 +133,7 @@ const FamilyVisits = () => {
       mainEntity: faqs.map((f) => ({
         "@type": "Question",
         name: f.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: f.a,
-        },
+        acceptedAnswer: { "@type": "Answer", text: f.a },
       })),
     };
     let schemaScript = document.getElementById(FAQ_SCHEMA_ID) as HTMLScriptElement | null;
@@ -156,15 +150,40 @@ const FamilyVisits = () => {
     };
   }, []);
 
+  /* Reusable primary CTA — same checkout behavior everywhere */
+  const BuyButton = ({
+    source,
+    className = "",
+    fullWidthMobile = true,
+  }: {
+    source: string;
+    className?: string;
+    fullWidthMobile?: boolean;
+  }) => (
+    <Button
+      variant="cta-poppy"
+      size="xl"
+      onClick={() => openCheckoutModal(source)}
+      className={`${fullWidthMobile ? "w-full sm:w-auto" : ""} ${className}`}
+    >
+      Buy The Kit — $27
+    </Button>
+  );
+
+  const availabilityLine = (
+    <p className="font-sans text-[12px] sm:text-[13px] tracking-[0.06em] text-forest/70 mt-3">
+      Available until Mother's Day · May 10 · Instant digital download
+    </p>
+  );
+
   return (
     <div className="min-h-screen bg-cream overflow-x-hidden">
       <Navigation />
       <ExitIntentModal />
 
       <main>
-        {/* SECTION 1 — HERO (asymmetric editorial split) */}
-        <section className="relative px-6 lg:px-12 pt-20 pb-12 md:pt-32 md:pb-28">
-          {/* soft warm vignette */}
+        {/* SECTION 1 — HERO */}
+        <section className="relative px-6 lg:px-12 pt-20 pb-10 md:pt-32 md:pb-24">
           <div
             className="pointer-events-none absolute inset-0 -z-10"
             style={{
@@ -173,12 +192,8 @@ const FamilyVisits = () => {
             }}
           />
           <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            {/* LEFT — copy (7 cols) — appears FIRST on mobile */}
-            <motion.div
-              {...fadeUp}
-              className="lg:col-span-7 order-1 lg:order-1"
-            >
-              {/* Mother's Day countdown strip — minimal editorial marker */}
+            <motion.div {...fadeUp} className="lg:col-span-7 order-1">
+              {/* Mother's Day countdown strip */}
               <div className="flex justify-center sm:justify-start">
                 <div className="inline-flex items-baseline gap-3 border-l-2 border-terracotta/50 pl-3">
                   {days > 0 ? (
@@ -203,90 +218,38 @@ const FamilyVisits = () => {
                 </div>
               </div>
 
-              {/* Audience standfirst — editorial line framed by terracotta hairlines */}
-              <div className="mt-6 flex justify-center sm:justify-start">
-                <div className="inline-flex flex-col items-stretch gap-2.5 py-3">
-                  <span
-                    aria-hidden="true"
-                    className="block h-[1.5px] w-full bg-terracotta"
-                  />
-                  <div className="inline-flex items-center justify-center gap-3 px-1">
-                    <span
-                      aria-hidden="true"
-                      className="text-gold text-[10px] tracking-[0.4em] leading-none"
-                    >
-                      ✦
-                    </span>
-                    <span className="font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.18em] text-forest/80">
-                      For the visit when words feel hard
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      className="text-gold text-[10px] tracking-[0.4em] leading-none"
-                    >
-                      ✦
-                    </span>
-                  </div>
-                  <span
-                    aria-hidden="true"
-                    className="block h-[1.5px] w-full bg-terracotta"
-                  />
-                </div>
-              </div>
-
-              {/* Mobile-first benefit-led headline; longer poetic version on desktop */}
-              <h1 className="mt-5 font-serif text-forest leading-[0.95] tracking-tight">
-                {/* Mobile headline — outcome-led, fits above the fold */}
-                <span className="block lg:hidden text-[2.25rem] sm:text-[2.75rem]">
-                  Make this Mother's Day
-                  <span className="block italic text-forest/90">feel close again.</span>
-                </span>
-                {/* Desktop headline — keeps the emotional pull, adds the promise */}
-                <span className="hidden lg:block text-[4.25rem]">
-                  When words won't come,
-                  <span className="block italic text-forest/90">presence still can.</span>
-                </span>
+              {/* Headline */}
+              <h1 className="mt-6 font-serif text-forest leading-[1.05] tracking-tight text-[2rem] sm:text-[2.5rem] lg:text-[3.25rem]">
+                A Simple Way to Make Your Mother's Day Visit{" "}
+                <span className="italic text-forest/90">Meaningful</span> — Even If
+                You Don't Know What to Say
               </h1>
 
-              <div className="mt-6 md:mt-8 flex items-start gap-5 max-w-xl">
-                <span className="mt-3 hidden md:block w-10 h-px bg-terracotta flex-shrink-0" />
-                <p className="text-foreground/75 text-base md:text-xl leading-[1.65] md:leading-[1.7] font-light">
-                  A free 7-day plan to help you arrive calm, connected, and
-                  ready — even through memory loss, long silences, or quiet
-                  rooms.
-                </p>
-              </div>
+              {/* Subheadline */}
+              <p className="mt-5 md:mt-7 text-foreground/75 text-base md:text-lg leading-[1.7] font-light max-w-xl">
+                The Mother's Day Connection Kit gives you gentle prompts, calming
+                visual cards, music guidance, and a simple visit plan so you can
+                walk in feeling prepared, present, and connected.
+              </p>
 
-              {/* Hero email capture — value bridge above the field warms up the ask */}
-              <div id="hero-capture" className="mt-7 md:mt-10 max-w-xl scroll-mt-24">
-                <p className="mb-3 font-sans text-[12px] sm:text-[13px] uppercase tracking-[0.22em] text-forest/70">
-                  Get the free 7-day visit plan
+              {/* Hero CTA */}
+              <div className="mt-7 md:mt-9">
+                <BuyButton source="hero" />
+                <p className="font-sans text-sm text-foreground/65 mt-3 leading-relaxed">
+                  Use on your phone, tablet, or print at home.
                 </p>
-                <FamilyVisitEmailCapture variant="light" source="hero" />
+                {availabilityLine}
               </div>
-
-              {/* Soft secondary — for paid-intent visitors who'd rather skip the form */}
-              <a
-                href="#mothers-day-kit"
-                className="mt-5 inline-flex items-center gap-1.5 font-sans text-sm text-forest/70 hover:text-terracotta transition-colors underline underline-offset-4 decoration-terracotta/40"
-              >
-                Already ready? See the full Mother's Day Kit
-                <span aria-hidden="true">→</span>
-              </a>
             </motion.div>
 
-            {/* RIGHT — image (5 cols) framed — appears SECOND on mobile */}
-            <motion.div
-              {...fadeIn}
-              className="lg:col-span-5 order-2 lg:order-2 relative"
-            >
+            {/* Hero image */}
+            <motion.div {...fadeIn} className="lg:col-span-5 order-2 relative">
               <div className="relative">
-                {/* framed cream mat */}
                 <div className="relative bg-cream-dark/70 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.35)]">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
                     <img
                       src={heroImage}
-                      alt="Mother's Day visit idea for an aging parent: adult daughter and her silver-haired mother sharing memory conversation cards from The Comfort Bond Connection Kit at a sunlit wooden table."
+                      alt="Adult daughter and her silver-haired mother sharing memory conversation cards from The Mother's Day Connection Kit at a sunlit wooden table."
                       width={1920}
                       height={1080}
                       className="absolute inset-0 w-full h-full object-cover scale-[1.35] md:scale-[1.25]"
@@ -294,14 +257,12 @@ const FamilyVisits = () => {
                       loading="eager"
                       decoding="async"
                     />
-                    {/* soft readability gradient — warms the lower edge for caption tonal harmony, keeps faces untouched */}
                     <div
                       aria-hidden="true"
                       className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest/25 via-transparent to-cream/10"
                     />
                   </div>
                 </div>
-                {/* corner ornament */}
                 <Ornament className="absolute -top-5 -left-5 w-10 h-10 text-terracotta" />
                 <Ornament className="absolute -bottom-5 -right-5 w-10 h-10 text-forest/60" />
               </div>
@@ -309,331 +270,280 @@ const FamilyVisits = () => {
           </div>
         </section>
 
+        {/* SECTION 2 — QUICK CLARITY (What this helps with) */}
+        <section className="px-6 py-14 md:py-20 bg-cream-dark/30">
+          <div className="max-w-4xl mx-auto">
+            <motion.h2
+              {...fadeUp}
+              className="font-serif text-forest text-2xl md:text-[2rem] leading-[1.2] text-center mb-10 md:mb-14"
+            >
+              For the visit you want to{" "}
+              <span className="italic">make meaningful.</span>
+            </motion.h2>
 
-        {/* SECTION 2 — RELATABLE PAIN (intimate column with hairlines) */}
-        <section className="px-6 py-14 md:py-32 bg-cream-dark/30">
-          <div className="max-w-2xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-10 md:mb-16">
-              <Eyebrow>Recognition</Eyebrow>
-              <h2 className="mt-6 font-serif italic text-forest text-3xl md:text-[2.75rem] leading-[1.15]">
-                If any of this sounds familiar…
+            <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+              {[
+                "Start meaningful conversations without pressure",
+                "Avoid the awkward silence when words feel hard",
+                "Feel calm and prepared before you arrive",
+              ].map((b, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeUp}
+                  transition={{ ...fadeUp.transition, delay: i * 0.08 }}
+                  className="bg-background rounded-sm p-6 md:p-7 ring-1 ring-forest/10 shadow-[0_4px_20px_-12px_rgba(45,74,62,0.18)]"
+                >
+                  <Ornament className="w-6 h-6 text-terracotta mb-4" />
+                  <p className="font-serif text-forest text-lg leading-[1.45]">
+                    {b}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 3 — WHAT'S INSIDE THE KIT */}
+        <section id="whats-inside" className="px-6 lg:px-12 py-16 md:py-28 bg-forest scroll-mt-24">
+          <div className="max-w-6xl mx-auto">
+            <motion.div {...fadeUp} className="text-center mb-12 md:mb-16 max-w-2xl mx-auto">
+              <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-sand mb-4">
+                What's inside
+              </p>
+              <h2 className="font-serif text-cream text-3xl md:text-[2.75rem] leading-[1.15]">
+                Everything You Need for a{" "}
+                <span className="italic text-sand">Day of Presence</span>
+              </h2>
+              <p className="mt-5 text-cream/80 text-base md:text-lg leading-[1.7] font-light">
+                A ready-to-use Mother's Day toolkit designed to help you create a
+                calmer, more meaningful visit.
+              </p>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-14 items-start max-w-5xl mx-auto">
+              <motion.div
+                {...fadeIn}
+                className="relative bg-cream-dark/10 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(0,0,0,0.5)] order-2 lg:order-1"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+                  <img
+                    src={kitImage}
+                    alt="The Mother's Day Connection Kit — conversation cards, visual spark cards, playlist guide, letter template, and morning ritual guide laid out on a linen-covered table."
+                    width={1820}
+                    height={1138}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.ul
+                {...fadeUp}
+                className="space-y-5 md:space-y-6 order-1 lg:order-2"
+              >
+                {[
+                  {
+                    t: "20 Conversation Cards",
+                    d: "Gentle, poetic prompts that open connection without asking her to remember facts.",
+                  },
+                  {
+                    t: "15 Visual Spark Cards",
+                    d: "Beautiful, familiar images to sit with together when words feel like too much.",
+                  },
+                  {
+                    t: "A Letter to My Mother",
+                    d: "A guided space to write the words that feel too heavy to say out loud.",
+                  },
+                  {
+                    t: "1940s–1970s Playlist Guide + Worksheet",
+                    d: "A simple way to find her imprint years and build music that reaches her.",
+                  },
+                  {
+                    t: "The Morning Ritual Guide",
+                    d: "A calm walkthrough so you know what to do from the moment you arrive.",
+                  },
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4">
+                    <span className="font-serif italic text-sand text-2xl leading-none flex-shrink-0 w-8 pt-1">
+                      {i + 1}.
+                    </span>
+                    <div>
+                      <p className="font-serif text-cream text-lg md:text-xl leading-tight mb-1.5">
+                        {item.t}
+                      </p>
+                      <p className="font-sans text-cream/75 text-[15px] leading-[1.65] font-light">
+                        {item.d}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </motion.ul>
+            </div>
+
+            {/* CTA after What's Inside */}
+            <motion.div {...fadeUp} className="mt-12 md:mt-16 text-center">
+              <div className="inline-flex flex-col items-center">
+                <BuyButton source="whats-inside" fullWidthMobile={false} />
+                <p className="font-sans text-[12px] tracking-[0.06em] text-cream/65 mt-3">
+                  $27 · Available until Mother's Day · May 10
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* SECTION 4 — FRICTION-KILLER STRIP */}
+        <section className="px-6 py-10 md:py-14 bg-cream-dark/40 border-y border-forest/10">
+          <div className="max-w-5xl mx-auto">
+            <ul className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+              {[
+                { t: "$27", s: "one-time purchase" },
+                { t: "Instant", s: "digital download" },
+                { t: "Print at home", s: "or use on tablet" },
+                { t: "No prep", s: "required" },
+                { t: "Available", s: "until May 10" },
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="text-center bg-background rounded-sm py-4 px-3 ring-1 ring-forest/10"
+                >
+                  <p className="font-serif text-forest text-base md:text-lg leading-tight">
+                    {item.t}
+                  </p>
+                  <p className="font-sans text-[11px] uppercase tracking-[0.16em] text-foreground/60 mt-1">
+                    {item.s}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* SECTION 5 — EMOTIONAL BRIDGE */}
+        <section className="px-6 py-16 md:py-28 bg-cream">
+          <div className="max-w-2xl mx-auto text-center">
+            <motion.div {...fadeUp}>
+              <Ornament className="w-7 h-7 text-terracotta mx-auto mb-7" />
+              <h2 className="font-serif italic text-forest text-3xl md:text-[2.75rem] leading-[1.2]">
+                You don't need the perfect words.
+              </h2>
+              <p className="mt-7 font-serif text-forest/85 text-xl md:text-2xl leading-[1.5]">
+                You just need a way to be together.
+              </p>
+              <p className="mt-7 text-foreground/75 text-base md:text-lg leading-[1.75] font-light">
+                Some visits feel quiet, awkward, or heavier than you expected.
+                This kit gives you something gentle to hold, read, play, write,
+                and share — so the visit does not rest entirely on your ability
+                to find the right words.
+              </p>
+              <div className="mt-10 inline-flex flex-col items-center">
+                <BuyButton source="emotional-bridge" fullWidthMobile={false} />
+                {availabilityLine}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* SECTION 6 — WHO THIS IS FOR */}
+        <section className="px-6 py-16 md:py-24 bg-cream-dark/30">
+          <div className="max-w-3xl mx-auto">
+            <motion.div {...fadeUp} className="text-center mb-10 md:mb-14">
+              <Eyebrow>Who it's for</Eyebrow>
+              <h2 className="mt-6 font-serif text-forest text-3xl md:text-[2.5rem] leading-[1.2]">
+                This is for you <span className="italic">if…</span>
               </h2>
             </motion.div>
-            <ul className="divide-y divide-forest/10 border-y border-forest/10">
+
+            <ul className="space-y-4 md:space-y-5">
               {[
-                "You sit down… and don't know what to say.",
-                "You watch her stare out the window, and it aches.",
-                "You wonder if she even knows you came.",
-              ].map((line, i) => (
+                "You want Mother's Day to feel meaningful, not forced",
+                "You are visiting your mom and don't know what to say anymore",
+                "Conversations feel shorter, quieter, or more repetitive than they used to",
+                "You want to bring something more personal than flowers or another wrapped gift",
+                "You want a calm plan before you walk in",
+              ].map((b, i) => (
                 <motion.li
                   key={i}
-                  initial={{ opacity: 0, y: 16 }}
+                  initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.6, delay: i * 0.06, ease: easeOut }}
-                  className="py-6 md:py-7 flex items-baseline gap-5"
+                  transition={{ duration: 0.5, delay: i * 0.05, ease: easeOut }}
+                  className="flex gap-4 items-baseline bg-background rounded-sm py-4 px-5 ring-1 ring-forest/10"
                 >
-                  <span className="font-serif italic text-terracotta/70 text-sm tabular-nums w-6 flex-shrink-0">
-                    {String(i + 1).padStart(2, "0")}
+                  <span
+                    aria-hidden="true"
+                    className="font-serif text-terracotta text-lg leading-none flex-shrink-0"
+                  >
+                    ✦
                   </span>
-                  <span className="font-serif italic text-foreground text-xl md:text-[1.6rem] leading-[1.4]">
-                    {line}
+                  <span className="font-serif text-forest/90 text-base md:text-lg leading-[1.55]">
+                    {b}
                   </span>
                 </motion.li>
               ))}
             </ul>
-
-            <motion.p
-              {...fadeUp}
-              className="mt-12 md:mt-16 text-center font-serif italic text-forest/80 text-lg md:text-xl leading-[1.6]"
-            >
-              You're not failing.<br />
-              You were just never given the tools.
-            </motion.p>
           </div>
         </section>
 
-        {/* NEW SECTION — TWO PATHS (the conversion fork: free vs paid, side-by-side) */}
-        <section id="two-paths" className="relative px-6 lg:px-12 py-16 md:py-32 bg-cream-dark">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.04]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, var(--forest) 1px, transparent 0)",
-              backgroundSize: "24px 24px",
-            }}
-          />
-          <div className="relative max-w-6xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-12 md:mb-16 max-w-2xl mx-auto">
-              <Eyebrow>Choose your starting point</Eyebrow>
-              <h2 className="mt-6 font-serif text-forest text-3xl md:text-[2.75rem] leading-[1.15]">
-                Two gentle ways
-                <br />
-                <span className="italic">to begin.</span>
-              </h2>
-              <p className="mt-5 text-foreground/70 text-base md:text-lg leading-[1.7] font-light">
-                Start free. Or bring everything you'll need on the day.
-                Both will help — there is no wrong choice.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-              {/* Path A — Free Guide */}
-              <motion.div
-                {...fadeUp}
-                className="relative bg-background rounded-sm p-8 md:p-10 ring-1 ring-forest/15 shadow-[0_10px_40px_-20px_rgba(45,74,62,0.2)] flex flex-col"
-              >
-                <div className="flex items-center justify-between mb-5">
-                  <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-forest/60">
-                    Path one
-                  </span>
-                  <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-forest/50 bg-forest/5 px-2.5 py-1 rounded-full">
-                    Free
-                  </span>
-                </div>
-                <h3 className="font-serif text-forest text-2xl md:text-[1.75rem] leading-tight mb-3">
-                  The Free Visit Starter Guide
-                </h3>
-                <p className="text-foreground/70 text-base leading-[1.65] font-light mb-6">
-                  A 7-day preparation path. So you arrive calm, present,
-                  and free of caregiver guilt.
-                </p>
-                <ul className="space-y-3 mb-8 text-sm text-foreground/75 font-light leading-[1.6]">
-                  <li className="flex gap-3"><span className="text-terracotta">·</span> 7-day emotional preparation path</li>
-                  <li className="flex gap-3"><span className="text-terracotta">·</span> Sensory connection strategies</li>
-                  <li className="flex gap-3"><span className="text-terracotta">·</span> The "Presence Practice" framework</li>
-                </ul>
-                <div className="mt-auto">
-                  <FamilyVisitEmailCapture variant="light" source="path-one" />
-                </div>
-              </motion.div>
-
-              {/* Path B — Paid Kit (recommended) */}
-              <motion.div
-                id="path-two"
-                {...fadeUp}
-                transition={{ ...fadeUp.transition, delay: 0.1 }}
-                className="relative bg-forest rounded-sm p-8 md:p-10 ring-1 ring-forest shadow-[0_20px_60px_-20px_rgba(45,74,62,0.4)] flex flex-col text-cream scroll-mt-24"
-              >
-                {/* Recommended ribbon */}
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="font-sans text-[10px] uppercase tracking-[0.28em] bg-terracotta text-cream px-4 py-1.5 rounded-full shadow-md">
-                    Most chosen 🌸
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between mb-5">
-                  <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-sand">
-                    Path two
-                  </span>
-                  <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-cream bg-cream/10 px-2.5 py-1 rounded-full">
-                    $27 · One-time
-                  </span>
-                </div>
-                <h3 className="font-serif text-cream text-2xl md:text-[1.75rem] leading-tight mb-3">
-                  The Mother's Day Connection Kit
-                </h3>
-                <p className="text-cream/80 text-base leading-[1.65] font-light mb-6">
-                  Everything from the free guide — plus the cards,
-                  prompts, and rituals you bring with you on the day.
-                </p>
-                <ul className="space-y-3 mb-8 text-sm text-cream/85 font-light leading-[1.6]">
-                  <li className="flex gap-3"><span className="text-sand">·</span> 20 gentle conversation cards</li>
-                  <li className="flex gap-3"><span className="text-sand">·</span> 15 visual spark cards</li>
-                  <li className="flex gap-3"><span className="text-sand">·</span> Decade-by-decade playlist guide</li>
-                  <li className="flex gap-3"><span className="text-sand">·</span> Guided "Letter to My Mother" template</li>
-                  <li className="flex gap-3"><span className="text-sand">·</span> Morning ritual walkthrough</li>
-                </ul>
-                <div className="mt-auto">
-                  <Button
-                    variant="cta-poppy"
-                    size="lg"
-                    className="w-full"
-                    onClick={() => openCheckoutModal("path-two-card")}
-                  >
-                    Get the Full Kit · $27
-                  </Button>
-                  <p className="text-gold font-semibold text-[11px] mt-3 tracking-wide text-center">
-                    Instant download · printable · ipad/tablet friendly
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION — FAMILY TESTIMONIALS (moved up, right after the choice — social proof at decision point) */}
-        <section className="px-6 py-16 md:py-28 bg-cream/40 border-y border-forest/10">
-          <div className="max-w-6xl mx-auto">
+        {/* SECTION 7 — HOW IT WORKS */}
+        <section className="px-6 py-16 md:py-24 bg-cream">
+          <div className="max-w-5xl mx-auto">
             <motion.div {...fadeUp} className="text-center mb-12 md:mb-16">
-              <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-terracotta mb-4">
-                What Families Are Saying
-              </p>
-              <h2 className="font-serif text-forest text-3xl md:text-[2.5rem] leading-[1.2] max-w-2xl mx-auto">
-                Quiet moments, finally returned.
+              <Eyebrow>The simple flow</Eyebrow>
+              <h2 className="mt-6 font-serif text-forest text-3xl md:text-[2.5rem] leading-[1.2]">
+                How it <span className="italic">works.</span>
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+            <ol className="grid md:grid-cols-2 gap-5 md:gap-6">
               {[
                 {
-                  quote:
-                    "I sat down with the Nostalgia Kit and for the first time in months, my mom looked at me — really looked at me — and smiled. We talked for almost an hour.",
-                  name: "Ashley G.",
-                  role: "DAUGHTER",
+                  t: "Purchase the kit",
+                  d: "Get instant access to the digital files.",
                 },
                 {
-                  quote:
-                    "I'm 22 and I never knew what to do when I visited Grandma. The Garden Kit gave us something to hold and talk about. She told me a story I'd never heard before — about her first job at a flower shop.",
-                  name: "Mia K.",
-                  role: "Granddaughter",
+                  t: "Choose what feels right",
+                  d: "Use the cards, letter page, playlist guide, or morning ritual depending on the kind of visit you're having.",
                 },
-              ].map((t, i) => (
-                <motion.figure
+                {
+                  t: "Sit beside her",
+                  d: "Bring the pages with you on your phone, tablet, or printed at home.",
+                },
+                {
+                  t: "Let the kit guide the moment",
+                  d: "No pressure. No perfect performance. Just presence.",
+                },
+              ].map((s, i) => (
+                <motion.li
                   key={i}
                   {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-                  className="bg-background rounded-2xl p-7 md:p-8 shadow-[0_4px_24px_-12px_rgba(45,74,62,0.18)] ring-1 ring-forest/10 flex flex-col"
+                  transition={{ ...fadeUp.transition, delay: i * 0.06 }}
+                  className="bg-cream-dark/40 rounded-sm p-6 md:p-7 ring-1 ring-forest/10 flex gap-5"
                 >
-                  <div
-                    aria-hidden="true"
-                    className="font-serif text-terracotta/40 text-5xl leading-none mb-2 select-none"
-                  >
-                    &ldquo;
+                  <span className="font-serif italic text-terracotta text-3xl leading-none flex-shrink-0 w-8 pt-1 tabular-nums">
+                    {i + 1}.
+                  </span>
+                  <div>
+                    <p className="font-serif text-forest text-lg md:text-xl leading-tight mb-2">
+                      {s.t}
+                    </p>
+                    <p className="font-sans text-foreground/75 text-[15px] leading-[1.65] font-light">
+                      {s.d}
+                    </p>
                   </div>
-                  <blockquote className="font-serif italic text-forest/85 text-[1.02rem] md:text-[1.05rem] leading-[1.65] flex-1">
-                    {t.quote}
-                  </blockquote>
-                  <figcaption className="mt-6 pt-5 border-t border-forest/10">
-                    <div className="font-sans text-sm font-semibold text-forest tracking-[0.02em]">
-                      {t.name}
-                    </div>
-                    <div className="mt-1 font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/55">
-                      {t.role}
-                    </div>
-                  </figcaption>
-                </motion.figure>
+                </motion.li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
-        {/* SECTION — DETAILED PRODUCT (full feature card on forest panel — the deeper "yes") */}
-        <section id="mothers-day-kit" className="px-6 lg:px-12 py-20 md:py-36 bg-forest">
-          <div className="max-w-6xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-10 md:mb-16 max-w-2xl mx-auto">
-              <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-sand mb-4">
-                A closer look
-              </p>
-              <h2 className="mt-6 font-serif text-cream text-4xl md:text-[3rem] leading-[1.15]">
-                Everything in the
-                <br />
-                <span className="italic text-sand">Mother's Day Kit</span>
-              </h2>
-              <p className="mt-6 !text-cream text-lg leading-[1.7] font-light">
-                Five carefully made tools. One quiet, beautiful day.
-              </p>
-            </motion.div>
-
-            <div className="max-w-2xl mx-auto [&_*]:!text-cream">
-              {/* Card — Mother's Day Connection Kit */}
-              <motion.article
-                {...fadeUp}
-                className="group bg-transparent rounded-sm overflow-hidden flex flex-col border border-cream/20 hover:border-sand/50 transition-colors duration-500 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.5)]"
-              >
-                <div className="aspect-[16/10] overflow-hidden relative">
-                  <img
-                    src={kitImage}
-                    alt="Mother's Day Connection Kit for seniors with dementia — conversation cards, visual spark cards, playlist guide, letter template, and morning ritual guide laid out on a linen-covered table in warm window light."
-                    width={1820}
-                    height={1138}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
-                  />
-                  <Ornament className="absolute top-5 right-5 w-6 h-6 !text-cream drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" />
-                </div>
-                <div className="p-6 md:p-12 flex flex-col flex-1">
-                  <p className="font-sans text-[11px] uppercase tracking-[0.32em] !text-sand mb-4">
-                    The Mother's Day Connection Kit
-                  </p>
-                  <h3 className="font-serif !text-cream text-2xl md:text-[1.75rem] leading-tight mb-4">
-                    Everything You Need for a Day of Presence
-                  </h3>
-
-                  {/* Feature list with Roman checkmarks */}
-                  <ul className="mb-6 space-y-4">
-                    {[
-                      "20 Conversation Cards: Gentle, poetic prompts that open connection without asking her to remember facts.",
-                      "15 Visual Spark Cards: Beautiful, familiar images to sit with together when words feel like too much.",
-                      "The Decade-by-Decade Playlist Guide: A simple way to find her \"imprint years\" and build music that reaches her.",
-                      "A Letter to My Mother: A guided space to write the words that feel too heavy to say out loud.",
-                      "The Morning Ritual Guide: A calm, step-by-step walkthrough so you know exactly what to do from the moment you arrive.",
-                    ].map((item, i) => (
-                      <li key={i} className="flex gap-4 items-baseline">
-                        <span className="font-serif italic text-sand text-xl leading-none flex-shrink-0 w-6">
-                          {["i", "ii", "iii", "iv", "v"][i]}.
-                        </span>
-                        <span className="!text-cream/90 text-base leading-[1.65] font-light">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Price anchoring */}
-                  <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1 mb-6 pb-6 border-b border-cream/20">
-                    <span className="font-serif !text-cream text-3xl md:text-[2.25rem] leading-none">
-                      $27
-                    </span>
-                    <span className="font-sans text-[11px] uppercase tracking-[0.2em] !text-sand font-semibold">
-                      One-time · Instant download · iPad/Tablet friendly
-                    </span>
-                  </div>
-
-                  {/* Reassurance row — three small trust signals */}
-                  <div className="grid grid-cols-3 gap-3 mb-7 text-center">
-                    {[
-                      { label: "Instant download", icon: "♡" },
-                      { label: "Print at home", icon: "✦" },
-                      { label: "iPad/Tablet friendly", icon: "▭" },
-                    ].map((item, i) => (
-                      <div key={i} className="flex flex-col items-center gap-1.5">
-                        <span aria-hidden="true" className="!text-sand text-base">{item.icon}</span>
-                        <span className="font-sans text-[10px] uppercase tracking-[0.18em] !text-cream/70">
-                          {item.label}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button
-                      variant="cta-poppy"
-                      size="lg"
-                      onClick={() => openCheckoutModal("kit-detail")}
-                    >
-                      Get the Full Mother's Day Kit
-                    </Button>
-                    <Button asChild size="lg" className="bg-transparent border-2 border-sand text-sand hover:bg-sand hover:text-forest active:scale-[0.98]">
-                      <Link to="/kits" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        Explore other everyday kits
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              </motion.article>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION — FAQ (objection-handling at the conversion edge) */}
-        <section className="px-6 py-16 md:py-28 bg-cream-dark/40">
+        {/* SECTION — FAQ (concise objection handling) */}
+        <section className="px-6 py-14 md:py-20 bg-cream-dark/30">
           <div className="max-w-2xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-10 md:mb-14">
+            <motion.div {...fadeUp} className="text-center mb-10 md:mb-12">
               <Eyebrow>Before you decide</Eyebrow>
-              <h2 className="mt-6 font-serif text-forest text-3xl md:text-[2.5rem] leading-[1.15]">
-                Honest answers to
-                <br />
+              <h2 className="mt-6 font-serif text-forest text-3xl md:text-[2.25rem] leading-[1.2]">
+                Honest answers to{" "}
                 <span className="italic">honest questions.</span>
               </h2>
             </motion.div>
@@ -649,18 +559,22 @@ const FamilyVisits = () => {
                       aria-expanded={isOpen}
                       className="w-full text-left py-5 md:py-6 flex items-start justify-between gap-4 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta/40 rounded-sm"
                     >
-                      <span className="font-serif text-forest text-lg md:text-xl leading-[1.4] group-hover:text-terracotta transition-colors">
+                      <span className="font-serif text-forest text-lg leading-[1.4] group-hover:text-terracotta transition-colors">
                         {faq.q}
                       </span>
                       <span
                         aria-hidden="true"
-                        className={`font-serif text-terracotta text-2xl leading-none flex-shrink-0 mt-1 transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+                        className={`font-serif text-terracotta text-2xl leading-none flex-shrink-0 mt-1 transition-transform duration-300 ${
+                          isOpen ? "rotate-45" : ""
+                        }`}
                       >
                         +
                       </span>
                     </button>
                     <div
-                      className={`grid transition-all duration-500 ease-out ${isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"}`}
+                      className={`grid transition-all duration-500 ease-out ${
+                        isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"
+                      }`}
                     >
                       <div className="overflow-hidden">
                         <p className="text-foreground/75 text-base leading-[1.7] font-light pr-8 whitespace-pre-line">
@@ -675,9 +589,8 @@ const FamilyVisits = () => {
           </div>
         </section>
 
-        {/* SECTION 9 — FINAL CTA (forest panel, inscription feel) */}
-        <section className="relative px-6 py-16 md:py-36 bg-forest overflow-hidden">
-          {/* subtle warm glow */}
+        {/* SECTION 8 — FINAL CTA */}
+        <section className="relative px-6 py-20 md:py-32 bg-forest overflow-hidden">
           <div
             className="pointer-events-none absolute inset-0 opacity-50"
             style={{
@@ -685,7 +598,6 @@ const FamilyVisits = () => {
                 "radial-gradient(800px 400px at 50% 0%, rgba(198,123,92,0.18), transparent 60%)",
             }}
           />
-          {/* dot grid texture */}
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.06]"
             style={{
@@ -697,93 +609,48 @@ const FamilyVisits = () => {
           <div className="relative max-w-2xl mx-auto text-center">
             <motion.div {...fadeUp}>
               <Ornament className="w-7 h-7 text-cream/60 mx-auto mb-8" />
-              <h2 className="font-serif italic text-cream text-4xl md:text-[3.5rem] leading-[1.15] mb-8">
-                Make your next visit
-                <br />
-                feel different.
+              <h2 className="font-serif text-cream text-3xl md:text-[3rem] leading-[1.15]">
+                Make this Mother's Day feel like{" "}
+                <span className="italic">something you'll remember.</span>
               </h2>
-              <div className="mx-auto w-16 h-px bg-cream/30 mb-8" />
-              <p className="text-cream text-lg md:text-xl mb-12 opacity-80 font-light leading-[1.7]">
-                Start with the free guide. Use it once. See what happens.
+              <div className="mx-auto w-16 h-px bg-cream/30 my-8" />
+              <p className="text-cream/85 text-base md:text-lg leading-[1.7] font-light max-w-lg mx-auto">
+                The Mother's Day Connection Kit is available for{" "}
+                <span className="text-cream font-medium">$27</span> until
+                Mother's Day, May 10.
               </p>
-              <div className="max-w-md mx-auto mb-6">
-                <FamilyVisitEmailCapture variant="dark" source="footer-cta" />
-              </div>
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <span aria-hidden="true" className="h-px w-10 bg-cream/25" />
-                <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-cream/55">
-                  or
-                </span>
-                <span aria-hidden="true" className="h-px w-10 bg-cream/25" />
-              </div>
-              <div className="flex justify-center">
+              <div className="mt-10 flex justify-center">
                 <Button
-                  variant="cta-outline"
+                  variant="cta-poppy"
                   size="xl"
-                  className="border-cream text-cream hover:bg-cream hover:text-forest"
-                  onClick={() => openCheckoutModal("footer-cta")}
+                  onClick={() => openCheckoutModal("final-cta")}
+                  className="w-full sm:w-auto"
                 >
-                  Get the Full Kit · $27
+                  Buy The Kit — $27
                 </Button>
               </div>
-              {days > 0 && days <= 30 && (
-                <p className="font-serif italic text-cream text-sm mt-8 tracking-wide inline-flex items-center gap-1.5">
-                  <span aria-hidden="true">{"\n"}</span>
-                  {days} {days === 1 ? "day" : "days"} until Mother's Day · Download now so you have time to prepare.
-                </p>
-              )}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* SECTION 10 — RELATED READING */}
-        <section className="relative px-6 py-14 md:py-28 bg-cream">
-          <div className="max-w-5xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-10 md:mb-14">
-              <Eyebrow>Related Reading</Eyebrow>
-              <h2 className="font-serif text-forest text-3xl md:text-4xl mt-6 leading-[1.2]">
-                For the visits we don't know
-                <br className="hidden md:block" /> how to prepare for.
-              </h2>
-            </motion.div>
-
-            <motion.div {...fadeIn}>
-              <Link
-                to="/blog/mothers-day-memory-care-family-guide"
-                className="group block rounded-[20px] overflow-hidden bg-forest shadow-[0_8px_28px_rgba(45,74,62,0.12)] hover:shadow-[0_20px_48px_rgba(45,74,62,0.18)] transition-all duration-300 hover:-translate-y-1"
-              >
-                <article className="grid md:grid-cols-[1.05fr_1fr] min-h-[300px]">
-                  <div
-                    className="min-h-[220px] md:min-h-full bg-center bg-cover"
-                    style={{ backgroundImage: `url(${mothersDayHero})` }}
-                    aria-hidden="true"
-                  />
-                  <div className="p-8 md:p-12 flex flex-col justify-center text-cream">
-                    <span className="font-sans text-[10px] font-semibold tracking-[0.16em] uppercase text-sand mb-4 inline-flex items-center gap-2">
-                      <span className="inline-block w-4 h-px bg-sand" />
-                      Featured · For Families
-                    </span>
-                    <h3 className="font-serif text-2xl md:text-[2rem] leading-[1.2] mb-4 -tracking-[0.005em]">
-                      Mother's Day in Memory Care: A Family Caregiver's Guide
-                    </h3>
-                    <p className="font-serif italic text-base text-cream/80 leading-[1.65] mb-6 font-normal">
-                      A working document for the visits we do not know how to
-                      prepare for — what to bring, what to say, and what to
-                      release before you walk in.
-                    </p>
-                    <span className="font-sans text-sm font-medium text-sand inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                      Read the guide →
-                    </span>
-                  </div>
-                </article>
-              </Link>
+              <p className="font-sans text-[12px] tracking-[0.06em] text-cream/65 mt-5">
+                Instant download · Print at home · Use on tablet
+              </p>
             </motion.div>
           </div>
         </section>
       </main>
 
       <FooterSection />
-      <StickyMobileCTA href="#hero-capture" label="Get the Free Visit Guide" />
+
+      {/* Sticky mobile CTA — opens checkout directly */}
+      <button
+        type="button"
+        onClick={() => openCheckoutModal("sticky-mobile")}
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 mx-4 mb-[max(0.75rem,env(safe-area-inset-bottom))] mt-3 flex items-center justify-center gap-2 bg-terracotta text-cream font-sans font-medium text-[15px] rounded-md h-12 shadow-[0_8px_24px_-6px_rgba(198,123,92,0.5)] active:scale-[0.98] transition-transform"
+        aria-label="Buy The Mother's Day Connection Kit for $27"
+      >
+        <span aria-hidden="true">🌸</span>
+        <span>Buy The Kit — $27</span>
+        <span aria-hidden="true">→</span>
+      </button>
+
       <MothersDayCheckoutModal
         open={checkoutOpen}
         onOpenChange={setCheckoutOpen}
