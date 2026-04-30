@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/the-comfort-bond-logo.png";
 import heroMockup from "@/assets/memory-care-activity-calendar-template.png";
@@ -155,6 +155,14 @@ function Narrow({ children, bg = c.cream, style }: { children: React.ReactNode; 
    MAIN COMPONENT
    ═══════════════════════════════════════════ */
 export default function BlueprintProSalesPage() {
+  const [stickyVisible, setStickyVisible] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setStickyVisible(window.scrollY > 600);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div style={{ fontFamily: sans, color: c.body, backgroundColor: c.cream }}>
       {/* ── Nav bar ── */}
@@ -222,6 +230,14 @@ export default function BlueprintProSalesPage() {
             </p>
             <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "0.85rem", color: c.forest, opacity: 0.55, margin: "0.55rem 0 0", textAlign: "center" }}>
               Limited release — updated quarterly.
+            </p>
+            <p style={{ fontFamily: sans, fontSize: "0.85rem", margin: "0.85rem 0 0", textAlign: "center" }}>
+              <Link
+                to="/blueprint"
+                style={{ color: c.terracotta, textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 500 }}
+              >
+                See a sample week — download the free 1-week Blueprint →
+              </Link>
             </p>
           </div>
 
@@ -431,6 +447,14 @@ export default function BlueprintProSalesPage() {
             The Engagement Balance Wheel &mdash; your visual compass for balanced programming.
           </p>
         </div>
+
+        {/* Mid-page buy button */}
+        <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+          <Cta large>Get My 13-Week Plan — $27</Cta>
+          <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, marginTop: "0.65rem" }}>
+            Instant download · PDF
+          </p>
+        </div>
       </Wide>
 
       {/* ════════════════════════════════════════
@@ -576,6 +600,22 @@ export default function BlueprintProSalesPage() {
         </div>
         <div style={{ borderTop: `1px solid ${c.gridline}` }}>
           <FaqItem
+            q={"How will I receive the Blueprint?"}
+            a={"Instantly. As soon as checkout is complete, you\u2019ll receive an email with your download link. The Blueprint is delivered as a high-quality PDF you can open on any device \u2014 laptop, tablet, or phone \u2014 within minutes of purchase."}
+          />
+          <FaqItem
+            q={"Can I print it, or is it only digital?"}
+            a={"Both. The Blueprint is designed to look beautiful on a tablet or laptop, and it\u2019s fully optimized for printing on standard 8.5\u00d711\u201d paper. Many Activity Directors print just the current week and keep it on their desk or clipboard. Print as many times as you need \u2014 it\u2019s yours."}
+          />
+          <FaqItem
+            q={"Does this work for assisted living, not just memory care?"}
+            a={"Yes. The Blueprint is designed for the full range of senior living \u2014 independent living, assisted living, memory care, and adult day programs. The themes are adult-centered and the coaching notes include guidance for adapting depth and pacing to your residents\u2019 cognitive levels."}
+          />
+          <FaqItem
+            q={"Do you offer refunds?"}
+            a={"Because The Programming Blueprint\u2122 Pro is an instant digital download, all sales are final once the file has been delivered. We don\u2019t offer refunds on downloaded digital products \u2014 but if something isn\u2019t working (a broken link, a missing file), email us and we\u2019ll make it right immediately."}
+          />
+          <FaqItem
             q={"\u201CI don\u2019t have time to learn a new system.\u201D"}
             a={"Open the Blueprint. Turn to this week\u2019s page. Read the theme and the coaching tip. Fill in your activities. Five minutes. No onboarding, no training, no learning curve."}
           />
@@ -587,6 +627,14 @@ export default function BlueprintProSalesPage() {
             q={"\u201CAre these activities childish?\u201D"}
             a={"No. Every theme and conversation starter was designed for adults with rich life histories. County fairs, kitchen tables, Sunday drives, handwritten letters. No coloring pages. No patronizing language."}
           />
+        </div>
+
+        {/* Buy button after FAQ */}
+        <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+          <Cta large>Get My 13-Week Plan — $27</Cta>
+          <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, marginTop: "0.65rem" }}>
+            Instant download · All sales final on digital products
+          </p>
         </div>
       </Narrow>
 
@@ -624,6 +672,53 @@ export default function BlueprintProSalesPage() {
           .bps-pain-grid { grid-template-columns: 1.2fr 1fr !important; }
           .bps-features-grid { grid-template-columns: 1fr 1fr !important; }
           .bps-compare-grid { grid-template-columns: 1fr 1fr !important; }
+        }
+      `}</style>
+
+      {/* ── Sticky mobile CTA (mobile only) ── */}
+      <div
+        className="bps-sticky-cta"
+        style={{
+          position: "fixed",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 50,
+          padding: "0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom))",
+          background: "linear-gradient(to top, rgba(245,240,235,1) 70%, rgba(245,240,235,0))",
+          transform: stickyVisible ? "translateY(0)" : "translateY(110%)",
+          opacity: stickyVisible ? 1 : 0,
+          transition: "transform 0.3s ease, opacity 0.3s ease",
+          pointerEvents: stickyVisible ? "auto" : "none",
+        }}
+      >
+        <button
+          type="button"
+          onClick={() => openPaddleCheckout(BLUEPRINT_PRO_PRICE_ID)}
+          style={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.5rem",
+            fontFamily: sans,
+            fontSize: "0.95rem",
+            fontWeight: 600,
+            color: "#fff",
+            backgroundColor: c.terracotta,
+            border: "none",
+            padding: "0.95rem 1.25rem",
+            borderRadius: "100px",
+            cursor: "pointer",
+            boxShadow: "0 8px 24px -6px rgba(198,123,92,0.5)",
+          }}
+        >
+          Get My 13-Week Plan — $27 →
+        </button>
+      </div>
+      <style>{`
+        @media (min-width: 860px) {
+          .bps-sticky-cta { display: none !important; }
         }
       `}</style>
     </div>
