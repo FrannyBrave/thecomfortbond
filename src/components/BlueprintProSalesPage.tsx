@@ -226,10 +226,7 @@ export default function BlueprintProSalesPage() {
               <Cta large>Get My 13-Week Plan — $27</Cta>
             </div>
             <p style={{ fontFamily: sans, fontSize: "0.82rem", color: c.muted, margin: "0.7rem 0 0", textAlign: "center" }}>
-              Instant download. Start planning today.
-            </p>
-            <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "0.85rem", color: c.forest, opacity: 0.55, margin: "0.55rem 0 0", textAlign: "center" }}>
-              Limited release — updated quarterly.
+              Instant download · Limited release, updated quarterly
             </p>
             <p style={{ fontFamily: sans, fontSize: "0.85rem", margin: "0.85rem 0 0", textAlign: "center" }}>
               <Link
@@ -239,19 +236,6 @@ export default function BlueprintProSalesPage() {
                 See a sample week — download the free 1-week Blueprint →
               </Link>
             </p>
-          </div>
-
-          {/* What's Inside summary — above image */}
-          <div style={{ backgroundColor: c.creamAlt, borderRadius: "16px", padding: "1.25rem 1.4rem", border: `1px solid ${c.gridline}` }}>
-            <p style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.6rem" }}>
-              Inside the Blueprint:
-            </p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: sans, fontSize: "0.93rem", lineHeight: 1.7, color: c.body }}>
-              <li>• 13 fully planned weekly themes</li>
-              <li>• Done-for-you activity ideas</li>
-              <li>• Engagement strategies that work</li>
-              <li>• A repeatable system you can rely on</li>
-            </ul>
           </div>
 
           {/* Product mockup */}
