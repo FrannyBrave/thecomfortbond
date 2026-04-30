@@ -248,20 +248,10 @@ export default function MorningSamplerLandingPage() {
 
       {/* ── Hero Image ── */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-        <div style={{ position: "relative", maxWidth: 640, margin: "40px auto" }}>
-          <img src={samplerHero}
-            alt="Memory care morning activity routine for seniors: conversation cards and visual sparks from The Morning Routine Sampler beside a coffee cup in a calm day room"
-            style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block" }}
-          />
-          <span style={{
-            position: "absolute", top: "8%", left: "6%", right: "6%",
-            fontFamily: serif, fontStyle: "italic", fontSize: "clamp(18px, 3.6vw, 26px)",
-            fontWeight: 500, color: c.cream, lineHeight: 1.25,
-            textShadow: "0 2px 16px rgba(0,0,0,0.5)", pointerEvents: "none",
-          }}>
-            You've felt this before.
-          </span>
-        </div>
+        <img src={samplerHero}
+          alt="Memory care morning activity routine for seniors: conversation cards and visual sparks from The Morning Routine Sampler beside a coffee cup in a calm day room"
+          style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block", margin: "32px auto", maxWidth: 640 }}
+        />
       </div>
 
       {/* ── Pain Points ── */}
