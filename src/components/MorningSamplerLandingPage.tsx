@@ -193,7 +193,7 @@ export default function MorningSamplerLandingPage() {
       </div>
 
       {/* ── Hero ── */}
-      <section style={{ padding: "48px 0 40px", textAlign: "center", background: c.warmWhite }}>
+      <section ref={heroRef} style={{ padding: "48px 0 40px", textAlign: "center", background: c.warmWhite }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 24px" }}>
           <span style={{
             fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
