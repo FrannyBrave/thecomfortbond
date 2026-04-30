@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/the-comfort-bond-logo.png";
 import heroMockup from "@/assets/memory-care-activity-calendar-template.png";
 import beforeAfter from "@/assets/activity-planning-before-after-senior-living-calendar.png";
-import balanceWheel from "@/assets/activity-programming-framework-for-seniors.png";
+
 import { openPaddleCheckout } from "@/lib/paddle";
 
 /* ─── Palette ─── */
@@ -226,10 +226,7 @@ export default function BlueprintProSalesPage() {
               <Cta large>Get My 13-Week Plan — $27</Cta>
             </div>
             <p style={{ fontFamily: sans, fontSize: "0.82rem", color: c.muted, margin: "0.7rem 0 0", textAlign: "center" }}>
-              Instant download. Start planning today.
-            </p>
-            <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "0.85rem", color: c.forest, opacity: 0.55, margin: "0.55rem 0 0", textAlign: "center" }}>
-              Limited release — updated quarterly.
+              Instant download · Limited release, updated quarterly
             </p>
             <p style={{ fontFamily: sans, fontSize: "0.85rem", margin: "0.85rem 0 0", textAlign: "center" }}>
               <Link
@@ -239,19 +236,6 @@ export default function BlueprintProSalesPage() {
                 See a sample week — download the free 1-week Blueprint →
               </Link>
             </p>
-          </div>
-
-          {/* What's Inside summary — above image */}
-          <div style={{ backgroundColor: c.creamAlt, borderRadius: "16px", padding: "1.25rem 1.4rem", border: `1px solid ${c.gridline}` }}>
-            <p style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.6rem" }}>
-              Inside the Blueprint:
-            </p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: sans, fontSize: "0.93rem", lineHeight: 1.7, color: c.body }}>
-              <li>• 13 fully planned weekly themes</li>
-              <li>• Done-for-you activity ideas</li>
-              <li>• Engagement strategies that work</li>
-              <li>• A repeatable system you can rely on</li>
-            </ul>
           </div>
 
           {/* Product mockup */}
@@ -275,22 +259,6 @@ export default function BlueprintProSalesPage() {
           }
         `}</style>
       </Wide>
-
-      {/* ═══ Social proof bar ═══ */}
-      <section style={{ backgroundColor: c.forest, padding: "1.25rem clamp(1.25rem, 5vw, 3rem)" }}>
-        <div style={{ maxWidth: "1060px", margin: "0 auto", display: "flex", justifyContent: "center", gap: "clamp(1.5rem, 4vw, 3rem)", flexWrap: "wrap", alignItems: "center" }}>
-          {[
-            "✓ 13 Weeks Pre-Planned",
-            "✓ Expert Coaching Notes",
-            "✓ 6-Dimension Balance Tracking",
-            "✓ Zero Prep Required",
-          ].map((item, i) => (
-            <span key={i} style={{ fontFamily: sans, fontSize: "0.8rem", fontWeight: 500, color: c.cream, opacity: 0.9, letterSpacing: "0.02em" }}>
-              {item}
-            </span>
-          ))}
-        </div>
-      </section>
 
       {/* ════════════════════════════════════════
           SECTION 2 — THE PAIN
@@ -355,33 +323,6 @@ export default function BlueprintProSalesPage() {
       </section>
 
       {/* ════════════════════════════════════════
-          SECTION 4 — INTRODUCTION
-         ════════════════════════════════════════ */}
-      <Wide>
-        <div style={{ maxWidth: "660px" }}>
-          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.5rem" }}>
-            Introducing
-          </p>
-          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.5vw, 2rem)", fontWeight: 600, color: c.forest, margin: "0 0 1.25rem", lineHeight: 1.2 }}>
-            The Programming Blueprint™ Pro
-          </h2>
-          <p style={{ fontSize: "1rem", lineHeight: 1.85, color: c.body, margin: "0 0 1rem" }}>
-            A complete 13-week quarterly engagement system. Every week is pre-themed, mapped to
-            national observances, balanced across six dimensions of wellness, and paired with expert
-            coaching &mdash; so you walk into Monday knowing exactly what the week looks like.
-          </p>
-          <p style={{ fontSize: "1rem", lineHeight: 1.85, color: c.body, margin: "0 0 1rem" }}>
-            The Q3 2026 Edition covers July through September. Thirteen themes from
-            &ldquo;Red, White, and Blue Memories&rdquo; to &ldquo;What I Know for Sure.&rdquo;
-            Each one adult-centered, nostalgia-grounded, and designed to spark real engagement.
-          </p>
-          <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: c.muted }}>
-            A new edition arrives every 90 days. Q4 ships by August 30, 2026.
-          </p>
-        </div>
-      </Wide>
-
-      {/* ════════════════════════════════════════
           SECTION 5 — WHAT'S INSIDE (feature grid)
          ════════════════════════════════════════ */}
       <Wide bg={c.creamAlt}>
@@ -427,25 +368,6 @@ export default function BlueprintProSalesPage() {
               <p style={{ fontSize: "0.925rem", lineHeight: 1.75, color: c.body, margin: 0 }}>{item.text}</p>
             </div>
           ))}
-        </div>
-
-        {/* Balance Wheel visual */}
-        <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
-          <img
-            src={balanceWheel}
-            alt="The Engagement Balance Wheel"
-            style={{
-              width: "100%",
-              maxWidth: "480px",
-              height: "auto",
-              borderRadius: "16px",
-              display: "inline-block",
-              boxShadow: "0 8px 32px rgba(45,74,62,0.1)",
-            }}
-          />
-          <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, fontStyle: "italic", marginTop: "0.75rem" }}>
-            The Engagement Balance Wheel &mdash; your visual compass for balanced programming.
-          </p>
         </div>
 
         {/* Mid-page buy button */}
@@ -644,12 +566,8 @@ export default function BlueprintProSalesPage() {
       <section style={{ background: `linear-gradient(135deg, ${c.forest} 0%, ${c.forestLight} 100%)`, padding: "clamp(3.5rem, 8vw, 5.5rem) clamp(1.25rem, 5vw, 3rem)", position: "relative" }}>
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "4px", background: `linear-gradient(90deg, ${c.terracotta}, ${c.gold}, ${c.terracotta})` }} />
         <div style={{ maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontFamily: serif, fontSize: "clamp(1.15rem, 2.5vw, 1.4rem)", lineHeight: 1.7, color: "rgba(255,255,255,0.85)", margin: "0 0 1.25rem" }}>
-            You chose this work because the people in your community still have stories to tell and
-            still deserve to feel seen &mdash; not managed. Let the system handle the planning.
-          </p>
-          <p style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: "#fff", margin: "0 0 2rem" }}>
-            You handle the moments that matter.
+          <p style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: "#fff", margin: "0 0 2rem", lineHeight: 1.3 }}>
+            Let the system handle the planning. You handle the moments that matter.
           </p>
           <Cta large>Get Your Q3 Blueprint — $27</Cta>
         </div>
