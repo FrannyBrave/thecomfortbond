@@ -314,7 +314,7 @@ const FamilyVisits = () => {
                 Everything You Need for a{" "}
                 <span className="italic text-sand">Day of Presence</span>
               </h2>
-              <p className="mt-5 text-cream/80 text-base md:text-lg leading-[1.7] font-light">
+              <p className="mt-5 text-[rgba(250,247,242,0.85)] text-base md:text-lg leading-[1.7] font-light">
                 A ready-to-use Mother's Day toolkit designed to help you create a
                 calmer, more meaningful visit.
               </p>
