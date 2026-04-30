@@ -126,10 +126,10 @@ const STEPS = [
 ];
 
 const PAIN = [
-  "You don't always have time to plan something thoughtful for those first quiet minutes.",
-  "Sometimes the room feels still, and you're not sure how to begin.",
-  "You want something simple — but not something that feels childish or hollow.",
-  "You wish you could just walk in, sit down, and start a real conversation.",
+  "You don't have time to plan something thoughtful",
+  "The room feels quiet, and you're not sure how to begin",
+  "You want something simple — but not childish",
+  "You want to walk in and start a real conversation",
 ];
 
 /* ─── Main ─── */
@@ -172,44 +172,79 @@ export default function MorningSamplerLandingPage() {
       </div>
 
       {/* ── Hero ── */}
-      <section style={{ padding: "80px 0 60px", textAlign: "center", background: c.warmWhite }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
+      <section style={{ padding: "48px 0 40px", textAlign: "center", background: c.warmWhite }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 24px" }}>
           <span style={{
             fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, marginBottom: "28px", display: "block",
+            textTransform: "uppercase", color: c.terracotta, marginBottom: "18px", display: "block",
           }}>
             Free Activity Sampler
           </span>
           <h1 style={{
-            fontFamily: serif, fontSize: "clamp(32px, 5vw, 44px)", fontWeight: 500,
-            lineHeight: 1.25, color: c.deepBrown, marginBottom: "24px", letterSpacing: "-0.5px",
+            fontFamily: serif, fontSize: "clamp(30px, 6vw, 46px)", fontWeight: 600,
+            lineHeight: 1.15, color: "#3D5A4C", marginBottom: "16px", letterSpacing: "-0.5px",
           }}>
-            A Calmer Way
+            Mornings Feel Quiet…
             <br />
-            to Start the Day
+            and Hard to Start?
           </h1>
-          <p style={{ fontSize: "18px", lineHeight: 1.7, color: c.warmGray, maxWidth: 560, margin: "0 auto 40px" }}>
-            The Morning Routine Sampler™ is a free, printable activity set that helps Activity
-            Directors begin each morning with warmth, connection, and zero scramble. Three gentle
-            activities. No prep required.
+          <p style={{ fontSize: "16px", lineHeight: 1.7, color: c.warmGray, maxWidth: "90%", margin: "0 auto 24px" }}>
+            A free, printable activity set that helps you start the day with connection, structure, and zero scrambling.
           </p>
-          <SamplerEmailCapture id="hero" />
-          <p style={{ fontFamily: sans, fontSize: "12px", color: c.softGray, marginTop: "12px", textAlign: "center" }}>
-            Free. Instant delivery. No spam, no mailing list.
+
+          {/* What you get */}
+          <div style={{
+            maxWidth: 460, margin: "0 auto 20px", textAlign: "left",
+            background: "rgba(139,157,131,0.08)", border: "1px solid rgba(139,157,131,0.25)",
+            borderRadius: "12px", padding: "16px 20px",
+          }}>
+            <p style={{ fontFamily: sans, fontSize: "13px", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase", color: "#5C7355", margin: "0 0 10px" }}>
+              Inside your free sampler:
+            </p>
+            <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
+              {[
+                "3 ready-to-use morning activities",
+                "Conversation prompts that feel natural",
+                "Visual cards for quiet moments",
+                "No prep required",
+              ].map((t) => (
+                <li key={t} style={{ fontSize: "14.5px", lineHeight: 1.55, color: "#5C7355", paddingLeft: "18px", position: "relative", marginBottom: "4px" }}>
+                  <span style={{ position: "absolute", left: 0, color: "#8B9D83" }}>•</span>{t}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <SamplerEmailCapture id="hero" buttonText="Get My Free Morning Plan" />
+          <p style={{ fontFamily: sans, fontSize: "12px", color: c.softGray, marginTop: "10px", textAlign: "center" }}>
+            Instant download. Use it today.
+          </p>
+          <p style={{ fontFamily: sans, fontSize: "12.5px", color: c.warmGray, marginTop: "14px", textAlign: "center", maxWidth: 420, marginLeft: "auto", marginRight: "auto" }}>
+            Used by Activity Directors to start calmer, more connected mornings.
           </p>
         </div>
       </section>
 
       {/* ── Hero Image ── */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-        <img src={samplerHero}
-          alt="Memory care morning activity routine for seniors: conversation cards and visual sparks from The Morning Routine Sampler beside a coffee cup in a calm day room"
-          style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block", margin: "48px auto", maxWidth: 640 }}
-        />
+        <div style={{ position: "relative", maxWidth: 640, margin: "40px auto" }}>
+          <img src={samplerHero}
+            alt="Memory care morning activity routine for seniors: conversation cards and visual sparks from The Morning Routine Sampler beside a coffee cup in a calm day room"
+            style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block" }}
+          />
+          <span style={{
+            position: "absolute", top: "8%", left: "6%", right: "6%",
+            fontFamily: serif, fontStyle: "italic", fontSize: "clamp(18px, 3.6vw, 26px)",
+            fontWeight: 500, color: c.cream, lineHeight: 1.25,
+            textShadow: "0 2px 16px rgba(0,0,0,0.5)", pointerEvents: "none",
+          }}>
+            You've felt this before.
+          </span>
+        </div>
       </div>
 
       {/* ── Set the Scene ── */}
-      <section style={{ padding: "64px 0" }}>
+      <section style={{ padding: "56px 0" }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
           <span style={{
             fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
@@ -217,17 +252,21 @@ export default function MorningSamplerLandingPage() {
           }}>
             The Morning
           </span>
-          <div style={{ fontSize: "18px", lineHeight: 1.85, color: c.warmGray, maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
-            <p style={{ marginBottom: "20px" }}>
-              It's 8:45 AM. Residents are settled into the day room — some with coffee,
-              some just sitting quietly, watching the hallway. Staff are moving between tasks.
-              Breakfast trays are being cleared. The morning news drifts from a television no one
-              chose to turn on.
+          <div style={{ fontSize: "17px", lineHeight: 1.95, color: c.warmGray, maxWidth: 560, margin: "0 auto", textAlign: "center" }}>
+            <p style={{ marginBottom: "18px" }}>
+              It's 8:45 AM. Residents are settled into the day room — some with coffee, some just sitting quietly.
+            </p>
+            <p style={{ marginBottom: "18px" }}>
+              Staff are moving between tasks. Breakfast trays are being cleared.
+            </p>
+            <p style={{ marginBottom: "18px" }}>
+              The morning news drifts from a television no one chose to turn on.
+            </p>
+            <p style={{ marginBottom: "18px" }}>
+              <strong style={{ color: c.deepBrown, fontWeight: 700 }}>There's a gap here.</strong>
             </p>
             <p style={{ marginBottom: 0 }}>
-              There's a gap here. A window between breakfast and the first planned activity
-              where the room feels like it's waiting for something — something small,
-              something warm, something human. You feel it every day.
+              A window between breakfast and the first planned activity — where the room feels like it's waiting for something small, warm, and human. You feel it every day.
             </p>
           </div>
         </div>
