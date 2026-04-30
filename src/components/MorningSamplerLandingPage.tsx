@@ -248,55 +248,16 @@ export default function MorningSamplerLandingPage() {
 
       {/* ── Hero Image ── */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-        <div style={{ position: "relative", maxWidth: 640, margin: "40px auto" }}>
-          <img src={samplerHero}
-            alt="Memory care morning activity routine for seniors: conversation cards and visual sparks from The Morning Routine Sampler beside a coffee cup in a calm day room"
-            style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block" }}
-          />
-          <span style={{
-            position: "absolute", top: "8%", left: "6%", right: "6%",
-            fontFamily: serif, fontStyle: "italic", fontSize: "clamp(18px, 3.6vw, 26px)",
-            fontWeight: 500, color: c.cream, lineHeight: 1.25,
-            textShadow: "0 2px 16px rgba(0,0,0,0.5)", pointerEvents: "none",
-          }}>
-            You've felt this before.
-          </span>
-        </div>
+        <img src={samplerHero}
+          alt="Memory care morning activity routine for seniors: conversation cards and visual sparks from The Morning Routine Sampler beside a coffee cup in a calm day room"
+          style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block", margin: "32px auto", maxWidth: 640 }}
+        />
       </div>
 
-      {/* ── Set the Scene ── */}
-      <section style={{ padding: "56px 0" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-          <span style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, marginBottom: "16px", display: "block", textAlign: "center",
-          }}>
-            The Morning
-          </span>
-          <div style={{ fontSize: "17px", lineHeight: 1.95, color: c.warmGray, maxWidth: 560, margin: "0 auto", textAlign: "center" }}>
-            <p style={{ marginBottom: "18px" }}>
-              It's 8:45 AM. Residents are settled into the day room — some with coffee, some just sitting quietly.
-            </p>
-            <p style={{ marginBottom: "18px" }}>
-              Staff are moving between tasks. Breakfast trays are being cleared.
-            </p>
-            <p style={{ marginBottom: "18px" }}>
-              The morning news drifts from a television no one chose to turn on.
-            </p>
-            <p style={{ marginBottom: "18px" }}>
-              <strong style={{ color: c.deepBrown, fontWeight: 700 }}>There's a gap here.</strong>
-            </p>
-            <p style={{ marginBottom: 0 }}>
-              A window between breakfast and the first planned activity — where the room feels like it's waiting for something small, warm, and human. You feel it every day.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ── Pain Points ── */}
-      <section style={{ padding: "48px 0", background: c.sectionAlt }}>
+      <section style={{ padding: "56px 0", background: c.sectionAlt }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-          <ul style={{ padding: 0, maxWidth: 440, margin: "0 auto", listStyle: "none" }}>
+          <ul style={{ padding: 0, maxWidth: 460, margin: "0 auto", listStyle: "none" }}>
             {PAIN.map((text, i) => (
               <li key={i} style={{
                 fontSize: "17px", lineHeight: 1.7, color: "#1B3A4B", fontWeight: 500,
@@ -307,24 +268,6 @@ export default function MorningSamplerLandingPage() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* ── Introduce the Sampler ── */}
-      <section style={{ padding: "48px 0 24px" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px", textAlign: "center" }}>
-          <span style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, marginBottom: "16px", display: "block",
-          }}>
-            Introducing
-          </span>
-          <h2 style={{
-            fontFamily: serif, fontSize: "clamp(26px, 4vw, 30px)", fontWeight: 500,
-            lineHeight: 1.35, color: c.deepBrown, marginBottom: "24px",
-          }}>
-            The Morning Routine Sampler™
-          </h2>
         </div>
       </section>
 
@@ -447,52 +390,19 @@ export default function MorningSamplerLandingPage() {
         </div>
       </section>
 
-      {/* ── Brand Positioning ── */}
-      <section style={{ padding: "64px 0" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px", textAlign: "center" }}>
-          <span style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, marginBottom: "16px", display: "block",
-          }}>
-            The Comfort Bond™
-          </span>
-          <div style={{ width: 3, height: 40, background: c.terracotta, margin: "0 auto 2rem", borderRadius: "2px" }} />
-          {[
-            <>Designed <em style={{ color: c.terracotta, fontStyle: "normal", fontWeight: 600 }}>specifically</em> for senior living professionals.</>,
-            "Built with dignity, warmth, and the understanding that your residents deserve something better than busy work.",
-            "Not generic. Not childish. Not borrowed from a classroom.",
-          ].map((text, i) => (
-            <p key={i} style={{ fontSize: "17px", lineHeight: 1.8, textAlign: "center", color: c.warmGray, maxWidth: 520, margin: "0 auto 12px" }}>
-              {text}
-            </p>
-          ))}
-          <p style={{ fontSize: "17px", lineHeight: 1.8, textAlign: "center", color: c.warmGray, maxWidth: 520, margin: "20px auto 0" }}>
-            <em style={{ color: c.terracotta, fontStyle: "normal", fontWeight: 600 }}>
-              Made for the work you actually do.
-            </em>
-          </p>
-        </div>
-      </section>
-
       {/* ── Final Close ── */}
       <section style={{
-        padding: "80px 0", textAlign: "center",
+        padding: "64px 0", textAlign: "center",
         background: `linear-gradient(135deg, ${c.forest} 0%, ${c.forestLight} 100%)`,
       }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-          {[
-            "Mornings don't have to feel rushed.",
-            "Connection can start with a single question.",
-            "And the smallest moments — a story shared, a memory recalled, a room that feels a little warmer — are often the ones that matter most.",
-          ].map((text, i) => (
-            <p key={i} style={{
-              fontFamily: serif, fontSize: "20px", lineHeight: 1.8,
-              color: "rgba(250,247,242,0.9)", maxWidth: 500, margin: "0 auto 16px",
-            }}>
-              {text}
-            </p>
-          ))}
-          <p style={{ fontSize: "16px", fontStyle: "italic", color: c.terracotta, marginTop: "36px" }}>
+          <p style={{
+            fontFamily: serif, fontSize: "22px", lineHeight: 1.6, fontStyle: "italic",
+            color: "rgba(250,247,242,0.95)", maxWidth: 520, margin: "0 auto",
+          }}>
+            Mornings don't have to feel rushed. Connection can start with a single question.
+          </p>
+          <p style={{ fontSize: "14px", fontStyle: "italic", color: c.terracotta, marginTop: "24px" }}>
             — Francesca, Founder of The Comfort Bond™
           </p>
         </div>
