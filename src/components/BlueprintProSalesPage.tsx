@@ -226,14 +226,15 @@ export default function BlueprintProSalesPage() {
               <Cta large>Get My 13-Week Plan — $27</Cta>
             </div>
             <p style={{ fontFamily: sans, fontSize: "0.82rem", color: c.muted, margin: "0.7rem 0 0", textAlign: "center" }}>
-              Instant download · Limited release, updated quarterly
+              Instant download · Q3 edition available now — next update replaces this version.
             </p>
-            <p style={{ fontFamily: sans, fontSize: "0.85rem", margin: "0.85rem 0 0", textAlign: "center" }}>
+            <p style={{ fontFamily: sans, fontSize: "0.9rem", margin: "0.85rem 0 0", textAlign: "center", color: c.forest }}>
+              Not sure yet?{" "}
               <Link
                 to="/blueprint"
-                style={{ color: c.terracotta, textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 500 }}
+                style={{ color: c.terracotta, textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 600 }}
               >
-                See a sample week — download the free 1-week Blueprint →
+                Download a free 1-week sample and try it first →
               </Link>
             </p>
           </div>
