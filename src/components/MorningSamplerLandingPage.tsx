@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import samplerHero from "@/assets/memory-care-morning-activity-routine-seniors.png";
 import samplerMoments from "@/assets/dementia-friendly-activity-cards-for-engagement.png";
@@ -134,6 +134,27 @@ const PAIN = [
 
 /* ─── Main ─── */
 export default function MorningSamplerLandingPage() {
+  const heroRef = useRef<HTMLElement | null>(null);
+  const [showStickyCTA, setShowStickyCTA] = useState(false);
+
+  useEffect(() => {
+    if (!heroRef.current) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setShowStickyCTA(!entry.isIntersecting),
+      { threshold: 0, rootMargin: "-80px 0px 0px 0px" }
+    );
+    obs.observe(heroRef.current);
+    return () => obs.disconnect();
+  }, []);
+
+  const scrollToHeroEmail = () => {
+    heroRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(() => {
+      const input = heroRef.current?.querySelector<HTMLInputElement>('input[type="email"]');
+      input?.focus({ preventScroll: true });
+    }, 600);
+  };
+
   return (
     <div style={{ fontFamily: sans, color: c.deepBrown, background: c.cream, lineHeight: 1.75 }}>
       {/* ── Brand Bar ── */}
@@ -172,7 +193,7 @@ export default function MorningSamplerLandingPage() {
       </div>
 
       {/* ── Hero ── */}
-      <section style={{ padding: "48px 0 40px", textAlign: "center", background: c.warmWhite }}>
+      <section ref={heroRef} style={{ padding: "48px 0 40px", textAlign: "center", background: c.warmWhite }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 24px" }}>
           <span style={{
             fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
@@ -488,6 +509,42 @@ export default function MorningSamplerLandingPage() {
           Dignified engagement for senior living. Done for you.
         </p>
       </footer>
+
+      {/* ── Sticky Mobile CTA (mobile only, fades in after hero) ── */}
+      <div
+        aria-hidden={!showStickyCTA}
+        style={{
+          position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 60,
+          padding: "10px 14px calc(10px + env(safe-area-inset-bottom))",
+          background: "rgba(255,249,242,0.97)", backdropFilter: "blur(10px)",
+          borderTop: `1px solid ${c.borderWarm}`, boxShadow: "0 -4px 20px rgba(61,43,31,0.08)",
+          transform: showStickyCTA ? "translateY(0)" : "translateY(110%)",
+          opacity: showStickyCTA ? 1 : 0,
+          transition: "transform 0.3s ease, opacity 0.3s ease",
+          display: "none",
+        }}
+        className="sampler-sticky-cta"
+      >
+        <button
+          onClick={scrollToHeroEmail}
+          style={{
+            width: "100%", padding: "14px 18px", fontFamily: sans, fontSize: "15px",
+            fontWeight: 700, letterSpacing: "0.3px", color: "#fff", background: c.forest,
+            border: "none", borderRadius: "12px", cursor: "pointer",
+            boxShadow: `0 6px 18px ${c.forest}55`,
+          }}
+        >
+          Get My Free Morning Plan →
+        </button>
+        <p style={{ fontFamily: sans, fontSize: "11px", color: c.softGray, margin: "6px 0 0", textAlign: "center" }}>
+          Instant download. Use it today.
+        </p>
+      </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .sampler-sticky-cta { display: block !important; }
+        }
+      `}</style>
     </div>
   );
 }
