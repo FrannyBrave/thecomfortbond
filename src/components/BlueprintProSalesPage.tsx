@@ -566,12 +566,8 @@ export default function BlueprintProSalesPage() {
       <section style={{ background: `linear-gradient(135deg, ${c.forest} 0%, ${c.forestLight} 100%)`, padding: "clamp(3.5rem, 8vw, 5.5rem) clamp(1.25rem, 5vw, 3rem)", position: "relative" }}>
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "4px", background: `linear-gradient(90deg, ${c.terracotta}, ${c.gold}, ${c.terracotta})` }} />
         <div style={{ maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontFamily: serif, fontSize: "clamp(1.15rem, 2.5vw, 1.4rem)", lineHeight: 1.7, color: "rgba(255,255,255,0.85)", margin: "0 0 1.25rem" }}>
-            You chose this work because the people in your community still have stories to tell and
-            still deserve to feel seen &mdash; not managed. Let the system handle the planning.
-          </p>
-          <p style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: "#fff", margin: "0 0 2rem" }}>
-            You handle the moments that matter.
+          <p style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: "#fff", margin: "0 0 2rem", lineHeight: 1.3 }}>
+            Let the system handle the planning. You handle the moments that matter.
           </p>
           <Cta large>Get Your Q3 Blueprint — $27</Cta>
         </div>
