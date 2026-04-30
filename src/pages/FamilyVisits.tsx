@@ -314,7 +314,7 @@ const FamilyVisits = () => {
                 Everything You Need for a{" "}
                 <span className="italic text-sand">Day of Presence</span>
               </h2>
-              <p className="mt-5 text-cream/80 text-base md:text-lg leading-[1.7] font-light">
+              <p className="mt-5 text-[rgba(250,247,242,0.85)] text-base md:text-lg leading-[1.7] font-light">
                 A ready-to-use Mother's Day toolkit designed to help you create a
                 calmer, more meaningful visit.
               </p>
@@ -371,7 +371,7 @@ const FamilyVisits = () => {
                       <p className="font-serif text-cream text-lg md:text-xl leading-tight mb-1.5">
                         {item.t}
                       </p>
-                      <p className="font-sans text-cream/75 text-[15px] leading-[1.65] font-light">
+                      <p className="font-sans text-[rgba(250,247,242,0.8)] text-[15px] leading-[1.65] font-light">
                         {item.d}
                       </p>
                     </div>
@@ -384,7 +384,7 @@ const FamilyVisits = () => {
             <motion.div {...fadeUp} className="mt-12 md:mt-16 text-center">
               <div className="inline-flex flex-col items-center">
                 <BuyButton source="whats-inside" fullWidthMobile={false} />
-                <p className="font-sans text-[12px] tracking-[0.06em] text-cream/65 mt-3">
+                <p className="font-sans text-[12px] tracking-[0.06em] text-[rgba(250,247,242,0.7)] mt-3">
                   $27 · Available until Mother's Day · May 10
                 </p>
               </div>
