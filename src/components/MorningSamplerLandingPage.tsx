@@ -134,6 +134,27 @@ const PAIN = [
 
 /* ─── Main ─── */
 export default function MorningSamplerLandingPage() {
+  const heroRef = useRef<HTMLElement | null>(null);
+  const [showStickyCTA, setShowStickyCTA] = useState(false);
+
+  useEffect(() => {
+    if (!heroRef.current) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setShowStickyCTA(!entry.isIntersecting),
+      { threshold: 0, rootMargin: "-80px 0px 0px 0px" }
+    );
+    obs.observe(heroRef.current);
+    return () => obs.disconnect();
+  }, []);
+
+  const scrollToHeroEmail = () => {
+    heroRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(() => {
+      const input = heroRef.current?.querySelector<HTMLInputElement>('input[type="email"]');
+      input?.focus({ preventScroll: true });
+    }, 600);
+  };
+
   return (
     <div style={{ fontFamily: sans, color: c.deepBrown, background: c.cream, lineHeight: 1.75 }}>
       {/* ── Brand Bar ── */}
