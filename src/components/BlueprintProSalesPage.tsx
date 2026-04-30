@@ -323,33 +323,6 @@ export default function BlueprintProSalesPage() {
       </section>
 
       {/* ════════════════════════════════════════
-          SECTION 4 — INTRODUCTION
-         ════════════════════════════════════════ */}
-      <Wide>
-        <div style={{ maxWidth: "660px" }}>
-          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.5rem" }}>
-            Introducing
-          </p>
-          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.5vw, 2rem)", fontWeight: 600, color: c.forest, margin: "0 0 1.25rem", lineHeight: 1.2 }}>
-            The Programming Blueprint™ Pro
-          </h2>
-          <p style={{ fontSize: "1rem", lineHeight: 1.85, color: c.body, margin: "0 0 1rem" }}>
-            A complete 13-week quarterly engagement system. Every week is pre-themed, mapped to
-            national observances, balanced across six dimensions of wellness, and paired with expert
-            coaching &mdash; so you walk into Monday knowing exactly what the week looks like.
-          </p>
-          <p style={{ fontSize: "1rem", lineHeight: 1.85, color: c.body, margin: "0 0 1rem" }}>
-            The Q3 2026 Edition covers July through September. Thirteen themes from
-            &ldquo;Red, White, and Blue Memories&rdquo; to &ldquo;What I Know for Sure.&rdquo;
-            Each one adult-centered, nostalgia-grounded, and designed to spark real engagement.
-          </p>
-          <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: c.muted }}>
-            A new edition arrives every 90 days. Q4 ships by August 30, 2026.
-          </p>
-        </div>
-      </Wide>
-
-      {/* ════════════════════════════════════════
           SECTION 5 — WHAT'S INSIDE (feature grid)
          ════════════════════════════════════════ */}
       <Wide bg={c.creamAlt}>
