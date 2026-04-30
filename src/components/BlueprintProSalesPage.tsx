@@ -223,6 +223,14 @@ export default function BlueprintProSalesPage() {
             <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "0.85rem", color: c.forest, opacity: 0.55, margin: "0.55rem 0 0", textAlign: "center" }}>
               Limited release — updated quarterly.
             </p>
+            <p style={{ fontFamily: sans, fontSize: "0.85rem", margin: "0.85rem 0 0", textAlign: "center" }}>
+              <Link
+                to="/blueprint"
+                style={{ color: c.terracotta, textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 500 }}
+              >
+                See a sample week — download the free 1-week Blueprint →
+              </Link>
+            </p>
           </div>
 
           {/* What's Inside summary — above image */}
