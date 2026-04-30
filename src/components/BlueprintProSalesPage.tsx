@@ -185,42 +185,79 @@ export default function BlueprintProSalesPage() {
       </nav>
 
       {/* ════════════════════════════════════════
-          SECTION 1 — HERO (2-column)
+          SECTION 1 — HERO (mobile-first conversion)
          ════════════════════════════════════════ */}
-      <Wide style={{ paddingTop: "clamp(1.5rem, 4vw, 2.5rem)" }}>
-        <div className="bps-hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem", alignItems: "center" }}>
-          {/* Left — copy + CTA */}
+      <Wide style={{ paddingTop: "clamp(1rem, 3vw, 2rem)", paddingBottom: "clamp(2rem, 5vw, 3.5rem)" }}>
+        <div className="bps-hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "clamp(1.75rem, 4vw, 2.5rem)", alignItems: "center" }}>
+          {/* Copy + CTA */}
           <div>
-            <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 1rem" }}>
+            <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.85rem" }}>
               The Programming Blueprint™ Pro
             </p>
-            <h1 style={{ fontFamily: serif, fontSize: "clamp(2rem, 5vw, 2.85rem)", fontWeight: 600, color: c.forest, lineHeight: 1.15, margin: "0 0 1.25rem", letterSpacing: "-0.02em" }}>
-              Your Next 13 Weeks of Programming. Already Planned.
+            <h1 style={{ fontFamily: serif, fontSize: "clamp(2rem, 5.2vw, 2.95rem)", fontWeight: 600, color: c.forest, lineHeight: 1.1, margin: "0 0 0.9rem", letterSpacing: "-0.02em" }}>
+              Stop Planning Activities at 10&nbsp;PM on Sunday.
             </h1>
-            <p style={{ fontSize: "clamp(1rem, 1.7vw, 1.1rem)", lineHeight: 1.8, color: c.body, margin: "0 0 2rem", maxWidth: "520px" }}>
-              A 13-week quarterly engagement system for Activity Directors who are done searching
-              Pinterest at 10 PM on a Sunday. Every theme. Every coaching tip. Every resource
-              connection. Ready the moment you open it.
+            <p style={{ fontSize: "clamp(0.98rem, 1.6vw, 1.08rem)", lineHeight: 1.65, color: c.body, margin: "0 0 1.1rem", maxWidth: "90%" }}>
+              A complete 13-week engagement system with themes, activities, and ready-to-use ideas — so you walk into every week prepared, not scrambling.
             </p>
-            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
-              <Cta large>Get the Q3 2026 Edition — $27</Cta>
-              <Cta large variant="outline">See What's Inside ↓</Cta>
+
+            {/* Who this is for */}
+            <div style={{ margin: "0 0 1.4rem" }}>
+              <p style={{ fontFamily: sans, fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: c.forest, opacity: 0.7, margin: "0 0 0.5rem" }}>
+                Designed for:
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: sans, fontSize: "0.92rem", lineHeight: 1.55, color: "#8B9D83" }}>
+                <li style={{ padding: "0.15rem 0" }}>• Activity Directors in senior living or memory care</li>
+                <li style={{ padding: "0.15rem 0" }}>• Teams tired of last-minute planning</li>
+                <li style={{ padding: "0.15rem 0" }}>• Professionals who want structure without burnout</li>
+              </ul>
             </div>
+
+            {/* Primary CTA — full width on mobile */}
+            <div className="bps-hero-cta">
+              <Cta large>Get My 13-Week Plan — $27</Cta>
+            </div>
+            <p style={{ fontFamily: sans, fontSize: "0.82rem", color: c.muted, margin: "0.7rem 0 0", textAlign: "center" }}>
+              Instant download. Start planning today.
+            </p>
+            <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "0.85rem", color: c.forest, opacity: 0.55, margin: "0.55rem 0 0", textAlign: "center" }}>
+              Limited release — updated quarterly.
+            </p>
           </div>
 
-          {/* Right — product mockup */}
+          {/* What's Inside summary — above image */}
+          <div style={{ backgroundColor: c.creamAlt, borderRadius: "16px", padding: "1.25rem 1.4rem", border: `1px solid ${c.gridline}` }}>
+            <p style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.6rem" }}>
+              Inside the Blueprint:
+            </p>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: sans, fontSize: "0.93rem", lineHeight: 1.7, color: c.body }}>
+              <li>• 13 fully planned weekly themes</li>
+              <li>• Done-for-you activity ideas</li>
+              <li>• Engagement strategies that work</li>
+              <li>• A repeatable system you can rely on</li>
+            </ul>
+          </div>
+
+          {/* Product mockup */}
           <img
             src={heroMockup}
             alt="The Programming Blueprint Pro on a tablet"
             style={{
               width: "100%",
               height: "auto",
-              borderRadius: "16px",
-              boxShadow: "0 16px 48px rgba(45,74,62,0.18)",
+              borderRadius: "20px",
+              boxShadow: "0 20px 56px rgba(45,74,62,0.22)",
               display: "block",
+              marginTop: "0.25rem",
             }}
           />
         </div>
+        <style>{`
+          .bps-hero-cta :global(button), .bps-hero-cta button { width: 100%; }
+          @media (min-width: 860px) {
+            .bps-hero-cta button { width: auto; }
+          }
+        `}</style>
       </Wide>
 
       {/* ═══ Social proof bar ═══ */}
