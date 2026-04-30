@@ -126,10 +126,10 @@ const STEPS = [
 ];
 
 const PAIN = [
-  "You don't always have time to plan something thoughtful for those first quiet minutes.",
-  "Sometimes the room feels still, and you're not sure how to begin.",
-  "You want something simple — but not something that feels childish or hollow.",
-  "You wish you could just walk in, sit down, and start a real conversation.",
+  "You don't have time to plan something thoughtful",
+  "The room feels quiet, and you're not sure how to begin",
+  "You want something simple — but not childish",
+  "You want to walk in and start a real conversation",
 ];
 
 /* ─── Main ─── */
