@@ -674,6 +674,53 @@ export default function BlueprintProSalesPage() {
           .bps-compare-grid { grid-template-columns: 1fr 1fr !important; }
         }
       `}</style>
+
+      {/* ── Sticky mobile CTA (mobile only) ── */}
+      <div
+        className="bps-sticky-cta"
+        style={{
+          position: "fixed",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 50,
+          padding: "0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom))",
+          background: "linear-gradient(to top, rgba(245,240,235,1) 70%, rgba(245,240,235,0))",
+          transform: stickyVisible ? "translateY(0)" : "translateY(110%)",
+          opacity: stickyVisible ? 1 : 0,
+          transition: "transform 0.3s ease, opacity 0.3s ease",
+          pointerEvents: stickyVisible ? "auto" : "none",
+        }}
+      >
+        <button
+          type="button"
+          onClick={() => openPaddleCheckout(BLUEPRINT_PRO_PRICE_ID)}
+          style={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.5rem",
+            fontFamily: sans,
+            fontSize: "0.95rem",
+            fontWeight: 600,
+            color: "#fff",
+            backgroundColor: c.terracotta,
+            border: "none",
+            padding: "0.95rem 1.25rem",
+            borderRadius: "100px",
+            cursor: "pointer",
+            boxShadow: "0 8px 24px -6px rgba(198,123,92,0.5)",
+          }}
+        >
+          Get My 13-Week Plan — $27 →
+        </button>
+      </div>
+      <style>{`
+        @media (min-width: 860px) {
+          .bps-sticky-cta { display: none !important; }
+        }
+      `}</style>
     </div>
   );
 }
