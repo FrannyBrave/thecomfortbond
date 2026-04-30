@@ -203,7 +203,7 @@ export default function BlueprintProSalesPage() {
               The Programming Blueprint™ Pro
             </p>
             <h1 style={{ fontFamily: serif, fontSize: "clamp(2rem, 5.2vw, 2.95rem)", fontWeight: 600, color: c.forest, lineHeight: 1.1, margin: "0 0 0.9rem", letterSpacing: "-0.02em" }}>
-              Stop Planning Activities at 10&nbsp;PM on Sunday.
+              No more Planning Activities at 10&nbsp;PM on Sunday.
             </h1>
             <p style={{ fontSize: "clamp(0.98rem, 1.6vw, 1.08rem)", lineHeight: 1.65, color: c.body, margin: "0 0 1.1rem", maxWidth: "90%" }}>
               A complete 13-week engagement system with themes, activities, and ready-to-use ideas — so you walk into every week prepared, not scrambling.
