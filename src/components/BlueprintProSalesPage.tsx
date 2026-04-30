@@ -370,25 +370,6 @@ export default function BlueprintProSalesPage() {
           ))}
         </div>
 
-        {/* Balance Wheel visual */}
-        <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
-          <img
-            src={balanceWheel}
-            alt="The Engagement Balance Wheel"
-            style={{
-              width: "100%",
-              maxWidth: "480px",
-              height: "auto",
-              borderRadius: "16px",
-              display: "inline-block",
-              boxShadow: "0 8px 32px rgba(45,74,62,0.1)",
-            }}
-          />
-          <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, fontStyle: "italic", marginTop: "0.75rem" }}>
-            The Engagement Balance Wheel &mdash; your visual compass for balanced programming.
-          </p>
-        </div>
-
         {/* Mid-page buy button */}
         <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
           <Cta large>Get My 13-Week Plan — $27</Cta>
