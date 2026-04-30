@@ -509,6 +509,42 @@ export default function MorningSamplerLandingPage() {
           Dignified engagement for senior living. Done for you.
         </p>
       </footer>
+
+      {/* ── Sticky Mobile CTA (mobile only, fades in after hero) ── */}
+      <div
+        aria-hidden={!showStickyCTA}
+        style={{
+          position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 60,
+          padding: "10px 14px calc(10px + env(safe-area-inset-bottom))",
+          background: "rgba(255,249,242,0.97)", backdropFilter: "blur(10px)",
+          borderTop: `1px solid ${c.borderWarm}`, boxShadow: "0 -4px 20px rgba(61,43,31,0.08)",
+          transform: showStickyCTA ? "translateY(0)" : "translateY(110%)",
+          opacity: showStickyCTA ? 1 : 0,
+          transition: "transform 0.3s ease, opacity 0.3s ease",
+          display: "none",
+        }}
+        className="sampler-sticky-cta"
+      >
+        <button
+          onClick={scrollToHeroEmail}
+          style={{
+            width: "100%", padding: "14px 18px", fontFamily: sans, fontSize: "15px",
+            fontWeight: 700, letterSpacing: "0.3px", color: "#fff", background: c.forest,
+            border: "none", borderRadius: "12px", cursor: "pointer",
+            boxShadow: `0 6px 18px ${c.forest}55`,
+          }}
+        >
+          Get My Free Morning Plan →
+        </button>
+        <p style={{ fontFamily: sans, fontSize: "11px", color: c.softGray, margin: "6px 0 0", textAlign: "center" }}>
+          Instant download. Use it today.
+        </p>
+      </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .sampler-sticky-cta { display: block !important; }
+        }
+      `}</style>
     </div>
   );
 }
