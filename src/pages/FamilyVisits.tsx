@@ -192,58 +192,8 @@ const FamilyVisits = () => {
             }}
           />
           <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            <motion.div {...fadeUp} className="lg:col-span-7 order-1">
-              {/* Mother's Day countdown strip */}
-              <div className="flex justify-center sm:justify-start">
-                <div className="inline-flex items-baseline gap-3 border-l-2 border-terracotta/50 pl-3">
-                  {days > 0 ? (
-                    <>
-                      <span className="font-serif text-[22px] sm:text-[24px] font-semibold text-terracotta leading-none tabular-nums">
-                        {days}
-                      </span>
-                      <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-forest/70">
-                        {days === 1 ? "day" : "days"} until Mother's Day
-                      </span>
-                    </>
-                  ) : (
-                    <>
-                      <span className="font-serif text-[22px] sm:text-[24px] font-semibold text-terracotta leading-none">
-                        Today
-                      </span>
-                      <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-forest/70">
-                        Mother's Day · be present
-                      </span>
-                    </>
-                  )}
-                </div>
-              </div>
-
-              {/* Headline */}
-              <h1 className="mt-6 font-serif text-forest leading-[1.05] tracking-tight text-[2rem] sm:text-[2.5rem] lg:text-[3.25rem]">
-                A Simple Way to Make Your Mother's Day Visit{" "}
-                <span className="italic text-forest/90">Meaningful</span> — Even If
-                You Don't Know What to Say
-              </h1>
-
-              {/* Subheadline */}
-              <p className="mt-5 md:mt-7 text-foreground/75 text-base md:text-lg leading-[1.7] font-light max-w-xl">
-                The Mother's Day Connection Kit gives you gentle prompts, calming
-                visual cards, music guidance, and a simple visit plan so you can
-                walk in feeling prepared, present, and connected.
-              </p>
-
-              {/* Hero CTA */}
-              <div className="mt-7 md:mt-9">
-                <BuyButton source="hero" />
-                <p className="font-sans text-sm text-foreground/65 mt-3 leading-relaxed">
-                  Use on your phone, tablet, or print at home.
-                </p>
-                {availabilityLine}
-              </div>
-            </motion.div>
-
-            {/* Hero image */}
-            <motion.div {...fadeIn} className="lg:col-span-5 order-2 relative">
+            {/* Hero image — appears FIRST on mobile, right side on desktop */}
+            <motion.div {...fadeIn} className="lg:col-span-5 order-1 lg:order-2 relative">
               <div className="relative">
                 <div className="relative bg-cream-dark/70 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.35)]">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
@@ -265,6 +215,56 @@ const FamilyVisits = () => {
                 </div>
                 <Ornament className="absolute -top-5 -left-5 w-10 h-10 text-terracotta" />
                 <Ornament className="absolute -bottom-5 -right-5 w-10 h-10 text-forest/60" />
+              </div>
+            </motion.div>
+
+            <motion.div {...fadeUp} className="lg:col-span-7 order-2 lg:order-1 text-center lg:text-left">
+              {/* "For you" eyebrow — instant audience clarity */}
+              <p className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-terracotta/90 font-medium">
+                For adult children visiting an aging mom
+              </p>
+
+              {/* Headline — tightened, emotional word early */}
+              <h1 className="mt-4 font-serif text-forest leading-[1.08] tracking-tight text-[2.15rem] sm:text-[2.5rem] lg:text-[3.25rem]">
+                Make This Mother's Day{" "}
+                <span className="italic text-terracotta">Meaningful</span> — Even
+                If You Don't Know What to Say.
+              </h1>
+
+              {/* Subheadline — short, two beats */}
+              <p className="mt-5 md:mt-6 font-serif text-forest/85 text-lg md:text-xl leading-[1.45] max-w-xl mx-auto lg:mx-0">
+                Walk in calm. Connect without pressure.
+              </p>
+              <p className="mt-2 font-sans text-foreground/70 text-[15px] md:text-base leading-[1.65] font-light max-w-xl mx-auto lg:mx-0">
+                A gentle kit of prompts, cards & music — ready in minutes.
+              </p>
+
+              {/* Urgency strip — louder, tied to Mother's Day */}
+              <div className="mt-6 flex justify-center lg:justify-start">
+                <div className="inline-flex items-center gap-2.5 rounded-full bg-terracotta/10 border border-terracotta/30 px-4 py-2">
+                  <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
+                  {days > 0 ? (
+                    <span className="font-sans text-[12px] sm:text-[13px] font-semibold tracking-[0.04em] text-terracotta">
+                      Only {days} {days === 1 ? "day" : "days"} left until Mother's Day
+                    </span>
+                  ) : (
+                    <span className="font-sans text-[12px] sm:text-[13px] font-semibold tracking-[0.04em] text-terracotta">
+                      Today is Mother's Day · be present
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* Hero CTA */}
+              <div className="mt-5 md:mt-7">
+                <p className="font-sans text-[12px] uppercase tracking-[0.18em] text-forest/60 mb-3">
+                  Be ready before May 10 →
+                </p>
+                <BuyButton source="hero" />
+                <p className="font-sans text-sm text-foreground/65 mt-3 leading-relaxed">
+                  Use on your phone, tablet, or print at home.
+                </p>
+                {availabilityLine}
               </div>
             </motion.div>
           </div>
