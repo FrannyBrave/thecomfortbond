@@ -209,12 +209,38 @@ export default function BlueprintProSalesPage() {
               A complete 13-week engagement system with themes, activities, and ready-to-use ideas — so you walk into every week prepared, not scrambling.
             </p>
 
-            {/* Who this is for */}
-            <div style={{ margin: "0 0 1.4rem" }}>
-              <p style={{ fontFamily: sans, fontSize: "0.95rem", lineHeight: 1.55, color: c.forest, margin: "0 0 0.4rem", fontWeight: 500 }}>
+            {/* Who this is for — credibility card with thread lines */}
+            <div
+              style={{
+                margin: "0 0 1.4rem",
+                padding: "1.1rem 1.15rem",
+                borderTop: `1px solid ${c.terracotta}`,
+                borderBottom: `1px solid ${c.terracotta}`,
+                background: "rgba(198, 123, 92, 0.05)",
+                position: "relative",
+              }}
+            >
+              <span
+                style={{
+                  position: "absolute",
+                  top: "-0.55rem",
+                  left: "1rem",
+                  background: c.cream,
+                  padding: "0 0.5rem",
+                  fontFamily: sans,
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: c.terracotta,
+                }}
+              >
+                Built for the field
+              </span>
+              <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1rem", lineHeight: 1.5, color: c.forest, margin: "0 0 0.45rem", fontWeight: 500 }}>
                 Created for real Activity Professionals navigating daily engagement challenges.
               </p>
-              <p style={{ fontFamily: sans, fontSize: "0.88rem", lineHeight: 1.55, color: c.muted, margin: 0 }}>
+              <p style={{ fontFamily: sans, fontSize: "0.85rem", lineHeight: 1.55, color: c.muted, margin: 0 }}>
                 Built based on real challenges faced in senior living communities.
               </p>
             </div>
