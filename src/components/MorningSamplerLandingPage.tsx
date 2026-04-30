@@ -264,39 +264,10 @@ export default function MorningSamplerLandingPage() {
         </div>
       </div>
 
-      {/* ── Set the Scene ── */}
-      <section style={{ padding: "56px 0" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-          <span style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, marginBottom: "16px", display: "block", textAlign: "center",
-          }}>
-            The Morning
-          </span>
-          <div style={{ fontSize: "17px", lineHeight: 1.95, color: c.warmGray, maxWidth: 560, margin: "0 auto", textAlign: "center" }}>
-            <p style={{ marginBottom: "18px" }}>
-              It's 8:45 AM. Residents are settled into the day room — some with coffee, some just sitting quietly.
-            </p>
-            <p style={{ marginBottom: "18px" }}>
-              Staff are moving between tasks. Breakfast trays are being cleared.
-            </p>
-            <p style={{ marginBottom: "18px" }}>
-              The morning news drifts from a television no one chose to turn on.
-            </p>
-            <p style={{ marginBottom: "18px" }}>
-              <strong style={{ color: c.deepBrown, fontWeight: 700 }}>There's a gap here.</strong>
-            </p>
-            <p style={{ marginBottom: 0 }}>
-              A window between breakfast and the first planned activity — where the room feels like it's waiting for something small, warm, and human. You feel it every day.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ── Pain Points ── */}
-      <section style={{ padding: "48px 0", background: c.sectionAlt }}>
+      <section style={{ padding: "56px 0", background: c.sectionAlt }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-          <ul style={{ padding: 0, maxWidth: 440, margin: "0 auto", listStyle: "none" }}>
+          <ul style={{ padding: 0, maxWidth: 460, margin: "0 auto", listStyle: "none" }}>
             {PAIN.map((text, i) => (
               <li key={i} style={{
                 fontSize: "17px", lineHeight: 1.7, color: "#1B3A4B", fontWeight: 500,
@@ -307,24 +278,6 @@ export default function MorningSamplerLandingPage() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* ── Introduce the Sampler ── */}
-      <section style={{ padding: "48px 0 24px" }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px", textAlign: "center" }}>
-          <span style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, marginBottom: "16px", display: "block",
-          }}>
-            Introducing
-          </span>
-          <h2 style={{
-            fontFamily: serif, fontSize: "clamp(26px, 4vw, 30px)", fontWeight: 500,
-            lineHeight: 1.35, color: c.deepBrown, marginBottom: "24px",
-          }}>
-            The Morning Routine Sampler™
-          </h2>
         </div>
       </section>
 
