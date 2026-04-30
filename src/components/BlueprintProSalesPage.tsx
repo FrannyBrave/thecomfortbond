@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/the-comfort-bond-logo.png";
 import heroMockup from "@/assets/memory-care-activity-calendar-template.png";
 import beforeAfter from "@/assets/activity-planning-before-after-senior-living-calendar.png";
-import balanceWheel from "@/assets/activity-programming-framework-for-seniors.png";
+
 import { openPaddleCheckout } from "@/lib/paddle";
 
 /* ─── Palette ─── */
