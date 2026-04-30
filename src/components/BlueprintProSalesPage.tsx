@@ -439,6 +439,14 @@ export default function BlueprintProSalesPage() {
             The Engagement Balance Wheel &mdash; your visual compass for balanced programming.
           </p>
         </div>
+
+        {/* Mid-page buy button */}
+        <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+          <Cta large>Get My 13-Week Plan — $27</Cta>
+          <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, marginTop: "0.65rem" }}>
+            Instant download · PDF
+          </p>
+        </div>
       </Wide>
 
       {/* ════════════════════════════════════════
