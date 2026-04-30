@@ -260,22 +260,6 @@ export default function BlueprintProSalesPage() {
         `}</style>
       </Wide>
 
-      {/* ═══ Social proof bar ═══ */}
-      <section style={{ backgroundColor: c.forest, padding: "1.25rem clamp(1.25rem, 5vw, 3rem)" }}>
-        <div style={{ maxWidth: "1060px", margin: "0 auto", display: "flex", justifyContent: "center", gap: "clamp(1.5rem, 4vw, 3rem)", flexWrap: "wrap", alignItems: "center" }}>
-          {[
-            "✓ 13 Weeks Pre-Planned",
-            "✓ Expert Coaching Notes",
-            "✓ 6-Dimension Balance Tracking",
-            "✓ Zero Prep Required",
-          ].map((item, i) => (
-            <span key={i} style={{ fontFamily: sans, fontSize: "0.8rem", fontWeight: 500, color: c.cream, opacity: 0.9, letterSpacing: "0.02em" }}>
-              {item}
-            </span>
-          ))}
-        </div>
-      </section>
-
       {/* ════════════════════════════════════════
           SECTION 2 — THE PAIN
          ════════════════════════════════════════ */}
