@@ -211,14 +211,12 @@ export default function BlueprintProSalesPage() {
 
             {/* Who this is for */}
             <div style={{ margin: "0 0 1.4rem" }}>
-              <p style={{ fontFamily: sans, fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: c.forest, opacity: 0.7, margin: "0 0 0.5rem" }}>
-                Designed for:
+              <p style={{ fontFamily: sans, fontSize: "0.95rem", lineHeight: 1.55, color: c.forest, margin: "0 0 0.4rem", fontWeight: 500 }}>
+                Created for real Activity Professionals navigating daily engagement challenges.
               </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: sans, fontSize: "0.92rem", lineHeight: 1.55, color: "#8B9D83" }}>
-                <li style={{ padding: "0.15rem 0" }}>• Activity Directors in senior living or memory care</li>
-                <li style={{ padding: "0.15rem 0" }}>• Teams tired of last-minute planning</li>
-                <li style={{ padding: "0.15rem 0" }}>• Professionals who want structure without burnout</li>
-              </ul>
+              <p style={{ fontFamily: sans, fontSize: "0.88rem", lineHeight: 1.55, color: c.muted, margin: 0 }}>
+                Built based on real challenges faced in senior living communities.
+              </p>
             </div>
 
             {/* Primary CTA — full width on mobile */}
