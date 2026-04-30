@@ -155,6 +155,14 @@ function Narrow({ children, bg = c.cream, style }: { children: React.ReactNode; 
    MAIN COMPONENT
    ═══════════════════════════════════════════ */
 export default function BlueprintProSalesPage() {
+  const [stickyVisible, setStickyVisible] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setStickyVisible(window.scrollY > 600);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div style={{ fontFamily: sans, color: c.body, backgroundColor: c.cream }}>
       {/* ── Nav bar ── */}
