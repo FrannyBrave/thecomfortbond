@@ -384,7 +384,7 @@ const FamilyVisits = () => {
             <motion.div {...fadeUp} className="mt-12 md:mt-16 text-center">
               <div className="inline-flex flex-col items-center">
                 <BuyButton source="whats-inside" fullWidthMobile={false} />
-                <p className="font-sans text-[12px] tracking-[0.06em] text-cream/65 mt-3">
+                <p className="font-sans text-[12px] tracking-[0.06em] text-[rgba(250,247,242,0.7)] mt-3">
                   $27 · Available until Mother's Day · May 10
                 </p>
               </div>
