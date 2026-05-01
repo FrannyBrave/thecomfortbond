@@ -331,19 +331,9 @@ export default function BlueprintProSalesPage() {
           SECTION 5 — WHAT'S INSIDE (feature grid)
          ════════════════════════════════════════ */}
       <Wide bg={c.creamAlt}>
-        {/* Product Introduction */}
-        <div style={{ textAlign: "center", marginBottom: "2.5rem", maxWidth: "680px", marginLeft: "auto", marginRight: "auto" }}>
+        <div style={{ textAlign: "center", marginBottom: "2rem", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
           <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1.25rem", borderRadius: "2px" }} />
-          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.85rem" }}>
-            Meet the Blueprint
-          </p>
-          <p style={{ fontFamily: serif, fontSize: "clamp(1.15rem, 2.5vw, 1.45rem)", fontWeight: 500, color: c.forest, lineHeight: 1.45, margin: 0 }}>
-            The Programming Blueprint™ Pro is your complete 13-week engagement system — designed to give you structure, variety, and confidence without the overwhelm.
-          </p>
-        </div>
-
-        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, margin: "0 0 0.5rem" }}>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.2vw, 1.9rem)", fontWeight: 600, color: c.forest, margin: 0, lineHeight: 1.25 }}>
             What This Actually Does for You
           </h2>
         </div>
@@ -385,61 +375,6 @@ export default function BlueprintProSalesPage() {
           </p>
         </div>
       </Wide>
-
-      {/* ════════════════════════════════════════
-          SECTION 5b — RELIEF / VISUALIZATION
-         ════════════════════════════════════════ */}
-      <Wide>
-        <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.85rem" }}>
-            Picture Monday Morning
-          </p>
-          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.4rem, 3.2vw, 1.9rem)", fontWeight: 600, color: c.forest, lineHeight: 1.25, margin: "0 0 1.5rem" }}>
-            Imagine walking into Monday morning knowing:
-          </h2>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "0.75rem", textAlign: "left", maxWidth: "440px", marginLeft: "auto", marginRight: "auto" }}>
-            {[
-              "Your entire week is already structured.",
-              "Every activity has purpose and balance.",
-              "You're not scrambling for ideas.",
-              "Your residents are actually engaged.",
-            ].map((t, i) => (
-              <li key={i} style={{ display: "flex", gap: "0.7rem", alignItems: "flex-start", fontSize: "1rem", lineHeight: 1.5, color: c.body }}>
-                <span style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0, marginTop: "0.05rem" }}>✔</span>
-                <span>{t}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Wide>
-
-      {/* ════════════════════════════════════════
-          SECTION 5c — DIFFERENTIATION
-         ════════════════════════════════════════ */}
-      <section
-        style={{
-          background: c.terracottaWash,
-          padding: "clamp(2.75rem, 6vw, 4rem) clamp(1.25rem, 5vw, 3rem)",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "620px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, lineHeight: 1.3, margin: "0 0 1rem" }}>
-            This isn&rsquo;t another list of activity ideas.
-          </h2>
-          <p style={{ fontFamily: sans, fontSize: "1rem", color: c.body, margin: "0 0 1.25rem", lineHeight: 1.6 }}>
-            It&rsquo;s a system that tells you:
-          </p>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "0.6rem", maxWidth: "320px", marginLeft: "auto", marginRight: "auto", textAlign: "left" }}>
-            {["What to do", "When to do it", "And how to keep everything balanced"].map((t, i) => (
-              <li key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontFamily: serif, fontSize: "1.05rem", color: c.forest, fontWeight: 500 }}>
-                <span style={{ color: c.terracotta, fontWeight: 700 }}>→</span> {t}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
 
       {/* ════════════════════════════════════════
           SECTION 6 — FREE VS PRO (visual comparison)
