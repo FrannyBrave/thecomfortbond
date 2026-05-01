@@ -228,7 +228,7 @@ export default function Kits() {
               >
                 {kit.popular && (
                   <div className="absolute top-0 left-0 right-0 text-center py-1.5 text-[10px] font-semibold tracking-[0.1em] uppercase text-white z-10" style={{ background: "var(--clay)" }}>
-                    Most Popular — Start Here
+                    ⭐ Most Loved by Activity Directors
                   </div>
                 )}
                 <div className={`p-6 pb-4 border-b border-[rgba(45,74,62,0.12)] ${kit.popular ? "pt-10" : ""}`}>
@@ -244,7 +244,7 @@ export default function Kits() {
                   <div className="text-[10px] tracking-[0.1em] uppercase font-medium mb-3" style={{ color: "var(--text-light)" }}>Sample activities inside</div>
                   <ul className="flex flex-col gap-1.5 mb-4">
                     {kit.highlights.map((f, j) => (
-                      <li key={j} className="flex items-start gap-[7px] text-[12.5px] leading-[1.5]" style={{ color: "var(--text-mid)" }}>
+                      <li key={j} className="flex items-start gap-[7px] text-[13px] leading-[1.5]" style={{ color: "var(--text-mid)" }}>
                         <span className="w-[5px] h-[5px] rounded-full flex-shrink-0 mt-[7px]" style={{ background: "var(--clay)" }} />
                         {f}
                       </li>
@@ -255,20 +255,26 @@ export default function Kits() {
                     Best for: {kit.bestFor}
                   </div>
                   <div className="rounded-lg px-3.5 py-3" style={{ borderLeft: "3px solid var(--clay)", background: "rgba(198,123,92,0.04)" }}>
-                    <p className="text-[11.5px] leading-[1.6] m-0" style={{ color: "var(--text-mid)" }}>
-                      <span className="font-semibold" style={{ color: "var(--forest-dark)" }}>Facilitator's Note:</span>{" "}
-                      Every kit includes a one-page facilitator guide with session flow, adaptation tips for different cognitive levels, and prompts you can read verbatim.
+                    <p className="text-[12.5px] font-semibold leading-[1.4] m-0 mb-1.5" style={{ color: "var(--forest-dark)" }}>
+                      You don't have to figure anything out.
                     </p>
+                    <p className="text-[11.5px] leading-[1.5] m-0 mb-1" style={{ color: "var(--text-mid)" }}>Every kit includes:</p>
+                    <ul className="list-none p-0 m-0 space-y-0.5 text-[11.5px]" style={{ color: "var(--text-mid)" }}>
+                      <li>• A simple session flow</li>
+                      <li>• Exact prompts to read</li>
+                      <li>• Adaptation tips for different abilities</li>
+                    </ul>
                   </div>
                 </div>
-                <div className="px-6 py-4 border-t border-[rgba(45,74,62,0.12)] flex items-center justify-between gap-3">
-                  <div>
-                    <div className="font-serif text-2xl font-semibold" style={{ color: "var(--forest-dark)" }}>{kit.price}</div>
-                    <div className="text-[11px] mt-0.5" style={{ color: "var(--text-mid)" }}>One-time purchase · Instant download</div>
+                <div className="px-6 pt-4 pb-5 border-t border-[rgba(45,74,62,0.12)] flex flex-col gap-2">
+                  <div className="flex items-baseline justify-between">
+                    <div className="font-serif text-2xl font-semibold" style={{ color: "var(--forest-dark)" }}>{kit.price} <span className="text-[12px] font-sans font-medium" style={{ color: "var(--clay)" }}>— Instant Access</span></div>
                   </div>
-                  <button type="button" onClick={() => openPaddleCheckout(kit.priceId)} className="inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-[13px] font-medium text-white whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 cursor-pointer border-0" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)" }}>
-                    Buy Now <ArrowSvg />
+                  <div className="text-[11.5px]" style={{ color: "var(--text-mid)" }}>One-time purchase. Use it again and again.</div>
+                  <button type="button" onClick={() => openPaddleCheckout(kit.priceId)} className="w-full inline-flex items-center justify-center gap-1.5 rounded-full px-5 py-3.5 text-[14px] font-semibold text-white whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 cursor-pointer border-0 mt-1" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)", boxShadow: "0 6px 18px rgba(198,123,92,0.28)" }}>
+                    Get This Kit Now <ArrowSvg />
                   </button>
+                  <p className="text-[11px] text-center m-0" style={{ color: "var(--text-light)" }}>Limited release — new kits rotate seasonally</p>
                 </div>
               </div>
             ))}
