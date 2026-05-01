@@ -355,10 +355,10 @@ export default function BlueprintProSalesPage() {
         <div style={{ position: "relative", zIndex: 1, maxWidth: "600px", margin: "0 auto" }}>
           <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1.5rem", borderRadius: "2px" }} />
           <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 4vw, 2.25rem)", fontWeight: 600, color: "#fff", lineHeight: 1.25, margin: "0 0 0.75rem" }}>
-            You don&rsquo;t have a time problem.
+            It&rsquo;s not a creativity problem.
           </h2>
           <p style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 4vw, 2.25rem)", fontWeight: 600, color: c.terracottaLight, lineHeight: 1.25, margin: 0 }}>
-            You have a systems problem.
+            It&rsquo;s a structure problem.
           </p>
         </div>
       </section>
