@@ -198,7 +198,7 @@ const FamilyVisits = () => {
             {/* Hero image — appears AFTER text on mobile (faster LCP), right side on desktop */}
             <motion.div
               {...fadeIn}
-              className="lg:col-span-5 order-2 lg:order-2 relative flex items-center justify-center lg:justify-end"
+              className="lg:col-span-5 order-2 lg:order-2 relative flex items-center justify-center lg:justify-end mt-8 lg:mt-0"
             >
               <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
                 <picture>
@@ -231,7 +231,7 @@ const FamilyVisits = () => {
               </div>
             </motion.div>
 
-            <motion.div {...fadeUp} className="lg:col-span-7 order-2 lg:order-1 text-center lg:text-left">
+            <motion.div {...fadeUp} className="lg:col-span-7 order-1 lg:order-1 text-center lg:text-left">
               {/* "For you" eyebrow — instant audience clarity */}
               <p className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-terracotta/90 font-medium">
                 For adult children visiting an aging mom
