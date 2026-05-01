@@ -651,9 +651,9 @@ export default function BlueprintProSalesPage() {
 
         {/* Buy button after FAQ */}
         <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-          <Cta large>Get My 13-Week Plan — $27</Cta>
+          <Cta large>Get Your 13-Week Plan — $27</Cta>
           <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, marginTop: "0.65rem" }}>
-            Instant download · All sales final on digital products
+            Instant access · No subscription · Use it again and again
           </p>
         </div>
       </Narrow>
