@@ -116,7 +116,7 @@ const FamilyVisits = () => {
         "og:description",
         "Gentle prompts, visual cards, music guidance, and a simple visit plan so you can walk in feeling prepared, present, and connected.",
       ],
-      ["og:image", "https://thecomfortbond.com/og-family-visits.png"],
+      ["og:image", "https://thecomfortbond.com/og-family-visits.jpg"],
       ["og:type", "website"],
       ["og:url", "https://thecomfortbond.com/family-visits"],
     ];
