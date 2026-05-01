@@ -198,7 +198,7 @@ const FamilyVisits = () => {
             {/* Hero image — appears AFTER text on mobile (faster LCP), right side on desktop */}
             <motion.div
               {...fadeIn}
-              className="lg:col-span-5 order-2 lg:order-2 relative flex items-center justify-center lg:justify-end"
+              className="lg:col-span-5 order-2 lg:order-2 relative flex items-center justify-center lg:justify-end mt-8 lg:mt-0"
             >
               <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
                 <picture>
