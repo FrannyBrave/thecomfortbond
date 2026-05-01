@@ -262,10 +262,13 @@ export default function BlueprintProSalesPage() {
 
             {/* Primary CTA — full width on mobile */}
             <div className="bps-hero-cta">
-              <Cta large>Get My 13-Week Plan — $27</Cta>
+              <Cta large>Get Your 13-Week Plan — $27</Cta>
             </div>
             <p style={{ fontFamily: sans, fontSize: "0.82rem", color: c.muted, margin: "0.7rem 0 0", textAlign: "center" }}>
-              Instant download · Q3 edition available now — next update replaces this version.
+              Instant access · No subscription · Use it again and again
+            </p>
+            <p style={{ fontFamily: sans, fontSize: "0.78rem", color: c.terracotta, margin: "0.4rem 0 0", textAlign: "center", fontWeight: 600 }}>
+              Updated quarterly · Limited release per edition
             </p>
             <p style={{ fontFamily: sans, fontSize: "0.9rem", margin: "0.85rem 0 0", textAlign: "center", color: c.forest }}>
               Not sure yet?{" "}
