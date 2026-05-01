@@ -667,7 +667,10 @@ export default function BlueprintProSalesPage() {
           <p style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: "#fff", margin: "0 0 2rem", lineHeight: 1.3 }}>
             Let the system handle the planning. You handle the moments that matter.
           </p>
-          <Cta large>Get Your Q3 Blueprint — $27</Cta>
+          <Cta large>Get Your 13-Week Plan — $27</Cta>
+          <p style={{ fontFamily: sans, fontSize: "0.78rem", color: "rgba(255,255,255,0.7)", marginTop: "0.85rem" }}>
+            Instant access · No subscription · Updated quarterly
+          </p>
         </div>
       </section>
 
