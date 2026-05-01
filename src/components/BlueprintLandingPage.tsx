@@ -53,6 +53,13 @@ function EmailCapture({ id, variant = "default" }: { id: string; variant?: "defa
       // Pinterest 'signup' event — only after a confirmed successful submit.
       const { trackPinterestEvent } = await import("@/lib/pinterest");
       trackPinterestEvent("signup", { lead_type: "free-blueprint" }, `signup:blueprint:${email}`);
+      // Meta Pixel 'Lead' event — feeds Facebook/Instagram Ads optimization.
+      const { trackMetaEvent } = await import("@/lib/meta-pixel");
+      trackMetaEvent(
+        "Lead",
+        { content_name: "Free Engagement Blueprint", content_category: "free-blueprint" },
+        `lead:blueprint:${email}`
+      );
     } catch (err) {
       setStatus("error");
       setErrorMsg("Something went wrong. Please try again.");
