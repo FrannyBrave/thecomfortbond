@@ -170,73 +170,53 @@ export default function Kits() {
       {/* ── Products Section ── */}
       <section id="products" className="py-12 md:py-20 px-6 md:px-16" style={{ background: "var(--sand-pale)", paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
         <div className="max-w-[1200px] mx-auto">
-          <div className="section-tag">The full collection</div>
-          <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
-            Five Done-for-You Engagement Kits,<br />
-            <em className="italic" style={{ color: "var(--clay)" }}>Ready to Print &amp; Facilitate Today</em>
+          <div className="section-tag">What you get in every kit</div>
+          <h2 className="font-serif text-[clamp(1.6rem,3.2vw,2.4rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
+            What You Get in <em className="italic" style={{ color: "var(--clay)" }}>Every Kit</em>
           </h2>
-          <p className="text-[17px] font-light leading-[1.7] mt-4 max-w-[600px]" style={{ color: "var(--text-mid)" }}>
-            Each kit is a complete, themed activity package — zero prep, maximum engagement. Print what you need and walk into your next session with confidence.
-          </p>
 
-          {/* What's in every kit — unified contents card */}
-          <div className="mt-10 rounded-2xl overflow-hidden" style={{ background: "var(--forest-dark)", border: "1px solid var(--forest-dark)", boxShadow: "0 8px 32px rgba(45,74,62,0.18)" }}>
-            <div className="px-6 md:px-8 py-4 flex items-center justify-between gap-4 flex-wrap" style={{ background: "rgba(255,255,255,0.04)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
-              <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-lg flex items-center justify-center text-[16px]" style={{ background: "var(--clay)", color: "#fff" }}>📦</span>
-                <div>
-                  <div className="text-[10px] font-semibold tracking-[0.12em] uppercase" style={{ color: "var(--sand)" }}>What's in every kit</div>
-                  <h3 className="font-serif text-[1.15rem] md:text-[1.3rem] font-semibold leading-tight m-0 text-white">
-                    A complete, ready-to-facilitate session pack
-                  </h3>
-                </div>
+          {/* What's in every kit — simplified */}
+          <div className="mt-6 rounded-2xl overflow-hidden" style={{ background: "var(--forest-dark)", boxShadow: "0 8px 32px rgba(45,74,62,0.18)" }}>
+            <div className="px-6 md:px-8 py-5 text-center" style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+              <div className="font-serif text-[1.4rem] md:text-[1.6rem] font-semibold leading-tight m-0 text-white">
+                ~6 hours of <em className="italic" style={{ color: "var(--sand)" }}>ready-to-run programming</em>
               </div>
-              <div className="text-[11px] font-medium tracking-[0.08em] uppercase px-3 py-1.5 rounded-full" style={{ color: "var(--sand)", background: "rgba(232,201,154,0.18)" }}>
-                ~6 hours of programming
-              </div>
+              <div className="text-[12px] mt-1" style={{ color: "rgba(255,255,255,0.65)" }}>Open the PDF, print, walk in confident.</div>
             </div>
 
             <div className="px-6 md:px-8 py-6">
-              <div className="flex flex-wrap gap-2">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 list-none p-0 m-0">
                 {[
-                  { icon: "💬", label: "15+ Conversation Starter Cards" },
-                  { icon: "🧠", label: "20 Themed Trivia Questions" },
-                  { icon: "🎯", label: "24-Term BINGO + Caller Prompts" },
-                  { icon: "🔗", label: "Word Link Cognitive Game" },
-                  { icon: "🎵", label: "Musical Memory · Finish the Lyric" },
-                  { icon: "🖼️", label: "10 Visual Spark Cards" },
-                  { icon: "📋", label: "Facilitator's Guide" },
+                  "Conversation Starter Cards",
+                  "Themed Trivia",
+                  "BINGO + Caller Prompts",
+                  "Word Link Game",
+                  "Music-Based Memory Activity",
+                  "Visual Spark Cards",
                 ].map((item, i) => (
-                  <span
-                    key={i}
-                    className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] font-medium"
-                    style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(232,201,154,0.25)", color: "#fff" }}
-                  >
-                    <span className="text-[14px] leading-none">{item.icon}</span>
-                    {item.label}
-                  </span>
+                  <li key={i} className="flex items-center gap-2.5 text-[14px]" style={{ color: "rgba(255,255,255,0.92)" }}>
+                    <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-[10px] text-white" style={{ background: "var(--clay)" }}>✓</span>
+                    {item}
+                  </li>
                 ))}
-              </div>
-
-              <div className="mt-5 pt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11.5px]" style={{ borderTop: "1px dashed rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.75)" }}>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
-                  Print-ready PDF
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
-                  Instant download
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
-                  Zero prep
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] text-white" style={{ background: "var(--clay)" }}>✓</span>
-                  Reuse anytime
-                </span>
-              </div>
+              </ul>
             </div>
+          </div>
+
+          {/* Trust + usability strip */}
+          <p className="text-center text-[13px] font-medium mt-4 mb-0" style={{ color: "var(--forest-dark)" }}>
+            Instant download · Print or use on tablet · Reuse anytime
+          </p>
+
+          {/* Where to start */}
+          <div className="mt-10 rounded-2xl p-5 md:p-6" style={{ background: "rgba(198,123,92,0.06)", border: "1px solid rgba(198,123,92,0.25)" }}>
+            <h3 className="font-serif text-[1.15rem] md:text-[1.3rem] font-semibold m-0" style={{ color: "var(--forest-dark)" }}>
+              Not sure where to start?
+            </h3>
+            <ul className="mt-3 space-y-1.5 list-none p-0 text-[14px]" style={{ color: "var(--text-mid)" }}>
+              <li>→ <a href="#nostalgia-kit" className="font-semibold no-underline hover:underline" style={{ color: "var(--clay)" }}>Start with the Nostalgia Kit</a> (best for mixed groups)</li>
+              <li>→ Or choose a themed kit based on your residents' interests</li>
+            </ul>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
