@@ -6,6 +6,9 @@ import { ExitIntentModal } from "@/components/ExitIntentModal";
 import { Button } from "@/components/ui/button";
 import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
 import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
+import heroImageWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.webp";
+import heroImageMobileWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.webp";
+import heroImageMobileJpg from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.jpg";
 import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.png";
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
