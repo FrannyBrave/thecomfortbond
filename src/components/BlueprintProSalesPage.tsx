@@ -732,7 +732,7 @@ export default function BlueprintProSalesPage() {
             boxShadow: "0 8px 24px -6px rgba(198,123,92,0.5)",
           }}
         >
-          Get My 13-Week Plan — $27 →
+          Get Your 13-Week Plan — $27 →
         </button>
       </div>
       <style>{`
