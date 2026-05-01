@@ -97,6 +97,35 @@ export const MothersDayCheckoutModal = ({
         /* analytics best-effort */
       }
 
+      // Meta Pixel 'Lead' + 'InitiateCheckout' — feeds Facebook/Instagram
+      // Ads optimization for warm buyer-intent + checkout-funnel signals.
+      try {
+        const { trackMetaEvent } = await import("@/lib/meta-pixel");
+        trackMetaEvent(
+          "Lead",
+          {
+            content_name: "Mother's Day Connection Kit",
+            content_category: source,
+            value: 27,
+            currency: "USD",
+          },
+          `meta-lead:mothers-day-kit:${source}:${trimmedEmail}`
+        );
+        trackMetaEvent(
+          "InitiateCheckout",
+          {
+            content_name: "Mother's Day Connection Kit",
+            content_category: source,
+            value: 27,
+            currency: "USD",
+            num_items: 1,
+          },
+          `meta-ic:mothers-day-kit:${source}:${trimmedEmail}`
+        );
+      } catch {
+        /* analytics best-effort */
+      }
+
       // Open Paddle with prefill + customData. Close the modal first so
       // the Paddle overlay isn't stacked on top of our dialog.
       onOpenChange(false);

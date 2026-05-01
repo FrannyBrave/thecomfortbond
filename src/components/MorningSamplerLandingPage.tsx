@@ -56,6 +56,13 @@ function SamplerEmailCapture({
       // Pinterest 'signup' event — only after a confirmed successful submit.
       const { trackPinterestEvent } = await import("@/lib/pinterest");
       trackPinterestEvent("signup", { lead_type: "free-sampler" }, `signup:sampler:${email}`);
+      // Meta Pixel 'Lead' event — feeds Facebook/Instagram Ads optimization.
+      const { trackMetaEvent } = await import("@/lib/meta-pixel");
+      trackMetaEvent(
+        "Lead",
+        { content_name: "Free Morning Sampler", content_category: "free-sampler" },
+        `lead:sampler:${email}`
+      );
     } catch (err) {
       setStatus("error");
       setErrorMsg("Something went wrong. Please try again.");
