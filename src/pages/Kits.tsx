@@ -111,8 +111,64 @@ export default function Kits() {
         </div>
       </nav>
 
+      {/* ── Hero ── */}
+      <section className="px-6 md:px-16 pt-8 pb-10 md:pt-14 md:pb-14" style={{ background: "var(--cream)" }}>
+        <div className="max-w-[900px] mx-auto text-center">
+          <div className="section-tag" style={{ justifyContent: "center" }}>Done-for-You Activity Kits</div>
+          <h1 className="font-serif font-semibold leading-[1.15] mt-2" style={{ color: "var(--forest-dark)", fontSize: "clamp(1.9rem, 5vw, 2.8rem)" }}>
+            Done-for-You Activity Kits for <em className="italic" style={{ color: "var(--clay)" }}>Meaningful, Engaging Sessions</em> — Without the Prep
+          </h1>
+          <p className="text-[16px] md:text-[18px] font-light leading-[1.6] mt-4 max-w-[640px] mx-auto" style={{ color: "var(--text-mid)" }}>
+            Print what you need, walk in confident, and lead sessions that residents actually respond to.
+          </p>
+
+          {/* Quick benefit bar */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-5">
+            {[
+              "6+ hours of programming",
+              "No prep required",
+              "Works for mixed cognitive levels",
+            ].map((b, i) => (
+              <span key={i} className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] font-medium" style={{ background: "rgba(45,74,62,0.06)", color: "var(--forest-dark)", border: "1px solid rgba(45,74,62,0.12)" }}>
+                <span style={{ color: "var(--clay)" }}>✔</span> {b}
+              </span>
+            ))}
+          </div>
+
+          {/* Primary CTA */}
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <a href="#products" className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[15px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5" style={{ background: "var(--clay)", fontFamily: "var(--font-sans)", boxShadow: "0 6px 20px rgba(198,123,92,0.25)" }}>
+              See the Kits <ArrowSvg />
+            </a>
+            <p className="text-[12px] m-0" style={{ color: "var(--text-light)" }}>Instant download · Print or use on tablet · Reuse anytime</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Who This Is For ── */}
+      <section className="px-6 md:px-16 pb-10" style={{ background: "var(--cream)" }}>
+        <div className="max-w-[760px] mx-auto rounded-2xl p-6 md:p-8" style={{ background: "rgba(139,157,131,0.08)", border: "1px solid rgba(139,157,131,0.25)" }}>
+          <h2 className="font-serif text-[1.3rem] md:text-[1.5rem] font-semibold m-0" style={{ color: "var(--forest-dark)" }}>
+            This is for you if:
+          </h2>
+          <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 list-none p-0">
+            {[
+              "You're tired of last-minute activity planning",
+              "You need something that works for mixed abilities",
+              "You want structure — without burnout",
+              "You want residents engaged, not just present",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.55]" style={{ color: "var(--text-mid)" }}>
+                <span className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-[3px] text-[9px] text-white" style={{ background: "var(--clay)" }}>✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* ── Products Section ── */}
-      <section id="products" className="py-16 md:py-24 px-6 md:px-16" style={{ background: "var(--sand-pale)", paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
+      <section id="products" className="py-12 md:py-20 px-6 md:px-16" style={{ background: "var(--sand-pale)", paddingBottom: "clamp(1.5rem, 3vw, 2.5rem)" }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="section-tag">The full collection</div>
           <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold leading-[1.2] mt-0" style={{ color: "var(--forest-dark)" }}>
