@@ -9,7 +9,8 @@ import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connect
 import heroImageWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.webp";
 import heroImageMobileWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.webp";
 import heroImageMobileJpg from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.jpg";
-import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.png";
+import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.jpg";
+import kitImageWebp from "@/assets/mothers-day-connection-kit-for-seniors.webp";
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -223,9 +224,9 @@ const FamilyVisits = () => {
                       boxShadow:
                         "0 25px 60px -12px rgba(0,0,0,0.45), 0 12px 28px -8px rgba(0,0,0,0.25)",
                     }}
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
-                    fetchPriority="low"
+                    fetchPriority="high"
                   />
                 </picture>
               </div>
@@ -339,14 +340,18 @@ const FamilyVisits = () => {
                 className="relative bg-cream-dark/10 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(0,0,0,0.5)] order-2 lg:order-1"
               >
                 <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
-                  <img
-                    src={kitImage}
-                    alt="The Mother's Day Connection Kit — conversation cards, visual spark cards, playlist guide, letter template, and morning ritual guide laid out on a linen-covered table."
-                    width={1820}
-                    height={1138}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
+                  <picture>
+                    <source type="image/webp" srcSet={kitImageWebp} />
+                    <img
+                      src={kitImage}
+                      alt="The Mother's Day Connection Kit — conversation cards, visual spark cards, playlist guide, letter template, and morning ritual guide laid out on a linen-covered table."
+                      width={1400}
+                      height={932}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover"
+                    />
+                  </picture>
                 </div>
               </motion.div>
 
