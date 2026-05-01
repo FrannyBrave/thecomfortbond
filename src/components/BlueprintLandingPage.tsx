@@ -33,33 +33,30 @@ function EmailCapture({ id, variant = "default" }: { id: string; variant?: "defa
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
+  const CK_LANDING_URL = "https://the-comfort-bond-2.kit.com/392c82fa32";
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setStatus("loading");
     setErrorMsg("");
-    const formId = "9317013";
-    const apiKey = "LyFHhQ8J1GJ27wcL4mq-uQ";
     try {
-      const res = await fetch(
-        "https://api.convertkit.com/v3/forms/" + formId + "/subscribe",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ api_key: apiKey, email }),
-        }
-      );
-      if (!res.ok) throw new Error("Subscription failed");
-      setStatus("success");
-      // Pinterest 'signup' event — only after a confirmed successful submit.
-      const { trackPinterestEvent } = await import("@/lib/pinterest");
-      trackPinterestEvent("signup", { lead_type: "free-blueprint" }, `signup:blueprint:${email}`);
-      // Meta Pixel 'Lead' event — feeds Facebook/Instagram Ads optimization.
-      const { trackMetaEvent } = await import("@/lib/meta-pixel");
-      trackMetaEvent(
-        "Lead",
-        { content_name: "Free Engagement Blueprint", content_category: "free-blueprint" },
-        `lead:blueprint:${email}`
-      );
+      // Fire tracking events before redirect (best-effort).
+      try {
+        const { trackPinterestEvent } = await import("@/lib/pinterest");
+        trackPinterestEvent("signup", { lead_type: "free-blueprint" }, `signup:blueprint:${email}`);
+        const { trackMetaEvent } = await import("@/lib/meta-pixel");
+        trackMetaEvent(
+          "Lead",
+          { content_name: "Free Engagement Blueprint", content_category: "free-blueprint" },
+          `lead:blueprint:${email}`
+        );
+      } catch (trackErr) {
+        console.warn("[EmailCapture] tracking failed", trackErr);
+      }
+      // Redirect to ConvertKit-hosted landing form with email pre-filled.
+      // ConvertKit handles subscription + incentive email delivery on their side.
+      const url = `${CK_LANDING_URL}?email_address=${encodeURIComponent(email)}`;
+      window.location.href = url;
     } catch (err) {
       setStatus("error");
       setErrorMsg("Something went wrong. Please try again.");
