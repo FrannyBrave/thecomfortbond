@@ -195,21 +195,34 @@ const FamilyVisits = () => {
             }}
           />
           <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            {/* Hero image — appears FIRST on mobile, right side on desktop */}
-            <motion.div {...fadeIn} className="lg:col-span-5 order-1 lg:order-2 relative">
+            {/* Hero image — appears AFTER text on mobile (faster LCP), right side on desktop */}
+            <motion.div {...fadeIn} className="lg:col-span-5 order-2 lg:order-2 relative">
               <div className="relative">
                 <div className="relative bg-cream-dark/70 p-3 md:p-4 rounded-sm shadow-[0_30px_80px_-30px_rgba(45,74,62,0.35)]">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
-                    <img
-                      src={heroImage}
-                      alt="Adult daughter and her silver-haired mother sharing memory conversation cards from The Mother's Day Connection Kit at a sunlit wooden table."
-                      width={1920}
-                      height={1080}
-                      className="absolute inset-0 w-full h-full object-cover scale-[1.35] md:scale-[1.25]"
-                      style={{ objectPosition: "58% 50%" }}
-                      loading="eager"
-                      decoding="async"
-                    />
+                    <picture>
+                      <source
+                        media="(max-width: 1023px)"
+                        type="image/webp"
+                        srcSet={heroImageMobileWebp}
+                      />
+                      <source
+                        media="(max-width: 1023px)"
+                        srcSet={heroImageMobileJpg}
+                      />
+                      <source type="image/webp" srcSet={heroImageWebp} />
+                      <img
+                        src={heroImage}
+                        alt="Adult daughter and her silver-haired mother sharing memory conversation cards from The Mother's Day Connection Kit at a sunlit wooden table."
+                        width={1920}
+                        height={1080}
+                        className="absolute inset-0 w-full h-full object-cover scale-[1.35] md:scale-[1.25]"
+                        style={{ objectPosition: "58% 50%" }}
+                        loading="lazy"
+                        decoding="async"
+                        fetchPriority="low"
+                      />
+                    </picture>
                     <div
                       aria-hidden="true"
                       className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest/25 via-transparent to-cream/10"
