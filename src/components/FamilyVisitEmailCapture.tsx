@@ -65,6 +65,14 @@ export const FamilyVisitEmailCapture = ({
         { lead_type: "family-visit-guide" },
         `signup:family-visit:${source}:${trimmed}`
       );
+
+      // Meta Pixel 'Lead' event — feeds Facebook/Instagram Ads optimization.
+      const { trackMetaEvent } = await import("@/lib/meta-pixel");
+      trackMetaEvent(
+        "Lead",
+        { content_name: "Mother's Day Family Visit Guide", content_category: source },
+        `lead:family-visit:${source}:${trimmed}`
+      );
     } catch (err) {
       setStatus("error");
       setErrorMsg("Something went wrong. Please try again.");
