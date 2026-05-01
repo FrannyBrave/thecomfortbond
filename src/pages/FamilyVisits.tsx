@@ -215,11 +215,11 @@ const FamilyVisits = () => {
                   <img
                     src={heroImage}
                     alt="Adult daughter and her silver-haired mother sharing memory conversation cards from The Mother's Day Connection Kit at a sunlit wooden table."
-                    width={1920}
-                    height={1080}
+                    width={1200}
+                    height={1200}
                     className="relative z-10 w-full h-auto rounded-[24px] object-cover"
                     style={{
-                      aspectRatio: "2/3",
+                      aspectRatio: "1/1",
                       boxShadow:
                         "0 25px 60px -12px rgba(0,0,0,0.45), 0 12px 28px -8px rgba(0,0,0,0.25)",
                     }}
