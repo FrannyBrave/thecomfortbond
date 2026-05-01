@@ -313,24 +313,22 @@ export default function BlueprintProSalesPage() {
               The Problem
             </p>
             <h2 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, margin: "0 0 1rem" }}>
-              Sound Familiar?
+              You know this feeling:
             </h2>
-            <p style={{ fontSize: "1rem", lineHeight: 1.8, color: c.body, margin: "0 0 1.5rem" }}>
-              Every week, the same cycle:
-            </p>
             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.5rem", display: "flex", flexDirection: "column", gap: "0.85rem" }}>
               {[
-                "Staring at a blank monthly calendar on a Sunday night.",
-                "Scrolling past childish, tissue-paper craft ideas.",
-                "Rebuilding your schedule from zero, every single week.",
+                "It's Sunday night and next week isn't planned.",
+                "You're pulling ideas from Pinterest at the last minute.",
+                "Activities feel repetitive — or rushed.",
+                "You're trying to balance engagement, but something always gets missed.",
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "0.75rem", alignItems: "baseline" }}>
                   <span style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: c.terracotta, flexShrink: 0, marginTop: "0.45rem" }} />
-                  <span style={{ fontSize: "1.025rem", lineHeight: 1.7, color: c.body }}>{item}</span>
+                  <span style={{ fontSize: "1.025rem", lineHeight: 1.6, color: c.body }}>{item}</span>
                 </li>
               ))}
             </ul>
-            <p style={{ fontSize: "1rem", lineHeight: 1.8, color: c.muted, fontStyle: "italic", margin: 0, borderLeft: `3px solid ${c.terracotta}`, paddingLeft: "1rem" }}>
+            <p style={{ fontSize: "1rem", lineHeight: 1.7, color: c.muted, fontStyle: "italic", margin: 0, borderLeft: `3px solid ${c.terracotta}`, paddingLeft: "1rem" }}>
               You didn&rsquo;t get into this work to feel behind. You got into it because you care.
             </p>
           </div>
