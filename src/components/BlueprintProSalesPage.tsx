@@ -367,58 +367,115 @@ export default function BlueprintProSalesPage() {
           SECTION 5 — WHAT'S INSIDE (feature grid)
          ════════════════════════════════════════ */}
       <Wide bg={c.creamAlt}>
-        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1rem", borderRadius: "2px" }} />
-          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, margin: "0 0 0.5rem" }}>
-            What&rsquo;s Inside
-          </h2>
-          <p style={{ fontSize: "0.9rem", color: c.muted, margin: 0 }}>
-            Everything you need. Nothing you don&rsquo;t.
+        {/* Product Introduction */}
+        <div style={{ textAlign: "center", marginBottom: "2.5rem", maxWidth: "680px", marginLeft: "auto", marginRight: "auto" }}>
+          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1.25rem", borderRadius: "2px" }} />
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.85rem" }}>
+            Meet the Blueprint
+          </p>
+          <p style={{ fontFamily: serif, fontSize: "clamp(1.15rem, 2.5vw, 1.45rem)", fontWeight: 500, color: c.forest, lineHeight: 1.45, margin: 0 }}>
+            The Programming Blueprint™ Pro is your complete 13-week engagement system — designed to give you structure, variety, and confidence without the overwhelm.
           </p>
         </div>
-        <div className="bps-features-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.25rem" }}>
+
+        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, margin: "0 0 0.5rem" }}>
+            What This Actually Does for You
+          </h2>
+        </div>
+
+        <div className="bps-features-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.1rem" }}>
           {[
-            { icon: "📋", title: "13-Week Framework", text: "Every theme mapped to national observances at a glance. Structured planning pages with space for morning/afternoon activities, dimension tracking, and session notes." },
-            { icon: "🎯", title: "13 Weekly Theme Guides", text: "Curated conversation starters, dimension mapping, and resource connections for each week. The content is done — you just facilitate." },
-            { icon: "⚖️", title: "Engagement Balance Wheel", text: "Visual tracker for six dimensions: Cognitive, Social, Sensory, Physical, Creative, Spiritual. See gaps at a glance." },
-            { icon: "💡", title: "Facilitator Coaching Notes", text: "Expert guidance for the person running the session — practical, in-the-room advice that separates a good session from a great one." },
+            { title: "You don't have to figure out what goes where.", text: "A fully structured 13-week framework that balances cognitive, social, sensory, physical, creative, and spiritual engagement — automatically." },
+            { title: "You stop second-guessing your programming.", text: "Weekly planning worksheets guide your schedule, ensure variety, and prevent burnout — for both you and your residents." },
+            { title: "You know your programming is actually balanced.", text: "The Engagement Balance Wheel helps you instantly see if your programming is well-rounded — or missing something important." },
+            { title: "You always know what to run.", text: "Built-in resource mapping connects each planning slot to ready-to-use activities — so you're never staring at a blank schedule." },
+            { title: "You're never starting from scratch again.", text: "Pre-built quarterly themes, seasonal anchors, and conversation prompts — ready the moment you open the plan." },
+            { title: "You can plan anywhere, anytime.", text: "Mobile-friendly version for on-the-go planning and quick adjustments during your day." },
           ].map((item, i) => (
             <div
               key={i}
               style={{
                 backgroundColor: c.cream,
                 border: `1px solid ${c.gridline}`,
-                borderRadius: "14px",
-                padding: "1.75rem 2rem",
-                transition: "transform 0.2s, box-shadow 0.2s",
-                cursor: "default",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow = "0 8px 24px rgba(45,74,62,0.1)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "none";
+                borderLeft: `4px solid ${c.terracotta}`,
+                borderRadius: "12px",
+                padding: "1.25rem 1.4rem",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.6rem" }}>
-                <span style={{ fontSize: "1.5rem" }}>{item.icon}</span>
-                <h3 style={{ fontFamily: serif, fontSize: "1.1rem", fontWeight: 600, color: c.forest, margin: 0 }}>{item.title}</h3>
-              </div>
-              <p style={{ fontSize: "0.925rem", lineHeight: 1.75, color: c.body, margin: 0 }}>{item.text}</p>
+              <h3 style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.45rem", lineHeight: 1.3 }}>
+                {item.title}
+              </h3>
+              <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: c.body, margin: 0 }}>{item.text}</p>
             </div>
           ))}
         </div>
 
         {/* Mid-page buy button */}
         <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-          <Cta large>Get My 13-Week Plan — $27</Cta>
+          <div className="bps-hero-cta" style={{ display: "inline-block", width: "100%", maxWidth: "420px" }}>
+            <Cta large>Get Your 13-Week Plan — $27</Cta>
+          </div>
           <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, marginTop: "0.65rem" }}>
-            Instant download · PDF
+            Instant access · No subscription · Use it again and again
           </p>
         </div>
       </Wide>
+
+      {/* ════════════════════════════════════════
+          SECTION 5b — RELIEF / VISUALIZATION
+         ════════════════════════════════════════ */}
+      <Wide>
+        <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.85rem" }}>
+            Picture Monday Morning
+          </p>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.4rem, 3.2vw, 1.9rem)", fontWeight: 600, color: c.forest, lineHeight: 1.25, margin: "0 0 1.5rem" }}>
+            Imagine walking into Monday morning knowing:
+          </h2>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "0.75rem", textAlign: "left", maxWidth: "440px", marginLeft: "auto", marginRight: "auto" }}>
+            {[
+              "Your entire week is already structured.",
+              "Every activity has purpose and balance.",
+              "You're not scrambling for ideas.",
+              "Your residents are actually engaged.",
+            ].map((t, i) => (
+              <li key={i} style={{ display: "flex", gap: "0.7rem", alignItems: "flex-start", fontSize: "1rem", lineHeight: 1.5, color: c.body }}>
+                <span style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0, marginTop: "0.05rem" }}>✔</span>
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Wide>
+
+      {/* ════════════════════════════════════════
+          SECTION 5c — DIFFERENTIATION
+         ════════════════════════════════════════ */}
+      <section
+        style={{
+          background: c.terracottaWash,
+          padding: "clamp(2.75rem, 6vw, 4rem) clamp(1.25rem, 5vw, 3rem)",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ maxWidth: "620px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, lineHeight: 1.3, margin: "0 0 1rem" }}>
+            This isn&rsquo;t another list of activity ideas.
+          </h2>
+          <p style={{ fontFamily: sans, fontSize: "1rem", color: c.body, margin: "0 0 1.25rem", lineHeight: 1.6 }}>
+            It&rsquo;s a system that tells you:
+          </p>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "0.6rem", maxWidth: "320px", marginLeft: "auto", marginRight: "auto", textAlign: "left" }}>
+            {["What to do", "When to do it", "And how to keep everything balanced"].map((t, i) => (
+              <li key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontFamily: serif, fontSize: "1.05rem", color: c.forest, fontWeight: 500 }}>
+                <span style={{ color: c.terracotta, fontWeight: 700 }}>→</span> {t}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
 
       {/* ════════════════════════════════════════
           SECTION 6 — FREE VS PRO (visual comparison)
