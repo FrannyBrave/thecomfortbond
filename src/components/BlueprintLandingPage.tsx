@@ -146,7 +146,7 @@ function EmailCapture({ id, variant = "default" }: { id: string; variant?: "defa
             }
           }}
         >
-          {status === "loading" ? "Sending..." : "Download Your Free Blueprint"}
+          {status === "loading" ? "Sending..." : "Get My Free Weekly Planner"}
         </button>
       </div>
       {status === "error" && (
@@ -225,26 +225,57 @@ export default function BlueprintLandingPage() {
               fontFamily: serif, fontSize: "clamp(1.75rem, 4.5vw, 2.75rem)", fontWeight: 600,
               color: c.forest, lineHeight: 1.18, margin: "0 0 1.25rem", letterSpacing: "-0.015em",
             }}>
-              It's Sunday Night.
-              <br />
-              You Still Don't Have a Plan for Monday.
+              It's Sunday Night — and You're Still Figuring Out Tomorrow.
             </h1>
-            <p style={{ fontSize: "clamp(0.925rem, 1.6vw, 1.05rem)", lineHeight: 1.75, color: c.body, margin: "0 0 2rem" }}>
-              <strong style={{ color: c.forest }}>The Blueprint™</strong> is a free,
-              structured weekly planning tool that helps you stop scrambling and start showing up
-              prepared. Download it now. Plan your week in under 30 minutes.
+            <p style={{ fontSize: "clamp(0.925rem, 1.6vw, 1.05rem)", lineHeight: 1.7, color: c.body, margin: "0 0 1.25rem" }}>
+              A free weekly planning system designed for Activity Professionals who are tired of
+              last-minute scrambling, repetitive activities, and walking into the week unprepared.
             </p>
+            <p style={{ fontSize: "clamp(0.925rem, 1.6vw, 1.05rem)", lineHeight: 1.7, color: c.body, margin: "0 0 1.5rem" }}>
+              <strong style={{ color: c.forest }}>Plan your entire week in under 20 minutes</strong> — with structure, variety, and confidence.
+            </p>
+            <ul style={{
+              listStyle: "none", padding: 0, margin: "0 0 1.75rem",
+              display: "flex", flexDirection: "column", gap: "0.5rem",
+            }}>
+              {[
+                "No more \u201Cwhat should we do today?\u201D",
+                "Built for mixed cognitive levels",
+                "Structured, not overwhelming",
+              ].map((b, i) => (
+                <li key={i} style={{
+                  fontSize: "0.9rem", lineHeight: 1.5, color: c.body,
+                  display: "flex", gap: "0.6rem", alignItems: "baseline",
+                }}>
+                  <span aria-hidden="true" style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
             <EmailCapture id="hero" />
           </div>
 
-          <img
-            src={blueprintHero}
-            alt="Premium mockup of The Blueprint and Engagement Balance Wheel"
-            style={{
-              width: "100%", height: "auto", borderRadius: "14px",
-              boxShadow: "0 12px 40px rgba(45,74,62,0.14)", display: "block",
-            }}
-          />
+          <div>
+            <img
+              src={blueprintHero}
+              alt="Premium mockup of The Blueprint and Engagement Balance Wheel"
+              style={{
+                width: "100%", height: "auto", borderRadius: "14px",
+                boxShadow: "0 12px 40px rgba(45,74,62,0.14)", display: "block",
+              }}
+            />
+            <p style={{
+              fontFamily: serif, fontStyle: "italic", fontSize: "0.9rem",
+              lineHeight: 1.6, color: c.forest, textAlign: "center",
+              margin: "1.25rem auto 0", maxWidth: "440px",
+            }}>
+              Used by Activity Directors to plan their weeks — and scale into full 13-week
+              programming with{" "}
+              <Link to="/blueprint-pro" style={{ color: c.terracotta, textDecoration: "underline", fontWeight: 600 }}>
+                Blueprint Pro
+              </Link>.
+            </p>
+          </div>
         </div>
       </Section>
 
