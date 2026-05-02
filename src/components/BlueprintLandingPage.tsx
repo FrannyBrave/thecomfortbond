@@ -199,16 +199,6 @@ export default function BlueprintLandingPage() {
             The Comfort Bond™
           </span>
         </Link>
-        <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
-          <Link
-            to="/blueprint-pro"
-            style={{ fontSize: "0.75rem", fontWeight: 500, color: c.mutedWarm, textDecoration: "none", letterSpacing: "0.02em", transition: "color 0.15s" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = c.forest)}
-            onMouseLeave={(e) => (e.currentTarget.style.color = c.mutedWarm)}
-          >
-            Upgrade to Blueprint Pro &rarr;
-          </Link>
-        </div>
       </div>
 
       {/* ═══════ HERO ═══════ */}
@@ -334,21 +324,11 @@ export default function BlueprintLandingPage() {
         </div>
       </Section>
 
-      {/* ═══════ REFRAME ═══════ */}
+      {/* ═══════ INTRODUCING ═══════ */}
       <Section>
         <div style={{ maxWidth: "660px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontSize: "clamp(0.925rem, 1.5vw, 1.05rem)", lineHeight: 1.85, color: c.body, margin: "0 0 1.75rem" }}>
-            Here's what nobody tells you:{" "}
-            <strong style={{ color: c.forest }}>The problem isn't that you're not doing enough.</strong>{" "}
-            The problem is that you don't have a system. You're not behind. You're just building from
-            scratch every single week&nbsp;— because no one ever gave you a framework to build from.
-          </p>
-
-          <p style={{
-            fontFamily: serif, fontSize: "clamp(1.15rem, 2.5vw, 1.5rem)", fontWeight: 600,
-            color: c.terracotta, lineHeight: 1.3, margin: "0 0 2.5rem",
-          }}>
-            That changes now.
+          <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.1rem)", lineHeight: 1.7, color: c.body, margin: "0 0 2.5rem", fontFamily: serif, fontStyle: "italic" }}>
+            You're not behind — you just don't have a system yet.
           </p>
 
           <p style={{
