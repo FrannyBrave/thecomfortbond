@@ -494,7 +494,7 @@ export default function BlueprintLandingPage() {
 
           {/* CTA */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: "3rem" }}>
-            <EmailCapture id="footer" variant="dark" />
+            <EmailCapture id="footer" variant="dark" submitLabel="Yes, I Want My Sundays Back" />
           </div>
 
           {/* Divider */}
