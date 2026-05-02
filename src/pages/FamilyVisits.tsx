@@ -9,6 +9,8 @@ import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connect
 import heroImageWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.webp";
 import heroImageMobileWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.webp";
 import heroImageMobileJpg from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.jpg";
+import heroImage480 from "@/assets/mothers-day-visit-480.webp";
+import heroImage768 from "@/assets/mothers-day-visit-768.webp";
 import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.jpg";
 import kitImageWebp from "@/assets/mothers-day-connection-kit-for-seniors.webp";
 
