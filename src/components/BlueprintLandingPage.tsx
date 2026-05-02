@@ -189,6 +189,29 @@ function Section({
 
 /* ─── Main component ─── */
 export default function BlueprintLandingPage() {
+  /* Inject responsive LCP preload for the hero image (mobile pulls 480w ~32KB). */
+  useEffect(() => {
+    const PRELOAD_ID = "blueprint-hero-lcp-preload";
+    let preload = document.getElementById(PRELOAD_ID) as HTMLLinkElement | null;
+    if (!preload) {
+      preload = document.createElement("link");
+      preload.id = PRELOAD_ID;
+      preload.rel = "preload";
+      preload.as = "image";
+      preload.type = "image/avif";
+      preload.setAttribute("fetchpriority", "high");
+      document.head.appendChild(preload);
+    }
+    preload.setAttribute(
+      "imagesrcset",
+      `${heroAvif480} 480w, ${heroAvif768} 768w, ${heroAvif1280} 1280w`
+    );
+    preload.setAttribute("imagesizes", "(max-width: 767px) 100vw, 520px");
+    return () => {
+      document.getElementById(PRELOAD_ID)?.remove();
+    };
+  }, []);
+
   return (
     <div style={{ fontFamily: sans, color: c.body, backgroundColor: c.cream }}>
       {/* ── Header ── */}
