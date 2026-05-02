@@ -102,6 +102,34 @@ const FamilyVisits = () => {
 
   useEffect(() => {
     document.title = "The Mother's Day Connection Kit — $27 | The Comfort Bond™";
+
+    /* LCP preload — responsive, so mobile only fetches the 480w/768w variant */
+    const PRELOAD_ID = "hero-lcp-preload";
+    let preload = document.getElementById(PRELOAD_ID) as HTMLLinkElement | null;
+    if (!preload) {
+      preload = document.createElement("link");
+      preload.id = PRELOAD_ID;
+      preload.rel = "preload";
+      preload.as = "image";
+      preload.type = "image/webp";
+      preload.setAttribute("fetchpriority", "high");
+      document.head.appendChild(preload);
+    }
+    preload.setAttribute(
+      "imagesrcset",
+      `${heroImage480} 480w, ${heroImage768} 768w, ${heroImageMobileWebp} 1023w, ${heroImageWebp} 1200w`
+    );
+    preload.setAttribute("imagesizes", "(max-width: 1023px) 100vw, 420px");
+
+    /* Preload above-the-fold font weights (Playfair 400 for H1, DM Sans 400 for body) */
+    const FONT_PRELOAD_IDS = [
+      ["font-preload-playfair-400", "/fonts/playfair-display-latin-400-normal.woff2"],
+      ["font-preload-dmsans-400", "/fonts/dm-sans-latin-400-normal.woff2"],
+    ];
+    // Note: fontsource serves fonts via JS bundle URLs, so the bundler-resolved URL
+    // can't easily be hard-preloaded here without import.meta.url plumbing.
+    // The latin-only @import already eliminates ~75% of font CSS from the critical path.
+
     const desc =
       "A simple way to make your Mother's Day visit meaningful — even if you don't know what to say. Gentle prompts, visual cards, music guidance & a visit plan. $27. Available until May 10.";
     let meta = document.querySelector('meta[name="description"]');
