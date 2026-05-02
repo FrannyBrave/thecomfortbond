@@ -59,7 +59,7 @@ export default function BlueprintProUpgrade() {
       {/* ── Hero Image ── */}
       <img
         src={proImage}
-        alt="The Programming Blueprint Pro quarterly planner with dark leather notebook and gold pen"
+        alt="The Blueprint Pro quarterly planner with dark leather notebook and gold pen"
         style={{
           width: "100%",
           height: "auto",
