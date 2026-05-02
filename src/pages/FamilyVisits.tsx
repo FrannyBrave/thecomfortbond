@@ -9,6 +9,8 @@ import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connect
 import heroImageWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.webp";
 import heroImageMobileWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.webp";
 import heroImageMobileJpg from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.jpg";
+import heroImage480 from "@/assets/mothers-day-visit-480.webp";
+import heroImage768 from "@/assets/mothers-day-visit-768.webp";
 import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.jpg";
 import kitImageWebp from "@/assets/mothers-day-connection-kit-for-seniors.webp";
 
@@ -100,6 +102,28 @@ const FamilyVisits = () => {
 
   useEffect(() => {
     document.title = "The Mother's Day Connection Kit — $27 | The Comfort Bond™";
+
+    /* LCP preload — responsive, so mobile only fetches the 480w/768w variant */
+    const PRELOAD_ID = "hero-lcp-preload";
+    let preload = document.getElementById(PRELOAD_ID) as HTMLLinkElement | null;
+    if (!preload) {
+      preload = document.createElement("link");
+      preload.id = PRELOAD_ID;
+      preload.rel = "preload";
+      preload.as = "image";
+      preload.type = "image/webp";
+      preload.setAttribute("fetchpriority", "high");
+      document.head.appendChild(preload);
+    }
+    preload.setAttribute(
+      "imagesrcset",
+      `${heroImage480} 480w, ${heroImage768} 768w, ${heroImageMobileWebp} 1023w, ${heroImageWebp} 1200w`
+    );
+    preload.setAttribute("imagesizes", "(max-width: 1023px) 100vw, 420px");
+
+    /* Note: fonts come from @fontsource (latin-only subsets) with font-display: swap,
+       so text renders immediately with the system fallback while custom fonts load. */
+
     const desc =
       "A simple way to make your Mother's Day visit meaningful — even if you don't know what to say. Gentle prompts, visual cards, music guidance & a visit plan. $27. Available until May 10.";
     let meta = document.querySelector('meta[name="description"]');
@@ -151,6 +175,7 @@ const FamilyVisits = () => {
 
     return () => {
       document.getElementById(FAQ_SCHEMA_ID)?.remove();
+      document.getElementById(PRELOAD_ID)?.remove();
     };
   }, []);
 
@@ -203,6 +228,19 @@ const FamilyVisits = () => {
             >
               <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
                 <picture>
+                  {/* Mobile: serve smallest WebP that fits — 480w for ≤480px, 768w for ≤768px, mobile.webp for ≤1023px */}
+                  <source
+                    media="(max-width: 480px)"
+                    type="image/webp"
+                    srcSet={`${heroImage480} 480w`}
+                    sizes="100vw"
+                  />
+                  <source
+                    media="(max-width: 768px)"
+                    type="image/webp"
+                    srcSet={`${heroImage768} 768w`}
+                    sizes="100vw"
+                  />
                   <source
                     media="(max-width: 1023px)"
                     type="image/webp"
