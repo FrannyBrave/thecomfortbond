@@ -28,7 +28,7 @@ const serif = '"Playfair Display", Georgia, serif';
 const sans = '"DM Sans", system-ui, sans-serif';
 
 /* ─── Reusable email form ─── */
-function EmailCapture({ id, variant = "default" }: { id: string; variant?: "default" | "dark" }) {
+function EmailCapture({ id, variant = "default", submitLabel = "Get My Free Weekly Planner" }: { id: string; variant?: "default" | "dark"; submitLabel?: string }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -146,7 +146,7 @@ function EmailCapture({ id, variant = "default" }: { id: string; variant?: "defa
             }
           }}
         >
-          {status === "loading" ? "Sending..." : "Get My Free Weekly Planner"}
+          {status === "loading" ? "Sending..." : submitLabel}
         </button>
       </div>
       {status === "error" && (
@@ -217,12 +217,8 @@ export default function BlueprintLandingPage() {
             }}>
               It's Sunday Night — and You're Still Figuring Out Tomorrow.
             </h1>
-            <p style={{ fontSize: "clamp(0.925rem, 1.6vw, 1.05rem)", lineHeight: 1.7, color: c.body, margin: "0 0 1.25rem" }}>
-              A free weekly planning system designed for Activity Professionals who are tired of
-              last-minute scrambling, repetitive activities, and walking into the week unprepared.
-            </p>
-            <p style={{ fontSize: "clamp(0.925rem, 1.6vw, 1.05rem)", lineHeight: 1.7, color: c.body, margin: "0 0 1.5rem" }}>
-              <strong style={{ color: c.forest }}>Plan your entire week in under 20 minutes</strong> — with structure, variety, and confidence.
+            <p style={{ fontSize: "clamp(0.925rem, 1.6vw, 1.05rem)", lineHeight: 1.65, color: c.body, margin: "0 0 1.25rem" }}>
+              A free weekly planning system for Activity Professionals — <strong style={{ color: c.forest }}>plan your entire week in under 20 minutes</strong>, with structure, variety, and confidence.
             </p>
             <ul style={{
               listStyle: "none", padding: 0, margin: "0 0 1.75rem",
