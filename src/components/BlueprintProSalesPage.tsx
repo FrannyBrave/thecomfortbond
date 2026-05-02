@@ -200,7 +200,7 @@ export default function BlueprintProSalesPage() {
           {/* Copy + CTA */}
           <div>
             <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.85rem" }}>
-              The Programming Blueprint™ Pro
+              The Blueprint™ Pro
             </p>
             <h1 style={{ fontFamily: serif, fontSize: "clamp(2rem, 5.2vw, 2.95rem)", fontWeight: 600, color: c.forest, lineHeight: 1.1, margin: "0 0 0.9rem", letterSpacing: "-0.02em" }}>
               Never Plan Activities at 10&nbsp;PM on Sunday Again.
@@ -248,7 +248,7 @@ export default function BlueprintProSalesPage() {
           {/* Product mockup */}
           <img
             src={heroMockup}
-            alt="The Programming Blueprint Pro on a tablet"
+            alt="The Blueprint Pro on a tablet"
             style={{
               width: "100%",
               height: "auto",
@@ -456,7 +456,7 @@ export default function BlueprintProSalesPage() {
           {/* Decorative accent */}
           <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "4px", background: `linear-gradient(90deg, ${c.terracotta}, ${c.gold}, ${c.terracotta})` }} />
           <p style={{ fontFamily: sans, fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracottaLight, margin: "0 0 0.75rem" }}>
-            The Programming Blueprint™ Pro
+            The Blueprint™ Pro
           </p>
           <h2 style={{ fontFamily: serif, fontSize: "clamp(1.25rem, 3vw, 1.6rem)", fontWeight: 600, color: "#fff", margin: "0 0 0.25rem", lineHeight: 1.3 }}>
             Q3 2026 Edition
@@ -532,7 +532,7 @@ export default function BlueprintProSalesPage() {
           />
           <FaqItem
             q={"Do you offer refunds?"}
-            a={"Because The Programming Blueprint\u2122 Pro is an instant digital download, all sales are final once the file has been delivered. We don\u2019t offer refunds on downloaded digital products \u2014 but if something isn\u2019t working (a broken link, a missing file), email us and we\u2019ll make it right immediately."}
+            a={"Because The Blueprint\u2122 Pro is an instant digital download, all sales are final once the file has been delivered. We don\u2019t offer refunds on downloaded digital products \u2014 but if something isn\u2019t working (a broken link, a missing file), email us and we\u2019ll make it right immediately."}
           />
           <FaqItem
             q={"\u201CI don\u2019t have time to learn a new system.\u201D"}

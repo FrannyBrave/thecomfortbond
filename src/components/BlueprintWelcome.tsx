@@ -161,7 +161,7 @@ export default function BlueprintWelcome() {
           borderTop: `1px solid #E4DDD5`,
         }}
       >
-        This planner is part of The Programming Blueprint™ system by The Comfort Bond™.
+        This planner is part of The Blueprint™ system by The Comfort Bond™.
         <br />
         The full quarterly system is available at thecomfortbond.com/blueprint.
       </p>
