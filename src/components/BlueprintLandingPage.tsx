@@ -201,14 +201,6 @@ export default function BlueprintLandingPage() {
         </Link>
         <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
           <Link
-            to="/"
-            style={{ fontSize: "0.75rem", fontWeight: 500, color: c.mutedWarm, textDecoration: "none", letterSpacing: "0.02em", transition: "color 0.15s" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = c.forest)}
-            onMouseLeave={(e) => (e.currentTarget.style.color = c.mutedWarm)}
-          >
-            &larr; Back to Home
-          </Link>
-          <Link
             to="/blueprint-pro"
             style={{ fontSize: "0.75rem", fontWeight: 500, color: c.mutedWarm, textDecoration: "none", letterSpacing: "0.02em", transition: "color 0.15s" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = c.forest)}
