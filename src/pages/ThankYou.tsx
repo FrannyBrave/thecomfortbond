@@ -33,7 +33,7 @@ const BUNDLE_CROSS_SELL: CrossSell = {
 
 const BLUEPRINT_PRO_CROSS_SELL: CrossSell = {
   eyebrow: "Go Deeper with the Methodology",
-  title: "The Programming Blueprint™ Pro",
+  title: "The Blueprint™ Pro",
   blurb:
     "The complete framework behind every kit — planning grids, reflection tools, and the full Engagement Balance Wheel methodology your whole team can use.",
   ctaLabel: "Get Blueprint Pro",
@@ -113,7 +113,7 @@ const PRODUCTS: Record<string, Product> = {
   },
   "blueprint-pro": {
     slug: "blueprint-pro",
-    name: "The Programming Blueprint™ Pro",
+    name: "The Blueprint™ Pro",
     pageTitle: "Thank you — Blueprint Pro | The Comfort Bond™",
     download: { href: "/downloads/blueprint-pro.pdf", filename: "blueprint-pro.pdf" },
     intro:

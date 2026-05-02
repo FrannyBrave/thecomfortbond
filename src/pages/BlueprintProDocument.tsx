@@ -153,7 +153,7 @@ function WelcomePage() {
           ))}
         </ol>
       </div>
-      <Foot page={2}>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
+      <Foot page={2}>The Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
     </Page>
   );
 }
@@ -241,7 +241,7 @@ function BalanceWheelPage() {
           </div>
         ))}
       </div>
-      <Foot page={3}>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
+      <Foot page={3}>The Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
     </Page>
   );
 }
@@ -270,7 +270,7 @@ function QuarterlyOverviewPage() {
           </div>
         ))}
       </div>
-      <Foot page={4}>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
+      <Foot page={4}>The Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
     </Page>
   );
 }
@@ -324,7 +324,7 @@ function WeeklyPlanningPage({ week, pageNum }: { week: Week; pageNum: number }) 
         <span style={{ flex: 1, borderBottom: `1.5px dotted ${c.gridline}` }}>&nbsp;</span>
       </div>
 
-      <Foot page={pageNum}>Week {week.week} &middot; The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
+      <Foot page={pageNum}>Week {week.week} &middot; The Blueprint™ Pro &middot; Q3 2026</Foot>
     </Page>
   );
 }
@@ -391,7 +391,7 @@ function ThemeGuidePage({ weeks, pageLabel, pageNum }: { weeks: Week[]; pageLabe
       <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
         {weeks.map((w, i) => <ThemeGuideBlock key={w.week} week={w} isFirst={i === 0} />)}
       </div>
-      <Foot page={pageNum}>{pageLabel} &middot; The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
+      <Foot page={pageNum}>{pageLabel} &middot; The Blueprint™ Pro &middot; Q3 2026</Foot>
     </Page>
   );
 }
@@ -437,7 +437,7 @@ function ResourceGuidePage({ weeks, pageNum, globalPage }: { weeks: Week[]; page
           </div>
         ))}
       </div>
-      <Foot page={globalPage}>Resource Guide &middot; The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
+      <Foot page={globalPage}>Resource Guide &middot; The Blueprint™ Pro &middot; Q3 2026</Foot>
     </Page>
   );
 }
@@ -458,7 +458,7 @@ function NotesPage() {
       <p style={{ fontFamily: sans, fontSize: "0.5rem", color: c.muted, textAlign: "center", fontStyle: "italic", margin: "0.75rem 0 0" }}>
         Supply lists, activity variations, resident preferences, family follow-ups, ideas for next quarter…
       </p>
-      <Foot page={30}>The Programming Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
+      <Foot page={30}>The Blueprint™ Pro &middot; Q3 2026 &middot; The Comfort Bond™</Foot>
     </Page>
   );
 }
@@ -499,7 +499,7 @@ function NextQuarterPage() {
         </p>
         <p style={{ fontFamily: sans, fontSize: "0.65rem", color: c.bronze, marginTop: "1.5rem" }}>www.thecomfortbond.com/blueprint-pro</p>
       </div>
-      <Foot page={31}>The Programming Blueprint™ Pro &middot; The Comfort Bond™</Foot>
+      <Foot page={31}>The Blueprint™ Pro &middot; The Comfort Bond™</Foot>
     </Page>
   );
 }
@@ -521,7 +521,7 @@ function TransitionImagePage({ src, alt, pageNum }: { src: string; alt: string; 
           }}
         />
       </div>
-      <Foot page={pageNum}>The Programming Blueprint™ Pro &middot; Q3 2026</Foot>
+      <Foot page={pageNum}>The Blueprint™ Pro &middot; Q3 2026</Foot>
     </Page>
   );
 }

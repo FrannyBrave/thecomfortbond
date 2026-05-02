@@ -230,7 +230,7 @@ export default function BlueprintLandingPage() {
               You Still Don't Have a Plan for Monday.
             </h1>
             <p style={{ fontSize: "clamp(0.925rem, 1.6vw, 1.05rem)", lineHeight: 1.75, color: c.body, margin: "0 0 2rem" }}>
-              <strong style={{ color: c.forest }}>The Programming Blueprint™</strong> is a free,
+              <strong style={{ color: c.forest }}>The Blueprint™</strong> is a free,
               structured weekly planning tool that helps you stop scrambling and start showing up
               prepared. Download it now. Plan your week in under 30 minutes.
             </p>
@@ -239,7 +239,7 @@ export default function BlueprintLandingPage() {
 
           <img
             src={blueprintHero}
-            alt="Premium mockup of The Programming Blueprint and Engagement Balance Wheel"
+            alt="Premium mockup of The Blueprint and Engagement Balance Wheel"
             style={{
               width: "100%", height: "auto", borderRadius: "14px",
               boxShadow: "0 12px 40px rgba(45,74,62,0.14)", display: "block",
@@ -332,7 +332,7 @@ export default function BlueprintLandingPage() {
             fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.85rem)", fontWeight: 600,
             color: c.forest, margin: "0 0 1.5rem", lineHeight: 1.25,
           }}>
-            The Programming Blueprint™
+            The Blueprint™
             <br />
             <span style={{ fontWeight: 400, fontSize: "0.75em", color: c.terracotta }}>
               by The Comfort Bond™
@@ -356,7 +356,7 @@ export default function BlueprintLandingPage() {
         <div style={{ maxWidth: "740px", margin: "0 auto" }}>
           <img
             src={blueprintCalm}
-            alt="The Monday Morning Calm — your week is already planned with The Programming Blueprint"
+            alt="The Monday Morning Calm — your week is already planned with The Blueprint"
             style={{
               width: "100%",
               height: "auto",

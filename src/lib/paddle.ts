@@ -13,7 +13,7 @@ const CLIENT_TOKEN = "live_bd95fc6721aad743909ee0f4cbd";
 
 /** Map of Paddle Price ID → secure post-purchase download URL. */
 export const PRICE_REDIRECTS: Record<string, string> = {
-  // The Programming Blueprint™ Pro
+  // The Blueprint™ Pro
   pri_01kpagj5jtaxcnkbtjctq616k4: "/thank-you/blueprint-pro",
   // The Nostalgia Kit
   pri_01kpafx84h0z9z11fwc5m84dam: "/thank-you/nostalgia-kit",

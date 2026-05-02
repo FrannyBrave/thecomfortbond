@@ -83,7 +83,7 @@ export default function BlueprintProUpgrade() {
             letterSpacing: "-0.01em",
           }}
         >
-          The Programming Blueprint™ Pro
+          The Blueprint™ Pro
         </h1>
         <p
           style={{

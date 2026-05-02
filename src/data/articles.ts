@@ -209,9 +209,9 @@ export const articles: Article[] = [
 
       { type: 'heading', text: "If You'd Rather Not Build This From Scratch" },
       { type: 'paragraph', text: "Building a 13-week curriculum the first time takes real hours. Most Activity Directors we speak with do not have those hours spare, even though they know the investment would pay back several times over." },
-      { type: 'paragraph', text: "That is why we built <strong>The Programming Blueprint™ Pro</strong> — <a href=\"/blueprint-pro\">a full 13-week memory care curriculum</a> already mapped across all six wellness dimensions, anchored to the national calendar, and designed to be copied directly into your existing planning template. It is the framework outlined in this article, fully executed, ready to adapt to your community." },
+      { type: 'paragraph', text: "That is why we built <strong>The Blueprint™ Pro</strong> — <a href=\"/blueprint-pro\">a full 13-week memory care curriculum</a> already mapped across all six wellness dimensions, anchored to the national calendar, and designed to be copied directly into your existing planning template. It is the framework outlined in this article, fully executed, ready to adapt to your community." },
       { type: 'paragraph', text: "You can absolutely build this yourself. Many Activity Directors do, and do it well. The Blueprint simply exists for the quarters when you would rather spend those hours with residents than with a spreadsheet." },
-      { type: 'callout', text: '➡ <a href="/blueprint-pro">See what\'s inside The Programming Blueprint™ Pro</a>' }
+      { type: 'callout', text: '➡ <a href="/blueprint-pro">See what\'s inside The Blueprint™ Pro</a>' }
     ]
   },
   {

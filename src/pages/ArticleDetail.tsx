@@ -46,7 +46,7 @@ const RECOMMENDED_KIT_BY_SLUG: Record<string, RecommendedKitData> = {
   },
   "13-week-memory-care-activity-calendar": {
     eyebrow: "Skip the spreadsheet",
-    title: "The Programming Blueprint™ Pro — a complete 13-week curriculum",
+    title: "The Blueprint™ Pro — a complete 13-week curriculum",
     description:
       "A full quarter of memory care programming, mapped across all six wellness dimensions and anchored to the national calendar — copy it straight into your planning template.",
     href: "/blueprint-pro",
