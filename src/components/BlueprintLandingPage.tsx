@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import blueprintHero from "@/assets/stress-free-activity-planning-senior-living-weekly.png";
-import blueprintCalm from "@/assets/senior-living-programming-calendar-blueprint.png";
+
 import logo from "@/assets/the-comfort-bond-logo.png";
 
 /* ─── Brand tokens ─── */
@@ -300,8 +300,6 @@ export default function BlueprintLandingPage() {
             "You spend your weekends thinking about Monday's programming instead of resting.",
             "You're printing materials at 7\u202FAM because you ran out of ideas the night before.",
             "You've done the same three activities so many times you could lead them in your sleep.",
-            "Your residents are waiting for something meaningful\u2009—\u2009and you want to give it to them, but there's never enough time to plan it well.",
-            "You care deeply about this work. And you're exhausted by it.",
           ].map((text, i) => (
             <div
               key={i}
@@ -382,22 +380,6 @@ export default function BlueprintLandingPage() {
         </div>
       </Section>
 
-      {/* ═══════ EDITORIAL IMAGE — MONDAY CALM ═══════ */}
-      <section style={{ backgroundColor: c.cream, padding: "0 clamp(1.25rem, 5vw, 3rem)" }}>
-        <div style={{ maxWidth: "740px", margin: "0 auto" }}>
-          <img
-            src={blueprintCalm}
-            alt="The Monday Morning Calm — your week is already planned with The Blueprint"
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "14px",
-              boxShadow: "0 8px 30px rgba(45,74,62,0.1)",
-              display: "block",
-            }}
-          />
-        </div>
-      </section>
 
       {/* ═══════ WHAT'S INSIDE & HOW IT WORKS ═══════ */}
       <section style={{
@@ -447,6 +429,31 @@ export default function BlueprintLandingPage() {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Inline mid-page CTA */}
+          <div style={{
+            maxWidth: "520px", margin: "0 auto 4rem",
+            backgroundColor: "rgba(250,247,242,0.97)",
+            borderRadius: "14px",
+            padding: "1.75rem 1.75rem 1.5rem",
+            boxShadow: "0 8px 30px rgba(0,0,0,0.18)",
+            textAlign: "center",
+          }}>
+            <p style={{
+              fontFamily: serif, fontSize: "1.05rem", fontWeight: 600,
+              color: c.forest, margin: "0 0 0.5rem", lineHeight: 1.35,
+            }}>
+              Ready to plan smarter this week?
+            </p>
+            <p style={{
+              fontSize: "0.825rem", color: c.body, margin: "0 0 1rem", lineHeight: 1.55,
+            }}>
+              Get the Blueprint sent straight to your inbox — free.
+            </p>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <EmailCapture id="midpage" />
+            </div>
           </div>
 
           {/* Three Steps */}
