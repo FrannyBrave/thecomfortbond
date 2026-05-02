@@ -274,14 +274,33 @@ export default function BlueprintLandingPage() {
           </div>
 
           <div>
-            <img
-              src={blueprintHero}
-              alt="Premium mockup of The Blueprint and Engagement Balance Wheel"
-              style={{
-                width: "100%", height: "auto", borderRadius: "14px",
-                boxShadow: "0 12px 40px rgba(45,74,62,0.14)", display: "block",
-              }}
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcSet={`${heroAvif480} 480w, ${heroAvif768} 768w, ${heroAvif1280} 1280w`}
+                sizes="(max-width: 767px) 100vw, 520px"
+              />
+              <source
+                type="image/webp"
+                srcSet={`${heroWebp480} 480w, ${heroWebp768} 768w, ${heroWebp1280} 1280w`}
+                sizes="(max-width: 767px) 100vw, 520px"
+              />
+              <img
+                src={heroJpgFallback}
+                alt="The Blueprint planner and Engagement Balance Wheel laid out beside a coffee mug — stress-free weekly activity planning for senior living"
+                width={1280}
+                height={1280}
+                loading="eager"
+                decoding="async"
+                // @ts-expect-error fetchpriority is a valid HTML attribute, not yet in React types
+                fetchpriority="high"
+                style={{
+                  width: "100%", height: "auto", borderRadius: "14px",
+                  boxShadow: "0 12px 40px rgba(45,74,62,0.14)", display: "block",
+                  aspectRatio: "1 / 1",
+                }}
+              />
+            </picture>
             <p style={{
               fontFamily: serif, fontStyle: "italic", fontSize: "0.9rem",
               lineHeight: 1.6, color: c.forest, textAlign: "center",
