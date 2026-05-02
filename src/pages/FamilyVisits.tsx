@@ -230,31 +230,30 @@ const FamilyVisits = () => {
             >
               <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
                 <picture>
-                  {/* Mobile: serve smallest WebP that fits — 480w for ≤480px, 768w for ≤768px, mobile.webp for ≤1023px */}
+                  <source
+                    type="image/avif"
+                    srcSet={`${heroImage480Avif} 480w, ${heroImage768Avif} 768w, ${heroImage1200Avif} 1200w`}
+                    sizes="(max-width: 1023px) 100vw, 420px"
+                  />
                   <source
                     media="(max-width: 480px)"
                     type="image/webp"
-                    srcSet={`${heroImage480} 480w`}
+                    srcSet={`${heroImage480Webp} 480w`}
                     sizes="100vw"
                   />
                   <source
                     media="(max-width: 768px)"
                     type="image/webp"
-                    srcSet={`${heroImage768} 768w`}
+                    srcSet={`${heroImage768Webp} 768w`}
                     sizes="100vw"
                   />
                   <source
-                    media="(max-width: 1023px)"
                     type="image/webp"
-                    srcSet={heroImageMobileWebp}
+                    srcSet={`${heroImage480Webp} 480w, ${heroImage768Webp} 768w, ${heroImage1200Webp} 1200w`}
+                    sizes="(max-width: 1023px) 100vw, 420px"
                   />
-                  <source
-                    media="(max-width: 1023px)"
-                    srcSet={heroImageMobileJpg}
-                  />
-                  <source type="image/webp" srcSet={heroImageWebp} />
                   <img
-                    src={heroImage}
+                    src={heroImageFallback}
                     alt="Adult daughter and her silver-haired mother sharing memory conversation cards from The Mother's Day Connection Kit at a sunlit wooden table."
                     width={1200}
                     height={1200}
