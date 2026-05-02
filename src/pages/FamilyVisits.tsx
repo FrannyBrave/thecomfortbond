@@ -1,10 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
-import { FooterSection } from "@/components/sections/FooterSection";
-import { ExitIntentModal } from "@/components/ExitIntentModal";
 import { Button } from "@/components/ui/button";
-import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
 import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.jpg";
 import kitImageWebp from "@/assets/mothers-day-connection-kit-for-seniors.webp";
 
@@ -15,6 +12,15 @@ const heroImage480Webp = "/lcp/mothers-day-visit-480.webp";
 const heroImage768Webp = "/lcp/mothers-day-visit-768.webp";
 const heroImage1200Webp = "/lcp/mothers-day-visit-1200.webp";
 const heroImageFallback = "/lcp/mothers-day-visit-1200.jpg";
+const FooterSection = React.lazy(() =>
+  import("@/components/sections/FooterSection").then((module) => ({ default: module.FooterSection }))
+);
+const ExitIntentModal = React.lazy(() =>
+  import("@/components/ExitIntentModal").then((module) => ({ default: module.ExitIntentModal }))
+);
+const MothersDayCheckoutModal = React.lazy(() =>
+  import("@/components/MothersDayCheckoutModal").then((module) => ({ default: module.MothersDayCheckoutModal }))
+);
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
