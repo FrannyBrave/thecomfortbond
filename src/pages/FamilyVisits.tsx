@@ -5,14 +5,16 @@ import { FooterSection } from "@/components/sections/FooterSection";
 import { ExitIntentModal } from "@/components/ExitIntentModal";
 import { Button } from "@/components/ui/button";
 import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
-import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
-import heroImageWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.webp";
-import heroImageMobileWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.webp";
-import heroImageMobileJpg from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.jpg";
-import heroImage480 from "@/assets/mothers-day-visit-480.webp";
-import heroImage768 from "@/assets/mothers-day-visit-768.webp";
 import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.jpg";
 import kitImageWebp from "@/assets/mothers-day-connection-kit-for-seniors.webp";
+
+const heroImage480Avif = "/lcp/mothers-day-visit-480.avif";
+const heroImage768Avif = "/lcp/mothers-day-visit-768.avif";
+const heroImage1200Avif = "/lcp/mothers-day-visit-1200.avif";
+const heroImage480Webp = "/lcp/mothers-day-visit-480.webp";
+const heroImage768Webp = "/lcp/mothers-day-visit-768.webp";
+const heroImage1200Webp = "/lcp/mothers-day-visit-1200.webp";
+const heroImageFallback = "/lcp/mothers-day-visit-1200.jpg";
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -117,7 +119,7 @@ const FamilyVisits = () => {
     }
     preload.setAttribute(
       "imagesrcset",
-      `${heroImage480} 480w, ${heroImage768} 768w, ${heroImageMobileWebp} 1023w, ${heroImageWebp} 1200w`
+      `${heroImage480Avif} 480w, ${heroImage768Avif} 768w, ${heroImage1200Avif} 1200w`
     );
     preload.setAttribute("imagesizes", "(max-width: 1023px) 100vw, 420px");
 
