@@ -216,7 +216,9 @@ const FamilyVisits = () => {
   return (
     <div className="min-h-screen bg-cream overflow-x-hidden">
       <Navigation />
-      <ExitIntentModal />
+      <Suspense fallback={null}>
+        <ExitIntentModal />
+      </Suspense>
 
       <main>
         {/* SECTION 1 — HERO */}
@@ -697,7 +699,9 @@ const FamilyVisits = () => {
         </section>
       </main>
 
-      <FooterSection />
+      <Suspense fallback={null}>
+        <FooterSection />
+      </Suspense>
 
       {/* Sticky mobile CTA — opens checkout directly */}
       <button
@@ -711,11 +715,15 @@ const FamilyVisits = () => {
         <span aria-hidden="true">→</span>
       </button>
 
-      <MothersDayCheckoutModal
-        open={checkoutOpen}
-        onOpenChange={setCheckoutOpen}
-        source={checkoutSource}
-      />
+      {checkoutOpen && (
+        <Suspense fallback={null}>
+          <MothersDayCheckoutModal
+            open={checkoutOpen}
+            onOpenChange={setCheckoutOpen}
+            source={checkoutSource}
+          />
+        </Suspense>
+      )}
     </div>
   );
 };
