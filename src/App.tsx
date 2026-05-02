@@ -3,47 +3,45 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Index from "./pages/Index";
-import Resources from "./pages/Resources";
-import ArticleDetail from "./pages/ArticleDetail";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Terms from "./pages/Terms";
-import OurStory from "./pages/OurStory";
-import NotFound from "./pages/NotFound";
-import BlueprintTest from "./pages/BlueprintTest";
-import BlueprintDocument from "./pages/BlueprintDocument";
-import BlueprintLandingPage from "./components/BlueprintLandingPage";
-import BlueprintProDocument from "./pages/BlueprintProDocument";
-import MorningSamplerLandingPage from "./components/MorningSamplerLandingPage";
-import BlueprintProSalesPage from "./components/BlueprintProSalesPage";
-import Kits from "./pages/Kits";
-import RefundPolicy from "./pages/RefundPolicy";
-import BundleAccess from "./pages/BundleAccess";
-import ThankYou from "./pages/ThankYou";
-import ThankYouMothersDay from "./pages/ThankYouMothersDay";
-import ThankYouConnectionKit from "./pages/ThankYouConnectionKit";
-import FamilyVisits from "./pages/FamilyVisits";
-import MothersDayMemoryCare from "./pages/MothersDayMemoryCare";
+import { lazy, Suspense, useEffect } from "react";
 import { useCanonical } from "./hooks/useCanonical";
-import { useEffect } from "react";
-import { preloadPaddle } from "./lib/paddle";
 import { trackPinterestPage } from "./lib/pinterest";
+
+const Index = lazy(() => import("./pages/Index"));
+const Resources = lazy(() => import("./pages/Resources"));
+const ArticleDetail = lazy(() => import("./pages/ArticleDetail"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const OurStory = lazy(() => import("./pages/OurStory"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const BlueprintTest = lazy(() => import("./pages/BlueprintTest"));
+const BlueprintDocument = lazy(() => import("./pages/BlueprintDocument"));
+const BlueprintLandingPage = lazy(() => import("./components/BlueprintLandingPage"));
+const BlueprintProDocument = lazy(() => import("./pages/BlueprintProDocument"));
+const MorningSamplerLandingPage = lazy(() => import("./components/MorningSamplerLandingPage"));
+const BlueprintProSalesPage = lazy(() => import("./components/BlueprintProSalesPage"));
+const Kits = lazy(() => import("./pages/Kits"));
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
+const BundleAccess = lazy(() => import("./pages/BundleAccess"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
+const ThankYouMothersDay = lazy(() => import("./pages/ThankYouMothersDay"));
+const ThankYouConnectionKit = lazy(() => import("./pages/ThankYouConnectionKit"));
+const FamilyVisits = lazy(() => import("./pages/FamilyVisits"));
+const MothersDayMemoryCare = lazy(() => import("./pages/MothersDayMemoryCare"));
 
 const queryClient = new QueryClient();
 
 function AppRoutes() {
   useCanonical();
   const location = useLocation();
-  useEffect(() => {
-    preloadPaddle();
-  }, []);
   // Pinterest SPA page-visit event — fires on every route change
   // (initial mount + every subsequent client-side navigation).
   useEffect(() => {
     trackPinterestPage();
   }, [location.pathname, location.search]);
   return (
-    <Routes>
+    <Suspense fallback={null}>
+      <Routes>
 
           <Route path="/" element={<Index />} />
           <Route path="/resources" element={<Resources />} />
@@ -69,6 +67,7 @@ function AppRoutes() {
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+    </Suspense>
   );
 }
 

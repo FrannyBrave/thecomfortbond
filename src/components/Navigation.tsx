@@ -10,7 +10,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import logo from "@/assets/the-comfort-bond-logo.png";
+import logo from "@/assets/the-comfort-bond-logo-160.png";
 
 // Primary mobile / tablet destinations — the 4 high-intent routes
 // surfaced in the slide-out side drawer.
@@ -89,7 +89,7 @@ export const Navigation = () => {
             className="flex items-center gap-3 py-2 no-underline cursor-pointer"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" className="h-16 md:h-20 w-auto" />
+            <img src={logo} alt="The Comfort Bond logo — dignified engagement activities for senior living" width={160} height={160} className="h-16 md:h-20 w-auto" />
             <span className="text-xl md:text-2xl font-serif font-semibold text-forest tracking-tight">
               The Comfort Bond<sup className="text-[0.5em] font-sans font-medium ml-0.5 align-super">™</sup>
             </span>

@@ -1,18 +1,26 @@
-import { useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
-import { FooterSection } from "@/components/sections/FooterSection";
-import { ExitIntentModal } from "@/components/ExitIntentModal";
 import { Button } from "@/components/ui/button";
-import { MothersDayCheckoutModal } from "@/components/MothersDayCheckoutModal";
-import heroImage from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.jpg";
-import heroImageWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit.webp";
-import heroImageMobileWebp from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.webp";
-import heroImageMobileJpg from "@/assets/mothers-day-visit-ideas-for-aging-parent-connection-kit-mobile.jpg";
-import heroImage480 from "@/assets/mothers-day-visit-480.webp";
-import heroImage768 from "@/assets/mothers-day-visit-768.webp";
 import kitImage from "@/assets/mothers-day-connection-kit-for-seniors.jpg";
 import kitImageWebp from "@/assets/mothers-day-connection-kit-for-seniors.webp";
+
+const heroImage480Avif = "/lcp/mothers-day-visit-480.avif";
+const heroImage768Avif = "/lcp/mothers-day-visit-768.avif";
+const heroImage1200Avif = "/lcp/mothers-day-visit-1200.avif";
+const heroImage480Webp = "/lcp/mothers-day-visit-480.webp";
+const heroImage768Webp = "/lcp/mothers-day-visit-768.webp";
+const heroImage1200Webp = "/lcp/mothers-day-visit-1200.webp";
+const heroImageFallback = "/lcp/mothers-day-visit-1200.jpg";
+const FooterSection = lazy(() =>
+  import("@/components/sections/FooterSection").then((module) => ({ default: module.FooterSection }))
+);
+const ExitIntentModal = lazy(() =>
+  import("@/components/ExitIntentModal").then((module) => ({ default: module.ExitIntentModal }))
+);
+const MothersDayCheckoutModal = lazy(() =>
+  import("@/components/MothersDayCheckoutModal").then((module) => ({ default: module.MothersDayCheckoutModal }))
+);
 
 const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -117,7 +125,7 @@ const FamilyVisits = () => {
     }
     preload.setAttribute(
       "imagesrcset",
-      `${heroImage480} 480w, ${heroImage768} 768w, ${heroImageMobileWebp} 1023w, ${heroImageWebp} 1200w`
+      `${heroImage480Avif} 480w, ${heroImage768Avif} 768w, ${heroImage1200Avif} 1200w`
     );
     preload.setAttribute("imagesizes", "(max-width: 1023px) 100vw, 420px");
 
@@ -208,7 +216,9 @@ const FamilyVisits = () => {
   return (
     <div className="min-h-screen bg-cream overflow-x-hidden">
       <Navigation />
-      <ExitIntentModal />
+      <Suspense fallback={null}>
+        <ExitIntentModal />
+      </Suspense>
 
       <main>
         {/* SECTION 1 — HERO */}
@@ -222,37 +232,33 @@ const FamilyVisits = () => {
           />
           <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             {/* Hero image — appears AFTER text on mobile (faster LCP), right side on desktop */}
-            <motion.div
-              {...fadeIn}
-              className="lg:col-span-5 order-2 lg:order-2 relative flex items-center justify-center lg:justify-end mt-8 lg:mt-0"
-            >
+            <div className="lg:col-span-5 order-2 lg:order-2 relative flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
               <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
                 <picture>
-                  {/* Mobile: serve smallest WebP that fits — 480w for ≤480px, 768w for ≤768px, mobile.webp for ≤1023px */}
+                  <source
+                    type="image/avif"
+                    srcSet={`${heroImage480Avif} 480w, ${heroImage768Avif} 768w, ${heroImage1200Avif} 1200w`}
+                    sizes="(max-width: 1023px) 100vw, 420px"
+                  />
                   <source
                     media="(max-width: 480px)"
                     type="image/webp"
-                    srcSet={`${heroImage480} 480w`}
+                    srcSet={`${heroImage480Webp} 480w`}
                     sizes="100vw"
                   />
                   <source
                     media="(max-width: 768px)"
                     type="image/webp"
-                    srcSet={`${heroImage768} 768w`}
+                    srcSet={`${heroImage768Webp} 768w`}
                     sizes="100vw"
                   />
                   <source
-                    media="(max-width: 1023px)"
                     type="image/webp"
-                    srcSet={heroImageMobileWebp}
+                    srcSet={`${heroImage480Webp} 480w, ${heroImage768Webp} 768w, ${heroImage1200Webp} 1200w`}
+                    sizes="(max-width: 1023px) 100vw, 420px"
                   />
-                  <source
-                    media="(max-width: 1023px)"
-                    srcSet={heroImageMobileJpg}
-                  />
-                  <source type="image/webp" srcSet={heroImageWebp} />
                   <img
-                    src={heroImage}
+                    src={heroImageFallback}
                     alt="Adult daughter and her silver-haired mother sharing memory conversation cards from The Mother's Day Connection Kit at a sunlit wooden table."
                     width={1200}
                     height={1200}
@@ -268,9 +274,9 @@ const FamilyVisits = () => {
                   />
                 </picture>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div {...fadeUp} className="lg:col-span-7 order-1 lg:order-1 text-center lg:text-left">
+            <div className="lg:col-span-7 order-1 lg:order-1 text-center lg:text-left">
               {/* "For you" eyebrow — instant audience clarity */}
               <p className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-terracotta/90 font-medium">
                 For adult children visiting an aging mom
@@ -318,7 +324,7 @@ const FamilyVisits = () => {
                 </p>
                 {availabilityLine}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -693,7 +699,9 @@ const FamilyVisits = () => {
         </section>
       </main>
 
-      <FooterSection />
+      <Suspense fallback={null}>
+        <FooterSection />
+      </Suspense>
 
       {/* Sticky mobile CTA — opens checkout directly */}
       <button
@@ -707,11 +715,15 @@ const FamilyVisits = () => {
         <span aria-hidden="true">→</span>
       </button>
 
-      <MothersDayCheckoutModal
-        open={checkoutOpen}
-        onOpenChange={setCheckoutOpen}
-        source={checkoutSource}
-      />
+      {checkoutOpen && (
+        <Suspense fallback={null}>
+          <MothersDayCheckoutModal
+            open={checkoutOpen}
+            onOpenChange={setCheckoutOpen}
+            source={checkoutSource}
+          />
+        </Suspense>
+      )}
     </div>
   );
 };
