@@ -1,8 +1,17 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import blueprintHero from "@/assets/stress-free-activity-planning-senior-living-weekly.png";
 
 import logo from "@/assets/the-comfort-bond-logo.png";
+
+/* LCP hero — pre-built responsive variants in /public/lcp/ (kept tiny for fast LCP).
+   Mobile fetches the 480w (~32KB) variant; desktop fetches 1280w AVIF (~70KB). */
+const heroAvif480 = "/lcp/blueprint-hero-480.avif";
+const heroAvif768 = "/lcp/blueprint-hero-768.avif";
+const heroAvif1280 = "/lcp/blueprint-hero-1280.avif";
+const heroWebp480 = "/lcp/blueprint-hero-480.webp";
+const heroWebp768 = "/lcp/blueprint-hero-768.webp";
+const heroWebp1280 = "/lcp/blueprint-hero-1280.webp";
+const heroJpgFallback = "/lcp/blueprint-hero-1280.jpg";
 
 /* ─── Brand tokens ─── */
 const c = {
@@ -180,6 +189,29 @@ function Section({
 
 /* ─── Main component ─── */
 export default function BlueprintLandingPage() {
+  /* Inject responsive LCP preload for the hero image (mobile pulls 480w ~32KB). */
+  useEffect(() => {
+    const PRELOAD_ID = "blueprint-hero-lcp-preload";
+    let preload = document.getElementById(PRELOAD_ID) as HTMLLinkElement | null;
+    if (!preload) {
+      preload = document.createElement("link");
+      preload.id = PRELOAD_ID;
+      preload.rel = "preload";
+      preload.as = "image";
+      preload.type = "image/avif";
+      preload.setAttribute("fetchpriority", "high");
+      document.head.appendChild(preload);
+    }
+    preload.setAttribute(
+      "imagesrcset",
+      `${heroAvif480} 480w, ${heroAvif768} 768w, ${heroAvif1280} 1280w`
+    );
+    preload.setAttribute("imagesizes", "(max-width: 767px) 100vw, 520px");
+    return () => {
+      document.getElementById(PRELOAD_ID)?.remove();
+    };
+  }, []);
+
   return (
     <div style={{ fontFamily: sans, color: c.body, backgroundColor: c.cream }}>
       {/* ── Header ── */}
@@ -242,14 +274,33 @@ export default function BlueprintLandingPage() {
           </div>
 
           <div>
-            <img
-              src={blueprintHero}
-              alt="Premium mockup of The Blueprint and Engagement Balance Wheel"
-              style={{
-                width: "100%", height: "auto", borderRadius: "14px",
-                boxShadow: "0 12px 40px rgba(45,74,62,0.14)", display: "block",
-              }}
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcSet={`${heroAvif480} 480w, ${heroAvif768} 768w, ${heroAvif1280} 1280w`}
+                sizes="(max-width: 767px) 100vw, 520px"
+              />
+              <source
+                type="image/webp"
+                srcSet={`${heroWebp480} 480w, ${heroWebp768} 768w, ${heroWebp1280} 1280w`}
+                sizes="(max-width: 767px) 100vw, 520px"
+              />
+              <img
+                src={heroJpgFallback}
+                alt="The Blueprint planner and Engagement Balance Wheel laid out beside a coffee mug — stress-free weekly activity planning for senior living"
+                width={1280}
+                height={1280}
+                loading="eager"
+                decoding="async"
+                // @ts-expect-error fetchpriority is a valid HTML attribute, not yet in React types
+                fetchpriority="high"
+                style={{
+                  width: "100%", height: "auto", borderRadius: "14px",
+                  boxShadow: "0 12px 40px rgba(45,74,62,0.14)", display: "block",
+                  aspectRatio: "1 / 1",
+                }}
+              />
+            </picture>
             <p style={{
               fontFamily: serif, fontStyle: "italic", fontSize: "0.9rem",
               lineHeight: 1.6, color: c.forest, textAlign: "center",
