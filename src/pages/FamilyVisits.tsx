@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
@@ -12,13 +12,13 @@ const heroImage480Webp = "/lcp/mothers-day-visit-480.webp";
 const heroImage768Webp = "/lcp/mothers-day-visit-768.webp";
 const heroImage1200Webp = "/lcp/mothers-day-visit-1200.webp";
 const heroImageFallback = "/lcp/mothers-day-visit-1200.jpg";
-const FooterSection = React.lazy(() =>
+const FooterSection = lazy(() =>
   import("@/components/sections/FooterSection").then((module) => ({ default: module.FooterSection }))
 );
-const ExitIntentModal = React.lazy(() =>
+const ExitIntentModal = lazy(() =>
   import("@/components/ExitIntentModal").then((module) => ({ default: module.ExitIntentModal }))
 );
-const MothersDayCheckoutModal = React.lazy(() =>
+const MothersDayCheckoutModal = lazy(() =>
   import("@/components/MothersDayCheckoutModal").then((module) => ({ default: module.MothersDayCheckoutModal }))
 );
 
