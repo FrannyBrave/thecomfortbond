@@ -205,6 +205,19 @@ const FamilyVisits = () => {
             >
               <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
                 <picture>
+                  {/* Mobile: serve smallest WebP that fits — 480w for ≤480px, 768w for ≤768px, mobile.webp for ≤1023px */}
+                  <source
+                    media="(max-width: 480px)"
+                    type="image/webp"
+                    srcSet={`${heroImage480} 480w`}
+                    sizes="100vw"
+                  />
+                  <source
+                    media="(max-width: 768px)"
+                    type="image/webp"
+                    srcSet={`${heroImage768} 768w`}
+                    sizes="100vw"
+                  />
                   <source
                     media="(max-width: 1023px)"
                     type="image/webp"
