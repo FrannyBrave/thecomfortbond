@@ -253,19 +253,33 @@
       imagesizes="(max-width: 1023px) 100vw, 420px"
       fetchpriority="high"
     />
-    <!-- Route-specific LCP preload for /free-sampler -->
+    <!-- Route-specific LCP preloads (synchronous so the browser fetches the hero in parallel with the JS bundle) -->
     <script>
       (function () {
-        if (location.pathname.replace(/\/$/, '') === '/free-sampler') {
+        var path = location.pathname.replace(/\/$/, '');
+        function preload(href, srcset, sizes) {
           var l = document.createElement('link');
           l.rel = 'preload';
           l.as = 'image';
           l.type = 'image/avif';
-          l.href = '/lcp/sampler-hero-768.avif';
-          l.setAttribute('imagesrcset', '/lcp/sampler-hero-480.avif 480w, /lcp/sampler-hero-768.avif 768w, /lcp/sampler-hero-1280.avif 1280w');
-          l.setAttribute('imagesizes', '(max-width: 720px) 100vw, 640px');
+          l.href = href;
+          l.setAttribute('imagesrcset', srcset);
+          l.setAttribute('imagesizes', sizes);
           l.setAttribute('fetchpriority', 'high');
           document.head.appendChild(l);
+        }
+        if (path === '/free-sampler') {
+          preload(
+            '/lcp/sampler-hero-768.avif',
+            '/lcp/sampler-hero-480.avif 480w, /lcp/sampler-hero-768.avif 768w, /lcp/sampler-hero-1280.avif 1280w',
+            '(max-width: 720px) 100vw, 640px'
+          );
+        } else if (path === '/blueprint') {
+          preload(
+            '/lcp/blueprint-hero-768.avif',
+            '/lcp/blueprint-hero-480.avif 480w, /lcp/blueprint-hero-768.avif 768w, /lcp/blueprint-hero-1280.avif 1280w',
+            '(max-width: 767px) 100vw, 520px'
+          );
         }
       })();
     </script>
