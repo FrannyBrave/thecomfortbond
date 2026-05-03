@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import samplerHero from "@/assets/memory-care-morning-activity-routine-seniors.png";
 import samplerMoments from "@/assets/dementia-friendly-activity-cards-for-engagement.png";
 import samplerActivities from "@/assets/senior-living-activity-printable-kit-overview.png";
 import logo from "@/assets/the-comfort-bond-logo.png";
@@ -253,12 +252,29 @@ export default function MorningSamplerLandingPage() {
         </div>
       </section>
 
-      {/* ── Hero Image ── */}
+      {/* ── Hero Image (responsive AVIF/WebP, preloaded) ── */}
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 28px" }}>
-        <img src={samplerHero}
-          alt="Memory care morning activity routine for seniors: conversation cards and visual sparks from The Morning Routine Sampler beside a coffee cup in a calm day room"
-          style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block", margin: "32px auto", maxWidth: 640 }}
-        />
+        <picture>
+          <source
+            type="image/avif"
+            srcSet="/lcp/sampler-hero-480.avif 480w, /lcp/sampler-hero-768.avif 768w, /lcp/sampler-hero-1280.avif 1280w"
+            sizes="(max-width: 720px) 100vw, 640px"
+          />
+          <source
+            type="image/webp"
+            srcSet="/lcp/sampler-hero-480.webp 480w, /lcp/sampler-hero-768.webp 768w, /lcp/sampler-hero-1280.webp 1280w"
+            sizes="(max-width: 720px) 100vw, 640px"
+          />
+          <img
+            src="/lcp/sampler-hero-768.webp"
+            alt="Memory care morning activity routine for seniors: conversation cards and visual sparks from The Morning Routine Sampler beside a coffee cup in a calm day room"
+            width={1280}
+            height={853}
+            fetchPriority="high"
+            decoding="async"
+            style={{ width: "100%", height: "auto", borderRadius: "14px", boxShadow: "0 12px 40px rgba(61,43,31,0.1)", display: "block", margin: "32px auto", maxWidth: 640 }}
+          />
+        </picture>
       </div>
 
       {/* ── Pain Points ── */}
