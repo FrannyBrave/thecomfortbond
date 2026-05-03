@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import samplerHero from "@/assets/memory-care-morning-activity-routine-seniors.png";
 import samplerMoments from "@/assets/dementia-friendly-activity-cards-for-engagement.png";
@@ -26,60 +26,96 @@ const c = {
 const serif = '"Playfair Display", Georgia, serif';
 const sans = '"DM Sans", system-ui, sans-serif';
 
-/* ─── Email capture (ConvertKit embed: de78d818c7) ─── */
-const CK_FORM_UID = "de78d818c7";
-const CK_SCRIPT_SRC = `https://the-comfort-bond-2.kit.com/${CK_FORM_UID}/index.js`;
+/* ─── Email capture ─── */
+function SamplerEmailCapture({
+  id,
+  buttonText = "Send Me the Sampler",
+  variant = "default",
+}: {
+  id: string;
+  buttonText?: string;
+  variant?: "default" | "terracotta";
+}) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-function SamplerEmailCapture({ id }: { id: string; buttonText?: string; variant?: "default" | "terracotta" }) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+    const formId = "9318696";
+    const apiKey = "LyFHhQ8J1GJ27wcL4mq-uQ";
+    try {
+      const res = await fetch(
+        "https://api.convertkit.com/v3/forms/" + formId + "/subscribe",
+        { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ api_key: apiKey, email }) }
+      );
+      if (!res.ok) throw new Error("Subscription failed");
+      setStatus("success");
+      // Pinterest 'signup' event — only after a confirmed successful submit.
+      const { trackPinterestEvent } = await import("@/lib/pinterest");
+      trackPinterestEvent("signup", { lead_type: "free-sampler" }, `signup:sampler:${email}`);
+      // Meta Pixel 'Lead' event — feeds Facebook/Instagram Ads optimization.
+      const { trackMetaEvent } = await import("@/lib/meta-pixel");
+      trackMetaEvent(
+        "Lead",
+        { content_name: "Free Morning Sampler", content_category: "free-sampler" },
+        `lead:sampler:${email}`
+      );
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg("Something went wrong. Please try again.");
+      console.error("[SamplerEmailCapture]", err);
+    }
+  };
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-    // Avoid duplicate inject if React re-mounts.
-    if (container.querySelector("script[data-ck-embed]")) return;
+  if (status === "success") {
+    return (
+      <div style={{
+        maxWidth: "460px", margin: "0 auto", backgroundColor: c.warmWhite,
+        border: `1px solid ${c.borderWarm}`, borderRadius: "14px", padding: "1.5rem 1.75rem", textAlign: "center",
+      }}>
+        <p style={{ fontFamily: serif, fontSize: "1.1rem", fontWeight: 600, color: c.forest, margin: "0 0 0.35rem" }}>
+          ✓ It's on its way!
+        </p>
+        <p style={{ fontSize: "0.875rem", color: c.warmGray, margin: 0, lineHeight: 1.6 }}>
+          Check your inbox for the Morning Routine Sampler.
+        </p>
+      </div>
+    );
+  }
 
-    const script = document.createElement("script");
-    script.src = CK_SCRIPT_SRC;
-    script.async = true;
-    script.setAttribute("data-uid", CK_FORM_UID);
-    script.setAttribute("data-ck-embed", "true");
-    container.appendChild(script);
-
-    // Fire Pinterest + Meta Lead events on successful ConvertKit submit.
-    const handler = (e: MessageEvent) => {
-      const data = e?.data as { event?: string; formId?: string } | undefined;
-      if (!data || typeof data !== "object") return;
-      const isCkSuccess =
-        data.event === "convertkit:form:subscribe" ||
-        data.event === "formkit:submitted" ||
-        data.event === "formkit:success";
-      if (!isCkSuccess) return;
-      (async () => {
-        try {
-          const { trackPinterestEvent } = await import("@/lib/pinterest");
-          trackPinterestEvent("signup", { lead_type: "free-sampler" }, `signup:sampler:${id}:${Date.now()}`);
-          const { trackMetaEvent } = await import("@/lib/meta-pixel");
-          trackMetaEvent(
-            "Lead",
-            { content_name: "Free Morning Sampler", content_category: "free-sampler" },
-            `lead:sampler:${id}:${Date.now()}`
-          );
-        } catch (err) {
-          console.error("[SamplerEmailCapture] tracking failed", err);
-        }
-      })();
-    };
-    window.addEventListener("message", handler);
-    return () => window.removeEventListener("message", handler);
-  }, [id]);
+  const btnBg = variant === "terracotta" ? c.terracotta : c.forest;
+  const btnHover = variant === "terracotta" ? "#b86a4d" : c.forestLight;
 
   return (
-    <div
-      ref={containerRef}
-      style={{ maxWidth: "500px", margin: "0 auto" }}
-      aria-label="Download the free Morning Routine Sampler"
-    />
+    <form onSubmit={handleSubmit} style={{ maxWidth: "460px", margin: "0 auto", display: "flex", gap: "10px", flexWrap: "wrap" }} aria-label="Download sampler">
+      <input
+        type="email" required value={email} onChange={(e) => setEmail(e.target.value)}
+        placeholder="Your email address" aria-label="Your email address" disabled={status === "loading"}
+        style={{
+          flex: "1 1 220px", padding: "14px 18px", fontFamily: sans, fontSize: "15px",
+          color: c.deepBrown, background: c.white, border: `1px solid ${c.borderWarm}`,
+          borderRadius: "10px", outline: "none", opacity: status === "loading" ? 0.6 : 1,
+        }}
+      />
+      <button
+        type="submit" disabled={status === "loading"}
+        style={{
+          padding: "14px 24px", fontFamily: sans, fontSize: "13px", fontWeight: 600,
+          letterSpacing: "0.8px", color: "#fff", background: status === "loading" ? btnHover : btnBg,
+          border: "none", borderRadius: "10px", cursor: status === "loading" ? "not-allowed" : "pointer",
+          whiteSpace: "nowrap", transition: "all 0.2s ease", flex: "1 1 auto",
+          boxShadow: `0 4px 14px ${btnBg}33`,
+        }}
+        onMouseEnter={(e) => { if (status !== "loading") { e.currentTarget.style.background = btnHover; e.currentTarget.style.transform = "translateY(-1px)"; } }}
+        onMouseLeave={(e) => { if (status !== "loading") { e.currentTarget.style.background = btnBg; e.currentTarget.style.transform = "translateY(0)"; } }}
+      >
+        {status === "loading" ? "Sending..." : buttonText}
+      </button>
+      {status === "error" && <p style={{ width: "100%", fontSize: "0.775rem", color: "#b44", marginTop: "0.25rem", marginBottom: 0 }}>{errorMsg}</p>}
+    </form>
   );
 }
 
