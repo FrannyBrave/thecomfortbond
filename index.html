@@ -253,6 +253,22 @@
       imagesizes="(max-width: 1023px) 100vw, 420px"
       fetchpriority="high"
     />
+    <!-- Route-specific LCP preload for /free-sampler -->
+    <script>
+      (function () {
+        if (location.pathname.replace(/\/$/, '') === '/free-sampler') {
+          var l = document.createElement('link');
+          l.rel = 'preload';
+          l.as = 'image';
+          l.type = 'image/avif';
+          l.href = '/lcp/sampler-hero-768.avif';
+          l.setAttribute('imagesrcset', '/lcp/sampler-hero-480.avif 480w, /lcp/sampler-hero-768.avif 768w, /lcp/sampler-hero-1280.avif 1280w');
+          l.setAttribute('imagesizes', '(max-width: 720px) 100vw, 640px');
+          l.setAttribute('fetchpriority', 'high');
+          document.head.appendChild(l);
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://gumroad.com" crossorigin />
     <link rel="preconnect" href="https://assets.gumroad.com" crossorigin />
 
