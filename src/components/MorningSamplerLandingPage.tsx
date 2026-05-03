@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import samplerHero from "@/assets/memory-care-morning-activity-routine-seniors.png";
 import samplerMoments from "@/assets/dementia-friendly-activity-cards-for-engagement.png";
 import samplerActivities from "@/assets/senior-living-activity-printable-kit-overview.png";
 import logo from "@/assets/the-comfort-bond-logo.png";
