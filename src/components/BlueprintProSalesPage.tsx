@@ -444,7 +444,7 @@ export default function BlueprintProSalesPage() {
       {/* ════════════════════════════════════════
           STATS BAR — between Inside the Blueprint and Testimonials
          ════════════════════════════════════════ */}
-      <Wide bg={c.bone}>
+      <Wide bg={c.creamAlt}>
         <div style={{ textAlign: "center", marginBottom: "2rem", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
           <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1.25rem", borderRadius: "2px" }} />
           <h2 style={{ fontFamily: serif, fontSize: "clamp(1.4rem, 3vw, 1.8rem)", fontWeight: 600, color: c.forest, margin: 0, lineHeight: 1.25 }}>
