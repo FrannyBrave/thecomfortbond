@@ -414,7 +414,7 @@ export default function BlueprintLandingPage() {
               {[
                 "Download the Blueprint.",
                 "Open the pre-planned week or the blank template.",
-                "Plan your entire week in under 30 minutes.",
+                "Plan your entire week in under 20 minutes.",
               ].map((step, i) => (
                 <div key={i} style={{ display: "flex", gap: "1rem", alignItems: "baseline" }}>
                   <span style={{
