@@ -355,6 +355,93 @@ export default function BlueprintProSalesPage() {
       </section>
 
       {/* ════════════════════════════════════════
+          INSIDE THE BLUEPRINT — 3 sections (scope, depth, differentiator)
+         ════════════════════════════════════════ */}
+      <Wide bg={c.cream}>
+        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: c.terracotta, margin: 0 }}>
+            Inside the Blueprint
+          </p>
+        </div>
+
+        {[
+          {
+            heading: "Plan an entire quarter in one afternoon.",
+            body: "Q3 2026 maps 13 weeks of senior living programming — every week pre-themed, pre-mapped to an engagement dimension, and tied to a real seasonal anchor or national observance. From “Red, White, and Blue Memories” on Independence Day week to “What I Know for Sure” closing out September, every theme is intentional, dignified, and ready to run.",
+            img: quarterlyOverviewImg,
+            alt: "Quarterly Overview Q3 2026 — 13 weeks of senior living activity themes mapped to engagement dimensions and seasonal observances",
+            caption: "13 weeks, 13 themes, 13 dimension anchors — pre-mapped before you open the file.",
+          },
+          {
+            heading: "Open Monday's plan. Run Monday's activities.",
+            body: "Every week includes morning and afternoon activities, dimension tags so you instantly see which engagement area each activity covers, a notes column for real-time observations, and a Coaching Tip from the system itself. No prep, no scrambling, no “what do we do next?” — Monday morning starts at the top of the page.",
+            img: weeklyPlanImg,
+            alt: "Week 1 Red White and Blue Memories — daily morning and afternoon activity plan with dimension tags and notes column",
+            caption: "“Don't open with a question. Play ten seconds of a marching band first — the sounds prime the memory faster than any prompt you can read aloud.” — Coaching Tip from inside the Blueprint Pro",
+          },
+          {
+            heading: "See your week's balance in 5 seconds.",
+            body: "The Engagement Balance Wheel™ is the proprietary tool built into every Blueprint Pro edition. Six dimensions of meaningful engagement — Cognitive, Social, Sensory, Physical, Creative, Spiritual — tracked weekly so you can spot at a glance which area you've over-served and which residents have been quietly under-served. The wheel is a compass, not a checklist.",
+            img: engagementWheelImg,
+            alt: "Engagement Balance Wheel and Quarterly Dimension Tracker — six dimensions of meaningful engagement tracked across 13 weeks",
+            caption: "Most memory care programs run 70% cognitive activities without realizing it. The Wheel surfaces the imbalance before it becomes a problem.",
+          },
+        ].map((s, i) => (
+          <div
+            key={i}
+            style={{
+              marginTop: i === 0 ? 0 : "clamp(2.5rem, 6vw, 4rem)",
+              paddingTop: i === 0 ? 0 : "clamp(2.5rem, 6vw, 4rem)",
+              borderTop: i === 0 ? "none" : `1px solid ${c.gridline}`,
+            }}
+          >
+            <div style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
+              <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.75rem" }}>
+                Section {i + 1}
+              </p>
+              <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.4vw, 2rem)", fontWeight: 600, color: c.forest, lineHeight: 1.2, margin: "0 0 1rem", letterSpacing: "-0.01em" }}>
+                {s.heading}
+              </h2>
+              <p style={{ fontSize: "clamp(0.98rem, 1.6vw, 1.075rem)", lineHeight: 1.7, color: c.body, margin: 0 }}>
+                {s.body}
+              </p>
+            </div>
+            <figure style={{ margin: "clamp(1.75rem, 4vw, 2.5rem) 0 0" }}>
+              <img
+                src={s.img}
+                alt={s.alt}
+                loading="lazy"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  borderRadius: "14px",
+                  boxShadow: "0 12px 40px rgba(45,74,62,0.15)",
+                  border: `1px solid ${c.gridline}`,
+                }}
+              />
+              <figcaption
+                style={{
+                  marginTop: "1rem",
+                  fontFamily: sans,
+                  fontSize: "0.85rem",
+                  lineHeight: 1.6,
+                  color: c.muted,
+                  fontStyle: "italic",
+                  textAlign: "center",
+                  maxWidth: "640px",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              >
+                {s.caption}
+              </figcaption>
+            </figure>
+          </div>
+        ))}
+      </Wide>
+
+      {/* ════════════════════════════════════════
           SECTION 5.5 — TESTIMONIALS (social proof before Free vs Pro)
          ════════════════════════════════════════ */}
       <Wide bg={c.cream}>
