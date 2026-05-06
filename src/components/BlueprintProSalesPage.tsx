@@ -268,8 +268,51 @@ export default function BlueprintProSalesPage() {
       </Wide>
 
       {/* ════════════════════════════════════════
-          SECTION 2 — THE PAIN
+          HERO ANCHOR — single testimonial + 5-star
          ════════════════════════════════════════ */}
+      <section style={{ backgroundColor: c.creamAlt, padding: "clamp(2rem, 5vw, 3rem) clamp(1.25rem, 5vw, 3rem)" }}>
+        <figure
+          style={{
+            maxWidth: "720px",
+            margin: "0 auto",
+            textAlign: "center",
+            padding: 0,
+          }}
+        >
+          <div aria-label="5 out of 5 stars" style={{ display: "flex", justifyContent: "center", gap: "0.25rem", marginBottom: "0.85rem", color: c.gold, fontSize: "1.1rem", letterSpacing: "0.1em" }}>
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <blockquote
+            style={{
+              margin: 0,
+              fontFamily: serif,
+              fontStyle: "italic",
+              fontSize: "clamp(1.05rem, 2.2vw, 1.25rem)",
+              lineHeight: 1.55,
+              color: c.forest,
+            }}
+          >
+            “Sunday nights used to be stressful for me — I&rsquo;d be trying to pull together a full week of activities with no structure. The Blueprint completely changed that. I now sit down for 20 minutes and my entire week is mapped out in a way that actually makes sense.”
+          </blockquote>
+          <figcaption
+            style={{
+              marginTop: "1rem",
+              fontFamily: sans,
+              fontSize: "0.78rem",
+              fontWeight: 600,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: c.body,
+            }}
+          >
+            Shannon L.
+            <span style={{ display: "block", marginTop: "0.2rem", fontSize: "0.7rem", fontWeight: 500, color: c.muted }}>
+              Life Enrichment Manager
+            </span>
+          </figcaption>
+        </figure>
+      </section>
+
       <Wide>
         <div className="bps-pain-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem", alignItems: "center" }}>
           <div>
