@@ -197,58 +197,52 @@ export default function BlueprintProSalesPage() {
           SECTION 1 — HERO (mobile-first conversion)
          ════════════════════════════════════════ */}
       <Wide style={{ paddingTop: "clamp(1rem, 3vw, 2rem)", paddingBottom: "clamp(2rem, 5vw, 3.5rem)" }}>
-        <div className="bps-hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "clamp(1.75rem, 4vw, 2.5rem)", alignItems: "center" }}>
-          {/* Copy + CTA */}
-          <div>
-            <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.85rem" }}>
-              The Blueprint™ Pro
-            </p>
-            <h1 style={{ fontFamily: serif, fontSize: "clamp(2rem, 5.2vw, 2.95rem)", fontWeight: 600, color: c.forest, lineHeight: 1.1, margin: "0 0 0.9rem", letterSpacing: "-0.02em" }}>
-              Never Plan Activities at 10&nbsp;PM on Sunday Again.
-            </h1>
-            <p style={{ fontSize: "clamp(0.98rem, 1.6vw, 1.08rem)", lineHeight: 1.65, color: c.body, margin: "0 0 1.1rem", maxWidth: "90%" }}>
-              A done-for-you 13-week system that organizes your entire activity calendar — so you walk into every week prepared, not scrambling.
-            </p>
+        <div style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.85rem" }}>
+            The Blueprint™ Pro
+          </p>
+          <h1 style={{ fontFamily: serif, fontSize: "clamp(2rem, 5.2vw, 3.1rem)", fontWeight: 600, color: c.forest, lineHeight: 1.1, margin: "0 0 1rem", letterSpacing: "-0.02em" }}>
+            Never Plan Activities at 10&nbsp;PM on Sunday Again.
+          </h1>
+          <p style={{ fontSize: "clamp(0.98rem, 1.6vw, 1.1rem)", lineHeight: 1.65, color: c.body, margin: "0 auto 1.4rem", maxWidth: "620px" }}>
+            A done-for-you 13-week system that organizes your entire activity calendar — so you walk into every week prepared, not scrambling.
+          </p>
 
-            {/* Benefit strip */}
-            <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.4rem", display: "grid", gridTemplateColumns: "1fr", gap: "0.5rem" }}>
-              {[
-                "13 weeks fully structured",
-                "No more last-minute planning",
-                "Balanced, dignified programming",
-                "Works for real senior living environments",
-              ].map((t, i) => (
-                <li key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontSize: "0.92rem", color: c.body, lineHeight: 1.4 }}>
-                  <span style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
+          <ul className="bps-hero-benefits" style={{ listStyle: "none", padding: 0, margin: "0 auto 1.6rem", maxWidth: "620px", display: "grid", gridTemplateColumns: "1fr", gap: "0.55rem", textAlign: "left" }}>
+            {[
+              "13 weeks fully structured",
+              "No more last-minute planning",
+              "Balanced, dignified programming",
+              "Works for real senior living environments",
+            ].map((t, i) => (
+              <li key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontSize: "0.95rem", color: c.body, lineHeight: 1.4 }}>
+                <span style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
 
-            {/* Primary CTA — full width on mobile */}
-            <div className="bps-hero-cta">
-              <Cta large>Get Your 13-Week Plan — $27</Cta>
-            </div>
-            <p style={{ fontFamily: sans, fontSize: "0.82rem", color: c.muted, margin: "0.7rem 0 0", textAlign: "center" }}>
-              Instant access · No subscription · Use it again and again
-            </p>
-            <p style={{ fontFamily: sans, fontSize: "0.9rem", margin: "0.85rem 0 0", textAlign: "center", color: c.forest }}>
-              Not sure yet?{" "}
-              <Link
-                to="/blueprint"
-                style={{ color: c.terracotta, textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 600 }}
-              >
-                Download a free 1-week sample and try it first →
-              </Link>
-            </p>
+          <div className="bps-hero-cta">
+            <Cta large>Get Your 13-Week Plan — $27</Cta>
           </div>
-
-          {/* Product mockup removed */}
+          <p style={{ fontFamily: sans, fontSize: "0.82rem", color: c.muted, margin: "0.7rem 0 0" }}>
+            Instant access · No subscription · Use it again and again
+          </p>
+          <p style={{ fontFamily: sans, fontSize: "0.9rem", margin: "0.85rem 0 0", color: c.forest }}>
+            Not sure yet?{" "}
+            <Link
+              to="/blueprint"
+              style={{ color: c.terracotta, textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 600 }}
+            >
+              Download a free 1-week sample and try it first →
+            </Link>
+          </p>
         </div>
         <style>{`
-          .bps-hero-cta :global(button), .bps-hero-cta button { width: 100%; }
-          @media (min-width: 860px) {
+          .bps-hero-cta button { width: 100%; }
+          @media (min-width: 640px) {
             .bps-hero-cta button { width: auto; }
+            .bps-hero-benefits { grid-template-columns: 1fr 1fr !important; }
           }
         `}</style>
       </Wide>
