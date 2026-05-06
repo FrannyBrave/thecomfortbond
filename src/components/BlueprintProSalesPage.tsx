@@ -328,56 +328,7 @@ export default function BlueprintProSalesPage() {
       </section>
 
       {/* ════════════════════════════════════════
-          SECTION 5 — WHAT'S INSIDE (feature grid)
-         ════════════════════════════════════════ */}
-      <Wide bg={c.creamAlt}>
-        <div style={{ textAlign: "center", marginBottom: "2rem", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
-          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1.25rem", borderRadius: "2px" }} />
-          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.2vw, 1.9rem)", fontWeight: 600, color: c.forest, margin: 0, lineHeight: 1.25 }}>
-            What This Actually Does for You
-          </h2>
-        </div>
-
-        <div className="bps-features-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.1rem" }}>
-          {[
-            { title: "You don't have to figure out what goes where.", text: "A fully structured 13-week framework that balances cognitive, social, sensory, physical, creative, and spiritual engagement — automatically." },
-            { title: "You stop second-guessing your programming.", text: "Weekly planning worksheets guide your schedule, ensure variety, and prevent burnout — for both you and your residents." },
-            { title: "You know your programming is actually balanced.", text: "The Engagement Balance Wheel helps you instantly see if your programming is well-rounded — or missing something important." },
-            { title: "You always know what to run.", text: "Built-in resource mapping connects each planning slot to ready-to-use activities — so you're never staring at a blank schedule." },
-            { title: "You're never starting from scratch again.", text: "Pre-built quarterly themes, seasonal anchors, and conversation prompts — ready the moment you open the plan." },
-            { title: "You can plan anywhere, anytime.", text: "Mobile-friendly version for on-the-go planning and quick adjustments during your day." },
-          ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                backgroundColor: c.cream,
-                border: `1px solid ${c.gridline}`,
-                borderLeft: `4px solid ${c.terracotta}`,
-                borderRadius: "12px",
-                padding: "1.25rem 1.4rem",
-              }}
-            >
-              <h3 style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.45rem", lineHeight: 1.3 }}>
-                {item.title}
-              </h3>
-              <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: c.body, margin: 0 }}>{item.text}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Mid-page buy button */}
-        <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-          <div className="bps-hero-cta" style={{ display: "inline-block", width: "100%", maxWidth: "420px" }}>
-            <Cta large>Get Your 13-Week Plan — $27</Cta>
-          </div>
-          <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, marginTop: "0.65rem" }}>
-            Instant access · No subscription · Use it again and again
-          </p>
-        </div>
-      </Wide>
-
-      {/* ════════════════════════════════════════
-          SECTION 6 — FREE VS PRO (visual comparison)
+          SECTION 6 — FREE VS PRO (single tight card)
          ════════════════════════════════════════ */}
       <Wide bg={c.terracottaWash}>
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
@@ -386,53 +337,34 @@ export default function BlueprintProSalesPage() {
             Free vs. Pro
           </h2>
         </div>
-        <div className="bps-compare-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.5rem", maxWidth: "720px", margin: "0 auto" }}>
-          {/* Free card */}
-          <div style={{ backgroundColor: c.cream, borderRadius: "14px", padding: "2rem", border: `1px solid ${c.gridline}` }}>
-            <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.muted, margin: "0 0 0.5rem" }}>
-              Free Blueprint
-            </p>
-            <h3 style={{ fontFamily: serif, fontSize: "1.25rem", fontWeight: 600, color: c.forest, margin: "0 0 1rem" }}>
-              The Structure
-            </h3>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              {["Blank weekly planning templates", "Engagement Balance Wheel (empty)", "Weekly grid layout"].map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontSize: "0.925rem", color: c.body }}>
-                  <span style={{ color: c.muted }}>○</span> {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Pro card */}
-          <div style={{ backgroundColor: c.forest, borderRadius: "14px", padding: "2rem", position: "relative", overflow: "hidden" }}>
-            <div style={{ position: "absolute", top: "0.75rem", right: "1rem", fontFamily: sans, fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", backgroundColor: c.terracotta, padding: "0.25rem 0.75rem", borderRadius: "100px", color: "#fff" }}>
-              Recommended
+        <div style={{ backgroundColor: c.cream, borderRadius: "14px", border: `1px solid ${c.gridline}`, maxWidth: "640px", margin: "0 auto", overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+            <div style={{ padding: "1.5rem 1.25rem", borderRight: `1px solid ${c.gridline}` }}>
+              <p style={{ fontFamily: sans, fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.muted, margin: "0 0 0.4rem" }}>
+                Free
+              </p>
+              <h3 style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.5rem", lineHeight: 1.3 }}>
+                The Structure
+              </h3>
+              <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: c.body, margin: 0 }}>
+                Blank weekly templates and the Engagement Balance Wheel — the empty framework.
+              </p>
             </div>
-            <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.terracottaLight, margin: "0 0 0.5rem" }}>
-              Blueprint Pro
-            </p>
-            <h3 style={{ fontFamily: serif, fontSize: "1.25rem", fontWeight: 600, color: "#fff", margin: "0 0 1rem" }}>
-              The Complete System
-            </h3>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              {[
-                "13 pre-themed weeks with content",
-                "Expert facilitator coaching notes",
-                "Conversation starters for every theme",
-                "National observance mapping",
-                "6-dimension balance tracking (filled)",
-                "Resource connection guides",
-              ].map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontSize: "0.925rem", color: "rgba(255,255,255,0.85)" }}>
-                  <span style={{ color: c.terracottaLight }}>●</span> {item}
-                </li>
-              ))}
-            </ul>
+            <div style={{ padding: "1.5rem 1.25rem", backgroundColor: c.forest }}>
+              <p style={{ fontFamily: sans, fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.terracottaLight, margin: "0 0 0.4rem" }}>
+                Pro
+              </p>
+              <h3 style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: "#fff", margin: "0 0 0.5rem", lineHeight: 1.3 }}>
+                The Complete System
+              </h3>
+              <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: "rgba(255,255,255,0.88)", margin: 0 }}>
+                13 pre-themed weeks, coaching tips, conversation starters, observance mapping, and resource guides — all filled in.
+              </p>
+            </div>
           </div>
         </div>
-        <p style={{ fontFamily: serif, fontSize: "clamp(1rem, 2vw, 1.15rem)", fontWeight: 600, color: c.forest, lineHeight: 1.4, textAlign: "center", marginTop: "2rem", maxWidth: "480px", marginLeft: "auto", marginRight: "auto" }}>
-          The free version gave you the filing cabinet.
-          <br />
+        <p style={{ fontFamily: serif, fontSize: "clamp(1rem, 2vw, 1.15rem)", fontWeight: 600, color: c.forest, lineHeight: 1.5, textAlign: "center", marginTop: "1.75rem", maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
+          The free version gave you the filing cabinet.{" "}
           <span style={{ color: c.terracotta }}>The Pro version gives you the files.</span>
         </p>
       </Wide>
