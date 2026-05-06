@@ -456,18 +456,22 @@ export default function BlueprintProSalesPage() {
             {
               quote: "Sunday nights used to be stressful for me — I'd be trying to pull together a full week of activities with no structure. The Blueprint completely changed that. I now sit down for 20 minutes and my entire week is mapped out in a way that actually makes sense.",
               name: "Shannon L.",
+              role: "Life Enrichment Manager",
             },
             {
               quote: "What I didn't realize was how unbalanced my programming was until I used the Engagement Balance Wheel. I was overusing the same types of activities without noticing. This gave me a clear system to make sure residents are engaged in different ways throughout the week.",
               name: "Glennys D.",
+              role: "Activity Director",
             },
             {
               quote: "I manage multiple groups with different cognitive levels, and planning used to take hours. The weekly worksheets alone saved me so much time. I'm no longer starting from scratch every week.",
               name: "Felicity M.",
+              role: "Activity Coordinator",
             },
             {
               quote: "Once I had the structure in place, it became so much easier to plug in activities. I finally feel like I have a system instead of guessing every week.",
               name: "Ashley-Joyce",
+              role: "Activity Coordinator",
             },
           ].map((t, i) => (
             <figure
