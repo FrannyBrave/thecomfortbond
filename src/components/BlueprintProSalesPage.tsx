@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/the-comfort-bond-logo.png";
-import heroMockup from "@/assets/memory-care-activity-calendar-template.png";
-import beforeAfter from "@/assets/activity-planning-before-after-senior-living-calendar.png";
+import quarterlyOverviewImg from "@/assets/blueprint-pro-quarterly-overview.png";
+import weeklyPlanImg from "@/assets/blueprint-pro-weekly-plan.png";
+import engagementWheelImg from "@/assets/blueprint-pro-engagement-wheel.png";
 
 import { openPaddleCheckout } from "@/lib/paddle";
 
