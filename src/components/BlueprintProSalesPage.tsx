@@ -403,7 +403,7 @@ export default function BlueprintProSalesPage() {
                 {s.body}
               </p>
             </div>
-            <figure style={{ margin: "clamp(1.75rem, 4vw, 2.5rem) 0 0" }}>
+            <figure style={{ margin: "clamp(1.5rem, 3vw, 2rem) auto 0", maxWidth: "520px" }}>
               <img
                 src={s.img}
                 alt={s.alt}
