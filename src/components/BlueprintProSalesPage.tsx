@@ -328,6 +328,7 @@ export default function BlueprintProSalesPage() {
               You didn&rsquo;t get into this work to feel behind. You got into it because you care.
             </p>
           </div>
+        </div>
       </Wide>
 
       {/* ════════════════════════════════════════
