@@ -442,6 +442,74 @@ export default function BlueprintProSalesPage() {
       </Wide>
 
       {/* ════════════════════════════════════════
+          STATS BAR — between Inside the Blueprint and Testimonials
+         ════════════════════════════════════════ */}
+      <Wide bg={c.creamAlt}>
+        <div style={{ textAlign: "center", marginBottom: "2rem", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
+          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1.25rem", borderRadius: "2px" }} />
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.4rem, 3vw, 1.8rem)", fontWeight: 600, color: c.forest, margin: 0, lineHeight: 1.25 }}>
+            What's Inside the Blueprint Pro
+          </h2>
+        </div>
+        <div
+          className="bps-stats-bar"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr",
+            gap: "1.5rem",
+            maxWidth: "1000px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            backgroundColor: c.cream,
+            padding: "2rem 1.5rem",
+            borderRadius: "12px",
+            border: `1px solid ${c.forest}1a`,
+          }}
+        >
+          {[
+            { num: "30", label: "pages of structured planning" },
+            { num: "13", label: "pre-themed weeks of programming" },
+            { num: "6", label: "engagement dimensions tracked weekly" },
+            { num: "1", label: "instant download (PDF + mobile-friendly digital)" },
+          ].map((stat, i, arr) => (
+            <div
+              key={i}
+              className="bps-stat-item"
+              style={{
+                textAlign: "center",
+                padding: "0.5rem 1rem",
+                borderBottom: i < arr.length - 1 ? `1px solid ${c.forest}1f` : "none",
+                paddingBottom: i < arr.length - 1 ? "1.5rem" : "0.5rem",
+              }}
+            >
+              <div style={{ fontFamily: serif, fontSize: "clamp(2.25rem, 5vw, 3rem)", fontWeight: 700, color: c.terracotta, lineHeight: 1, marginBottom: "0.5rem" }}>
+                {stat.num}
+              </div>
+              <div style={{ fontFamily: sans, fontSize: "0.9rem", color: c.forest, lineHeight: 1.4 }}>
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+        <style>{`
+          @media (min-width: 720px) {
+            .bps-stats-bar {
+              grid-template-columns: repeat(4, 1fr) !important;
+              gap: 0 !important;
+            }
+            .bps-stat-item {
+              border-bottom: none !important;
+              border-right: 1px solid hsl(0 0% 0% / 0.12) !important;
+              padding-bottom: 0.5rem !important;
+            }
+            .bps-stat-item:last-child {
+              border-right: none !important;
+            }
+          }
+        `}</style>
+      </Wide>
+
+      {/* ════════════════════════════════════════
           SECTION 5.5 — TESTIMONIALS (social proof before Free vs Pro)
          ════════════════════════════════════════ */}
       <Wide bg={c.cream}>
