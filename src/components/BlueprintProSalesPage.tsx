@@ -525,6 +525,9 @@ export default function BlueprintProSalesPage() {
                 }}
               >
                 — {t.name}
+                <span style={{ display: "block", marginTop: "0.2rem", fontSize: "0.72rem", fontWeight: 500, letterSpacing: "0.08em", color: c.muted }}>
+                  {t.role}
+                </span>
               </figcaption>
             </figure>
           ))}
