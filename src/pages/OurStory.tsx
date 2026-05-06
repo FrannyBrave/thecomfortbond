@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import logoImg from "@/assets/the-comfort-bond-logo.png";
+import logoImg from "@/assets/the-comfort-bond-logo.webp";
 
 const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">

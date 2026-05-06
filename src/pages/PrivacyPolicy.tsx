@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/the-comfort-bond-logo.png";
+import logo from "@/assets/the-comfort-bond-logo.webp";
 
 const PrivacyPolicy = () => {
   useEffect(() => {

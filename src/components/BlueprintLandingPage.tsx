@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
-import logo from "@/assets/the-comfort-bond-logo.png";
+import logo from "@/assets/the-comfort-bond-logo.webp";
 
 /* LCP hero — pre-built responsive variants in /public/lcp/ (kept tiny for fast LCP).
    Mobile fetches the 480w (~32KB) variant; desktop fetches 1280w AVIF (~70KB). */

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/the-comfort-bond-logo.png";
-import quarterlyOverviewImg from "@/assets/blueprint-pro-quarterly-overview.png";
-import weeklyPlanImg from "@/assets/blueprint-pro-weekly-plan.png";
-import engagementWheelImg from "@/assets/blueprint-pro-engagement-wheel.png";
+import logo from "@/assets/the-comfort-bond-logo.webp";
+import quarterlyOverviewImg from "@/assets/blueprint-pro-quarterly-overview.webp";
+import weeklyPlanImg from "@/assets/blueprint-pro-weekly-plan.webp";
+import engagementWheelImg from "@/assets/blueprint-pro-engagement-wheel.webp";
 
 import { openPaddleCheckout } from "@/lib/paddle";
 
@@ -366,6 +366,7 @@ export default function BlueprintProSalesPage() {
             heading: "Plan an entire quarter in one afternoon.",
             body: "Q3 2026 maps 13 weeks of senior living programming — every week pre-themed, pre-mapped to an engagement dimension, and tied to a real seasonal anchor or national observance. From “Red, White, and Blue Memories” on Independence Day week to “What I Know for Sure” closing out September, every theme is intentional, dignified, and ready to run.",
             img: quarterlyOverviewImg,
+            w: 1280, h: 1026,
             alt: "Quarterly Overview Q3 2026 — 13 weeks of senior living activity themes mapped to engagement dimensions and seasonal observances",
             caption: "13 weeks, 13 themes, 13 dimension anchors — pre-mapped before you open the file.",
           },
@@ -373,6 +374,7 @@ export default function BlueprintProSalesPage() {
             heading: "Open Monday's plan. Run Monday's activities.",
             body: "Every week includes morning and afternoon activities, dimension tags so you instantly see which engagement area each activity covers, a notes column for real-time observations, and a Coaching Tip from the system itself. No prep, no scrambling, no “what do we do next?” — Monday morning starts at the top of the page.",
             img: weeklyPlanImg,
+            w: 1280, h: 960,
             alt: "Week 1 Red White and Blue Memories — daily morning and afternoon activity plan with dimension tags and notes column",
             caption: "“Don't open with a question. Play ten seconds of a marching band first — the sounds prime the memory faster than any prompt you can read aloud.” — Coaching Tip from inside the Blueprint Pro",
           },
@@ -380,6 +382,7 @@ export default function BlueprintProSalesPage() {
             heading: "See your week's balance in 5 seconds.",
             body: "The Engagement Balance Wheel™ is the proprietary tool built into every Blueprint Pro edition. Six dimensions of meaningful engagement — Cognitive, Social, Sensory, Physical, Creative, Spiritual — tracked weekly so you can spot at a glance which area you've over-served and which residents have been quietly under-served. The wheel is a compass, not a checklist.",
             img: engagementWheelImg,
+            w: 1280, h: 960,
             alt: "Engagement Balance Wheel and Quarterly Dimension Tracker — six dimensions of meaningful engagement tracked across 13 weeks",
             caption: "Most memory care programs run 70% cognitive activities without realizing it. The Wheel surfaces the imbalance before it becomes a problem.",
           },
@@ -408,6 +411,9 @@ export default function BlueprintProSalesPage() {
                 src={s.img}
                 alt={s.alt}
                 loading="lazy"
+                decoding="async"
+                width={s.w}
+                height={s.h}
                 style={{
                   width: "100%",
                   height: "auto",

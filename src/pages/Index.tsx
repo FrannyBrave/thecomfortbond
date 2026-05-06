@@ -1,4 +1,4 @@
-import logoImg from "@/assets/the-comfort-bond-logo.png";
+import logoImg from "@/assets/the-comfort-bond-logo.webp";
 import bundleVolume from "@/assets/senior-living-activity-bundle-programming-tools.png";
 import bundleGroup from "@/assets/group-activities-for-seniors-memory-care-engagement.png";
 import bundleStack from "@/assets/printable-senior-activity-kit-pages-overview.png";
