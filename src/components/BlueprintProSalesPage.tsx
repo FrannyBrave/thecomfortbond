@@ -579,6 +579,87 @@ export default function BlueprintProSalesPage() {
       </Wide>
 
       {/* ════════════════════════════════════════
+          HOW IT WORKS — 3 simple steps
+         ════════════════════════════════════════ */}
+      <Wide bg={c.cream}>
+        <div style={{ textAlign: "center", marginBottom: "2.25rem" }}>
+          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1rem", borderRadius: "2px" }} />
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.5rem" }}>
+            How It Works
+          </p>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.2vw, 1.9rem)", fontWeight: 600, color: c.forest, margin: 0, lineHeight: 1.25 }}>
+            From purchase to Monday morning &mdash; in three steps.
+          </h2>
+        </div>
+        <div className="bps-how-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.1rem", maxWidth: "900px", margin: "0 auto" }}>
+          {[
+            { n: "1", t: "Buy & instant download", d: "Checkout takes 60 seconds. Your Blueprint PDF lands in your inbox immediately." },
+            { n: "2", t: "Print or open digitally", d: "Use it on your tablet, your laptop, or printed and tucked into your binder." },
+            { n: "3", t: "Open Week 1 — start Monday", d: "No setup. No learning curve. Open the page, run the activities, repeat next week." },
+          ].map((s) => (
+            <div key={s.n} style={{ backgroundColor: c.creamAlt, border: `1px solid ${c.gridline}`, borderRadius: "14px", padding: "1.5rem 1.4rem", display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+              <div style={{ flexShrink: 0, width: "42px", height: "42px", borderRadius: "50%", backgroundColor: c.terracotta, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: serif, fontSize: "1.15rem", fontWeight: 600 }}>
+                {s.n}
+              </div>
+              <div>
+                <h3 style={{ fontFamily: serif, fontSize: "1.1rem", fontWeight: 600, color: c.forest, margin: "0 0 0.35rem", lineHeight: 1.3 }}>{s.t}</h3>
+                <p style={{ fontSize: "0.95rem", lineHeight: 1.6, color: c.body, margin: 0 }}>{s.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <style>{`
+          @media (min-width: 768px) {
+            .bps-how-grid { grid-template-columns: repeat(3, 1fr) !important; }
+          }
+        `}</style>
+      </Wide>
+
+      {/* ════════════════════════════════════════
+          BUNDLE UPSELL — Blueprint Pro + 5-Kit Bundle
+         ════════════════════════════════════════ */}
+      <Wide bg={c.terracottaWash}>
+        <div style={{ maxWidth: "720px", margin: "0 auto", backgroundColor: c.cream, borderRadius: "16px", border: `2px solid ${c.terracotta}`, padding: "clamp(1.75rem, 4vw, 2.5rem)", textAlign: "center", position: "relative" }}>
+          <span style={{ position: "absolute", top: "-14px", left: "50%", transform: "translateX(-50%)", backgroundColor: c.terracotta, color: "#fff", fontFamily: sans, fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.4rem 0.9rem", borderRadius: "100px" }}>
+            Best Value
+          </span>
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0.4rem 0 0.6rem" }}>
+            Get the Complete System
+          </p>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.4rem, 3.2vw, 1.85rem)", fontWeight: 600, color: c.forest, margin: "0 0 0.75rem", lineHeight: 1.25 }}>
+            Blueprint Pro + 5-Kit Bundle
+          </h2>
+          <p style={{ fontSize: "1rem", lineHeight: 1.65, color: c.body, margin: "0 0 1.25rem", maxWidth: "520px", marginLeft: "auto", marginRight: "auto" }}>
+            Pair the planning system with the activity kits it&rsquo;s designed to run.{" "}
+            <strong style={{ color: c.forest }}>$124 total &mdash; saves $38</strong> versus buying separately.
+          </p>
+          <p style={{ fontFamily: sans, fontSize: "0.9rem", color: c.muted, fontStyle: "italic", margin: "0 0 1.5rem" }}>
+            Or add the Bundle at checkout for $97.
+          </p>
+          <Link
+            to="/#products"
+            style={{
+              display: "inline-block",
+              fontFamily: sans,
+              fontSize: "0.95rem",
+              fontWeight: 600,
+              color: "#fff",
+              backgroundColor: c.forest,
+              padding: "0.95rem 2rem",
+              borderRadius: "100px",
+              textDecoration: "none",
+              transition: "all 0.2s",
+              boxShadow: "0 4px 16px rgba(45,74,62,0.25)",
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = c.forestLight; e.currentTarget.style.transform = "translateY(-2px)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = c.forest; e.currentTarget.style.transform = "translateY(0)"; }}
+          >
+            See the Bundle &rarr;
+          </Link>
+        </div>
+      </Wide>
+
+      {/* ════════════════════════════════════════
           SECTION 7 — PRICING
          ════════════════════════════════════════ */}
       <Wide>
