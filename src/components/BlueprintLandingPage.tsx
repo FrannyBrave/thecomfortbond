@@ -376,50 +376,6 @@ export default function BlueprintLandingPage() {
         padding: "clamp(3rem, 8vw, 6rem) clamp(1.25rem, 5vw, 3rem)",
       }}>
         <div style={{ maxWidth: "1060px", margin: "0 auto" }}>
-          <p style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, textAlign: "center", margin: "0 0 0.75rem",
-          }}>
-            Everything You Need
-          </p>
-          <h2 style={{
-            fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600,
-            color: c.cream, textAlign: "center", margin: "0 0 2.5rem",
-          }}>
-            What's Inside
-          </h2>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.25rem", marginBottom: "4rem" }}>
-            {[
-              { icon: "📋", title: "One Pre-Planned Week", desc: "A full week of programming mapped across all 6 dimensions of meaningful engagement." },
-              { icon: "📝", title: "Blank Weekly Template", desc: "A clean, reusable planning page designed for handwriting. Print it every week." },
-              { icon: "🎯", title: "Engagement Balance Wheel", desc: "A visual tool to check that your week has variety, not just repetition." },
-              { icon: "⚡", title: "Quick-Start Guide", desc: "Read it once. Start planning by Monday afternoon. No learning curve." },
-            ].map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  backgroundColor: "rgba(250,247,242,0.95)",
-                  backdropFilter: "blur(10px)",
-                  borderRadius: "14px",
-                  padding: "1.75rem 1.5rem",
-                  boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
-                  transition: "transform 0.2s ease",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-3px)")}
-                onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
-              >
-                <div style={{ fontSize: "1.5rem", marginBottom: "0.75rem" }}>{item.icon}</div>
-                <h3 style={{ fontFamily: serif, fontSize: "1rem", fontWeight: 600, color: c.forest, margin: "0 0 0.5rem" }}>
-                  {item.title}
-                </h3>
-                <p style={{ fontSize: "0.825rem", lineHeight: 1.65, color: c.body, margin: 0 }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
           {/* Inline mid-page CTA */}
           <div style={{
             maxWidth: "520px", margin: "0 auto 4rem",
@@ -458,7 +414,7 @@ export default function BlueprintLandingPage() {
               {[
                 "Download the Blueprint.",
                 "Open the pre-planned week or the blank template.",
-                "Plan your entire week in under 30 minutes.",
+                "Plan your entire week in under 20 minutes.",
               ].map((step, i) => (
                 <div key={i} style={{ display: "flex", gap: "1rem", alignItems: "baseline" }}>
                   <span style={{
@@ -586,9 +542,9 @@ export default function BlueprintLandingPage() {
           }}
         >
           {[
-            { num: "1", label: "fully planned sample week" },
+            { num: "1", label: "weekly planning structure" },
             { num: "6", label: "engagement dimensions" },
-            { num: "15 min", label: "to plan your entire week" },
+            { num: "20 min", label: "to plan your entire week" },
             { num: "$0", label: "instant delivery" },
           ].map((stat, i, arr) => (
             <div
