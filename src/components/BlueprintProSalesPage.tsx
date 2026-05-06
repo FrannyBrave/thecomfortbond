@@ -369,7 +369,7 @@ export default function BlueprintProSalesPage() {
           },
           {
             heading: "Open Monday's plan. Run Monday's activities.",
-            body: "Every week includes morning and afternoon activities, dimension tags so you instantly see which engagement area each activity covers, a notes column for real-time observations, and a Coaching Tip from the system itself. No prep, no scrambling, no “what do we do next?” — Monday morning starts at the top of the page.",
+            body: "Every week includes morning and afternoon activities, dimension tags so you instantly see which engagement area each activity covers, a notes column for real-time observations, and a Coaching Tip from the system itself. Each week is a fillable worksheet — pre-themed with activities, with space to customize for your residents and write your own notes as you go. No prep, no scrambling, no “what do we do next?” — Monday morning starts at the top of the page.",
             img: weeklyPlanImg,
             w: 1280, h: 960,
             alt: "Week 1 Red White and Blue Memories — daily morning and afternoon activity plan with dimension tags and notes column",
