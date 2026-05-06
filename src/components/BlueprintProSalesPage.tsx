@@ -411,6 +411,9 @@ export default function BlueprintProSalesPage() {
                 src={s.img}
                 alt={s.alt}
                 loading="lazy"
+                decoding="async"
+                width={s.w}
+                height={s.h}
                 style={{
                   width: "100%",
                   height: "auto",
