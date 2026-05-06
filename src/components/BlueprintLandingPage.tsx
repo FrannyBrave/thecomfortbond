@@ -209,86 +209,74 @@ export default function BlueprintLandingPage() {
 
       {/* ═══════ HERO ═══════ */}
       <Section style={{ paddingTop: "clamp(1.5rem, 4vw, 2.5rem)" }}>
-        <div className="bp-hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem", alignItems: "center" }}>
-          <div style={{ maxWidth: "540px" }}>
-            <p style={{
-              fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-              textTransform: "uppercase", color: c.terracotta, margin: "0 0 1rem",
-            }}>
-              Free Planning Tool
-            </p>
-            <h1 style={{
-              fontFamily: serif, fontSize: "clamp(1.75rem, 4.5vw, 2.75rem)", fontWeight: 600,
-              color: c.forest, lineHeight: 1.18, margin: "0 0 1.25rem", letterSpacing: "-0.015em",
-            }}>
-              It's Sunday Night — and You're Still Figuring Out Tomorrow.
-            </h1>
-            <p style={{ fontSize: "clamp(0.925rem, 1.6vw, 1.05rem)", lineHeight: 1.65, color: c.body, margin: "0 0 1.25rem" }}>
-              A free weekly planning system for Activity Professionals — <strong style={{ color: c.forest }}>plan your entire week in under 20 minutes</strong>, with structure, variety, and confidence.
-            </p>
-            <ul style={{
-              listStyle: "none", padding: 0, margin: "0 0 1.75rem",
-              display: "flex", flexDirection: "column", gap: "0.5rem",
-            }}>
-              {[
-                "No more \u201Cwhat should we do today?\u201D",
-                "Built for mixed cognitive levels",
-                "Structured, not overwhelming",
-              ].map((b, i) => (
-                <li key={i} style={{
-                  fontSize: "0.9rem", lineHeight: 1.5, color: c.body,
-                  display: "flex", gap: "0.6rem", alignItems: "baseline",
-                }}>
-                  <span aria-hidden="true" style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
+        <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
+          <p style={{
+            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
+            textTransform: "uppercase", color: c.terracotta, margin: "0 0 1rem",
+          }}>
+            Free Planning Tool
+          </p>
+          <h1 style={{
+            fontFamily: serif, fontSize: "clamp(1.85rem, 5vw, 3rem)", fontWeight: 600,
+            color: c.forest, lineHeight: 1.15, margin: "0 0 1.25rem", letterSpacing: "-0.015em",
+          }}>
+            It's Sunday Night — and You're Still Figuring Out Tomorrow.
+          </h1>
+          <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.075rem)", lineHeight: 1.65, color: c.body, margin: "0 auto 1.4rem", maxWidth: "560px" }}>
+            A free weekly planning system for Activity Professionals — <strong style={{ color: c.forest }}>plan your entire week in under 20 minutes</strong>, with structure, variety, and confidence.
+          </p>
+          <ul style={{
+            listStyle: "none", padding: 0, margin: "0 auto 1.75rem", maxWidth: "520px",
+            display: "grid", gridTemplateColumns: "1fr", gap: "0.5rem", textAlign: "left",
+          }}>
+            {[
+              "No more \u201Cwhat should we do today?\u201D",
+              "Built for mixed cognitive levels",
+              "Structured, not overwhelming",
+            ].map((b, i) => (
+              <li key={i} style={{
+                fontSize: "0.92rem", lineHeight: 1.5, color: c.body,
+                display: "flex", gap: "0.6rem", alignItems: "baseline",
+              }}>
+                <span aria-hidden="true" style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+          <div style={{ display: "flex", justifyContent: "center" }}>
             <EmailCapture id="hero" />
           </div>
-
-          <div>
-            <picture>
-              <source
-                type="image/avif"
-                srcSet={`${heroAvif480} 480w, ${heroAvif768} 768w, ${heroAvif1280} 1280w`}
-                sizes="(max-width: 767px) 100vw, 520px"
-              />
-              <source
-                type="image/webp"
-                srcSet={`${heroWebp480} 480w, ${heroWebp768} 768w, ${heroWebp1280} 1280w`}
-                sizes="(max-width: 767px) 100vw, 520px"
-              />
-              <img
-                src={heroJpgFallback}
-                alt="The Blueprint planner and Engagement Balance Wheel laid out beside a coffee mug — stress-free weekly activity planning for senior living"
-                width={1280}
-                height={1280}
-                loading="eager"
-                decoding="async"
-                // @ts-expect-error fetchpriority is a valid HTML attribute, not yet in React types
-                fetchpriority="high"
-                style={{
-                  width: "100%", height: "auto", borderRadius: "14px",
-                  boxShadow: "0 12px 40px rgba(45,74,62,0.14)", display: "block",
-                  aspectRatio: "1 / 1",
-                }}
-              />
-            </picture>
-            <p style={{
-              fontFamily: serif, fontStyle: "italic", fontSize: "0.9rem",
-              lineHeight: 1.6, color: c.forest, textAlign: "center",
-              margin: "1.25rem auto 0", maxWidth: "440px",
-            }}>
-              Used by Activity Directors to plan their weeks — and scale into full 13-week
-              programming with{" "}
-              <Link to="/blueprint-pro" style={{ color: c.terracotta, textDecoration: "underline", fontWeight: 600 }}>
-                Blueprint Pro
-              </Link>.
-            </p>
-          </div>
+          <p style={{
+            fontFamily: serif, fontStyle: "italic", fontSize: "0.9rem",
+            lineHeight: 1.6, color: c.forest, textAlign: "center",
+            margin: "1.5rem auto 0", maxWidth: "480px",
+          }}>
+            Used by Activity Directors to plan their weeks — and scale into full 13-week
+            programming with{" "}
+            <Link to="/blueprint-pro" style={{ color: c.terracotta, textDecoration: "underline", fontWeight: 600 }}>
+              Blueprint Pro
+            </Link>.
+          </p>
         </div>
       </Section>
+
+      {/* ═══════ HERO TESTIMONIAL ═══════ */}
+      <section style={{ backgroundColor: c.creamAlt, padding: "clamp(2rem, 5vw, 3rem) clamp(1.25rem, 5vw, 3rem)" }}>
+        <figure style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center", padding: 0 }}>
+          <div aria-label="5 out of 5 stars" style={{ display: "flex", justifyContent: "center", gap: "0.25rem", marginBottom: "0.85rem", color: c.sandGold, fontSize: "1.1rem", letterSpacing: "0.1em" }}>
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <blockquote style={{ margin: 0, fontFamily: serif, fontStyle: "italic", fontSize: "clamp(1.05rem, 2.2vw, 1.25rem)", lineHeight: 1.55, color: c.forest }}>
+            “Sunday nights used to be stressful for me — I&rsquo;d be trying to pull together a full week of activities with no structure. The Blueprint completely changed that. I now sit down for 20 minutes and my entire week is mapped out in a way that actually makes sense.”
+          </blockquote>
+          <figcaption style={{ marginTop: "1rem", fontFamily: sans, fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: c.body }}>
+            Shannon L.
+            <span style={{ display: "block", marginTop: "0.2rem", fontSize: "0.7rem", fontWeight: 500, color: c.mutedWarm }}>
+              Life Enrichment Manager
+            </span>
+          </figcaption>
+        </figure>
+      </section>
 
       {/* ═══════ PAIN POINTS ═══════ */}
       <Section bg={c.creamAlt}>
