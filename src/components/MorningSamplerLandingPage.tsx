@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import samplerMoments from "@/assets/dementia-friendly-activity-cards-for-engagement.png";
 import samplerActivities from "@/assets/senior-living-activity-printable-kit-overview.png";
-import logo from "@/assets/the-comfort-bond-logo.png";
+import logo from "@/assets/the-comfort-bond-logo.webp";
 
 /* ─── Brand palette ─── */
 const c = {

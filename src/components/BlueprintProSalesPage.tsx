@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/the-comfort-bond-logo.png";
+import logo from "@/assets/the-comfort-bond-logo.webp";
 import quarterlyOverviewImg from "@/assets/blueprint-pro-quarterly-overview.webp";
 import weeklyPlanImg from "@/assets/blueprint-pro-weekly-plan.webp";
 import engagementWheelImg from "@/assets/blueprint-pro-engagement-wheel.webp";
