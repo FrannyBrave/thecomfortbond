@@ -380,7 +380,7 @@ export default function BlueprintProSalesPage() {
             body: "The Engagement Balance Wheel™ is the proprietary tool built into every Blueprint Pro edition. Six dimensions of meaningful engagement — Cognitive, Social, Sensory, Physical, Creative, Spiritual — tracked weekly so you can spot at a glance which area you've over-served and which residents have been quietly under-served. The wheel is a compass, not a checklist.",
             img: engagementWheelImg,
             w: 1280, h: 960,
-            alt: "Engagement Balance Wheel and Quarterly Dimension Tracker — six dimensions of meaningful engagement tracked across 13 weeks",
+            alt: "Engagement Balance Wheel for senior care — six dimensions of meaningful resident engagement (cognitive, social, sensory, physical, creative, spiritual) tracked weekly across a 13-week quarter",
             caption: "Most memory care programs run 70% cognitive activities without realizing it. The Wheel surfaces the imbalance before it becomes a problem.",
           },
         ].map((s, i) => (
