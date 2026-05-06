@@ -602,8 +602,11 @@ export default function BlueprintProSalesPage() {
           <h2 style={{ fontFamily: serif, fontSize: "clamp(1.25rem, 3vw, 1.6rem)", fontWeight: 600, color: "#fff", margin: "0 0 0.25rem", lineHeight: 1.3 }}>
             Q3 2026 Edition
           </h2>
-          <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.55)", margin: "0 0 1.75rem" }}>
-            July – September &middot; 13 weeks &middot; Fully planned
+          <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.7)", margin: "0 0 0.5rem" }}>
+            Get it now, plan ahead, run it July&ndash;September.
+          </p>
+          <p style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.5)", margin: "0 0 1.5rem", fontStyle: "italic", maxWidth: "380px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.5 }}>
+            Currently in Q2? Still useful &mdash; print blank weeks and use the system today.
           </p>
           <p style={{ fontFamily: serif, fontSize: "clamp(2.75rem, 7vw, 3.5rem)", fontWeight: 600, color: "#fff", margin: "0 0 0.25rem", lineHeight: 1 }}>
             $27
