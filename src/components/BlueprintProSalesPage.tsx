@@ -81,7 +81,7 @@ function Cta({ children, large, variant = "primary" }: { children: React.ReactNo
 
 /* ─── FAQ Accordion ─── */
 function FaqItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <div style={{ borderBottom: `1px solid ${c.gridline}` }}>
       <button
