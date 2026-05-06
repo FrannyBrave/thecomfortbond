@@ -376,12 +376,6 @@ export default function BlueprintLandingPage() {
         padding: "clamp(3rem, 8vw, 6rem) clamp(1.25rem, 5vw, 3rem)",
       }}>
         <div style={{ maxWidth: "1060px", margin: "0 auto" }}>
-          <p style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, textAlign: "center", margin: "0 0 0.75rem",
-          }}>
-            Everything You Need
-          </p>
           {/* Inline mid-page CTA */}
           <div style={{
             maxWidth: "520px", margin: "0 auto 4rem",
