@@ -328,49 +328,7 @@ export default function BlueprintProSalesPage() {
       </section>
 
       {/* ════════════════════════════════════════
-          SECTION 6 — FREE VS PRO (single tight card)
-         ════════════════════════════════════════ */}
-      <Wide bg={c.terracottaWash}>
-        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1rem", borderRadius: "2px" }} />
-          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, margin: "0 0 0.5rem" }}>
-            Free vs. Pro
-          </h2>
-        </div>
-        <div style={{ backgroundColor: c.cream, borderRadius: "14px", border: `1px solid ${c.gridline}`, maxWidth: "640px", margin: "0 auto", overflow: "hidden" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
-            <div style={{ padding: "1.5rem 1.25rem", borderRight: `1px solid ${c.gridline}` }}>
-              <p style={{ fontFamily: sans, fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.muted, margin: "0 0 0.4rem" }}>
-                Free
-              </p>
-              <h3 style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.5rem", lineHeight: 1.3 }}>
-                The Structure
-              </h3>
-              <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: c.body, margin: 0 }}>
-                Blank weekly templates and the Engagement Balance Wheel — the empty framework.
-              </p>
-            </div>
-            <div style={{ padding: "1.5rem 1.25rem", backgroundColor: c.forest }}>
-              <p style={{ fontFamily: sans, fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.terracottaLight, margin: "0 0 0.4rem" }}>
-                Pro
-              </p>
-              <h3 style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: "#fff", margin: "0 0 0.5rem", lineHeight: 1.3 }}>
-                The Complete System
-              </h3>
-              <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: "rgba(255,255,255,0.88)", margin: 0 }}>
-                13 pre-themed weeks, coaching tips, conversation starters, observance mapping, and resource guides — all filled in.
-              </p>
-            </div>
-          </div>
-        </div>
-        <p style={{ fontFamily: serif, fontSize: "clamp(1rem, 2vw, 1.15rem)", fontWeight: 600, color: c.forest, lineHeight: 1.5, textAlign: "center", marginTop: "1.75rem", maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
-          The free version gave you the filing cabinet.{" "}
-          <span style={{ color: c.terracotta }}>The Pro version gives you the files.</span>
-        </p>
-      </Wide>
-
-      {/* ════════════════════════════════════════
-          SECTION 6.5 — TESTIMONIALS
+          SECTION 5.5 — TESTIMONIALS (social proof before Free vs Pro)
          ════════════════════════════════════════ */}
       <Wide bg={c.cream}>
         <div style={{ textAlign: "center", marginBottom: "2.25rem", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
@@ -385,11 +343,6 @@ export default function BlueprintProSalesPage() {
 
         <div className="bps-testimonials-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.1rem" }}>
           {[
-            {
-              quote: "Sunday nights used to be stressful for me — I'd be trying to pull together a full week of activities with no structure. The Blueprint completely changed that. I now sit down for 20 minutes and my entire week is mapped out in a way that actually makes sense.",
-              name: "Shannon L.",
-              role: "Life Enrichment Manager",
-            },
             {
               quote: "What I didn't realize was how unbalanced my programming was until I used the Engagement Balance Wheel. I was overusing the same types of activities without noticing. This gave me a clear system to make sure residents are engaged in different ways throughout the week.",
               name: "Glennys D.",
@@ -467,9 +420,51 @@ export default function BlueprintProSalesPage() {
 
         <style>{`
           @media (min-width: 768px) {
-            .bps-testimonials-grid { grid-template-columns: 1fr 1fr !important; }
+            .bps-testimonials-grid { grid-template-columns: repeat(3, 1fr) !important; }
           }
         `}</style>
+      </Wide>
+
+      {/* ════════════════════════════════════════
+          SECTION 6 — FREE VS PRO (single tight card)
+         ════════════════════════════════════════ */}
+      <Wide bg={c.terracottaWash}>
+        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1rem", borderRadius: "2px" }} />
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, margin: "0 0 0.5rem" }}>
+            Free vs. Pro
+          </h2>
+        </div>
+        <div style={{ backgroundColor: c.cream, borderRadius: "14px", border: `1px solid ${c.gridline}`, maxWidth: "640px", margin: "0 auto", overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+            <div style={{ padding: "1.5rem 1.25rem", borderRight: `1px solid ${c.gridline}` }}>
+              <p style={{ fontFamily: sans, fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.muted, margin: "0 0 0.4rem" }}>
+                Free
+              </p>
+              <h3 style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.5rem", lineHeight: 1.3 }}>
+                The Structure
+              </h3>
+              <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: c.body, margin: 0 }}>
+                Blank weekly templates and the Engagement Balance Wheel — the empty framework.
+              </p>
+            </div>
+            <div style={{ padding: "1.5rem 1.25rem", backgroundColor: c.forest }}>
+              <p style={{ fontFamily: sans, fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: c.terracottaLight, margin: "0 0 0.4rem" }}>
+                Pro
+              </p>
+              <h3 style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: "#fff", margin: "0 0 0.5rem", lineHeight: 1.3 }}>
+                The Complete System
+              </h3>
+              <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: "rgba(255,255,255,0.88)", margin: 0 }}>
+                13 pre-themed weeks, coaching tips, conversation starters, observance mapping, and resource guides — all filled in.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p style={{ fontFamily: serif, fontSize: "clamp(1rem, 2vw, 1.15rem)", fontWeight: 600, color: c.forest, lineHeight: 1.5, textAlign: "center", marginTop: "1.75rem", maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
+          The free version gave you the filing cabinet.{" "}
+          <span style={{ color: c.terracotta }}>The Pro version gives you the files.</span>
+        </p>
       </Wide>
 
       {/* ════════════════════════════════════════
