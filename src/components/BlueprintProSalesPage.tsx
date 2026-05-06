@@ -328,12 +328,6 @@ export default function BlueprintProSalesPage() {
               You didn&rsquo;t get into this work to feel behind. You got into it because you care.
             </p>
           </div>
-          <img
-            src={beforeAfter}
-            alt="Planning without a system vs with a system"
-            style={{ width: "100%", height: "auto", borderRadius: "16px", boxShadow: "0 8px 30px rgba(45,74,62,0.1)", display: "block" }}
-          />
-        </div>
       </Wide>
 
       {/* ════════════════════════════════════════
