@@ -364,7 +364,7 @@ export default function BlueprintProSalesPage() {
             body: "Q3 2026 maps 13 weeks of senior living programming — every week pre-themed, pre-mapped to an engagement dimension, and tied to a real seasonal anchor or national observance. From “Red, White, and Blue Memories” on Independence Day week to “What I Know for Sure” closing out September, every theme is intentional, dignified, and ready to run.",
             img: quarterlyOverviewImg,
             w: 1280, h: 1026,
-            alt: "Quarterly Overview Q3 2026 — 13 weeks of senior living activity themes mapped to engagement dimensions and seasonal observances",
+            alt: "Senior living quarterly activity calendar for Q3 2026 — 13 weeks of memory care programming themes mapped to engagement dimensions and seasonal observances",
             caption: "13 weeks, 13 themes, 13 dimension anchors — pre-mapped before you open the file.",
           },
           {
