@@ -2,16 +2,9 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "@/assets/the-comfort-bond-logo.webp";
-
-/* LCP hero — pre-built responsive variants in /public/lcp/ (kept tiny for fast LCP).
-   Mobile fetches the 480w (~32KB) variant; desktop fetches 1280w AVIF (~70KB). */
-const heroAvif480 = "/lcp/blueprint-hero-480.avif";
-const heroAvif768 = "/lcp/blueprint-hero-768.avif";
-const heroAvif1280 = "/lcp/blueprint-hero-1280.avif";
-const heroWebp480 = "/lcp/blueprint-hero-480.webp";
-const heroWebp768 = "/lcp/blueprint-hero-768.webp";
-const heroWebp1280 = "/lcp/blueprint-hero-1280.webp";
-const heroJpgFallback = "/lcp/blueprint-hero-1280.jpg";
+import weeklyPlanBlankImg from "@/assets/weekly-engagement-plan-blank-template-senior-living.webp";
+import balanceWheelLegendImg from "@/assets/engagement-balance-wheel-six-dimensions-legend.webp";
+import reflectionNotesImg from "@/assets/reflection-notes-weekly-activity-planner-example.webp";
 
 /* ─── Brand tokens ─── */
 const c = {
@@ -216,86 +209,74 @@ export default function BlueprintLandingPage() {
 
       {/* ═══════ HERO ═══════ */}
       <Section style={{ paddingTop: "clamp(1.5rem, 4vw, 2.5rem)" }}>
-        <div className="bp-hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem", alignItems: "center" }}>
-          <div style={{ maxWidth: "540px" }}>
-            <p style={{
-              fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-              textTransform: "uppercase", color: c.terracotta, margin: "0 0 1rem",
-            }}>
-              Free Planning Tool
-            </p>
-            <h1 style={{
-              fontFamily: serif, fontSize: "clamp(1.75rem, 4.5vw, 2.75rem)", fontWeight: 600,
-              color: c.forest, lineHeight: 1.18, margin: "0 0 1.25rem", letterSpacing: "-0.015em",
-            }}>
-              It's Sunday Night — and You're Still Figuring Out Tomorrow.
-            </h1>
-            <p style={{ fontSize: "clamp(0.925rem, 1.6vw, 1.05rem)", lineHeight: 1.65, color: c.body, margin: "0 0 1.25rem" }}>
-              A free weekly planning system for Activity Professionals — <strong style={{ color: c.forest }}>plan your entire week in under 20 minutes</strong>, with structure, variety, and confidence.
-            </p>
-            <ul style={{
-              listStyle: "none", padding: 0, margin: "0 0 1.75rem",
-              display: "flex", flexDirection: "column", gap: "0.5rem",
-            }}>
-              {[
-                "No more \u201Cwhat should we do today?\u201D",
-                "Built for mixed cognitive levels",
-                "Structured, not overwhelming",
-              ].map((b, i) => (
-                <li key={i} style={{
-                  fontSize: "0.9rem", lineHeight: 1.5, color: c.body,
-                  display: "flex", gap: "0.6rem", alignItems: "baseline",
-                }}>
-                  <span aria-hidden="true" style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
+        <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
+          <p style={{
+            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
+            textTransform: "uppercase", color: c.terracotta, margin: "0 0 1rem",
+          }}>
+            Free Planning Tool
+          </p>
+          <h1 style={{
+            fontFamily: serif, fontSize: "clamp(1.85rem, 5vw, 3rem)", fontWeight: 600,
+            color: c.forest, lineHeight: 1.15, margin: "0 0 1.25rem", letterSpacing: "-0.015em",
+          }}>
+            It's Sunday Night — and You're Still Figuring Out Tomorrow.
+          </h1>
+          <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.075rem)", lineHeight: 1.65, color: c.body, margin: "0 auto 1.4rem", maxWidth: "560px" }}>
+            A free weekly planning system for Activity Professionals — <strong style={{ color: c.forest }}>plan your entire week in under 20 minutes</strong>, with structure, variety, and confidence.
+          </p>
+          <ul style={{
+            listStyle: "none", padding: 0, margin: "0 auto 1.75rem", maxWidth: "520px",
+            display: "grid", gridTemplateColumns: "1fr", gap: "0.5rem", textAlign: "left",
+          }}>
+            {[
+              "No more \u201Cwhat should we do today?\u201D",
+              "Built for mixed cognitive levels",
+              "Structured, not overwhelming",
+            ].map((b, i) => (
+              <li key={i} style={{
+                fontSize: "0.92rem", lineHeight: 1.5, color: c.body,
+                display: "flex", gap: "0.6rem", alignItems: "baseline",
+              }}>
+                <span aria-hidden="true" style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+          <div style={{ display: "flex", justifyContent: "center" }}>
             <EmailCapture id="hero" />
           </div>
-
-          <div>
-            <picture>
-              <source
-                type="image/avif"
-                srcSet={`${heroAvif480} 480w, ${heroAvif768} 768w, ${heroAvif1280} 1280w`}
-                sizes="(max-width: 767px) 100vw, 520px"
-              />
-              <source
-                type="image/webp"
-                srcSet={`${heroWebp480} 480w, ${heroWebp768} 768w, ${heroWebp1280} 1280w`}
-                sizes="(max-width: 767px) 100vw, 520px"
-              />
-              <img
-                src={heroJpgFallback}
-                alt="The Blueprint planner and Engagement Balance Wheel laid out beside a coffee mug — stress-free weekly activity planning for senior living"
-                width={1280}
-                height={1280}
-                loading="eager"
-                decoding="async"
-                // @ts-expect-error fetchpriority is a valid HTML attribute, not yet in React types
-                fetchpriority="high"
-                style={{
-                  width: "100%", height: "auto", borderRadius: "14px",
-                  boxShadow: "0 12px 40px rgba(45,74,62,0.14)", display: "block",
-                  aspectRatio: "1 / 1",
-                }}
-              />
-            </picture>
-            <p style={{
-              fontFamily: serif, fontStyle: "italic", fontSize: "0.9rem",
-              lineHeight: 1.6, color: c.forest, textAlign: "center",
-              margin: "1.25rem auto 0", maxWidth: "440px",
-            }}>
-              Used by Activity Directors to plan their weeks — and scale into full 13-week
-              programming with{" "}
-              <Link to="/blueprint-pro" style={{ color: c.terracotta, textDecoration: "underline", fontWeight: 600 }}>
-                Blueprint Pro
-              </Link>.
-            </p>
-          </div>
+          <p style={{
+            fontFamily: serif, fontStyle: "italic", fontSize: "0.9rem",
+            lineHeight: 1.6, color: c.forest, textAlign: "center",
+            margin: "1.5rem auto 0", maxWidth: "480px",
+          }}>
+            Used by Activity Directors to plan their weeks — and scale into full 13-week
+            programming with{" "}
+            <Link to="/blueprint-pro" style={{ color: c.terracotta, textDecoration: "underline", fontWeight: 600 }}>
+              Blueprint Pro
+            </Link>.
+          </p>
         </div>
       </Section>
+
+      {/* ═══════ HERO TESTIMONIAL ═══════ */}
+      <section style={{ backgroundColor: c.creamAlt, padding: "clamp(2rem, 5vw, 3rem) clamp(1.25rem, 5vw, 3rem)" }}>
+        <figure style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center", padding: 0 }}>
+          <div aria-label="5 out of 5 stars" style={{ display: "flex", justifyContent: "center", gap: "0.25rem", marginBottom: "0.85rem", color: c.sandGold, fontSize: "1.1rem", letterSpacing: "0.1em" }}>
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <blockquote style={{ margin: 0, fontFamily: serif, fontStyle: "italic", fontSize: "clamp(1.05rem, 2.2vw, 1.25rem)", lineHeight: 1.55, color: c.forest }}>
+            “Sunday nights used to be stressful for me — I&rsquo;d be trying to pull together a full week of activities with no structure. The Blueprint completely changed that. I now sit down for 20 minutes and my entire week is mapped out in a way that actually makes sense.”
+          </blockquote>
+          <figcaption style={{ marginTop: "1rem", fontFamily: sans, fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: c.body }}>
+            Shannon L.
+            <span style={{ display: "block", marginTop: "0.2rem", fontSize: "0.7rem", fontWeight: 500, color: c.mutedWarm }}>
+              Life Enrichment Manager
+            </span>
+          </figcaption>
+        </figure>
+      </section>
 
       {/* ═══════ PAIN POINTS ═══════ */}
       <Section bg={c.creamAlt}>
@@ -495,6 +476,221 @@ export default function BlueprintLandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ═══════ INSIDE THE FREE BLUEPRINT ═══════ */}
+      <Section bg={c.cream}>
+        <div style={{ textAlign: "center", maxWidth: "640px", margin: "0 auto 2.5rem" }}>
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.75rem" }}>
+            Inside the Free Blueprint
+          </p>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.4vw, 2rem)", fontWeight: 600, color: c.forest, margin: 0, lineHeight: 1.25 }}>
+            What you'll actually get when you sign up.
+          </h2>
+        </div>
+
+        {[
+          {
+            heading: "The structure that runs your week — every week.",
+            body: "The Weekly Engagement Plan is the same simple structure you'll use every week. Monday through Sunday, morning and afternoon, dimension tags, and a notes column. Print as many copies as you need. Five minutes to fill in once you know your week. Reuse forever.",
+            img: weeklyPlanBlankImg,
+            w: 1448, h: 1086,
+            alt: "Blank Weekly Engagement Plan template for senior living activity directors — Monday through Sunday morning and afternoon activity grid with dimension tags and notes column",
+            caption: "The structure that turns \u201CI have no idea what we're doing tomorrow\u201D into \u201CIt's already in the plan.\u201D",
+          },
+          {
+            heading: "Six dimensions. One simple wheel.",
+            body: "The Engagement Balance Wheel™ is the proprietary framework inside the Blueprint. Six dimensions of meaningful engagement — Cognitive, Social, Sensory, Physical, Creative, Spiritual — each defined with concrete activity examples so you know exactly what fits where. Glance at the wheel as you plan and you'll see which dimensions you're serving — and which residents may be quietly under-engaged.",
+            img: balanceWheelLegendImg,
+            w: 1448, h: 1086,
+            alt: "Engagement Balance Wheel for senior care with six-dimension legend — Cognitive, Social, Sensory, Physical, Creative, Spiritual — each with concrete memory care activity examples",
+            caption: "The wheel is a compass, not a checklist. Most senior living programs lean 70% cognitive without realizing it — the wheel surfaces the imbalance.",
+          },
+          {
+            heading: "Plan. Run. Reflect. Repeat.",
+            body: "Each week ends with built-in reflection — your highlight moment, the dimension you want to include more next week, a quick balance check, and space for planning ideas. The Blueprint isn't just a planner. It's a reflection tool that makes your programming smarter every single week.",
+            img: reflectionNotesImg,
+            w: 1288, h: 1221,
+            alt: "Weekly Reflection & Notes page from the Engagement Blueprint — handwritten highlight moment, balance check across six engagement dimensions, and planning notes for next week's senior living activities",
+            caption: "This is how Week 4 becomes better than Week 1. The system learns alongside you.",
+          },
+        ].map((s, i) => (
+          <div
+            key={i}
+            style={{
+              marginTop: i === 0 ? 0 : "clamp(2.5rem, 6vw, 4rem)",
+              paddingTop: i === 0 ? 0 : "clamp(2.5rem, 6vw, 4rem)",
+              borderTop: i === 0 ? "none" : `1px solid ${c.gridline}`,
+            }}
+          >
+            <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" }}>
+              <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.75rem" }}>
+                Section {i + 1}
+              </p>
+              <h3 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, lineHeight: 1.25, margin: "0 0 1rem", letterSpacing: "-0.01em" }}>
+                {s.heading}
+              </h3>
+              <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.05rem)", lineHeight: 1.7, color: c.body, margin: 0 }}>
+                {s.body}
+              </p>
+            </div>
+            <figure style={{ margin: "clamp(1.5rem, 3vw, 2rem) auto 0", maxWidth: "520px" }}>
+              <img
+                src={s.img}
+                alt={s.alt}
+                loading="lazy"
+                decoding="async"
+                width={s.w}
+                height={s.h}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  borderRadius: "14px",
+                  boxShadow: "0 12px 40px rgba(45,74,62,0.15)",
+                  border: `1px solid ${c.gridline}`,
+                }}
+              />
+              <figcaption style={{ marginTop: "1rem", fontFamily: sans, fontSize: "0.85rem", lineHeight: 1.6, color: c.mutedWarm, fontStyle: "italic", textAlign: "center", maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
+                {s.caption}
+              </figcaption>
+            </figure>
+          </div>
+        ))}
+
+        <p style={{ fontFamily: serif, fontSize: "clamp(1rem, 2vw, 1.15rem)", fontWeight: 600, color: c.forest, lineHeight: 1.55, textAlign: "center", marginTop: "clamp(2.5rem, 5vw, 3.5rem)", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
+          All four pieces — the Weekly Engagement Plan, the Engagement Balance Wheel, the Reflection &amp; Notes page, and the Quick-Start Guide — delivered to your inbox in under a minute. <span style={{ color: c.terracotta }}>Free. Forever yours.</span>
+        </p>
+      </Section>
+
+      {/* ═══════ STATS BAR ═══════ */}
+      <Section bg={c.creamAlt}>
+        <div style={{ textAlign: "center", marginBottom: "2rem", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
+          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1.25rem", borderRadius: "2px" }} />
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.4rem, 3vw, 1.8rem)", fontWeight: 600, color: c.forest, margin: 0, lineHeight: 1.25 }}>
+            Designed for Activity Directors
+          </h2>
+        </div>
+        <div
+          className="bp-stats-bar"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr",
+            gap: "1.5rem",
+            maxWidth: "1000px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            backgroundColor: c.cream,
+            padding: "2rem 1.5rem",
+            borderRadius: "12px",
+            border: `1px solid ${c.forest}1a`,
+          }}
+        >
+          {[
+            { num: "1", label: "fully planned sample week" },
+            { num: "6", label: "engagement dimensions" },
+            { num: "15 min", label: "to plan your entire week" },
+            { num: "$0", label: "instant delivery" },
+          ].map((stat, i, arr) => (
+            <div
+              key={i}
+              className="bp-stat-item"
+              style={{
+                textAlign: "center",
+                padding: "0.5rem 1rem",
+                borderBottom: i < arr.length - 1 ? `1px solid ${c.forest}1f` : "none",
+                paddingBottom: i < arr.length - 1 ? "1.5rem" : "0.5rem",
+              }}
+            >
+              <div style={{ fontFamily: serif, fontSize: "clamp(2rem, 4.5vw, 2.75rem)", fontWeight: 700, color: c.terracotta, lineHeight: 1, marginBottom: "0.5rem" }}>
+                {stat.num}
+              </div>
+              <div style={{ fontFamily: sans, fontSize: "0.9rem", color: c.forest, lineHeight: 1.4 }}>
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+        <style>{`
+          @media (min-width: 720px) {
+            .bp-stats-bar {
+              grid-template-columns: repeat(4, 1fr) !important;
+              gap: 0 !important;
+            }
+            .bp-stat-item {
+              border-bottom: none !important;
+              border-right: 1px solid hsl(0 0% 0% / 0.12) !important;
+              padding-bottom: 0.5rem !important;
+            }
+            .bp-stat-item:last-child {
+              border-right: none !important;
+            }
+          }
+        `}</style>
+      </Section>
+
+      {/* ═══════ TESTIMONIALS ═══════ */}
+      <Section bg={c.cream}>
+        <div style={{ textAlign: "center", marginBottom: "2.25rem", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
+          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1.25rem", borderRadius: "2px" }} />
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.65rem" }}>
+            What Activity Directors Say
+          </p>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.2vw, 1.9rem)", fontWeight: 600, color: c.forest, margin: 0, lineHeight: 1.25 }}>
+            From Sunday-Night Scramble to a System That Works
+          </h2>
+        </div>
+
+        <div className="bp-testimonials-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.1rem" }}>
+          {[
+            {
+              quote: "What I didn't realize was how unbalanced my programming was until I used the Engagement Balance Wheel. I was overusing the same types of activities without noticing. This gave me a clear system to make sure residents are engaged in different ways throughout the week.",
+              name: "Glennys D.",
+              role: "Activity Director",
+            },
+            {
+              quote: "I manage multiple groups with different cognitive levels, and planning used to take hours. The weekly worksheets alone saved me so much time. I'm no longer starting from scratch every week.",
+              name: "Felicity M.",
+              role: "Activity Coordinator",
+            },
+            {
+              quote: "Once I had the structure in place, it became so much easier to plug in activities. I finally feel like I have a system instead of guessing every week.",
+              name: "Ashley-Joyce",
+              role: "Activity Coordinator",
+            },
+          ].map((t, i) => (
+            <figure
+              key={i}
+              style={{
+                backgroundColor: c.creamAlt,
+                border: `1px solid ${c.gridline}`,
+                borderRadius: "14px",
+                padding: "1.5rem 1.6rem",
+                margin: 0,
+                position: "relative",
+              }}
+            >
+              <span aria-hidden="true" style={{ position: "absolute", top: "0.4rem", left: "1rem", fontFamily: serif, fontSize: "2.75rem", lineHeight: 1, color: c.terracotta, opacity: 0.35 }}>
+                “
+              </span>
+              <blockquote style={{ margin: 0, fontFamily: serif, fontStyle: "italic", fontSize: "1rem", lineHeight: 1.65, color: c.body, paddingTop: "0.75rem" }}>
+                {t.quote}
+              </blockquote>
+              <figcaption style={{ marginTop: "0.9rem", fontFamily: sans, fontSize: "0.82rem", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: c.forest }}>
+                — {t.name}
+                <span style={{ display: "block", marginTop: "0.2rem", fontSize: "0.72rem", fontWeight: 500, letterSpacing: "0.08em", color: c.mutedWarm }}>
+                  {t.role}
+                </span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <style>{`
+          @media (min-width: 768px) {
+            .bp-testimonials-grid { grid-template-columns: repeat(3, 1fr) !important; }
+          }
+        `}</style>
+      </Section>
+
 
       {/* ═══════ BUILT FOR YOUR WORLD ═══════ */}
       <Section>
