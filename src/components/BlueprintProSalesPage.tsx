@@ -294,32 +294,35 @@ export default function BlueprintProSalesPage() {
       </section>
 
       <Wide>
-        <div className="bps-pain-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2.5rem", alignItems: "center" }}>
-          <div>
-            <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.75rem" }}>
-              The Problem
-            </p>
-            <h2 style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: c.forest, margin: "0 0 1rem" }}>
-              You know this feeling:
-            </h2>
-            <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.5rem", display: "flex", flexDirection: "column", gap: "0.85rem" }}>
-              {[
-                "It's Sunday night and next week isn't planned.",
-                "You're pulling ideas from Pinterest at the last minute.",
-                "Activities feel repetitive — or rushed.",
-                "You're trying to balance engagement, but something always gets missed.",
-              ].map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "0.75rem", alignItems: "baseline" }}>
-                  <span style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: c.terracotta, flexShrink: 0, marginTop: "0.45rem" }} />
-                  <span style={{ fontSize: "1.025rem", lineHeight: 1.6, color: c.body }}>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p style={{ fontSize: "1rem", lineHeight: 1.7, color: c.muted, fontStyle: "italic", margin: 0, borderLeft: `3px solid ${c.terracotta}`, paddingLeft: "1rem" }}>
-              You didn&rsquo;t get into this work to feel behind. You got into it because you care.
-            </p>
-          </div>
+        <div style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.75rem" }}>
+            The Problem
+          </p>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.4vw, 2rem)", fontWeight: 600, color: c.forest, margin: "0 0 1.5rem" }}>
+            You know this feeling:
+          </h2>
+          <ul className="bps-pain-list" style={{ listStyle: "none", padding: 0, margin: "0 auto 1.75rem", maxWidth: "640px", display: "grid", gridTemplateColumns: "1fr", gap: "0.85rem", textAlign: "left" }}>
+            {[
+              "It's Sunday night and next week isn't planned.",
+              "You're pulling ideas from Pinterest at the last minute.",
+              "Activities feel repetitive — or rushed.",
+              "You're trying to balance engagement, but something always gets missed.",
+            ].map((item, i) => (
+              <li key={i} style={{ display: "flex", gap: "0.75rem", alignItems: "baseline" }}>
+                <span style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: c.terracotta, flexShrink: 0, marginTop: "0.45rem" }} />
+                <span style={{ fontSize: "1.025rem", lineHeight: 1.6, color: c.body }}>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: c.muted, fontStyle: "italic", margin: "0 auto", maxWidth: "560px" }}>
+            You didn&rsquo;t get into this work to feel behind. You got into it because you care.
+          </p>
         </div>
+        <style>{`
+          @media (min-width: 720px) {
+            .bps-pain-list { grid-template-columns: 1fr 1fr !important; }
+          }
+        `}</style>
       </Wide>
 
       {/* ════════════════════════════════════════
