@@ -2,16 +2,9 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "@/assets/the-comfort-bond-logo.webp";
-
-/* LCP hero — pre-built responsive variants in /public/lcp/ (kept tiny for fast LCP).
-   Mobile fetches the 480w (~32KB) variant; desktop fetches 1280w AVIF (~70KB). */
-const heroAvif480 = "/lcp/blueprint-hero-480.avif";
-const heroAvif768 = "/lcp/blueprint-hero-768.avif";
-const heroAvif1280 = "/lcp/blueprint-hero-1280.avif";
-const heroWebp480 = "/lcp/blueprint-hero-480.webp";
-const heroWebp768 = "/lcp/blueprint-hero-768.webp";
-const heroWebp1280 = "/lcp/blueprint-hero-1280.webp";
-const heroJpgFallback = "/lcp/blueprint-hero-1280.jpg";
+import weeklyPlanBlankImg from "@/assets/weekly-engagement-plan-blank-template-senior-living.webp";
+import balanceWheelLegendImg from "@/assets/engagement-balance-wheel-six-dimensions-legend.webp";
+import reflectionNotesImg from "@/assets/reflection-notes-weekly-activity-planner-example.webp";
 
 /* ─── Brand tokens ─── */
 const c = {
