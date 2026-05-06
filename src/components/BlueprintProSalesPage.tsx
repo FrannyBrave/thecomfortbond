@@ -438,6 +438,102 @@ export default function BlueprintProSalesPage() {
       </Wide>
 
       {/* ════════════════════════════════════════
+          SECTION 6.5 — TESTIMONIALS
+         ════════════════════════════════════════ */}
+      <Wide bg={c.cream}>
+        <div style={{ textAlign: "center", marginBottom: "2.25rem", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
+          <div style={{ width: "48px", height: "3px", backgroundColor: c.terracotta, margin: "0 auto 1.25rem", borderRadius: "2px" }} />
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.65rem" }}>
+            What Activity Directors Say
+          </p>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.5rem, 3.2vw, 1.9rem)", fontWeight: 600, color: c.forest, margin: 0, lineHeight: 1.25 }}>
+            From Sunday-Night Scramble to a System That Works
+          </h2>
+        </div>
+
+        <div className="bps-testimonials-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.1rem" }}>
+          {[
+            {
+              quote: "Sunday nights used to be stressful for me — I'd be trying to pull together a full week of activities with no structure. The Blueprint completely changed that. I now sit down for 20 minutes and my entire week is mapped out in a way that actually makes sense.",
+              name: "Shannon L.",
+            },
+            {
+              quote: "What I didn't realize was how unbalanced my programming was until I used the Engagement Balance Wheel. I was overusing the same types of activities without noticing. This gave me a clear system to make sure residents are engaged in different ways throughout the week.",
+              name: "Glennys D.",
+            },
+            {
+              quote: "I manage multiple groups with different cognitive levels, and planning used to take hours. The weekly worksheets alone saved me so much time. I'm no longer starting from scratch every week.",
+              name: "Felicity M.",
+            },
+            {
+              quote: "Once I had the structure in place, it became so much easier to plug in activities. I finally feel like I have a system instead of guessing every week.",
+              name: "Ashley-Joyce",
+            },
+          ].map((t, i) => (
+            <figure
+              key={i}
+              style={{
+                backgroundColor: c.creamAlt,
+                border: `1px solid ${c.gridline}`,
+                borderRadius: "14px",
+                padding: "1.5rem 1.6rem",
+                margin: 0,
+                position: "relative",
+              }}
+            >
+              <span
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  top: "0.4rem",
+                  left: "1rem",
+                  fontFamily: serif,
+                  fontSize: "2.75rem",
+                  lineHeight: 1,
+                  color: c.terracotta,
+                  opacity: 0.35,
+                }}
+              >
+                “
+              </span>
+              <blockquote
+                style={{
+                  margin: 0,
+                  fontFamily: serif,
+                  fontStyle: "italic",
+                  fontSize: "1rem",
+                  lineHeight: 1.65,
+                  color: c.body,
+                  paddingTop: "0.75rem",
+                }}
+              >
+                {t.quote}
+              </blockquote>
+              <figcaption
+                style={{
+                  marginTop: "0.9rem",
+                  fontFamily: sans,
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  color: c.forest,
+                }}
+              >
+                — {t.name}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <style>{`
+          @media (min-width: 768px) {
+            .bps-testimonials-grid { grid-template-columns: 1fr 1fr !important; }
+          }
+        `}</style>
+      </Wide>
+
+      {/* ════════════════════════════════════════
           SECTION 7 — PRICING
          ════════════════════════════════════════ */}
       <Wide>
