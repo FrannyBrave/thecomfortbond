@@ -232,9 +232,6 @@ export default function BlueprintProSalesPage() {
             <p style={{ fontFamily: sans, fontSize: "0.82rem", color: c.muted, margin: "0.7rem 0 0", textAlign: "center" }}>
               Instant access · No subscription · Use it again and again
             </p>
-            <p style={{ fontFamily: sans, fontSize: "0.78rem", color: c.terracotta, margin: "0.4rem 0 0", textAlign: "center", fontWeight: 600 }}>
-              Updated quarterly · Limited release per edition
-            </p>
             <p style={{ fontFamily: sans, fontSize: "0.9rem", margin: "0.85rem 0 0", textAlign: "center", color: c.forest }}>
               Not sure yet?{" "}
               <Link
