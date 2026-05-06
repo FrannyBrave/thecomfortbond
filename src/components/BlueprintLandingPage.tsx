@@ -542,9 +542,9 @@ export default function BlueprintLandingPage() {
           }}
         >
           {[
-            { num: "1", label: "fully planned sample week" },
+            { num: "1", label: "weekly planning structure" },
             { num: "6", label: "engagement dimensions" },
-            { num: "15 min", label: "to plan your entire week" },
+            { num: "20 min", label: "to plan your entire week" },
             { num: "$0", label: "instant delivery" },
           ].map((stat, i, arr) => (
             <div
