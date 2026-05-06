@@ -246,19 +246,7 @@ export default function BlueprintProSalesPage() {
             </p>
           </div>
 
-          {/* Product mockup */}
-          <img
-            src={heroMockup}
-            alt="The Blueprint Pro on a tablet"
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "20px",
-              boxShadow: "0 20px 56px rgba(45,74,62,0.22)",
-              display: "block",
-              marginTop: "0.25rem",
-            }}
-          />
+          {/* Product mockup removed */}
         </div>
         <style>{`
           .bps-hero-cta :global(button), .bps-hero-cta button { width: 100%; }
