@@ -637,7 +637,7 @@ export default function BlueprintProSalesPage() {
             Or add the Bundle at checkout for $97.
           </p>
           <Link
-            to="/#products"
+            to="/kits"
             style={{
               display: "inline-block",
               fontFamily: sans,
