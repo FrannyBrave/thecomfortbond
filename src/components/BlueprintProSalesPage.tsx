@@ -372,7 +372,7 @@ export default function BlueprintProSalesPage() {
             body: "Every week includes morning and afternoon activities, dimension tags so you instantly see which engagement area each activity covers, a notes column for real-time observations, and a Coaching Tip from the system itself. Each week is a fillable worksheet — pre-themed with activities, with space to customize for your residents and write your own notes as you go. No prep, no scrambling, no “what do we do next?” — Monday morning starts at the top of the page.",
             img: weeklyPlanImg,
             w: 1280, h: 960,
-            alt: "Week 1 Red White and Blue Memories — daily morning and afternoon activity plan with dimension tags and notes column",
+            alt: "Weekly senior activity plan for memory care — daily morning and afternoon dementia-friendly activities with engagement dimension tags and caregiver notes column",
             caption: "“Don't open with a question. Play ten seconds of a marching band first — the sounds prime the memory faster than any prompt you can read aloud.” — Coaching Tip from inside the Blueprint Pro",
           },
           {
