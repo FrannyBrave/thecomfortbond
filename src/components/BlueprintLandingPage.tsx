@@ -675,34 +675,39 @@ export default function BlueprintLandingPage() {
       </Section>
 
 
-      {/* ═══════ BUILT FOR YOUR WORLD ═══════ */}
+      {/* ═══════ WHAT HAPPENS NEXT ═══════ */}
+      <Section bg={c.creamAlt}>
+        <div style={{ maxWidth: "780px", margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.75rem" }}>
+            What Happens Next
+          </p>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.4rem, 3vw, 1.8rem)", fontWeight: 600, color: c.forest, margin: "0 0 2.5rem", lineHeight: 1.25 }}>
+            From inbox to Monday morning — in three steps.
+          </h2>
+          <div className="bp-next-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.25rem" }}>
+            {[
+              { n: "1", t: "Check your inbox.", d: "Your Blueprint arrives in under a minute — printable PDF, ready to use." },
+              { n: "2", t: "Print the templates.", d: "One Weekly Engagement Plan, the Balance Wheel, and the Reflection page." },
+              { n: "3", t: "Plan Monday in 20 minutes.", d: "Sit down once. Map the week. Walk into Monday already prepared." },
+            ].map((s) => (
+              <div key={s.n} style={{ backgroundColor: c.cream, border: `1px solid ${c.gridline}`, borderRadius: "14px", padding: "1.5rem 1.5rem 1.4rem", textAlign: "left" }}>
+                <div style={{ fontFamily: serif, fontSize: "1.6rem", fontWeight: 700, color: c.terracotta, lineHeight: 1, marginBottom: "0.6rem" }}>{s.n}</div>
+                <p style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.4rem", lineHeight: 1.3 }}>{s.t}</p>
+                <p style={{ fontSize: "0.875rem", lineHeight: 1.6, color: c.body, margin: 0 }}>{s.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <style>{`
+          @media (min-width: 720px) {
+            .bp-next-grid { grid-template-columns: repeat(3, 1fr) !important; }
+          }
+        `}</style>
+      </Section>
+
+      {/* ═══════ FOUNDER LETTER + FINAL CTA ═══════ */}
       <Section>
         <div style={{ maxWidth: "660px", margin: "0 auto" }}>
-          <p style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, textAlign: "center", margin: "0 0 0.75rem",
-          }}>
-            Designed for Senior Living
-          </p>
-          <h2 style={{
-            fontFamily: serif, fontSize: "clamp(1.25rem, 2.8vw, 1.6rem)", fontWeight: 600,
-            color: c.forest, textAlign: "center", margin: "0 0 1.25rem", lineHeight: 1.25,
-          }}>
-            Built for Your World.
-            <br />
-            Not Borrowed from Someone Else's.
-          </h2>
-
-          <p style={{
-            fontSize: "clamp(0.875rem, 1.4vw, 0.95rem)", lineHeight: 1.8, color: c.body,
-            textAlign: "center", margin: "0 0 2.5rem",
-          }}>
-            Every prompt, template, and framework in the Blueprint was designed for senior
-            living&nbsp;— from independent living to memory care. Activities adapt for mixed
-            cognitive abilities. Language is always adult, never condescending. Because your residents
-            aren't children. And you're not running a daycare.
-          </p>
-
           {/* CTA */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: "3rem" }}>
             <EmailCapture id="footer" variant="dark" submitLabel="Yes, I Want My Sundays Back" />
@@ -722,10 +727,20 @@ export default function BlueprintLandingPage() {
               you a system. So you can give your residents something better. And still have your
               Sunday night.
             </p>
-            <footer style={{ fontSize: "0.85rem", fontWeight: 600, color: c.terracotta }}>
+            <footer style={{ fontSize: "0.85rem", fontWeight: 600, color: c.terracotta, marginBottom: "1.25rem" }}>
               — Francesca, Founder of The Comfort Bond™
             </footer>
           </blockquote>
+
+          {/* Soft upsell */}
+          <div style={{ marginTop: "2.5rem", padding: "1.4rem 1.6rem", backgroundColor: c.calloutBg, border: `1px solid ${c.calloutBorder}`, borderRadius: "12px", textAlign: "center" }}>
+            <p style={{ fontFamily: serif, fontSize: "0.95rem", color: c.forest, margin: 0, lineHeight: 1.55 }}>
+              Already love the Blueprint?{" "}
+              <Link to="/blueprint-pro" style={{ color: c.terracotta, textDecoration: "underline", fontWeight: 600 }}>
+                See the full 13-week system in Blueprint Pro →
+              </Link>
+            </p>
+          </div>
         </div>
       </Section>
 
