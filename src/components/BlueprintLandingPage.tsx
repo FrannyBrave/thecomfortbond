@@ -407,7 +407,7 @@ export default function BlueprintLandingPage() {
         {[
           {
             heading: "The structure that runs your week — every week.",
-            body: "The Weekly Engagement Plan is the same simple structure you'll use every week. Monday through Sunday, morning and afternoon, dimension tags, and a notes column. Print as many copies as you need. Five minutes to fill in once you know your week. Reuse forever.",
+            body: "The same simple structure every week. Monday through Sunday, morning and afternoon, dimension tags, notes column. Five minutes to fill in. Print and reuse forever.",
             img: weeklyPlanBlankImg,
             w: 1448, h: 1086,
             alt: "Blank Weekly Engagement Plan template for senior living activity directors — Monday through Sunday morning and afternoon activity grid with dimension tags and notes column",
