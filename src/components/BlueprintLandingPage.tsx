@@ -474,7 +474,7 @@ export default function BlueprintLandingPage() {
         ))}
 
         <p style={{ fontFamily: serif, fontSize: "clamp(1rem, 2vw, 1.15rem)", fontWeight: 600, color: c.forest, lineHeight: 1.55, textAlign: "center", marginTop: "clamp(2.5rem, 5vw, 3.5rem)", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
-          All four pieces — the Weekly Engagement Plan, the Engagement Balance Wheel, the Reflection &amp; Notes page, and the Quick-Start Guide — delivered to your inbox in under a minute. <span style={{ color: c.terracotta }}>Free. Forever yours.</span>
+          All delivered to your inbox in under a minute. <span style={{ color: c.terracotta }}>Free. Forever yours.</span>
         </p>
       </Section>
 
