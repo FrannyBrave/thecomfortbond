@@ -210,54 +210,80 @@ export default function BlueprintLandingPage() {
 
       {/* ═══════ HERO ═══════ */}
       <Section style={{ paddingTop: "clamp(1.5rem, 4vw, 2.5rem)" }}>
-        <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, margin: "0 0 1rem",
-          }}>
-            Free Planning Tool
-          </p>
-          <h1 style={{
-            fontFamily: serif, fontSize: "clamp(1.85rem, 5vw, 3rem)", fontWeight: 600,
-            color: c.forest, lineHeight: 1.15, margin: "0 0 1.25rem", letterSpacing: "-0.015em",
-          }}>
-            It's Sunday Night — and You're Still Figuring Out Tomorrow.
-          </h1>
-          <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.075rem)", lineHeight: 1.65, color: c.body, margin: "0 auto 1.4rem", maxWidth: "560px" }}>
-            A free weekly planning system for Activity Professionals — <strong style={{ color: c.forest }}>plan your entire week in under 20 minutes</strong>, with structure, variety, and confidence.
-          </p>
-          <ul style={{
-            listStyle: "none", padding: 0, margin: "0 auto 1.75rem", maxWidth: "520px",
-            display: "grid", gridTemplateColumns: "1fr", gap: "0.5rem", textAlign: "left",
-          }}>
-            {[
-              "No more \u201Cwhat should we do today?\u201D",
-              "Built for mixed cognitive levels",
-              "Structured, not overwhelming",
-            ].map((b, i) => (
-              <li key={i} style={{
-                fontSize: "0.92rem", lineHeight: 1.5, color: c.body,
-                display: "flex", gap: "0.6rem", alignItems: "baseline",
-              }}>
-                <span aria-hidden="true" style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
-                <span>{b}</span>
-              </li>
-            ))}
-          </ul>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          className="bp-hero-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr",
+            gap: "clamp(2rem, 5vw, 3.5rem)",
+            alignItems: "center",
+            maxWidth: "1080px",
+            margin: "0 auto",
+          }}
+        >
+          {/* Left: copy + form */}
+          <div style={{ maxWidth: "560px", margin: "0 auto", textAlign: "left" }}>
+            <p style={{
+              fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
+              textTransform: "uppercase", color: c.terracotta, margin: "0 0 1rem",
+            }}>
+              Free Planning Tool
+            </p>
+            <h1 style={{
+              fontFamily: serif, fontSize: "clamp(1.85rem, 4.4vw, 2.85rem)", fontWeight: 600,
+              color: c.forest, lineHeight: 1.15, margin: "0 0 1.25rem", letterSpacing: "-0.015em",
+            }}>
+              It's Sunday Night — and You're Still Figuring Out Tomorrow.
+            </h1>
+            <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.075rem)", lineHeight: 1.65, color: c.body, margin: "0 0 1.4rem" }}>
+              A free weekly planning system for Activity Professionals — <strong style={{ color: c.forest }}>plan your entire week in under 20 minutes</strong>, with structure, variety, and confidence.
+            </p>
+            <ul style={{
+              listStyle: "none", padding: 0, margin: "0 0 1.75rem",
+              display: "grid", gridTemplateColumns: "1fr", gap: "0.5rem",
+            }}>
+              {[
+                "No more \u201Cwhat should we do today?\u201D",
+                "Built for mixed cognitive levels",
+                "Structured, not overwhelming",
+              ].map((b, i) => (
+                <li key={i} style={{
+                  fontSize: "0.92rem", lineHeight: 1.5, color: c.body,
+                  display: "flex", gap: "0.6rem", alignItems: "baseline",
+                }}>
+                  <span aria-hidden="true" style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
             <EmailCapture id="hero" />
           </div>
-          <p style={{
-            fontFamily: serif, fontStyle: "italic", fontSize: "0.9rem",
-            lineHeight: 1.6, color: c.forest, textAlign: "center",
-            margin: "1.5rem auto 0", maxWidth: "480px",
-          }}>
-            Used by Activity Directors to plan their weeks — and scale into full 13-week
-            programming with{" "}
-            <Link to="/blueprint-pro" style={{ color: c.terracotta, textDecoration: "underline", fontWeight: 600 }}>
-              Blueprint Pro
-            </Link>.
-          </p>
+
+          {/* Right: product preview image */}
+          <figure style={{ margin: 0, textAlign: "center" }}>
+            <img
+              src={heroPreviewImg}
+              alt="Filled-in example of the Weekly Engagement Plan from The Comfort Bond Blueprint — a full week of senior living activities mapped out in handwriting with morning, afternoon, dimension tags, and notes"
+              width={1200}
+              height={932}
+              fetchPriority="high"
+              decoding="async"
+              style={{
+                width: "100%",
+                maxWidth: "560px",
+                height: "auto",
+                display: "block",
+                margin: "0 auto",
+                borderRadius: "14px",
+                boxShadow: "0 16px 48px rgba(45,74,62,0.18)",
+                border: `1px solid ${c.gridline}`,
+                transform: "rotate(-1.25deg)",
+              }}
+            />
+            <figcaption style={{ marginTop: "1rem", fontFamily: sans, fontSize: "0.78rem", color: c.mutedWarm, fontStyle: "italic", letterSpacing: "0.02em" }}>
+              A real week, planned in 20 minutes. This is what arrives in your inbox.
+            </figcaption>
+          </figure>
         </div>
       </Section>
 
