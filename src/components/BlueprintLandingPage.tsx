@@ -360,102 +360,32 @@ export default function BlueprintLandingPage() {
         </div>
       </Section>
 
-      {/* ═══════ INTRODUCING ═══════ */}
-      <Section>
-        <div style={{ maxWidth: "660px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.1rem)", lineHeight: 1.7, color: c.body, margin: "0 0 2.5rem", fontFamily: serif, fontStyle: "italic" }}>
-            You're not behind — you just don't have a system yet.
-          </p>
-
-          <p style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.75rem",
-          }}>
-            Introducing
-          </p>
-          <h2 style={{
-            fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.85rem)", fontWeight: 600,
-            color: c.forest, margin: "0 0 1.5rem", lineHeight: 1.25,
-          }}>
-            The Blueprint™
-            <br />
-            <span style={{ fontWeight: 400, fontSize: "0.75em", color: c.terracotta }}>
-              by The Comfort Bond™
-            </span>
-          </h2>
-
-          <p style={{
-            fontSize: "clamp(0.875rem, 1.4vw, 0.95rem)", lineHeight: 1.8, color: c.body, margin: 0, textAlign: "left",
-          }}>
-            A free, structured weekly planning tool designed specifically for Activity Directors,
-            Memory Care professionals, and Life Enrichment staff. It's not a list of activities. It's
-            not a calendar template from Pinterest. It's a decision-making framework that shows you
-            how to structure a balanced, dignified week of programming&nbsp;— so you never start from
-            scratch again.
-          </p>
-        </div>
-      </Section>
-
-
-      {/* ═══════ WHAT'S INSIDE & HOW IT WORKS ═══════ */}
+      {/* ═══════ MID-PAGE CTA ═══════ */}
       <section style={{
         background: `linear-gradient(135deg, ${c.forest} 0%, ${c.forestLight} 100%)`,
-        padding: "clamp(3rem, 8vw, 6rem) clamp(1.25rem, 5vw, 3rem)",
+        padding: "clamp(2.5rem, 6vw, 4rem) clamp(1.25rem, 5vw, 3rem)",
       }}>
-        <div style={{ maxWidth: "1060px", margin: "0 auto" }}>
-          {/* Inline mid-page CTA */}
-          <div style={{
-            maxWidth: "520px", margin: "0 auto 4rem",
-            backgroundColor: "rgba(250,247,242,0.97)",
-            borderRadius: "14px",
-            padding: "1.75rem 1.75rem 1.5rem",
-            boxShadow: "0 8px 30px rgba(0,0,0,0.18)",
-            textAlign: "center",
+        <div style={{
+          maxWidth: "520px", margin: "0 auto",
+          backgroundColor: "rgba(250,247,242,0.97)",
+          borderRadius: "14px",
+          padding: "1.75rem 1.75rem 1.5rem",
+          boxShadow: "0 8px 30px rgba(0,0,0,0.18)",
+          textAlign: "center",
+        }}>
+          <p style={{
+            fontFamily: serif, fontSize: "1.05rem", fontWeight: 600,
+            color: c.forest, margin: "0 0 0.5rem", lineHeight: 1.35,
           }}>
-            <p style={{
-              fontFamily: serif, fontSize: "1.05rem", fontWeight: 600,
-              color: c.forest, margin: "0 0 0.5rem", lineHeight: 1.35,
-            }}>
-              Ready to plan smarter this week?
-            </p>
-            <p style={{
-              fontSize: "0.825rem", color: c.body, margin: "0 0 1rem", lineHeight: 1.55,
-            }}>
-              Get the Blueprint sent straight to your inbox — free.
-            </p>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <EmailCapture id="midpage" />
-            </div>
-          </div>
-
-          {/* Three Steps */}
-          <div style={{ maxWidth: "580px", margin: "0 auto", textAlign: "center" }}>
-            <h2 style={{
-              fontFamily: serif, fontSize: "clamp(1.15rem, 2.5vw, 1.4rem)", fontWeight: 600,
-              color: c.cream, margin: "0 0 2rem",
-            }}>
-              Three Steps. That's It.
-            </h2>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", textAlign: "left" }}>
-              {[
-                "Download the Blueprint.",
-                "Open the pre-planned week or the blank template.",
-                "Plan your entire week in under 20 minutes.",
-              ].map((step, i) => (
-                <div key={i} style={{ display: "flex", gap: "1rem", alignItems: "baseline" }}>
-                  <span style={{
-                    fontFamily: serif, fontSize: "1.75rem", fontWeight: 600,
-                    color: c.terracotta, lineHeight: 1, flexShrink: 0, minWidth: "1.75rem", textAlign: "right",
-                  }}>
-                    {i + 1}
-                  </span>
-                  <span style={{ fontSize: "0.925rem", lineHeight: 1.6, color: "rgba(250,247,242,0.85)" }}>
-                    {step}
-                  </span>
-                </div>
-              ))}
-            </div>
+            Ready to plan smarter this week?
+          </p>
+          <p style={{
+            fontSize: "0.825rem", color: c.body, margin: "0 0 1rem", lineHeight: 1.55,
+          }}>
+            Get the Blueprint sent straight to your inbox — free.
+          </p>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <EmailCapture id="midpage" />
           </div>
         </div>
       </section>
