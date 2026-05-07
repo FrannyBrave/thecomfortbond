@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "@/assets/the-comfort-bond-logo.webp";
-import heroPreviewImg from "@/assets/weekly-engagement-plan-filled-example-senior-living-activities.webp";
+
 import weeklyPlanBlankImg from "@/assets/weekly-engagement-plan-blank-template-senior-living.webp";
 import balanceWheelLegendImg from "@/assets/engagement-balance-wheel-six-dimensions-legend.webp";
 import reflectionNotesImg from "@/assets/reflection-notes-weekly-activity-planner-example.webp";
