@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "@/assets/the-comfort-bond-logo.webp";
+import heroPreviewImg from "@/assets/weekly-engagement-plan-filled-example-senior-living-activities.webp";
 import weeklyPlanBlankImg from "@/assets/weekly-engagement-plan-blank-template-senior-living.webp";
 import balanceWheelLegendImg from "@/assets/engagement-balance-wheel-six-dimensions-legend.webp";
 import reflectionNotesImg from "@/assets/reflection-notes-weekly-activity-planner-example.webp";
@@ -209,54 +210,80 @@ export default function BlueprintLandingPage() {
 
       {/* ═══════ HERO ═══════ */}
       <Section style={{ paddingTop: "clamp(1.5rem, 4vw, 2.5rem)" }}>
-        <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, margin: "0 0 1rem",
-          }}>
-            Free Planning Tool
-          </p>
-          <h1 style={{
-            fontFamily: serif, fontSize: "clamp(1.85rem, 5vw, 3rem)", fontWeight: 600,
-            color: c.forest, lineHeight: 1.15, margin: "0 0 1.25rem", letterSpacing: "-0.015em",
-          }}>
-            It's Sunday Night — and You're Still Figuring Out Tomorrow.
-          </h1>
-          <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.075rem)", lineHeight: 1.65, color: c.body, margin: "0 auto 1.4rem", maxWidth: "560px" }}>
-            A free weekly planning system for Activity Professionals — <strong style={{ color: c.forest }}>plan your entire week in under 20 minutes</strong>, with structure, variety, and confidence.
-          </p>
-          <ul style={{
-            listStyle: "none", padding: 0, margin: "0 auto 1.75rem", maxWidth: "520px",
-            display: "grid", gridTemplateColumns: "1fr", gap: "0.5rem", textAlign: "left",
-          }}>
-            {[
-              "No more \u201Cwhat should we do today?\u201D",
-              "Built for mixed cognitive levels",
-              "Structured, not overwhelming",
-            ].map((b, i) => (
-              <li key={i} style={{
-                fontSize: "0.92rem", lineHeight: 1.5, color: c.body,
-                display: "flex", gap: "0.6rem", alignItems: "baseline",
-              }}>
-                <span aria-hidden="true" style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
-                <span>{b}</span>
-              </li>
-            ))}
-          </ul>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          className="bp-hero-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr",
+            gap: "clamp(2rem, 5vw, 3.5rem)",
+            alignItems: "center",
+            maxWidth: "1080px",
+            margin: "0 auto",
+          }}
+        >
+          {/* Left: copy + form */}
+          <div style={{ maxWidth: "560px", margin: "0 auto", textAlign: "left" }}>
+            <p style={{
+              fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
+              textTransform: "uppercase", color: c.terracotta, margin: "0 0 1rem",
+            }}>
+              Free Planning Tool
+            </p>
+            <h1 style={{
+              fontFamily: serif, fontSize: "clamp(1.85rem, 4.4vw, 2.85rem)", fontWeight: 600,
+              color: c.forest, lineHeight: 1.15, margin: "0 0 1.25rem", letterSpacing: "-0.015em",
+            }}>
+              It's Sunday Night — and You're Still Figuring Out Tomorrow.
+            </h1>
+            <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.075rem)", lineHeight: 1.65, color: c.body, margin: "0 0 1.4rem" }}>
+              A free weekly planning system for Activity Professionals — <strong style={{ color: c.forest }}>plan your entire week in under 20 minutes</strong>, with structure, variety, and confidence.
+            </p>
+            <ul style={{
+              listStyle: "none", padding: 0, margin: "0 0 1.75rem",
+              display: "grid", gridTemplateColumns: "1fr", gap: "0.5rem",
+            }}>
+              {[
+                "No more \u201Cwhat should we do today?\u201D",
+                "Built for mixed cognitive levels",
+                "Structured, not overwhelming",
+              ].map((b, i) => (
+                <li key={i} style={{
+                  fontSize: "0.92rem", lineHeight: 1.5, color: c.body,
+                  display: "flex", gap: "0.6rem", alignItems: "baseline",
+                }}>
+                  <span aria-hidden="true" style={{ color: c.terracotta, fontWeight: 700, flexShrink: 0 }}>✔</span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
             <EmailCapture id="hero" />
           </div>
-          <p style={{
-            fontFamily: serif, fontStyle: "italic", fontSize: "0.9rem",
-            lineHeight: 1.6, color: c.forest, textAlign: "center",
-            margin: "1.5rem auto 0", maxWidth: "480px",
-          }}>
-            Used by Activity Directors to plan their weeks — and scale into full 13-week
-            programming with{" "}
-            <Link to="/blueprint-pro" style={{ color: c.terracotta, textDecoration: "underline", fontWeight: 600 }}>
-              Blueprint Pro
-            </Link>.
-          </p>
+
+          {/* Right: product preview image */}
+          <figure style={{ margin: 0, textAlign: "center" }}>
+            <img
+              src={heroPreviewImg}
+              alt="Filled-in example of the Weekly Engagement Plan from The Comfort Bond Blueprint — a full week of senior living activities mapped out in handwriting with morning, afternoon, dimension tags, and notes"
+              width={1200}
+              height={932}
+              fetchPriority="high"
+              decoding="async"
+              style={{
+                width: "100%",
+                maxWidth: "560px",
+                height: "auto",
+                display: "block",
+                margin: "0 auto",
+                borderRadius: "14px",
+                boxShadow: "0 16px 48px rgba(45,74,62,0.18)",
+                border: `1px solid ${c.gridline}`,
+                transform: "rotate(-1.25deg)",
+              }}
+            />
+            <figcaption style={{ marginTop: "1rem", fontFamily: sans, fontSize: "0.78rem", color: c.mutedWarm, fontStyle: "italic", letterSpacing: "0.02em" }}>
+              A real week, planned in 20 minutes. This is what arrives in your inbox.
+            </figcaption>
+          </figure>
         </div>
       </Section>
 
@@ -648,34 +675,39 @@ export default function BlueprintLandingPage() {
       </Section>
 
 
-      {/* ═══════ BUILT FOR YOUR WORLD ═══════ */}
+      {/* ═══════ WHAT HAPPENS NEXT ═══════ */}
+      <Section bg={c.creamAlt}>
+        <div style={{ maxWidth: "780px", margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.75rem" }}>
+            What Happens Next
+          </p>
+          <h2 style={{ fontFamily: serif, fontSize: "clamp(1.4rem, 3vw, 1.8rem)", fontWeight: 600, color: c.forest, margin: "0 0 2.5rem", lineHeight: 1.25 }}>
+            From inbox to Monday morning — in three steps.
+          </h2>
+          <div className="bp-next-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.25rem" }}>
+            {[
+              { n: "1", t: "Check your inbox.", d: "Your Blueprint arrives in under a minute — printable PDF, ready to use." },
+              { n: "2", t: "Print the templates.", d: "One Weekly Engagement Plan, the Balance Wheel, and the Reflection page." },
+              { n: "3", t: "Plan Monday in 20 minutes.", d: "Sit down once. Map the week. Walk into Monday already prepared." },
+            ].map((s) => (
+              <div key={s.n} style={{ backgroundColor: c.cream, border: `1px solid ${c.gridline}`, borderRadius: "14px", padding: "1.5rem 1.5rem 1.4rem", textAlign: "left" }}>
+                <div style={{ fontFamily: serif, fontSize: "1.6rem", fontWeight: 700, color: c.terracotta, lineHeight: 1, marginBottom: "0.6rem" }}>{s.n}</div>
+                <p style={{ fontFamily: serif, fontSize: "1.05rem", fontWeight: 600, color: c.forest, margin: "0 0 0.4rem", lineHeight: 1.3 }}>{s.t}</p>
+                <p style={{ fontSize: "0.875rem", lineHeight: 1.6, color: c.body, margin: 0 }}>{s.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <style>{`
+          @media (min-width: 720px) {
+            .bp-next-grid { grid-template-columns: repeat(3, 1fr) !important; }
+          }
+        `}</style>
+      </Section>
+
+      {/* ═══════ FOUNDER LETTER + FINAL CTA ═══════ */}
       <Section>
         <div style={{ maxWidth: "660px", margin: "0 auto" }}>
-          <p style={{
-            fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em",
-            textTransform: "uppercase", color: c.terracotta, textAlign: "center", margin: "0 0 0.75rem",
-          }}>
-            Designed for Senior Living
-          </p>
-          <h2 style={{
-            fontFamily: serif, fontSize: "clamp(1.25rem, 2.8vw, 1.6rem)", fontWeight: 600,
-            color: c.forest, textAlign: "center", margin: "0 0 1.25rem", lineHeight: 1.25,
-          }}>
-            Built for Your World.
-            <br />
-            Not Borrowed from Someone Else's.
-          </h2>
-
-          <p style={{
-            fontSize: "clamp(0.875rem, 1.4vw, 0.95rem)", lineHeight: 1.8, color: c.body,
-            textAlign: "center", margin: "0 0 2.5rem",
-          }}>
-            Every prompt, template, and framework in the Blueprint was designed for senior
-            living&nbsp;— from independent living to memory care. Activities adapt for mixed
-            cognitive abilities. Language is always adult, never condescending. Because your residents
-            aren't children. And you're not running a daycare.
-          </p>
-
           {/* CTA */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: "3rem" }}>
             <EmailCapture id="footer" variant="dark" submitLabel="Yes, I Want My Sundays Back" />
@@ -695,10 +727,20 @@ export default function BlueprintLandingPage() {
               you a system. So you can give your residents something better. And still have your
               Sunday night.
             </p>
-            <footer style={{ fontSize: "0.85rem", fontWeight: 600, color: c.terracotta }}>
+            <footer style={{ fontSize: "0.85rem", fontWeight: 600, color: c.terracotta, marginBottom: "1.25rem" }}>
               — Francesca, Founder of The Comfort Bond™
             </footer>
           </blockquote>
+
+          {/* Soft upsell */}
+          <div style={{ marginTop: "2.5rem", padding: "1.4rem 1.6rem", backgroundColor: c.calloutBg, border: `1px solid ${c.calloutBorder}`, borderRadius: "12px", textAlign: "center" }}>
+            <p style={{ fontFamily: serif, fontSize: "0.95rem", color: c.forest, margin: 0, lineHeight: 1.55 }}>
+              Already love the Blueprint?{" "}
+              <Link to="/blueprint-pro" style={{ color: c.terracotta, textDecoration: "underline", fontWeight: 600 }}>
+                See the full 13-week system in Blueprint Pro →
+              </Link>
+            </p>
+          </div>
         </div>
       </Section>
 
