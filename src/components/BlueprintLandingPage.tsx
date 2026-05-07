@@ -415,7 +415,7 @@ export default function BlueprintLandingPage() {
           },
           {
             heading: "Six dimensions. One simple wheel.",
-            body: "The Engagement Balance Wheel™ is the proprietary framework inside the Blueprint. Six dimensions of meaningful engagement — Cognitive, Social, Sensory, Physical, Creative, Spiritual — each defined with concrete activity examples so you know exactly what fits where. Glance at the wheel as you plan and you'll see which dimensions you're serving — and which residents may be quietly under-engaged.",
+            body: "The proprietary framework inside the Blueprint. Six dimensions — Cognitive, Social, Sensory, Physical, Creative, Spiritual — each with concrete examples. Spot the imbalance at a glance.",
             img: balanceWheelLegendImg,
             w: 1448, h: 1086,
             alt: "Engagement Balance Wheel for senior care with six-dimension legend — Cognitive, Social, Sensory, Physical, Creative, Spiritual — each with concrete memory care activity examples",
