@@ -393,6 +393,9 @@ export default function BlueprintLandingPage() {
       {/* ═══════ INSIDE THE FREE BLUEPRINT ═══════ */}
       <Section bg={c.cream}>
         <div style={{ textAlign: "center", maxWidth: "640px", margin: "0 auto 2.5rem" }}>
+          <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "clamp(1rem, 1.8vw, 1.15rem)", color: c.body, margin: "0 0 1.5rem", lineHeight: 1.6 }}>
+            You're not behind — you just don't have a system yet.
+          </p>
           <p style={{ fontFamily: sans, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: c.terracotta, margin: "0 0 0.75rem" }}>
             Inside the Free Blueprint
           </p>
