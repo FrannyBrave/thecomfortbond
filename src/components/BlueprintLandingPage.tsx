@@ -261,25 +261,37 @@ export default function BlueprintLandingPage() {
 
           {/* Right: product preview image */}
           <figure style={{ margin: 0, textAlign: "center" }}>
-            <img
-              src={heroPreviewImg}
-              alt="Filled-in example of the Weekly Engagement Plan from The Comfort Bond Blueprint — a full week of senior living activities mapped out in handwriting with morning, afternoon, dimension tags, and notes"
-              width={1200}
-              height={932}
-              fetchPriority="high"
-              decoding="async"
-              style={{
-                width: "100%",
-                maxWidth: "560px",
-                height: "auto",
-                display: "block",
-                margin: "0 auto",
-                borderRadius: "14px",
-                boxShadow: "0 16px 48px rgba(45,74,62,0.18)",
-                border: `1px solid ${c.gridline}`,
-                transform: "rotate(-1.25deg)",
-              }}
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcSet="/lcp/blueprint-hero-480.avif 480w, /lcp/blueprint-hero-768.avif 768w, /lcp/blueprint-hero-1280.avif 1280w"
+                sizes="(max-width: 767px) 100vw, 520px"
+              />
+              <source
+                type="image/webp"
+                srcSet="/lcp/blueprint-hero-480.webp 480w, /lcp/blueprint-hero-768.webp 768w, /lcp/blueprint-hero-1280.webp 1280w"
+                sizes="(max-width: 767px) 100vw, 520px"
+              />
+              <img
+                src="/lcp/blueprint-hero-768.webp"
+                alt="Filled-in example of the Weekly Engagement Plan from The Comfort Bond Blueprint — a full week of senior living activities mapped out in handwriting with morning, afternoon, dimension tags, and notes"
+                width={1200}
+                height={932}
+                fetchPriority="high"
+                decoding="async"
+                style={{
+                  width: "100%",
+                  maxWidth: "560px",
+                  height: "auto",
+                  display: "block",
+                  margin: "0 auto",
+                  borderRadius: "14px",
+                  boxShadow: "0 16px 48px rgba(45,74,62,0.18)",
+                  border: `1px solid ${c.gridline}`,
+                  transform: "rotate(-1.25deg)",
+                }}
+              />
+            </picture>
             <figcaption style={{ marginTop: "1rem", fontFamily: sans, fontSize: "0.78rem", color: c.mutedWarm, fontStyle: "italic", letterSpacing: "0.02em" }}>
               A real week, planned in 20 minutes. This is what arrives in your inbox.
             </figcaption>
