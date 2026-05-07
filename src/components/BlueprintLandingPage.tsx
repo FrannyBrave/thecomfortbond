@@ -423,7 +423,7 @@ export default function BlueprintLandingPage() {
           },
           {
             heading: "Plan. Run. Reflect. Repeat.",
-            body: "Each week ends with built-in reflection — your highlight moment, the dimension you want to include more next week, a quick balance check, and space for planning ideas. The Blueprint isn't just a planner. It's a reflection tool that makes your programming smarter every single week.",
+            body: "Each week ends with built-in reflection — highlight moment, balance check, planning ideas. Not just a planner. A tool that gets smarter every week.",
             img: reflectionNotesImg,
             w: 1288, h: 1221,
             alt: "Weekly Reflection & Notes page from the Engagement Blueprint — handwritten highlight moment, balance check across six engagement dimensions, and planning notes for next week's senior living activities",
