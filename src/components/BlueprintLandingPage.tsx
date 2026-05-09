@@ -274,7 +274,7 @@ export default function BlueprintLandingPage() {
               />
               <img
                 src="/lcp/blueprint-hero-768.webp"
-                alt="Filled-in example of the Weekly Engagement Plan from The Comfort Bond Blueprint — a full week of senior living activities mapped out in handwriting with morning, afternoon, dimension tags, and notes"
+                alt="The Comfort Bond Engagement Blueprint — a filled-in Weekly Engagement Plan, the Engagement Balance Wheel framework, and a blank planning template laid out on a desk for senior living activity directors"
                 width={1200}
                 height={932}
                 fetchPriority="high"
