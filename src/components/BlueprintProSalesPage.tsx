@@ -223,7 +223,7 @@ export default function BlueprintProSalesPage() {
           </ul>
 
           <div className="bps-hero-cta">
-            <Cta large>Get Your 13-Week Plan — $27</Cta>
+            <Cta large>Get Your 13-Week Plan — $34</Cta>
           </div>
           <p style={{ fontFamily: sans, fontSize: "0.82rem", color: c.muted, margin: "0.7rem 0 0" }}>
             Instant access · No subscription · Use it again and again
@@ -761,7 +761,7 @@ export default function BlueprintProSalesPage() {
             Currently in Q2? Still useful &mdash; print blank weeks and use the system today.
           </p>
           <p style={{ fontFamily: serif, fontSize: "clamp(2.75rem, 7vw, 3.5rem)", fontWeight: 600, color: "#fff", margin: "0 0 0.25rem", lineHeight: 1 }}>
-            $27
+            $34
           </p>
           <p style={{ fontSize: "0.8rem", color: c.terracottaLight, fontWeight: 500, margin: "0 0 2rem" }}>
             One quarter. Completely handled.
@@ -846,7 +846,7 @@ export default function BlueprintProSalesPage() {
 
         {/* Buy button after FAQ */}
         <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-          <Cta large>Get Your 13-Week Plan — $27</Cta>
+          <Cta large>Get Your 13-Week Plan — $34</Cta>
           <p style={{ fontFamily: sans, fontSize: "0.8rem", color: c.muted, marginTop: "0.65rem" }}>
             Instant access · No subscription · Use it again and again
           </p>
@@ -862,7 +862,7 @@ export default function BlueprintProSalesPage() {
           <p style={{ fontFamily: serif, fontSize: "clamp(1.35rem, 3vw, 1.75rem)", fontWeight: 600, color: "#fff", margin: "0 0 2rem", lineHeight: 1.3 }}>
             Let the system handle the planning. You handle the moments that matter.
           </p>
-          <Cta large>Get Your 13-Week Plan — $27</Cta>
+          <Cta large>Get Your 13-Week Plan — $34</Cta>
           <p style={{ fontFamily: sans, fontSize: "0.78rem", color: "rgba(255,255,255,0.7)", marginTop: "0.85rem" }}>
             Instant access · No subscription · Updated quarterly
           </p>
@@ -927,7 +927,7 @@ export default function BlueprintProSalesPage() {
             boxShadow: "0 8px 24px -6px rgba(198,123,92,0.5)",
           }}
         >
-          Get Your 13-Week Plan — $27 →
+          Get Your 13-Week Plan — $34 →
         </button>
       </div>
       <style>{`

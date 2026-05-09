@@ -109,7 +109,7 @@ const FamilyVisits = () => {
   ];
 
   useEffect(() => {
-    document.title = "The Mother's Day Connection Kit — $27 | The Comfort Bond™";
+    document.title = "The Mother's Day Connection Kit — $34 | The Comfort Bond™";
 
     /* LCP preload — responsive, so mobile only fetches the 480w/768w variant */
     const PRELOAD_ID = "hero-lcp-preload";
@@ -133,7 +133,7 @@ const FamilyVisits = () => {
        so text renders immediately with the system fallback while custom fonts load. */
 
     const desc =
-      "A simple way to make your Mother's Day visit meaningful — even if you don't know what to say. Gentle prompts, visual cards, music guidance & a visit plan. $27. Available until May 10.";
+      "A simple way to make your Mother's Day visit meaningful — even if you don't know what to say. Gentle prompts, visual cards, music guidance & a visit plan. $34. Available until May 10.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -143,7 +143,7 @@ const FamilyVisits = () => {
     meta.setAttribute("content", desc);
 
     const ogTags: Array<[string, string]> = [
-      ["og:title", "The Mother's Day Connection Kit — $27 | The Comfort Bond™"],
+      ["og:title", "The Mother's Day Connection Kit — $34 | The Comfort Bond™"],
       [
         "og:description",
         "Gentle prompts, visual cards, music guidance, and a simple visit plan so you can walk in feeling prepared, present, and connected.",
@@ -203,7 +203,7 @@ const FamilyVisits = () => {
       onClick={() => openCheckoutModal(source)}
       className={`${fullWidthMobile ? "w-full sm:w-auto" : ""} ${className}`}
     >
-      Buy The Kit — $27
+      Buy The Kit — $34
     </Button>
   );
 
@@ -447,7 +447,7 @@ const FamilyVisits = () => {
               <div className="inline-flex flex-col items-center">
                 <BuyButton source="whats-inside" fullWidthMobile={false} />
                 <p className="font-sans text-[12px] tracking-[0.06em] text-[rgba(250,247,242,0.7)] mt-3">
-                  $27 · Available until Mother's Day · May 10
+                  $34 · Available until Mother's Day · May 10
                 </p>
               </div>
             </motion.div>
@@ -459,7 +459,7 @@ const FamilyVisits = () => {
           <div className="max-w-5xl mx-auto">
             <ul className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
               {[
-                { t: "$27", s: "one-time purchase" },
+                { t: "$34", s: "one-time purchase" },
                 { t: "Instant", s: "digital download" },
                 { t: "Print at home", s: "or use on tablet" },
                 { t: "No prep", s: "required" },
@@ -678,7 +678,7 @@ const FamilyVisits = () => {
               <div className="mx-auto w-16 h-px bg-cream/30 my-8" />
               <p className="text-cream/85 text-base md:text-lg leading-[1.7] font-light max-w-lg mx-auto">
                 The Mother's Day Connection Kit is available for{" "}
-                <span className="text-cream font-medium">$27</span> until
+                <span className="text-cream font-medium">$34</span> until
                 Mother's Day, May 10.
               </p>
               <div className="mt-10 flex justify-center">
@@ -688,7 +688,7 @@ const FamilyVisits = () => {
                   onClick={() => openCheckoutModal("final-cta")}
                   className="w-full sm:w-auto"
                 >
-                  Buy The Kit — $27
+                  Buy The Kit — $34
                 </Button>
               </div>
               <p className="font-sans text-[12px] tracking-[0.06em] text-cream/65 mt-5">
@@ -708,10 +708,10 @@ const FamilyVisits = () => {
         type="button"
         onClick={() => openCheckoutModal("sticky-mobile")}
         className="lg:hidden fixed bottom-0 left-0 right-0 z-40 mx-4 mb-[max(0.75rem,env(safe-area-inset-bottom))] mt-3 flex items-center justify-center gap-2 bg-terracotta text-cream font-sans font-medium text-[15px] rounded-md h-12 shadow-[0_8px_24px_-6px_rgba(198,123,92,0.5)] active:scale-[0.98] transition-transform"
-        aria-label="Buy The Mother's Day Connection Kit for $27"
+        aria-label="Buy The Mother's Day Connection Kit for $34"
       >
         <span aria-hidden="true">🌸</span>
-        <span>Buy The Kit — $27</span>
+        <span>Buy The Kit — $34</span>
         <span aria-hidden="true">→</span>
       </button>
 
