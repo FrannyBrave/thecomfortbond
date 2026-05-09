@@ -705,7 +705,7 @@ export default function BlueprintProSalesPage() {
             <strong style={{ color: c.forest }}>$124 total &mdash; saves $38</strong> versus buying separately.
           </p>
           <p style={{ fontFamily: sans, fontSize: "0.9rem", color: c.muted, fontStyle: "italic", margin: "0 0 1.5rem" }}>
-            Or add the Bundle at checkout for $97.
+            Or add the Bundle at checkout for $124.
           </p>
           <Link
             to="/kits"
