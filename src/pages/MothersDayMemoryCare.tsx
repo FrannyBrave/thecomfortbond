@@ -640,7 +640,7 @@ const MothersDayMemoryCare = () => {
           Looking for gentle, structured support for your next visit? If you are dreading
           the silence or wondering how to connect when the conversation stops, you don't
           have to wing it. Our <strong style={{ color: "var(--forest-dark)" }}>Memory &
-          Connection Kits</strong> ($27) provide guided conversation starters, tactile
+          Connection Kits</strong> ($34) provide guided conversation starters, tactile
           prompts, and a beautiful framework for your time together.
         </p>
       </main>

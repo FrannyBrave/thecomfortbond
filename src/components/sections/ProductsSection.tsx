@@ -43,7 +43,7 @@ const products = [
   anchorId: "road-trip-kit",
   badge: "Great for group sessions",
   description: "Hit the open road through decades of American travel memories, from Route 66 to family road trips. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
-  price: "$27",
+  price: "$34",
   checkoutUrl:
   "https://thecomfortbond.gumroad.com/l/arewethereyetkit",
   image: roadTripImage
@@ -54,7 +54,7 @@ const products = [
   anchorId: "nostalgia-kit",
   badge: "Memory care favorite",
   description: "A walk down memory lane from the 1950s through the 1990s, sparking stories, smiles, and sing-alongs. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
-  price: "$27",
+  price: "$34",
   checkoutUrl:
   "https://thecomfortbond.gumroad.com/l/nostalgiakit",
   image: nostalgiaImage
@@ -65,7 +65,7 @@ const products = [
   anchorId: "kitchen-comfort-kit",
   badge: "Great for 1:1 & group",
   description: "Celebrate the kitchen, comfort food, and family mealtime memories that bring warmth to any room. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
-  price: "$27",
+  price: "$34",
   checkoutUrl:
   "https://thecomfortbond.gumroad.com/l/heartofthehomekit",
   image: kitchenImage
@@ -76,7 +76,7 @@ const products = [
   anchorId: "holiday-traditions-kit",
   badge: "Runs year-round",
   description: "Spanning holidays across the entire year, from New Year's to Christmas and everything in between. 20+ pages of print-ready activities including BINGO, trivia, word links, conversation cards, and musical memory games.",
-  price: "$27",
+  price: "$34",
   checkoutUrl:
   "https://thecomfortbond.gumroad.com/l/heirloomgardenkit",
   image: holidayImage
@@ -290,7 +290,7 @@ export const ProductsSection = () => {
                 </div>
 
                 <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginBottom: "20px" }}>
-                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$27</span>
+                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$34</span>
                 </div>
 
                 <button
@@ -392,7 +392,7 @@ export const ProductsSection = () => {
                 </div>
 
                 <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginBottom: "20px" }}>
-                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$27</span>
+                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$34</span>
                 </div>
 
                 <button
@@ -500,7 +500,7 @@ export const ProductsSection = () => {
                 </div>
 
                 <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginBottom: "20px" }}>
-                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$27</span>
+                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$34</span>
                 </div>
 
                 <button
@@ -608,7 +608,7 @@ export const ProductsSection = () => {
                 </div>
 
                 <div style={{ display: "flex", alignItems: "baseline", gap: "10px", marginBottom: "20px" }}>
-                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$27</span>
+                  <span style={{ fontSize: "36px", fontWeight: 700, color: "#2C3E2D", fontFamily: "Georgia, serif" }}>$34</span>
                 </div>
 
                 <button
