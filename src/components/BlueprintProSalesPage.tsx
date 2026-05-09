@@ -702,7 +702,7 @@ export default function BlueprintProSalesPage() {
           </h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.65, color: c.body, margin: "0 0 1.25rem", maxWidth: "520px", marginLeft: "auto", marginRight: "auto" }}>
             Pair the planning system with the activity kits it&rsquo;s designed to run.{" "}
-            <strong style={{ color: c.forest }}>$124 total &mdash; saves $38</strong> versus buying separately.
+            <strong style={{ color: c.forest }}>$124 total &mdash; saves $46</strong> versus buying separately.
           </p>
           <p style={{ fontFamily: sans, fontSize: "0.9rem", color: c.muted, fontStyle: "italic", margin: "0 0 1.5rem" }}>
             Or add the Bundle at checkout for $124.
