@@ -86,7 +86,7 @@ const Index = () => {
             <h1>Your Next 30 Days<br />of Activities — <em>Done.</em></h1>
             <div className="hero-actions">
               <a href="#bundles" className="btn-primary">
-                Get all 5 kits — $97
+                Get all 5 kits — $124
                 <ArrowSvg />
               </a>
               <a href="#products" className="btn-secondary">Browse individual kits</a>
@@ -377,11 +377,11 @@ const Index = () => {
                   The Comfort Bond™ Complete Engagement System
                 </div>
                 <h3 className="font-serif text-[clamp(1.4rem,2.5vw,1.8rem)] font-semibold leading-[1.2] m-0 text-white">
-                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$97</em>
+                  All 5 Kits — <em className="italic" style={{ color: "var(--sand)" }}>$124</em>
                 </h3>
                 <div className="text-sm text-white/60 mt-2">
-                  <span className="line-through">$135 individually</span>
-                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$38</span>
+                  <span className="line-through">$170 individually</span>
+                  <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full" style={{ background: "rgba(232,201,154,0.2)", color: "var(--sand)" }}>Save ~$46</span>
                 </div>
               </div>
 
@@ -417,7 +417,7 @@ const Index = () => {
                   Get All 5 Kits <ArrowSvg />
                 </button>
                 <p className="text-[10px] m-0" style={{ color: "rgba(255,255,255,0.4)" }}>
-                  $97 · One-time · Instant download
+                  $124 · One-time · Instant download
                 </p>
               </div>
             </div>
@@ -461,7 +461,7 @@ const Index = () => {
           <div style={{ marginTop: "2.5rem", display: "flex", flexDirection: "column", gap: 0 }}>
             {[
               { q: "Will these work for residents with dementia or memory loss?", a: "Yes. Every activity is designed with cognitive accessibility in mind. There are no wrong answers — just warm conversations, familiar music, and prompts that meet each person where they are. Activity Directors tell us these kits spark engagement even in residents who are usually withdrawn." },
-              { q: "How many sessions can I get out of one kit?", a: "Each kit includes 6 different activity types (conversation cards, trivia, BINGO, word link, musical memory, and visual spark cards). Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. Get all 5 kits for $97 and cover 30+ sessions across every theme." },
+              { q: "How many sessions can I get out of one kit?", a: "Each kit includes 6 different activity types (conversation cards, trivia, BINGO, word link, musical memory, and visual spark cards). Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. Get all 5 kits for $124 and cover 30+ sessions across every theme." },
               { q: "Is this a monthly subscription?", a: "No. Every kit and bundle is a one-time purchase. There are no hidden fees or recurring charges. Once you buy, it's yours to print and use forever." },
               { q: "Can I print these for my whole floor?", a: 'Yes! The kits are specifically designed to be printer-friendly on standard 8.5" x 11" paper. Print as many copies as you need — BINGO cards, trivia sheets, conversation prompts — and hand them out directly to residents. One purchase covers your entire community.' },
               { q: "How quickly will I get access?", a: "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be running an activity with your group five minutes later. No waiting for shipping." }].
