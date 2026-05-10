@@ -1,6 +1,7 @@
 import React from "react";
 import logoImg from "@/assets/the-comfort-bond-logo.webp";
 import heroPhoto from "@/assets/blueprint-hero-flatlay.png";
+import kitRememberWhen from "@/assets/kit-remember-when.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 
