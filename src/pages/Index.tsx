@@ -207,7 +207,7 @@ const Index = () => {
                 },
                 {
                   prompt: "I want to try a simple activity with my loved one.",
-                  product: "The Morning Memory Sampler",
+                  product: "The Coffee & Connection Sampler",
                   cta: "Try the free sampler",
                   href: "/free-sampler",
                   badge: "Free",
@@ -274,11 +274,11 @@ const Index = () => {
                 },
                 {
                   eyebrow: "Secondary freebie · Mini connection kit",
-                  title: "The Morning Memory Sampler",
+                  title: "The Coffee & Connection Sampler",
                   desc: "A free mini connection kit with conversation prompts, visual memory cards, and a gentle word game built around familiar morning rituals.",
-                  cta: "Try the Free Morning Memory Sampler",
+                  cta: "Try the Free Coffee & Connection Sampler",
                   href: "/free-sampler",
-                  imgLabel: "Morning Memory Sampler mockup",
+                  imgLabel: "Coffee & Connection Sampler mockup",
                 },
               ].map((f, i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 20, overflow: "hidden", display: "flex", flexDirection: "column" }}>
@@ -446,7 +446,7 @@ const Index = () => {
                 Download the Free Connection Blueprint
                 <ArrowSvg />
               </a>
-              <a href="/free-sampler" className="btn-secondary">Try the Free Morning Memory Sampler</a>
+              <a href="/free-sampler" className="btn-secondary">Try the Free Coffee & Connection Sampler</a>
             </div>
           </div>
         </section>
@@ -463,7 +463,7 @@ const Index = () => {
             <h4>Start free</h4>
             <ul>
               <li><a href="/blueprint">Free Connection Blueprint</a></li>
-              <li><a href="/free-sampler">Free Morning Memory Sampler</a></li>
+              <li><a href="/free-sampler">Free Coffee & Connection Sampler</a></li>
             </ul>
           </div>
           <div className="footer-col">
