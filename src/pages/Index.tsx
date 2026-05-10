@@ -60,7 +60,7 @@ const KITS: { icon: string; name: string; theme: string; image?: string }[] = [
   { icon: "🍞", name: "The Kitchen Table Memories Kit", theme: "Sunday suppers & family meals", image: kitKitchenTable },
   { icon: "🚗", name: "The Places We've Been Kit", theme: "Road trips, travel & home places", image: kitPlacesWeveBeen },
   { icon: "🌻", name: "The Garden Memories Kit", theme: "Seasons, growing & the outdoors", image: kitGardenMemories },
-  { icon: "🔧", name: "The Hands That Made It Kit", theme: "Crafts, trades & things built to last" },
+  { icon: "🔧", name: "The Hands That Made It Kit", theme: "Crafts, trades & things built to last", image: kitHandsThatMadeIt },
 ];
 
 const PILLARS = [
