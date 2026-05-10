@@ -1,6 +1,7 @@
 import React from "react";
 import logoImg from "@/assets/the-comfort-bond-logo.webp";
 import heroPhoto from "@/assets/blueprint-hero-flatlay.png";
+import kitRememberWhen from "@/assets/kit-remember-when.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 
@@ -50,8 +51,8 @@ const ImagePlaceholder = ({ label, ratio = "4 / 3" }: { label: string; ratio?: s
   </div>
 );
 
-const KITS = [
-  { icon: "💭", name: "The Remember When Kit", theme: "Decades, family history & childhood" },
+const KITS: { icon: string; name: string; theme: string; image?: string }[] = [
+  { icon: "💭", name: "The Remember When Kit", theme: "Decades, family history & childhood", image: kitRememberWhen },
   { icon: "🍞", name: "The Kitchen Table Memories Kit", theme: "Sunday suppers & family meals" },
   { icon: "🚗", name: "The Places We've Been Kit", theme: "Road trips, travel & home places" },
   { icon: "🌻", name: "The Garden Memories Kit", theme: "Seasons, growing & the outdoors" },
@@ -357,7 +358,16 @@ const Index = () => {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.25rem" }}>
               {KITS.map((k, i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 16, overflow: "hidden", display: "flex", flexDirection: "column" }}>
-                  <ImagePlaceholder label={k.name} ratio="4 / 3" />
+                  {k.image ? (
+                    <img
+                      src={k.image}
+                      alt={k.name}
+                      loading="lazy"
+                      style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", display: "block" }}
+                    />
+                  ) : (
+                    <ImagePlaceholder label={k.name} ratio="4 / 3" />
+                  )}
                   <div style={{ padding: "1.25rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
                     <div style={{ fontSize: 22 }} aria-hidden="true">{k.icon}</div>
                     <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", fontWeight: 600, color: C.forestDark, margin: 0, lineHeight: 1.3 }}>
