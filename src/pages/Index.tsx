@@ -56,7 +56,7 @@ const ImagePlaceholder = ({ label, ratio = "4 / 3" }: { label: string; ratio?: s
 const KITS: { icon: string; name: string; theme: string; image?: string }[] = [
   { icon: "💭", name: "The Remember When Kit", theme: "Decades, family history & childhood", image: kitRememberWhen },
   { icon: "🍞", name: "The Kitchen Table Memories Kit", theme: "Sunday suppers & family meals", image: kitKitchenTable },
-  { icon: "🚗", name: "The Places We've Been Kit", theme: "Road trips, travel & home places" },
+  { icon: "🚗", name: "The Places We've Been Kit", theme: "Road trips, travel & home places", image: kitPlacesWeveBeen },
   { icon: "🌻", name: "The Garden Memories Kit", theme: "Seasons, growing & the outdoors" },
   { icon: "🔧", name: "The Hands That Made It Kit", theme: "Crafts, trades & things built to last" },
 ];
