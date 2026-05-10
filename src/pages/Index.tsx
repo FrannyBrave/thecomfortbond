@@ -350,14 +350,14 @@ const Index = () => {
         {/* MEMORY & CONNECTION KITS */}
         <section id="kits" style={{ background: C.creamDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-            <div className="section-tag">Memory &amp; Connection Kits</div>
+            <div className="section-tag">Bonding &amp; Connection Kits</div>
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
               Five themed kits, built around <em style={{ color: C.clay }}>familiar life moments.</em>
             </h2>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, color: C.textMid, lineHeight: 1.75, maxWidth: 680, margin: "0 0 2.5rem" }}>
-              Each Memory &amp; Connection Kit is built around a familiar life theme and gives
+              Each Bonding &amp; Connection Kit is built around a familiar life theme and gives
               you simple ways to connect through conversation prompts, visual memory sparks,
-              music, gentle games, BINGO, word links, and legacy reflection.
+              musical memory prompts, BINGO, word link and trivia time.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.25rem" }}>
               {KITS.map((k, i) => (
