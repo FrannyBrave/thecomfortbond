@@ -96,7 +96,7 @@ const Index = () => {
             <li><a href="/our-story">Our Story</a></li>
             <li><a href="#kits">Connection Kits</a></li>
             <li><a href="#blueprint" className="nav-blueprint">The Bonding Blueprint</a></li>
-            <li><a href="/blueprint" className="nav-blueprint">Free Connection Blueprint</a></li>
+            <li><a href="/blueprint" className="nav-blueprint">Free Connection Companion</a></li>
             <li><a href="#collection" className="nav-cta">The Collection</a></li>
           </ul>
           <MobileMenuDrawer />
@@ -133,7 +133,7 @@ const Index = () => {
               </p>
               <div className="hero-actions">
                 <a href="/blueprint" className="btn-primary">
-                  Download the Free Connection Blueprint
+                  Download the Free Connection Companion
                   <ArrowSvg />
                 </a>
                 <a href="#kits" className="btn-secondary">Explore the Bonding Kits</a>
@@ -146,7 +146,7 @@ const Index = () => {
               <div className="hero-photo-wrap">
                 <img
                   src={heroPhoto}
-                  alt="The Connection Blueprint, conversation prompts, and memory cards laid out on a warm wooden table — tools for meaningful calls and visits with an aging parent or grandparent."
+                  alt="The Connection Companion, conversation prompts, and memory cards laid out on a warm wooden table — tools for meaningful calls and visits with an aging parent or grandparent."
                   className="hero-photo"
                   loading="eager"
                   decoding="async"
@@ -200,7 +200,7 @@ const Index = () => {
               {[
                 {
                   prompt: "I want help planning more meaningful calls and visits.",
-                  product: "The Connection Blueprint",
+                  product: "The Connection Companion",
                   cta: "Download the free planner",
                   href: "/blueprint",
                   badge: "Free",
@@ -266,11 +266,11 @@ const Index = () => {
               {[
                 {
                   eyebrow: "Primary freebie · Weekly planner",
-                  title: "The Connection Blueprint",
+                  title: "The Connection Companion",
                   desc: "A free weekly guide for planning more meaningful calls, visits, and shared moments with an aging parent or grandparent.",
-                  cta: "Download the Free Connection Blueprint",
+                  cta: "Download the Free Connection Companion",
                   href: "/blueprint",
-                  imgLabel: "Connection Blueprint mockup",
+                  imgLabel: "Connection Companion mockup",
                 },
                 {
                   eyebrow: "Secondary freebie · Mini connection kit",
@@ -443,7 +443,7 @@ const Index = () => {
             </p>
             <div className="fcs-actions">
               <a href="/blueprint" className="btn-primary">
-                Download the Free Connection Blueprint
+                Download the Free Connection Companion
                 <ArrowSvg />
               </a>
               <a href="/free-sampler" className="btn-secondary">Try the Free Coffee & Connection Sampler</a>
@@ -462,7 +462,7 @@ const Index = () => {
           <div className="footer-col">
             <h4>Start free</h4>
             <ul>
-              <li><a href="/blueprint">Free Connection Blueprint</a></li>
+              <li><a href="/blueprint">Free Connection Companion</a></li>
               <li><a href="/free-sampler">Free Coffee & Connection Sampler</a></li>
             </ul>
           </div>
