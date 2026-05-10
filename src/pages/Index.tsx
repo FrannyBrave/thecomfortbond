@@ -95,7 +95,7 @@ const Index = () => {
           <ul className="nav-links">
             <li><a href="/our-story">Our Story</a></li>
             <li><a href="#kits">Connection Kits</a></li>
-            <li><a href="#blueprint" className="nav-blueprint">The Bonding Blueprint</a></li>
+            <li><a href="#blueprint" className="nav-blueprint">The Connection Season: Summer Edition</a></li>
             <li><a href="/blueprint" className="nav-blueprint">Free Connection Companion</a></li>
             <li><a href="#collection" className="nav-cta">The Collection</a></li>
           </ul>
@@ -310,12 +310,12 @@ const Index = () => {
         <section id="blueprint" style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
             <div>
-              <div className="section-tag">Flagship · The Bonding Blueprint</div>
+              <div className="section-tag">Flagship · The Connection Season — Summer Edition</div>
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
                 A 13-week companion for a <em style={{ color: C.clay }}>gentler rhythm of connection.</em>
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                The Bonding Blueprint helps families create a gentle rhythm of meaningful
+                The Connection Season: Summer Edition helps families create a gentle rhythm of meaningful
                 connection through calls, visits, memory prompts, music, stories, reflection,
                 and legacy moments — a full season of small, intentional ways to deepen the bond.
               </p>
@@ -332,12 +332,12 @@ const Index = () => {
                 ))}
               </ul>
               <a href="#collection" className="btn-primary">
-                View The Bonding Blueprint
+                View The Connection Season: Summer Edition
                 <ArrowSvg />
               </a>
             </div>
             <div>
-              <ImagePlaceholder label="The Bonding Blueprint mockup" ratio="4 / 5" />
+              <ImagePlaceholder label="The Connection Season: Summer Edition mockup" ratio="4 / 5" />
             </div>
           </div>
         </section>
@@ -469,7 +469,7 @@ const Index = () => {
           <div className="footer-col">
             <h4>Shop</h4>
             <ul>
-              <li><a href="#blueprint">The Bonding Blueprint</a></li>
+              <li><a href="#blueprint">The Connection Season: Summer Edition</a></li>
               <li><a href="#kits">Memory &amp; Connection Kits</a></li>
               <li><a href="#collection">The Comfort Bond Collection</a></li>
             </ul>
