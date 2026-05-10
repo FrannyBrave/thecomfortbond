@@ -5,6 +5,7 @@ import kitRememberWhen from "@/assets/kit-remember-when.jpg";
 import kitKitchenTable from "@/assets/kit-kitchen-table.jpg";
 import kitPlacesWeveBeen from "@/assets/kit-places-weve-been.jpg";
 import kitGardenMemories from "@/assets/kit-garden-memories.jpg";
+import kitHandsThatMadeIt from "@/assets/kit-hands-that-made-it.jpg";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 
