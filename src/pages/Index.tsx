@@ -387,9 +387,9 @@ const Index = () => {
                 The Comfort Bond <em style={{ color: C.sand }}>Collection.</em>
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.78)", margin: "0 0 1.5rem" }}>
-                The complete family connection toolkit — all five Bonding &amp; Connection Kits plus
-                bonus guidance for families who want a fuller way to connect, remember, and
-                preserve stories across a season.
+                All five Bonding &amp; Connection Kits in one library — every theme, every era,
+                every conversation worth having. For the family ready to commit to a full season
+                of meaningful moments together.
               </p>
               <a href="/kits" className="btn-primary">
                 View the Collection
