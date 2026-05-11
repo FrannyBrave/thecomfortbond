@@ -177,7 +177,7 @@ const Index = () => {
                 I built this for the call I was always grateful I made.
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
-                I built The Comfort Bond after losing my grandmother in April 2025 — my only
+                I built The Comfort Bond after losing my grandmother in May of 2025 — my only
                 grandparent left, and the person I loved most in the world. I lived far from her,
                 I was caught up in my own life, and I couldn't visit the way I wanted to. But I
                 called her, and I made sure she always knew how loved she was. That is the part
