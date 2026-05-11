@@ -243,7 +243,7 @@ const Shop = () => {
                 {[
                   "13 themed weeks of summer bonding prompts",
                   "Weekly planning pages for calls, visits, and shared moments",
-                  "Reflection space to capture stories you do not want to lose",
+                  "\"What They Told Me\" — legacy pages for the recipes, sayings, and stories worth keeping",
                 ].map((b, i) => (
                   <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: C.textMid, lineHeight: 1.6 }}>
                     <span style={{ width: 18, height: 18, borderRadius: "50%", background: "rgba(198,123,92,0.12)", color: C.clay, fontSize: 11, display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>✓</span>
