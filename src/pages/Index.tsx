@@ -99,7 +99,7 @@ const Index = () => {
             />
             <div className="nav-brand">
               <span className="nav-brand-name">The Comfort Bond™</span>
-              <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>
+              <span className="nav-brand-tag">Gentle prompts, bonding kits, and connection rituals</span>
             </div>
           </a>
           <ul className="nav-links">
@@ -526,7 +526,7 @@ const Index = () => {
         <div className="footer-inner footer-inner-3col">
           <div className="footer-brand">
             <div style={{ fontFamily: "var(--font-serif)", fontSize: 18, color: "#fff", fontWeight: 600 }}>The Comfort Bond™</div>
-            <p>Nurturing Comfort, Inspiring Connection. Tools, prompts, and rituals to help families create meaningful moments with the people who raised them.</p>
+            <p>Gentle prompts, bonding kits, and connection rituals to help you create more meaningful moments with the people who raised you.</p>
           </div>
           <div className="footer-col">
             <h4>Start free</h4>
