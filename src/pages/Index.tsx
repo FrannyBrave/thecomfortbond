@@ -350,7 +350,7 @@ const Index = () => {
               ))}
             </div>
             <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-              <a href="#collection" className="btn-primary" style={{ display: "inline-flex" }}>
+              <a href="/shop" className="btn-primary" style={{ display: "inline-flex" }}>
                 Find the Kit That Fits Your Loved One
                 <ArrowSvg />
               </a>
@@ -381,7 +381,7 @@ const Index = () => {
                 every conversation worth having. For the family ready to commit to a full season
                 of meaningful moments together.
               </p>
-              <a href="/kits" className="btn-primary">
+              <a href="/shop" className="btn-primary">
                 View the Collection
                 <ArrowSvg />
               </a>
