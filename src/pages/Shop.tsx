@@ -1,0 +1,498 @@
+import { useEffect, useState } from "react";
+import logoImg from "@/assets/the-comfort-bond-logo.webp";
+import kitRememberWhen from "@/assets/kit-remember-when.jpg";
+import kitKitchenTable from "@/assets/kit-kitchen-table.jpg";
+import kitPlacesWeveBeen from "@/assets/kit-places-weve-been.jpg";
+import kitGardenMemories from "@/assets/kit-garden-memories.jpg";
+import kitHandsThatMadeIt from "@/assets/kit-hands-that-made-it.jpg";
+import connectionSeasonSummerMockup from "@/assets/connection-season-summer-mockup.png";
+import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-mockup.png";
+import { CookieConsent } from "@/components/CookieConsent";
+import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
+
+const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+    <path d="M2 7h10M8 3l4 4-4 4" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const C = {
+  forest: "var(--forest)",
+  forestDark: "var(--forest-dark)",
+  clay: "var(--clay)",
+  sand: "var(--sand)",
+  sandPale: "var(--sand-pale)",
+  cream: "var(--cream)",
+  creamDark: "var(--cream-dark, #EDE8E0)",
+  textMid: "var(--text-mid)",
+  border: "var(--border)",
+};
+
+type Kit = {
+  id: string;
+  name: string;
+  tagline: string;
+  desc: string;
+  bullets: string[];
+  cta: string;
+  image: string;
+};
+
+const KITS: Kit[] = [
+  {
+    id: "remember-when-kit",
+    name: "The Remember When Kit",
+    tagline: "Pop culture, music & daily life from the decades that shaped them",
+    desc: "The Beatles on the Ed Sullivan Show, sock hops in the gym, TV dinners on folding trays, the jukebox at the diner. This kit unlocks the songs, movies, and everyday moments your loved one carries from the 1950s through the 1980s — and tells you exactly what to ask to hear them.",
+    bullets: [
+      "15 conversation prompts across 5 themes",
+      "10 vintage Visual Spark Cards",
+      "20 trivia questions across four decades",
+      "Picture & Word Memory BINGO (two boards)",
+      "Musical memory: Finish-the-Lyric + Name-That-Tune",
+    ],
+    cta: "Bring the Decades Home",
+    image: kitRememberWhen,
+  },
+  {
+    id: "kitchen-table-memories-kit",
+    name: "The Kitchen Table Memories Kit",
+    tagline: "Kitchens, family meals, baking days & comfort food",
+    desc: "Every family had a kitchen table. It's where homework happened, recipes were passed by hand, and Sunday dinners ran long. This kit invites your loved one back to the smells, the sounds, and the people of the kitchen they remember best.",
+    bullets: [
+      "15 conversation prompts on family meals & comfort food",
+      "10 warm kitchen Visual Spark Cards",
+      "20 trivia questions on classic foods, brands & traditions",
+      "Picture & Word Memory BINGO with cookie jars, mixing bowls & gravy boats",
+      "Musical memory featuring Dean Martin, Doris Day & more",
+    ],
+    cta: "Pull Up a Chair",
+    image: kitKitchenTable,
+  },
+  {
+    id: "garden-memories-kit",
+    name: "The Garden Memories Kit",
+    tagline: "Seeds, sunshine, vegetable patches & the joy of watching things grow",
+    desc: "A tomato still warm from the vine. The smell of soil after a good rain. The lilac bush by the front porch. This kit honors the patience and pride of a generation that grew things — and gives you the prompts to hear about the garden they remember.",
+    bullets: [
+      "15 conversation prompts on gardens, tools & time outside",
+      "10 illustrated Visual Spark Cards",
+      "20 trivia questions on flowers, vegetables & garden wisdom",
+      "Picture & Word Memory BINGO with watering cans, wheelbarrows & sunflowers",
+      'Musical memory featuring "You Are My Sunshine" & more',
+    ],
+    cta: "Step Into the Garden",
+    image: kitGardenMemories,
+  },
+  {
+    id: "places-weve-been-kit",
+    name: "The Places We've Been Kit",
+    tagline: "Family road trips, station wagons & roadside adventures",
+    desc: "Before GPS and direct flights, there were Sunday drives, station wagons full of cousins, and roads people remembered by heart. This kit pulls up alongside the family trips your loved one took — the destinations, the diners, the souvenirs that made it home.",
+    bullets: [
+      "15 conversation prompts on road trips & vacations",
+      "10 retro Visual Spark Cards",
+      "20 trivia questions on Route 66, Mount Rushmore & more",
+      "Picture & Word Memory BINGO with station wagons, motel pools & postcards",
+      "Musical memory featuring Willie Nelson, Nat King Cole & The Beach Boys",
+    ],
+    cta: "Hit the Open Road",
+    image: kitPlacesWeveBeen,
+  },
+  {
+    id: "hands-that-made-it-kit",
+    name: "The Hands That Made It Kit",
+    tagline: "Building, sewing, fixing & the pride of hands-on work",
+    desc: "There was a time when fixing something wasn't a phone call — it was a Saturday. This kit honors the workbench, the sewing basket, the toolbox, and the skills your loved one built over a lifetime. It's an invitation to ask about what they made and how they made it.",
+    bullets: [
+      "20 conversation prompts on workbenches, sewing & craft",
+      "10 illustrated Visual Spark Cards",
+      "20 trivia questions on tools, stitches & American know-how",
+      "Picture & Word Memory BINGO with thimbles, hammers & sewing machines",
+      "Musical memory featuring Dolly Parton, Tennessee Ernie Ford & more",
+    ],
+    cta: "Honor the Hands That Made It",
+    image: kitHandsThatMadeIt,
+  },
+];
+
+const FAQS: { q: string; a: string }[] = [
+  {
+    q: "Which kit should I buy first?",
+    a: "Start with the theme that already feels true to your loved one. If your grandmother always had something baking, the Kitchen Table Memories Kit will land first. If your father drove every back road in the county, start with The Places We've Been Kit. If you're not sure, The Remember When Kit (pop culture across four decades) is the gentlest doorway in — there's something in it for everyone.",
+  },
+  {
+    q: "How are the kits delivered? Are they physical or digital?",
+    a: "Each kit is delivered as a beautifully designed digital PDF you can use two ways. View them on your tablet or phone during a video call or visit — or print them at home and bring the printed cards with you. Both work. The kit format is built for either.",
+  },
+  {
+    q: "Will my loved one feel patronized by this?",
+    a: "No. Every kit was designed for adults, not children. The questions are written to treat your loved one as the expert on their own life — the historian, the storyteller, the one who knows. There is no \"right answer.\" There is no test. There is only space for them to share what they want to share, in the way that feels most natural.",
+  },
+  {
+    q: "Are these for someone with dementia or memory loss?",
+    a: "They're designed to work for anyone — including loved ones experiencing cognitive decline — but they're not only for memory loss. The kits use a \"recognition over recall\" approach: visual cards, familiar themes, and prompts that meet your loved one where they are. They work just as well for a parent who's still independent as for a grandparent in memory care.",
+  },
+  {
+    q: "What's the difference between a kit and The Connection Season?",
+    a: "A kit is a themed library of content — conversation prompts, games, music — that you can dip into for any call or visit. The Connection Season is a 13-week planner that helps you build a rhythm of connection across a whole quarter. They work beautifully together: the planner tells you when to use a kit, and the kits give the planner its content.",
+  },
+  {
+    q: "Do I need all five kits?",
+    a: "You don't need all five. One kit, used well, can carry months of meaningful conversations. The Collection is for the family who knows they want to commit to this work over a longer period of time — or who wants the freedom to pull out a different theme depending on the day and the mood.",
+  },
+  {
+    q: "Can I use these for a phone call, or only in person?",
+    a: "Both. The kits were built specifically to work across distance. Visual cards can be sent by text. Conversation prompts work on a phone call. Music prompts can be played over speakerphone. If your relationship lives mostly on the phone, these are built for that.",
+  },
+  {
+    q: "What if it isn't right for us?",
+    a: "Reach out within 14 days of purchase and we'll make it right. The Comfort Bond was built for families — not for transactions — and if something isn't landing the way it should, we'd rather hear from you.",
+  },
+];
+
+const Eyebrow = ({ children, light = false }: { children: React.ReactNode; light?: boolean }) => (
+  <div
+    style={{
+      fontFamily: "var(--font-sans)",
+      fontSize: 11,
+      fontWeight: 600,
+      letterSpacing: "0.14em",
+      textTransform: "uppercase",
+      color: light ? C.sand : C.clay,
+      marginBottom: 10,
+    }}
+  >
+    {children}
+  </div>
+);
+
+const Shop = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  useEffect(() => {
+    document.title = "Shop — The Comfort Bond Connection Kits, Seasonal Planners & The Collection";
+    let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+    meta.content =
+      "Browse The Comfort Bond — themed Connection Kits, the Summer Edition seasonal planner, and the full Collection. Tools to help families create meaningful moments with the people who raised them.";
+  }, []);
+
+  return (
+    <div style={{ background: C.cream, minHeight: "100vh" }}>
+      {/* NAV */}
+      <header>
+        <nav className="tcb-nav">
+          <a href="/" className="nav-logo">
+            <img
+              src={logoImg}
+              alt="The Comfort Bond logo — meaningful family connection with aging parents and grandparents"
+              style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }}
+            />
+            <div className="nav-brand">
+              <span className="nav-brand-name">The Comfort Bond™</span>
+              <span className="nav-brand-tag">Gentle prompts, bonding kits, and connection rituals</span>
+            </div>
+          </a>
+          <ul className="nav-links">
+            <li><a href="/about">Our Story</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/#blueprint" className="nav-blueprint">The Connection Season: Summer Edition</a></li>
+            <li><a href="/blueprint" className="nav-blueprint">Free Connection Companion</a></li>
+            <li><a href="/#collection" className="nav-cta">The Collection</a></li>
+          </ul>
+          <MobileMenuDrawer />
+        </nav>
+      </header>
+
+      <main id="main">
+        {/* HERO */}
+        <section style={{ background: C.forestDark, color: "#fff", padding: "clamp(5rem,11vw,9rem) clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5rem)" }}>
+          <div style={{ maxWidth: 880, margin: "0 auto", textAlign: "center" }}>
+            <Eyebrow light>The Shop</Eyebrow>
+            <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem,4.5vw,3.2rem)", fontWeight: 600, lineHeight: 1.15, color: "#fff", margin: "0 0 1.25rem" }}>
+              <em>Choose how you'll start the next conversation.</em>
+            </h1>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,0.78)", maxWidth: 640, margin: "0 auto" }}>
+              Every kit, every season, every quiet way to feel closer to the people you love — across the country, across the room, and across the time you still have.
+            </p>
+          </div>
+        </section>
+
+        {/* FEATURED — Connection Season Summer Edition */}
+        <section id="featured" style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+          <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
+            <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: C.creamDark }}>
+              <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition cover mockup" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="eager" />
+            </div>
+            <div>
+              <Eyebrow>Featured · Now available</Eyebrow>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0 0 0.5rem" }}>
+                The Connection Season — <em style={{ color: C.clay }}>Summer Edition</em>
+              </h2>
+              <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", color: C.clay, fontWeight: 600, marginBottom: "1rem" }}>$34</div>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
+                Turn July through September into a gentle rhythm of meaningful calls, visits, and shared memories.
+              </p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
+                Made for the daughter, son, or grandchild who wants the next conversation to feel deeper than &ldquo;How are you?&rdquo; — for phone calls, video calls, or in-person visits.
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.5rem", display: "grid", gap: "0.5rem" }}>
+                {[
+                  "13 themed weeks of summer bonding prompts",
+                  "Weekly planning pages for calls, visits, and shared moments",
+                  "Reflection space to capture stories you do not want to lose",
+                ].map((b, i) => (
+                  <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: C.textMid, lineHeight: 1.6 }}>
+                    <span style={{ width: 18, height: 18, borderRadius: "50%", background: "rgba(198,123,92,0.12)", color: C.clay, fontSize: 11, display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>✓</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+              <a href="/#blueprint" className="btn-primary">
+                View the Summer Edition <ArrowSvg />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* THE FIVE KITS — INTRO */}
+        <section id="kits" style={{ background: C.creamDark, padding: "clamp(3rem,6vw,4rem) clamp(1.5rem,5vw,4rem) clamp(1.5rem,3vw,2rem)" }}>
+          <div style={{ maxWidth: 880, margin: "0 auto", textAlign: "center" }}>
+            <Eyebrow>The Five Kits · $34 Each</Eyebrow>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0 0 1rem" }}>
+              <em>Five themed kits, one to fit the person you love.</em>
+            </h2>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 auto 1rem", maxWidth: 720 }}>
+              Each Comfort Bond Connection Kit is built around a theme your loved one will already know in their bones — kitchens, gardens, road trips, music, handmade work. Inside each kit you'll find conversation cards, visual memory sparks, trivia, word games, BINGO, musical memory prompts, and reflection space.
+            </p>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 auto", maxWidth: 720 }}>
+              So the next call or visit can feel less awkward, more personal, and more worth remembering.
+            </p>
+          </div>
+        </section>
+
+        {/* KIT CARDS — alternating cream */}
+        <section style={{ background: C.creamDark, padding: "0 clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5rem)" }}>
+          <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gap: "1.5rem" }}>
+            {KITS.map((kit, i) => {
+              const bg = i % 2 === 0 ? "#fff" : "var(--sand-pale, #F5EFE3)";
+              return (
+                <article
+                  key={kit.id}
+                  id={kit.id}
+                  className="shop-kit-card"
+                  style={{
+                    background: bg,
+                    border: `1px solid ${C.border}`,
+                    borderRadius: 18,
+                    overflow: "hidden",
+                    display: "grid",
+                    gridTemplateColumns: "minmax(0, 320px) minmax(0, 1fr)",
+                    gap: 0,
+                  }}
+                >
+                  <div style={{ background: C.creamDark }}>
+                    <img
+                      src={kit.image}
+                      alt={`${kit.name} cover`}
+                      loading="lazy"
+                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", minHeight: 240 }}
+                    />
+                  </div>
+                  <div style={{ padding: "clamp(1.5rem,3vw,2.25rem)", display: "flex", flexDirection: "column" }}>
+                    <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.3rem,2.4vw,1.65rem)", fontWeight: 600, color: C.forestDark, margin: "0 0 0.4rem", lineHeight: 1.25 }}>
+                      {kit.name}
+                    </h3>
+                    <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: C.clay, margin: "0 0 0.5rem", lineHeight: 1.4 }}>
+                      {kit.tagline}
+                    </p>
+                    <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: C.forestDark, fontWeight: 600, marginBottom: "0.9rem" }}>$34</div>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: "0 0 1rem" }}>
+                      {kit.desc}
+                    </p>
+                    <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.25rem", display: "grid", gap: "0.4rem" }}>
+                      {kit.bullets.map((b, j) => (
+                        <li key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14, color: C.textMid, lineHeight: 1.55 }}>
+                          <span style={{ color: C.clay, fontWeight: 700, flexShrink: 0 }}>✓</span>
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                    <a href={`#${kit.id}-buy`} className="btn-primary" style={{ alignSelf: "flex-start" }} onClick={(e) => { e.preventDefault(); window.location.href = "/#kits"; }}>
+                      {kit.cta} <ArrowSvg />
+                    </a>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* THE COMFORT BOND COLLECTION */}
+        <section id="collection" style={{ background: C.forestDark, color: "#fff", padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+          <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
+            <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <img src={comfortBondCollectionMockup} alt="The Comfort Bond Collection — all five kits laid out together" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
+            </div>
+            <div>
+              <Eyebrow light>The Complete Collection</Eyebrow>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", margin: "0 0 0.75rem" }}>
+                <em>All five kits. One library. Every story worth saving.</em>
+              </h2>
+              <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: C.sand, fontWeight: 600, marginBottom: "0.25rem" }}>$127</div>
+              <div style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "rgba(255,255,255,0.65)", marginBottom: "1.25rem" }}>save $43 vs. buying individually</div>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.82)", margin: "0 0 1.25rem" }}>
+                The complete Bonding & Connection library — every theme, every era, every conversation worth having, in one place. For the family ready to commit to a full season of meaningful moments together, and for anyone who wants the option to bring the right kit to any call, any visit, or any quiet Sunday afternoon.
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.75rem", display: "grid", gap: "0.5rem" }}>
+                {[
+                  "All five Comfort Bond Connection Kits",
+                  "Every conversation theme, every era, every story prompt",
+                  "Save $43 compared to buying each kit individually",
+                  "Works for phone calls, video calls, and in-person visits",
+                ].map((b, i) => (
+                  <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.6 }}>
+                    <span style={{ color: C.sand, fontWeight: 700, flexShrink: 0 }}>✓</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+              <a href="/#collection" className="btn-primary">
+                View the Collection <ArrowSvg />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+          <div style={{ maxWidth: 820, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+              <Eyebrow>Good Questions</Eyebrow>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: 0 }}>
+                <em>Things people ask before they buy.</em>
+              </h2>
+            </div>
+            <div style={{ display: "grid", gap: "0.75rem" }}>
+              {FAQS.map((f, i) => {
+                const open = openFaq === i;
+                return (
+                  <div key={i} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 14, overflow: "hidden" }}>
+                    <button
+                      type="button"
+                      onClick={() => setOpenFaq(open ? null : i)}
+                      aria-expanded={open}
+                      style={{
+                        width: "100%",
+                        textAlign: "left",
+                        background: "transparent",
+                        border: 0,
+                        padding: "1.1rem 1.25rem",
+                        fontFamily: "var(--font-serif)",
+                        fontSize: "1.05rem",
+                        fontWeight: 600,
+                        color: C.forestDark,
+                        cursor: "pointer",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        gap: "1rem",
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      <span>{f.q}</span>
+                      <span aria-hidden="true" style={{ color: C.clay, fontSize: 20, fontWeight: 400, transition: "transform 0.2s", transform: open ? "rotate(45deg)" : "none", flexShrink: 0 }}>+</span>
+                    </button>
+                    {open && (
+                      <div style={{ padding: "0 1.25rem 1.25rem", fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.75, color: C.textMid, whiteSpace: "pre-line" }}>
+                        {f.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CLOSING */}
+        <section style={{ background: C.sandPale, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+          <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
+            <Eyebrow>A Small Reminder</Eyebrow>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.7rem,3.2vw,2.3rem)", fontWeight: 600, lineHeight: 1.25, color: C.forestDark, margin: "0 0 1.25rem" }}>
+              <em>The bond grows on purpose, not by accident.</em>
+            </h2>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.8, color: C.textMid, margin: "0 0 1rem" }}>
+              Whatever you choose — a single kit, the full collection, the seasonal planner — the work isn't in the buying. It's in the calling. The asking. The writing down. The phone in your hand on a Tuesday afternoon when you weren't planning to call, but you did anyway.
+            </p>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.8, color: C.textMid, margin: "0 0 2rem" }}>
+              If this resonates, start where you are. One kit. One question. One conversation.
+            </p>
+            <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+              <a href="#kits" className="btn-primary">
+                Browse the Kits <ArrowSvg />
+              </a>
+              <a href="/free-sampler" style={{ alignSelf: "center", fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
+                Or start with a free sampler →
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* FOOTER */}
+      <footer className="tcb-footer">
+        <div className="footer-inner footer-inner-3col">
+          <div className="footer-brand">
+            <div style={{ fontFamily: "var(--font-serif)", fontSize: 18, color: "#fff", fontWeight: 600 }}>The Comfort Bond™</div>
+            <p>Gentle prompts, bonding kits, and connection rituals to help you create more meaningful moments with the people who raised you.</p>
+          </div>
+          <div className="footer-col">
+            <h4>Start free</h4>
+            <ul>
+              <li><a href="/blueprint">Free Connection Companion</a></li>
+              <li><a href="/free-sampler">Free Coffee & Connection Sampler</a></li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="/shop#featured">The Connection Season: Summer Edition</a></li>
+              <li><a href="/shop#kits">The Comfort Bond Connection Kits</a></li>
+              <li><a href="/shop#collection">The Comfort Bond Collection</a></li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/about">Our Story</a></li>
+              <li><a href="mailto:hello@thecomfortbond.com">hello@thecomfortbond.com</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms</a></li>
+              <li><a href="/refund-policy">Refund Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span className="footer-copy">© 2026 The Comfort Bond™ · Built in memory of a grandmother loved deeply.</span>
+          <a href="mailto:hello@thecomfortbond.com" className="footer-email">hello@thecomfortbond.com</a>
+        </div>
+      </footer>
+      <CookieConsent />
+
+      <style>{`
+        @media (max-width: 820px) {
+          .shop-grid { grid-template-columns: 1fr !important; }
+          .shop-kit-card { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default Shop;
