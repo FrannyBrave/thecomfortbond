@@ -9,6 +9,7 @@ import kitGardenMemories from "@/assets/kit-garden-memories.jpg";
 import kitHandsThatMadeIt from "@/assets/kit-hands-that-made-it.jpg";
 import connectionCompanionMockup from "@/assets/connection-companion-mockup.png";
 import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-mockup.png";
+import connectionSeasonSummerMockup from "@/assets/connection-season-summer-mockup.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 
@@ -358,8 +359,13 @@ const Index = () => {
                 <ArrowSvg />
               </a>
             </div>
-            <div>
-              <ImagePlaceholder label="The Connection Season: Summer Edition mockup" ratio="4 / 5" />
+            <div style={{ aspectRatio: "4 / 5", background: C.cream, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <img
+                src={connectionSeasonSummerMockup}
+                alt="The Connection Season: Summer Edition mockup"
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
