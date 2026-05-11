@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Menu, Heart, Layers, Package, Gift, ArrowRight } from "lucide-react";
+import { Menu, ShoppingBag, Heart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -12,36 +12,20 @@ import {
 
 const PRIMARY_LINKS = [
   {
-    label: "For Families",
-    description: "Mother's Day visit guide & memory care support",
-    href: "/family-visits",
+    label: "Shop",
+    description: "Browse The Connection Season and the Comfort Bond Collection",
+    href: "/shop",
+    icon: ShoppingBag,
+  },
+  {
+    label: "Our Story",
+    description: "The founder's story behind The Comfort Bond",
+    href: "/about",
     icon: Heart,
-  },
-  {
-    label: "Blueprint Pro",
-    description: "13-week activity curriculum for facilities",
-    href: "/blueprint-pro",
-    icon: Layers,
-  },
-  {
-    label: "Engagement Kits",
-    description: "Print-ready themed kits — shop the full collection",
-    href: "/kits",
-    icon: Package,
-  },
-  {
-    label: "Free Sampler",
-    description: "Try a kit free — no credit card required",
-    href: "/free-sampler",
-    icon: Gift,
   },
 ] as const;
 
-const SECONDARY_LINKS = [
-  { label: "Resources", href: "/resources" },
-  { label: "Our Story", href: "/about" },
-  { label: "Free Blueprint", href: "/blueprint" },
-];
+const SECONDARY_LINKS: { label: string; href: string }[] = [];
 
 interface MobileMenuDrawerProps {
   /** Optional className for the trigger button (positioning, color overrides). */
