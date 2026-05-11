@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { PartyPopper, MessageCircle, Scissors, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroPhoto from "@/assets/activity-director-tools-senior-engagement-cards-bingo.jpg";
+import heroPhoto from "@/assets/hero-family-connection.png";
 
 export const HeroSection = () => {
   const scrollToProducts = () => {
@@ -140,9 +140,9 @@ export const HeroSection = () => {
             <img
               src={heroPhoto}
               alt="Activity director leading senior residents using conversation cards, visual spark cards, trivia, and bingo for engagement in memory care"
-              className="relative z-10 w-full h-auto rounded-[24px] object-cover"
+              className="relative z-10 w-full h-auto rounded-[24px] object-contain"
               style={{
-                aspectRatio: "2/3",
+                aspectRatio: "16/9",
                 boxShadow: `0 25px 60px -12px rgba(0,0,0,0.45), 0 12px 28px -8px rgba(0,0,0,0.25)`,
               }}
             />
