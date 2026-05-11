@@ -416,27 +416,31 @@ const Index = () => {
           </div>
         </section>
 
-        {/* THE COMFORT BOND COLLECTION */}
-        <section id="collection" style={{ background: C.forestDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)", color: "#fff" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
+        {/* A NOTE FROM THE FOUNDER */}
+        <section id="collection" style={{ background: C.creamDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+          <div style={{ maxWidth: 880, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.6fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
             <div>
-              <ImagePlaceholder label="The Comfort Bond Collection mockup" ratio="1 / 1" />
+              <ImagePlaceholder label="Founder portrait" ratio="1 / 1" />
             </div>
             <div>
-              <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: C.sand, marginBottom: 8 }}>
-                The complete toolkit
-              </div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", margin: "0 0 1rem" }}>
-                The Comfort Bond <em style={{ color: C.sand }}>Collection.</em>
+              <div className="section-tag">A note from the founder</div>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem,2.6vw,2rem)", fontWeight: 600, lineHeight: 1.25, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
+                I built this for the call I was always grateful I made.
               </h2>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.78)", margin: "0 0 1.5rem" }}>
-                The complete family connection toolkit — all five Memory &amp; Connection Kits plus
-                bonus guidance for families who want a fuller way to connect, remember, and
-                preserve stories across a season.
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
+                I built The Comfort Bond after losing my grandmother in May of 2025 — my only
+                grandparent left, and the person I loved most in the world. I lived far from her,
+                I was caught up in my own life, and I couldn't visit the way I wanted to. But I
+                called her, and I made sure she always knew how loved she was. That is the part
+                that holds.
               </p>
-              <a href="/kits" className="btn-primary">
-                View the Collection
-                <ArrowSvg />
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
+                The Comfort Bond is the brand I wish I had had when I was wondering what to say
+                on the next phone call — for grandchildren, adult children, and anyone loving
+                someone across the country or across the room.
+              </p>
+              <a href="/our-story" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
+                Read the full story →
               </a>
             </div>
           </div>
