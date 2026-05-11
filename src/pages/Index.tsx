@@ -272,18 +272,17 @@ const Index = () => {
             <div>
               <div className="section-tag">Flagship · The Connection Season — Summer Edition</div>
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
-                A 13-week companion for a <em style={{ color: C.clay }}>gentler rhythm of connection.</em>
+                Turn July through September into a <em style={{ color: C.clay }}>gentle rhythm of meaningful calls, visits, and shared memories.</em>
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                The Connection Season: Summer Edition helps families create a gentle rhythm of meaningful
-                connection through calls, visits, memory prompts, music, stories, reflection,
-                and legacy moments — a full season of small, intentional ways to deepen the bond.
+                Made for the daughter, son, or grandchild who wants the next conversation to feel
+                deeper than &ldquo;How are you?&rdquo; — for phone calls, video calls, or in-person visits.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.5rem", display: "grid", gap: "0.5rem" }}>
                 {[
-                  "13 themed weeks of gentle connection prompts",
-                  "Built-in reflection space — what worked, what to plan next",
-                  "Use it for phone calls, video calls, or in-person visits",
+                  "13 themed weeks of summer bonding prompts",
+                  "Weekly planning pages for calls, visits, and shared moments",
+                  "\u201CWhat They Told Me\u201D — legacy pages for the recipes, sayings, and stories worth keeping",
                 ].map((b, i) => (
                   <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: C.textMid, lineHeight: 1.6 }}>
                     <span style={{ width: 18, height: 18, borderRadius: "50%", background: "rgba(198,123,92,0.12)", color: C.clay, fontSize: 11, display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>✓</span>
