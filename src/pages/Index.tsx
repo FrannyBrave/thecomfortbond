@@ -140,7 +140,7 @@ const Index = () => {
                 you still have.
               </p>
               <div className="hero-actions">
-                <a href="/blueprint" className="btn-primary">
+                <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Download the Free Connection Companion
                   <ArrowSvg />
                 </a>
@@ -180,7 +180,7 @@ const Index = () => {
                   prompt: "I want help planning more meaningful calls and visits.",
                   product: "The Connection Companion",
                   cta: "Download the free planner",
-                  href: "/blueprint",
+                  href: "https://the-comfort-bond-2.kit.com/de78d818c7",
                   badge: "Free",
                 },
                 {
@@ -404,7 +404,7 @@ const Index = () => {
                   title: "The Connection Companion",
                   desc: "A free weekly guide for planning more meaningful calls, visits, and shared moments with an aging parent or grandparent.",
                   cta: "Download the Free Connection Companion",
-                  href: "/blueprint",
+                  href: "https://the-comfort-bond-2.kit.com/de78d818c7",
                   imgLabel: "Connection Companion mockup",
                 },
                 {
@@ -476,7 +476,7 @@ const Index = () => {
                 someone you love.
               </p>
               <div className="fcs-actions">
-                <a href="/blueprint" className="btn-primary">
+                <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Download the Free Connection Companion
                   <ArrowSvg />
                 </a>
@@ -522,7 +522,7 @@ const Index = () => {
           <div className="footer-col">
             <h4>Start free</h4>
             <ul>
-              <li><a href="/blueprint">Free Connection Companion</a></li>
+              <li><a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer">Free Connection Companion</a></li>
               <li><a href="https://the-comfort-bond-2.kit.com/392c82fa32" target="_blank" rel="noopener noreferrer">Free Coffee & Connection Sampler</a></li>
             </ul>
           </div>
