@@ -165,36 +165,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* SHORT FOUNDER STORY */}
-        <section style={{ background: C.creamDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
-          <div style={{ maxWidth: 880, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.6fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
-            <div>
-              <ImagePlaceholder label="Founder portrait" ratio="1 / 1" />
-            </div>
-            <div>
-              <div className="section-tag">A note from the founder</div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem,2.6vw,2rem)", fontWeight: 600, lineHeight: 1.25, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
-                I built this for the call I was always grateful I made.
-              </h2>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
-                I built The Comfort Bond after losing my grandmother in May of 2025 — my only
-                grandparent left, and the person I loved most in the world. I lived far from her,
-                I was caught up in my own life, and I couldn't visit the way I wanted to. But I
-                called her, and I made sure she always knew how loved she was. That is the part
-                that holds.
-              </p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                The Comfort Bond is the brand I wish I had had when I was wondering what to say
-                on the next phone call — for grandchildren, adult children, and anyone loving
-                someone across the country or across the room.
-              </p>
-              <a href="/our-story" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
-                Read the full story →
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* START HERE — 3 PATHS */}
         <section style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
