@@ -10,6 +10,7 @@ import kitHandsThatMadeIt from "@/assets/kit-hands-that-made-it.jpg";
 import connectionCompanionMockup from "@/assets/connection-companion-mockup.png";
 import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-mockup.png";
 import connectionSeasonSummerMockup from "@/assets/connection-season-summer-mockup.png";
+import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-mockup.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 
@@ -370,8 +371,13 @@ const Index = () => {
         {/* THE COMFORT BOND COLLECTION */}
         <section id="collection" style={{ background: C.forestDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)", color: "#fff" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
-            <div>
-              <ImagePlaceholder label="The Comfort Bond Collection mockup" ratio="1 / 1" />
+            <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <img
+                src={comfortBondCollectionMockup}
+                alt="The Comfort Bond Collection — all five Bonding & Connection Kits"
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                loading="lazy"
+              />
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: C.sand, marginBottom: 8 }}>
