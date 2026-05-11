@@ -435,7 +435,7 @@ const Shop = () => {
               <a href="#kits" className="btn-primary">
                 Browse the Kits <ArrowSvg />
               </a>
-              <a href="https://the-comfort-bond-2.kit.com/392c82fa32" target="_blank" rel="noopener noreferrer" style={{ alignSelf: "center", fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
+              <a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer" style={{ alignSelf: "center", fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
                 Or start with a free sampler →
               </a>
             </div>
@@ -453,8 +453,8 @@ const Shop = () => {
           <div className="footer-col">
             <h4>Start free</h4>
             <ul>
-              <li><a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer">Free Connection Companion</a></li>
-              <li><a href="https://the-comfort-bond-2.kit.com/392c82fa32" target="_blank" rel="noopener noreferrer">Free Coffee & Connection Sampler</a></li>
+              <li><a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer">Free Connection Companion</a></li>
+              <li><a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer">Free Coffee & Connection Sampler</a></li>
             </ul>
           </div>
           <div className="footer-col">

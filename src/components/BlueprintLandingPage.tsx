@@ -36,7 +36,7 @@ function EmailCapture({ id, variant = "default", submitLabel = "Get My Free Week
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
-  const CK_LANDING_URL = "https://the-comfort-bond-2.kit.com/392c82fa32";
+  const CK_LANDING_URL = "https://the-comfort-bond-2.kit.com/3dfe0171af";
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
