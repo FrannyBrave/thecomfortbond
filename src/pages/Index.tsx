@@ -8,6 +8,7 @@ import kitPlacesWeveBeen from "@/assets/kit-places-weve-been.jpg";
 import kitGardenMemories from "@/assets/kit-garden-memories.jpg";
 import kitHandsThatMadeIt from "@/assets/kit-hands-that-made-it.jpg";
 import connectionCompanionMockup from "@/assets/connection-companion-mockup.png";
+import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-mockup.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 
@@ -290,11 +291,13 @@ const Index = () => {
               ].map((f, i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 20, overflow: "hidden", display: "flex", flexDirection: "column" }}>
                   <div style={{ padding: "1.25rem 1.25rem 0" }}>
-                    {f.title === "The Connection Companion" ? (
+                    {f.title === "The Connection Companion" || f.title === "The Coffee & Connection Sampler" ? (
                       <div style={{ aspectRatio: "16 / 10", width: "100%", borderRadius: 16, background: `linear-gradient(135deg, ${C.creamDark}, var(--sand-pale))`, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
                         <img
-                          src={connectionCompanionMockup}
-                          alt="The Connection Companion free weekly planner — cover and inside spreads showing the Six Dimensions of Bonding wheel, weekly connection plan, and reflection notes."
+                          src={f.title === "The Connection Companion" ? connectionCompanionMockup : coffeeConnectionSamplerMockup}
+                          alt={f.title === "The Connection Companion"
+                            ? "The Connection Companion free weekly planner — cover and inside spreads showing the Six Dimensions of Bonding wheel, weekly connection plan, and reflection notes."
+                            : "The Coffee & Connection Sampler — cover and inside spreads showing conversation cards, visual spark cards, and the word link game."}
                           style={{ width: "100%", height: "100%", objectFit: "contain" }}
                           loading="lazy"
                           decoding="async"
