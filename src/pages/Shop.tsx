@@ -5,7 +5,7 @@ import kitKitchenTable from "@/assets/kit-kitchen-table.jpg";
 import kitPlacesWeveBeen from "@/assets/kit-places-weve-been.jpg";
 import kitGardenMemories from "@/assets/kit-garden-memories.jpg";
 import kitHandsThatMadeIt from "@/assets/kit-hands-that-made-it.jpg";
-import connectionSeasonSummerMockup from "@/assets/connection-season-summer-mockup.png";
+import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition.png";
 import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-mockup.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
@@ -224,8 +224,8 @@ const Shop = () => {
         {/* FEATURED — Connection Season Summer Edition */}
         <section id="featured" style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
-            <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", background: C.creamDark }}>
-              <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition cover mockup" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="eager" />
+            <div style={{ aspectRatio: "3 / 4", borderRadius: 12, overflow: "hidden", background: C.creamDark }}>
+              <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition cover mockup" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} loading="eager" />
             </div>
             <div>
               <Eyebrow>Featured · Now available</Eyebrow>
