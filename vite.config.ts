@@ -8,21 +8,12 @@ function sitemapPlugin(): Plugin {
     name: "generate-sitemap",
     generateBundle() {
       const BASE = "https://thecomfortbond.com";
-      const articleSlugs = [
-        "zero-prep-senior-living-activities",
-        "memory-care-activities-that-work",
-        "beyond-bingo-for-seniors",
-      ];
       const pages = [
         { loc: "/", changefreq: "weekly", priority: "1.0" },
-        { loc: "/resources", changefreq: "weekly", priority: "0.8" },
+        { loc: "/shop", changefreq: "weekly", priority: "0.9" },
+        { loc: "/refund-policy", changefreq: "yearly", priority: "0.3" },
         { loc: "/privacy-policy", changefreq: "yearly", priority: "0.3" },
         { loc: "/terms", changefreq: "yearly", priority: "0.3" },
-        ...articleSlugs.map(slug => ({
-          loc: `/resources/${slug}`,
-          changefreq: "monthly",
-          priority: "0.7",
-        })),
       ];
       const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
