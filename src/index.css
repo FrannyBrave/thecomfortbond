@@ -1042,9 +1042,8 @@
   }
   /* Show hero photo on mobile, but compact and ABOVE the headline */
   .hero-visual { display: flex; order: -1; }
-  .hero-photo-wrap { max-width: 260px; }
+  .hero-photo-wrap { max-width: 100%; }
   .hero-photo {
-    aspect-ratio: 4 / 5;
     border-radius: 18px;
     box-shadow: 0 14px 36px -10px rgba(0,0,0,0.35), 0 6px 16px -6px rgba(0,0,0,0.2);
   }
