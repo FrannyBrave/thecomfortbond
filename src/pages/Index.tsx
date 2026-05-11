@@ -278,8 +278,8 @@ const Index = () => {
                 conversation to feel deeper than &ldquo;How are you?&rdquo; — with 13 themed weeks, a
                 letter from the founder, and pages for the stories you don&rsquo;t want to lose.
               </p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 600, color: C.forestDark, margin: "0 0 1.5rem", letterSpacing: "0.02em" }}>
-                $34 · Summer Edition
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 600, color: C.forestDark, margin: "0 0 1.5rem", letterSpacing: "0.02em", whiteSpace: "pre-line" }}>
+                {"\n"}
               </p>
               <a href="/shop" className="btn-primary">
                 View The Summer Edition
