@@ -324,8 +324,7 @@
 .hero-photo {
   width: 100%;
   height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius);
   box-shadow: 0 25px 60px -12px rgba(0,0,0,0.45), 0 12px 28px -8px rgba(0,0,0,0.25);
   display: block;
