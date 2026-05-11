@@ -7,6 +7,7 @@ import kitKitchenTable from "@/assets/kit-kitchen-table.jpg";
 import kitPlacesWeveBeen from "@/assets/kit-places-weve-been.jpg";
 import kitGardenMemories from "@/assets/kit-garden-memories.jpg";
 import kitHandsThatMadeIt from "@/assets/kit-hands-that-made-it.jpg";
+import connectionCompanionMockup from "@/assets/connection-companion-mockup.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 
@@ -289,7 +290,19 @@ const Index = () => {
               ].map((f, i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 20, overflow: "hidden", display: "flex", flexDirection: "column" }}>
                   <div style={{ padding: "1.25rem 1.25rem 0" }}>
-                    <ImagePlaceholder label={f.imgLabel} ratio="16 / 10" />
+                    {f.title === "The Connection Companion" ? (
+                      <div style={{ aspectRatio: "16 / 10", width: "100%", borderRadius: 16, background: `linear-gradient(135deg, ${C.creamDark}, var(--sand-pale))`, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                        <img
+                          src={connectionCompanionMockup}
+                          alt="The Connection Companion free weekly planner — cover and inside spreads showing the Six Dimensions of Bonding wheel, weekly connection plan, and reflection notes."
+                          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    ) : (
+                      <ImagePlaceholder label={f.imgLabel} ratio="16 / 10" />
+                    )}
                   </div>
                   <div style={{ padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", flex: 1 }}>
                     <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: C.clay }}>
