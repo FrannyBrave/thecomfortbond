@@ -11,6 +11,7 @@ function sitemapPlugin(): Plugin {
       const pages = [
         { loc: "/", changefreq: "weekly", priority: "1.0" },
         { loc: "/shop", changefreq: "weekly", priority: "0.9" },
+        { loc: "/about", changefreq: "monthly", priority: "0.7" },
         { loc: "/refund-policy", changefreq: "yearly", priority: "0.3" },
         { loc: "/privacy-policy", changefreq: "yearly", priority: "0.3" },
         { loc: "/terms", changefreq: "yearly", priority: "0.3" },
