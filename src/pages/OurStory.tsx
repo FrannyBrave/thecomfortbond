@@ -262,7 +262,7 @@ const OurStory = () => {
             <h4>Shop</h4>
             <ul>
               <li><a href="/#blueprint">The Connection Season: Summer Edition</a></li>
-              <li><a href="/#kits">Bonding &amp; Connection Kits</a></li>
+              <li><a href="/#kits">The Comfort Bond Connection Kits</a></li>
               <li><a href="/#collection">The Comfort Bond Collection</a></li>
             </ul>
           </div>

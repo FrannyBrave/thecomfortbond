@@ -310,7 +310,7 @@ const Index = () => {
         {/* BONDING & CONNECTION KITS */}
         <section id="kits" style={{ background: C.creamDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-            <div className="section-tag">Bonding &amp; Connection Kits</div>
+            <div className="section-tag">The Comfort Bond Connection Kits</div>
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
               Five themed kits, built around <em style={{ color: C.clay }}>familiar life moments.</em>
             </h2>
@@ -374,7 +374,7 @@ const Index = () => {
             <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <img
                 src={comfortBondCollectionMockup}
-                alt="The Comfort Bond Collection — all five Bonding & Connection Kits"
+                alt="The Comfort Bond Collection — all five The Comfort Bond Connection Kits"
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 loading="lazy"
               />
@@ -387,7 +387,7 @@ const Index = () => {
                 The Comfort Bond <em style={{ color: C.sand }}>Collection.</em>
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.78)", margin: "0 0 1.5rem" }}>
-                All five Bonding &amp; Connection Kits in one library — every theme, every era,
+                All five The Comfort Bond Connection Kits in one library — every theme, every era,
                 every conversation worth having. For the family ready to commit to a full season
                 of meaningful moments together.
               </p>
@@ -539,7 +539,7 @@ const Index = () => {
             <h4>Shop</h4>
             <ul>
               <li><a href="#blueprint">The Connection Season: Summer Edition</a></li>
-              <li><a href="#kits">Bonding &amp; Connection Kits</a></li>
+              <li><a href="#kits">The Comfort Bond Connection Kits</a></li>
               <li><a href="#collection">The Comfort Bond Collection</a></li>
             </ul>
           </div>
