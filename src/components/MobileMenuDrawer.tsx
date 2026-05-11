@@ -104,24 +104,26 @@ export const MobileMenuDrawer = ({
             })}
           </ul>
 
-          <div className="mt-6 pt-4 border-t border-sage/15 px-1">
-            <p className="font-sans text-[11px] uppercase tracking-[0.14em] text-forest/40 mb-2 px-2">
-              More
-            </p>
-            <ul className="flex flex-col">
-              {SECONDARY_LINKS.map((link) => (
-                <li key={link.href}>
-                  <button
-                    onClick={() => go(link.href)}
-                    className="w-full text-left font-sans text-sm text-forest/80 hover:text-terracotta transition-colors px-2 py-2"
-                    type="button"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {SECONDARY_LINKS.length > 0 && (
+            <div className="mt-6 pt-4 border-t border-sage/15 px-1">
+              <p className="font-sans text-[11px] uppercase tracking-[0.14em] text-forest/40 mb-2 px-2">
+                More
+              </p>
+              <ul className="flex flex-col">
+                {SECONDARY_LINKS.map((link) => (
+                  <li key={link.href}>
+                    <button
+                      onClick={() => go(link.href)}
+                      className="w-full text-left font-sans text-sm text-forest/80 hover:text-terracotta transition-colors px-2 py-2"
+                      type="button"
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </nav>
 
         <div className="border-t border-sage/15 p-4 bg-cream">
@@ -129,7 +131,7 @@ export const MobileMenuDrawer = ({
             variant="cta"
             size="lg"
             className="w-full"
-            onClick={() => go("/kits")}
+            onClick={() => go("/shop")}
           >
             Shop Now
           </Button>
