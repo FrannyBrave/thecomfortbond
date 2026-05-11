@@ -159,11 +159,11 @@ const OurStory = () => {
             </p>
             <ul className="story-list">
               <li>
-                <a href="https://the-comfort-bond-2.kit.com/392c82fa32" target="_blank" rel="noopener noreferrer" className="story-link">Download the free Coffee &amp; Connection Sampler</a>
+                <a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer" className="story-link">Download the free Coffee &amp; Connection Sampler</a>
                 {" "}<span className="story-list-note">— one good question for your next call.</span>
               </li>
               <li>
-                <a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer" className="story-link">Download the free Connection Companion</a>
+                <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="story-link">Download the free Connection Companion</a>
                 {" "}<span className="story-list-note">— a gentle weekly rhythm for the season ahead.</span>
               </li>
             </ul>
@@ -220,7 +220,7 @@ const OurStory = () => {
               The free Coffee &amp; Connection Sampler is a soft, immediate place to start — one printable kit you can use on the next call or visit.
             </p>
             <a
-              href="https://the-comfort-bond-2.kit.com/392c82fa32"
+              href="https://the-comfort-bond-2.kit.com/3dfe0171af"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -254,8 +254,8 @@ const OurStory = () => {
           <div className="footer-col">
             <h4>Start free</h4>
             <ul>
-              <li><a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer">Free Connection Companion</a></li>
-              <li><a href="https://the-comfort-bond-2.kit.com/392c82fa32" target="_blank" rel="noopener noreferrer">Free Coffee &amp; Connection Sampler</a></li>
+              <li><a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer">Free Connection Companion</a></li>
+              <li><a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer">Free Coffee &amp; Connection Sampler</a></li>
             </ul>
           </div>
           <div className="footer-col">
