@@ -315,7 +315,7 @@ const Index = () => {
               Five themed kits, built around <em style={{ color: C.clay }}>familiar life moments.</em>
             </h2>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, color: C.textMid, lineHeight: 1.75, maxWidth: 680, margin: "0 0 1.5rem" }}>
-              Each Bonding &amp; Connection Kit is built around a familiar life theme your loved
+              Each Comfort Bond Connection Kit is built around a familiar life theme your loved
               one will already know in their bones — kitchens, gardens, road trips, music,
               handmade work, and everyday memories. Make the next call or visit feel less
               awkward, more personal, and more worth remembering.
