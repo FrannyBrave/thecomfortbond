@@ -272,7 +272,7 @@ const Index = () => {
             <div>
               <div className="section-tag">Flagship · The Connection Season — Summer Edition</div>
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
-                Turn July through September into a <em style={{ color: C.clay }}>gentle rhythm of meaningful calls, visits, and shared memories.</em>
+                Turn July through September into a <em style={{ color: C.clay }}>rhythm of meaningful calls, visits, and shared memories.</em>
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
                 Made for the daughter, son, or grandchild who wants the next conversation to feel
