@@ -246,16 +246,18 @@ const Index = () => {
                 I built this for the call I was always grateful I made.
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
-                I built The Comfort Bond after losing my grandmother in May of 2025 — my only
-                grandparent left, and the person I loved most in the world. I lived far from her,
-                I was caught up in my own life, and I couldn't visit the way I wanted to. But I
-                called her, and I made sure she always knew how loved she was. That is the part
-                that holds.
+                I built The Comfort Bond after losing my grandmother in May of 2024 — my only
+                grandparent left, and one of the most important people in my life.
+              </p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
+                I lived far from her. I could not visit the way I wanted to. But I called her, and
+                I made sure she always knew how deeply she was loved. That is the part I am
+                grateful for. That is the part that holds.
               </p>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                The Comfort Bond is the brand I wish I had had when I was wondering what to say
-                on the next phone call — for grandchildren, adult children, and anyone loving
-                someone across the country or across the room.
+                The Comfort Bond is the brand I wish I had when I wanted our calls to feel deeper
+                than “How are you?” — for daughters, sons, grandchildren, and anyone who loves a
+                parent or grandparent, across the country or across the room.
               </p>
               <a href="/our-story" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
                 Read the full story →
