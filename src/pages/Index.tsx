@@ -274,23 +274,15 @@ const Index = () => {
                 Turn July through September into a <em style={{ color: C.clay }}>rhythm of meaningful calls, visits, and shared memories.</em>
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                Made for the daughter, son, or grandchild who wants the next conversation to feel
-                deeper than &ldquo;How are you?&rdquo; — for phone calls, video calls, or in-person visits.
+                A 41-page seasonal companion for the daughter, son, or grandchild who wants the next
+                conversation to feel deeper than &ldquo;How are you?&rdquo; — with 13 themed weeks, a
+                letter from the founder, and pages for the stories you don&rsquo;t want to lose.
               </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.5rem", display: "grid", gap: "0.5rem" }}>
-                {[
-                  "13 themed weeks of summer bonding prompts",
-                  "Weekly planning pages for calls, visits, and shared moments",
-                  "\u201CWhat They Told Me\u201D — legacy pages for the recipes, sayings, and stories worth keeping",
-                ].map((b, i) => (
-                  <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: C.textMid, lineHeight: 1.6 }}>
-                    <span style={{ width: 18, height: 18, borderRadius: "50%", background: "rgba(198,123,92,0.12)", color: C.clay, fontSize: 11, display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>✓</span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
-              <a href="#collection" className="btn-primary">
-                View The Connection Season: Summer Edition
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 600, color: C.forestDark, margin: "0 0 1.5rem", letterSpacing: "0.02em" }}>
+                $34 · Summer Edition
+              </p>
+              <a href="/shop" className="btn-primary">
+                View The Summer Edition
                 <ArrowSvg />
               </a>
             </div>
