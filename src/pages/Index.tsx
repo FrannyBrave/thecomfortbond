@@ -1,6 +1,7 @@
 import React from "react";
 import logoImg from "@/assets/the-comfort-bond-logo.webp";
-import heroPhoto from "@/assets/blueprint-hero-flatlay.png";
+import heroPhoto from "@/assets/hero-family-connection.png";
+import finalCtaPhoto from "@/assets/final-cta-family-table.png";
 import kitRememberWhen from "@/assets/kit-remember-when.jpg";
 import kitKitchenTable from "@/assets/kit-kitchen-table.jpg";
 import kitPlacesWeveBeen from "@/assets/kit-places-weve-been.jpg";
@@ -419,6 +420,37 @@ const Index = () => {
           </div>
         </section>
 
+        {/* FINAL CTA */}
+        <section className="final-cta-section">
+          <div className="final-cta-inner final-cta-inner-with-image">
+            <div className="fcs-image-wrap">
+              <img
+                src={finalCtaPhoto}
+                alt="Adult daughter and her elderly mother sharing a Comfort Bond conversation card at the kitchen table"
+                className="fcs-image"
+                loading="lazy"
+              />
+            </div>
+            <div className="fcs-content">
+              <div className="fcs-eyebrow">The Comfort Bond™ · For families who want the time to matter</div>
+              <h2 className="fcs-title">
+                Your next call or visit can <em>feel different.</em>
+              </h2>
+              <p className="fcs-desc">
+                Start with one simple guide made to help you create a more meaningful moment with
+                someone you love.
+              </p>
+              <div className="fcs-actions">
+                <a href="/blueprint" className="btn-primary">
+                  Download the Free Connection Companion
+                  <ArrowSvg />
+                </a>
+                <a href="/free-sampler" className="btn-secondary">Try the Free Coffee & Connection Sampler</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* THREE PILLARS */}
         <section style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
@@ -440,27 +472,6 @@ const Index = () => {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FINAL CTA */}
-        <section className="final-cta-section">
-          <div className="final-cta-inner">
-            <div className="fcs-eyebrow">The Comfort Bond™ · For families who want the time to matter</div>
-            <h2 className="fcs-title">
-              Your next call or visit can <em>feel different.</em>
-            </h2>
-            <p className="fcs-desc">
-              Start with one simple guide made to help you create a more meaningful moment with
-              someone you love.
-            </p>
-            <div className="fcs-actions">
-              <a href="/blueprint" className="btn-primary">
-                Download the Free Connection Companion
-                <ArrowSvg />
-              </a>
-              <a href="/free-sampler" className="btn-secondary">Try the Free Coffee & Connection Sampler</a>
             </div>
           </div>
         </section>
