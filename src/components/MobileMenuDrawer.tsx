@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Menu, Heart, Layers, Package, Gift, ArrowRight } from "lucide-react";
+import { Menu, ShoppingBag, Heart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -12,36 +12,20 @@ import {
 
 const PRIMARY_LINKS = [
   {
-    label: "For Families",
-    description: "Mother's Day visit guide & memory care support",
-    href: "/family-visits",
+    label: "Shop",
+    description: "Browse The Connection Season and the Comfort Bond Collection",
+    href: "/shop",
+    icon: ShoppingBag,
+  },
+  {
+    label: "Our Story",
+    description: "The founder's story behind The Comfort Bond",
+    href: "/about",
     icon: Heart,
-  },
-  {
-    label: "Blueprint Pro",
-    description: "13-week activity curriculum for facilities",
-    href: "/blueprint-pro",
-    icon: Layers,
-  },
-  {
-    label: "Engagement Kits",
-    description: "Print-ready themed kits — shop the full collection",
-    href: "/kits",
-    icon: Package,
-  },
-  {
-    label: "Free Sampler",
-    description: "Try a kit free — no credit card required",
-    href: "/free-sampler",
-    icon: Gift,
   },
 ] as const;
 
-const SECONDARY_LINKS = [
-  { label: "Resources", href: "/resources" },
-  { label: "Our Story", href: "/about" },
-  { label: "Free Blueprint", href: "/blueprint" },
-];
+const SECONDARY_LINKS: { label: string; href: string }[] = [];
 
 interface MobileMenuDrawerProps {
   /** Optional className for the trigger button (positioning, color overrides). */
@@ -120,24 +104,26 @@ export const MobileMenuDrawer = ({
             })}
           </ul>
 
-          <div className="mt-6 pt-4 border-t border-sage/15 px-1">
-            <p className="font-sans text-[11px] uppercase tracking-[0.14em] text-forest/40 mb-2 px-2">
-              More
-            </p>
-            <ul className="flex flex-col">
-              {SECONDARY_LINKS.map((link) => (
-                <li key={link.href}>
-                  <button
-                    onClick={() => go(link.href)}
-                    className="w-full text-left font-sans text-sm text-forest/80 hover:text-terracotta transition-colors px-2 py-2"
-                    type="button"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {SECONDARY_LINKS.length > 0 && (
+            <div className="mt-6 pt-4 border-t border-sage/15 px-1">
+              <p className="font-sans text-[11px] uppercase tracking-[0.14em] text-forest/40 mb-2 px-2">
+                More
+              </p>
+              <ul className="flex flex-col">
+                {SECONDARY_LINKS.map((link) => (
+                  <li key={link.href}>
+                    <button
+                      onClick={() => go(link.href)}
+                      className="w-full text-left font-sans text-sm text-forest/80 hover:text-terracotta transition-colors px-2 py-2"
+                      type="button"
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </nav>
 
         <div className="border-t border-sage/15 p-4 bg-cream">
@@ -145,7 +131,7 @@ export const MobileMenuDrawer = ({
             variant="cta"
             size="lg"
             className="w-full"
-            onClick={() => go("/kits")}
+            onClick={() => go("/shop")}
           >
             Shop Now
           </Button>

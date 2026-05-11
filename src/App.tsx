@@ -13,6 +13,7 @@ const Terms = lazy(() => import("./pages/Terms"));
 const Shop = lazy(() => import("./pages/Shop"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const OurStory = lazy(() => import("./pages/OurStory"));
 
 const queryClient = new QueryClient();
 
@@ -30,12 +31,12 @@ function AppRoutes() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/about" element={<OurStory />} />
         {/* Deactivated rebrand legacy routes — redirect to home */}
         <Route path="/resources" element={<Navigate to="/" replace />} />
         <Route path="/resources/:slug" element={<Navigate to="/" replace />} />
         <Route path="/blog/:slug" element={<Navigate to="/" replace />} />
         <Route path="/blog/mothers-day-memory-care-family-guide" element={<Navigate to="/" replace />} />
-        <Route path="/about" element={<Navigate to="/" replace />} />
         <Route path="/blueprint" element={<Navigate to="/" replace />} />
         <Route path="/blueprint-test" element={<Navigate to="/" replace />} />
         <Route path="/blueprint-pdf" element={<Navigate to="/" replace />} />

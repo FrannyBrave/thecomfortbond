@@ -23,9 +23,9 @@ export const FooterSection = () => {
   };
 
   const productLinks = [
-    { label: "Engagement Kits", path: "/kits" },
-    { label: "Blueprint Pro", path: "/blueprint-pro" },
-    { label: "For Families", path: "/family-visits" },
+    { label: "Shop", path: "/shop" },
+    { label: "The Connection Season", path: "/shop#featured" },
+    { label: "The Comfort Bond Collection", path: "/shop" },
   ];
 
   return (
@@ -40,7 +40,7 @@ export const FooterSection = () => {
           >
             <img
               src={logo}
-              alt="The Comfort Bond logo — dignified engagement activities for senior living"
+              alt="The Comfort Bond logo"
               className="w-32 md:w-36 h-auto"
             />
           </button>
@@ -53,7 +53,7 @@ export const FooterSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Products Column */}
           <div className="text-center md:text-left">
-            <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Products</h4>
+            <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Shop</h4>
             <div className="flex flex-col gap-2">
               {productLinks.map((link) => (
                 <button
@@ -67,57 +67,30 @@ export const FooterSection = () => {
             </div>
           </div>
 
-          {/* Resources Column */}
+          {/* Company Column */}
           <div className="text-center md:text-left">
-            <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Resources</h4>
+            <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Company</h4>
             <div className="flex flex-col gap-2">
-              <a
-                href="/blueprint"
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
-                Free Blueprint
+              <a href="/about" className="text-sm text-forest/80 hover:text-terracotta transition-colors">
+                Our Story
               </a>
-              <a
-                href="/free-sampler"
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
-                Free Sampler
-              </a>
-              <a
-                href="/resources"
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
-                Blog
+              <a href="mailto:hello@thecomfortbond.com" className="text-sm text-forest/80 hover:text-terracotta transition-colors">
+                hello@thecomfortbond.com
               </a>
             </div>
           </div>
 
-          {/* Contact & Legal Column */}
+          {/* Legal Column */}
           <div className="text-center md:text-left">
-            <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Company</h4>
+            <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Legal</h4>
             <div className="flex flex-col gap-2">
-              <a
-                href="mailto:hello@thecomfortbond.com"
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
-                hello@thecomfortbond.com
-              </a>
-              <a
-                href="/privacy-policy"
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
+              <a href="/privacy-policy" className="text-sm text-forest/80 hover:text-terracotta transition-colors">
                 Privacy Policy
               </a>
-              <a
-                href="/terms"
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
+              <a href="/terms" className="text-sm text-forest/80 hover:text-terracotta transition-colors">
                 Terms
               </a>
-              <a
-                href="/refund-policy"
-                className="text-sm text-forest/80 hover:text-terracotta transition-colors"
-              >
+              <a href="/refund-policy" className="text-sm text-forest/80 hover:text-terracotta transition-colors">
                 Refund Policy
               </a>
             </div>
