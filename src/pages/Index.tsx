@@ -307,7 +307,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* MEMORY & CONNECTION KITS */}
+        {/* BONDING & CONNECTION KITS */}
         <section id="kits" style={{ background: C.creamDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
             <div className="section-tag">Bonding &amp; Connection Kits</div>
@@ -387,7 +387,7 @@ const Index = () => {
                 The Comfort Bond <em style={{ color: C.sand }}>Collection.</em>
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.78)", margin: "0 0 1.5rem" }}>
-                The complete family connection toolkit — all five Memory &amp; Connection Kits plus
+                The complete family connection toolkit — all five Bonding &amp; Connection Kits plus
                 bonus guidance for families who want a fuller way to connect, remember, and
                 preserve stories across a season.
               </p>
@@ -539,7 +539,7 @@ const Index = () => {
             <h4>Shop</h4>
             <ul>
               <li><a href="#blueprint">The Connection Season: Summer Edition</a></li>
-              <li><a href="#kits">Memory &amp; Connection Kits</a></li>
+              <li><a href="#kits">Bonding &amp; Connection Kits</a></li>
               <li><a href="#collection">The Comfort Bond Collection</a></li>
             </ul>
           </div>
