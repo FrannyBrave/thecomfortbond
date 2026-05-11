@@ -119,7 +119,7 @@ const Index = () => {
             <div className="hero-content">
               <div className="hero-eyebrow">
                 <span className="hero-eyebrow-dot" />
-                For families who love someone aging
+                For the people who love someone growing older
               </div>
               <h1>
                 For the daughter, son, or grandchild who wishes the conversations <em>went deeper.</em>
