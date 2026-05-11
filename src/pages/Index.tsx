@@ -187,7 +187,7 @@ const Index = () => {
                   prompt: "I want to try a simple activity with my loved one.",
                   product: "The Coffee & Connection Sampler",
                   cta: "Try the free sampler",
-                  href: "/free-sampler",
+                  href: "https://the-comfort-bond-2.kit.com/392c82fa32",
                   badge: "Free",
                 },
                 {
@@ -201,6 +201,7 @@ const Index = () => {
                 <a
                   key={i}
                   href={p.href}
+                  {...(p.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   style={{
                     background: "#fff",
                     border: `1px solid ${C.border}`,
@@ -411,7 +412,7 @@ const Index = () => {
                   title: "The Coffee & Connection Sampler",
                   desc: "A free mini connection kit with conversation prompts, visual memory cards, and a gentle word game built around familiar morning rituals.",
                   cta: "Try the Free Coffee & Connection Sampler",
-                  href: "/free-sampler",
+                  href: "https://the-comfort-bond-2.kit.com/392c82fa32",
                   imgLabel: "Coffee & Connection Sampler mockup",
                 },
               ].map((f, i) => (
@@ -443,7 +444,7 @@ const Index = () => {
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: 0 }}>
                       {f.desc}
                     </p>
-                    <a href={f.href} className="btn-primary" style={{ alignSelf: "flex-start", marginTop: "0.5rem" }}>
+                    <a href={f.href} {...(f.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="btn-primary" style={{ alignSelf: "flex-start", marginTop: "0.5rem" }}>
                       {f.cta}
                       <ArrowSvg />
                     </a>
@@ -479,7 +480,7 @@ const Index = () => {
                   Download the Free Connection Companion
                   <ArrowSvg />
                 </a>
-                <a href="/free-sampler" className="btn-secondary">Try the Free Coffee & Connection Sampler</a>
+                <a href="https://the-comfort-bond-2.kit.com/392c82fa32" target="_blank" rel="noopener noreferrer" className="btn-secondary">Try the Free Coffee & Connection Sampler</a>
               </div>
             </div>
           </div>
@@ -522,7 +523,7 @@ const Index = () => {
             <h4>Start free</h4>
             <ul>
               <li><a href="/blueprint">Free Connection Companion</a></li>
-              <li><a href="/free-sampler">Free Coffee & Connection Sampler</a></li>
+              <li><a href="https://the-comfort-bond-2.kit.com/392c82fa32" target="_blank" rel="noopener noreferrer">Free Coffee & Connection Sampler</a></li>
             </ul>
           </div>
           <div className="footer-col">
