@@ -21,6 +21,7 @@ const BlueprintProDocument = lazy(() => import("./pages/BlueprintProDocument"));
 const MorningSamplerLandingPage = lazy(() => import("./components/MorningSamplerLandingPage"));
 const BlueprintProSalesPage = lazy(() => import("./components/BlueprintProSalesPage"));
 const Kits = lazy(() => import("./pages/Kits"));
+const Shop = lazy(() => import("./pages/Shop"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const BundleAccess = lazy(() => import("./pages/BundleAccess"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
@@ -58,6 +59,7 @@ function AppRoutes() {
           <Route path="/blueprint-pro-pdf" element={<BlueprintProDocument />} />
           <Route path="/blueprint-pro" element={<BlueprintProSalesPage />} />
           <Route path="/kits" element={<Kits />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/bundle-access" element={<BundleAccess />} />
           <Route path="/thank-you" element={<ThankYouConnectionKit />} />
