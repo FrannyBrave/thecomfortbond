@@ -314,11 +314,28 @@ const Index = () => {
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
               Five themed kits, built around <em style={{ color: C.clay }}>familiar life moments.</em>
             </h2>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, color: C.textMid, lineHeight: 1.75, maxWidth: 680, margin: "0 0 2.5rem" }}>
-              Each Bonding &amp; Connection Kit is built around a familiar life theme and gives
-              you simple ways to connect through conversation prompts, visual memory sparks,
-              musical memory prompts, BINGO, word link and trivia time.
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, color: C.textMid, lineHeight: 1.75, maxWidth: 680, margin: "0 0 1.5rem" }}>
+              Each Bonding &amp; Connection Kit is built around a familiar life theme your loved
+              one will already know in their bones — kitchens, gardens, road trips, music,
+              handmade work, and everyday memories. Inside every kit, you'll find conversation
+              cards, visual memory sparks, trivia, word games, BINGO, musical memory prompts, and
+              reflection space so the next call or visit can feel less awkward, more personal,
+              and more worth remembering.
             </p>
+            <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2.5rem", maxWidth: 680, display: "grid", gap: "0.5rem" }}>
+              {[
+                "Conversation prompts that spark real stories",
+                "Visual cards for recognition and memory",
+                "BINGO, trivia, word games, and music prompts",
+                "Reflection space to capture what they shared",
+                "Works for phone calls, video calls, and in-person visits",
+              ].map((item, i) => (
+                <li key={i} style={{ fontFamily: "var(--font-sans)", fontSize: 15, color: C.textMid, lineHeight: 1.6, display: "flex", gap: "0.6rem" }}>
+                  <span style={{ color: C.clay, fontWeight: 600 }}>✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.25rem" }}>
               {KITS.map((k, i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 16, overflow: "hidden", display: "flex", flexDirection: "column" }}>
@@ -346,7 +363,7 @@ const Index = () => {
             </div>
             <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
               <a href="#collection" className="btn-primary" style={{ display: "inline-flex" }}>
-                Explore the Kits
+                Find the Kit That Fits Your Loved One
                 <ArrowSvg />
               </a>
             </div>
