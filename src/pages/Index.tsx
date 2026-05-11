@@ -10,6 +10,7 @@ import kitHandsThatMadeIt from "@/assets/kit-hands-that-made-it.jpg";
 import connectionCompanionMockup from "@/assets/connection-companion-mockup.png";
 import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-mockup.png";
 import connectionSeasonSummerMockup from "@/assets/connection-season-summer-mockup.png";
+import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-mockup.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 
