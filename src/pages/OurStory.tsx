@@ -36,9 +36,7 @@ const OurStory = () => {
           <ul className="nav-links">
             <li><a href="/about">Our Story</a></li>
             <li><a href="/#kits">Connection Kits</a></li>
-            <li><a href="/#blueprint" className="nav-blueprint">The Connection Season: Summer Edition</a></li>
-            <li><a href="/blueprint" className="nav-blueprint">Free Connection Companion</a></li>
-            <li><a href="/#collection" className="nav-cta">The Collection</a></li>
+            <li><a href="/shop" className="nav-cta">Shop</a></li>
           </ul>
           <MobileMenuDrawer />
         </nav>
