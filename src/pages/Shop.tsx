@@ -79,6 +79,7 @@ const KITS: Kit[] = [
     ],
     cta: "Pull Up a Chair",
     image: kitKitchenTable,
+    badge: { label: "Bestseller", tone: "clay" },
   },
   {
     id: "garden-memories-kit",
