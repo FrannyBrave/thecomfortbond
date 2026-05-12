@@ -1057,10 +1057,11 @@
   }
   /* Tighten H1 + vertical rhythm */
   .tcb-hero h1 {
-    font-size: clamp(2rem, 8vw, 2.6rem);
-    line-height: 1.1;
+    font-size: clamp(1.6rem, 6vw, 2.1rem);
+    line-height: 1.2;
     margin-bottom: 1rem;
   }
+  .tcb-hero h1 .hero-h1-sub { font-size: 0.7em; margin-top: 0.5rem; }
   /* Hide eyebrow on mobile */
   .hero-eyebrow { display: none; }
   .hero-bundle-pill { margin-bottom: 1rem; }
