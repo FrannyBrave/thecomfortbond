@@ -329,6 +329,9 @@ const Index = () => {
                     <div style={{ fontFamily: "var(--font-sans)", fontSize: 12, color: C.textMid, lineHeight: 1.5 }}>
                       {k.theme}
                     </div>
+                    <div style={{ fontFamily: "var(--font-serif)", fontSize: 14, fontWeight: 600, color: C.clay, marginTop: "0.25rem" }}>
+                      $34
+                    </div>
                   </div>
                 </div>
               ))}
