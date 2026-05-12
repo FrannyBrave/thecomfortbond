@@ -275,6 +275,9 @@ const Shop = () => {
               <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(SUMMER_EDITION_PRICE_ID)}>
                 Get the Summer Edition <ArrowSvg />
               </button>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
+                Instant download · 14-day refund · Secure Paddle checkout
+              </p>
             </div>
           </div>
         </section>
