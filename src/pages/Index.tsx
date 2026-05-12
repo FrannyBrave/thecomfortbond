@@ -515,7 +515,7 @@ const Index = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <span className="footer-copy">© 2026 The Comfort Bond™ · Built in memory of a grandmother loved deeply.</span>
+          <span className="footer-copy">© 2026 The Comfort Bond™ ·</span>
           <a href="mailto:hello@thecomfortbond.com" className="footer-email">hello@thecomfortbond.com</a>
         </div>
       </footer>
