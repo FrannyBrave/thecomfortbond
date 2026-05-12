@@ -261,9 +261,9 @@ const Shop = () => {
                   </li>
                 ))}
               </ul>
-              <a href="/#blueprint" className="btn-primary">
-                View the Summer Edition <ArrowSvg />
-              </a>
+              <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(SUMMER_EDITION_PRICE_ID)}>
+                Get the Summer Edition <ArrowSvg />
+              </button>
             </div>
           </div>
         </section>
