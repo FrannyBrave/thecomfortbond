@@ -30,7 +30,7 @@ const OurStory = () => {
             <img src={logoImg} alt="The Comfort Bond logo — meaningful family connection with aging parents and grandparents" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }} />
             <div className="nav-brand">
               <span className="nav-brand-name">The Comfort Bond™</span>
-              <span className="nav-brand-tag">Gentle prompts, bonding kits, and connection rituals</span>
+              <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>
             </div>
           </a>
           <ul className="nav-links">
