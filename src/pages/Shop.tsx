@@ -405,6 +405,9 @@ const Shop = () => {
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: 0 }}>
                 <em>Things people ask before they buy.</em>
               </h2>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: C.textMid, margin: "1rem auto 0", maxWidth: 540, lineHeight: 1.6 }}>
+                Every purchase includes instant download, a 14-day refund window, and secure Paddle checkout. If anything isn't right, email <a href="mailto:hello@thecomfortbond.com" style={{ color: C.clay }}>hello@thecomfortbond.com</a>.
+              </p>
             </div>
             <div style={{ display: "grid", gap: "0.75rem" }}>
               {FAQS.map((f, i) => {
