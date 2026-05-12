@@ -1167,3 +1167,9 @@ textarea:focus-visible,
   transition: opacity 0.2s;
 }
 .article-body a:hover { opacity: 0.8; }
+
+@media (max-width: 820px) {
+  .shop-hero-grid { grid-template-columns: 1fr !important; text-align: center; }
+  .shop-hero-grid > div:first-child p { margin-left: auto !important; margin-right: auto !important; }
+  .shop-hero-grid > div:last-child { max-width: 460px; margin: 0 auto; width: 100%; }
+}
