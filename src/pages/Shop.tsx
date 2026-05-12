@@ -229,7 +229,7 @@ const Shop = () => {
                 <em>Choose how you'll start the next conversation.</em>
               </h1>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,0.78)", maxWidth: 560, margin: 0 }}>
-                Every kit, every season, every quiet way to feel closer to the people you love — across the country, across the room, and across the time you still have.
+                Every kit is a quiet way to feel closer to the people you love — across the country, across the room, and the time you still have together.
               </p>
             </div>
             <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", boxShadow: "0 30px 60px -20px rgba(0,0,0,0.45)" }}>
