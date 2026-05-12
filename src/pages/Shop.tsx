@@ -221,14 +221,24 @@ const Shop = () => {
       <main id="main">
         {/* HERO */}
         <section style={{ background: C.forestDark, color: "#fff", padding: "clamp(5rem,11vw,9rem) clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5rem)" }}>
-          <div style={{ maxWidth: 880, margin: "0 auto", textAlign: "center" }}>
-            <Eyebrow light>The Shop</Eyebrow>
-            <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem,4.5vw,3.2rem)", fontWeight: 600, lineHeight: 1.15, color: "#fff", margin: "0 0 1.25rem" }}>
-              <em>Choose how you'll start the next conversation.</em>
-            </h1>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,0.78)", maxWidth: 640, margin: "0 auto" }}>
-              Every kit, every season, every quiet way to feel closer to the people you love — across the country, across the room, and across the time you still have.
-            </p>
+          <div className="shop-hero-grid" style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center" }}>
+            <div>
+              <Eyebrow light>The Shop</Eyebrow>
+              <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem,4.5vw,3.2rem)", fontWeight: 600, lineHeight: 1.15, color: "#fff", margin: "0 0 1.25rem" }}>
+                <em>Choose how you'll start the next conversation.</em>
+              </h1>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,0.78)", maxWidth: 560, margin: 0 }}>
+                Every kit, every season, every quiet way to feel closer to the people you love — across the country, across the room, and across the time you still have.
+              </p>
+            </div>
+            <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", boxShadow: "0 30px 60px -20px rgba(0,0,0,0.45)" }}>
+              <img
+                src={shopHeroImage}
+                alt="A daughter and her mother sharing a quiet moment at the kitchen table with The Garden Memories Kit conversation cards and keepsake journal"
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                loading="eager"
+              />
+            </div>
           </div>
         </section>
 
