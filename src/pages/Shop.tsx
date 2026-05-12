@@ -62,6 +62,7 @@ const KITS: Kit[] = [
     ],
     cta: "Bring the Decades Home",
     image: kitRememberWhen,
+    badge: { label: "Start here", tone: "forest" },
   },
   {
     id: "kitchen-table-memories-kit",
