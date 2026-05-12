@@ -43,6 +43,7 @@ type Kit = {
   cta: string;
   image: string;
   priceId: string;
+  badge?: { label: string; tone: "forest" | "clay" };
 };
 
 const KITS: Kit[] = [
