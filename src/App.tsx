@@ -43,7 +43,7 @@ function AppRoutes() {
         <Route path="/blueprint-pro" element={<Navigate to="/" replace />} />
         <Route path="/blueprint-pro-pdf" element={<Navigate to="/" replace />} />
         <Route path="/free-sampler" element={<Navigate to="/" replace />} />
-        <Route path="/kits" element={<Navigate to="/shop" replace />} />
+        <Route path="/kits" element={<Shop />} />
         <Route path="/bundle-access" element={<Navigate to="/" replace />} />
         <Route path="/thank-you" element={<Navigate to="/" replace />} />
         <Route path="/thank-you-mothers-day" element={<Navigate to="/" replace />} />
