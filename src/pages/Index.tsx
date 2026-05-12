@@ -259,7 +259,7 @@ const Index = () => {
                 than “How are you?” — for daughters, sons, grandchildren, and anyone who loves a
                 parent or grandparent, across the country or across the room.
               </p>
-              <a href="/our-story" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
+              <a href="/about" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
                 Read the full story →
               </a>
             </div>
@@ -286,11 +286,14 @@ const Index = () => {
                 View The Summer Edition
                 <ArrowSvg />
               </a>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
+                $34 · Instant download · 14-day refund · Secure Paddle checkout
+              </p>
             </div>
             <div style={{ aspectRatio: "4 / 5", background: C.cream, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <img
                 src={connectionSeasonSummerMockup}
-                alt="The Connection Season: Summer Edition mockup"
+                alt="The Connection Season: Summer Edition — 13-week family connection planner cover"
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 loading="lazy"
               />
@@ -311,7 +314,7 @@ const Index = () => {
                   {k.image ? (
                     <img
                       src={k.image}
-                      alt={k.name}
+                      alt={`${k.name} — ${k.theme} — Comfort Bond Connection Kit cover`}
                       loading="lazy"
                       style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", display: "block" }}
                     />
@@ -326,6 +329,9 @@ const Index = () => {
                     <div style={{ fontFamily: "var(--font-sans)", fontSize: 12, color: C.textMid, lineHeight: 1.5 }}>
                       {k.theme}
                     </div>
+                    <div style={{ fontFamily: "var(--font-serif)", fontSize: 14, fontWeight: 600, color: C.clay, marginTop: "0.25rem" }}>
+                      $34
+                    </div>
                   </div>
                 </div>
               ))}
@@ -335,6 +341,9 @@ const Index = () => {
                 Find the Kit That Fits Your Loved One
                 <ArrowSvg />
               </a>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
+                $34 each · Instant download · 14-day refund
+              </p>
             </div>
           </div>
         </section>

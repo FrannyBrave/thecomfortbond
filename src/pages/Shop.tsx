@@ -10,6 +10,7 @@ import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-mockup
 import shopHeroImage from "@/assets/shop-hero-garden-memories.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { openPaddleCheckout } from "@/lib/paddle";
 
 const SUMMER_EDITION_PRICE_ID = "pri_01kpagj5jtaxcnkbtjctq616k4";
@@ -275,6 +276,9 @@ const Shop = () => {
               <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(SUMMER_EDITION_PRICE_ID)}>
                 Get the Summer Edition <ArrowSvg />
               </button>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
+                Instant download · 14-day refund · Secure Paddle checkout
+              </p>
             </div>
           </div>
         </section>
@@ -345,6 +349,9 @@ const Shop = () => {
                     <button type="button" className="btn-primary" style={{ alignSelf: "flex-start", border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(kit.priceId)}>
                       {kit.cta} <ArrowSvg />
                     </button>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: 12.5, color: C.textMid, margin: "0.6rem 0 0", opacity: 0.8 }}>
+                      Instant download · 14-day refund · Secure Paddle checkout
+                    </p>
                   </div>
                 </article>
               );
@@ -384,6 +391,9 @@ const Shop = () => {
               <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(COLLECTION_PRICE_ID)}>
                 Get the Collection <ArrowSvg />
               </button>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "rgba(255,255,255,0.7)", margin: "0.75rem 0 0" }}>
+                Instant download · 14-day refund · Secure Paddle checkout
+              </p>
             </div>
           </div>
         </section>
@@ -396,6 +406,9 @@ const Shop = () => {
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: 0 }}>
                 <em>Things people ask before they buy.</em>
               </h2>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: C.textMid, margin: "1rem auto 0", maxWidth: 540, lineHeight: 1.6 }}>
+                Every purchase includes instant download, a 14-day refund window, and secure Paddle checkout. If anything isn't right, email <a href="mailto:hello@thecomfortbond.com" style={{ color: C.clay }}>hello@thecomfortbond.com</a>.
+              </p>
             </div>
             <div style={{ display: "grid", gap: "0.75rem" }}>
               {FAQS.map((f, i) => {
@@ -503,6 +516,7 @@ const Shop = () => {
         </div>
       </footer>
       <CookieConsent />
+      <StickyMobileCTA href="#collection" label="Shop the Collection — $127" showAfter={600} />
 
       <style>{`
         @media (max-width: 820px) {
