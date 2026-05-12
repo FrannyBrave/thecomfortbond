@@ -207,7 +207,7 @@ const Shop = () => {
             />
             <div className="nav-brand">
               <span className="nav-brand-name">The Comfort Bond™</span>
-              <span className="nav-brand-tag">Gentle prompts, bonding kits, and connection rituals</span>
+              <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>
             </div>
           </a>
           <ul className="nav-links">
