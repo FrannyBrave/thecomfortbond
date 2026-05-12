@@ -180,7 +180,7 @@ const Eyebrow = ({ children, light = false }: { children: React.ReactNode; light
 );
 
 const Shop = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     document.title = "Shop — The Comfort Bond Connection Kits, Seasonal Planners & The Collection";
@@ -221,21 +221,21 @@ const Shop = () => {
 
       <main id="main">
         {/* HERO */}
-        <section style={{ background: C.forestDark, color: "#fff", padding: "clamp(5rem,11vw,9rem) clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5rem)" }}>
-          <div className="shop-hero-grid" style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center" }}>
+        <section style={{ background: C.forestDark, color: "#fff", padding: "clamp(3.5rem,11vw,9rem) clamp(1.5rem,5vw,4rem) clamp(2rem,6vw,5rem)" }}>
+          <div className="shop-hero-grid" style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: "clamp(1.5rem,5vw,4rem)", alignItems: "center" }}>
             <div>
               <Eyebrow light>The Shop</Eyebrow>
-              <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem,4.5vw,3.2rem)", fontWeight: 600, lineHeight: 1.15, color: "#fff", margin: "0 0 1.25rem" }}>
+              <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.6rem,4.5vw,3.2rem)", fontWeight: 600, lineHeight: 1.15, color: "#fff", margin: "0 0 1rem" }}>
                 <em>Choose how you'll start the next conversation.</em>
               </h1>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,0.78)", maxWidth: 560, margin: 0 }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.65, color: "rgba(255,255,255,0.78)", maxWidth: 560, margin: 0 }}>
                 Every kit is a quiet way to feel closer to the people you love — across the country, across the room, and the time you still have together.
               </p>
             </div>
-            <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", boxShadow: "0 30px 60px -20px rgba(0,0,0,0.45)" }}>
+            <div className="shop-hero-image" style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", boxShadow: "0 30px 60px -20px rgba(0,0,0,0.45)" }}>
               <img
                 src={shopHeroImage}
-                alt="A daughter and her mother sharing a quiet moment at the kitchen table with The Garden Memories Kit conversation cards and keepsake journal"
+                alt="A daughter and her aging mother sharing a tender moment with The Garden Memories Kit conversation cards in a sunlit family room"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 loading="eager"
               />
@@ -244,7 +244,7 @@ const Shop = () => {
         </section>
 
         {/* FEATURED — Connection Season Summer Edition */}
-        <section id="featured" style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+        <section id="featured" style={{ background: C.cream, padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
             <div style={{ aspectRatio: "3 / 4", borderRadius: 12, overflow: "hidden", background: C.creamDark }}>
               <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition cover mockup" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} loading="eager" />
@@ -277,30 +277,29 @@ const Shop = () => {
                 Get the Summer Edition <ArrowSvg />
               </button>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
-                Instant download · 14-day refund · Secure Paddle checkout
+                Instant download · Use it printed, on a tablet, or right from your phone
               </p>
             </div>
           </div>
         </section>
 
         {/* THE FIVE KITS — INTRO */}
-        <section id="kits" style={{ background: C.creamDark, padding: "clamp(3rem,6vw,4rem) clamp(1.5rem,5vw,4rem) clamp(1.5rem,3vw,2rem)" }}>
+        <section id="kits" style={{ background: C.creamDark, padding: "clamp(2rem,6vw,4rem) clamp(1.5rem,5vw,4rem) clamp(1rem,3vw,2rem)" }}>
           <div style={{ maxWidth: 880, margin: "0 auto", textAlign: "center" }}>
-            <Eyebrow>The Five Kits · $34 Each</Eyebrow>
-            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0 0 1rem" }}>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.6rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0 0 1rem" }}>
               <em>Five themed kits, one to fit the person you love.</em>
             </h2>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 auto 1rem", maxWidth: 720 }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.7, color: C.textMid, margin: "0 auto 1rem", maxWidth: 720 }}>
               Each Comfort Bond Connection Kit is built around a theme your loved one will already know in their bones — kitchens, gardens, road trips, music, handmade work.
             </p>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 auto", maxWidth: 720 }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.7, color: C.textMid, margin: "0 auto", maxWidth: 720 }}>
               So the next call or visit can feel less awkward, more personal, and more worth remembering.
             </p>
           </div>
         </section>
 
         {/* KIT CARDS — alternating cream */}
-        <section style={{ background: C.creamDark, padding: "0 clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5rem)" }}>
+        <section style={{ background: C.creamDark, padding: "0 clamp(1.5rem,5vw,4rem) clamp(2rem,6vw,5rem)" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gap: "1.5rem" }}>
             {KITS.map((kit, i) => {
               const bg = i % 2 === 0 ? "#fff" : "var(--sand-pale, #F5EFE3)";
@@ -350,7 +349,7 @@ const Shop = () => {
                       {kit.cta} <ArrowSvg />
                     </button>
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 12.5, color: C.textMid, margin: "0.6rem 0 0", opacity: 0.8 }}>
-                      Instant download · 14-day refund · Secure Paddle checkout
+                      Instant download · Use it printed, on a tablet, or right from your phone
                     </p>
                   </div>
                 </article>
@@ -360,7 +359,7 @@ const Shop = () => {
         </section>
 
         {/* THE COMFORT BOND COLLECTION */}
-        <section id="collection" style={{ background: C.forestDark, color: "#fff", padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+        <section id="collection" style={{ background: C.forestDark, color: "#fff", padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
             <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <img src={comfortBondCollectionMockup} alt="The Comfort Bond Collection — all five kits laid out together" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
@@ -392,22 +391,22 @@ const Shop = () => {
                 Get the Collection <ArrowSvg />
               </button>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "rgba(255,255,255,0.7)", margin: "0.75rem 0 0" }}>
-                Instant download · 14-day refund · Secure Paddle checkout
+                Instant download · Use it printed, on a tablet, or right from your phone
               </p>
             </div>
           </div>
         </section>
 
         {/* FAQ */}
-        <section id="faq" style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+        <section id="faq" style={{ background: C.cream, padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 820, margin: "0 auto" }}>
-            <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <div style={{ textAlign: "center", marginBottom: "2rem" }}>
               <Eyebrow>Good Questions</Eyebrow>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: 0 }}>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.6rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: 0 }}>
                 <em>Things people ask before they buy.</em>
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: C.textMid, margin: "1rem auto 0", maxWidth: 540, lineHeight: 1.6 }}>
-                Every purchase includes instant download, a 14-day refund window, and secure Paddle checkout. If anything isn't right, email <a href="mailto:hello@thecomfortbond.com" style={{ color: C.clay }}>hello@thecomfortbond.com</a>.
+                Use it printed, on a tablet, or right from your phone. If anything isn't right, email <a href="mailto:hello@thecomfortbond.com" style={{ color: C.clay }}>hello@thecomfortbond.com</a>.
               </p>
             </div>
             <div style={{ display: "grid", gap: "0.75rem" }}>
@@ -453,10 +452,9 @@ const Shop = () => {
         </section>
 
         {/* CLOSING */}
-        <section style={{ background: C.sandPale, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
+        <section style={{ background: C.sandPale, padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
-            <Eyebrow>A Small Reminder</Eyebrow>
-            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.7rem,3.2vw,2.3rem)", fontWeight: 600, lineHeight: 1.25, color: C.forestDark, margin: "0 0 1.25rem" }}>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.55rem,3.2vw,2.3rem)", fontWeight: 600, lineHeight: 1.25, color: C.forestDark, margin: "0 0 1.25rem" }}>
               <em>The bond grows on purpose, not by accident.</em>
             </h2>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.8, color: C.textMid, margin: "0 0 1rem" }}>
