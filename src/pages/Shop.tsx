@@ -40,6 +40,7 @@ type Kit = {
   bullets: string[];
   cta: string;
   image: string;
+  priceId: string;
 };
 
 const KITS: Kit[] = [
