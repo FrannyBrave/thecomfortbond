@@ -85,6 +85,11 @@ const PILLARS = [
 ];
 
 const Index = () => {
+  usePageMeta({
+    title: "The Comfort Bond — Family Connection Kits for Aging Parents & Grandparents",
+    description:
+      "Printable connection kits, conversation cards, and seasonal planners that help adult children and grandchildren create meaningful moments with aging parents in senior living, memory care, or at home.",
+  });
   return (
     <div>
       <a href="#main" className="skip-nav">Skip to main content</a>
