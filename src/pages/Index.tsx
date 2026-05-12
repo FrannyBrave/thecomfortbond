@@ -259,7 +259,7 @@ const Index = () => {
                 than “How are you?” — for daughters, sons, grandchildren, and anyone who loves a
                 parent or grandparent, across the country or across the room.
               </p>
-              <a href="/our-story" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
+              <a href="/about" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
                 Read the full story →
               </a>
             </div>
