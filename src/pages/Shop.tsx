@@ -331,9 +331,9 @@ const Shop = () => {
                         </li>
                       ))}
                     </ul>
-                    <a href={`#${kit.id}-buy`} className="btn-primary" style={{ alignSelf: "flex-start" }} onClick={(e) => { e.preventDefault(); window.location.href = "/#kits"; }}>
+                    <button type="button" className="btn-primary" style={{ alignSelf: "flex-start", border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(kit.priceId)}>
                       {kit.cta} <ArrowSvg />
-                    </a>
+                    </button>
                   </div>
                 </article>
               );
