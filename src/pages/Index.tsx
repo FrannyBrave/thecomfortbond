@@ -13,6 +13,7 @@ import connectionSeasonSummerMockup from "@/assets/connection-season-summer-mock
 import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-mockup.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -84,6 +85,11 @@ const PILLARS = [
 ];
 
 const Index = () => {
+  usePageMeta({
+    title: "The Comfort Bond — Family Connection Kits for Aging Parents & Grandparents",
+    description:
+      "Printable connection kits, conversation cards, and seasonal planners that help adult children and grandchildren create meaningful moments with aging parents in senior living, memory care, or at home.",
+  });
   return (
     <div>
       <a href="#main" className="skip-nav">Skip to main content</a>
