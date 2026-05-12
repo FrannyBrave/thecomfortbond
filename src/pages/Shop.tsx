@@ -186,17 +186,11 @@ const Eyebrow = ({ children, light = false }: { children: React.ReactNode; light
 const Shop = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  useEffect(() => {
-    document.title = "Shop — The Comfort Bond Connection Kits, Seasonal Planners & The Collection";
-    let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement;
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.name = "description";
-      document.head.appendChild(meta);
-    }
-    meta.content =
-      "Browse The Comfort Bond — themed Connection Kits, the Summer Edition seasonal planner, and the full Collection. Tools to help families create meaningful moments with the people who raised them.";
-  }, []);
+  usePageMeta({
+    title: "Shop Connection Kits & Seasonal Planners for Aging Parents | The Comfort Bond",
+    description:
+      "Shop printable Connection Kits, the Summer Edition family planner, and the full Comfort Bond Collection — conversation cards, reminiscence prompts, and trivia for visits with aging parents and grandparents in senior living, memory care, or at home.",
+  });
 
   return (
     <div style={{ background: C.cream, minHeight: "100vh" }}>
