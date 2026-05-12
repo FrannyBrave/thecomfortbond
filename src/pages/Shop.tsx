@@ -369,6 +369,7 @@ const Shop = () => {
               <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.25rem", flexWrap: "wrap" }}>
                 <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: C.sand, fontWeight: 600 }}>$127</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "rgba(255,255,255,0.55)", textDecoration: "line-through" }}>$170</span>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: C.sand, fontWeight: 600, letterSpacing: "0.02em" }}>save $43</span>
               </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.82)", margin: "0 0 1.25rem" }}>
                 The complete Bonding & Connection library — every theme, every era, every conversation worth having, in one place. For the family ready to commit to a full season of meaningful moments together, and for anyone who wants the option to bring the right kit to any call, any visit, or any quiet Sunday afternoon.
