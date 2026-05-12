@@ -273,7 +273,7 @@ const Index = () => {
             <div style={{ aspectRatio: "4 / 5", background: C.cream, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <img
                 src={connectionSeasonSummerMockup}
-                alt="The Connection Season: Summer Edition — 13-week family connection planner cover"
+                alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for meaningful calls and visits with aging parents and grandparents"
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 loading="lazy"
               />
@@ -294,7 +294,7 @@ const Index = () => {
                   {k.image ? (
                     <img
                       src={k.image}
-                      alt={`${k.name} — ${k.theme} — Comfort Bond Connection Kit cover`}
+                      alt={`${k.name} — ${k.theme} — printable Comfort Bond Connection Kit with conversation cards, reminiscence prompts, trivia and memory BINGO for aging parents and grandparents`}
                       loading="lazy"
                       style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", display: "block" }}
                     />
@@ -334,7 +334,7 @@ const Index = () => {
             <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <img
                 src={comfortBondCollectionMockup}
-                alt="The Comfort Bond Collection — all five The Comfort Bond Connection Kits"
+                alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits for adult children and grandchildren of aging parents: Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It"
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 loading="lazy"
               />
