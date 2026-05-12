@@ -99,7 +99,7 @@ const Index = () => {
             />
             <div className="nav-brand">
               <span className="nav-brand-name">The Comfort Bond™</span>
-              <span className="nav-brand-tag">Gentle prompts, bonding kits, and connection rituals</span>
+              <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>
             </div>
           </a>
           <ul className="nav-links">
@@ -122,23 +122,8 @@ const Index = () => {
                 For the people who love someone growing older
               </div>
               <h1>
-                For the daughter, son, or grandchild who wishes the conversations <em>went deeper.</em>
+                Meaningful moments with your aging parent or grandparent — across calls, visits, distance, and the time you still have <em>together.</em>
               </h1>
-              <p
-                style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: 17,
-                  fontWeight: 300,
-                  lineHeight: 1.7,
-                  color: C.textMid,
-                  marginTop: "1.25rem",
-                  maxWidth: 560,
-                }}
-              >
-                The Comfort Bond helps you create meaningful moments with your aging parent or
-                grandparent — across phone calls, visits, distance, memory loss, and the time
-                you still have.
-              </p>
               <div className="hero-actions">
                 <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Download the Free Connection Companion
@@ -506,7 +491,7 @@ const Index = () => {
         <div className="footer-inner footer-inner-3col">
           <div className="footer-brand">
             <div style={{ fontFamily: "var(--font-serif)", fontSize: 18, color: "#fff", fontWeight: 600 }}>The Comfort Bond™</div>
-            <p>Gentle prompts, bonding kits, and connection rituals to help you create more meaningful moments with the people who raised you.</p>
+            <p>Nurturing Comfort, Inspiring Connection.</p>
           </div>
           <div className="footer-col">
             <h4>Start free</h4>

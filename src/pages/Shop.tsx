@@ -207,7 +207,7 @@ const Shop = () => {
             />
             <div className="nav-brand">
               <span className="nav-brand-name">The Comfort Bond™</span>
-              <span className="nav-brand-tag">Gentle prompts, bonding kits, and connection rituals</span>
+              <span className="nav-brand-tag">Nurturing Comfort, Inspiring Connection</span>
             </div>
           </a>
           <ul className="nav-links">
@@ -482,7 +482,7 @@ const Shop = () => {
         <div className="footer-inner footer-inner-3col">
           <div className="footer-brand">
             <div style={{ fontFamily: "var(--font-serif)", fontSize: 18, color: "#fff", fontWeight: 600 }}>The Comfort Bond™</div>
-            <p>Gentle prompts, bonding kits, and connection rituals to help you create more meaningful moments with the people who raised you.</p>
+            <p>Nurturing Comfort, Inspiring Connection.</p>
           </div>
           <div className="footer-col">
             <h4>Start free</h4>
