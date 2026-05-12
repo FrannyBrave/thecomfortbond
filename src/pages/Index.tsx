@@ -11,6 +11,7 @@ import connectionCompanionMockup from "@/assets/connection-companion-mockup.png"
 import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-mockup.png";
 import connectionSeasonSummerMockup from "@/assets/connection-season-summer-mockup.png";
 import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-mockup.png";
+import founderPhoto from "@/assets/founder-francesca.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { usePageMeta } from "@/hooks/usePageMeta";
@@ -229,7 +230,7 @@ const Index = () => {
         <section style={{ background: C.creamDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 880, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.6fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
             <div>
-              <ImagePlaceholder label="Founder portrait" ratio="1 / 1" />
+              <img src={founderPhoto} alt="Francesca, founder of The Comfort Bond" loading="lazy" style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 12, display: "block" }} />
             </div>
             <div>
               <div className="section-tag">A note from the founder</div>

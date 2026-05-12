@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import logoImg from "@/assets/the-comfort-bond-logo.webp";
+import founderPhoto from "@/assets/founder-francesca.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 
@@ -59,6 +60,11 @@ const OurStory = () => {
           <div className="story-container">
 
             {/* Section 1 — The Story */}
+            <img
+              src={founderPhoto}
+              alt="Francesca, founder of The Comfort Bond"
+              style={{ width: "min(280px, 60%)", aspectRatio: "3 / 4", objectFit: "cover", borderRadius: 14, display: "block", marginBottom: "2rem", boxShadow: "0 12px 32px rgba(0,0,0,0.12)" }}
+            />
             <div className="story-eyebrow">Where it began</div>
             <h2 className="story-section-heading"><em>I built this for the call I was always grateful I made.</em></h2>
             <p className="story-body">
