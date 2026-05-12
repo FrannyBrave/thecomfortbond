@@ -250,7 +250,7 @@ const Shop = () => {
         <section id="featured" style={{ background: C.cream, padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
             <div style={{ aspectRatio: "3 / 4", borderRadius: 12, overflow: "hidden", background: C.creamDark }}>
-              <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition cover mockup" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} loading="eager" />
+              <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for staying close to aging parents and grandparents" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} loading="eager" />
             </div>
             <div>
               <Eyebrow>Featured · Now available</Eyebrow>
@@ -321,7 +321,7 @@ const Shop = () => {
                   <div style={{ background: C.creamDark }}>
                     <img
                       src={kit.image}
-                      alt={`${kit.name} cover`}
+                      alt={`${kit.name} — ${kit.tagline} — printable conversation cards, reminiscence prompts, trivia and memory BINGO for connecting with an aging parent or grandparent`}
                       loading="lazy"
                       style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", minHeight: 240 }}
                     />
@@ -381,7 +381,7 @@ const Shop = () => {
         <section id="collection" style={{ background: C.forestDark, color: "#fff", padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
             <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img src={comfortBondCollectionMockup} alt="The Comfort Bond Collection — all five kits laid out together" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
+              <img src={comfortBondCollectionMockup} alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits: Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
             </div>
             <div>
               <Eyebrow light>The Complete Collection</Eyebrow>
