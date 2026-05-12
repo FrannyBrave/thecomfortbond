@@ -327,6 +327,25 @@ const Shop = () => {
                     />
                   </div>
                   <div style={{ padding: "clamp(1.5rem,3vw,2.25rem)", display: "flex", flexDirection: "column" }}>
+                    {kit.badge && (
+                      <span
+                        style={{
+                          alignSelf: "flex-start",
+                          fontFamily: "var(--font-sans)",
+                          fontSize: 11,
+                          fontWeight: 700,
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                          padding: "4px 10px",
+                          borderRadius: 999,
+                          marginBottom: "0.6rem",
+                          background: kit.badge.tone === "forest" ? C.forestDark : C.clay,
+                          color: "#fff",
+                        }}
+                      >
+                        {kit.badge.label}
+                      </span>
+                    )}
                     <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.3rem,2.4vw,1.65rem)", fontWeight: 600, color: C.forestDark, margin: "0 0 0.4rem", lineHeight: 1.25 }}>
                       {kit.name}
                     </h3>
