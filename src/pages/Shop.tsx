@@ -366,8 +366,10 @@ const Shop = () => {
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", margin: "0 0 0.75rem" }}>
                 <em>All five kits. One library. Every story worth saving.</em>
               </h2>
-              <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: C.sand, fontWeight: 600, marginBottom: "0.25rem" }}>$127</div>
-              <div style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "rgba(255,255,255,0.65)", marginBottom: "1.25rem" }}>save $43 vs. buying individually</div>
+              <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.25rem", flexWrap: "wrap" }}>
+                <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: C.sand, fontWeight: 600 }}>$127</span>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "rgba(255,255,255,0.55)", textDecoration: "line-through" }}>$170</span>
+              </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.82)", margin: "0 0 1.25rem" }}>
                 The complete Bonding & Connection library — every theme, every era, every conversation worth having, in one place. For the family ready to commit to a full season of meaningful moments together, and for anyone who wants the option to bring the right kit to any call, any visit, or any quiet Sunday afternoon.
               </p>
