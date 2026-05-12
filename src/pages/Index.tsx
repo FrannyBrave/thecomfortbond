@@ -314,7 +314,7 @@ const Index = () => {
                   {k.image ? (
                     <img
                       src={k.image}
-                      alt={k.name}
+                      alt={`${k.name} — ${k.theme} — Comfort Bond Connection Kit cover`}
                       loading="lazy"
                       style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", display: "block" }}
                     />
