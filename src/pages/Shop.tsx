@@ -377,7 +377,7 @@ const Shop = () => {
                 {[
                   "All five Comfort Bond Connection Kits",
                   "Every conversation theme, every era, every story prompt",
-                  "Save $43 compared to buying each kit individually",
+                  "$170 value, yours for $127",
                   "Works for phone calls, video calls, and in-person visits",
                 ].map((b, i) => (
                   <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.6 }}>
