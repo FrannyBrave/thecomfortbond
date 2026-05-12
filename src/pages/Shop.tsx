@@ -291,7 +291,7 @@ const Shop = () => {
               <em>Five themed kits, one to fit the person you love.</em>
             </h2>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 auto 1rem", maxWidth: 720 }}>
-              Each Comfort Bond Connection Kit is built around a theme your loved one will already know in their bones — kitchens, gardens, road trips, music, handmade work. Inside each kit you'll find conversation cards, visual memory sparks, trivia, word games, BINGO, musical memory prompts, and reflection space.
+              Each Comfort Bond Connection Kit is built around a theme your loved one will already know in their bones — kitchens, gardens, road trips, music, handmade work.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 auto", maxWidth: 720 }}>
               So the next call or visit can feel less awkward, more personal, and more worth remembering.
