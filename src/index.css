@@ -197,9 +197,9 @@
 }
 .tcb-hero h1 {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-size: clamp(1.9rem, 3.4vw, 2.9rem);
   font-weight: 600;
-  line-height: 1.15;
+  line-height: 1.18;
   color: var(--forest-dark);
   margin-bottom: 1.5rem;
   margin-top: 0;
@@ -207,6 +207,14 @@
 .tcb-hero h1 em {
   font-style: italic;
   color: var(--clay);
+}
+.tcb-hero h1 .hero-h1-sub {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.62em;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-mid);
 }
 .hero-desc {
   font-size: 18px; font-weight: 300;
