@@ -293,7 +293,7 @@ const Index = () => {
             <div style={{ aspectRatio: "4 / 5", background: C.cream, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <img
                 src={connectionSeasonSummerMockup}
-                alt="The Connection Season: Summer Edition mockup"
+                alt="The Connection Season: Summer Edition — 13-week family connection planner cover"
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 loading="lazy"
               />
