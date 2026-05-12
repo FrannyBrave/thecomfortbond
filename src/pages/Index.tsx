@@ -286,6 +286,9 @@ const Index = () => {
                 View The Summer Edition
                 <ArrowSvg />
               </a>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
+                $34 · Instant download · 14-day refund · Secure Paddle checkout
+              </p>
             </div>
             <div style={{ aspectRatio: "4 / 5", background: C.cream, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <img
