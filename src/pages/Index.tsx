@@ -341,6 +341,9 @@ const Index = () => {
                 Find the Kit That Fits Your Loved One
                 <ArrowSvg />
               </a>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
+                $34 each · Instant download · 14-day refund
+              </p>
             </div>
           </div>
         </section>
