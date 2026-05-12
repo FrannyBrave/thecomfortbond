@@ -327,7 +327,7 @@ const Index = () => {
                 <ArrowSvg />
               </a>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
-                $34 each · Instant download · 14-day refund
+                $34 each · Instant download · Use it printed, on a tablet, or right from your phone
               </p>
             </div>
           </div>
