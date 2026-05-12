@@ -516,6 +516,7 @@ const Shop = () => {
         </div>
       </footer>
       <CookieConsent />
+      <StickyMobileCTA href="#collection" label="Shop the Collection — $127" showAfter={600} />
 
       <style>{`
         @media (max-width: 820px) {
