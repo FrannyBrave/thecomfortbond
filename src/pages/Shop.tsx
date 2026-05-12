@@ -46,6 +46,7 @@ type Kit = {
 const KITS: Kit[] = [
   {
     id: "remember-when-kit",
+    priceId: "pri_01kpafx84h0z9z11fwc5m84dam",
     name: "The Remember When Kit",
     tagline: "Pop culture, music & daily life from the decades that shaped them",
     desc: "The Beatles on the Ed Sullivan Show, sock hops in the gym, TV dinners on folding trays, the jukebox at the diner. This kit unlocks the songs, movies, and everyday moments your loved one carries from the 1950s through the 1980s — and tells you exactly what to ask to hear them.",
@@ -61,6 +62,7 @@ const KITS: Kit[] = [
   },
   {
     id: "kitchen-table-memories-kit",
+    priceId: "pri_01kpafxq9xrqg0qhqfttzdjswf",
     name: "The Kitchen Table Memories Kit",
     tagline: "Kitchens, family meals, baking days & comfort food",
     desc: "Every family had a kitchen table. It's where homework happened, recipes were passed by hand, and Sunday dinners ran long. This kit invites your loved one back to the smells, the sounds, and the people of the kitchen they remember best.",
@@ -76,6 +78,7 @@ const KITS: Kit[] = [
   },
   {
     id: "garden-memories-kit",
+    priceId: "pri_01kpafvx3erd68458p4em99141",
     name: "The Garden Memories Kit",
     tagline: "Seeds, sunshine, vegetable patches & the joy of watching things grow",
     desc: "A tomato still warm from the vine. The smell of soil after a good rain. The lilac bush by the front porch. This kit honors the patience and pride of a generation that grew things — and gives you the prompts to hear about the garden they remember.",
@@ -91,6 +94,7 @@ const KITS: Kit[] = [
   },
   {
     id: "places-weve-been-kit",
+    priceId: "pri_01kpafwqs0wwzatbs5721cyfmk",
     name: "The Places We've Been Kit",
     tagline: "Family road trips, station wagons & roadside adventures",
     desc: "Before GPS and direct flights, there were Sunday drives, station wagons full of cousins, and roads people remembered by heart. This kit pulls up alongside the family trips your loved one took — the destinations, the diners, the souvenirs that made it home.",
@@ -106,6 +110,7 @@ const KITS: Kit[] = [
   },
   {
     id: "hands-that-made-it-kit",
+    priceId: "pri_01kpafv0r50q149ctgje0dmn0q",
     name: "The Hands That Made It Kit",
     tagline: "Building, sewing, fixing & the pride of hands-on work",
     desc: "There was a time when fixing something wasn't a phone call — it was a Saturday. This kit honors the workbench, the sewing basket, the toolbox, and the skills your loved one built over a lifetime. It's an invitation to ask about what they made and how they made it.",
