@@ -289,11 +289,8 @@ const Shop = () => {
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.6rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0 0 1rem" }}>
               <em>Five themed kits, one to fit the person you love.</em>
             </h2>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.7, color: C.textMid, margin: "0 auto 1rem", maxWidth: 720 }}>
-              Each Comfort Bond Connection Kit is built around a theme your loved one will already know in their bones — kitchens, gardens, road trips, music, handmade work.
-            </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.7, color: C.textMid, margin: "0 auto", maxWidth: 720 }}>
-              So the next call or visit can feel less awkward, more personal, and more worth remembering.
+              Each Comfort Bond Connection Kit is built around a theme your loved one may already know in their bones — kitchens, gardens, road trips, music, and more so the next call or visit can feel less awkward, more personal, and more worth remembering.
             </p>
           </div>
         </section>
