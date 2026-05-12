@@ -1039,8 +1039,9 @@
     gap: 1.75rem;
     padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 5vw, 2rem) clamp(2rem, 6vw, 4rem);
   }
-  /* Show hero photo on mobile, but compact and ABOVE the headline */
-  .hero-visual { display: flex; order: -1; }
+  /* Show hero photo on mobile/tablet BELOW the headline so the message lands first */
+  .hero-content { order: -1; }
+  .hero-visual { display: flex; order: 1; }
   .hero-photo-wrap { max-width: 100%; }
   .hero-photo {
     border-radius: 18px;
