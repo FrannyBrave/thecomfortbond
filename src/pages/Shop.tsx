@@ -10,6 +10,7 @@ import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-mockup
 import shopHeroImage from "@/assets/shop-hero-garden-memories.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { openPaddleCheckout } from "@/lib/paddle";
 
 const SUMMER_EDITION_PRICE_ID = "pri_01kpagj5jtaxcnkbtjctq616k4";
