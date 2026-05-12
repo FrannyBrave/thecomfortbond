@@ -231,18 +231,13 @@ const Index = () => {
                 I built this for the call I was always grateful I made.
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
-                I built The Comfort Bond after losing my grandmother in May of 2024 — my only
-                grandparent left, and one of the most important people in my life.
+                I built The Comfort Bond after losing my grandmother, Félicité, in May 2024.
               </p>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
-                I lived far from her. I could not visit the way I wanted to. But I called her, and
-                I made sure she always knew how deeply she was loved. That is the part I am
-                grateful for. That is the part that holds.
+                I lived far from her, so I couldn&rsquo;t visit the way I wanted to. But I called as often as I could — and I made sure she knew she was loved.
               </p>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                The Comfort Bond is the brand I wish I had when I wanted our calls to feel deeper
-                than “How are you?” — for daughters, sons, grandchildren, and anyone who loves a
-                parent or grandparent, across the country or across the room.
+                This brand is for anyone who wants the next call or visit with an aging parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;
               </p>
               <a href="/about" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
                 Read the full story →
