@@ -370,9 +370,9 @@ const Shop = () => {
                   </li>
                 ))}
               </ul>
-              <a href="/#collection" className="btn-primary">
-                View the Collection <ArrowSvg />
-              </a>
+              <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(COLLECTION_PRICE_ID)}>
+                Get the Collection <ArrowSvg />
+              </button>
             </div>
           </div>
         </section>
