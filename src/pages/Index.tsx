@@ -272,7 +272,7 @@ const Index = () => {
                 <ArrowSvg />
               </a>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
-                $34 · Instant download · 14-day refund · Secure Paddle checkout
+                $34 · Instant download · Use it printed, on a tablet, or right from your phone
               </p>
             </div>
             <div style={{ aspectRatio: "4 / 5", background: C.cream, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
