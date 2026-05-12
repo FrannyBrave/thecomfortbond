@@ -7,6 +7,7 @@ import kitGardenMemories from "@/assets/kit-garden-memories.jpg";
 import kitHandsThatMadeIt from "@/assets/kit-hands-that-made-it.jpg";
 import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition.png";
 import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-mockup.png";
+import shopHeroImage from "@/assets/shop-hero-garden-memories.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { openPaddleCheckout } from "@/lib/paddle";
