@@ -66,7 +66,16 @@ const OurStory = () => {
               I built The Comfort Bond after losing my grandmother — <em>Félicité</em> — in May of 2024.
             </p>
             <p className="story-body">
-              She was the only grandparent I had left, and the person I loved most in the world. She had her usual doctor visits, her small health things, but nothing serious. She was still lively. She was still spending time with my younger cousins while my aunt was at work. Nobody saw it coming.
+              She was my mother’s mother, the only grandparent I had left, and one of the people I loved most in my family.
+            </p>
+            <p className="story-body">
+              She was joyful, kind, and full of life. We could talk about anything and everything on the phone: the small things, the funny things, "girl chats," the ordinary things, i could go on.
+            </p>
+            <p className="story-body">
+              She had her usual doctor visits, her small health things, but nothing serious. She was still lively. She was still spending time with my younger cousins while my aunt would go to work.
+            </p>
+            <p className="story-body">
+              Nobody saw it coming.
             </p>
             <p className="story-body">
               I lived far from her. I couldn't visit the way I wanted to. I was caught up in my own life — career, relationships, the dozen things that always feel urgent until something real happens and you see, in one quiet moment, that almost none of them were. But I called her. And I made sure she always knew how much I loved her, how much she meant to me.
