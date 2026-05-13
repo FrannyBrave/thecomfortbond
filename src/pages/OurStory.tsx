@@ -60,11 +60,6 @@ const OurStory = () => {
           <div className="story-container">
 
             {/* Section 1 — The Story */}
-            <img
-              src={founderPhoto}
-              alt="Francesca, founder of The Comfort Bond"
-              style={{ width: "min(280px, 60%)", aspectRatio: "3 / 4", objectFit: "cover", borderRadius: 14, display: "block", marginBottom: "2rem", boxShadow: "0 12px 32px rgba(0,0,0,0.12)" }}
-            />
             <div className="story-eyebrow">Where it began</div>
             <h2 className="story-section-heading"><em>I built this for the call I was always grateful I made.</em></h2>
             <p className="story-body">
@@ -126,6 +121,19 @@ const OurStory = () => {
             </p>
 
             <div className="story-divider" />
+
+            {/* Founder portrait — quiet pause mid-story */}
+            <figure style={{ margin: "0 0 3.5rem", textAlign: "center" }}>
+              <img
+                src={founderPhoto}
+                alt="Francesca, founder of The Comfort Bond"
+                loading="lazy"
+                style={{ width: "min(320px, 75%)", aspectRatio: "3 / 4", objectFit: "cover", borderRadius: 14, display: "inline-block", boxShadow: "0 12px 32px rgba(0,0,0,0.12)" }}
+              />
+              <figcaption style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--text-light, #7A8A7A)", marginTop: "1rem" }}>
+                Francesca, Founder
+              </figcaption>
+            </figure>
 
             {/* Section 4 — Who This Is For */}
             <div className="story-eyebrow">If you're reading this</div>
