@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import logoImg from "@/assets/the-comfort-bond-logo.webp";
-import founderPhoto from "@/assets/founder-francesca.png";
+import founderPhoto from "@/assets/meaningful-gifts-aging-parents-grandparents-memory-kits.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 

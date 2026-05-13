@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { PartyPopper, MessageCircle, Scissors, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroPhoto from "@/assets/hero-family-connection.png";
+import heroPhoto from "@/assets/conversation-cards-for-aging-parents-the-comfort-bond.png";
 
 export const HeroSection = () => {
   const scrollToProducts = () => {
