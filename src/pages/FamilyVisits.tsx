@@ -279,7 +279,7 @@ const FamilyVisits = () => {
             <div className="lg:col-span-7 order-1 lg:order-1 text-center lg:text-left">
               {/* "For you" eyebrow — instant audience clarity */}
               <p className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-terracotta/90 font-medium">
-                For adult children visiting an aging mom
+                For adult children visiting mom
               </p>
 
               {/* Headline — tightened, emotional word early */}
