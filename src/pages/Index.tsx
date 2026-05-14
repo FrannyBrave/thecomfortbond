@@ -129,7 +129,7 @@ const Index = () => {
                 For the people who love someone growing older
               </div>
               <h1>
-                Meaningful moments with your aging parent or grandparent <span className="hero-h1-sub">— across calls, visits, distance, and the time you still have <em>together.</em></span>
+                Meaningful moments with the people who raised you <span className="hero-h1-sub">— across calls, visits, distance, and the time you still have <em>together.</em></span>
               </h1>
               <div className="hero-actions">
                 <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="btn-primary">
