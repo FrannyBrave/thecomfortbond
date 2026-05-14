@@ -126,7 +126,7 @@ const Index = () => {
             <div className="hero-content">
               <div className="hero-eyebrow">
                 <span className="hero-eyebrow-dot" />
-                For the people who love someone growing older
+                FOR THE DAUGHTERS, SONS, AND GRANDCHILDREN
               </div>
               <h1>
                 Meaningful moments with the people who raised you <span className="hero-h1-sub">— across calls, visits, distance, and the time you still have <em>together.</em></span>
