@@ -240,9 +240,6 @@ const Index = () => {
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
                 I built The Comfort Bond after losing my grandmother, Félicité, in May 2024.
               </p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
-                I lived far from her, so I couldn&rsquo;t visit the way I wanted to. But I called as often as I could — and I made sure she knew she was loved.
-              </p>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
                 This brand is for anyone who wants the next call or visit with a parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;
               </p>
