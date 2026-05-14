@@ -244,7 +244,7 @@ const Index = () => {
                 I lived far from her, so I couldn&rsquo;t visit the way I wanted to. But I called as often as I could — and I made sure she knew she was loved.
               </p>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                This brand is for anyone who wants the next call or visit with an aging parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;
+                This brand is for anyone who wants the next call or visit with a parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;
               </p>
               <a href="/about" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
                 Read the full story →
@@ -378,7 +378,7 @@ const Index = () => {
                 {
                   eyebrow: "Primary freebie · Weekly planner",
                   title: "The Connection Companion",
-                  desc: "A free weekly guide for planning more meaningful calls, visits, and shared moments with an aging parent or grandparent.",
+                  desc: "A free weekly guide for planning more meaningful calls, visits, and shared moments with a parent or grandparent.",
                   cta: "Download the Free Connection Companion",
                   href: "https://the-comfort-bond-2.kit.com/de78d818c7",
                   imgLabel: "Connection Companion mockup",

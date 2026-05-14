@@ -87,7 +87,7 @@ const OurStory = () => {
               Something that helps families bond with the people they love while there is still something beautiful to hold.
             </p>
             <p className="story-body">
-              Something a granddaughter could use with her grandmother. Something an adult son could use with his aging father. Something for the next phone call, or the next visit, or the next quiet Sunday across the kitchen table.
+              Something a granddaughter could use with her grandmother. Something an adult son could use with his father. Something for the next phone call, or the next visit, or the next quiet Sunday across the kitchen table.
             </p>
             <p className="story-body">
               Across the country, or across the room.
