@@ -134,7 +134,6 @@ const Index = () => {
               <div className="hero-actions">
                 <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Download the Free Connection Companion
-                  <ArrowSvg />
                 </a>
                 <a href="#kits" className="btn-secondary">Explore the Bonding Kits</a>
               </div>
