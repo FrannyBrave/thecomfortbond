@@ -224,11 +224,12 @@ const Index = () => {
                   <div style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, marginTop: "auto" }}>
                     {p.product}
                   </div>
-                  <span style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: C.clay, display: "inline-flex", alignItems: "center", gap: 6 }}>
-                    {p.cta} <ArrowSvg color="var(--clay)" />
+                  <span style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: tone.accent, display: "inline-flex", alignItems: "center", gap: 6 }}>
+                    {p.cta} <ArrowSvg color={tone.accent} />
                   </span>
                 </a>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
