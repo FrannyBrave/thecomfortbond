@@ -189,14 +189,21 @@ const Index = () => {
                   href: "#collection",
                   badge: "Paid",
                 },
-              ].map((p, i) => (
+              ].map((p, i) => {
+                const palettes = [
+                  { bg: "rgba(45,74,62,0.06)", border: C.forest, accent: C.forest },
+                  { bg: "rgba(198,123,92,0.10)", border: C.clay, accent: C.clay },
+                  { bg: "rgba(45,74,62,0.06)", border: C.forest, accent: C.forest },
+                ];
+                const tone = palettes[i % palettes.length];
+                return (
                 <a
                   key={i}
                   href={p.href}
                   {...(p.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   style={{
-                    background: "#fff",
-                    border: `1px solid ${C.border}`,
+                    background: tone.bg,
+                    border: `2px solid ${tone.border}`,
                     borderRadius: 16,
                     padding: "1.75rem",
                     display: "flex",
@@ -204,7 +211,7 @@ const Index = () => {
                     gap: "0.75rem",
                     textDecoration: "none",
                     transition: "transform 0.2s, box-shadow 0.2s",
-                    boxShadow: "0 1px 2px rgba(45,74,62,0.04)",
+                    boxShadow: `0 4px 14px ${tone.border}22`,
                   }}
                   className="path-card"
                 >
