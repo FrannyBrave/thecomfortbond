@@ -20,6 +20,7 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/compone
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { TagPills } from "@/pages/Shop";
 
 const SAMPLER_URL = "https://the-comfort-bond-2.kit.com/3dfe0171af";
 
