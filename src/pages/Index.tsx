@@ -550,6 +550,7 @@ const Index = () => {
                     <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", fontWeight: 600, color: C.forestDark, margin: 0, lineHeight: 1.25 }}>
                       {f.title}
                     </h3>
+                    <TagPills tags={f.tags} />
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: 0 }}>
                       {f.desc}
                     </p>
