@@ -637,6 +637,8 @@ const Index = () => {
         </div>
       </footer>
       <CookieConsent />
+      <StickyMobileCTA href={SAMPLER_URL} label="Get the Free Coffee Sampler" showAfter={500} />
+      <HomeExitIntentModal />
 
       <style>{`
         @media (max-width: 720px) {
