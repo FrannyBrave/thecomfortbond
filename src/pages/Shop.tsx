@@ -401,37 +401,16 @@ const Shop = () => {
                   <div style={{ background: C.creamDark }}>
                     <img
                       src={kit.image}
-                      alt={`${kit.name} — ${kit.tagline} — printable conversation cards, reminiscence prompts, trivia and memory BINGO for connecting with an aging parent or grandparent`}
+                      alt={`${kit.name} — printable conversation cards, reminiscence prompts, trivia and memory BINGO for connecting with an aging parent or grandparent`}
                       loading="lazy"
                       style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", minHeight: 240 }}
                     />
                   </div>
                   <div style={{ padding: "clamp(1.5rem,3vw,2.25rem)", display: "flex", flexDirection: "column" }}>
-                    {kit.badge && (
-                      <span
-                        style={{
-                          alignSelf: "flex-start",
-                          fontFamily: "var(--font-sans)",
-                          fontSize: 11,
-                          fontWeight: 700,
-                          letterSpacing: "0.08em",
-                          textTransform: "uppercase",
-                          padding: "4px 10px",
-                          borderRadius: 999,
-                          marginBottom: "0.6rem",
-                          background: kit.badge.tone === "forest" ? C.forestDark : C.clay,
-                          color: "#fff",
-                        }}
-                      >
-                        {kit.badge.label}
-                      </span>
-                    )}
-                    <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.3rem,2.4vw,1.65rem)", fontWeight: 600, color: C.forestDark, margin: "0 0 0.4rem", lineHeight: 1.25 }}>
+                    <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.3rem,2.4vw,1.65rem)", fontWeight: 600, color: C.forestDark, margin: "0 0 0.55rem", lineHeight: 1.25 }}>
                       {kit.name}
                     </h3>
-                    <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: C.clay, margin: "0 0 0.5rem", lineHeight: 1.4 }}>
-                      {kit.tagline}
-                    </p>
+                    <TagPills tags={kit.tags} />
                     <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: C.forestDark, fontWeight: 600, marginBottom: "0.9rem" }}>$34</div>
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: "0 0 1rem" }}>
                       {kit.desc}
