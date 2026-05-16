@@ -99,6 +99,29 @@ export const FooterSection = () => {
 
         {/* Bottom: Trust + Legal + Copyright */}
         <div className="flex flex-col items-center text-center gap-3 border-t border-sage/20 pt-6">
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-[11px] uppercase tracking-[1.2px] text-forest/60">Secure checkout</span>
+            <div className="flex items-center gap-2 flex-wrap justify-center">
+              {[
+                { slug: "visa", alt: "Visa" },
+                { slug: "mastercard", alt: "Mastercard" },
+                { slug: "amex", alt: "American Express" },
+                { slug: "paypal", alt: "PayPal" },
+                { slug: "apple-pay", alt: "Apple Pay" },
+                { slug: "google-pay", alt: "Google Pay" },
+              ].map((p) => (
+                <img
+                  key={p.slug}
+                  src={`https://cdn.jsdelivr.net/gh/aaronfagan/svg-credit-card-payment-icons@main/flat/${p.slug}.svg`}
+                  alt={p.alt}
+                  loading="lazy"
+                  width={38}
+                  height={24}
+                  className="h-6 w-auto rounded-[3px] shadow-sm"
+                />
+              ))}
+            </div>
+          </div>
           <p className="text-xs text-forest/70 max-w-xl leading-relaxed">
             🛡️ All sales are final on digital downloads, but if you have any trouble accessing your purchase, we'll make it right. Contact us within 7 days.
           </p>
