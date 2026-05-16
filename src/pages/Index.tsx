@@ -467,9 +467,9 @@ const Index = () => {
                   Save $43
                 </span>
               </div>
-              <a href="/shop" className="btn-primary">
+              <a href="/shop" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: C.sand, color: C.forestDark, fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 600, padding: "12px 24px", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 14px rgba(0,0,0,0.22)" }}>
                 View the Collection
-                <ArrowSvg />
+                <ArrowSvg color={C.forestDark} />
               </a>
             </div>
           </div>
