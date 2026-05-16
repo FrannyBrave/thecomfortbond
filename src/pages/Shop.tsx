@@ -13,6 +13,10 @@ import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { openPaddleCheckout } from "@/lib/paddle";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useLocation } from "react-router-dom";
+
+const B2C_KEYWORDS = "conversation cards for aging parents, conversation cards for grandparents, conversation starters for elderly parents, questions to ask your grandparents, meaningful gifts for aging parents, family memory keepsake, legacy interview questions, family conversation starters, Mother's Day gift for elderly mom, Father's Day gift for aging dad, Grandparents Day gift ideas";
+const SHARED_DESCRIPTION = "Gentle conversation cards, picture prompts, and connection kits for families, children and grandchildren who want deeper calls and visits with the people who raised them.";
 
 const SUMMER_EDITION_PRICE_ID = "pri_01kpagj5jtaxcnkbtjctq616k4";
 const COLLECTION_PRICE_ID = "pri_01kpafqz2tc4pfc262j1dnh531";
@@ -186,10 +190,14 @@ const Eyebrow = ({ children, light = false }: { children: React.ReactNode; light
 const Shop = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  const { pathname } = useLocation();
+  const isKits = pathname === "/kits";
   usePageMeta({
-    title: "Shop Connection Kits & Seasonal Planners for Aging Parents | The Comfort Bond",
-    description:
-      "Shop printable Connection Kits, the Summer Edition family planner, and the full Comfort Bond Collection — conversation cards, reminiscence prompts, and trivia for visits with aging parents and grandparents in senior living, memory care, or at home.",
+    title: isKits
+      ? "Themed Connection Kits, Seasonal Planner | The Comfort Bond™"
+      : "Shop The Comfort Bond™ — Family bonding Kits, Conversation Cards & Seasonal Planners",
+    description: SHARED_DESCRIPTION,
+    keywords: B2C_KEYWORDS,
   });
 
   return (

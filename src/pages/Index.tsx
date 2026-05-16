@@ -16,6 +16,10 @@ import founderPhoto from "@/assets/meaningful-gifts-aging-parents-grandparents-m
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useLocation } from "react-router-dom";
+
+const B2C_KEYWORDS = "conversation cards for aging parents, conversation cards for grandparents, conversation starters for elderly parents, questions to ask your grandparents, meaningful gifts for aging parents, family memory keepsake, legacy interview questions, family conversation starters, Mother's Day gift for elderly mom, Father's Day gift for aging dad, Grandparents Day gift ideas";
+const SHARED_DESCRIPTION = "Gentle conversation cards, picture prompts, and connection kits for families, children and grandchildren who want deeper calls and visits with the people who raised them.";
 
 const ArrowSvg = ({ color = "#fff" }: { color?: string }) => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -87,10 +91,14 @@ const PILLARS = [
 ];
 
 const Index = () => {
+  const { pathname } = useLocation();
+  const isFreeSampler = pathname === "/free-sampler";
   usePageMeta({
-    title: "The Comfort Bond — Family Connection Kits for Aging Parents & Grandparents",
-    description:
-      "Printable connection kits, conversation cards, and seasonal planners that help adult children and grandchildren create meaningful moments with aging parents in senior living, memory care, or at home.",
+    title: isFreeSampler
+      ? "Free Coffee & Connection Sampler | The Comfort Bond™"
+      : "The Comfort Bond™ — Family Conversation Cards & Connection Kits for the People Who Raised You",
+    description: SHARED_DESCRIPTION,
+    keywords: B2C_KEYWORDS,
   });
   return (
     <div>
