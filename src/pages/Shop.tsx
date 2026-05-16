@@ -211,7 +211,7 @@ const KITS: Kit[] = [
     priceId: "pri_01kpafv0r50q149ctgje0dmn0q",
     name: "The Hands That Made It Kit",
     tags: ["Story Starters", "Keepsake Friendly", "Heirloom Gift"],
-    desc: "There was a time when fixing something wasn't a phone call — it was a Saturday. This kit honors the workbench, the sewing basket, the toolbox, and the skills your loved one built over a lifetime. It's an invitation to ask about what they made and how they made it.",
+    desc: "For the maker, the mender, the fixer — and the family who learned a craft by watching their hands.",
     bullets: [
       "20 conversation prompts on workbenches, sewing & craft",
       "10 illustrated Visual Spark Cards",
