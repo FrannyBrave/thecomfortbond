@@ -5,9 +5,6 @@ import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
-import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition-family-memory-kit-grandparents.png";
-import comfortBondCollectionMockup from "@/assets/comfort-bond-collection.png";
-import shopHeroImage from "@/assets/shop-hero-garden-memories.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
@@ -442,12 +439,28 @@ const Shop = () => {
               </div>
             </div>
             <div className="shop-hero-image" style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", boxShadow: "0 30px 60px -20px rgba(0,0,0,0.45)" }}>
-              <img
-                src={shopHeroImage}
-                alt="A daughter and her aging mother sharing a tender moment with The Garden Memories Kit conversation cards in a sunlit family room"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                loading="eager"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcSet="/lcp/shop-hero-480.avif 480w, /lcp/shop-hero-768.avif 768w, /lcp/shop-hero-1024.avif 1024w, /lcp/shop-hero-1280.avif 1280w"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <source
+                  type="image/webp"
+                  srcSet="/lcp/shop-hero-480.webp 480w, /lcp/shop-hero-768.webp 768w, /lcp/shop-hero-1024.webp 1024w, /lcp/shop-hero-1280.webp 1280w"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <img
+                  src="/lcp/shop-hero-768.webp"
+                  alt="A daughter and her aging mother sharing a tender moment with The Garden Memories Kit conversation cards in a sunlit family room"
+                  width={768}
+                  height={960}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </section>
@@ -456,7 +469,11 @@ const Shop = () => {
         <section id="featured" style={{ background: C.cream, padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
             <div style={{ aspectRatio: "3 / 4", borderRadius: 12, overflow: "hidden", background: C.creamDark, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for staying close to aging parents and grandparents" style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} loading="eager" />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/summer-edition-480.avif 480w, /lcp/summer-edition-768.avif 768w, /lcp/summer-edition-1100.avif 1100w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <source type="image/webp" srcSet="/lcp/summer-edition-480.webp 480w, /lcp/summer-edition-768.webp 768w, /lcp/summer-edition-1100.webp 1100w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <img src="/lcp/summer-edition-768.webp" alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for staying close to aging parents and grandparents" width={768} height={1024} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} loading="lazy" decoding="async" />
+              </picture>
             </div>
             <div>
               <Eyebrow>Featured · Now available</Eyebrow>
@@ -560,7 +577,11 @@ const Shop = () => {
         <section id="collection" style={{ background: C.forestDark, color: "#fff", padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
             <div style={{ aspectRatio: "4 / 3", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: C.forestDark }}>
-              <img src={comfortBondCollectionMockup} alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/collection-480.avif 480w, /lcp/collection-768.avif 768w, /lcp/collection-1100.avif 1100w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <source type="image/webp" srcSet="/lcp/collection-480.webp 480w, /lcp/collection-768.webp 768w, /lcp/collection-1100.webp 1100w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <img src="/lcp/collection-768.webp" alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner" width={768} height={576} style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" decoding="async" />
+              </picture>
             </div>
             <div>
               <Eyebrow light>The Complete Collection</Eyebrow>
