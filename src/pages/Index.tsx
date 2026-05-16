@@ -343,7 +343,11 @@ const Index = () => {
         <section style={{ background: C.creamDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 880, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.6fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
             <div>
-              <img src={founderPhoto} alt="Francesca, founder of The Comfort Bond" loading="lazy" style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 12, display: "block" }} />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/home-founder-480.avif 480w, /lcp/home-founder-768.avif 768w" sizes="(max-width: 768px) 100vw, 35vw" />
+                <source type="image/webp" srcSet="/lcp/home-founder-480.webp 480w, /lcp/home-founder-768.webp 768w" sizes="(max-width: 768px) 100vw, 35vw" />
+                <img src="/lcp/home-founder-768.webp" alt="Francesca, founder of The Comfort Bond" width={768} height={768} loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 12, display: "block" }} />
+              </picture>
             </div>
             <div>
               <div className="section-tag">A note from the founder</div>
