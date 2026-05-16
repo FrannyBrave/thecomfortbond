@@ -215,6 +215,7 @@ const Index = () => {
                 </a>
                 <a
                   href="#kits"
+                  className="kits-outline-cta"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -228,6 +229,7 @@ const Index = () => {
                     textDecoration: "none",
                     border: "1.5px solid #7a4a2e",
                     fontFamily: "var(--font-sans)",
+                    transition: "background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease",
                   }}
                 >
                   Explore the Connection Kits
@@ -645,6 +647,16 @@ const Index = () => {
           .founder-grid { grid-template-columns: 1fr !important; }
         }
         .path-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(45,74,62,0.08); }
+        .kits-outline-cta:hover {
+          background: #7a4a2e !important;
+          color: var(--cream) !important;
+          transform: translateY(-1px);
+          box-shadow: 0 8px 20px rgba(122,74,46,0.28);
+        }
+        .kits-outline-cta:focus-visible {
+          outline: 2px solid #7a4a2e;
+          outline-offset: 3px;
+        }
       `}</style>
     </div>
   );
