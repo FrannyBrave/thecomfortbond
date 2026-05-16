@@ -106,7 +106,7 @@ export const FooterSection = () => {
             The Comfort Bond™ products are for recreational and life enrichment purposes only. Not a medical device.
           </p>
           <p className="text-xs text-forest/60 mt-1">
-            © 2026 The Comfort Bond.
+            © 2026 The Comfort Bond. · Made with care in Texas 🤍
           </p>
         </div>
       </div>
