@@ -210,13 +210,31 @@ const Index = () => {
                 Meaningful moments with the people who raised you <span className="hero-h1-sub">— across calls, visits, distance, and the time you still have <em>together.</em></span>
               </h1>
               <div className="hero-actions">
-                <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Download the Free Connection Companion
+                <a href={SAMPLER_URL} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary">
+                  Download the Free Coffee Sampler
                 </a>
-                <a href="#kits" className="btn-secondary">Explore the Bonding Kits</a>
+                <a
+                  href="#kits"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    background: "var(--cream)",
+                    color: "#7a4a2e",
+                    padding: "10px 18px",
+                    borderRadius: 100,
+                    fontSize: 13,
+                    fontWeight: 500,
+                    textDecoration: "none",
+                    border: "1.5px solid #7a4a2e",
+                    fontFamily: "var(--font-sans)",
+                  }}
+                >
+                  Explore the Connection Kits
+                </a>
               </div>
               <div className="hero-trust">
-                Free instant download · A weekly guide for more meaningful calls and visits
+                Instant digital download · Yours forever · Personal support, always
               </div>
             </div>
             <div className="hero-visual">
