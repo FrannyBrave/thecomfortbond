@@ -54,7 +54,12 @@ export const StickyMobileCTA = ({
           "linear-gradient(to top, hsl(var(--cream)) 0%, hsl(var(--cream)) 70%, hsl(var(--cream) / 0) 100%)",
       }}
     >
-      {isHashLink ? (
+      {onClick ? (
+        <button type="button" onClick={onClick} className={buttonClasses}>
+          <span>{label}</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      ) : isHashLink ? (
         <a href={href} onClick={handleHashClick} className={buttonClasses}>
           <span>{label}</span>
           <span aria-hidden="true">→</span>
