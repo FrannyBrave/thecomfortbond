@@ -42,21 +42,64 @@ const C = {
 type Kit = {
   id: string;
   name: string;
-  tagline: string;
+  tags: string[];
   desc: string;
   bullets: string[];
   cta: string;
   image: string;
   priceId: string;
-  badge?: { label: string; tone: "forest" | "clay" };
 };
+
+const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift"]);
+
+export const TagPills = ({ tags, light = false }: { tags: string[]; light?: boolean }) => (
+  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, margin: "0 0 0.85rem" }}>
+    {tags.map((t) => {
+      const terracotta = TERRACOTTA_TAGS.has(t);
+      const bg = terracotta
+        ? "rgba(198,123,92,0.14)"
+        : light
+        ? "rgba(232,201,154,0.18)"
+        : "rgba(139,157,131,0.16)";
+      const color = terracotta
+        ? "var(--clay)"
+        : light
+        ? "var(--sand)"
+        : "#4a6741";
+      const border = terracotta
+        ? "1px solid rgba(198,123,92,0.32)"
+        : light
+        ? "1px solid rgba(232,201,154,0.32)"
+        : "1px solid rgba(139,157,131,0.32)";
+      return (
+        <span
+          key={t}
+          style={{
+            fontFamily: "var(--font-sans)",
+            fontSize: 11,
+            fontWeight: 600,
+            letterSpacing: "0.04em",
+            padding: "4px 10px",
+            borderRadius: 999,
+            background: bg,
+            color,
+            border,
+            whiteSpace: "nowrap",
+          }}
+        >
+          {t}
+        </span>
+      );
+    })}
+  </div>
+);
 
 const KITS: Kit[] = [
   {
     id: "remember-when-kit",
     priceId: "pri_01kpafx84h0z9z11fwc5m84dam",
     name: "The Remember When Kit",
-    tagline: "Pop culture, music & daily life from the decades that shaped them",
+    tags: ["Story Starters", "Gentle Games", "Start Here"],
     desc: "The Beatles on the Ed Sullivan Show, sock hops in the gym, TV dinners on folding trays, the jukebox at the diner. This kit unlocks the songs, movies, and everyday moments your loved one carries from the 1950s through the 1980s — and tells you exactly what to ask to hear them.",
     bullets: [
       "15 conversation prompts across 5 themes",
@@ -67,13 +110,12 @@ const KITS: Kit[] = [
     ],
     cta: "Bring the Decades Home",
     image: kitRememberWhen,
-    badge: { label: "Start here", tone: "forest" },
   },
   {
     id: "kitchen-table-memories-kit",
     priceId: "pri_01kpafxq9xrqg0qhqfttzdjswf",
     name: "The Kitchen Table Memories Kit",
-    tagline: "Kitchens, family meals, baking days & comfort food",
+    tags: ["Family Gatherings", "Family Stories", "Slow Visits"],
     desc: "Every family had a kitchen table. It's where homework happened, recipes were passed by hand, and Sunday dinners ran long. This kit invites your loved one back to the smells, the sounds, and the people of the kitchen they remember best.",
     bullets: [
       "15 conversation prompts on family meals & comfort food",
@@ -84,13 +126,12 @@ const KITS: Kit[] = [
     ],
     cta: "Pull Up a Chair",
     image: kitKitchenTable,
-    badge: { label: "Bestseller", tone: "clay" },
   },
   {
     id: "garden-memories-kit",
     priceId: "pri_01kpafvx3erd68458p4em99141",
     name: "The Garden Memories Kit",
-    tagline: "Seeds, sunshine, vegetable patches & the joy of watching things grow",
+    tags: ["Picture Prompts", "Slow Visits", "Gentle Favorite"],
     desc: "A tomato still warm from the vine. The smell of soil after a good rain. The lilac bush by the front porch. This kit honors the patience and pride of a generation that grew things — and gives you the prompts to hear about the garden they remember.",
     bullets: [
       "15 conversation prompts on gardens, tools & time outside",
@@ -106,7 +147,7 @@ const KITS: Kit[] = [
     id: "places-weve-been-kit",
     priceId: "pri_01kpafwqs0wwzatbs5721cyfmk",
     name: "The Places We've Been Kit",
-    tagline: "Family road trips, station wagons & roadside adventures",
+    tags: ["Long-Distance Friendly", "Story Starters", "Picture Prompts"],
     desc: "Before GPS and direct flights, there were Sunday drives, station wagons full of cousins, and roads people remembered by heart. This kit pulls up alongside the family trips your loved one took — the destinations, the diners, the souvenirs that made it home.",
     bullets: [
       "15 conversation prompts on road trips & vacations",
@@ -122,7 +163,7 @@ const KITS: Kit[] = [
     id: "hands-that-made-it-kit",
     priceId: "pri_01kpafv0r50q149ctgje0dmn0q",
     name: "The Hands That Made It Kit",
-    tagline: "Building, sewing, fixing & the pride of hands-on work",
+    tags: ["Story Starters", "Keepsake Friendly", "Heirloom Gift"],
     desc: "There was a time when fixing something wasn't a phone call — it was a Saturday. This kit honors the workbench, the sewing basket, the toolbox, and the skills your loved one built over a lifetime. It's an invitation to ask about what they made and how they made it.",
     bullets: [
       "20 conversation prompts on workbenches, sewing & craft",
@@ -290,9 +331,10 @@ const Shop = () => {
             </div>
             <div>
               <Eyebrow>Featured · Now available</Eyebrow>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0 0 0.5rem" }}>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0 0 0.65rem" }}>
                 The Connection Season — <em style={{ color: C.clay }}>Summer Edition</em>
               </h2>
+              <TagPills tags={["Weekly Rhythm", "Seasonal Favorite", "Family Gatherings"]} />
               <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", color: C.clay, fontWeight: 600, marginBottom: "1rem" }}>$34</div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
                 Turn July through September into a gentle rhythm of meaningful calls, visits, and shared memories.
@@ -360,37 +402,16 @@ const Shop = () => {
                   <div style={{ background: C.creamDark }}>
                     <img
                       src={kit.image}
-                      alt={`${kit.name} — ${kit.tagline} — printable conversation cards, reminiscence prompts, trivia and memory BINGO for connecting with an aging parent or grandparent`}
+                      alt={`${kit.name} — printable conversation cards, reminiscence prompts, trivia and memory BINGO for connecting with an aging parent or grandparent`}
                       loading="lazy"
                       style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", minHeight: 240 }}
                     />
                   </div>
                   <div style={{ padding: "clamp(1.5rem,3vw,2.25rem)", display: "flex", flexDirection: "column" }}>
-                    {kit.badge && (
-                      <span
-                        style={{
-                          alignSelf: "flex-start",
-                          fontFamily: "var(--font-sans)",
-                          fontSize: 11,
-                          fontWeight: 700,
-                          letterSpacing: "0.08em",
-                          textTransform: "uppercase",
-                          padding: "4px 10px",
-                          borderRadius: 999,
-                          marginBottom: "0.6rem",
-                          background: kit.badge.tone === "forest" ? C.forestDark : C.clay,
-                          color: "#fff",
-                        }}
-                      >
-                        {kit.badge.label}
-                      </span>
-                    )}
-                    <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.3rem,2.4vw,1.65rem)", fontWeight: 600, color: C.forestDark, margin: "0 0 0.4rem", lineHeight: 1.25 }}>
+                    <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.3rem,2.4vw,1.65rem)", fontWeight: 600, color: C.forestDark, margin: "0 0 0.55rem", lineHeight: 1.25 }}>
                       {kit.name}
                     </h3>
-                    <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: C.clay, margin: "0 0 0.5rem", lineHeight: 1.4 }}>
-                      {kit.tagline}
-                    </p>
+                    <TagPills tags={kit.tags} />
                     <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: C.forestDark, fontWeight: 600, marginBottom: "0.9rem" }}>$34</div>
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: "0 0 1rem" }}>
                       {kit.desc}
@@ -427,6 +448,7 @@ const Shop = () => {
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", margin: "0 0 0.75rem" }}>
                 <em>All five kits. One library. Every story worth saving.</em>
               </h2>
+              <TagPills tags={["Best Value", "Heirloom Gift", "Family Gatherings"]} light />
               <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.25rem", flexWrap: "wrap" }}>
                 <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: C.sand, fontWeight: 600 }}>$127</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "rgba(255,255,255,0.55)", textDecoration: "line-through" }}>$170</span>

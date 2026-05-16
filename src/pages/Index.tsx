@@ -20,6 +20,7 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/compone
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { TagPills } from "@/pages/Shop";
 
 const SAMPLER_URL = "https://the-comfort-bond-2.kit.com/3dfe0171af";
 
@@ -136,12 +137,12 @@ const ImagePlaceholder = ({ label, ratio = "4 / 3" }: { label: string; ratio?: s
   </div>
 );
 
-const KITS: { icon: string; name: string; theme: string; image?: string }[] = [
-  { icon: "💭", name: "The Remember When Kit", theme: "Decades, family history & childhood", image: kitRememberWhen },
-  { icon: "🍞", name: "The Kitchen Table Memories Kit", theme: "Sunday suppers & family meals", image: kitKitchenTable },
-  { icon: "🚗", name: "The Places We've Been Kit", theme: "Road trips, travel & home places", image: kitPlacesWeveBeen },
-  { icon: "🌻", name: "The Garden Memories Kit", theme: "Seasons, growing & the outdoors", image: kitGardenMemories },
-  { icon: "🔧", name: "The Hands That Made It Kit", theme: "Crafts, trades & things built to last", image: kitHandsThatMadeIt },
+const KITS: { icon: string; name: string; tags: string[]; image?: string }[] = [
+  { icon: "💭", name: "The Remember When Kit", tags: ["Story Starters", "Gentle Games", "Start Here"], image: kitRememberWhen },
+  { icon: "🍞", name: "The Kitchen Table Memories Kit", tags: ["Family Gatherings", "Family Stories", "Slow Visits"], image: kitKitchenTable },
+  { icon: "🚗", name: "The Places We've Been Kit", tags: ["Long-Distance Friendly", "Story Starters", "Picture Prompts"], image: kitPlacesWeveBeen },
+  { icon: "🌻", name: "The Garden Memories Kit", tags: ["Picture Prompts", "Slow Visits", "Gentle Favorite"], image: kitGardenMemories },
+  { icon: "🔧", name: "The Hands That Made It Kit", tags: ["Story Starters", "Keepsake Friendly", "Heirloom Gift"], image: kitHandsThatMadeIt },
 ];
 
 const PILLARS = [
@@ -360,9 +361,10 @@ const Index = () => {
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
             <div>
               <div className="section-tag">Flagship · The Connection Season — Summer Edition</div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 0.85rem" }}>
                 Turn July through September into a <em style={{ color: C.clay }}>rhythm of meaningful calls, visits, and shared memories.</em>
               </h2>
+              <TagPills tags={["Weekly Rhythm", "Seasonal Favorite", "Family Gatherings"]} />
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
                 A 41-page seasonal companion for the daughter, son, or grandchild who wants the next
                 conversation to feel deeper than &ldquo;How are you?&rdquo; — with 13 themed weeks, a
@@ -403,7 +405,7 @@ const Index = () => {
                   {k.image ? (
                     <img
                       src={k.image}
-                      alt={`${k.name} — ${k.theme} — printable Comfort Bond Connection Kit with conversation cards, reminiscence prompts, trivia and memory BINGO for aging parents and grandparents`}
+                      alt={`${k.name} — printable Comfort Bond Connection Kit with conversation cards, reminiscence prompts, trivia and memory BINGO for aging parents and grandparents`}
                       loading="lazy"
                       style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", display: "block" }}
                     />
@@ -411,13 +413,10 @@ const Index = () => {
                     <ImagePlaceholder label={k.name} ratio="4 / 3" />
                   )}
                   <div style={{ padding: "1.25rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-                    
                     <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", fontWeight: 600, color: C.forestDark, margin: 0, lineHeight: 1.3 }}>
                       {k.name}
                     </h3>
-                    <div style={{ fontFamily: "var(--font-sans)", fontSize: 12, color: C.textMid, lineHeight: 1.5 }}>
-                      {k.theme}
-                    </div>
+                    <TagPills tags={k.tags} />
                     <div style={{ fontFamily: "var(--font-serif)", fontSize: 14, fontWeight: 600, color: C.clay, marginTop: "0.25rem" }}>
                       $34
                     </div>
@@ -452,9 +451,10 @@ const Index = () => {
               <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: C.sand, marginBottom: 8 }}>
                 The complete toolkit
               </div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", margin: "0 0 1rem" }}>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", margin: "0 0 0.85rem" }}>
                 The Comfort Bond <em style={{ color: C.sand }}>Collection.</em>
               </h2>
+              <TagPills tags={["Best Value", "Heirloom Gift", "Family Gatherings"]} light />
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.78)", margin: "0 0 1.5rem" }}>
                 All five The Comfort Bond Connection Kits in one library — every theme, every era,
                 every conversation worth having. For the family ready to commit to a full season
@@ -499,6 +499,7 @@ const Index = () => {
                 {
                   eyebrow: "Primary freebie · Weekly planner",
                   title: "The Connection Companion",
+                  tags: ["Start Here", "Free", "Slow Visits"],
                   desc: "A free weekly guide for planning more meaningful calls, visits, and shared moments with a parent or grandparent.",
                   insideLabel: "What's inside this free guide:",
                   inside: [
@@ -513,6 +514,7 @@ const Index = () => {
                 {
                   eyebrow: "Secondary freebie · Mini connection kit",
                   title: "The Coffee & Connection Sampler",
+                  tags: ["Start Here", "Free", "Sunday Calls"],
                   desc: "A free mini connection kit with conversation prompts, visual memory cards, and a gentle word game built around familiar morning rituals.",
                   insideLabel: "What's inside this free sampler:",
                   inside: [
@@ -550,6 +552,7 @@ const Index = () => {
                     <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", fontWeight: 600, color: C.forestDark, margin: 0, lineHeight: 1.25 }}>
                       {f.title}
                     </h3>
+                    <TagPills tags={f.tags} />
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: 0 }}>
                       {f.desc}
                     </p>
