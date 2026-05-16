@@ -11,6 +11,7 @@ import connectionCompanionMockup from "@/assets/connection-companion-meaningful-
 import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
 import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition-family-memory-kit-grandparents.png";
 import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-family-video-call-conversation-cards.png";
+import comfortBondCollectionBundle from "@/assets/comfort-bond-collection-conversation-cards-memory-kits-bundle.png";
 import founderPhoto from "@/assets/meaningful-gifts-aging-parents-grandparents-memory-kits.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
@@ -342,13 +343,23 @@ const Index = () => {
         {/* THE COMFORT BOND COLLECTION */}
         <section id="collection" style={{ background: C.forestDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)", color: "#fff" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
-            <div style={{ aspectRatio: "16 / 9", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.15)" }}>
-              <img
-                src={comfortBondCollectionMockup}
-                alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits for adult children and grandchildren of aging parents: Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It"
-                style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                loading="lazy"
-              />
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              <div style={{ aspectRatio: "16 / 9", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.15)" }}>
+                <img
+                  src={comfortBondCollectionMockup}
+                  alt="Adult daughter on a video call with her aging mother — using The Comfort Bond Collection conversation cards across distance"
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                  loading="lazy"
+                />
+              </div>
+              <div style={{ aspectRatio: "4 / 3", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.15)" }}>
+                <img
+                  src={comfortBondCollectionBundle}
+                  alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits: Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It"
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: C.sand, marginBottom: 8 }}>
@@ -431,37 +442,6 @@ const Index = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FINAL CTA */}
-        <section className="final-cta-section">
-          <div className="final-cta-inner final-cta-inner-with-image">
-            <div className="fcs-image-wrap">
-              <img
-                src={finalCtaPhoto}
-                alt="Adult daughter and her elderly mother sharing a Comfort Bond conversation card at the kitchen table"
-                className="fcs-image"
-                loading="lazy"
-              />
-            </div>
-            <div className="fcs-content">
-              <div className="fcs-eyebrow">The Comfort Bond™ · For families who want the time to matter</div>
-              <h2 className="fcs-title">
-                Your next call or visit can <em>feel different.</em>
-              </h2>
-              <p className="fcs-desc">
-                Start with one simple guide made to help you create a more meaningful moment with
-                someone you love.
-              </p>
-              <div className="fcs-actions">
-                <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Download the Free Connection Companion
-                  <ArrowSvg />
-                </a>
-                <a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer" className="btn-secondary">Try the Free Coffee & Connection Sampler</a>
-              </div>
             </div>
           </div>
         </section>
