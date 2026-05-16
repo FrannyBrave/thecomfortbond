@@ -446,37 +446,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* FINAL CTA */}
-        <section className="final-cta-section">
-          <div className="final-cta-inner final-cta-inner-with-image">
-            <div className="fcs-image-wrap">
-              <img
-                src={finalCtaPhoto}
-                alt="Adult daughter and her elderly mother sharing a Comfort Bond conversation card at the kitchen table"
-                className="fcs-image"
-                loading="lazy"
-              />
-            </div>
-            <div className="fcs-content">
-              <div className="fcs-eyebrow">The Comfort Bond™ · For families who want the time to matter</div>
-              <h2 className="fcs-title">
-                Your next call or visit can <em>feel different.</em>
-              </h2>
-              <p className="fcs-desc">
-                Start with one simple guide made to help you create a more meaningful moment with
-                someone you love.
-              </p>
-              <div className="fcs-actions">
-                <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Download the Free Connection Companion
-                  <ArrowSvg />
-                </a>
-                <a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer" className="btn-secondary">Try the Free Coffee & Connection Sampler</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* THREE PILLARS */}
         <section style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
