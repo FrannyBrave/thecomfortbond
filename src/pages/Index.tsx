@@ -340,15 +340,15 @@ const Index = () => {
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem,2.6vw,2rem)", fontWeight: 600, lineHeight: 1.25, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
                 I built this for the call I was always grateful I made.
               </h2>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 0.75rem" }}>
                 I built The Comfort Bond after losing my grandmother, Félicité, in May 2024.
               </p>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                This brand is for anyone who wants the next call or visit with a parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;
+                This brand is for anyone who wants the next call or visit with a parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;{" "}
+                <a href="/our-story" style={{ fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}>
+                  Read the full story →
+                </a>
               </p>
-              <a href="/about" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
-                Read the full story →
-              </a>
             </div>
           </div>
         </section>
