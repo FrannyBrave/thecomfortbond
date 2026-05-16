@@ -138,8 +138,8 @@ const ImagePlaceholder = ({ label, ratio = "4 / 3" }: { label: string; ratio?: s
 );
 
 const KITS: { icon: string; name: string; tags: string[]; image?: string }[] = [
-  { icon: "💭", name: "The Remember When Kit", tags: ["Story Starters", "Gentle Games", "Start Here"], image: kitRememberWhen },
-  { icon: "🍞", name: "The Kitchen Table Memories Kit", tags: ["Family Gatherings", "Family Stories", "Slow Visits"], image: kitKitchenTable },
+  { icon: "💭", name: "The Remember When Kit", tags: ["Best-Seller", "Story Starters", "Gentle Games", "Start Here"], image: kitRememberWhen },
+  { icon: "🍞", name: "The Kitchen Table Memories Kit", tags: ["Best-Seller", "Family Gatherings", "Family Stories", "Slow Visits"], image: kitKitchenTable },
   { icon: "🚗", name: "The Places We've Been Kit", tags: ["Long-Distance Friendly", "Story Starters", "Picture Prompts"], image: kitPlacesWeveBeen },
   { icon: "🌻", name: "The Garden Memories Kit", tags: ["Picture Prompts", "Slow Visits", "Gentle Favorite"], image: kitGardenMemories },
   { icon: "🔧", name: "The Hands That Made It Kit", tags: ["Story Starters", "Keepsake Friendly", "Heirloom Gift"], image: kitHandsThatMadeIt },

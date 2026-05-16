@@ -50,7 +50,7 @@ type Kit = {
   priceId: string;
 };
 
-const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift"]);
+const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "Best-Seller"]);
 
 export const TagPills = ({ tags, light = false }: { tags: string[]; light?: boolean }) => (
   <div style={{ display: "flex", flexWrap: "wrap", gap: 6, margin: "0 0 0.85rem" }}>
@@ -99,7 +99,7 @@ const KITS: Kit[] = [
     id: "remember-when-kit",
     priceId: "pri_01kpafx84h0z9z11fwc5m84dam",
     name: "The Remember When Kit",
-    tags: ["Story Starters", "Gentle Games", "Start Here"],
+    tags: ["Best-Seller", "Story Starters", "Gentle Games", "Start Here"],
     desc: "The Beatles on the Ed Sullivan Show, sock hops in the gym, TV dinners on folding trays, the jukebox at the diner. This kit unlocks the songs, movies, and everyday moments your loved one carries from the 1950s through the 1980s — and tells you exactly what to ask to hear them.",
     bullets: [
       "15 conversation prompts across 5 themes",
@@ -115,7 +115,7 @@ const KITS: Kit[] = [
     id: "kitchen-table-memories-kit",
     priceId: "pri_01kpafxq9xrqg0qhqfttzdjswf",
     name: "The Kitchen Table Memories Kit",
-    tags: ["Family Gatherings", "Family Stories", "Slow Visits"],
+    tags: ["Best-Seller", "Family Gatherings", "Family Stories", "Slow Visits"],
     desc: "Every family had a kitchen table. It's where homework happened, recipes were passed by hand, and Sunday dinners ran long. This kit invites your loved one back to the smells, the sounds, and the people of the kitchen they remember best.",
     bullets: [
       "15 conversation prompts on family meals & comfort food",
