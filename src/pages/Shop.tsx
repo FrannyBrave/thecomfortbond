@@ -5,9 +5,6 @@ import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
-import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition-family-memory-kit-grandparents.png";
-import comfortBondCollectionMockup from "@/assets/comfort-bond-collection.png";
-import shopHeroImage from "@/assets/shop-hero-garden-memories.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
