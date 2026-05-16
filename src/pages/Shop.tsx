@@ -383,11 +383,8 @@ const Shop = () => {
               </h2>
               <TagPills tags={["Weekly Rhythm", "Seasonal Favorite", "Family Gatherings"]} />
               <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", color: C.clay, fontWeight: 600, marginBottom: "1rem" }}>$34</div>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
-                Turn July through September into a gentle rhythm of meaningful calls, visits, and shared memories.
-              </p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                Made for the daughter, son, or grandchild who wants the next conversation to feel deeper than &ldquo;How are you?&rdquo; — for phone calls, video calls, or in-person visits.
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
+                For the summer you want to feel like more than one good Saturday — thirteen warm weeks, one quiet rhythm.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.5rem", display: "grid", gap: "0.5rem" }}>
                 {[
