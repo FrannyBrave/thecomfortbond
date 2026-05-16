@@ -147,7 +147,7 @@ const KITS: Kit[] = [
     priceId: "pri_01kpafx84h0z9z11fwc5m84dam",
     name: "The Remember When Kit",
     tags: ["Best-Seller", "Story Starters", "Gentle Games", "Start Here"],
-    desc: "The Beatles on the Ed Sullivan Show, sock hops in the gym, TV dinners on folding trays, the jukebox at the diner. This kit unlocks the songs, movies, and everyday moments your loved one carries from the 1950s through the 1980s — and tells you exactly what to ask to hear them.",
+    desc: "Songs, headlines, and the small daily rituals of the decades that shaped the people who raised us — the easiest visit to start with.",
     bullets: [
       "15 conversation prompts across 5 themes",
       "10 vintage Visual Spark Cards",
