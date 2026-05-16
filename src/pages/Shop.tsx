@@ -262,7 +262,7 @@ const Shop = () => {
                   { label: "The 5 Kits", href: "#kits" },
                   { label: "The Collection", href: "#collection" },
                 ].map((c) => (
-                  <a key={c.href} href={c.href} style={{ fontFamily: "var(--font-sans)", fontSize: 13, fontWeight: 500, color: "#fff", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.22)", padding: "6px 14px", borderRadius: 999, textDecoration: "none" }}>
+                  <a key={c.href} href={c.href} style={{ fontFamily: "var(--font-sans)", fontSize: 13, fontWeight: 600, color: C.forestDark, background: C.sand, border: `1px solid ${C.sand}`, padding: "7px 16px", borderRadius: 999, textDecoration: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.18)" }}>
                     {c.label}
                   </a>
                 ))}
