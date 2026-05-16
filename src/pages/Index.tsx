@@ -15,8 +15,77 @@ import comfortBondCollectionBundle from "@/assets/comfort-bond-collection-conver
 import founderPhoto from "@/assets/meaningful-gifts-aging-parents-grandparents-memory-kits.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+const SAMPLER_URL = "https://the-comfort-bond-2.kit.com/3dfe0171af";
+
+const HomeExitIntentModal = () => {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const KEY = "home-exit-intent-shown";
+    if (sessionStorage.getItem(KEY)) return;
+    let armed = false;
+    const armTimer = window.setTimeout(() => { armed = true; }, 8000);
+    const trigger = () => {
+      if (!armed || sessionStorage.getItem(KEY)) return;
+      sessionStorage.setItem(KEY, "1");
+      setOpen(true);
+      cleanup();
+    };
+    const onMouseOut = (e: MouseEvent) => {
+      if (e.relatedTarget) return;
+      if (e.clientY > 0) return;
+      trigger();
+    };
+    const onScroll = () => {
+      const scrolled = window.scrollY + window.innerHeight;
+      const total = document.documentElement.scrollHeight;
+      if (total > 0 && scrolled / total > 0.6) trigger();
+    };
+    const isTouch = window.matchMedia("(hover: none)").matches;
+    if (isTouch) window.addEventListener("scroll", onScroll, { passive: true });
+    else document.addEventListener("mouseout", onMouseOut);
+    function cleanup() {
+      window.clearTimeout(armTimer);
+      window.removeEventListener("scroll", onScroll);
+      document.removeEventListener("mouseout", onMouseOut);
+    }
+    return cleanup;
+  }, []);
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogContent className="max-w-md bg-cream border-[1.5px] border-terracotta/30 p-7 md:p-9 rounded-md">
+        <div className="text-center">
+          <div className="font-sans text-[10px] uppercase tracking-[0.32em] text-terracotta mb-4">
+            Before you go
+          </div>
+          <DialogTitle className="font-serif text-forest text-[26px] md:text-[30px] leading-[1.15] tracking-tight">
+            Take a free taste of The Comfort Bond with you.
+          </DialogTitle>
+          <DialogDescription className="mt-3 font-sans text-sm md:text-base text-foreground/75 leading-relaxed">
+            The free Coffee & Connection Sampler — gentle conversation cards, visual spark cards, and a word link game for your next slow morning together.
+          </DialogDescription>
+        </div>
+        <div className="mt-6 flex justify-center">
+          <a
+            href={SAMPLER_URL}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            onClick={() => setOpen(false)}
+            className="inline-flex items-center gap-2 bg-terracotta text-cream font-sans font-medium text-[15px] rounded-full px-7 py-3 shadow-[0_8px_24px_-6px_rgba(198,123,92,0.5)] hover:bg-terracotta/90 transition"
+          >
+            Download the Free Coffee Sampler →
+          </a>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
 
 const B2C_KEYWORDS = "conversation cards for aging parents, conversation cards for grandparents, conversation starters for elderly parents, questions to ask your grandparents, meaningful gifts for aging parents, family memory keepsake, legacy interview questions, family conversation starters, Mother's Day gift for elderly mom, Father's Day gift for aging dad, Grandparents Day gift ideas";
 const SHARED_DESCRIPTION = "Gentle conversation cards, picture prompts, and connection kits for families, children and grandchildren who want deeper calls and visits with the people who raised them.";
