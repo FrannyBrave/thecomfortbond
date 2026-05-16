@@ -215,6 +215,7 @@ const Index = () => {
                 </a>
                 <a
                   href="#kits"
+                  className="kits-outline-cta"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -228,6 +229,7 @@ const Index = () => {
                     textDecoration: "none",
                     border: "1.5px solid #7a4a2e",
                     fontFamily: "var(--font-sans)",
+                    transition: "background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease",
                   }}
                 >
                   Explore the Connection Kits
