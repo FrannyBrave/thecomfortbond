@@ -451,9 +451,10 @@ const Index = () => {
               <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: C.sand, marginBottom: 8 }}>
                 The complete toolkit
               </div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", margin: "0 0 1rem" }}>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", margin: "0 0 0.85rem" }}>
                 The Comfort Bond <em style={{ color: C.sand }}>Collection.</em>
               </h2>
+              <TagPills tags={["Best Value", "Heirloom Gift", "Family Gatherings"]} light />
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.78)", margin: "0 0 1.5rem" }}>
                 All five The Comfort Bond Connection Kits in one library — every theme, every era,
                 every conversation worth having. For the family ready to commit to a full season
