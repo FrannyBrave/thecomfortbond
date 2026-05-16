@@ -692,7 +692,7 @@ const Shop = () => {
         </div>
       </footer>
       <CookieConsent />
-      <StickyMobileCTA href="#featured" label="Get the Summer Edition — $34" showAfter={600} />
+      <StickyMobileCTA href="#featured" label="Get the Summer Edition" showAfter={600} />
 
       <style>{`
         @media (max-width: 820px) {
