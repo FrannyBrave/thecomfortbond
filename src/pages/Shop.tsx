@@ -179,7 +179,7 @@ const KITS: Kit[] = [
     priceId: "pri_01kpafvx3erd68458p4em99141",
     name: "The Garden Memories Kit",
     tags: ["Picture Prompts", "Slow Visits", "Gentle Favorite"],
-    desc: "A tomato still warm from the vine. The smell of soil after a good rain. The lilac bush by the front porch. This kit honors the patience and pride of a generation that grew things — and gives you the prompts to hear about the garden they remember.",
+    desc: "For the porches, the lilacs, the year the tomatoes were impossible — a quiet kit for the loved ones whose memory lives outside.",
     bullets: [
       "15 conversation prompts on gardens, tools & time outside",
       "10 illustrated Visual Spark Cards",
