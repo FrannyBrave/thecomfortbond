@@ -656,7 +656,7 @@ const Shop = () => {
         <section style={{ background: C.sandPale, padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.55rem,3.2vw,2.3rem)", fontWeight: 600, lineHeight: 1.25, color: C.forestDark, margin: "0 0 1.25rem" }}>
-              <em>The bond grows on purpose, not by accident.</em>
+              <em>The connection grows on purpose, not by accident.</em>
             </h2>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.8, color: C.textMid, margin: "0 0 1rem" }}>
               Whatever you choose — a single kit, the full collection, the seasonal planner — the work isn't in the buying. It's in the calling. The asking. The writing down. The phone in your hand on a Tuesday afternoon when you weren't planning to call, but you did anyway.
