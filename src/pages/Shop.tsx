@@ -234,9 +234,23 @@ const Shop = () => {
               <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.6rem,4.5vw,3.2rem)", fontWeight: 600, lineHeight: 1.15, color: "#fff", margin: "0 0 1rem" }}>
                 <em>Choose how you'll start the next conversation.</em>
               </h1>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.65, color: "rgba(255,255,255,0.78)", maxWidth: 560, margin: 0 }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.65, color: "rgba(255,255,255,0.78)", maxWidth: 560, margin: "0 0 1.5rem" }}>
                 Every kit is a quiet way to feel closer to the people you love — across the country, across the room, and the time you still have together.
               </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: "1.25rem" }}>
+                {[
+                  { label: "Summer Edition", href: "#featured" },
+                  { label: "The 5 Kits", href: "#kits" },
+                  { label: "The Collection", href: "#collection" },
+                ].map((c) => (
+                  <a key={c.href} href={c.href} style={{ fontFamily: "var(--font-sans)", fontSize: 13, fontWeight: 500, color: "#fff", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.22)", padding: "6px 14px", borderRadius: 999, textDecoration: "none" }}>
+                    {c.label}
+                  </a>
+                ))}
+              </div>
+              <div style={{ fontFamily: "var(--font-sans)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", letterSpacing: "0.02em" }}>
+                Instant digital download · Yours forever · 14-day happy-family guarantee
+              </div>
             </div>
             <div className="shop-hero-image" style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", boxShadow: "0 30px 60px -20px rgba(0,0,0,0.45)" }}>
               <img
@@ -284,6 +298,9 @@ const Shop = () => {
               </button>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
                 Instant download · Use it printed, on a tablet, or right from your phone
+              </p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 13.5, color: C.textMid, margin: "0.85rem 0 0" }}>
+                Pair it with a <a href="#kits" style={{ color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, fontWeight: 500 }}>Connection Kit</a> for themed weeks →
               </p>
             </div>
           </div>
