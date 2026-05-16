@@ -195,7 +195,7 @@ const KITS: Kit[] = [
     priceId: "pri_01kpafwqs0wwzatbs5721cyfmk",
     name: "The Places We've Been Kit",
     tags: ["Long-Distance Friendly", "Story Starters", "Picture Prompts"],
-    desc: "Before GPS and direct flights, there were Sunday drives, station wagons full of cousins, and roads people remembered by heart. This kit pulls up alongside the family trips your loved one took — the destinations, the diners, the souvenirs that made it home.",
+    desc: "For the people who remember in places — the Sunday drive, the neighborhood corner, the road trip that didn't go the way you planned.",
     bullets: [
       "15 conversation prompts on road trips & vacations",
       "10 retro Visual Spark Cards",
