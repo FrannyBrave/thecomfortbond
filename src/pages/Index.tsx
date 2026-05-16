@@ -15,8 +15,77 @@ import comfortBondCollectionBundle from "@/assets/comfort-bond-collection-conver
 import founderPhoto from "@/assets/meaningful-gifts-aging-parents-grandparents-memory-kits.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+const SAMPLER_URL = "https://the-comfort-bond-2.kit.com/3dfe0171af";
+
+const HomeExitIntentModal = () => {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const KEY = "home-exit-intent-shown";
+    if (sessionStorage.getItem(KEY)) return;
+    let armed = false;
+    const armTimer = window.setTimeout(() => { armed = true; }, 8000);
+    const trigger = () => {
+      if (!armed || sessionStorage.getItem(KEY)) return;
+      sessionStorage.setItem(KEY, "1");
+      setOpen(true);
+      cleanup();
+    };
+    const onMouseOut = (e: MouseEvent) => {
+      if (e.relatedTarget) return;
+      if (e.clientY > 0) return;
+      trigger();
+    };
+    const onScroll = () => {
+      const scrolled = window.scrollY + window.innerHeight;
+      const total = document.documentElement.scrollHeight;
+      if (total > 0 && scrolled / total > 0.6) trigger();
+    };
+    const isTouch = window.matchMedia("(hover: none)").matches;
+    if (isTouch) window.addEventListener("scroll", onScroll, { passive: true });
+    else document.addEventListener("mouseout", onMouseOut);
+    function cleanup() {
+      window.clearTimeout(armTimer);
+      window.removeEventListener("scroll", onScroll);
+      document.removeEventListener("mouseout", onMouseOut);
+    }
+    return cleanup;
+  }, []);
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogContent className="max-w-md bg-cream border-[1.5px] border-terracotta/30 p-7 md:p-9 rounded-md">
+        <div className="text-center">
+          <div className="font-sans text-[10px] uppercase tracking-[0.32em] text-terracotta mb-4">
+            Before you go
+          </div>
+          <DialogTitle className="font-serif text-forest text-[26px] md:text-[30px] leading-[1.15] tracking-tight">
+            Take a free taste of The Comfort Bond with you.
+          </DialogTitle>
+          <DialogDescription className="mt-3 font-sans text-sm md:text-base text-foreground/75 leading-relaxed">
+            The free Coffee & Connection Sampler — gentle conversation cards, visual spark cards, and a word link game for your next slow morning together.
+          </DialogDescription>
+        </div>
+        <div className="mt-6 flex justify-center">
+          <a
+            href={SAMPLER_URL}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            onClick={() => setOpen(false)}
+            className="inline-flex items-center gap-2 bg-terracotta text-cream font-sans font-medium text-[15px] rounded-full px-7 py-3 shadow-[0_8px_24px_-6px_rgba(198,123,92,0.5)] hover:bg-terracotta/90 transition"
+          >
+            Download the Free Coffee Sampler →
+          </a>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
 
 const B2C_KEYWORDS = "conversation cards for aging parents, conversation cards for grandparents, conversation starters for elderly parents, questions to ask your grandparents, meaningful gifts for aging parents, family memory keepsake, legacy interview questions, family conversation starters, Mother's Day gift for elderly mom, Father's Day gift for aging dad, Grandparents Day gift ideas";
 const SHARED_DESCRIPTION = "Gentle conversation cards, picture prompts, and connection kits for families, children and grandchildren who want deeper calls and visits with the people who raised them.";
@@ -141,13 +210,31 @@ const Index = () => {
                 Meaningful moments with the people who raised you <span className="hero-h1-sub">— across calls, visits, distance, and the time you still have <em>together.</em></span>
               </h1>
               <div className="hero-actions">
-                <a href="https://the-comfort-bond-2.kit.com/de78d818c7" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Download the Free Connection Companion
+                <a href={SAMPLER_URL} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary">
+                  Download the Free Coffee Sampler
                 </a>
-                <a href="#kits" className="btn-secondary">Explore the Bonding Kits</a>
+                <a
+                  href="#kits"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    background: "var(--cream)",
+                    color: "#7a4a2e",
+                    padding: "10px 18px",
+                    borderRadius: 100,
+                    fontSize: 13,
+                    fontWeight: 500,
+                    textDecoration: "none",
+                    border: "1.5px solid #7a4a2e",
+                    fontFamily: "var(--font-sans)",
+                  }}
+                >
+                  Explore the Connection Kits
+                </a>
               </div>
               <div className="hero-trust">
-                Free instant download · A weekly guide for more meaningful calls and visits
+                Instant digital download · Yours forever · Personal support, always
               </div>
             </div>
             <div className="hero-visual">
@@ -253,15 +340,15 @@ const Index = () => {
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem,2.6vw,2rem)", fontWeight: 600, lineHeight: 1.25, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
                 I built this for the call I was always grateful I made.
               </h2>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 0.75rem" }}>
                 I built The Comfort Bond after losing my grandmother, Félicité, in May 2024.
               </p>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                This brand is for anyone who wants the next call or visit with a parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;
+                This brand is for anyone who wants the next call or visit with a parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;{" "}
+                <a href="/our-story" style={{ fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}>
+                  Read the full story →
+                </a>
               </p>
-              <a href="/about" style={{ fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
-                Read the full story →
-              </a>
             </div>
           </div>
         </section>
@@ -371,6 +458,13 @@ const Index = () => {
                 every conversation worth having. For the family ready to commit to a full season
                 of meaningful moments together.
               </p>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 10, margin: "0 0 1rem", flexWrap: "wrap" }}>
+                <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.75rem", fontWeight: 600, color: "#fff" }}>$127</span>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: C.sand, textDecoration: "line-through", opacity: 0.7 }}>$170</span>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.sand, fontWeight: 500 }}>
+                  Save $43 vs. buying kits separately
+                </span>
+              </div>
               <a href="/shop" className="btn-primary">
                 View the Collection
                 <ArrowSvg />
@@ -404,6 +498,12 @@ const Index = () => {
                   eyebrow: "Primary freebie · Weekly planner",
                   title: "The Connection Companion",
                   desc: "A free weekly guide for planning more meaningful calls, visits, and shared moments with a parent or grandparent.",
+                  insideLabel: "What's inside this free guide:",
+                  inside: [
+                    "A weekly connection planner — Monday through Sunday",
+                    "The Six Dimensions of Bonding compass for richer weeks",
+                    "A themed week starter with 5 conversation prompts",
+                  ],
                   cta: "Download the Free Connection Companion",
                   href: "https://the-comfort-bond-2.kit.com/de78d818c7",
                   imgLabel: "Connection Companion mockup",
@@ -412,6 +512,12 @@ const Index = () => {
                   eyebrow: "Secondary freebie · Mini connection kit",
                   title: "The Coffee & Connection Sampler",
                   desc: "A free mini connection kit with conversation prompts, visual memory cards, and a gentle word game built around familiar morning rituals.",
+                  insideLabel: "What's inside this free sampler:",
+                  inside: [
+                    "8 gentle conversation cards for slow morning visits",
+                    "6 image-based visual spark cards",
+                    "A 10-round word link game",
+                  ],
                   cta: "Try the Free Coffee & Connection Sampler",
                   href: "https://the-comfort-bond-2.kit.com/3dfe0171af",
                   imgLabel: "Coffee & Connection Sampler mockup",
@@ -445,6 +551,16 @@ const Index = () => {
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: 0 }}>
                       {f.desc}
                     </p>
+                    <div style={{ background: "var(--sand-pale)", borderRadius: 12, padding: "0.85rem 1rem", marginTop: "0.25rem" }}>
+                      <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: C.forestDark, marginBottom: 6 }}>
+                        {f.insideLabel}
+                      </div>
+                      <ul style={{ margin: 0, paddingLeft: 18, fontFamily: "var(--font-sans)", fontSize: 13.5, lineHeight: 1.6, color: C.textMid }}>
+                        {f.inside.map((item, j) => (
+                          <li key={j} style={{ marginBottom: 2 }}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                     <a href={f.href} {...(f.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="btn-primary" style={{ alignSelf: "flex-start", marginTop: "0.5rem" }}>
                       {f.cta}
                       <ArrowSvg />
@@ -521,6 +637,8 @@ const Index = () => {
         </div>
       </footer>
       <CookieConsent />
+      <StickyMobileCTA href={SAMPLER_URL} label="Get the Free Coffee Sampler" showAfter={500} />
+      <HomeExitIntentModal />
 
       <style>{`
         @media (max-width: 720px) {

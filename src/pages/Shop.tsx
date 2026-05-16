@@ -195,7 +195,7 @@ const Shop = () => {
   usePageMeta({
     title: isKits
       ? "Themed Connection Kits, Seasonal Planner | The Comfort Bond™"
-      : "Shop The Comfort Bond™ — Family bonding Kits, Conversation Cards & Seasonal Planners",
+      : "Shop The Comfort Bond™ — Family Connection Kits, Conversation Cards & Seasonal Planners",
     description: SHARED_DESCRIPTION,
     keywords: B2C_KEYWORDS,
   });
