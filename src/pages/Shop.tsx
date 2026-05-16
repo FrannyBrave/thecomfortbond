@@ -579,7 +579,7 @@ const Shop = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <span className="footer-copy">© 2026 The Comfort Bond™ ·</span>
+          <span className="footer-copy">© 2026 The Comfort Bond™ · Made with care in Texas 🤍 ·</span>
           <a href="mailto:hello@thecomfortbond.com" className="footer-email">hello@thecomfortbond.com</a>
         </div>
       </footer>
