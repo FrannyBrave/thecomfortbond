@@ -50,7 +50,8 @@ type Kit = {
   priceId: string;
 };
 
-const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "Best-Seller"]);
+const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "Best-Seller", "Founder's Favorite"]);
+const SOLID_CLAY_TAGS = new Set(["Best-Seller", "Founder's Favorite"]);
 
 const WhatsInside = ({ bullets }: { bullets: string[] }) => {
   const [open, setOpen] = useState(() =>
@@ -128,36 +129,37 @@ const WhatsInside = ({ bullets }: { bullets: string[] }) => {
 export const TagPills = ({ tags, light = false }: { tags: string[]; light?: boolean }) => (
   <div style={{ display: "flex", flexWrap: "wrap", gap: 6, margin: "0 0 0.85rem" }}>
     {tags.map((t) => {
-      const isBestSeller = t === "Best-Seller";
+      const isSolid = SOLID_CLAY_TAGS.has(t);
       const terracotta = TERRACOTTA_TAGS.has(t);
-      const bg = isBestSeller
+      const bg = isSolid
         ? "#C67B5C"
         : terracotta
         ? "rgba(198,123,92,0.14)"
         : light
         ? "rgba(232,201,154,0.18)"
         : "rgba(139,157,131,0.16)";
-      const color = isBestSeller
+      const color = isSolid
         ? "#FFF8EE"
         : terracotta
         ? "var(--clay)"
         : light
         ? "var(--sand)"
         : "#4a6741";
-      const border = isBestSeller
+      const border = isSolid
         ? "1px solid #B86A4B"
         : terracotta
         ? "1px solid rgba(198,123,92,0.32)"
         : light
         ? "1px solid rgba(232,201,154,0.32)"
         : "1px solid rgba(139,157,131,0.32)";
+      const label = t === "Best-Seller" ? "★ Best-Seller" : t === "Founder's Favorite" ? "♥ Founder's Favorite" : t;
       return (
         <span
           key={t}
           style={{
             fontFamily: "var(--font-sans)",
             fontSize: 11,
-            fontWeight: isBestSeller ? 700 : 600,
+            fontWeight: isSolid ? 700 : 600,
             letterSpacing: "0.04em",
             padding: "4px 10px",
             borderRadius: 999,
@@ -165,11 +167,11 @@ export const TagPills = ({ tags, light = false }: { tags: string[]; light?: bool
             color,
             border,
             whiteSpace: "nowrap",
-            boxShadow: isBestSeller ? "0 1px 2px rgba(198,123,92,0.25)" : undefined,
-            textTransform: isBestSeller ? "uppercase" : undefined,
+            boxShadow: isSolid ? "0 1px 2px rgba(198,123,92,0.25)" : undefined,
+            textTransform: isSolid ? "uppercase" : undefined,
           }}
         >
-          {isBestSeller ? "★ Best-Seller" : t}
+          {label}
         </span>
       );
     })}
@@ -197,7 +199,7 @@ const KITS: Kit[] = [
     id: "kitchen-table-memories-kit",
     priceId: "pri_01kpafxq9xrqg0qhqfttzdjswf",
     name: "The Kitchen Table Memories Kit",
-    tags: ["Best-Seller", "Family Gatherings", "Family Stories", "Slow Visits"],
+    tags: ["Founder's Favorite", "Family Gatherings", "Family Stories", "Slow Visits"],
     desc: "Every family had a kitchen table. It's where homework happened, recipes were passed by hand, and Sunday dinners ran long. This kit invites your loved one back to the smells, the sounds, and the people of the kitchen they remember best.",
     bullets: [
       "15 conversation prompts on family meals & comfort food",
