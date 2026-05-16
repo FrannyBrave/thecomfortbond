@@ -555,9 +555,9 @@ const Index = () => {
                       <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: C.forestDark, marginBottom: 6 }}>
                         {f.insideLabel}
                       </div>
-                      <ul style={{ margin: 0, paddingLeft: 18, fontFamily: "var(--font-sans)", fontSize: 13.5, lineHeight: 1.6, color: C.textMid }}>
+                      <ul style={{ margin: 0, paddingLeft: 20, fontFamily: "var(--font-sans)", fontSize: 13.5, lineHeight: 1.6, color: C.textMid, listStyleType: "disc", listStylePosition: "outside" }}>
                         {f.inside.map((item, j) => (
-                          <li key={j} style={{ marginBottom: 2 }}>{item}</li>
+                          <li key={j} style={{ marginBottom: 4, display: "list-item" }}>{item}</li>
                         ))}
                       </ul>
                     </div>
