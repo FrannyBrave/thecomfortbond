@@ -1,18 +1,10 @@
 import React from "react";
 import logoImg from "@/assets/the-comfort-bond-logo.webp";
-import heroPhoto from "@/assets/conversation-cards-for-aging-parents-the-comfort-bond.png";
-import finalCtaPhoto from "@/assets/conversation-starters-aging-parents-grandparents-family-stories.png";
 import kitRememberWhen from "@/assets/remember-when-kit-conversation-cards-grandparents-family-memories.jpg";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
-import connectionCompanionMockup from "@/assets/connection-companion-meaningful-visit-planner-aging-parents.png";
-import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
-import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition-family-memory-kit-grandparents.png";
-import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-family-video-call-conversation-cards.png";
-import comfortBondCollectionBundle from "@/assets/comfort-bond-collection.png";
-import founderPhoto from "@/assets/meaningful-gifts-aging-parents-grandparents-memory-kits.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
@@ -242,13 +234,20 @@ const Index = () => {
             </div>
             <div className="hero-visual">
               <div className="hero-photo-wrap">
-                <img
-                  src={heroPhoto}
-                  alt="The Connection Companion, conversation prompts, and memory cards laid out on a warm wooden table — tools for meaningful calls and visits with an aging parent or grandparent."
-                  className="hero-photo"
-                  loading="eager"
-                  decoding="async"
-                />
+                <picture>
+                  <source type="image/avif" srcSet="/lcp/home-hero-480.avif 480w, /lcp/home-hero-768.avif 768w, /lcp/home-hero-1024.avif 1024w, /lcp/home-hero-1280.avif 1280w" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <source type="image/webp" srcSet="/lcp/home-hero-480.webp 480w, /lcp/home-hero-768.webp 768w, /lcp/home-hero-1024.webp 1024w, /lcp/home-hero-1280.webp 1280w" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <img
+                    src="/lcp/home-hero-768.webp"
+                    alt="The Connection Companion, conversation prompts, and memory cards laid out on a warm wooden table — tools for meaningful calls and visits with an aging parent or grandparent."
+                    className="hero-photo"
+                    width={768}
+                    height={432}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -336,7 +335,11 @@ const Index = () => {
         <section style={{ background: C.creamDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 880, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.6fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
             <div>
-              <img src={founderPhoto} alt="Francesca, founder of The Comfort Bond" loading="lazy" style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 12, display: "block" }} />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/home-founder-480.avif 480w, /lcp/home-founder-768.avif 768w" sizes="(max-width: 768px) 100vw, 35vw" />
+                <source type="image/webp" srcSet="/lcp/home-founder-480.webp 480w, /lcp/home-founder-768.webp 768w" sizes="(max-width: 768px) 100vw, 35vw" />
+                <img src="/lcp/home-founder-768.webp" alt="Francesca, founder of The Comfort Bond" width={768} height={768} loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 12, display: "block" }} />
+              </picture>
             </div>
             <div>
               <div className="section-tag">A note from the founder</div>
@@ -382,12 +385,11 @@ const Index = () => {
               </p>
             </div>
             <div style={{ aspectRatio: "4 / 5", background: C.cream, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img
-                src={connectionSeasonSummerMockup}
-                alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for meaningful calls and visits with aging parents and grandparents"
-                style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                loading="lazy"
-              />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/summer-edition-480.avif 480w, /lcp/summer-edition-768.avif 768w, /lcp/summer-edition-1100.avif 1100w" sizes="(max-width: 768px) 100vw, 45vw" />
+                <source type="image/webp" srcSet="/lcp/summer-edition-480.webp 480w, /lcp/summer-edition-768.webp 768w, /lcp/summer-edition-1100.webp 1100w" sizes="(max-width: 768px) 100vw, 45vw" />
+                <img src="/lcp/summer-edition-768.webp" alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for meaningful calls and visits with aging parents and grandparents" width={768} height={1024} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+              </picture>
             </div>
           </div>
         </section>
@@ -440,12 +442,11 @@ const Index = () => {
         <section id="collection" style={{ background: C.forestDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)", color: "#fff" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
             <div style={{ borderRadius: 12, overflow: "hidden", display: "block" }}>
-              <img
-                src={comfortBondCollectionBundle}
-                alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner"
-                style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", borderRadius: 12 }}
-                loading="lazy"
-              />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/collection-480.avif 480w, /lcp/collection-768.avif 768w, /lcp/collection-1100.avif 1100w" sizes="(max-width: 768px) 100vw, 45vw" />
+                <source type="image/webp" srcSet="/lcp/collection-480.webp 480w, /lcp/collection-768.webp 768w, /lcp/collection-1100.webp 1100w" sizes="(max-width: 768px) 100vw, 45vw" />
+                <img src="/lcp/collection-768.webp" alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner" width={1100} height={825} loading="lazy" decoding="async" style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", borderRadius: 12 }} />
+              </picture>
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: C.sand, marginBottom: 8 }}>
@@ -478,12 +479,11 @@ const Index = () => {
         {/* CONNECTION ACROSS DISTANCE — visual band */}
         <section style={{ background: C.forestDark, padding: "0 clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5rem)" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <img
-              src={comfortBondCollectionMockup}
-              alt="Adult daughter on a video call with her aging mother — using The Comfort Bond Collection conversation cards across distance"
-              style={{ width: "100%", height: "auto", borderRadius: 12, display: "block", objectFit: "contain" }}
-              loading="lazy"
-            />
+            <picture>
+              <source type="image/avif" srcSet="/lcp/home-collection-480.avif 480w, /lcp/home-collection-768.avif 768w, /lcp/home-collection-1100.avif 1100w" sizes="(max-width: 1100px) 100vw, 1100px" />
+              <source type="image/webp" srcSet="/lcp/home-collection-480.webp 480w, /lcp/home-collection-768.webp 768w, /lcp/home-collection-1100.webp 1100w" sizes="(max-width: 1100px) 100vw, 1100px" />
+              <img src="/lcp/home-collection-1100.webp" alt="Adult daughter on a video call with her aging mother — using The Comfort Bond Collection conversation cards across distance" width={1100} height={619} loading="lazy" decoding="async" style={{ width: "100%", height: "auto", borderRadius: 12, display: "block", objectFit: "contain" }} />
+            </picture>
           </div>
         </section>
 
@@ -531,15 +531,19 @@ const Index = () => {
                   <div style={{ padding: "1.25rem 1.25rem 0" }}>
                     {f.title === "The Connection Companion" || f.title === "The Coffee & Connection Sampler" ? (
                       <div style={{ aspectRatio: "16 / 10", width: "100%", borderRadius: 16, background: `linear-gradient(135deg, ${C.creamDark}, var(--sand-pale))`, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-                        <img
-                          src={f.title === "The Connection Companion" ? connectionCompanionMockup : coffeeConnectionSamplerMockup}
-                          alt={f.title === "The Connection Companion"
+                        {(() => {
+                          const base = f.title === "The Connection Companion" ? "home-connection-companion" : "home-coffee-sampler";
+                          const alt = f.title === "The Connection Companion"
                             ? "The Connection Companion free weekly planner — cover and inside spreads showing the Six Dimensions of Bonding wheel, weekly connection plan, and reflection notes."
-                            : "The Coffee & Connection Sampler — cover and inside spreads showing conversation cards, visual spark cards, and the word link game."}
-                          style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                          loading="lazy"
-                          decoding="async"
-                        />
+                            : "The Coffee & Connection Sampler — cover and inside spreads showing conversation cards, visual spark cards, and the word link game.";
+                          return (
+                            <picture>
+                              <source type="image/avif" srcSet={`/lcp/${base}-480.avif 480w, /lcp/${base}-768.avif 768w`} sizes="(max-width: 768px) 100vw, 33vw" />
+                              <source type="image/webp" srcSet={`/lcp/${base}-480.webp 480w, /lcp/${base}-768.webp 768w`} sizes="(max-width: 768px) 100vw, 33vw" />
+                              <img src={`/lcp/${base}-768.webp`} alt={alt} width={768} height={576} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                            </picture>
+                          );
+                        })()}
                       </div>
                     ) : (
                       <ImagePlaceholder label={f.imgLabel} ratio="16 / 10" />
