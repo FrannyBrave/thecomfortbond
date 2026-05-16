@@ -551,6 +551,16 @@ const Index = () => {
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: 0 }}>
                       {f.desc}
                     </p>
+                    <div style={{ background: "var(--sand-pale)", borderRadius: 12, padding: "0.85rem 1rem", marginTop: "0.25rem" }}>
+                      <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: C.forestDark, marginBottom: 6 }}>
+                        {f.insideLabel}
+                      </div>
+                      <ul style={{ margin: 0, paddingLeft: 18, fontFamily: "var(--font-sans)", fontSize: 13.5, lineHeight: 1.6, color: C.textMid }}>
+                        {f.inside.map((item, j) => (
+                          <li key={j} style={{ marginBottom: 2 }}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                     <a href={f.href} {...(f.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="btn-primary" style={{ alignSelf: "flex-start", marginTop: "0.5rem" }}>
                       {f.cta}
                       <ArrowSvg />
