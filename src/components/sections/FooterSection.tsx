@@ -107,8 +107,6 @@ export const FooterSection = () => {
                 { slug: "mastercard", alt: "Mastercard" },
                 { slug: "amex", alt: "American Express" },
                 { slug: "paypal", alt: "PayPal" },
-                { slug: "apple-pay", alt: "Apple Pay" },
-                { slug: "google-pay", alt: "Google Pay" },
               ].map((p) => (
                 <img
                   key={p.slug}
