@@ -633,8 +633,31 @@ const Index = () => {
             </ul>
           </div>
         </div>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8, padding: "18px 0 6px", borderTop: "1px solid rgba(255,255,255,0.12)", marginTop: 8 }}>
+          <span style={{ fontSize: 11, letterSpacing: 1.2, textTransform: "uppercase", color: "rgba(255,255,255,0.7)" }}>Secure checkout</span>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+            {[
+              { slug: "visa", alt: "Visa" },
+              { slug: "mastercard", alt: "Mastercard" },
+              { slug: "amex", alt: "American Express" },
+              { slug: "paypal", alt: "PayPal" },
+              { slug: "apple-pay", alt: "Apple Pay" },
+              { slug: "google-pay", alt: "Google Pay" },
+            ].map((p) => (
+              <img
+                key={p.slug}
+                src={`https://cdn.jsdelivr.net/gh/aaronfagan/svg-credit-card-payment-icons@main/flat/${p.slug}.svg`}
+                alt={p.alt}
+                loading="lazy"
+                width={38}
+                height={24}
+                style={{ height: 24, width: "auto", borderRadius: 3, background: "#fff", padding: 1 }}
+              />
+            ))}
+          </div>
+        </div>
         <div className="footer-bottom">
-          <span className="footer-copy">© 2026 The Comfort Bond™ ·</span>
+          <span className="footer-copy">© 2026 The Comfort Bond™ · Made with care in Texas 🤍 ·</span>
           <a href="mailto:hello@thecomfortbond.com" className="footer-email">hello@thecomfortbond.com</a>
         </div>
       </footer>
