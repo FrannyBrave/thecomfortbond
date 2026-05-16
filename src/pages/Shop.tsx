@@ -391,7 +391,7 @@ const Shop = () => {
                 ))}
               </div>
               <div style={{ fontFamily: "var(--font-sans)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", letterSpacing: "0.02em" }}>
-                Instant digital download · Yours forever · 14-day happy-family guarantee
+                Instant digital download · Yours forever
               </div>
             </div>
             <div className="shop-hero-image" style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", boxShadow: "0 30px 60px -20px rgba(0,0,0,0.45)" }}>

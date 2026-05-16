@@ -237,7 +237,7 @@ const Index = () => {
                 </a>
               </div>
               <div className="hero-trust">
-                Instant digital download · Yours forever · Personal support, always
+                Instant digital download · Yours forever
               </div>
             </div>
             <div className="hero-visual">
