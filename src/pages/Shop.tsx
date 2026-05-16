@@ -492,7 +492,7 @@ const Shop = () => {
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: C.sand, fontWeight: 600, letterSpacing: "0.02em" }}>Save $43</span>
               </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.82)", margin: "0 0 1.25rem" }}>
-                The complete Connection Kits library — every theme, every era, every conversation worth having, in one place. For the family ready to commit to a full season of meaningful moments together, and for anyone who wants the option to bring the right kit to any call, any visit, or any quiet Sunday afternoon.
+                Every kit, gathered as one library — a year of presence, not just a Saturday.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.75rem", display: "grid", gap: "0.5rem" }}>
                 {[
