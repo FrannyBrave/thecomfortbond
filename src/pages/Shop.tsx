@@ -315,7 +315,7 @@ const Shop = () => {
       },
       ...kitTargets,
       collection: {
-        label: "Get the Collection — $127",
+        label: "Get the Collection — $147",
         action: () => void openPaddleCheckout(COLLECTION_PRICE_ID),
       },
     };
@@ -590,7 +590,7 @@ const Shop = () => {
               </h2>
               <TagPills tags={["Best Value", "Heirloom Gift", "Family Gatherings"]} light />
               <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.25rem", flexWrap: "wrap" }}>
-                <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: C.sand, fontWeight: 600 }}>$127</span>
+                <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: C.sand, fontWeight: 600 }}>$147</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "rgba(255,255,255,0.55)", textDecoration: "line-through" }}>$204</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: C.sand, fontWeight: 600, letterSpacing: "0.02em" }}>Save $77</span>
               </div>
@@ -690,7 +690,7 @@ const Shop = () => {
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(COLLECTION_PRICE_ID)}>
-                Get the Collection — $127 <ArrowSvg />
+                Get the Collection — $147 <ArrowSvg />
               </button>
               <a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer nofollow" style={{ alignSelf: "center", fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
                 Or start with a free sampler →

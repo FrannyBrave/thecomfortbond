@@ -462,7 +462,7 @@ const Index = () => {
                 commit to a full season of meaningful moments together.
               </p>
               <div style={{ display: "flex", alignItems: "baseline", gap: 10, margin: "0 0 1rem", flexWrap: "wrap" }}>
-                <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.75rem", fontWeight: 600, color: "#fff" }}>$127</span>
+                <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.75rem", fontWeight: 600, color: "#fff" }}>$147</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: C.sand, textDecoration: "line-through", opacity: 0.7 }}>$204</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.sand, fontWeight: 500 }}>
                   Save $77
