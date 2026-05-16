@@ -560,27 +560,30 @@ const Shop = () => {
         <section id="collection" style={{ background: C.forestDark, color: "#fff", padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
             <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img src={comfortBondCollectionMockup} alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits: Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
+              <img src={comfortBondCollectionMockup} alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
             </div>
             <div>
               <Eyebrow light>The Complete Collection</Eyebrow>
               <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: "#fff", margin: "0 0 0.75rem" }}>
-                <em>All five kits. One library. Every story worth saving.</em>
+                <em>Five kits and a season. One library. Every story worth saving.</em>
               </h2>
               <TagPills tags={["Best Value", "Heirloom Gift", "Family Gatherings"]} light />
               <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.25rem", flexWrap: "wrap" }}>
                 <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: C.sand, fontWeight: 600 }}>$127</span>
-                <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "rgba(255,255,255,0.55)", textDecoration: "line-through" }}>$170</span>
-                <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: C.sand, fontWeight: 600, letterSpacing: "0.02em" }}>Save $43</span>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "rgba(255,255,255,0.55)", textDecoration: "line-through" }}>$204</span>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: C.sand, fontWeight: 600, letterSpacing: "0.02em" }}>Save $77</span>
               </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.82)", margin: "0 0 1.25rem" }}>
                 Every kit, gathered as one library — a year of presence, not just a Saturday.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.75rem", display: "grid", gap: "0.5rem" }}>
                 {[
-                  "All five Comfort Bond Connection Kits",
-                  "Every era of their life, in one library",
-                  "Works for phone calls, video calls, and in-person visits",
+                  "The Remember When Kit",
+                  "The Kitchen Table Memories Kit",
+                  "The Garden Memories Kit",
+                  "The Places We've Been Kit",
+                  "The Hands That Made It Kit",
+                  "The Connection Season: Summer Edition",
                 ].map((b, i) => (
                   <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.6 }}>
                     <span style={{ color: C.sand, fontWeight: 700, flexShrink: 0 }}>✓</span>
