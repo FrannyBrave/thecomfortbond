@@ -472,7 +472,11 @@ const Shop = () => {
         <section id="featured" style={{ background: C.cream, padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
             <div style={{ aspectRatio: "3 / 4", borderRadius: 12, overflow: "hidden", background: C.creamDark, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for staying close to aging parents and grandparents" style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} loading="eager" />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/summer-edition-480.avif 480w, /lcp/summer-edition-768.avif 768w, /lcp/summer-edition-1100.avif 1100w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <source type="image/webp" srcSet="/lcp/summer-edition-480.webp 480w, /lcp/summer-edition-768.webp 768w, /lcp/summer-edition-1100.webp 1100w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <img src="/lcp/summer-edition-768.webp" alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for staying close to aging parents and grandparents" width={768} height={1024} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} loading="lazy" decoding="async" />
+              </picture>
             </div>
             <div>
               <Eyebrow>Featured · Now available</Eyebrow>
