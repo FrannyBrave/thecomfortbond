@@ -53,7 +53,6 @@ export const StickyMobileCTA = ({
     >
       {isHashLink ? (
         <a href={href} onClick={handleHashClick} className={buttonClasses}>
-          <span aria-hidden="true">🌸</span>
           <span>{label}</span>
           <span aria-hidden="true">→</span>
         </a>
