@@ -404,7 +404,7 @@ const Index = () => {
                   {k.image ? (
                     <img
                       src={k.image}
-                      alt={`${k.name} — ${k.theme} — printable Comfort Bond Connection Kit with conversation cards, reminiscence prompts, trivia and memory BINGO for aging parents and grandparents`}
+                      alt={`${k.name} — printable Comfort Bond Connection Kit with conversation cards, reminiscence prompts, trivia and memory BINGO for aging parents and grandparents`}
                       loading="lazy"
                       style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", display: "block" }}
                     />
@@ -412,13 +412,10 @@ const Index = () => {
                     <ImagePlaceholder label={k.name} ratio="4 / 3" />
                   )}
                   <div style={{ padding: "1.25rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-                    
                     <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", fontWeight: 600, color: C.forestDark, margin: 0, lineHeight: 1.3 }}>
                       {k.name}
                     </h3>
-                    <div style={{ fontFamily: "var(--font-sans)", fontSize: 12, color: C.textMid, lineHeight: 1.5 }}>
-                      {k.theme}
-                    </div>
+                    <TagPills tags={k.tags} />
                     <div style={{ fontFamily: "var(--font-serif)", fontSize: 14, fontWeight: 600, color: C.clay, marginTop: "0.25rem" }}>
                       $34
                     </div>
