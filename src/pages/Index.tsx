@@ -361,9 +361,10 @@ const Index = () => {
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
             <div>
               <div className="section-tag">Flagship · The Connection Season — Summer Edition</div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0.5rem 0 0.85rem" }}>
                 Turn July through September into a <em style={{ color: C.clay }}>rhythm of meaningful calls, visits, and shared memories.</em>
               </h2>
+              <TagPills tags={["Weekly Rhythm", "Seasonal Favorite", "Family Gatherings"]} />
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
                 A 41-page seasonal companion for the daughter, son, or grandchild who wants the next
                 conversation to feel deeper than &ldquo;How are you?&rdquo; — with 13 themed weeks, a
