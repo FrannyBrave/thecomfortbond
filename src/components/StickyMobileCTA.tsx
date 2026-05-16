@@ -6,6 +6,8 @@ interface StickyMobileCTAProps {
   showAfter?: number;
   href?: string;
   label?: string;
+  /** When provided, renders a <button> that calls this instead of a link. Takes precedence over href. */
+  onClick?: () => void;
 }
 
 /**
@@ -16,6 +18,7 @@ export const StickyMobileCTA = ({
   showAfter = 400,
   href = "/free-sampler",
   label = "Free Mother's Day Visit Guide",
+  onClick,
 }: StickyMobileCTAProps) => {
   const [visible, setVisible] = useState(false);
 
