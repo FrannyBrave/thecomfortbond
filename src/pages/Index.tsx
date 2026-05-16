@@ -242,13 +242,20 @@ const Index = () => {
             </div>
             <div className="hero-visual">
               <div className="hero-photo-wrap">
-                <img
-                  src={heroPhoto}
-                  alt="The Connection Companion, conversation prompts, and memory cards laid out on a warm wooden table — tools for meaningful calls and visits with an aging parent or grandparent."
-                  className="hero-photo"
-                  loading="eager"
-                  decoding="async"
-                />
+                <picture>
+                  <source type="image/avif" srcSet="/lcp/home-hero-480.avif 480w, /lcp/home-hero-768.avif 768w, /lcp/home-hero-1024.avif 1024w, /lcp/home-hero-1280.avif 1280w" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <source type="image/webp" srcSet="/lcp/home-hero-480.webp 480w, /lcp/home-hero-768.webp 768w, /lcp/home-hero-1024.webp 1024w, /lcp/home-hero-1280.webp 1280w" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <img
+                    src="/lcp/home-hero-768.webp"
+                    alt="The Connection Companion, conversation prompts, and memory cards laid out on a warm wooden table — tools for meaningful calls and visits with an aging parent or grandparent."
+                    className="hero-photo"
+                    width={768}
+                    height={768}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </picture>
               </div>
             </div>
           </div>
