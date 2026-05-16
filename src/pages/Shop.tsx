@@ -200,6 +200,25 @@ const Shop = () => {
     keywords: B2C_KEYWORDS,
   });
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-faqpage", "shop");
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: FAQS.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    });
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <div style={{ background: C.cream, minHeight: "100vh" }}>
       {/* NAV */}
