@@ -136,12 +136,12 @@ const ImagePlaceholder = ({ label, ratio = "4 / 3" }: { label: string; ratio?: s
   </div>
 );
 
-const KITS: { icon: string; name: string; theme: string; image?: string }[] = [
-  { icon: "💭", name: "The Remember When Kit", theme: "Decades, family history & childhood", image: kitRememberWhen },
-  { icon: "🍞", name: "The Kitchen Table Memories Kit", theme: "Sunday suppers & family meals", image: kitKitchenTable },
-  { icon: "🚗", name: "The Places We've Been Kit", theme: "Road trips, travel & home places", image: kitPlacesWeveBeen },
-  { icon: "🌻", name: "The Garden Memories Kit", theme: "Seasons, growing & the outdoors", image: kitGardenMemories },
-  { icon: "🔧", name: "The Hands That Made It Kit", theme: "Crafts, trades & things built to last", image: kitHandsThatMadeIt },
+const KITS: { icon: string; name: string; tags: string[]; image?: string }[] = [
+  { icon: "💭", name: "The Remember When Kit", tags: ["Story Starters", "Gentle Games", "Start Here"], image: kitRememberWhen },
+  { icon: "🍞", name: "The Kitchen Table Memories Kit", tags: ["Family Gatherings", "Family Stories", "Slow Visits"], image: kitKitchenTable },
+  { icon: "🚗", name: "The Places We've Been Kit", tags: ["Long-Distance Friendly", "Story Starters", "Picture Prompts"], image: kitPlacesWeveBeen },
+  { icon: "🌻", name: "The Garden Memories Kit", tags: ["Picture Prompts", "Slow Visits", "Gentle Favorite"], image: kitGardenMemories },
+  { icon: "🔧", name: "The Hands That Made It Kit", tags: ["Story Starters", "Keepsake Friendly", "Heirloom Gift"], image: kitHandsThatMadeIt },
 ];
 
 const PILLARS = [
