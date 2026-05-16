@@ -343,11 +343,11 @@ const Index = () => {
         {/* THE COMFORT BOND COLLECTION */}
         <section id="collection" style={{ background: C.forestDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)", color: "#fff" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
-            <div style={{ aspectRatio: "4 / 3", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.15)" }}>
+            <div style={{ borderRadius: 12, overflow: "hidden", display: "block" }}>
               <img
                 src={comfortBondCollectionBundle}
                 alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits: Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It"
-                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", borderRadius: 12 }}
                 loading="lazy"
               />
             </div>
