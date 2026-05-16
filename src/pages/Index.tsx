@@ -465,7 +465,7 @@ const Index = () => {
                 <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.75rem", fontWeight: 600, color: "#fff" }}>$147</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: C.sand, textDecoration: "line-through", opacity: 0.7 }}>$204</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.sand, fontWeight: 500 }}>
-                  Save $77
+                  Save $57
                 </span>
               </div>
               <a href="/shop" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: C.sand, color: C.forestDark, fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 600, padding: "12px 24px", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 14px rgba(0,0,0,0.22)" }}>
