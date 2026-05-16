@@ -497,6 +497,7 @@ const Index = () => {
                 {
                   eyebrow: "Primary freebie · Weekly planner",
                   title: "The Connection Companion",
+                  tags: ["Start Here", "Free", "Slow Visits"],
                   desc: "A free weekly guide for planning more meaningful calls, visits, and shared moments with a parent or grandparent.",
                   insideLabel: "What's inside this free guide:",
                   inside: [
@@ -511,6 +512,7 @@ const Index = () => {
                 {
                   eyebrow: "Secondary freebie · Mini connection kit",
                   title: "The Coffee & Connection Sampler",
+                  tags: ["Start Here", "Free", "Sunday Calls"],
                   desc: "A free mini connection kit with conversation prompts, visual memory cards, and a gentle word game built around familiar morning rituals.",
                   insideLabel: "What's inside this free sampler:",
                   inside: [
