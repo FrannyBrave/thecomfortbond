@@ -10,7 +10,7 @@ import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-h
 import connectionCompanionMockup from "@/assets/connection-companion-meaningful-visit-planner-aging-parents.png";
 import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
 import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition-family-memory-kit-grandparents.png";
-import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-conversation-cards-memory-kits-bundle.png";
+import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-family-video-call-conversation-cards.png";
 import founderPhoto from "@/assets/meaningful-gifts-aging-parents-grandparents-memory-kits.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
@@ -342,7 +342,7 @@ const Index = () => {
         {/* THE COMFORT BOND COLLECTION */}
         <section id="collection" style={{ background: C.forestDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)", color: "#fff" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
-            <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ aspectRatio: "16 / 9", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.15)" }}>
               <img
                 src={comfortBondCollectionMockup}
                 alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits for adult children and grandchildren of aging parents: Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It"
