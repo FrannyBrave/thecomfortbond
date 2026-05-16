@@ -498,14 +498,7 @@ const Shop = () => {
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: "0 0 1rem" }}>
                       {kit.desc}
                     </p>
-                    <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.25rem", display: "grid", gap: "0.4rem" }}>
-                      {kit.bullets.map((b, j) => (
-                        <li key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14, color: C.textMid, lineHeight: 1.55 }}>
-                          <span style={{ color: C.clay, fontWeight: 700, flexShrink: 0 }}>✓</span>
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
+                    <WhatsInside bullets={kit.bullets} />
                     <button type="button" className="btn-primary" style={{ alignSelf: "flex-start", border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(kit.priceId)}>
                       {kit.cta} <ArrowSvg />
                     </button>
