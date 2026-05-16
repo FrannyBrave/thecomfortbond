@@ -453,6 +453,16 @@ const Shop = () => {
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "rgba(255,255,255,0.7)", margin: "0.75rem 0 0" }}>
                 Instant download · Use it printed, on a tablet, or right from your phone
               </p>
+              <div style={{ marginTop: "1rem", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: 11, letterSpacing: "1.2px", textTransform: "uppercase", color: "rgba(255,255,255,0.6)" }}>
+                  Secure checkout
+                </span>
+                {["Visa", "Mastercard", "Amex", "PayPal", "Apple Pay", "Google Pay"].map((p) => (
+                  <span key={p} style={{ background: "rgba(255,255,255,0.92)", color: C.forestDark, fontFamily: "var(--font-sans)", fontSize: 10.5, fontWeight: 700, letterSpacing: "0.5px", padding: "4px 8px", borderRadius: 4 }}>
+                    {p}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </section>
