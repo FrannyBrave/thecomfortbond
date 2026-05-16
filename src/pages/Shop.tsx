@@ -447,8 +447,8 @@ const Shop = () => {
                   </li>
                 ))}
               </ul>
-              <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(COLLECTION_PRICE_ID)}>
-                Get the Collection <ArrowSvg />
+              <button type="button" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: C.sand, color: C.forestDark, fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 600, padding: "12px 24px", borderRadius: 999, border: 0, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,0.22)" }} onClick={() => void openPaddleCheckout(COLLECTION_PRICE_ID)}>
+                Get the Collection <ArrowSvg color={C.forestDark} />
               </button>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "rgba(255,255,255,0.7)", margin: "0.75rem 0 0" }}>
                 Instant download · Use it printed, on a tablet, or right from your phone
