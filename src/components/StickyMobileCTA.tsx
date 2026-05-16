@@ -27,6 +27,7 @@ export const StickyMobileCTA = ({
   }, [showAfter]);
 
   const isHashLink = href.startsWith("#");
+  const isExternal = /^https?:\/\//.test(href);
 
   const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!isHashLink) return;
