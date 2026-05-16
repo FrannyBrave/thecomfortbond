@@ -11,7 +11,7 @@ import connectionCompanionMockup from "@/assets/connection-companion-meaningful-
 import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
 import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition-family-memory-kit-grandparents.png";
 import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-family-video-call-conversation-cards.png";
-import comfortBondCollectionBundle from "@/assets/comfort-bond-collection-conversation-cards-memory-kits-bundle.png";
+import comfortBondCollectionBundle from "@/assets/comfort-bond-collection.png";
 import founderPhoto from "@/assets/meaningful-gifts-aging-parents-grandparents-memory-kits.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
