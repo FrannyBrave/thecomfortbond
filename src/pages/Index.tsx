@@ -442,7 +442,7 @@ const Index = () => {
             <div style={{ borderRadius: 12, overflow: "hidden", display: "block" }}>
               <img
                 src={comfortBondCollectionBundle}
-                alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits: Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It"
+                alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner"
                 style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", borderRadius: 12 }}
                 loading="lazy"
               />
@@ -456,15 +456,15 @@ const Index = () => {
               </h2>
               <TagPills tags={["Best Value", "Heirloom Gift", "Family Gatherings"]} light />
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.78)", margin: "0 0 1.5rem" }}>
-                All five The Comfort Bond Connection Kits in one library — every theme, every era,
-                every conversation worth having. For the family ready to commit to a full season
-                of meaningful moments together.
+                All five Comfort Bond Connection Kits plus The Connection Season: Summer Edition —
+                every theme, every era, every conversation worth having. For the family ready to
+                commit to a full season of meaningful moments together.
               </p>
               <div style={{ display: "flex", alignItems: "baseline", gap: 10, margin: "0 0 1rem", flexWrap: "wrap" }}>
                 <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.75rem", fontWeight: 600, color: "#fff" }}>$127</span>
-                <span style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: C.sand, textDecoration: "line-through", opacity: 0.7 }}>$170</span>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: C.sand, textDecoration: "line-through", opacity: 0.7 }}>$204</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.sand, fontWeight: 500 }}>
-                  Save $43
+                  Save $77
                 </span>
               </div>
               <a href="/shop" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: C.sand, color: C.forestDark, fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 600, padding: "12px 24px", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 14px rgba(0,0,0,0.22)" }}>
