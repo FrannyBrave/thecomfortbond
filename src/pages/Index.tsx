@@ -250,7 +250,7 @@ const Index = () => {
                     alt="The Connection Companion, conversation prompts, and memory cards laid out on a warm wooden table — tools for meaningful calls and visits with an aging parent or grandparent."
                     className="hero-photo"
                     width={768}
-                    height={768}
+                    height={432}
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
