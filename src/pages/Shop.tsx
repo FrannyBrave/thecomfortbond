@@ -331,9 +331,10 @@ const Shop = () => {
             </div>
             <div>
               <Eyebrow>Featured · Now available</Eyebrow>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0 0 0.5rem" }}>
+              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 600, lineHeight: 1.2, color: C.forestDark, margin: "0 0 0.65rem" }}>
                 The Connection Season — <em style={{ color: C.clay }}>Summer Edition</em>
               </h2>
+              <TagPills tags={["Weekly Rhythm", "Seasonal Favorite", "Family Gatherings"]} />
               <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", color: C.clay, fontWeight: 600, marginBottom: "1rem" }}>$34</div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1rem" }}>
                 Turn July through September into a gentle rhythm of meaningful calls, visits, and shared memories.
