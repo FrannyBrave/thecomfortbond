@@ -442,12 +442,28 @@ const Shop = () => {
               </div>
             </div>
             <div className="shop-hero-image" style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", boxShadow: "0 30px 60px -20px rgba(0,0,0,0.45)" }}>
-              <img
-                src={shopHeroImage}
-                alt="A daughter and her aging mother sharing a tender moment with The Garden Memories Kit conversation cards in a sunlit family room"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                loading="eager"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcSet="/lcp/shop-hero-480.avif 480w, /lcp/shop-hero-768.avif 768w, /lcp/shop-hero-1024.avif 1024w, /lcp/shop-hero-1280.avif 1280w"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <source
+                  type="image/webp"
+                  srcSet="/lcp/shop-hero-480.webp 480w, /lcp/shop-hero-768.webp 768w, /lcp/shop-hero-1024.webp 1024w, /lcp/shop-hero-1280.webp 1280w"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <img
+                  src="/lcp/shop-hero-768.webp"
+                  alt="A daughter and her aging mother sharing a tender moment with The Garden Memories Kit conversation cards in a sunlit family room"
+                  width={768}
+                  height={960}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </section>
