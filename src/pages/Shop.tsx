@@ -580,7 +580,11 @@ const Shop = () => {
         <section id="collection" style={{ background: C.forestDark, color: "#fff", padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
             <div style={{ aspectRatio: "4 / 3", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: C.forestDark }}>
-              <img src={comfortBondCollectionMockup} alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/collection-480.avif 480w, /lcp/collection-768.avif 768w, /lcp/collection-1100.avif 1100w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <source type="image/webp" srcSet="/lcp/collection-480.webp 480w, /lcp/collection-768.webp 768w, /lcp/collection-1100.webp 1100w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <img src="/lcp/collection-768.webp" alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner" width={768} height={576} style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" decoding="async" />
+              </picture>
             </div>
             <div>
               <Eyebrow light>The Complete Collection</Eyebrow>
