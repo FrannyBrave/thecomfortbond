@@ -200,6 +200,25 @@ const Shop = () => {
     keywords: B2C_KEYWORDS,
   });
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-faqpage", "shop");
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: FAQS.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    });
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <div style={{ background: C.cream, minHeight: "100vh" }}>
       {/* NAV */}
@@ -217,7 +236,7 @@ const Shop = () => {
             </div>
           </a>
           <ul className="nav-links">
-            <li><a href="/about">Our Story</a></li>
+            <li><a href="/our-story">Our Story</a></li>
             <li><a href="#kits">Connection Kits</a></li>
             <li><a href="/shop" className="nav-cta">Shop</a></li>
           </ul>
@@ -234,9 +253,23 @@ const Shop = () => {
               <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.6rem,4.5vw,3.2rem)", fontWeight: 600, lineHeight: 1.15, color: "#fff", margin: "0 0 1rem" }}>
                 <em>Choose how you'll start the next conversation.</em>
               </h1>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.65, color: "rgba(255,255,255,0.78)", maxWidth: 560, margin: 0 }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.65, color: "rgba(255,255,255,0.78)", maxWidth: 560, margin: "0 0 1.5rem" }}>
                 Every kit is a quiet way to feel closer to the people you love — across the country, across the room, and the time you still have together.
               </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: "1.25rem" }}>
+                {[
+                  { label: "Summer Edition", href: "#featured" },
+                  { label: "The 5 Kits", href: "#kits" },
+                  { label: "The Collection", href: "#collection" },
+                ].map((c) => (
+                  <a key={c.href} href={c.href} style={{ fontFamily: "var(--font-sans)", fontSize: 13, fontWeight: 500, color: "#fff", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.22)", padding: "6px 14px", borderRadius: 999, textDecoration: "none" }}>
+                    {c.label}
+                  </a>
+                ))}
+              </div>
+              <div style={{ fontFamily: "var(--font-sans)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", letterSpacing: "0.02em" }}>
+                Instant digital download · Yours forever · 14-day happy-family guarantee
+              </div>
             </div>
             <div className="shop-hero-image" style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", boxShadow: "0 30px 60px -20px rgba(0,0,0,0.45)" }}>
               <img
@@ -252,8 +285,8 @@ const Shop = () => {
         {/* FEATURED — Connection Season Summer Edition */}
         <section id="featured" style={{ background: C.cream, padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
-            <div style={{ aspectRatio: "3 / 4", borderRadius: 12, overflow: "hidden", background: C.creamDark }}>
-              <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for staying close to aging parents and grandparents" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} loading="eager" />
+            <div style={{ aspectRatio: "3 / 4", borderRadius: 12, overflow: "hidden", background: C.creamDark, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <img src={connectionSeasonSummerMockup} alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for staying close to aging parents and grandparents" style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} loading="eager" />
             </div>
             <div>
               <Eyebrow>Featured · Now available</Eyebrow>
@@ -284,6 +317,9 @@ const Shop = () => {
               </button>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
                 Instant download · Use it printed, on a tablet, or right from your phone
+              </p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: 13.5, color: C.textMid, margin: "0.85rem 0 0" }}>
+                Pair it with a <a href="#kits" style={{ color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, fontWeight: 500 }}>Connection Kit</a> for themed weeks →
               </p>
             </div>
           </div>
@@ -394,16 +430,15 @@ const Shop = () => {
               <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.25rem", flexWrap: "wrap" }}>
                 <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: C.sand, fontWeight: 600 }}>$127</span>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "rgba(255,255,255,0.55)", textDecoration: "line-through" }}>$170</span>
-                <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: C.sand, fontWeight: 600, letterSpacing: "0.02em" }}>save $43</span>
+                <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: C.sand, fontWeight: 600, letterSpacing: "0.02em" }}>Save $43</span>
               </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.82)", margin: "0 0 1.25rem" }}>
-                The complete Bonding & Connection library — every theme, every era, every conversation worth having, in one place. For the family ready to commit to a full season of meaningful moments together, and for anyone who wants the option to bring the right kit to any call, any visit, or any quiet Sunday afternoon.
+                The complete Connection Kits library — every theme, every era, every conversation worth having, in one place. For the family ready to commit to a full season of meaningful moments together, and for anyone who wants the option to bring the right kit to any call, any visit, or any quiet Sunday afternoon.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.75rem", display: "grid", gap: "0.5rem" }}>
                 {[
                   "All five Comfort Bond Connection Kits",
-                  "Every conversation theme, every era, every story prompt",
-                  "$170 value, yours for $127",
+                  "Every era of their life, in one library",
                   "Works for phone calls, video calls, and in-person visits",
                 ].map((b, i) => (
                   <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.6 }}>
@@ -431,7 +466,7 @@ const Shop = () => {
                 <em>Things people ask before they buy.</em>
               </h2>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 14, color: C.textMid, margin: "1rem auto 0", maxWidth: 540, lineHeight: 1.6 }}>
-                Use it printed, on a tablet, or right from your phone. If anything isn't right, email <a href="mailto:hello@thecomfortbond.com" style={{ color: C.clay }}>hello@thecomfortbond.com</a>.
+                Quick answers to the things people ask before they buy. Still unsure? Email <a href="mailto:hello@thecomfortbond.com" style={{ color: C.clay }}>hello@thecomfortbond.com</a> — we read every note.
               </p>
             </div>
             <div style={{ display: "grid", gap: "0.75rem" }}>
@@ -489,10 +524,10 @@ const Shop = () => {
               If this resonates, start where you are. One kit. One question. One conversation.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="#kits" className="btn-primary">
-                Browse the Kits <ArrowSvg />
-              </a>
-              <a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer" style={{ alignSelf: "center", fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
+              <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(COLLECTION_PRICE_ID)}>
+                Get the Collection — $127 <ArrowSvg />
+              </button>
+              <a href="https://the-comfort-bond-2.kit.com/3dfe0171af" target="_blank" rel="noopener noreferrer nofollow" style={{ alignSelf: "center", fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}`, paddingBottom: 2 }}>
                 Or start with a free sampler →
               </a>
             </div>
@@ -525,7 +560,7 @@ const Shop = () => {
           <div className="footer-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="/about">Our Story</a></li>
+              <li><a href="/our-story">Our Story</a></li>
               <li><a href="mailto:hello@thecomfortbond.com">hello@thecomfortbond.com</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>
@@ -539,7 +574,7 @@ const Shop = () => {
         </div>
       </footer>
       <CookieConsent />
-      <StickyMobileCTA href="#collection" label="Shop the Collection — $127" showAfter={600} />
+      <StickyMobileCTA href="#featured" label="Get the Summer Edition — $34" showAfter={600} />
 
       <style>{`
         @media (max-width: 820px) {
