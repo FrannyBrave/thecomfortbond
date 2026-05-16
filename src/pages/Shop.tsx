@@ -275,8 +275,90 @@ const Eyebrow = ({ children, light = false }: { children: React.ReactNode; light
   </div>
 );
 
+type StickyTarget = {
+  label: string;
+  action: () => void;
+};
+
+const STICKY_FALLBACK: StickyTarget = {
+  label: "Shop the Collection",
+  action: () => {
+    const el = document.getElementById("collection");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  },
+};
+
 const Shop = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [stickyTarget, setStickyTarget] = useState<StickyTarget>({
+    label: "Get the Summer Edition — $34",
+    action: () => void openPaddleCheckout(SUMMER_EDITION_PRICE_ID),
+  });
+
+  useEffect(() => {
+    const kitTargets: Record<string, StickyTarget> = Object.fromEntries(
+      KITS.map((k) => {
+        // Shortened display label for sticky (drop "The", trim long names)
+        const shortName = k.name
+          .replace(/^The\s+/, "")
+          .replace("Kitchen Table Memories Kit", "Kitchen Table Kit");
+        return [
+          k.id,
+          {
+            label: `Get the ${shortName} — $34`,
+            action: () => void openPaddleCheckout(k.priceId),
+          },
+        ];
+      })
+    );
+    const targets: Record<string, StickyTarget> = {
+      featured: {
+        label: "Get the Summer Edition — $34",
+        action: () => void openPaddleCheckout(SUMMER_EDITION_PRICE_ID),
+      },
+      ...kitTargets,
+      collection: {
+        label: "Get the Collection — $127",
+        action: () => void openPaddleCheckout(COLLECTION_PRICE_ID),
+      },
+    };
+
+    const ids = Object.keys(targets);
+    const nodes = ids
+      .map((id) => document.getElementById(id))
+      .filter((n): n is HTMLElement => n !== null);
+    if (nodes.length === 0) return;
+
+    const ratios = new Map<string, number>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => ratios.set(e.target.id, e.intersectionRatio));
+        let bestId: string | null = null;
+        let bestRatio = 0;
+        ratios.forEach((r, id) => {
+          if (r > bestRatio) {
+            bestRatio = r;
+            bestId = id;
+          }
+        });
+        if (bestId && bestRatio > 0.15 && targets[bestId]) {
+          setStickyTarget(targets[bestId]);
+        } else {
+          // Past collection (e.g. FAQ/footer) or before featured → fallback
+          const collectionEl = document.getElementById("collection");
+          if (collectionEl) {
+            const rect = collectionEl.getBoundingClientRect();
+            if (rect.bottom < 0) {
+              setStickyTarget(STICKY_FALLBACK);
+            }
+          }
+        }
+      },
+      { threshold: [0, 0.15, 0.3, 0.5, 0.75, 1] }
+    );
+    nodes.forEach((n) => observer.observe(n));
+    return () => observer.disconnect();
+  }, []);
 
   const { pathname } = useLocation();
   const isKits = pathname === "/kits";
@@ -654,7 +736,7 @@ const Shop = () => {
         </div>
       </footer>
       <CookieConsent />
-      <StickyMobileCTA href="#featured" label="Get the Summer Edition" showAfter={600} />
+      <StickyMobileCTA label={stickyTarget.label} onClick={stickyTarget.action} showAfter={600} />
 
       <style>{`
         @media (max-width: 820px) {
