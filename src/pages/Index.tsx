@@ -393,12 +393,11 @@ const Index = () => {
               </p>
             </div>
             <div style={{ aspectRatio: "4 / 5", background: C.cream, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img
-                src={connectionSeasonSummerMockup}
-                alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for meaningful calls and visits with aging parents and grandparents"
-                style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                loading="lazy"
-              />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/summer-edition-480.avif 480w, /lcp/summer-edition-768.avif 768w, /lcp/summer-edition-1100.avif 1100w" sizes="(max-width: 768px) 100vw, 45vw" />
+                <source type="image/webp" srcSet="/lcp/summer-edition-480.webp 480w, /lcp/summer-edition-768.webp 768w, /lcp/summer-edition-1100.webp 1100w" sizes="(max-width: 768px) 100vw, 45vw" />
+                <img src="/lcp/summer-edition-768.webp" alt="The Connection Season: Summer Edition — printable 13-week summer family connection planner for meaningful calls and visits with aging parents and grandparents" width={768} height={1024} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+              </picture>
             </div>
           </div>
         </section>
