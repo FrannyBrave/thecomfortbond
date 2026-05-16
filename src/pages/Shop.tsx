@@ -6,7 +6,7 @@ import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stori
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
 import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition-family-memory-kit-grandparents.png";
-import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-conversation-cards-memory-kits-bundle.png";
+import comfortBondCollectionMockup from "@/assets/comfort-bond-collection.png";
 import shopHeroImage from "@/assets/shop-hero-garden-memories.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
@@ -559,7 +559,7 @@ const Shop = () => {
         {/* THE COMFORT BOND COLLECTION */}
         <section id="collection" style={{ background: C.forestDark, color: "#fff", padding: "clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div className="shop-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
-            <div style={{ aspectRatio: "4 / 5", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ aspectRatio: "4 / 3", borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", background: C.forestDark }}>
               <img src={comfortBondCollectionMockup} alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner" style={{ width: "100%", height: "100%", objectFit: "contain" }} loading="lazy" />
             </div>
             <div>
