@@ -52,6 +52,79 @@ type Kit = {
 
 const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "Best-Seller"]);
 
+const WhatsInside = ({ bullets }: { bullets: string[] }) => {
+  const [open, setOpen] = useState(() =>
+    typeof window !== "undefined" ? window.matchMedia("(min-width: 768px)").matches : true
+  );
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const handler = (e: MediaQueryListEvent) => setOpen(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  return (
+    <div style={{ margin: "0 0 1.25rem", borderTop: `1px solid ${C.border}`, paddingTop: "0.85rem" }}>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+          background: "transparent",
+          border: 0,
+          padding: 0,
+          cursor: "pointer",
+          fontFamily: "var(--font-sans)",
+          fontSize: 11,
+          fontWeight: 700,
+          letterSpacing: "0.14em",
+          textTransform: "uppercase",
+          color: "rgba(45,74,62,0.7)",
+        }}
+      >
+        <span>What's inside</span>
+        <span
+          aria-hidden="true"
+          style={{
+            color: C.clay,
+            fontSize: 16,
+            fontWeight: 400,
+            transition: "transform 0.2s",
+            transform: open ? "rotate(180deg)" : "none",
+          }}
+        >
+          ⌄
+        </span>
+      </button>
+      {open && (
+        <ul style={{ listStyle: "none", padding: 0, margin: "0.75rem 0 0", display: "grid", gap: "0.4rem" }}>
+          {bullets.map((b, j) => (
+            <li
+              key={j}
+              style={{
+                display: "flex",
+                gap: 10,
+                alignItems: "flex-start",
+                fontFamily: "var(--font-sans)",
+                fontSize: 14,
+                color: C.textMid,
+                lineHeight: 1.55,
+              }}
+            >
+              <span style={{ color: C.clay, fontWeight: 700, flexShrink: 0 }}>✓</span>
+              {b}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
 export const TagPills = ({ tags, light = false }: { tags: string[]; light?: boolean }) => (
   <div style={{ display: "flex", flexWrap: "wrap", gap: 6, margin: "0 0 0.85rem" }}>
     {tags.map((t) => {
