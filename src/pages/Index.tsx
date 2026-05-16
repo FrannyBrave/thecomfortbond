@@ -450,12 +450,11 @@ const Index = () => {
         <section id="collection" style={{ background: C.forestDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)", color: "#fff" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.2fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
             <div style={{ borderRadius: 12, overflow: "hidden", display: "block" }}>
-              <img
-                src={comfortBondCollectionBundle}
-                alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner"
-                style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", borderRadius: 12 }}
-                loading="lazy"
-              />
+              <picture>
+                <source type="image/avif" srcSet="/lcp/collection-480.avif 480w, /lcp/collection-768.avif 768w, /lcp/collection-1100.avif 1100w" sizes="(max-width: 768px) 100vw, 45vw" />
+                <source type="image/webp" srcSet="/lcp/collection-480.webp 480w, /lcp/collection-768.webp 768w, /lcp/collection-1100.webp 1100w" sizes="(max-width: 768px) 100vw, 45vw" />
+                <img src="/lcp/collection-768.webp" alt="The Comfort Bond Collection — complete bundle of all five printable family connection kits plus The Connection Season: Summer Edition seasonal planner" width={1100} height={825} loading="lazy" decoding="async" style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", borderRadius: 12 }} />
+              </picture>
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: C.sand, marginBottom: 8 }}>
