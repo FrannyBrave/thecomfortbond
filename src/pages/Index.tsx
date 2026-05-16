@@ -539,15 +539,19 @@ const Index = () => {
                   <div style={{ padding: "1.25rem 1.25rem 0" }}>
                     {f.title === "The Connection Companion" || f.title === "The Coffee & Connection Sampler" ? (
                       <div style={{ aspectRatio: "16 / 10", width: "100%", borderRadius: 16, background: `linear-gradient(135deg, ${C.creamDark}, var(--sand-pale))`, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-                        <img
-                          src={f.title === "The Connection Companion" ? connectionCompanionMockup : coffeeConnectionSamplerMockup}
-                          alt={f.title === "The Connection Companion"
+                        {(() => {
+                          const base = f.title === "The Connection Companion" ? "home-connection-companion" : "home-coffee-sampler";
+                          const alt = f.title === "The Connection Companion"
                             ? "The Connection Companion free weekly planner — cover and inside spreads showing the Six Dimensions of Bonding wheel, weekly connection plan, and reflection notes."
-                            : "The Coffee & Connection Sampler — cover and inside spreads showing conversation cards, visual spark cards, and the word link game."}
-                          style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                          loading="lazy"
-                          decoding="async"
-                        />
+                            : "The Coffee & Connection Sampler — cover and inside spreads showing conversation cards, visual spark cards, and the word link game.";
+                          return (
+                            <picture>
+                              <source type="image/avif" srcSet={`/lcp/${base}-480.avif 480w, /lcp/${base}-768.avif 768w`} sizes="(max-width: 768px) 100vw, 33vw" />
+                              <source type="image/webp" srcSet={`/lcp/${base}-480.webp 480w, /lcp/${base}-768.webp 768w`} sizes="(max-width: 768px) 100vw, 33vw" />
+                              <img src={`/lcp/${base}-768.webp`} alt={alt} width={768} height={576} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                            </picture>
+                          );
+                        })()}
                       </div>
                     ) : (
                       <ImagePlaceholder label={f.imgLabel} ratio="16 / 10" />
