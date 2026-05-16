@@ -57,6 +57,12 @@ export const StickyMobileCTA = ({
           <span>{label}</span>
           <span aria-hidden="true">→</span>
         </a>
+      ) : isExternal ? (
+        <a href={href} target="_blank" rel="noopener noreferrer nofollow" className={buttonClasses}>
+          <span aria-hidden="true">☕</span>
+          <span>{label}</span>
+          <span aria-hidden="true">→</span>
+        </a>
       ) : (
         <Link to={href} className={buttonClasses}>
           <span aria-hidden="true">🌸</span>
