@@ -736,7 +736,7 @@ const Shop = () => {
         </div>
       </footer>
       <CookieConsent />
-      <StickyMobileCTA href="#featured" label="Get the Summer Edition" showAfter={600} />
+      <StickyMobileCTA label={stickyTarget.label} onClick={stickyTarget.action} showAfter={600} />
 
       <style>{`
         @media (max-width: 820px) {
