@@ -50,7 +50,8 @@ type Kit = {
   priceId: string;
 };
 
-const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "Best-Seller"]);
+const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "Best-Seller", "Founder's Favorite"]);
+const SOLID_CLAY_TAGS = new Set(["Best-Seller", "Founder's Favorite"]);
 
 const WhatsInside = ({ bullets }: { bullets: string[] }) => {
   const [open, setOpen] = useState(() =>
@@ -197,7 +198,7 @@ const KITS: Kit[] = [
     id: "kitchen-table-memories-kit",
     priceId: "pri_01kpafxq9xrqg0qhqfttzdjswf",
     name: "The Kitchen Table Memories Kit",
-    tags: ["Best-Seller", "Family Gatherings", "Family Stories", "Slow Visits"],
+    tags: ["Founder's Favorite", "Family Gatherings", "Family Stories", "Slow Visits"],
     desc: "Every family had a kitchen table. It's where homework happened, recipes were passed by hand, and Sunday dinners ran long. This kit invites your loved one back to the smells, the sounds, and the people of the kitchen they remember best.",
     bullets: [
       "15 conversation prompts on family meals & comfort food",
