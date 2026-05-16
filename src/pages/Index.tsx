@@ -1,18 +1,10 @@
 import React from "react";
 import logoImg from "@/assets/the-comfort-bond-logo.webp";
-import heroPhoto from "@/assets/conversation-cards-for-aging-parents-the-comfort-bond.png";
-import finalCtaPhoto from "@/assets/conversation-starters-aging-parents-grandparents-family-stories.png";
 import kitRememberWhen from "@/assets/remember-when-kit-conversation-cards-grandparents-family-memories.jpg";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
-import connectionCompanionMockup from "@/assets/connection-companion-meaningful-visit-planner-aging-parents.png";
-import coffeeConnectionSamplerMockup from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
-import connectionSeasonSummerMockup from "@/assets/connection-season-summer-edition-family-memory-kit-grandparents.png";
-import comfortBondCollectionMockup from "@/assets/comfort-bond-collection-family-video-call-conversation-cards.png";
-import comfortBondCollectionBundle from "@/assets/comfort-bond-collection.png";
-import founderPhoto from "@/assets/meaningful-gifts-aging-parents-grandparents-memory-kits.png";
 import { CookieConsent } from "@/components/CookieConsent";
 import { MobileMenuDrawer } from "@/components/MobileMenuDrawer";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
