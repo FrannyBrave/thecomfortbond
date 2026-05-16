@@ -55,18 +55,25 @@ const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "B
 export const TagPills = ({ tags, light = false }: { tags: string[]; light?: boolean }) => (
   <div style={{ display: "flex", flexWrap: "wrap", gap: 6, margin: "0 0 0.85rem" }}>
     {tags.map((t) => {
+      const isBestSeller = t === "Best-Seller";
       const terracotta = TERRACOTTA_TAGS.has(t);
-      const bg = terracotta
+      const bg = isBestSeller
+        ? "#C67B5C"
+        : terracotta
         ? "rgba(198,123,92,0.14)"
         : light
         ? "rgba(232,201,154,0.18)"
         : "rgba(139,157,131,0.16)";
-      const color = terracotta
+      const color = isBestSeller
+        ? "#FFF8EE"
+        : terracotta
         ? "var(--clay)"
         : light
         ? "var(--sand)"
         : "#4a6741";
-      const border = terracotta
+      const border = isBestSeller
+        ? "1px solid #B86A4B"
+        : terracotta
         ? "1px solid rgba(198,123,92,0.32)"
         : light
         ? "1px solid rgba(232,201,154,0.32)"
@@ -77,7 +84,7 @@ export const TagPills = ({ tags, light = false }: { tags: string[]; light?: bool
           style={{
             fontFamily: "var(--font-sans)",
             fontSize: 11,
-            fontWeight: 600,
+            fontWeight: isBestSeller ? 700 : 600,
             letterSpacing: "0.04em",
             padding: "4px 10px",
             borderRadius: 999,
@@ -85,9 +92,11 @@ export const TagPills = ({ tags, light = false }: { tags: string[]; light?: bool
             color,
             border,
             whiteSpace: "nowrap",
+            boxShadow: isBestSeller ? "0 1px 2px rgba(198,123,92,0.25)" : undefined,
+            textTransform: isBestSeller ? "uppercase" : undefined,
           }}
         >
-          {t}
+          {isBestSeller ? "★ Best-Seller" : t}
         </span>
       );
     })}
