@@ -240,6 +240,33 @@ export default function KitDetailPage() {
           </div>
         </section>
 
+        {/* GALLERY */}
+        {kit.gallery && kit.gallery.length > 0 && (
+          <section style={{ background: C.creamDark, padding: "clamp(2rem,5vw,4rem) clamp(1.5rem,5vw,4rem)" }}>
+            <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+              <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+                <Eyebrow>A closer look</Eyebrow>
+                <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.45rem,3vw,2rem)", fontWeight: 600, color: C.forestDark, margin: 0 }}>
+                  <em>See it on the table.</em>
+                </h2>
+              </div>
+              <div className="kit-gallery-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0,1fr))", gap: "1rem" }}>
+                {kit.gallery.map((g, i) => (
+                  <div key={i} style={{ aspectRatio: "4 / 3", overflow: "hidden", borderRadius: 14, background: C.cream, boxShadow: "0 10px 30px -18px rgba(0,0,0,0.3)" }}>
+                    <img
+                      src={g.src}
+                      alt={g.alt}
+                      loading="lazy"
+                      decoding="async"
+                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* DESCRIPTION */}
         <section style={{ background: C.sandPale, padding: "clamp(2rem,5vw,4rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
