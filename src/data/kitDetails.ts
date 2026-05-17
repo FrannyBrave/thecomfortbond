@@ -296,6 +296,250 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     pairsWith: [CROSS.coffeeSampler],
     priceId: COLLECTION_PRICE_ID,
   },
+,
+
+  "garden-memories": {
+    slug: "garden-memories",
+    name: "The Garden Memories Kit",
+    tagline: "For the people whose memory lives outside.",
+    tags: ["Picture Prompts", "Slow Visits", "Gentle Favorite"],
+    price: "$34",
+    ctaText: "Step Into the Garden",
+    stickyCta: "Step Into the Garden — $34",
+    heroImage: kitGardenMemories,
+    heroWidth: 1200,
+    heroHeight: 1500,
+    heroObjectFit: "cover",
+    description:
+      "For the people whose hands were always in the dirt — who knew when the tomatoes were ready by smell, who could name every neighbor's roses. The Garden Memories Kit gathers prompts, pictures, and quiet games around the gardens, seasons, and outdoor rituals that shaped a life. Bring it to a porch on a warm afternoon and let your grandmother tell you what she planted the year you were born.",
+    bullets: [
+      "15 conversation prompts on gardens, tools & time outside",
+      "10 illustrated Visual Spark Cards",
+      "20 trivia questions on flowers, vegetables & garden wisdom",
+      "Picture & Word Memory BINGO with watering cans, wheelbarrows & sunflowers",
+      "Musical memory featuring \"You Are My Sunshine\" & more",
+    ],
+    promptsHeadline: "A taste of what's inside",
+    prompts: [
+      "What did the yard at your childhood home smell like in summer?",
+      "Who taught you what a weed was — and what they got wrong?",
+      "What did you grow that you were proudest of, even if nobody else noticed?",
+    ],
+    faqs: [
+      {
+        q: "My mom hasn't gardened in years. Will this still resonate?",
+        a: "Yes — and often more than you'd expect. The prompts aren't about gardening now. They're about the porch she sat on, the lilacs that grew by her grandmother's back door, the year the tomatoes were impossible. Hands stop. Gardens stay.",
+      },
+      {
+        q: "My dad gardened more than my mom. Is this kit just for mothers?",
+        a: "No. Some of our most-loved prompts come from buyers using this kit with fathers and grandfathers who built their identity around the yard, the toolshed, the lawn. It's a kit for anyone whose memory lives outside.",
+      },
+      {
+        q: "My grandparents lived in apartments — they didn't garden. Will this work?",
+        a: "There are prompts about parks, neighborhood trees, window boxes, and what they grew when they finally had space. The kit reaches further than vegetable beds.",
+      },
+      {
+        q: "Are the picture prompts seasonal?",
+        a: "The Visual Spark Cards and Picture BINGO grid include seeds, blooms, harvest scenes, autumn leaves, and snow on a porch — so the kit works year-round, but it lights up most warmly in spring and summer.",
+      },
+      {
+        q: "Can my kids do this kit with their grandparent in the garden?",
+        a: "This is one of the most kid-friendly kits we make. The picture prompts give younger grandchildren a way to participate — point, name, ask. Grandparent teaches, kid learns, you sit quietly nearby and write down what you hear.",
+      },
+    ],
+    bestFor:
+      "Best for the loved one who lit up around plants, porches, and weather. Best for the spring or summer visit when you can actually go outside together. Best for a daughter who never got the names of her mother's flowers before.",
+    pairsWith: [CROSS.kitchenTable, CROSS.handsThatMadeIt],
+    priceId: GARDEN_MEMORIES_PRICE_ID,
+  },
+
+  "places-weve-been": {
+    slug: "places-weve-been",
+    name: "The Places We've Been Kit",
+    tagline: "Some people remember in places.",
+    tags: ["Long-Distance Friendly", "Story Starters", "Picture Prompts"],
+    price: "$34",
+    ctaText: "Follow the Road",
+    stickyCta: "Follow the Road — $34",
+    heroImage: kitPlacesWeveBeen,
+    heroWidth: 1200,
+    heroHeight: 1500,
+    heroObjectFit: "cover",
+    description:
+      "Some people remember in places. The Sunday drive, the neighborhood they grew up in, the road trip with the bad map, the town they left and the town they finally stayed in. The Places We've Been Kit follows that thread — prompts and picture cards built around the geography of a life. It's also the most phone-friendly kit, which matters if you live a long way away.",
+    bullets: [
+      "15 conversation prompts on road trips & vacations",
+      "10 retro Visual Spark Cards",
+      "20 trivia questions on Route 66, Mount Rushmore & more",
+      "Picture & Word Memory BINGO with station wagons, motel pools & postcards",
+      "Musical memory featuring Nat King Cole & The Beach Boys",
+    ],
+    promptsHeadline: "A taste of what's inside",
+    prompts: [
+      "Where were you living when you first felt like a grown-up?",
+      "Tell me about a place you took me when I was small that I probably don't remember.",
+      "What's the road trip that didn't go the way you planned?",
+    ],
+    faqs: [
+      {
+        q: "My grandfather doesn't travel anymore. Will this kit feel sad?",
+        a: "No. The kit doesn't ask where he wants to go. It asks where he's been. Where he was the day a particular thing happened. The towns he passed through, the neighborhoods he knew the corners of. The reverence is for the places he has, not the ones he can't reach now.",
+      },
+      {
+        q: "Is this kit usable over the phone?",
+        a: "Yes — better than any other kit. The conversation cards work without needing to be in the same room. We hear from long-distance daughters who use this kit on Sunday calls and finally feel like the call is doing something.",
+      },
+      {
+        q: "My parents weren't big travelers. Most of their life happened within fifty miles. Will this work?",
+        a: "Yes. Many of the kit's most-loved prompts are about home places, not faraway ones — the street they grew up on, the place their grandmother lived, the corner where they met their best friend. The kit favors specificity over distance.",
+      },
+      {
+        q: "Is there a road-trip-with-the-grandkids angle?",
+        a: "Yes. The Picture BINGO grid was hand-drawn to be usable in a car. Buyers tell us they bring it on summer drives — the grandkids find pictures, the grandparent tells the stories the pictures unlock.",
+      },
+      {
+        q: "How does this kit differ from The Remember When Kit?",
+        a: "Remember When asks about an era. Places We've Been asks about a map. Same conversation, different doorway. Many families end up owning both.",
+      },
+    ],
+    bestFor:
+      "Best for the father, grandfather, or aunt with a strong sense of geography. Best for the long-distance daughter who calls every Sunday and runs out of things to say by the fifth minute. Best for the summer when somebody is finally driving up for a real visit.",
+    pairsWith: [CROSS.rememberWhen, CROSS.handsThatMadeIt],
+    priceId: PLACES_WEVE_BEEN_PRICE_ID,
+  },
+
+  "hands-that-made-it": {
+    slug: "hands-that-made-it",
+    name: "The Hands That Made It Kit",
+    tagline: "For the people who built things.",
+    tags: ["Story Starters", "Keepsake Friendly", "Heirloom Gift"],
+    price: "$34",
+    ctaText: "Honor the Hands That Made It",
+    stickyCta: "Honor the Hands That Made It — $34",
+    heroImage: kitHandsThatMadeIt,
+    heroWidth: 1200,
+    heroHeight: 1500,
+    heroObjectFit: "cover",
+    description:
+      "This kit is for the people who built things. Who could mend a hem, refinish a chair, fix a faucet, knit a scarf, replace a fan belt, throw a pot. The Hands That Made It Kit gathers conversation cards, picture prompts, and quiet games around a life lived with hands. Bring it to the father or grandmother who taught you that a real fix takes time.",
+    bullets: [
+      "20 conversation prompts on workbenches, sewing & craft",
+      "10 illustrated Visual Spark Cards",
+      "20 trivia questions on tools, stitches & American know-how",
+      "Picture & Word Memory BINGO with thimbles, hammers & sewing machines",
+      "Musical memory featuring Dolly Parton, Tennessee Ernie Ford & more",
+    ],
+    promptsHeadline: "A taste of what's inside",
+    prompts: [
+      "What's the first thing you ever made that worked?",
+      "Who taught you how to use that tool — and what did they say while they were teaching?",
+      "What did you fix once that you're still secretly proud of?",
+    ],
+    faqs: [
+      {
+        q: "My dad wasn't handy. But he had a craft — woodworking, painting, fishing. Does this fit?",
+        a: "Yes. The kit is for hands, not just hardware. Woodworkers, painters, fly-tiers, mechanics, knitters, bakers, fishermen — anyone who learned a skill with their hands is in this kit's territory.",
+      },
+      {
+        q: "My mom was the maker in our family. Is this not for her?",
+        a: "It absolutely is. The kit covers sewing, knitting, mending, quilting, embroidery, refinishing, and homemaking crafts as much as workshop crafts. The imagery favors a broad palette of skills, not just shop tools.",
+      },
+      {
+        q: "What if their hands don't work the way they used to?",
+        a: "The kit doesn't ask them to make anything. It asks them to remember making something. The prompts are designed for someone who used to build, sew, fix, or carve — even if today they're sitting still. Skills don't leave; the muscle of remembering them is still warm.",
+      },
+      {
+        q: "Is there anything in this kit they could actually do with their hands?",
+        a: "The Picture BINGO grid is meant to be touched — you can mark squares with pennies, beans, or buttons. Several buyers tell us their loved one will reach for the picture cards and turn them over slowly. That's part of the design.",
+      },
+      {
+        q: "Is this kit a good Father's Day gift?",
+        a: "Yes, and it's one of our two most-given Father's Day kits (alongside Places We've Been). It pairs beautifully with a small physical object — a tape measure, a pair of garden gloves, a thimble — depending on the maker in your life.",
+      },
+    ],
+    bestFor:
+      "Best for the father, grandfather, aunt, or uncle who made or fixed things. Best for the daughter who watched her dad in the garage and never asked half the questions she wanted to. Best for Father's Day, retirement, or any visit where you'd like the conversation to start with a tool in someone's hand.",
+    pairsWith: [CROSS.placesWeveBeen, CROSS.collection],
+    priceId: HANDS_THAT_MADE_IT_PRICE_ID,
+  },
+
+  "connection-season-summer": {
+    slug: "connection-season-summer",
+    name: "The Connection Season: Summer Edition",
+    tagline: "This isn't a single visit. It's a season.",
+    tags: ["Weekly Rhythm", "Seasonal Favorite", "Family Gatherings"],
+    price: "$34",
+    ctaText: "Step Into the Season",
+    stickyCta: "Step Into the Season — $34",
+    heroImage: "/lcp/summer-edition-1100.webp",
+    heroPictureSources: [
+      {
+        type: "image/avif",
+        srcSet:
+          "/lcp/summer-edition-480.avif 480w, /lcp/summer-edition-768.avif 768w, /lcp/summer-edition-1100.avif 1100w",
+        sizes: "(max-width: 768px) 100vw, 50vw",
+      },
+      {
+        type: "image/webp",
+        srcSet:
+          "/lcp/summer-edition-480.webp 480w, /lcp/summer-edition-768.webp 768w, /lcp/summer-edition-1100.webp 1100w",
+        sizes: "(max-width: 768px) 100vw, 50vw",
+      },
+    ],
+    heroWidth: 1100,
+    heroHeight: 1467,
+    heroObjectFit: "contain",
+    description:
+      "This isn't a single visit. It's a season. The Connection Season: Summer Edition is our premium 41-page guide for families who want to use the whole summer with intention — built around the Six Dimensions of Bonding and a weekly rhythm that holds the season together. It's the kit families come back to.",
+    bullets: [
+      "13 themed weeks across 26 paired pages (theme + planning)",
+      "A letter from Francesca",
+      "The Six Dimensions of Bonding compass",
+      "Seasonal Conversation Cards, Visual Spark Cards & Picture & Word BINGO",
+      "6 \"What They Told Me\" legacy-capture pages",
+      "Kit pairing notes for every week",
+    ],
+    promptsHeadline: "A taste of what's inside",
+    prompts: [
+      "What's a sound from a summer you want to tell me about — the screen door, the radio, the cicadas, the ice in the glass?",
+      "Who taught you how to be still in the heat?",
+      "Tell me about a summer night you couldn't fall asleep — and you didn't want to.",
+    ],
+    faqs: [
+      {
+        q: "How is this different from the single $34 Connection Kits?",
+        a: "The single Connection Kits are themed (Garden, Kitchen, Places, Hands, Remember When). The Connection Season is seasonal — organized around a rhythm of weeks, with deeper reflection pages, the Six Dimensions of Bonding wheel, and generous space for notes. Think of the single kits as Saturday afternoons; this is the whole season.",
+      },
+      {
+        q: "Do I have to use it every week?",
+        a: "No. The weekly structure is a frame, not a prescription. Many families use one section per visit, even if visits are months apart. Skipping weeks doesn't break anything.",
+      },
+      {
+        q: "What are the Six Dimensions of Bonding?",
+        a: "Cognitive (the mind), emotional (the heart), sensory (the body's memory), social (the family thread), creative (the hands), and spiritual (whatever the loved one means by that word). Every week's prompts touch a different dimension so the season doesn't live in only one register.",
+      },
+      {
+        q: "Are there autumn, winter, and spring editions coming?",
+        a: "Yes — they're on the roadmap. Summer is the first because most families have more time together in summer than at any other season. The next edition will arrive ahead of the autumn equinox.",
+      },
+      {
+        q: "Does the Connection Season include conversation cards and games like the Connection Kits?",
+        a: "Yes — and more reflection room. You'll find Conversation Cards, Visual Spark Cards, Picture & Word BINGO, and seasonal Trivia, plus longer reflection and notes pages that the single kits don't have. It's the most generous product we make.",
+      },
+    ],
+    bestFor:
+      "Best for the family that wants the whole summer to feel different — not just one good Saturday. Best for the daughter or son already familiar with our work who is ready for something more substantial. Best for a milestone summer — a meaningful birthday, a first summer after a hard year, a summer everyone is finally home.",
+    pairsWith: [CROSS.collection, CROSS.kitchenTable],
+    priceId: SUMMER_EDITION_PRICE_ID,
+  },
 };
 
-export { COLLECTION_PRICE_ID, REMEMBER_WHEN_PRICE_ID, KITCHEN_TABLE_PRICE_ID, SUMMER_EDITION_PRICE_ID };
+export {
+  COLLECTION_PRICE_ID,
+  REMEMBER_WHEN_PRICE_ID,
+  KITCHEN_TABLE_PRICE_ID,
+  GARDEN_MEMORIES_PRICE_ID,
+  PLACES_WEVE_BEEN_PRICE_ID,
+  HANDS_THAT_MADE_IT_PRICE_ID,
+  SUMMER_EDITION_PRICE_ID,
+};
