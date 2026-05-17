@@ -72,6 +72,18 @@ import handsCard from "@/assets/hands-that-made-it-kit-conversation-card-workben
 import handsGames from "@/assets/hands-that-made-it-kit-games-trivia-word-bingo-cards.jpg";
 import handsBingo from "@/assets/hands-that-made-it-kit-picture-word-bingo-board.jpg";
 import coffeeSampler from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
+import summerHero from "@/assets/connection-season-summer-hero-two-people-using-kit.jpg";
+import summerHero800Avif from "@/assets/connection-season-summer-hero-two-people-using-kit-800.avif";
+import summerHero1200Avif from "@/assets/connection-season-summer-hero-two-people-using-kit-1200.avif";
+import summerHero1600Avif from "@/assets/connection-season-summer-hero-two-people-using-kit-1600.avif";
+import summerHero800Webp from "@/assets/connection-season-summer-hero-two-people-using-kit-800.webp";
+import summerHero1200Webp from "@/assets/connection-season-summer-hero-two-people-using-kit-1200.webp";
+import summerHero1600Webp from "@/assets/connection-season-summer-hero-two-people-using-kit-1600.webp";
+import summerCover from "@/assets/connection-season-summer-cover-on-porch.jpg";
+import summerDimensions from "@/assets/connection-season-summer-six-dimensions-of-bonding.jpg";
+import summerWeekSpread from "@/assets/connection-season-summer-week-spread-great-outdoors.jpg";
+import summerPagesStack from "@/assets/connection-season-summer-pages-stack-spread.jpg";
+import summerCardPlanner from "@/assets/connection-season-summer-conversation-card-planner.jpg";
 
 export type CrossSell = {
   title: string;
@@ -631,24 +643,22 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Step Into the Season",
     stickyCta: "Step Into the Season — $34",
     pageNote: "41 pages — our most generous single volume.",
-    heroImage: "/lcp/summer-edition-1100.webp",
+    heroImage: summerHero,
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet:
-          "/lcp/summer-edition-480.avif 480w, /lcp/summer-edition-768.avif 768w, /lcp/summer-edition-1100.avif 1100w",
-        sizes: "(max-width: 768px) 100vw, 50vw",
+        srcSet: `${summerHero800Avif} 800w, ${summerHero1200Avif} 1200w, ${summerHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
       },
       {
         type: "image/webp",
-        srcSet:
-          "/lcp/summer-edition-480.webp 480w, /lcp/summer-edition-768.webp 768w, /lcp/summer-edition-1100.webp 1100w",
-        sizes: "(max-width: 768px) 100vw, 50vw",
+        srcSet: `${summerHero800Webp} 800w, ${summerHero1200Webp} 1200w, ${summerHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
       },
     ],
-    heroWidth: 1100,
-    heroHeight: 1467,
-    heroObjectFit: "contain",
+    heroWidth: 1200,
+    heroHeight: 900,
+    heroObjectFit: "cover",
     description:
       "This isn't a single visit. It's a season. The Connection Season: Summer Edition is our premium 41-page guide for families who want to use the whole summer with intention — built around the Six Dimensions of Bonding and a weekly rhythm that holds the season together. It's the kit families come back to.",
     bullets: [
@@ -691,6 +701,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the family that wants the whole summer to feel different — not just one good Saturday. Best for the daughter or son already familiar with our work who is ready for something more substantial. Best for a milestone summer — a meaningful birthday, a first summer after a hard year, a summer everyone is finally home.",
     pairsWith: [CROSS.collection, CROSS.kitchenTable],
     priceId: SUMMER_EDITION_PRICE_ID,
+    gallery: [
+      { src: summerCover, alt: "The Connection Season: Summer Edition cover resting on a sunlit porch table beside a glass of iced tea and a jar of summer wildflowers" },
+      { src: summerDimensions, alt: "The Six Dimensions of Bonding wheel from The Connection Season: Summer Edition — cognitive, emotional, sensory, social, creative, and spiritual" },
+      { src: summerWeekSpread, alt: "An open week spread from The Connection Season: Summer Edition showing 'The Great Outdoors' theme with five prompts and a weekly planning page" },
+      { src: summerCardPlanner, alt: "Hands holding a Comfort Bond conversation card above an open weekly planning page from The Connection Season: Summer Edition" },
+      { src: summerPagesStack, alt: "Fanned interior pages from The Connection Season: Summer Edition — the Summer Arc index, a week theme, a planning page, and the 'Stories Worth Saving' reflection page" },
+    ],
   },
 };
 
