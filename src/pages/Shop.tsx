@@ -563,6 +563,14 @@ const Shop = () => {
                     <button type="button" className="btn-primary" style={{ alignSelf: "flex-start", border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(kit.priceId)}>
                       {kit.cta} <ArrowSvg />
                     </button>
+                    {(kit.id === "remember-when-kit" || kit.id === "kitchen-table-memories-kit") && (
+                      <a
+                        href={`/kits/${kit.id === "remember-when-kit" ? "remember-when" : "kitchen-table-memories"}`}
+                        style={{ alignSelf: "flex-start", marginTop: "0.6rem", fontFamily: "var(--font-sans)", fontSize: 13.5, fontWeight: 600, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}
+                      >
+                        View details →
+                      </a>
+                    )}
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 12.5, color: C.textMid, margin: "0.6rem 0 0", opacity: 0.8 }}>
                       Instant download · Use it printed, on a tablet, or right from your phone
                     </p>
@@ -615,6 +623,11 @@ const Shop = () => {
               <button type="button" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: C.sand, color: C.forestDark, fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 600, padding: "12px 24px", borderRadius: 999, border: 0, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,0.22)" }} onClick={() => void openPaddleCheckout(COLLECTION_PRICE_ID)}>
                 Get the Collection <ArrowSvg color={C.forestDark} />
               </button>
+              <div style={{ marginTop: "0.85rem" }}>
+                <a href="/kits/collection" style={{ fontFamily: "var(--font-sans)", fontSize: 13.5, fontWeight: 600, color: C.sand, textDecoration: "none", borderBottom: `1px solid ${C.sand}` }}>
+                  View details →
+                </a>
+              </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: "rgba(255,255,255,0.7)", margin: "0.75rem 0 0" }}>
                 Instant download · Use it printed, on a tablet, or right from your phone
               </p>
