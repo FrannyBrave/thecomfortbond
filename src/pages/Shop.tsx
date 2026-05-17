@@ -51,7 +51,7 @@ const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "B
 const SOLID_CLAY_TAGS = new Set(["Best-Seller", "Founder's Favorite"]);
 
 const WhatsInside = ({ bullets }: { bullets: string[] }) => (
-  <div style={{ background: "var(--sand-pale)", borderRadius: 12, padding: "0.95rem 1.1rem", margin: "0 0 1.25rem" }}>
+  <div style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 12, padding: "0.95rem 1.1rem", margin: "0 0 1.25rem", boxShadow: "0 1px 3px rgba(45,74,62,0.06)" }}>
     <div
       style={{
         fontFamily: "var(--font-sans)",
