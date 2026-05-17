@@ -385,10 +385,22 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Step Into the Garden",
     stickyCta: "Step Into the Garden — $34",
-    heroImage: kitGardenMemories,
-    heroWidth: 1200,
-    heroHeight: 1500,
+    heroImage: gardenHero,
+    heroWidth: 1448,
+    heroHeight: 1086,
     heroObjectFit: "cover",
+    heroPictureSources: [
+      {
+        type: "image/avif",
+        srcSet: `${gardenHero800Avif} 800w, ${gardenHero1200Avif} 1200w, ${gardenHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+      {
+        type: "image/webp",
+        srcSet: `${gardenHero800Webp} 800w, ${gardenHero1200Webp} 1200w, ${gardenHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+    ],
     description:
       "For the people whose hands were always in the dirt — who knew when the tomatoes were ready by smell, who could name every neighbor's roses. The Garden Memories Kit gathers prompts, pictures, and quiet games around the gardens, seasons, and outdoor rituals that shaped a life. Bring it to a porch on a warm afternoon and let your grandmother tell you what she planted the year you were born.",
     bullets: [
