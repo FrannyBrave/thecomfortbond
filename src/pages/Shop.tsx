@@ -50,8 +50,10 @@ type Kit = {
 const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "Best-Seller", "Founder's Favorite"]);
 const SOLID_CLAY_TAGS = new Set(["Best-Seller", "Founder's Favorite"]);
 
-const WhatsInside = ({ bullets }: { bullets: string[] }) => (
-  <div style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 12, padding: "0.95rem 1.1rem", margin: "0 0 1.25rem", boxShadow: "0 1px 3px rgba(45,74,62,0.06)" }}>
+const WhatsInside = ({ bullets, variant = "sand" }: { bullets: string[]; variant?: "sand" | "white" }) => (
+  <div style={variant === "white"
+    ? { background: "#fff", border: `1px solid ${C.border}`, borderRadius: 12, padding: "0.95rem 1.1rem", margin: "0 0 1.25rem", boxShadow: "0 1px 3px rgba(45,74,62,0.06)" }
+    : { background: "var(--sand-pale)", borderRadius: 12, padding: "0.95rem 1.1rem", margin: "0 0 1.25rem" }}>
     <div
       style={{
         fontFamily: "var(--font-sans)",
@@ -568,7 +570,7 @@ const Shop = () => {
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: "0 0 1rem" }}>
                       {kit.desc}
                     </p>
-                    <WhatsInside bullets={kit.bullets} />
+                    <WhatsInside bullets={kit.bullets} variant={kit.id === "kitchen-table-memories-kit" || kit.id === "places-weve-been-kit" ? "white" : "sand"} />
                     <button type="button" className="btn-primary" style={{ alignSelf: "flex-start", border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(kit.priceId)}>
                       {kit.cta} <ArrowSvg />
                     </button>
