@@ -51,7 +51,7 @@ const TERRACOTTA_TAGS = new Set(["Start Here", "Best Value", "Heirloom Gift", "B
 const SOLID_CLAY_TAGS = new Set(["Best-Seller", "Founder's Favorite"]);
 
 const WhatsInside = ({ bullets }: { bullets: string[] }) => (
-  <div style={{ margin: "0 0 1.25rem", borderTop: `1px solid ${C.border}`, paddingTop: "0.85rem" }}>
+  <div style={{ background: "var(--sand-pale)", borderRadius: 12, padding: "0.95rem 1.1rem", margin: "0 0 1.25rem" }}>
     <div
       style={{
         fontFamily: "var(--font-sans)",
@@ -59,12 +59,13 @@ const WhatsInside = ({ bullets }: { bullets: string[] }) => (
         fontWeight: 700,
         letterSpacing: "0.14em",
         textTransform: "uppercase",
-        color: "rgba(45,74,62,0.7)",
+        color: C.forestDark,
+        marginBottom: 8,
       }}
     >
       What's inside
     </div>
-    <ul style={{ listStyle: "none", padding: 0, margin: "0.75rem 0 0", display: "grid", gap: "0.4rem" }}>
+    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "0.4rem" }}>
       {bullets.map((b, j) => (
         <li
           key={j}
