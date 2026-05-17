@@ -59,6 +59,18 @@ import placesCard from "@/assets/places-weve-been-kit-conversation-card-family-r
 import placesGames from "@/assets/places-weve-been-kit-games-trivia-word-bingo-cards.jpg";
 import placesBingo from "@/assets/places-weve-been-kit-picture-word-bingo-board.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
+import handsHero from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit.jpg";
+import handsHero800Avif from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-800.avif";
+import handsHero1200Avif from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1200.avif";
+import handsHero1600Avif from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1600.avif";
+import handsHero800Webp from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-800.webp";
+import handsHero1200Webp from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1200.webp";
+import handsHero1600Webp from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1600.webp";
+import handsCover from "@/assets/hands-that-made-it-kit-cover-on-workbench.jpg";
+import handsSpark from "@/assets/hands-that-made-it-kit-visual-spark-cards.jpg";
+import handsCard from "@/assets/hands-that-made-it-kit-conversation-card-workbench.jpg";
+import handsGames from "@/assets/hands-that-made-it-kit-games-trivia-word-bingo-cards.jpg";
+import handsBingo from "@/assets/hands-that-made-it-kit-picture-word-bingo-board.jpg";
 import coffeeSampler from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
 
 export type CrossSell = {
