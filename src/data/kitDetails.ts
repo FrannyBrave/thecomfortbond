@@ -33,6 +33,18 @@ import kitchenTableCard from "@/assets/kitchen-table-memories-kit-conversation-c
 import kitchenTableBingo from "@/assets/kitchen-table-memories-kit-picture-word-bingo-board.jpg";
 import kitchenTableSpark from "@/assets/kitchen-table-memories-kit-visual-spark-cards.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
+import gardenHero from "@/assets/garden-memories-kit-hero-two-people-using-kit.jpg";
+import gardenHero800Avif from "@/assets/garden-memories-kit-hero-two-people-using-kit-800.avif";
+import gardenHero1200Avif from "@/assets/garden-memories-kit-hero-two-people-using-kit-1200.avif";
+import gardenHero1600Avif from "@/assets/garden-memories-kit-hero-two-people-using-kit-1600.avif";
+import gardenHero800Webp from "@/assets/garden-memories-kit-hero-two-people-using-kit-800.webp";
+import gardenHero1200Webp from "@/assets/garden-memories-kit-hero-two-people-using-kit-1200.webp";
+import gardenHero1600Webp from "@/assets/garden-memories-kit-hero-two-people-using-kit-1600.webp";
+import gardenCover from "@/assets/garden-memories-kit-cover-on-porch.jpg";
+import gardenSpark from "@/assets/garden-memories-kit-visual-spark-cards.jpg";
+import gardenCard from "@/assets/garden-memories-kit-conversation-card-childhood-yard.jpg";
+import gardenGames from "@/assets/garden-memories-kit-games-trivia-word-bingo-cards.jpg";
+import gardenBingo from "@/assets/garden-memories-kit-picture-word-bingo-board.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
 import coffeeSampler from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
@@ -373,10 +385,22 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Step Into the Garden",
     stickyCta: "Step Into the Garden — $34",
-    heroImage: kitGardenMemories,
-    heroWidth: 1200,
-    heroHeight: 1500,
+    heroImage: gardenHero,
+    heroWidth: 1448,
+    heroHeight: 1086,
     heroObjectFit: "cover",
+    heroPictureSources: [
+      {
+        type: "image/avif",
+        srcSet: `${gardenHero800Avif} 800w, ${gardenHero1200Avif} 1200w, ${gardenHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+      {
+        type: "image/webp",
+        srcSet: `${gardenHero800Webp} 800w, ${gardenHero1200Webp} 1200w, ${gardenHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+    ],
     description:
       "For the people whose hands were always in the dirt — who knew when the tomatoes were ready by smell, who could name every neighbor's roses. The Garden Memories Kit gathers prompts, pictures, and quiet games around the gardens, seasons, and outdoor rituals that shaped a life. Bring it to a porch on a warm afternoon and let your grandmother tell you what she planted the year you were born.",
     bullets: [
@@ -418,6 +442,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the loved one who lit up around plants, porches, and weather. Best for the spring or summer visit when you can actually go outside together. Best for a daughter who never got the names of her mother's flowers before.",
     pairsWith: [CROSS.kitchenTable, CROSS.handsThatMadeIt],
     priceId: GARDEN_MEMORIES_PRICE_ID,
+    gallery: [
+      { src: gardenCover, alt: "The Garden Memories Kit cover resting on a wooden porch with a potted geranium and straw hat" },
+      { src: gardenSpark, alt: "Visual Spark Cards from the Garden Memories Kit featuring a potted geranium and ripe tomatoes" },
+      { src: gardenCard, alt: "Garden Memories conversation card asking about the smell of a childhood yard in summer" },
+      { src: gardenGames, alt: "Trivia, Word Link, Picture & Word BINGO and Conversation Cards from the Garden Memories Kit" },
+      { src: gardenBingo, alt: "Picture & Word Memory BINGO board from the Garden Memories Kit with illustrated garden icons" },
+    ],
   },
 
   "places-weve-been": {
