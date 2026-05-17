@@ -520,7 +520,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the father, grandfather, or aunt with a strong sense of geography. Best for the long-distance daughter who calls every Sunday and runs out of things to say by the fifth minute. Best for the summer when somebody is finally driving up for a real visit.",
     pairsWith: [CROSS.rememberWhen, CROSS.handsThatMadeIt],
     priceId: PLACES_WEVE_BEEN_PRICE_ID,
-  },
+    gallery: [
+      { src: placesCover, alt: "The Places We've Been Kit cover on a wooden table with maps, a compass, and coffee mug" },
+      { src: placesSpark, alt: "Two Visual Spark Cards from the Places We've Been Kit — sunrise drive and Sunset Motel sign" },
+      { src: placesCard, alt: "Conversation card from the Places We've Been Kit about early-morning family departures" },
+      { src: placesGames, alt: "Fanned printable pages from the Places We've Been Kit — Trivia Time, Word Link Game, Picture & Word Memory BINGO, and Conversation Cards" },
+      { src: placesBingo, alt: "Picture & Word Memory BINGO board from the Places We've Been Kit with illustrated travel icons" },
+    ],
 
   "hands-that-made-it": {
     slug: "hands-that-made-it",
