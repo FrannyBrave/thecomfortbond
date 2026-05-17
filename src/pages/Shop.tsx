@@ -625,21 +625,26 @@ const Shop = () => {
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.82)", margin: "0 0 1.25rem" }}>
                 Every kit, gathered as one library — a year of presence, not just a Saturday.
               </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.75rem", display: "grid", gap: "0.5rem" }}>
-                {[
-                  "The Remember When Kit",
-                  "The Kitchen Table Memories Kit",
-                  "The Garden Memories Kit",
-                  "The Places We've Been Kit",
-                  "The Hands That Made It Kit",
-                  "The Connection Season: Summer Edition",
-                ].map((b, i) => (
-                  <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.6 }}>
-                    <span style={{ color: C.sand, fontWeight: 700, flexShrink: 0 }}>✓</span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
+              <div style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(232,201,154,0.18)", borderRadius: 12, padding: "0.95rem 1.1rem", margin: "0 0 1.75rem" }}>
+                <div style={{ fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: C.sand, marginBottom: 8 }}>
+                  What's inside
+                </div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "0.5rem" }}>
+                  {[
+                    "The Remember When Kit",
+                    "The Kitchen Table Memories Kit",
+                    "The Garden Memories Kit",
+                    "The Places We've Been Kit",
+                    "The Hands That Made It Kit",
+                    "The Connection Season: Summer Edition",
+                  ].map((b, i) => (
+                    <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: "var(--font-sans)", fontSize: 14.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.6 }}>
+                      <span style={{ color: C.sand, fontWeight: 700, flexShrink: 0 }}>✓</span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <button type="button" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: C.sand, color: C.forestDark, fontFamily: "var(--font-sans)", fontSize: 15, fontWeight: 600, padding: "12px 24px", borderRadius: 999, border: 0, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,0.22)" }} onClick={() => void openPaddleCheckout(COLLECTION_PRICE_ID)}>
                 Get the Collection <ArrowSvg color={C.forestDark} />
               </button>
