@@ -701,6 +701,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the family that wants the whole summer to feel different — not just one good Saturday. Best for the daughter or son already familiar with our work who is ready for something more substantial. Best for a milestone summer — a meaningful birthday, a first summer after a hard year, a summer everyone is finally home.",
     pairsWith: [CROSS.collection, CROSS.kitchenTable],
     priceId: SUMMER_EDITION_PRICE_ID,
+    gallery: [
+      { src: summerCover, alt: "The Connection Season: Summer Edition cover resting on a sunlit porch table beside a glass of iced tea and a jar of summer wildflowers" },
+      { src: summerDimensions, alt: "The Six Dimensions of Bonding wheel from The Connection Season: Summer Edition — cognitive, emotional, sensory, social, creative, and spiritual" },
+      { src: summerWeekSpread, alt: "An open week spread from The Connection Season: Summer Edition showing 'The Great Outdoors' theme with five prompts and a weekly planning page" },
+      { src: summerCardPlanner, alt: "Hands holding a Comfort Bond conversation card above an open weekly planning page from The Connection Season: Summer Edition" },
+      { src: summerPagesStack, alt: "Fanned interior pages from The Connection Season: Summer Edition — the Summer Arc index, a week theme, a planning page, and the 'Stories Worth Saving' reflection page" },
+    ],
   },
 };
 
