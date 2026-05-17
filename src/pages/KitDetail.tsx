@@ -197,7 +197,7 @@ export default function KitDetailPage() {
         {/* HERO */}
         <section style={{ background: C.cream, padding: "clamp(1.5rem,4vw,3rem) clamp(1.5rem,5vw,4rem) clamp(2rem,5vw,4rem)" }}>
           <div className="kit-hero-grid" style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: "clamp(1.5rem,4vw,3.5rem)", alignItems: "center" }}>
-            <div style={{ aspectRatio: isCollection ? "4 / 3" : "4 / 5", borderRadius: 14, overflow: "hidden", background: C.creamDark, boxShadow: "0 20px 48px -24px rgba(0,0,0,0.35)" }}>
+            <div style={{ aspectRatio: kit.heroWidth && kit.heroHeight ? `${kit.heroWidth} / ${kit.heroHeight}` : (isCollection ? "4 / 3" : "4 / 5"), borderRadius: 14, overflow: "hidden", background: C.creamDark, boxShadow: "0 20px 48px -24px rgba(0,0,0,0.35)" }}>
               <picture>
                 {kit.heroPictureSources?.map((s, i) => (
                   <source key={i} type={s.type} srcSet={s.srcSet} sizes={s.sizes} />
