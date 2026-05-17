@@ -100,6 +100,7 @@ export type KitDetail = {
   // body
   description: string;
   bullets: string[];
+  pageNote?: string;
   promptsHeadline: string;
   prompts: string[];
   faqs: { q: string; a: string }[];
