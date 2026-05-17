@@ -2,6 +2,11 @@
 // Copy is CMO-approved. Do not edit without flagging.
 
 import kitRememberWhen from "@/assets/remember-when-kit-conversation-cards-grandparents-family-memories.jpg";
+import rememberWhenHero from "@/assets/remember-when-kit-hero-vintage-conversation-cards.png";
+import rememberWhenGames from "@/assets/remember-when-kit-games-trivia-bingo-word-link.png";
+import rememberWhenCard from "@/assets/remember-when-kit-conversation-card-television.png";
+import rememberWhenBingo from "@/assets/remember-when-kit-bingo-board-illustrations.png";
+import rememberWhenScene from "@/assets/remember-when-kit-grandmother-conversation-cards-tea.png";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
@@ -40,6 +45,8 @@ export type KitDetail = {
   faqs: { q: string; a: string }[];
   bestFor: string;
   pairsWith: CrossSell[];
+  // optional gallery
+  gallery?: { src: string; alt: string }[];
   // checkout
   priceId?: string;
   externalCheckoutHref?: string;
