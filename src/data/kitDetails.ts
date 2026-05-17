@@ -471,9 +471,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Follow the Road",
     stickyCta: "Follow the Road — $34",
-    heroImage: kitPlacesWeveBeen,
-    heroWidth: 1200,
-    heroHeight: 1500,
+    heroImage: placesHero,
+    heroPictureSources: [
+      { type: "image/avif", srcSet: `${placesHero800Avif} 800w, ${placesHero1200Avif} 1200w, ${placesHero1600Avif} 1600w`, sizes: "(max-width: 820px) 100vw, 560px" },
+      { type: "image/webp", srcSet: `${placesHero800Webp} 800w, ${placesHero1200Webp} 1200w, ${placesHero1600Webp} 1600w`, sizes: "(max-width: 820px) 100vw, 560px" },
+    ],
+    heroWidth: 1448,
+    heroHeight: 1086,
     heroObjectFit: "cover",
     description:
       "Some people remember in places. The Sunday drive, the neighborhood they grew up in, the road trip with the bad map, the town they left and the town they finally stayed in. The Places We've Been Kit follows that thread — prompts and picture cards built around the geography of a life. It's also the most phone-friendly kit, which matters if you live a long way away.",
