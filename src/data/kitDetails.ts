@@ -2,11 +2,17 @@
 // Copy is CMO-approved. Do not edit without flagging.
 
 import kitRememberWhen from "@/assets/remember-when-kit-conversation-cards-grandparents-family-memories.jpg";
-import rememberWhenHero from "@/assets/remember-when-kit-hero-vintage-conversation-cards.png";
-import rememberWhenGames from "@/assets/remember-when-kit-games-trivia-bingo-word-link.png";
-import rememberWhenCard from "@/assets/remember-when-kit-conversation-card-television.png";
-import rememberWhenBingo from "@/assets/remember-when-kit-bingo-board-illustrations.png";
-import rememberWhenScene from "@/assets/remember-when-kit-grandmother-conversation-cards-tea.png";
+import rememberWhenHero from "@/assets/remember-when-kit-hero-vintage-conversation-cards.jpg";
+import rememberWhenHero800Avif from "@/assets/remember-when-kit-hero-vintage-conversation-cards-800.avif";
+import rememberWhenHero1200Avif from "@/assets/remember-when-kit-hero-vintage-conversation-cards-1200.avif";
+import rememberWhenHero1600Avif from "@/assets/remember-when-kit-hero-vintage-conversation-cards-1600.avif";
+import rememberWhenHero800Webp from "@/assets/remember-when-kit-hero-vintage-conversation-cards-800.webp";
+import rememberWhenHero1200Webp from "@/assets/remember-when-kit-hero-vintage-conversation-cards-1200.webp";
+import rememberWhenHero1600Webp from "@/assets/remember-when-kit-hero-vintage-conversation-cards-1600.webp";
+import rememberWhenGames from "@/assets/remember-when-kit-games-trivia-bingo-word-link.jpg";
+import rememberWhenCard from "@/assets/remember-when-kit-conversation-card-television.jpg";
+import rememberWhenBingo from "@/assets/remember-when-kit-bingo-board-illustrations.jpg";
+import rememberWhenScene from "@/assets/remember-when-kit-grandmother-conversation-cards-tea.jpg";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
@@ -130,9 +136,21 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Bring the Decades Home",
     stickyCta: "Bring the Decades Home — $34",
     heroImage: rememberWhenHero,
+    heroPictureSources: [
+      {
+        type: "image/avif",
+        srcSet: `${rememberWhenHero800Avif} 800w, ${rememberWhenHero1200Avif} 1200w, ${rememberWhenHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 560px",
+      },
+      {
+        type: "image/webp",
+        srcSet: `${rememberWhenHero800Webp} 800w, ${rememberWhenHero1200Webp} 1200w, ${rememberWhenHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 560px",
+      },
+    ],
     heroWidth: 1456,
     heroHeight: 1092,
-    heroObjectFit: "cover",
+    heroObjectFit: "contain",
     gallery: [
       { src: rememberWhenGames, alt: "Remember When Kit printed games — Trivia Time, Word Link, BINGO and Conversation Cards" },
       { src: rememberWhenCard, alt: "Remember When Kit Conversation Card — 1950s–1980s pop culture prompt" },
