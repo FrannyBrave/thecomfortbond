@@ -296,7 +296,6 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     pairsWith: [CROSS.coffeeSampler],
     priceId: COLLECTION_PRICE_ID,
   },
-,
 
   "garden-memories": {
     slug: "garden-memories",
