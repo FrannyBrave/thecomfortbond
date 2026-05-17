@@ -570,7 +570,7 @@ const Shop = () => {
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, lineHeight: 1.7, color: C.textMid, margin: "0 0 1rem" }}>
                       {kit.desc}
                     </p>
-                    <WhatsInside bullets={kit.bullets} />
+                    <WhatsInside bullets={kit.bullets} variant={kit.id === "kitchen-table-memories-kit" || kit.id === "places-weve-been-kit" ? "white" : "sand"} />
                     <button type="button" className="btn-primary" style={{ alignSelf: "flex-start", border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(kit.priceId)}>
                       {kit.cta} <ArrowSvg />
                     </button>
