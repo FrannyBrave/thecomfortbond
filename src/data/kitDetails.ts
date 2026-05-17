@@ -59,6 +59,18 @@ import placesCard from "@/assets/places-weve-been-kit-conversation-card-family-r
 import placesGames from "@/assets/places-weve-been-kit-games-trivia-word-bingo-cards.jpg";
 import placesBingo from "@/assets/places-weve-been-kit-picture-word-bingo-board.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
+import handsHero from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit.jpg";
+import handsHero800Avif from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-800.avif";
+import handsHero1200Avif from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1200.avif";
+import handsHero1600Avif from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1600.avif";
+import handsHero800Webp from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-800.webp";
+import handsHero1200Webp from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1200.webp";
+import handsHero1600Webp from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1600.webp";
+import handsCover from "@/assets/hands-that-made-it-kit-cover-on-workbench.jpg";
+import handsSpark from "@/assets/hands-that-made-it-kit-visual-spark-cards.jpg";
+import handsCard from "@/assets/hands-that-made-it-kit-conversation-card-workbench.jpg";
+import handsGames from "@/assets/hands-that-made-it-kit-games-trivia-word-bingo-cards.jpg";
+import handsBingo from "@/assets/hands-that-made-it-kit-picture-word-bingo-board.jpg";
 import coffeeSampler from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
 
 export type CrossSell = {
@@ -537,10 +549,22 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Honor the Hands That Made It",
     stickyCta: "Honor the Hands That Made It — $34",
-    heroImage: kitHandsThatMadeIt,
-    heroWidth: 1200,
-    heroHeight: 1500,
+    heroImage: handsHero,
+    heroWidth: 1448,
+    heroHeight: 1086,
     heroObjectFit: "cover",
+    heroPictureSources: [
+      {
+        type: "image/avif",
+        srcSet: `${handsHero800Avif} 800w, ${handsHero1200Avif} 1200w, ${handsHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+      {
+        type: "image/webp",
+        srcSet: `${handsHero800Webp} 800w, ${handsHero1200Webp} 1200w, ${handsHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+    ],
     description:
       "This kit is for the people who built things. Who could mend a hem, refinish a chair, fix a faucet, knit a scarf, replace a fan belt, throw a pot. The Hands That Made It Kit gathers conversation cards, picture prompts, and quiet games around a life lived with hands. Bring it to the father or grandmother who taught you that a real fix takes time.",
     bullets: [
@@ -582,6 +606,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the father, grandfather, aunt, or uncle who made or fixed things. Best for the daughter who watched her dad in the garage and never asked half the questions she wanted to. Best for Father's Day, retirement, or any visit where you'd like the conversation to start with a tool in someone's hand.",
     pairsWith: [CROSS.placesWeveBeen, CROSS.collection],
     priceId: HANDS_THAT_MADE_IT_PRICE_ID,
+    gallery: [
+      { src: handsCover, alt: "The Hands That Made It Kit cover resting on a wooden workbench with a hand plane and coffee mug" },
+      { src: handsSpark, alt: "Visual Spark Cards from the Hands That Made It Kit featuring a wood plane and hands mending by lamplight" },
+      { src: handsCard, alt: "Hands That Made It conversation card asking about the first thing you ever built with your own hands" },
+      { src: handsGames, alt: "Trivia, Word Link, BINGO and Conversation Cards from the Hands That Made It Kit" },
+      { src: handsBingo, alt: "Picture & Word Memory BINGO board from the Hands That Made It Kit with illustrated tools" },
+    ],
   },
 
   "connection-season-summer": {
