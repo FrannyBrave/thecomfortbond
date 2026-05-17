@@ -46,6 +46,18 @@ import gardenCard from "@/assets/garden-memories-kit-conversation-card-childhood
 import gardenGames from "@/assets/garden-memories-kit-games-trivia-word-bingo-cards.jpg";
 import gardenBingo from "@/assets/garden-memories-kit-picture-word-bingo-board.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
+import placesHero from "@/assets/places-weve-been-kit-hero-two-people-using-kit.jpg";
+import placesHero800Avif from "@/assets/places-weve-been-kit-hero-two-people-using-kit-800.avif";
+import placesHero1200Avif from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1200.avif";
+import placesHero1600Avif from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1600.avif";
+import placesHero800Webp from "@/assets/places-weve-been-kit-hero-two-people-using-kit-800.webp";
+import placesHero1200Webp from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1200.webp";
+import placesHero1600Webp from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1600.webp";
+import placesCover from "@/assets/places-weve-been-kit-cover-on-table.jpg";
+import placesSpark from "@/assets/places-weve-been-kit-visual-spark-cards.jpg";
+import placesCard from "@/assets/places-weve-been-kit-conversation-card-family-road-trip.jpg";
+import placesGames from "@/assets/places-weve-been-kit-games-trivia-word-bingo-cards.jpg";
+import placesBingo from "@/assets/places-weve-been-kit-picture-word-bingo-board.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
 import coffeeSampler from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
 
@@ -459,9 +471,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Follow the Road",
     stickyCta: "Follow the Road — $34",
-    heroImage: kitPlacesWeveBeen,
-    heroWidth: 1200,
-    heroHeight: 1500,
+    heroImage: placesHero,
+    heroPictureSources: [
+      { type: "image/avif", srcSet: `${placesHero800Avif} 800w, ${placesHero1200Avif} 1200w, ${placesHero1600Avif} 1600w`, sizes: "(max-width: 820px) 100vw, 560px" },
+      { type: "image/webp", srcSet: `${placesHero800Webp} 800w, ${placesHero1200Webp} 1200w, ${placesHero1600Webp} 1600w`, sizes: "(max-width: 820px) 100vw, 560px" },
+    ],
+    heroWidth: 1448,
+    heroHeight: 1086,
     heroObjectFit: "cover",
     description:
       "Some people remember in places. The Sunday drive, the neighborhood they grew up in, the road trip with the bad map, the town they left and the town they finally stayed in. The Places We've Been Kit follows that thread — prompts and picture cards built around the geography of a life. It's also the most phone-friendly kit, which matters if you live a long way away.",
@@ -504,6 +520,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the father, grandfather, or aunt with a strong sense of geography. Best for the long-distance daughter who calls every Sunday and runs out of things to say by the fifth minute. Best for the summer when somebody is finally driving up for a real visit.",
     pairsWith: [CROSS.rememberWhen, CROSS.handsThatMadeIt],
     priceId: PLACES_WEVE_BEEN_PRICE_ID,
+    gallery: [
+      { src: placesCover, alt: "The Places We've Been Kit cover on a wooden table with maps, a compass, and coffee mug" },
+      { src: placesSpark, alt: "Two Visual Spark Cards from the Places We've Been Kit — sunrise drive and Sunset Motel sign" },
+      { src: placesCard, alt: "Conversation card from the Places We've Been Kit about early-morning family departures" },
+      { src: placesGames, alt: "Fanned printable pages from the Places We've Been Kit — Trivia Time, Word Link Game, Picture & Word Memory BINGO, and Conversation Cards" },
+      { src: placesBingo, alt: "Picture & Word Memory BINGO board from the Places We've Been Kit with illustrated travel icons" },
+    ],
   },
 
   "hands-that-made-it": {
