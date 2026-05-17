@@ -46,6 +46,18 @@ import gardenCard from "@/assets/garden-memories-kit-conversation-card-childhood
 import gardenGames from "@/assets/garden-memories-kit-games-trivia-word-bingo-cards.jpg";
 import gardenBingo from "@/assets/garden-memories-kit-picture-word-bingo-board.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
+import placesHero from "@/assets/places-weve-been-kit-hero-two-people-using-kit.jpg";
+import placesHero800Avif from "@/assets/places-weve-been-kit-hero-two-people-using-kit-800.avif";
+import placesHero1200Avif from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1200.avif";
+import placesHero1600Avif from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1600.avif";
+import placesHero800Webp from "@/assets/places-weve-been-kit-hero-two-people-using-kit-800.webp";
+import placesHero1200Webp from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1200.webp";
+import placesHero1600Webp from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1600.webp";
+import placesCover from "@/assets/places-weve-been-kit-cover-on-table.jpg";
+import placesSpark from "@/assets/places-weve-been-kit-visual-spark-cards.jpg";
+import placesCard from "@/assets/places-weve-been-kit-conversation-card-family-road-trip.jpg";
+import placesGames from "@/assets/places-weve-been-kit-games-trivia-word-bingo-cards.jpg";
+import placesBingo from "@/assets/places-weve-been-kit-picture-word-bingo-board.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
 import coffeeSampler from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
 
