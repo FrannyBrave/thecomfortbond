@@ -13,6 +13,12 @@ import rememberWhenGames from "@/assets/remember-when-kit-games-trivia-bingo-wor
 import rememberWhenCard from "@/assets/remember-when-kit-conversation-card-television.jpg";
 import rememberWhenBingo from "@/assets/remember-when-kit-bingo-board-illustrations.jpg";
 import rememberWhenScene from "@/assets/remember-when-kit-grandmother-conversation-cards-tea.jpg";
+import rememberWhenScene600Avif from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-600.avif";
+import rememberWhenScene900Avif from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-900.avif";
+import rememberWhenScene1200Avif from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-1200.avif";
+import rememberWhenScene600Webp from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-600.webp";
+import rememberWhenScene900Webp from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-900.webp";
+import rememberWhenScene1200Webp from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-1200.webp";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
 import kitchenTableHero from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes.jpg";
 import kitchenTableHero800Avif from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-800.avif";
