@@ -13,6 +13,12 @@ import rememberWhenGames from "@/assets/remember-when-kit-games-trivia-bingo-wor
 import rememberWhenCard from "@/assets/remember-when-kit-conversation-card-television.jpg";
 import rememberWhenBingo from "@/assets/remember-when-kit-bingo-board-illustrations.jpg";
 import rememberWhenScene from "@/assets/remember-when-kit-grandmother-conversation-cards-tea.jpg";
+import rememberWhenScene600Avif from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-600.avif";
+import rememberWhenScene900Avif from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-900.avif";
+import rememberWhenScene1200Avif from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-1200.avif";
+import rememberWhenScene600Webp from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-600.webp";
+import rememberWhenScene900Webp from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-900.webp";
+import rememberWhenScene1200Webp from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-1200.webp";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
 import kitchenTableHero from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes.jpg";
 import kitchenTableHero800Avif from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-800.avif";
@@ -147,27 +153,27 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Bring the Decades Home",
     stickyCta: "Bring the Decades Home — $34",
-    heroImage: rememberWhenHero,
+    heroImage: rememberWhenScene,
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: `${rememberWhenHero800Avif} 800w, ${rememberWhenHero1200Avif} 1200w, ${rememberWhenHero1600Avif} 1600w`,
+        srcSet: `${rememberWhenScene600Avif} 600w, ${rememberWhenScene900Avif} 900w, ${rememberWhenScene1200Avif} 1200w`,
         sizes: "(max-width: 820px) 100vw, 560px",
       },
       {
         type: "image/webp",
-        srcSet: `${rememberWhenHero800Webp} 800w, ${rememberWhenHero1200Webp} 1200w, ${rememberWhenHero1600Webp} 1600w`,
+        srcSet: `${rememberWhenScene600Webp} 600w, ${rememberWhenScene900Webp} 900w, ${rememberWhenScene1200Webp} 1200w`,
         sizes: "(max-width: 820px) 100vw, 560px",
       },
     ],
-    heroWidth: 1456,
-    heroHeight: 1092,
-    heroObjectFit: "contain",
+    heroWidth: 1500,
+    heroHeight: 1000,
+    heroObjectFit: "cover",
     gallery: [
       { src: rememberWhenGames, alt: "Remember When Kit printed games — Trivia Time, Word Link, BINGO and Conversation Cards" },
       { src: rememberWhenCard, alt: "Remember When Kit Conversation Card — 1950s–1980s pop culture prompt" },
       { src: rememberWhenBingo, alt: "Remember When Kit BINGO board with 24 hand-drawn vintage illustrations" },
-      { src: rememberWhenScene, alt: "Grandmother and daughter using the Remember When Kit conversation cards over tea" },
+      { src: rememberWhenHero, alt: "Remember When Kit — vintage conversation cards laid out on a table" },
     ],
     description:
       "The Remember When Kit is the widest entry point. Trivia, a Word Link Game, four sets of conversation cards, picture prompts, and a Musical Memory section — all built around the decades that shaped the people who raised us, from the 1940s through the 1980s. Hand it to your mom or grandfather on a Sunday afternoon and watch them become the smartest person in the room — because they are.",
