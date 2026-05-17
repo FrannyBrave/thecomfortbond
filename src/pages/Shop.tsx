@@ -500,6 +500,14 @@ const Shop = () => {
               <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(SUMMER_EDITION_PRICE_ID)}>
                 Get the Summer Edition <ArrowSvg />
               </button>
+              <div style={{ marginTop: "0.6rem" }}>
+                <a
+                  href="/kits/connection-season-summer"
+                  style={{ fontFamily: "var(--font-sans)", fontSize: 13.5, fontWeight: 600, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}
+                >
+                  View details →
+                </a>
+              </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
                 Instant download · Use it printed, on a tablet, or right from your phone
               </p>
