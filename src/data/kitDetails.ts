@@ -14,6 +14,18 @@ import rememberWhenCard from "@/assets/remember-when-kit-conversation-card-telev
 import rememberWhenBingo from "@/assets/remember-when-kit-bingo-board-illustrations.jpg";
 import rememberWhenScene from "@/assets/remember-when-kit-grandmother-conversation-cards-tea.jpg";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
+import kitchenTableHero from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes.jpg";
+import kitchenTableHero800Avif from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-800.avif";
+import kitchenTableHero1200Avif from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-1200.avif";
+import kitchenTableHero1600Avif from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-1600.avif";
+import kitchenTableHero800Webp from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-800.webp";
+import kitchenTableHero1200Webp from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-1200.webp";
+import kitchenTableHero1600Webp from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-1600.webp";
+import kitchenTableCover from "@/assets/kitchen-table-memories-kit-cookbook-cover-on-table.jpg";
+import kitchenTableGames from "@/assets/kitchen-table-memories-kit-games-trivia-word-bingo-cards.jpg";
+import kitchenTableCard from "@/assets/kitchen-table-memories-kit-conversation-card-comfort-meal.jpg";
+import kitchenTableBingo from "@/assets/kitchen-table-memories-kit-picture-word-bingo-board.jpg";
+import kitchenTableSpark from "@/assets/kitchen-table-memories-kit-visual-spark-cards.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
@@ -208,10 +220,29 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Pull Up a Chair",
     stickyCta: "Pull Up a Chair — $34",
-    heroImage: kitKitchenTable,
-    heroWidth: 1200,
-    heroHeight: 1500,
-    heroObjectFit: "cover",
+    heroImage: kitchenTableHero,
+    heroPictureSources: [
+      {
+        type: "image/avif",
+        srcSet: `${kitchenTableHero800Avif} 800w, ${kitchenTableHero1200Avif} 1200w, ${kitchenTableHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+      {
+        type: "image/webp",
+        srcSet: `${kitchenTableHero800Webp} 800w, ${kitchenTableHero1200Webp} 1200w, ${kitchenTableHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+    ],
+    heroWidth: 1448,
+    heroHeight: 1086,
+    heroObjectFit: "contain",
+    gallery: [
+      { src: kitchenTableCover, alt: "The Kitchen Table Memories Kit cookbook on a wooden table with a coffee mug" },
+      { src: kitchenTableGames, alt: "Trivia Time, Word Link Game, Picture & Word Memory BINGO, and Conversation Cards layout" },
+      { src: kitchenTableCard, alt: "Kitchen Table Memories conversation card about a comforting family meal" },
+      { src: kitchenTableBingo, alt: "Picture & Word Memory BINGO board with 24 vintage kitchen illustrations" },
+      { src: kitchenTableSpark, alt: "Visual Spark Cards featuring a pie on the windowsill and a stovetop coffee pot" },
+    ],
     description:
       "Some families ran on the kitchen table. The recipes, the holiday meals, the small daily rituals — the dishes that meant Sunday, the cookies that meant Christmas, the smell of bread proofing on the counter. The Kitchen Table Memories Kit is built for those families. Bring it to your mother or grandmother and let her teach you something you've already eaten a hundred times.",
     bullets: [
