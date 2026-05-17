@@ -136,9 +136,21 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Bring the Decades Home",
     stickyCta: "Bring the Decades Home — $34",
     heroImage: rememberWhenHero,
+    heroPictureSources: [
+      {
+        type: "image/avif",
+        srcSet: `${rememberWhenHero800Avif} 800w, ${rememberWhenHero1200Avif} 1200w, ${rememberWhenHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 560px",
+      },
+      {
+        type: "image/webp",
+        srcSet: `${rememberWhenHero800Webp} 800w, ${rememberWhenHero1200Webp} 1200w, ${rememberWhenHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 560px",
+      },
+    ],
     heroWidth: 1456,
     heroHeight: 1092,
-    heroObjectFit: "cover",
+    heroObjectFit: "contain",
     gallery: [
       { src: rememberWhenGames, alt: "Remember When Kit printed games — Trivia Time, Word Link, BINGO and Conversation Cards" },
       { src: rememberWhenCard, alt: "Remember When Kit Conversation Card — 1950s–1980s pop culture prompt" },
