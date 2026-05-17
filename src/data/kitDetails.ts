@@ -1,9 +1,11 @@
-// Product detail page data — Batch 1: Remember When, Kitchen Table Memories, Comfort Bond Collection.
+// Product detail page data — Batches 1 & 2.
 // Copy is CMO-approved. Do not edit without flagging.
 
 import kitRememberWhen from "@/assets/remember-when-kit-conversation-cards-grandparents-family-memories.jpg";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
+import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
+import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
 import coffeeSampler from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
 
 export type CrossSell = {
@@ -46,6 +48,9 @@ export type KitDetail = {
 const COLLECTION_PRICE_ID = "pri_01kpafqz2tc4pfc262j1dnh531";
 const REMEMBER_WHEN_PRICE_ID = "pri_01kpafx84h0z9z11fwc5m84dam";
 const KITCHEN_TABLE_PRICE_ID = "pri_01kpafxq9xrqg0qhqfttzdjswf";
+const GARDEN_MEMORIES_PRICE_ID = "pri_01kpafvx3erd68458p4em99141";
+const PLACES_WEVE_BEEN_PRICE_ID = "pri_01kpafwqs0wwzatbs5721cyfmk";
+const HANDS_THAT_MADE_IT_PRICE_ID = "pri_01kpafv0r50q149ctgje0dmn0q";
 const SUMMER_EDITION_PRICE_ID = "pri_01kpagj5jtaxcnkbtjctq616k4";
 
 // Cross-sell tiles (kept here so the page can reference them safely)
@@ -53,7 +58,7 @@ export const CROSS = {
   collection: {
     title: "The Comfort Bond Collection",
     blurb:
-      "If you love this kit, the full library is $77 less than buying every kit separately.",
+      "If you love this kit, the full library is $57 less than buying every kit separately.",
     href: "/kits/collection",
     image: "/lcp/collection-768.webp",
   } as CrossSell,
@@ -74,15 +79,29 @@ export const CROSS = {
   gardenMemories: {
     title: "The Garden Memories Kit",
     blurb:
-      "If meals and gardens were both her territory, the two kits unlock related stories from different doorways.",
-    href: "/shop#garden-memories-kit",
+      "Gardens and kitchens often shared the same hands — two doors into the same year.",
+    href: "/kits/garden-memories",
     image: kitGardenMemories,
+  } as CrossSell,
+  placesWeveBeen: {
+    title: "The Places We've Been Kit",
+    blurb:
+      "Era and map together — the two doorways most families end up owning.",
+    href: "/kits/places-weve-been",
+    image: kitPlacesWeveBeen,
+  } as CrossSell,
+  handsThatMadeIt: {
+    title: "The Hands That Made It Kit",
+    blurb:
+      "If the garden was theirs to tend, the workbench was often theirs to fix.",
+    href: "/kits/hands-that-made-it",
+    image: kitHandsThatMadeIt,
   } as CrossSell,
   summerEdition: {
     title: "The Connection Season: Summer Edition",
     blurb:
       "For the family ready to turn a single afternoon into a whole season of warmer Sundays.",
-    href: "/shop#featured",
+    href: "/kits/connection-season-summer",
     image: "/lcp/summer-edition-768.webp",
   } as CrossSell,
   coffeeSampler: {
