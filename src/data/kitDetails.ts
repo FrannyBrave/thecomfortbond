@@ -606,6 +606,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the father, grandfather, aunt, or uncle who made or fixed things. Best for the daughter who watched her dad in the garage and never asked half the questions she wanted to. Best for Father's Day, retirement, or any visit where you'd like the conversation to start with a tool in someone's hand.",
     pairsWith: [CROSS.placesWeveBeen, CROSS.collection],
     priceId: HANDS_THAT_MADE_IT_PRICE_ID,
+    gallery: [
+      { src: handsCover, alt: "The Hands That Made It Kit cover resting on a wooden workbench with a hand plane and coffee mug" },
+      { src: handsSpark, alt: "Visual Spark Cards from the Hands That Made It Kit featuring a wood plane and hands mending by lamplight" },
+      { src: handsCard, alt: "Hands That Made It conversation card asking about the first thing you ever built with your own hands" },
+      { src: handsGames, alt: "Trivia, Word Link, BINGO and Conversation Cards from the Hands That Made It Kit" },
+      { src: handsBingo, alt: "Picture & Word Memory BINGO board from the Hands That Made It Kit with illustrated tools" },
+    ],
   },
 
   "connection-season-summer": {
