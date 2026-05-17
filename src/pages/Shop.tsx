@@ -500,6 +500,14 @@ const Shop = () => {
               <button type="button" className="btn-primary" style={{ border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(SUMMER_EDITION_PRICE_ID)}>
                 Get the Summer Edition <ArrowSvg />
               </button>
+              <div style={{ marginTop: "0.6rem" }}>
+                <a
+                  href="/kits/connection-season-summer"
+                  style={{ fontFamily: "var(--font-sans)", fontSize: 13.5, fontWeight: 600, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}
+                >
+                  View details →
+                </a>
+              </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.75rem 0 0", opacity: 0.85 }}>
                 Instant download · Use it printed, on a tablet, or right from your phone
               </p>
@@ -563,14 +571,25 @@ const Shop = () => {
                     <button type="button" className="btn-primary" style={{ alignSelf: "flex-start", border: 0, cursor: "pointer" }} onClick={() => void openPaddleCheckout(kit.priceId)}>
                       {kit.cta} <ArrowSvg />
                     </button>
-                    {(kit.id === "remember-when-kit" || kit.id === "kitchen-table-memories-kit") && (
-                      <a
-                        href={`/kits/${kit.id === "remember-when-kit" ? "remember-when" : "kitchen-table-memories"}`}
-                        style={{ alignSelf: "flex-start", marginTop: "0.6rem", fontFamily: "var(--font-sans)", fontSize: 13.5, fontWeight: 600, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}
-                      >
-                        View details →
-                      </a>
-                    )}
+                    {(() => {
+                      const slugMap: Record<string, string> = {
+                        "remember-when-kit": "remember-when",
+                        "kitchen-table-memories-kit": "kitchen-table-memories",
+                        "garden-memories-kit": "garden-memories",
+                        "places-weve-been-kit": "places-weve-been",
+                        "hands-that-made-it-kit": "hands-that-made-it",
+                      };
+                      const slug = slugMap[kit.id];
+                      if (!slug) return null;
+                      return (
+                        <a
+                          href={`/kits/${slug}`}
+                          style={{ alignSelf: "flex-start", marginTop: "0.6rem", fontFamily: "var(--font-sans)", fontSize: 13.5, fontWeight: 600, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}
+                        >
+                          View details →
+                        </a>
+                      );
+                    })()}
                     <p style={{ fontFamily: "var(--font-sans)", fontSize: 12.5, color: C.textMid, margin: "0.6rem 0 0", opacity: 0.8 }}>
                       Instant download · Use it printed, on a tablet, or right from your phone
                     </p>
