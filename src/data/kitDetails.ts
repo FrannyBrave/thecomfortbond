@@ -2,6 +2,11 @@
 // Copy is CMO-approved. Do not edit without flagging.
 
 import kitRememberWhen from "@/assets/remember-when-kit-conversation-cards-grandparents-family-memories.jpg";
+import rememberWhenHero from "@/assets/remember-when-kit-hero-vintage-conversation-cards.png";
+import rememberWhenGames from "@/assets/remember-when-kit-games-trivia-bingo-word-link.png";
+import rememberWhenCard from "@/assets/remember-when-kit-conversation-card-television.png";
+import rememberWhenBingo from "@/assets/remember-when-kit-bingo-board-illustrations.png";
+import rememberWhenScene from "@/assets/remember-when-kit-grandmother-conversation-cards-tea.png";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
@@ -40,6 +45,8 @@ export type KitDetail = {
   faqs: { q: string; a: string }[];
   bestFor: string;
   pairsWith: CrossSell[];
+  // optional gallery
+  gallery?: { src: string; alt: string }[];
   // checkout
   priceId?: string;
   externalCheckoutHref?: string;
@@ -122,10 +129,16 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Bring the Decades Home",
     stickyCta: "Bring the Decades Home — $34",
-    heroImage: kitRememberWhen,
-    heroWidth: 1200,
-    heroHeight: 1500,
+    heroImage: rememberWhenHero,
+    heroWidth: 1456,
+    heroHeight: 1092,
     heroObjectFit: "cover",
+    gallery: [
+      { src: rememberWhenGames, alt: "Remember When Kit printed games — Trivia Time, Word Link, BINGO and Conversation Cards" },
+      { src: rememberWhenCard, alt: "Remember When Kit Conversation Card — 1950s–1980s pop culture prompt" },
+      { src: rememberWhenBingo, alt: "Remember When Kit BINGO board with 24 hand-drawn vintage illustrations" },
+      { src: rememberWhenScene, alt: "Grandmother and daughter using the Remember When Kit conversation cards over tea" },
+    ],
     description:
       "The Remember When Kit is the widest entry point. Trivia, a Word Link Game, four sets of conversation cards, picture prompts, and a Musical Memory section — all built around the decades that shaped the people who raised us, from the 1940s through the 1980s. Hand it to your mom or grandfather on a Sunday afternoon and watch them become the smartest person in the room — because they are.",
     bullets: [
