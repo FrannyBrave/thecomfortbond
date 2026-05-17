@@ -72,6 +72,18 @@ import handsCard from "@/assets/hands-that-made-it-kit-conversation-card-workben
 import handsGames from "@/assets/hands-that-made-it-kit-games-trivia-word-bingo-cards.jpg";
 import handsBingo from "@/assets/hands-that-made-it-kit-picture-word-bingo-board.jpg";
 import coffeeSampler from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
+import summerHero from "@/assets/connection-season-summer-hero-two-people-using-kit.jpg";
+import summerHero800Avif from "@/assets/connection-season-summer-hero-two-people-using-kit-800.avif";
+import summerHero1200Avif from "@/assets/connection-season-summer-hero-two-people-using-kit-1200.avif";
+import summerHero1600Avif from "@/assets/connection-season-summer-hero-two-people-using-kit-1600.avif";
+import summerHero800Webp from "@/assets/connection-season-summer-hero-two-people-using-kit-800.webp";
+import summerHero1200Webp from "@/assets/connection-season-summer-hero-two-people-using-kit-1200.webp";
+import summerHero1600Webp from "@/assets/connection-season-summer-hero-two-people-using-kit-1600.webp";
+import summerCover from "@/assets/connection-season-summer-cover-on-porch.jpg";
+import summerDimensions from "@/assets/connection-season-summer-six-dimensions-of-bonding.jpg";
+import summerWeekSpread from "@/assets/connection-season-summer-week-spread-great-outdoors.jpg";
+import summerPagesStack from "@/assets/connection-season-summer-pages-stack-spread.jpg";
+import summerCardPlanner from "@/assets/connection-season-summer-conversation-card-planner.jpg";
 
 export type CrossSell = {
   title: string;
