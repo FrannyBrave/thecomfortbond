@@ -477,6 +477,7 @@ export default function KitDetailPage() {
         @media (max-width: 820px) {
           .kit-hero-grid { grid-template-columns: 1fr !important; }
           .kit-pairs-grid { grid-template-columns: 1fr !important; }
+          .kit-gallery-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </div>
