@@ -527,6 +527,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       { src: placesGames, alt: "Fanned printable pages from the Places We've Been Kit — Trivia Time, Word Link Game, Picture & Word Memory BINGO, and Conversation Cards" },
       { src: placesBingo, alt: "Picture & Word Memory BINGO board from the Places We've Been Kit with illustrated travel icons" },
     ],
+  },
 
   "hands-that-made-it": {
     slug: "hands-that-made-it",
