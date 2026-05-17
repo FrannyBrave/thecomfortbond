@@ -549,10 +549,22 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Honor the Hands That Made It",
     stickyCta: "Honor the Hands That Made It — $34",
-    heroImage: kitHandsThatMadeIt,
-    heroWidth: 1200,
-    heroHeight: 1500,
+    heroImage: handsHero,
+    heroWidth: 1448,
+    heroHeight: 1086,
     heroObjectFit: "cover",
+    heroPictureSources: [
+      {
+        type: "image/avif",
+        srcSet: `${handsHero800Avif} 800w, ${handsHero1200Avif} 1200w, ${handsHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+      {
+        type: "image/webp",
+        srcSet: `${handsHero800Webp} 800w, ${handsHero1200Webp} 1200w, ${handsHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
+      },
+    ],
     description:
       "This kit is for the people who built things. Who could mend a hem, refinish a chair, fix a faucet, knit a scarf, replace a fan belt, throw a pot. The Hands That Made It Kit gathers conversation cards, picture prompts, and quiet games around a life lived with hands. Bring it to the father or grandmother who taught you that a real fix takes time.",
     bullets: [
