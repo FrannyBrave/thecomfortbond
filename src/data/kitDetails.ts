@@ -643,24 +643,22 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Step Into the Season",
     stickyCta: "Step Into the Season — $34",
     pageNote: "41 pages — our most generous single volume.",
-    heroImage: "/lcp/summer-edition-1100.webp",
+    heroImage: summerHero,
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet:
-          "/lcp/summer-edition-480.avif 480w, /lcp/summer-edition-768.avif 768w, /lcp/summer-edition-1100.avif 1100w",
-        sizes: "(max-width: 768px) 100vw, 50vw",
+        srcSet: `${summerHero800Avif} 800w, ${summerHero1200Avif} 1200w, ${summerHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
       },
       {
         type: "image/webp",
-        srcSet:
-          "/lcp/summer-edition-480.webp 480w, /lcp/summer-edition-768.webp 768w, /lcp/summer-edition-1100.webp 1100w",
-        sizes: "(max-width: 768px) 100vw, 50vw",
+        srcSet: `${summerHero800Webp} 800w, ${summerHero1200Webp} 1200w, ${summerHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 50vw",
       },
     ],
-    heroWidth: 1100,
-    heroHeight: 1467,
-    heroObjectFit: "contain",
+    heroWidth: 1200,
+    heroHeight: 900,
+    heroObjectFit: "cover",
     description:
       "This isn't a single visit. It's a season. The Connection Season: Summer Edition is our premium 41-page guide for families who want to use the whole summer with intention — built around the Six Dimensions of Bonding and a weekly rhythm that holds the season together. It's the kit families come back to.",
     bullets: [
