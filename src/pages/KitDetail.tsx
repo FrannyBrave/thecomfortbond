@@ -233,7 +233,7 @@ export default function KitDetailPage() {
                 )}
               </div>
               {kit.pageNote && (
-                <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "#8B9D83", margin: "-0.5rem 0 1.1rem" }}>
+                <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 700, fontSize: "0.95rem", color: "#8B9D83", margin: "-0.5rem 0 1.1rem" }}>
                   {kit.pageNote}
                 </p>
               )}
