@@ -232,6 +232,11 @@ export default function KitDetailPage() {
                   <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: C.clay, fontWeight: 600, letterSpacing: "0.02em" }}>{kit.priceSavings}</span>
                 )}
               </div>
+              {kit.pageNote && (
+                <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "#8B9D83", margin: "-0.5rem 0 1.1rem" }}>
+                  {kit.pageNote}
+                </p>
+              )}
               <PrimaryButton kit={kit} />
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 13, color: C.textMid, margin: "0.85rem 0 0", opacity: 0.85 }}>
                 Instant download · Use it printed, on a tablet, or right from your phone

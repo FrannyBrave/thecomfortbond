@@ -100,6 +100,7 @@ export type KitDetail = {
   // body
   description: string;
   bullets: string[];
+  pageNote?: string;
   promptsHeadline: string;
   prompts: string[];
   faqs: { q: string; a: string }[];
@@ -189,6 +190,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Bring the Decades Home",
     stickyCta: "Bring the Decades Home — $34",
+    pageNote: "23 pages — designed for many afternoons together.",
     heroImage: rememberWhenScene,
     heroPictureSources: [
       {
@@ -262,6 +264,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Pull Up a Chair",
     stickyCta: "Pull Up a Chair — $34",
+    pageNote: "23 pages — designed for many afternoons together.",
     heroImage: kitchenTableHero,
     heroPictureSources: [
       {
@@ -338,6 +341,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     priceSavings: "Save $57",
     ctaText: "Get the Collection",
     stickyCta: "Get the Collection — $147",
+    pageNote: "156 pages of cards, prompts, and games — across six volumes.",
     heroImage: "/lcp/collection-1100.webp",
     heroPictureSources: [
       {
@@ -409,6 +413,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Step Into the Garden",
     stickyCta: "Step Into the Garden — $34",
+    pageNote: "23 pages — designed for many afternoons together.",
     heroImage: gardenHero,
     heroWidth: 1448,
     heroHeight: 1086,
@@ -483,6 +488,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Follow the Road",
     stickyCta: "Follow the Road — $34",
+    pageNote: "23 pages — designed for many afternoons together.",
     heroImage: placesHero,
     heroPictureSources: [
       { type: "image/avif", srcSet: `${placesHero800Avif} 800w, ${placesHero1200Avif} 1200w, ${placesHero1600Avif} 1600w`, sizes: "(max-width: 820px) 100vw, 560px" },
@@ -549,6 +555,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Honor the Hands That Made It",
     stickyCta: "Honor the Hands That Made It — $34",
+    pageNote: "23 pages — designed for many afternoons together.",
     heroImage: handsHero,
     heroWidth: 1448,
     heroHeight: 1086,
@@ -623,6 +630,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     price: "$34",
     ctaText: "Step Into the Season",
     stickyCta: "Step Into the Season — $34",
+    pageNote: "41 pages — our most generous single volume.",
     heroImage: "/lcp/summer-edition-1100.webp",
     heroPictureSources: [
       {
