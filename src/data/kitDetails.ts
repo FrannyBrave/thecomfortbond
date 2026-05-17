@@ -442,6 +442,13 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the loved one who lit up around plants, porches, and weather. Best for the spring or summer visit when you can actually go outside together. Best for a daughter who never got the names of her mother's flowers before.",
     pairsWith: [CROSS.kitchenTable, CROSS.handsThatMadeIt],
     priceId: GARDEN_MEMORIES_PRICE_ID,
+    gallery: [
+      { src: gardenCover, alt: "The Garden Memories Kit cover resting on a wooden porch with a potted geranium and straw hat" },
+      { src: gardenSpark, alt: "Visual Spark Cards from the Garden Memories Kit featuring a potted geranium and ripe tomatoes" },
+      { src: gardenCard, alt: "Garden Memories conversation card asking about the smell of a childhood yard in summer" },
+      { src: gardenGames, alt: "Trivia, Word Link, Picture & Word BINGO and Conversation Cards from the Garden Memories Kit" },
+      { src: gardenBingo, alt: "Picture & Word Memory BINGO board from the Garden Memories Kit with illustrated garden icons" },
+    ],
   },
 
   "places-weve-been": {
