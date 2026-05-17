@@ -14,6 +14,7 @@ const Shop = lazy(() => import("./pages/Shop"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const OurStory = lazy(() => import("./pages/OurStory"));
+const KitDetail = lazy(() => import("./pages/KitDetail"));
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ function AppRoutes() {
         <Route path="/blueprint-pro-pdf" element={<Navigate to="/" replace />} />
         <Route path="/free-sampler" element={<Index />} />
         <Route path="/kits" element={<Shop />} />
+        <Route path="/kits/:slug" element={<KitDetail />} />
         <Route path="/bundle-access" element={<Navigate to="/" replace />} />
         <Route path="/thank-you" element={<Navigate to="/" replace />} />
         <Route path="/thank-you-mothers-day" element={<Navigate to="/" replace />} />
