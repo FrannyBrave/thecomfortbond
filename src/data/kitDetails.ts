@@ -435,7 +435,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     faqs: [
       {
         q: "Do I save money by buying the Collection vs. the kits individually?",
-        a: "Yes. Five Connection Kits at $34 each are $170. Add The Connection Season at $34 and the individual total is $204. The Collection is $127 — roughly $77 in savings. The real value, though, is having every kit on hand so you can match the kit to the day.",
+        a: "Yes. Five Connection Kits at $34 each are $170. Add The Connection Season at $34 and the individual total is $204. The Collection is $147 — roughly $57 in savings. The real value, though, is having every kit on hand so you can match the kit to the day.",
       },
       {
         q: "Which kit should we open first?",
