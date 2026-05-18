@@ -129,6 +129,12 @@ export const FooterSection = () => {
           <p className="text-xs text-forest/60 mt-1">
             © 2026 The Comfort Bond. · Made with care in Texas 🤍
           </p>
+          <address className="not-italic text-[12px] md:text-[13px] text-forest/70 leading-[1.8] mt-4 font-sans">
+            The Comfort Bond<br />
+            6150 Eldorado Pkwy, Ste 190 #2025<br />
+            McKinney, TX 75070<br />
+            <a href="tel:+19032259165" className="hover:text-terracotta transition-colors">(903) 225-9165</a>
+          </address>
         </div>
       </div>
     </footer>
