@@ -582,10 +582,10 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Follow the Road",
     stickyCta: "Follow the Road — $34",
     pageNote: "23 pages — designed for many afternoons together.",
-    heroImage: placesHero,
+    heroImage: "/lcp/places-hero-1200.avif",
     heroPictureSources: [
-      { type: "image/avif", srcSet: `${placesHero800Avif} 800w, ${placesHero1200Avif} 1200w, ${placesHero1600Avif} 1600w`, sizes: "(max-width: 820px) 100vw, 560px" },
-      { type: "image/webp", srcSet: `${placesHero800Webp} 800w, ${placesHero1200Webp} 1200w, ${placesHero1600Webp} 1600w`, sizes: "(max-width: 820px) 100vw, 560px" },
+      { type: "image/avif", srcSet: "/lcp/places-hero-800.avif 800w, /lcp/places-hero-1200.avif 1200w, /lcp/places-hero-1600.avif 1600w", sizes: "(max-width: 820px) 100vw, 560px" },
+      { type: "image/webp", srcSet: "/lcp/places-hero-800.webp 800w, /lcp/places-hero-1200.webp 1200w, /lcp/places-hero-1600.webp 1600w", sizes: "(max-width: 820px) 100vw, 560px" },
     ],
     heroWidth: 1448,
     heroHeight: 1086,
