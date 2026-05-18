@@ -2,16 +2,16 @@
 // Copy is CMO-approved. Do not edit without flagging.
 
 import kitRememberWhen from "@/assets/remember-when-kit-conversation-cards-grandparents-family-memories.jpg";
-import rememberWhenHero from "@/assets/remember-when-kit-hero-vintage-conversation-cards.jpg";
-import rememberWhenHero800Avif from "@/assets/remember-when-kit-hero-vintage-conversation-cards-800.avif";
-import rememberWhenHero1200Avif from "@/assets/remember-when-kit-hero-vintage-conversation-cards-1200.avif";
-import rememberWhenHero1600Avif from "@/assets/remember-when-kit-hero-vintage-conversation-cards-1600.avif";
-import rememberWhenHero800Webp from "@/assets/remember-when-kit-hero-vintage-conversation-cards-800.webp";
-import rememberWhenHero1200Webp from "@/assets/remember-when-kit-hero-vintage-conversation-cards-1200.webp";
-import rememberWhenHero1600Webp from "@/assets/remember-when-kit-hero-vintage-conversation-cards-1600.webp";
-import rememberWhenGames from "@/assets/remember-when-kit-games-trivia-bingo-word-link.jpg";
-import rememberWhenCard from "@/assets/remember-when-kit-conversation-card-television.jpg";
-import rememberWhenBingo from "@/assets/remember-when-kit-bingo-board-illustrations.jpg";
+import rememberWhenHero from "@/assets/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents.jpg";
+import rememberWhenHero800Avif from "@/assets/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-800.avif";
+import rememberWhenHero1200Avif from "@/assets/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-1200.avif";
+import rememberWhenHero1600Avif from "@/assets/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-1600.avif";
+import rememberWhenHero800Webp from "@/assets/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-800.webp";
+import rememberWhenHero1200Webp from "@/assets/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-1200.webp";
+import rememberWhenHero1600Webp from "@/assets/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-1600.webp";
+import rememberWhenGames from "@/assets/remember-when-kit-conversation-cards-family-memories-1950s-1960s.jpg";
+import rememberWhenCard from "@/assets/remember-when-kit-vintage-picture-cards-conversation-starters-grandparents.jpg";
+import rememberWhenBingo from "@/assets/remember-when-kit-picture-word-memory-bingo-game-grandparents-grandchildren.jpg";
 import rememberWhenScene from "@/assets/remember-when-kit-grandmother-conversation-cards-tea.jpg";
 import rememberWhenScene600Avif from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-600.avif";
 import rememberWhenScene900Avif from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-900.avif";
@@ -20,98 +20,98 @@ import rememberWhenScene600Webp from "@/assets/remember-when-kit-grandmother-con
 import rememberWhenScene900Webp from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-900.webp";
 import rememberWhenScene1200Webp from "@/assets/remember-when-kit-grandmother-conversation-cards-tea-1200.webp";
 import kitKitchenTable from "@/assets/kitchen-table-memories-kit-family-recipes-conversation-starters.jpg";
-import kitchenTableHero from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes.jpg";
-import kitchenTableHero800Avif from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-800.avif";
-import kitchenTableHero1200Avif from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-1200.avif";
-import kitchenTableHero1600Avif from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-1600.avif";
-import kitchenTableHero800Webp from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-800.webp";
-import kitchenTableHero1200Webp from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-1200.webp";
-import kitchenTableHero1600Webp from "@/assets/kitchen-table-memories-kit-hero-cookbook-recipes-1600.webp";
-import kitchenTableCover from "@/assets/kitchen-table-memories-kit-cookbook-cover-on-table.jpg";
-import kitchenTableGames from "@/assets/kitchen-table-memories-kit-games-trivia-word-bingo-cards.jpg";
-import kitchenTableCard from "@/assets/kitchen-table-memories-kit-conversation-card-comfort-meal.jpg";
+import kitchenTableHero from "@/assets/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards.jpg";
+import kitchenTableHero800Avif from "@/assets/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-800.avif";
+import kitchenTableHero1200Avif from "@/assets/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-1200.avif";
+import kitchenTableHero1600Avif from "@/assets/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-1600.avif";
+import kitchenTableHero800Webp from "@/assets/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-800.webp";
+import kitchenTableHero1200Webp from "@/assets/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-1200.webp";
+import kitchenTableHero1600Webp from "@/assets/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-1600.webp";
+import kitchenTableCover from "@/assets/kitchen-table-memories-kit-conversation-cards-family-meals-recipes-stories.jpg";
+import kitchenTableGames from "@/assets/kitchen-table-memories-kit-picture-cards-cookie-jars-mixing-bowls-family-recipes.jpg";
+import kitchenTableCard from "@/assets/kitchen-table-memories-kit-picture-word-bingo-family-recipes-mothers-day-gift.jpg";
 import kitchenTableBingo from "@/assets/kitchen-table-memories-kit-picture-word-bingo-board.jpg";
 import kitchenTableSpark from "@/assets/kitchen-table-memories-kit-visual-spark-cards.jpg";
 import kitGardenMemories from "@/assets/garden-memories-kit-conversation-cards-grandparents-yard-stories.jpg";
-import gardenHero from "@/assets/garden-memories-kit-hero-two-people-using-kit.jpg";
-import gardenHero800Avif from "@/assets/garden-memories-kit-hero-two-people-using-kit-800.avif";
-import gardenHero1200Avif from "@/assets/garden-memories-kit-hero-two-people-using-kit-1200.avif";
-import gardenHero1600Avif from "@/assets/garden-memories-kit-hero-two-people-using-kit-1600.avif";
-import gardenHero800Webp from "@/assets/garden-memories-kit-hero-two-people-using-kit-800.webp";
-import gardenHero1200Webp from "@/assets/garden-memories-kit-hero-two-people-using-kit-1200.webp";
-import gardenHero1600Webp from "@/assets/garden-memories-kit-hero-two-people-using-kit-1600.webp";
-import gardenCover from "@/assets/garden-memories-kit-cover-on-porch.jpg";
-import gardenSpark from "@/assets/garden-memories-kit-visual-spark-cards.jpg";
-import gardenCard from "@/assets/garden-memories-kit-conversation-card-childhood-yard.jpg";
+import gardenHero from "@/assets/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift.jpg";
+import gardenHero800Avif from "@/assets/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-800.avif";
+import gardenHero1200Avif from "@/assets/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-1200.avif";
+import gardenHero1600Avif from "@/assets/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-1600.avif";
+import gardenHero800Webp from "@/assets/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-800.webp";
+import gardenHero1200Webp from "@/assets/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-1200.webp";
+import gardenHero1600Webp from "@/assets/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-1600.webp";
+import gardenCover from "@/assets/garden-memories-kit-conversation-cards-gardening-family-stories-mom-grandma.jpg";
+import gardenSpark from "@/assets/garden-memories-kit-picture-cards-flowers-vegetables-watering-cans-gardening-memories.jpg";
+import gardenCard from "@/assets/garden-memories-kit-picture-word-bingo-game-grandmother-grandchildren-summer.jpg";
 import gardenGames from "@/assets/garden-memories-kit-games-trivia-word-bingo-cards.jpg";
 import gardenBingo from "@/assets/garden-memories-kit-picture-word-bingo-board.jpg";
 import kitPlacesWeveBeen from "@/assets/places-weve-been-kit-family-travel-stories-aging-parents.jpg";
-import placesHero from "@/assets/places-weve-been-kit-hero-two-people-using-kit.jpg";
-import placesHero800Avif from "@/assets/places-weve-been-kit-hero-two-people-using-kit-800.avif";
-import placesHero1200Avif from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1200.avif";
-import placesHero1600Avif from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1600.avif";
-import placesHero800Webp from "@/assets/places-weve-been-kit-hero-two-people-using-kit-800.webp";
-import placesHero1200Webp from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1200.webp";
-import placesHero1600Webp from "@/assets/places-weve-been-kit-hero-two-people-using-kit-1600.webp";
-import placesCover from "@/assets/places-weve-been-kit-cover-on-table.jpg";
-import placesSpark from "@/assets/places-weve-been-kit-visual-spark-cards.jpg";
-import placesCard from "@/assets/places-weve-been-kit-conversation-card-family-road-trip.jpg";
+import placesHero from "@/assets/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa.jpg";
+import placesHero800Avif from "@/assets/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-800.avif";
+import placesHero1200Avif from "@/assets/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-1200.avif";
+import placesHero1600Avif from "@/assets/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-1600.avif";
+import placesHero800Webp from "@/assets/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-800.webp";
+import placesHero1200Webp from "@/assets/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-1200.webp";
+import placesHero1600Webp from "@/assets/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-1600.webp";
+import placesCover from "@/assets/places-weve-been-kit-conversation-cards-family-road-trip-travel-memories.jpg";
+import placesSpark from "@/assets/places-weve-been-kit-picture-cards-station-wagons-postcards-fathers-day-gift-grandpa.jpg";
+import placesCard from "@/assets/places-weve-been-kit-picture-word-bingo-road-trip-game-grandparents-grandchildren.jpg";
 import placesGames from "@/assets/places-weve-been-kit-games-trivia-word-bingo-cards.jpg";
 import placesBingo from "@/assets/places-weve-been-kit-picture-word-bingo-board.jpg";
 import kitHandsThatMadeIt from "@/assets/hands-that-made-it-kit-family-recipes-heirloom-stories.jpg";
-import handsHero from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit.jpg";
-import handsHero800Avif from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-800.avif";
-import handsHero1200Avif from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1200.avif";
-import handsHero1600Avif from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1600.avif";
-import handsHero800Webp from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-800.webp";
-import handsHero1200Webp from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1200.webp";
-import handsHero1600Webp from "@/assets/hands-that-made-it-kit-hero-two-people-using-kit-1600.webp";
-import handsCover from "@/assets/hands-that-made-it-kit-cover-on-workbench.jpg";
-import handsSpark from "@/assets/hands-that-made-it-kit-visual-spark-cards.jpg";
-import handsCard from "@/assets/hands-that-made-it-kit-conversation-card-workbench.jpg";
+import handsHero from "@/assets/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa.jpg";
+import handsHero800Avif from "@/assets/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-800.avif";
+import handsHero1200Avif from "@/assets/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-1200.avif";
+import handsHero1600Avif from "@/assets/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-1600.avif";
+import handsHero800Webp from "@/assets/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-800.webp";
+import handsHero1200Webp from "@/assets/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-1200.webp";
+import handsHero1600Webp from "@/assets/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-1600.webp";
+import handsCover from "@/assets/hands-that-made-it-kit-conversation-cards-woodworking-sewing-family-stories.jpg";
+import handsSpark from "@/assets/hands-that-made-it-kit-picture-cards-tools-thimbles-sewing-machines-fathers-day-gift.jpg";
+import handsCard from "@/assets/hands-that-made-it-kit-picture-word-bingo-makers-craftsmen-grandparents-grandchildren.jpg";
 import handsGames from "@/assets/hands-that-made-it-kit-games-trivia-word-bingo-cards.jpg";
 import handsBingo from "@/assets/hands-that-made-it-kit-picture-word-bingo-board.jpg";
 import coffeeSampler from "@/assets/coffee-connection-sampler-free-conversation-starters-aging-parents.png";
-import summerHero from "@/assets/connection-season-summer-hero-two-people-using-kit.jpg";
-import summerHero800Avif from "@/assets/connection-season-summer-hero-two-people-using-kit-800.avif";
-import summerHero1200Avif from "@/assets/connection-season-summer-hero-two-people-using-kit-1200.avif";
-import summerHero1600Avif from "@/assets/connection-season-summer-hero-two-people-using-kit-1600.avif";
-import summerHero800Webp from "@/assets/connection-season-summer-hero-two-people-using-kit-800.webp";
-import summerHero1200Webp from "@/assets/connection-season-summer-hero-two-people-using-kit-1200.webp";
-import summerHero1600Webp from "@/assets/connection-season-summer-hero-two-people-using-kit-1600.webp";
-import summerCover from "@/assets/connection-season-summer-cover-on-porch.jpg";
-import summerDimensions from "@/assets/connection-season-summer-six-dimensions-of-bonding.jpg";
-import summerWeekSpread from "@/assets/connection-season-summer-week-spread-great-outdoors.jpg";
+import summerHero from "@/assets/connection-season-the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-two-people-using-kit.jpg";
+import summerHero800Avif from "@/assets/connection-season-the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-two-people-using-kit-800.avif";
+import summerHero1200Avif from "@/assets/connection-season-the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-two-people-using-kit-1200.avif";
+import summerHero1600Avif from "@/assets/connection-season-the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-two-people-using-kit-1600.avif";
+import summerHero800Webp from "@/assets/connection-season-the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-two-people-using-kit-800.webp";
+import summerHero1200Webp from "@/assets/connection-season-the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-two-people-using-kit-1200.webp";
+import summerHero1600Webp from "@/assets/connection-season-the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-two-people-using-kit-1600.webp";
+import summerCover from "@/assets/connection-season-summer-weekly-themes-family-conversation-prompts-grandparents.jpg";
+import summerDimensions from "@/assets/connection-season-summer-six-dimensions-bonding-family-memory-keeping-summer.jpg";
+import summerWeekSpread from "@/assets/connection-season-summer-legacy-pages-preserve-family-stories-grandparents-summer.jpg";
 import summerPagesStack from "@/assets/connection-season-summer-pages-stack-spread.jpg";
 import summerCardPlanner from "@/assets/connection-season-summer-conversation-card-planner.jpg";
-import collectionHero from "@/assets/collection-kit-hero-two-people-using-kit.jpg";
-import collectionHero800Avif from "@/assets/collection-kit-hero-two-people-using-kit-800.avif";
-import collectionHero1200Avif from "@/assets/collection-kit-hero-two-people-using-kit-1200.avif";
-import collectionHero1600Avif from "@/assets/collection-kit-hero-two-people-using-kit-1600.avif";
-import collectionHero800Webp from "@/assets/collection-kit-hero-two-people-using-kit-800.webp";
-import collectionHero1200Webp from "@/assets/collection-kit-hero-two-people-using-kit-1200.webp";
-import collectionHero1600Webp from "@/assets/collection-kit-hero-two-people-using-kit-1600.webp";
-import collectionSixVolumes from "@/assets/collection-kit-all-six-volumes-fanned.jpg";
-import collectionSixVolumes600Avif from "@/assets/collection-kit-all-six-volumes-fanned-600.avif";
-import collectionSixVolumes900Avif from "@/assets/collection-kit-all-six-volumes-fanned-900.avif";
-import collectionSixVolumes1200Avif from "@/assets/collection-kit-all-six-volumes-fanned-1200.avif";
-import collectionSixVolumes600Webp from "@/assets/collection-kit-all-six-volumes-fanned-600.webp";
-import collectionSixVolumes900Webp from "@/assets/collection-kit-all-six-volumes-fanned-900.webp";
-import collectionSixVolumes1200Webp from "@/assets/collection-kit-all-six-volumes-fanned-1200.webp";
-import collectionFiveKits from "@/assets/collection-kit-five-themed-kits-flatlay.jpg";
-import collectionFiveKits600Avif from "@/assets/collection-kit-five-themed-kits-flatlay-600.avif";
-import collectionFiveKits900Avif from "@/assets/collection-kit-five-themed-kits-flatlay-900.avif";
-import collectionFiveKits1200Avif from "@/assets/collection-kit-five-themed-kits-flatlay-1200.avif";
-import collectionFiveKits600Webp from "@/assets/collection-kit-five-themed-kits-flatlay-600.webp";
-import collectionFiveKits900Webp from "@/assets/collection-kit-five-themed-kits-flatlay-900.webp";
-import collectionFiveKits1200Webp from "@/assets/collection-kit-five-themed-kits-flatlay-1200.webp";
-import collectionDimensions from "@/assets/collection-kit-six-dimensions-spread.jpg";
-import collectionDimensions600Avif from "@/assets/collection-kit-six-dimensions-spread-600.avif";
-import collectionDimensions900Avif from "@/assets/collection-kit-six-dimensions-spread-900.avif";
-import collectionDimensions1200Avif from "@/assets/collection-kit-six-dimensions-spread-1200.avif";
-import collectionDimensions600Webp from "@/assets/collection-kit-six-dimensions-spread-600.webp";
-import collectionDimensions900Webp from "@/assets/collection-kit-six-dimensions-spread-900.webp";
-import collectionDimensions1200Webp from "@/assets/collection-kit-six-dimensions-spread-1200.webp";
+import collectionHero from "@/assets/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents.jpg";
+import collectionHero800Avif from "@/assets/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-800.avif";
+import collectionHero1200Avif from "@/assets/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-1200.avif";
+import collectionHero1600Avif from "@/assets/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-1600.avif";
+import collectionHero800Webp from "@/assets/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-800.webp";
+import collectionHero1200Webp from "@/assets/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-1200.webp";
+import collectionHero1600Webp from "@/assets/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-1600.webp";
+import collectionSixVolumes from "@/assets/comfort-bond-collection-five-connection-kits-summer-edition-family-memory-gift-bundle.jpg";
+import collectionSixVolumes600Avif from "@/assets/comfort-bond-collection-five-connection-kits-summer-edition-family-memory-gift-bundle-600.avif";
+import collectionSixVolumes900Avif from "@/assets/comfort-bond-collection-five-connection-kits-summer-edition-family-memory-gift-bundle-900.avif";
+import collectionSixVolumes1200Avif from "@/assets/comfort-bond-collection-five-connection-kits-summer-edition-family-memory-gift-bundle-1200.avif";
+import collectionSixVolumes600Webp from "@/assets/comfort-bond-collection-five-connection-kits-summer-edition-family-memory-gift-bundle-600.webp";
+import collectionSixVolumes900Webp from "@/assets/comfort-bond-collection-five-connection-kits-summer-edition-family-memory-gift-bundle-900.webp";
+import collectionSixVolumes1200Webp from "@/assets/comfort-bond-collection-five-connection-kits-summer-edition-family-memory-gift-bundle-1200.webp";
+import collectionFiveKits from "@/assets/comfort-bond-collection-conversation-cards-spread-family-stories-mom-dad-grandma-grandpa.jpg";
+import collectionFiveKits600Avif from "@/assets/comfort-bond-collection-conversation-cards-spread-family-stories-mom-dad-grandma-grandpa-600.avif";
+import collectionFiveKits900Avif from "@/assets/comfort-bond-collection-conversation-cards-spread-family-stories-mom-dad-grandma-grandpa-900.avif";
+import collectionFiveKits1200Avif from "@/assets/comfort-bond-collection-conversation-cards-spread-family-stories-mom-dad-grandma-grandpa-1200.avif";
+import collectionFiveKits600Webp from "@/assets/comfort-bond-collection-conversation-cards-spread-family-stories-mom-dad-grandma-grandpa-600.webp";
+import collectionFiveKits900Webp from "@/assets/comfort-bond-collection-conversation-cards-spread-family-stories-mom-dad-grandma-grandpa-900.webp";
+import collectionFiveKits1200Webp from "@/assets/comfort-bond-collection-conversation-cards-spread-family-stories-mom-dad-grandma-grandpa-1200.webp";
+import collectionDimensions from "@/assets/comfort-bond-collection-memory-games-bingo-boards-family-gift-milestone-birthday.jpg";
+import collectionDimensions600Avif from "@/assets/comfort-bond-collection-memory-games-bingo-boards-family-gift-milestone-birthday-600.avif";
+import collectionDimensions900Avif from "@/assets/comfort-bond-collection-memory-games-bingo-boards-family-gift-milestone-birthday-900.avif";
+import collectionDimensions1200Avif from "@/assets/comfort-bond-collection-memory-games-bingo-boards-family-gift-milestone-birthday-1200.avif";
+import collectionDimensions600Webp from "@/assets/comfort-bond-collection-memory-games-bingo-boards-family-gift-milestone-birthday-600.webp";
+import collectionDimensions900Webp from "@/assets/comfort-bond-collection-memory-games-bingo-boards-family-gift-milestone-birthday-900.webp";
+import collectionDimensions1200Webp from "@/assets/comfort-bond-collection-memory-games-bingo-boards-family-gift-milestone-birthday-1200.webp";
 import collectionLetter from "@/assets/collection-kit-letter-from-where-im-sitting.jpg";
 import collectionLetter600Avif from "@/assets/collection-kit-letter-from-where-im-sitting-600.avif";
 import collectionLetter900Avif from "@/assets/collection-kit-letter-from-where-im-sitting-900.avif";
@@ -144,6 +144,7 @@ export type KitDetail = {
   heroWidth: number;
   heroHeight: number;
   heroObjectFit?: "cover" | "contain";
+  heroAlt?: string;
   // body
   description: string;
   bullets: string[];
@@ -244,26 +245,27 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Bring the Decades Home",
     stickyCta: "Bring the Decades Home — $34",
     pageNote: "23 pages — designed for many afternoons together.",
-    heroImage: "/lcp/remember-when-hero-900.avif",
+    heroImage: "/lcp/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-900.avif",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: "/lcp/remember-when-hero-600.avif 600w, /lcp/remember-when-hero-900.avif 900w, /lcp/remember-when-hero-1200.avif 1200w",
+        srcSet: "/lcp/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-600.avif 600w, /lcp/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-900.avif 900w, /lcp/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-1200.avif 1200w",
         sizes: "(max-width: 820px) 100vw, 560px",
       },
       {
         type: "image/webp",
-        srcSet: "/lcp/remember-when-hero-600.webp 600w, /lcp/remember-when-hero-900.webp 900w, /lcp/remember-when-hero-1200.webp 1200w",
+        srcSet: "/lcp/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-600.webp 600w, /lcp/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-900.webp 900w, /lcp/the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents-1200.webp 1200w",
         sizes: "(max-width: 820px) 100vw, 560px",
       },
     ],
     heroWidth: 1500,
     heroHeight: 1000,
     heroObjectFit: "cover",
+    heroAlt: "The Comfort Bond Remember When Kit — conversation cards, trivia, and picture prompts that help families share stories from the decades that shaped mom, dad, grandma, and grandpa.",
     gallery: [
-      { src: rememberWhenGames, alt: "Remember When Kit printed games — Trivia Time, Word Link, BINGO and Conversation Cards" },
-      { src: rememberWhenCard, alt: "Remember When Kit Conversation Card — 1950s–1980s pop culture prompt" },
-      { src: rememberWhenBingo, alt: "Remember When Kit BINGO board with 24 hand-drawn vintage illustrations" },
+      { src: rememberWhenGames, alt: "Open Remember When Kit showing decade-based conversation cards designed to spark family stories and meaningful conversations across generations." },
+      { src: rememberWhenCard, alt: "Vintage Visual Spark picture cards from the Remember When Kit — gentle conversation starters for grandparents and parents to recall family memories." },
+      { src: rememberWhenBingo, alt: "Picture and Word Memory BINGO board from the Remember When Kit — a gentle memory game for grandparents and grandchildren to play together at family visits." },
       { src: rememberWhenHero, alt: "Remember When Kit — vintage conversation cards laid out on a table" },
     ],
     description:
@@ -318,26 +320,27 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Pull Up a Chair",
     stickyCta: "Pull Up a Chair — $34",
     pageNote: "23 pages — designed for many afternoons together.",
-    heroImage: "/lcp/kitchen-table-hero-1200.avif",
+    heroImage: "/lcp/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-1200.avif",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: "/lcp/kitchen-table-hero-800.avif 800w, /lcp/kitchen-table-hero-1200.avif 1200w, /lcp/kitchen-table-hero-1600.avif 1600w",
+        srcSet: "/lcp/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-800.avif 800w, /lcp/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-1200.avif 1200w, /lcp/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-1600.avif 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
       {
         type: "image/webp",
-        srcSet: "/lcp/kitchen-table-hero-800.webp 800w, /lcp/kitchen-table-hero-1200.webp 1200w, /lcp/kitchen-table-hero-1600.webp 1600w",
+        srcSet: "/lcp/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-800.webp 800w, /lcp/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-1200.webp 1200w, /lcp/the-comfort-bond-kitchen-table-memories-kit-family-recipes-conversation-cards-1600.webp 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
     ],
     heroWidth: 1448,
     heroHeight: 1086,
     heroObjectFit: "contain",
+    heroAlt: "The Comfort Bond Kitchen Table Memories Kit — conversation cards, recipe-themed picture prompts, and memory games that help families share stories around the meals that raised them.",
     gallery: [
-      { src: kitchenTableCover, alt: "The Kitchen Table Memories Kit cookbook on a wooden table with a coffee mug" },
-      { src: kitchenTableGames, alt: "Trivia Time, Word Link Game, Picture & Word Memory BINGO, and Conversation Cards layout" },
-      { src: kitchenTableCard, alt: "Kitchen Table Memories conversation card about a comforting family meal" },
+      { src: kitchenTableCover, alt: "Open Kitchen Table Memories Kit showing conversation cards about family recipes, Sunday meals, and the dishes that shaped a household." },
+      { src: kitchenTableGames, alt: "Visual Spark picture cards from the Kitchen Table Memories Kit — illustrated cookie jars, mixing bowls, and gravy boats that bring family recipes and kitchen memories to the surface." },
+      { src: kitchenTableCard, alt: "Picture and Word Memory BINGO board from the Kitchen Table Memories Kit — a warm family game for mom, grandma, and grandchildren to play during holiday visits and Sunday meals." },
       { src: kitchenTableBingo, alt: "Picture & Word Memory BINGO board with 24 vintage kitchen illustrations" },
       { src: kitchenTableSpark, alt: "Visual Spark Cards featuring a pie on the windowsill and a stovetop coffee pot" },
     ],
@@ -395,22 +398,23 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Get the Collection",
     stickyCta: "Get the Collection — $147",
     pageNote: "156 pages of cards, prompts, and games — across six volumes.",
-    heroImage: "/lcp/collection-hero-1200.avif",
+    heroImage: "/lcp/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-1200.avif",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: "/lcp/collection-hero-800.avif 800w, /lcp/collection-hero-1200.avif 1200w, /lcp/collection-hero-1600.avif 1600w",
+        srcSet: "/lcp/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-800.avif 800w, /lcp/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-1200.avif 1200w, /lcp/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-1600.avif 1600w",
         sizes: "(max-width: 820px) 100vw, 560px",
       },
       {
         type: "image/webp",
-        srcSet: "/lcp/collection-hero-800.webp 800w, /lcp/collection-hero-1200.webp 1200w, /lcp/collection-hero-1600.webp 1600w",
+        srcSet: "/lcp/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-800.webp 800w, /lcp/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-1200.webp 1200w, /lcp/the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents-1600.webp 1600w",
         sizes: "(max-width: 820px) 100vw, 560px",
       },
     ],
     heroWidth: 1672,
     heroHeight: 941,
     heroObjectFit: "cover",
+    heroAlt: "The Comfort Bond Collection — the complete library of five Connection Kits plus The Connection Season Summer Edition, a meaningful family gift for parents, grandparents, and milestone birthdays.",
     description:
       "The Collection is everything, in one place. All five Connection Kits — Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It — and The Connection Season: Summer Edition, gathered as a single library for your family. It's how you give a year of presence, not just a Saturday.",
     bullets: [
@@ -457,7 +461,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     gallery: [
       {
         src: collectionSixVolumes,
-        alt: "All six volumes of The Comfort Bond Collection fanned out on a wooden table with a coffee mug and journal",
+        alt: "The Comfort Bond Collection showing all six pieces — Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, Hands That Made It, and The Connection Season Summer Edition — a complete family conversation library.",
         width: 1448,
         height: 1086,
         pictureSources: [
@@ -467,7 +471,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       },
       {
         src: collectionFiveKits,
-        alt: "The five themed Connection Kits laid out flat — Remember When, Garden Memories, Hands That Made It, Kitchen Table Memories, and Places We've Been",
+        alt: "Conversation cards from across The Comfort Bond Collection — themed prompts that help families share stories with mom, dad, grandma, and grandpa across a whole year of visits.",
         width: 1448,
         height: 1086,
         pictureSources: [
@@ -477,7 +481,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       },
       {
         src: collectionDimensions,
-        alt: "The Connection Season: Summer Edition open to the Six Dimensions of Bonding spread, with the five kits arranged behind it",
+        alt: "Memory BINGO boards and picture cards from The Comfort Bond Collection — a meaningful milestone-birthday gift for mothers, fathers, grandmothers, and grandfathers turning 70, 80, or 90.",
         width: 1448,
         height: 1086,
         pictureSources: [
@@ -507,19 +511,19 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Step Into the Garden",
     stickyCta: "Step Into the Garden — $34",
     pageNote: "23 pages — designed for many afternoons together.",
-    heroImage: "/lcp/garden-hero-1200.avif",
+    heroImage: "/lcp/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-1200.avif",
     heroWidth: 1448,
     heroHeight: 1086,
     heroObjectFit: "cover",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: "/lcp/garden-hero-800.avif 800w, /lcp/garden-hero-1200.avif 1200w, /lcp/garden-hero-1600.avif 1600w",
+        srcSet: "/lcp/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-800.avif 800w, /lcp/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-1200.avif 1200w, /lcp/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-1600.avif 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
       {
         type: "image/webp",
-        srcSet: "/lcp/garden-hero-800.webp 800w, /lcp/garden-hero-1200.webp 1200w, /lcp/garden-hero-1600.webp 1600w",
+        srcSet: "/lcp/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-800.webp 800w, /lcp/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-1200.webp 1200w, /lcp/the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift-1600.webp 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
     ],
@@ -564,10 +568,11 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the loved one who lit up around plants, porches, and weather. Best for the spring or summer visit when you can actually go outside together. Best for a daughter who never got the names of her mother's flowers before.",
     pairsWith: [CROSS.kitchenTable, CROSS.handsThatMadeIt],
     priceId: GARDEN_MEMORIES_PRICE_ID,
+    heroAlt: "The Comfort Bond Garden Memories Kit — conversation cards, picture prompts, and memory games built around the gardens, flowers, and outdoor rituals that shaped family life.",
     gallery: [
-      { src: gardenCover, alt: "The Garden Memories Kit cover resting on a wooden porch with a potted geranium and straw hat" },
-      { src: gardenSpark, alt: "Visual Spark Cards from the Garden Memories Kit featuring a potted geranium and ripe tomatoes" },
-      { src: gardenCard, alt: "Garden Memories conversation card asking about the smell of a childhood yard in summer" },
+      { src: gardenCover, alt: "Open Garden Memories Kit showing conversation cards about gardens, porches, and the outdoor moments that hold family memories — a gentle gift for mom or grandma." },
+      { src: gardenSpark, alt: "Visual Spark picture cards from the Garden Memories Kit — illustrated flowers, vegetables, and watering cans that spark conversations about family gardens and outdoor traditions." },
+      { src: gardenCard, alt: "Picture and Word Memory BINGO board from the Garden Memories Kit — a gentle outdoor-themed memory game for grandmothers and grandchildren to play on warm afternoons." },
       { src: gardenGames, alt: "Trivia, Word Link, Picture & Word BINGO and Conversation Cards from the Garden Memories Kit" },
       { src: gardenBingo, alt: "Picture & Word Memory BINGO board from the Garden Memories Kit with illustrated garden icons" },
     ],
@@ -582,10 +587,10 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Follow the Road",
     stickyCta: "Follow the Road — $34",
     pageNote: "23 pages — designed for many afternoons together.",
-    heroImage: "/lcp/places-hero-1200.avif",
+    heroImage: "/lcp/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-1200.avif",
     heroPictureSources: [
-      { type: "image/avif", srcSet: "/lcp/places-hero-800.avif 800w, /lcp/places-hero-1200.avif 1200w, /lcp/places-hero-1600.avif 1600w", sizes: "(max-width: 820px) 100vw, 560px" },
-      { type: "image/webp", srcSet: "/lcp/places-hero-800.webp 800w, /lcp/places-hero-1200.webp 1200w, /lcp/places-hero-1600.webp 1600w", sizes: "(max-width: 820px) 100vw, 560px" },
+      { type: "image/avif", srcSet: "/lcp/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-800.avif 800w, /lcp/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-1200.avif 1200w, /lcp/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-1600.avif 1600w", sizes: "(max-width: 820px) 100vw, 560px" },
+      { type: "image/webp", srcSet: "/lcp/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-800.webp 800w, /lcp/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-1200.webp 1200w, /lcp/the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa-1600.webp 1600w", sizes: "(max-width: 820px) 100vw, 560px" },
     ],
     heroWidth: 1448,
     heroHeight: 1086,
@@ -631,10 +636,11 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the father, grandfather, or aunt with a strong sense of geography. Best for the long-distance daughter who calls every Sunday and runs out of things to say by the fifth minute. Best for the summer when somebody is finally driving up for a real visit.",
     pairsWith: [CROSS.rememberWhen, CROSS.handsThatMadeIt],
     priceId: PLACES_WEVE_BEEN_PRICE_ID,
+    heroAlt: "The Comfort Bond Places We've Been Kit — conversation cards and picture prompts built around the road trips, neighborhoods, and travel memories that shaped a family.",
     gallery: [
-      { src: placesCover, alt: "The Places We've Been Kit cover on a wooden table with maps, a compass, and coffee mug" },
-      { src: placesSpark, alt: "Two Visual Spark Cards from the Places We've Been Kit — sunrise drive and Sunset Motel sign" },
-      { src: placesCard, alt: "Conversation card from the Places We've Been Kit about early-morning family departures" },
+      { src: placesCover, alt: "Open Places We've Been Kit showing conversation cards about family road trips, Sunday drives, and the places that hold a lifetime of memories." },
+      { src: placesSpark, alt: "Visual Spark picture cards from the Places We've Been Kit — retro station wagons, motel pools, and postcards that bring back family travel memories with dad and grandpa." },
+      { src: placesCard, alt: "Picture and Word Memory BINGO board from the Places We've Been Kit — a road-trip-friendly memory game for grandparents and grandchildren to play in the car or on a Sunday afternoon." },
       { src: placesGames, alt: "Fanned printable pages from the Places We've Been Kit — Trivia Time, Word Link Game, Picture & Word Memory BINGO, and Conversation Cards" },
       { src: placesBingo, alt: "Picture & Word Memory BINGO board from the Places We've Been Kit with illustrated travel icons" },
     ],
@@ -649,19 +655,19 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Honor the Hands That Made It",
     stickyCta: "Honor the Hands That Made It — $34",
     pageNote: "23 pages — designed for many afternoons together.",
-    heroImage: "/lcp/hands-hero-1200.avif",
+    heroImage: "/lcp/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-1200.avif",
     heroWidth: 1448,
     heroHeight: 1086,
     heroObjectFit: "cover",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: "/lcp/hands-hero-800.avif 800w, /lcp/hands-hero-1200.avif 1200w, /lcp/hands-hero-1600.avif 1600w",
+        srcSet: "/lcp/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-800.avif 800w, /lcp/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-1200.avif 1200w, /lcp/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-1600.avif 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
       {
         type: "image/webp",
-        srcSet: "/lcp/hands-hero-800.webp 800w, /lcp/hands-hero-1200.webp 1200w, /lcp/hands-hero-1600.webp 1600w",
+        srcSet: "/lcp/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-800.webp 800w, /lcp/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-1200.webp 1200w, /lcp/the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa-1600.webp 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
     ],
@@ -706,10 +712,11 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the father, grandfather, aunt, or uncle who made or fixed things. Best for the daughter who watched her dad in the garage and never asked half the questions she wanted to. Best for Father's Day, retirement, or any visit where you'd like the conversation to start with a tool in someone's hand.",
     pairsWith: [CROSS.placesWeveBeen, CROSS.collection],
     priceId: HANDS_THAT_MADE_IT_PRICE_ID,
+    heroAlt: "The Comfort Bond Hands That Made It Kit — conversation cards and picture prompts honoring the fathers, grandfathers, mothers, and grandmothers who built, fixed, sewed, and made things with their hands.",
     gallery: [
-      { src: handsCover, alt: "The Hands That Made It Kit cover resting on a wooden workbench with a hand plane and coffee mug" },
-      { src: handsSpark, alt: "Visual Spark Cards from the Hands That Made It Kit featuring a wood plane and hands mending by lamplight" },
-      { src: handsCard, alt: "Hands That Made It conversation card asking about the first thing you ever built with your own hands" },
+      { src: handsCover, alt: "Open Hands That Made It Kit showing conversation cards about workbenches, sewing rooms, and the crafts and skills passed down through a family." },
+      { src: handsSpark, alt: "Visual Spark picture cards from the Hands That Made It Kit — illustrated tools, thimbles, hammers, and sewing machines that spark stories from a lifetime of making." },
+      { src: handsCard, alt: "Picture and Word Memory BINGO board from the Hands That Made It Kit — a memory game built for the workshop, sewing room, and the grandparents who taught the family how to make things." },
       { src: handsGames, alt: "Trivia, Word Link, BINGO and Conversation Cards from the Hands That Made It Kit" },
       { src: handsBingo, alt: "Picture & Word Memory BINGO board from the Hands That Made It Kit with illustrated tools" },
     ],
@@ -724,16 +731,16 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Step Into the Season",
     stickyCta: "Step Into the Season — $34",
     pageNote: "41 pages — our most generous single volume.",
-    heroImage: "/lcp/summer-hero-1200.avif",
+    heroImage: "/lcp/the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-1200.avif",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: "/lcp/summer-hero-800.avif 800w, /lcp/summer-hero-1200.avif 1200w, /lcp/summer-hero-1600.avif 1600w",
+        srcSet: "/lcp/the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-800.avif 800w, /lcp/the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-1200.avif 1200w, /lcp/the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-1600.avif 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
       {
         type: "image/webp",
-        srcSet: "/lcp/summer-hero-800.webp 800w, /lcp/summer-hero-1200.webp 1200w, /lcp/summer-hero-1600.webp 1600w",
+        srcSet: "/lcp/the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-800.webp 800w, /lcp/the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-1200.webp 1200w, /lcp/the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-1600.webp 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
     ],
@@ -782,10 +789,11 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the family that wants the whole summer to feel different — not just one good Saturday. Best for the daughter or son already familiar with our work who is ready for something more substantial. Best for a milestone summer — a meaningful birthday, a first summer after a hard year, a summer everyone is finally home.",
     pairsWith: [CROSS.collection, CROSS.kitchenTable],
     priceId: SUMMER_EDITION_PRICE_ID,
+    heroAlt: "The Comfort Bond Connection Season Summer Edition — a 41-page seasonal family planner with weekly conversation prompts, picture cards, and reflection pages for a whole summer with parents and grandparents.",
     gallery: [
-      { src: summerCover, alt: "The Connection Season: Summer Edition cover resting on a sunlit porch table beside a glass of iced tea and a jar of summer wildflowers" },
-      { src: summerDimensions, alt: "The Six Dimensions of Bonding wheel from The Connection Season: Summer Edition — cognitive, emotional, sensory, social, creative, and spiritual" },
-      { src: summerWeekSpread, alt: "An open week spread from The Connection Season: Summer Edition showing 'The Great Outdoors' theme with five prompts and a weekly planning page" },
+      { src: summerCover, alt: "Open Connection Season Summer Edition planner showing weekly themed pages of conversation prompts and reflection space for family visits with mom, dad, grandma, and grandpa." },
+      { src: summerDimensions, alt: "The Six Dimensions of Bonding wheel and seasonal Visual Spark cards from the Connection Season Summer Edition — a structured way for families to make summer visits with grandparents feel more meaningful." },
+      { src: summerWeekSpread, alt: "\"What They Told Me\" legacy-capture pages from the Connection Season Summer Edition — a place to preserve the family stories that come up over a summer of slower visits with parents and grandparents." },
       { src: summerCardPlanner, alt: "Hands holding a Comfort Bond conversation card above an open weekly planning page from The Connection Season: Summer Edition" },
       { src: summerPagesStack, alt: "Fanned interior pages from The Connection Season: Summer Edition — the Summer Arc index, a week theme, a planning page, and the 'Stories Worth Saving' reflection page" },
     ],

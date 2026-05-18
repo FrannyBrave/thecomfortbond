@@ -1,10 +1,10 @@
 import sharp from 'sharp';
 import fs from 'fs';
 const files = [
-  ['places-weve-been-kit-hero-two-people-using-kit', true],
-  ['places-weve-been-kit-cover-on-table', false],
-  ['places-weve-been-kit-visual-spark-cards', false],
-  ['places-weve-been-kit-conversation-card-family-road-trip', false],
+  ['the-comfort-bond-places-weve-been-kit-road-trip-conversation-cards-for-dad-grandpa', true],
+  ['places-weve-been-kit-conversation-cards-family-road-trip-travel-memories', false],
+  ['places-weve-been-kit-picture-cards-station-wagons-postcards-fathers-day-gift-grandpa', false],
+  ['places-weve-been-kit-picture-word-bingo-road-trip-game-grandparents-grandchildren', false],
   ['places-weve-been-kit-games-trivia-word-bingo-cards', false],
   ['places-weve-been-kit-picture-word-bingo-board', false],
 ];

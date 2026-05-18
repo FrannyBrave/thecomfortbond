@@ -1,10 +1,10 @@
 import sharp from 'sharp';
 import fs from 'fs';
 const files = [
-  ['connection-season-summer-hero-two-people-using-kit', true],
-  ['connection-season-summer-cover-on-porch', false],
-  ['connection-season-summer-six-dimensions-of-bonding', false],
-  ['connection-season-summer-week-spread-great-outdoors', false],
+  ['connection-season-the-comfort-bond-connection-season-summer-edition-family-memory-planner-grandparents-two-people-using-kit', true],
+  ['connection-season-summer-weekly-themes-family-conversation-prompts-grandparents', false],
+  ['connection-season-summer-six-dimensions-bonding-family-memory-keeping-summer', false],
+  ['connection-season-summer-legacy-pages-preserve-family-stories-grandparents-summer', false],
   ['connection-season-summer-pages-stack-spread', false],
   ['connection-season-summer-conversation-card-planner', false],
 ];

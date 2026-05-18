@@ -5,10 +5,10 @@ import sharp from 'sharp';
 import fs from 'fs';
 
 const files = [
-  ['collection-kit-hero-two-people-using-kit', true],
-  ['collection-kit-all-six-volumes-fanned', false],
-  ['collection-kit-five-themed-kits-flatlay', false],
-  ['collection-kit-six-dimensions-spread', false],
+  ['the-comfort-bond-collection-complete-family-memory-conversation-cards-set-for-parents-grandparents', true],
+  ['comfort-bond-collection-five-connection-kits-summer-edition-family-memory-gift-bundle', false],
+  ['comfort-bond-collection-conversation-cards-spread-family-stories-mom-dad-grandma-grandpa', false],
+  ['comfort-bond-collection-memory-games-bingo-boards-family-gift-milestone-birthday', false],
   ['collection-kit-letter-from-where-im-sitting', false],
 ];
 

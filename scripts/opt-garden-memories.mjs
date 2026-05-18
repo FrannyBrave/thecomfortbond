@@ -1,10 +1,10 @@
 import sharp from 'sharp';
 import fs from 'fs';
 const files = [
-  ['garden-memories-kit-hero-two-people-using-kit', true],
-  ['garden-memories-kit-cover-on-porch', false],
-  ['garden-memories-kit-visual-spark-cards', false],
-  ['garden-memories-kit-conversation-card-childhood-yard', false],
+  ['the-comfort-bond-garden-memories-kit-conversation-cards-for-mom-grandma-gardening-gift', true],
+  ['garden-memories-kit-conversation-cards-gardening-family-stories-mom-grandma', false],
+  ['garden-memories-kit-picture-cards-flowers-vegetables-watering-cans-gardening-memories', false],
+  ['garden-memories-kit-picture-word-bingo-game-grandmother-grandchildren-summer', false],
   ['garden-memories-kit-games-trivia-word-bingo-cards', false],
   ['garden-memories-kit-picture-word-bingo-board', false],
 ];
