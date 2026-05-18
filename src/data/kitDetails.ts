@@ -724,16 +724,16 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Step Into the Season",
     stickyCta: "Step Into the Season — $34",
     pageNote: "41 pages — our most generous single volume.",
-    heroImage: summerHero,
+    heroImage: "/lcp/summer-hero-1200.avif",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: `${summerHero800Avif} 800w, ${summerHero1200Avif} 1200w, ${summerHero1600Avif} 1600w`,
+        srcSet: "/lcp/summer-hero-800.avif 800w, /lcp/summer-hero-1200.avif 1200w, /lcp/summer-hero-1600.avif 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
       {
         type: "image/webp",
-        srcSet: `${summerHero800Webp} 800w, ${summerHero1200Webp} 1200w, ${summerHero1600Webp} 1600w`,
+        srcSet: "/lcp/summer-hero-800.webp 800w, /lcp/summer-hero-1200.webp 1200w, /lcp/summer-hero-1600.webp 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
     ],
