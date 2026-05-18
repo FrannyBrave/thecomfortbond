@@ -84,6 +84,17 @@ import summerDimensions from "@/assets/connection-season-summer-six-dimensions-o
 import summerWeekSpread from "@/assets/connection-season-summer-week-spread-great-outdoors.jpg";
 import summerPagesStack from "@/assets/connection-season-summer-pages-stack-spread.jpg";
 import summerCardPlanner from "@/assets/connection-season-summer-conversation-card-planner.jpg";
+import collectionHero from "@/assets/collection-kit-hero-two-people-using-kit.jpg";
+import collectionHero800Avif from "@/assets/collection-kit-hero-two-people-using-kit-800.avif";
+import collectionHero1200Avif from "@/assets/collection-kit-hero-two-people-using-kit-1200.avif";
+import collectionHero1600Avif from "@/assets/collection-kit-hero-two-people-using-kit-1600.avif";
+import collectionHero800Webp from "@/assets/collection-kit-hero-two-people-using-kit-800.webp";
+import collectionHero1200Webp from "@/assets/collection-kit-hero-two-people-using-kit-1200.webp";
+import collectionHero1600Webp from "@/assets/collection-kit-hero-two-people-using-kit-1600.webp";
+import collectionSixVolumes from "@/assets/collection-kit-all-six-volumes-fanned.jpg";
+import collectionFiveKits from "@/assets/collection-kit-five-themed-kits-flatlay.jpg";
+import collectionDimensions from "@/assets/collection-kit-six-dimensions-spread.jpg";
+import collectionLetter from "@/assets/collection-kit-letter-from-where-im-sitting.jpg";
 
 export type CrossSell = {
   title: string;
