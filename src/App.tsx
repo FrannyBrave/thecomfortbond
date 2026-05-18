@@ -7,6 +7,7 @@ import { lazy, Suspense, useEffect } from "react";
 import { useCanonical } from "./hooks/useCanonical";
 import { trackPinterestPage } from "./lib/pinterest";
 
+import KitDetail from "./pages/KitDetail";
 const Index = lazy(() => import("./pages/Index"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Terms = lazy(() => import("./pages/Terms"));
@@ -14,7 +15,6 @@ const Shop = lazy(() => import("./pages/Shop"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const OurStory = lazy(() => import("./pages/OurStory"));
-const KitDetail = lazy(() => import("./pages/KitDetail"));
 
 const queryClient = new QueryClient();
 
