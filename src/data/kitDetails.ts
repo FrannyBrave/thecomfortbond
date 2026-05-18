@@ -408,8 +408,8 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
         sizes: "(max-width: 820px) 100vw, 560px",
       },
     ],
-    heroWidth: 1600,
-    heroHeight: 900,
+    heroWidth: 1672,
+    heroHeight: 941,
     heroObjectFit: "cover",
     description:
       "The Collection is everything, in one place. All five Connection Kits — Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It — and The Connection Season: Summer Edition, gathered as a single library for your family. It's how you give a year of presence, not just a Saturday.",
@@ -455,10 +455,46 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     pairsWith: [CROSS.coffeeSampler],
     priceId: COLLECTION_PRICE_ID,
     gallery: [
-      { src: collectionSixVolumes, alt: "All six volumes of The Comfort Bond Collection fanned out on a wooden table with a coffee mug and journal" },
-      { src: collectionFiveKits, alt: "The five themed Connection Kits laid out flat — Remember When, Garden Memories, Hands That Made It, Kitchen Table Memories, and Places We've Been" },
-      { src: collectionDimensions, alt: "The Connection Season: Summer Edition open to the Six Dimensions of Bonding spread, with the five kits arranged behind it" },
-      { src: collectionLetter, alt: "An open kit showing the founder's letter, 'From Where I'm Sitting,' with the five kit covers fanned in the background" },
+      {
+        src: collectionSixVolumes,
+        alt: "All six volumes of The Comfort Bond Collection fanned out on a wooden table with a coffee mug and journal",
+        width: 1448,
+        height: 1086,
+        pictureSources: [
+          { type: "image/avif", srcSet: `${collectionSixVolumes600Avif} 600w, ${collectionSixVolumes900Avif} 900w, ${collectionSixVolumes1200Avif} 1200w`, sizes: "(max-width: 820px) 50vw, 540px" },
+          { type: "image/webp", srcSet: `${collectionSixVolumes600Webp} 600w, ${collectionSixVolumes900Webp} 900w, ${collectionSixVolumes1200Webp} 1200w`, sizes: "(max-width: 820px) 50vw, 540px" },
+        ],
+      },
+      {
+        src: collectionFiveKits,
+        alt: "The five themed Connection Kits laid out flat — Remember When, Garden Memories, Hands That Made It, Kitchen Table Memories, and Places We've Been",
+        width: 1448,
+        height: 1086,
+        pictureSources: [
+          { type: "image/avif", srcSet: `${collectionFiveKits600Avif} 600w, ${collectionFiveKits900Avif} 900w, ${collectionFiveKits1200Avif} 1200w`, sizes: "(max-width: 820px) 50vw, 540px" },
+          { type: "image/webp", srcSet: `${collectionFiveKits600Webp} 600w, ${collectionFiveKits900Webp} 900w, ${collectionFiveKits1200Webp} 1200w`, sizes: "(max-width: 820px) 50vw, 540px" },
+        ],
+      },
+      {
+        src: collectionDimensions,
+        alt: "The Connection Season: Summer Edition open to the Six Dimensions of Bonding spread, with the five kits arranged behind it",
+        width: 1448,
+        height: 1086,
+        pictureSources: [
+          { type: "image/avif", srcSet: `${collectionDimensions600Avif} 600w, ${collectionDimensions900Avif} 900w, ${collectionDimensions1200Avif} 1200w`, sizes: "(max-width: 820px) 50vw, 540px" },
+          { type: "image/webp", srcSet: `${collectionDimensions600Webp} 600w, ${collectionDimensions900Webp} 900w, ${collectionDimensions1200Webp} 1200w`, sizes: "(max-width: 820px) 50vw, 540px" },
+        ],
+      },
+      {
+        src: collectionLetter,
+        alt: "An open kit showing the founder's letter, 'From Where I'm Sitting,' with the five kit covers fanned in the background",
+        width: 1448,
+        height: 1086,
+        pictureSources: [
+          { type: "image/avif", srcSet: `${collectionLetter600Avif} 600w, ${collectionLetter900Avif} 900w, ${collectionLetter1200Avif} 1200w`, sizes: "(max-width: 820px) 50vw, 540px" },
+          { type: "image/webp", srcSet: `${collectionLetter600Webp} 600w, ${collectionLetter900Webp} 900w, ${collectionLetter1200Webp} 1200w`, sizes: "(max-width: 820px) 50vw, 540px" },
+        ],
+      },
     ],
   },
 
