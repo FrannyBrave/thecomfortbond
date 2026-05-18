@@ -395,16 +395,16 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Get the Collection",
     stickyCta: "Get the Collection — $147",
     pageNote: "156 pages of cards, prompts, and games — across six volumes.",
-    heroImage: collectionHero,
+    heroImage: "/lcp/collection-hero-1200.avif",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: `${collectionHero800Avif} 800w, ${collectionHero1200Avif} 1200w, ${collectionHero1600Avif} 1600w`,
+        srcSet: "/lcp/collection-hero-800.avif 800w, /lcp/collection-hero-1200.avif 1200w, /lcp/collection-hero-1600.avif 1600w",
         sizes: "(max-width: 820px) 100vw, 560px",
       },
       {
         type: "image/webp",
-        srcSet: `${collectionHero800Webp} 800w, ${collectionHero1200Webp} 1200w, ${collectionHero1600Webp} 1600w`,
+        srcSet: "/lcp/collection-hero-800.webp 800w, /lcp/collection-hero-1200.webp 1200w, /lcp/collection-hero-1600.webp 1600w",
         sizes: "(max-width: 820px) 100vw, 560px",
       },
     ],
