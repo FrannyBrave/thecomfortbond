@@ -26,11 +26,6 @@ export const FooterSection = () => {
     { label: "Shop All", path: "/shop" },
     { label: "The Connection Season: Summer", path: "/kits/connection-season-summer" },
     { label: "The Comfort Bond Collection", path: "/kits/collection" },
-    { label: "Remember When Kit", path: "/kits/remember-when" },
-    { label: "Kitchen Table Memories Kit", path: "/kits/kitchen-table-memories" },
-    { label: "Places We've Been Kit", path: "/kits/places-weve-been" },
-    { label: "Garden Memories Kit", path: "/kits/garden-memories" },
-    { label: "Hands That Made It Kit", path: "/kits/hands-that-made-it" },
   ];
 
   return (
