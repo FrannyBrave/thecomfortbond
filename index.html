@@ -185,55 +185,10 @@
 }
 </script>
 
-    <!-- ✅ FIX 1C: FAQ Schema (NEW — enables Google rich results) -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Will these work for residents with dementia or memory loss?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Every activity is designed with cognitive accessibility in mind. There are no wrong answers — just warm conversations, familiar music, and prompts that meet each person where they are."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many sessions can I get out of one kit?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Each kit includes 6 different activity types. Most Activity Directors rotate through one activity type per session, getting 6+ sessions from a single kit. All 5 kits together give you 30+ sessions across every theme."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this a monthly subscription?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Every engagement kit is a one-time purchase. There are no hidden fees or recurring charges. Once you buy a kit, it's yours to print and use forever."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I print these for my whole floor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! The kits are specifically designed to be printer-friendly on standard 8.5\" x 11\" paper. Print as many copies as you need and hand them out directly to residents. One purchase covers your entire community."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How quickly will I get access?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Instantly. As soon as checkout is complete, you'll receive an email with a download link. You can purchase a kit and be running an activity with your group five minutes later."
-      }
-    }
-  ]
-}
-</script>
+    <!-- FAQPage schema is injected per-route by KitDetail.tsx for product pages.
+         No sitewide FAQ schema lives in index.html — that would create duplicate
+         FAQPage entities and would carry pre-rebrand B2B/clinical copy. -->
+
 
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gumroad.com https://assets.gumroad.com https://cdn.paddle.com https://*.paddle.com https://s.pinimg.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://*.paddle.com; img-src 'self' data: https:; connect-src 'self' https://gumroad.com https://assets.gumroad.com https://api.convertkit.com https://*.paddle.com https://checkout-service.paddle.com https://ct.pinterest.com https://s.pinimg.com https://www.facebook.com https://connect.facebook.net; frame-src https://gumroad.com https://*.paddle.com https://buy.paddle.com; font-src 'self' https:;" />
