@@ -84,6 +84,17 @@ import summerDimensions from "@/assets/connection-season-summer-six-dimensions-o
 import summerWeekSpread from "@/assets/connection-season-summer-week-spread-great-outdoors.jpg";
 import summerPagesStack from "@/assets/connection-season-summer-pages-stack-spread.jpg";
 import summerCardPlanner from "@/assets/connection-season-summer-conversation-card-planner.jpg";
+import collectionHero from "@/assets/collection-kit-hero-two-people-using-kit.jpg";
+import collectionHero800Avif from "@/assets/collection-kit-hero-two-people-using-kit-800.avif";
+import collectionHero1200Avif from "@/assets/collection-kit-hero-two-people-using-kit-1200.avif";
+import collectionHero1600Avif from "@/assets/collection-kit-hero-two-people-using-kit-1600.avif";
+import collectionHero800Webp from "@/assets/collection-kit-hero-two-people-using-kit-800.webp";
+import collectionHero1200Webp from "@/assets/collection-kit-hero-two-people-using-kit-1200.webp";
+import collectionHero1600Webp from "@/assets/collection-kit-hero-two-people-using-kit-1600.webp";
+import collectionSixVolumes from "@/assets/collection-kit-all-six-volumes-fanned.jpg";
+import collectionFiveKits from "@/assets/collection-kit-five-themed-kits-flatlay.jpg";
+import collectionDimensions from "@/assets/collection-kit-six-dimensions-spread.jpg";
+import collectionLetter from "@/assets/collection-kit-letter-from-where-im-sitting.jpg";
 
 export type CrossSell = {
   title: string;
@@ -354,24 +365,22 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Get the Collection",
     stickyCta: "Get the Collection — $147",
     pageNote: "156 pages of cards, prompts, and games — across six volumes.",
-    heroImage: "/lcp/collection-1100.webp",
+    heroImage: collectionHero,
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet:
-          "/lcp/collection-480.avif 480w, /lcp/collection-768.avif 768w, /lcp/collection-1100.avif 1100w",
-        sizes: "(max-width: 768px) 100vw, 50vw",
+        srcSet: `${collectionHero800Avif} 800w, ${collectionHero1200Avif} 1200w, ${collectionHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 560px",
       },
       {
         type: "image/webp",
-        srcSet:
-          "/lcp/collection-480.webp 480w, /lcp/collection-768.webp 768w, /lcp/collection-1100.webp 1100w",
-        sizes: "(max-width: 768px) 100vw, 50vw",
+        srcSet: `${collectionHero800Webp} 800w, ${collectionHero1200Webp} 1200w, ${collectionHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 560px",
       },
     ],
-    heroWidth: 1100,
-    heroHeight: 825,
-    heroObjectFit: "contain",
+    heroWidth: 1600,
+    heroHeight: 900,
+    heroObjectFit: "cover",
     description:
       "The Collection is everything, in one place. All five Connection Kits — Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It — and The Connection Season: Summer Edition, gathered as a single library for your family. It's how you give a year of presence, not just a Saturday.",
     bullets: [
@@ -415,6 +424,12 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the milestone gift you want to feel substantial. Best for the family that's already loved one of our kits and is ready for the rest. Best for the daughter or son who knows their time with a parent is precious and wants the whole catalog ready, not a single Saturday.",
     pairsWith: [CROSS.coffeeSampler],
     priceId: COLLECTION_PRICE_ID,
+    gallery: [
+      { src: collectionSixVolumes, alt: "All six volumes of The Comfort Bond Collection fanned out on a wooden table with a coffee mug and journal" },
+      { src: collectionFiveKits, alt: "The five themed Connection Kits laid out flat — Remember When, Garden Memories, Hands That Made It, Kitchen Table Memories, and Places We've Been" },
+      { src: collectionDimensions, alt: "The Connection Season: Summer Edition open to the Six Dimensions of Bonding spread, with the five kits arranged behind it" },
+      { src: collectionLetter, alt: "An open kit showing the founder's letter, 'From Where I'm Sitting,' with the five kit covers fanned in the background" },
+    ],
   },
 
   "garden-memories": {
