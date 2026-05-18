@@ -144,6 +144,7 @@ export type KitDetail = {
   heroWidth: number;
   heroHeight: number;
   heroObjectFit?: "cover" | "contain";
+  heroAlt?: string;
   // body
   description: string;
   bullets: string[];

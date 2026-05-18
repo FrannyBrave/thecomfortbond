@@ -228,7 +228,7 @@ export default function KitDetailPage() {
                 ))}
                 <img
                   src={kit.heroImage}
-                  alt={`${kit.name} — ${kit.tagline}`}
+                  alt={kit.heroAlt ?? `${kit.name} — ${kit.tagline}`}
                   width={kit.heroWidth}
                   height={kit.heroHeight}
                   style={{ width: "100%", height: "100%", objectFit: kit.heroObjectFit ?? "cover", display: "block" }}
