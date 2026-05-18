@@ -424,6 +424,12 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       "Best for the milestone gift you want to feel substantial. Best for the family that's already loved one of our kits and is ready for the rest. Best for the daughter or son who knows their time with a parent is precious and wants the whole catalog ready, not a single Saturday.",
     pairsWith: [CROSS.coffeeSampler],
     priceId: COLLECTION_PRICE_ID,
+    gallery: [
+      { src: collectionSixVolumes, alt: "All six volumes of The Comfort Bond Collection fanned out on a wooden table with a coffee mug and journal" },
+      { src: collectionFiveKits, alt: "The five themed Connection Kits laid out flat — Remember When, Garden Memories, Hands That Made It, Kitchen Table Memories, and Places We've Been" },
+      { src: collectionDimensions, alt: "The Connection Season: Summer Edition open to the Six Dimensions of Bonding spread, with the five kits arranged behind it" },
+      { src: collectionLetter, alt: "An open kit showing the founder's letter, 'From Where I'm Sitting,' with the five kit covers fanned in the background" },
+    ],
   },
 
   "garden-memories": {
