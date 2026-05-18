@@ -244,16 +244,16 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Bring the Decades Home",
     stickyCta: "Bring the Decades Home — $34",
     pageNote: "23 pages — designed for many afternoons together.",
-    heroImage: rememberWhenScene,
+    heroImage: "/lcp/remember-when-hero-900.avif",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: `${rememberWhenScene600Avif} 600w, ${rememberWhenScene900Avif} 900w, ${rememberWhenScene1200Avif} 1200w`,
+        srcSet: "/lcp/remember-when-hero-600.avif 600w, /lcp/remember-when-hero-900.avif 900w, /lcp/remember-when-hero-1200.avif 1200w",
         sizes: "(max-width: 820px) 100vw, 560px",
       },
       {
         type: "image/webp",
-        srcSet: `${rememberWhenScene600Webp} 600w, ${rememberWhenScene900Webp} 900w, ${rememberWhenScene1200Webp} 1200w`,
+        srcSet: "/lcp/remember-when-hero-600.webp 600w, /lcp/remember-when-hero-900.webp 900w, /lcp/remember-when-hero-1200.webp 1200w",
         sizes: "(max-width: 820px) 100vw, 560px",
       },
     ],
