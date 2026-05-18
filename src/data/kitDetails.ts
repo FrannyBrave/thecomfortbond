@@ -414,6 +414,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     heroWidth: 1672,
     heroHeight: 941,
     heroObjectFit: "cover",
+    heroAlt: "The Comfort Bond Collection — the complete library of five Connection Kits plus The Connection Season Summer Edition, a meaningful family gift for parents, grandparents, and milestone birthdays.",
     description:
       "The Collection is everything, in one place. All five Connection Kits — Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It — and The Connection Season: Summer Edition, gathered as a single library for your family. It's how you give a year of presence, not just a Saturday.",
     bullets: [
@@ -460,7 +461,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     gallery: [
       {
         src: collectionSixVolumes,
-        alt: "All six volumes of The Comfort Bond Collection fanned out on a wooden table with a coffee mug and journal",
+        alt: "The Comfort Bond Collection showing all six pieces — Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, Hands That Made It, and The Connection Season Summer Edition — a complete family conversation library.",
         width: 1448,
         height: 1086,
         pictureSources: [
@@ -470,7 +471,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       },
       {
         src: collectionFiveKits,
-        alt: "The five themed Connection Kits laid out flat — Remember When, Garden Memories, Hands That Made It, Kitchen Table Memories, and Places We've Been",
+        alt: "Conversation cards from across The Comfort Bond Collection — themed prompts that help families share stories with mom, dad, grandma, and grandpa across a whole year of visits.",
         width: 1448,
         height: 1086,
         pictureSources: [
@@ -480,7 +481,7 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
       },
       {
         src: collectionDimensions,
-        alt: "The Connection Season: Summer Edition open to the Six Dimensions of Bonding spread, with the five kits arranged behind it",
+        alt: "Memory BINGO boards and picture cards from The Comfort Bond Collection — a meaningful milestone-birthday gift for mothers, fathers, grandmothers, and grandfathers turning 70, 80, or 90.",
         width: 1448,
         height: 1086,
         pictureSources: [
