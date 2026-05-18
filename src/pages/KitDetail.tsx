@@ -257,14 +257,21 @@ export default function KitDetailPage() {
               </div>
               <div className="kit-gallery-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0,1fr))", gap: "1rem" }}>
                 {kit.gallery.map((g, i) => (
-                  <div key={i} style={{ aspectRatio: "4 / 3", overflow: "hidden", borderRadius: 14, background: C.cream, boxShadow: "0 10px 30px -18px rgba(0,0,0,0.3)" }}>
-                    <img
-                      src={g.src}
-                      alt={g.alt}
-                      loading="lazy"
-                      decoding="async"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                    />
+                  <div key={i} style={{ aspectRatio: g.width && g.height ? `${g.width} / ${g.height}` : "4 / 3", overflow: "hidden", borderRadius: 14, background: C.cream, boxShadow: "0 10px 30px -18px rgba(0,0,0,0.3)" }}>
+                    <picture>
+                      {g.pictureSources?.map((s, j) => (
+                        <source key={j} type={s.type} srcSet={s.srcSet} sizes={s.sizes} />
+                      ))}
+                      <img
+                        src={g.src}
+                        alt={g.alt}
+                        width={g.width}
+                        height={g.height}
+                        loading="lazy"
+                        decoding="async"
+                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                      />
+                    </picture>
                   </div>
                 ))}
               </div>
