@@ -130,7 +130,13 @@ export type KitDetail = {
   bestFor: string;
   pairsWith: CrossSell[];
   // optional gallery
-  gallery?: { src: string; alt: string }[];
+  gallery?: {
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+    pictureSources?: { type: "image/avif" | "image/webp"; srcSet: string; sizes: string }[];
+  }[];
   // checkout
   priceId?: string;
   externalCheckoutHref?: string;
