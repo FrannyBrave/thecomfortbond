@@ -92,9 +92,33 @@ import collectionHero800Webp from "@/assets/collection-kit-hero-two-people-using
 import collectionHero1200Webp from "@/assets/collection-kit-hero-two-people-using-kit-1200.webp";
 import collectionHero1600Webp from "@/assets/collection-kit-hero-two-people-using-kit-1600.webp";
 import collectionSixVolumes from "@/assets/collection-kit-all-six-volumes-fanned.jpg";
+import collectionSixVolumes600Avif from "@/assets/collection-kit-all-six-volumes-fanned-600.avif";
+import collectionSixVolumes900Avif from "@/assets/collection-kit-all-six-volumes-fanned-900.avif";
+import collectionSixVolumes1200Avif from "@/assets/collection-kit-all-six-volumes-fanned-1200.avif";
+import collectionSixVolumes600Webp from "@/assets/collection-kit-all-six-volumes-fanned-600.webp";
+import collectionSixVolumes900Webp from "@/assets/collection-kit-all-six-volumes-fanned-900.webp";
+import collectionSixVolumes1200Webp from "@/assets/collection-kit-all-six-volumes-fanned-1200.webp";
 import collectionFiveKits from "@/assets/collection-kit-five-themed-kits-flatlay.jpg";
+import collectionFiveKits600Avif from "@/assets/collection-kit-five-themed-kits-flatlay-600.avif";
+import collectionFiveKits900Avif from "@/assets/collection-kit-five-themed-kits-flatlay-900.avif";
+import collectionFiveKits1200Avif from "@/assets/collection-kit-five-themed-kits-flatlay-1200.avif";
+import collectionFiveKits600Webp from "@/assets/collection-kit-five-themed-kits-flatlay-600.webp";
+import collectionFiveKits900Webp from "@/assets/collection-kit-five-themed-kits-flatlay-900.webp";
+import collectionFiveKits1200Webp from "@/assets/collection-kit-five-themed-kits-flatlay-1200.webp";
 import collectionDimensions from "@/assets/collection-kit-six-dimensions-spread.jpg";
+import collectionDimensions600Avif from "@/assets/collection-kit-six-dimensions-spread-600.avif";
+import collectionDimensions900Avif from "@/assets/collection-kit-six-dimensions-spread-900.avif";
+import collectionDimensions1200Avif from "@/assets/collection-kit-six-dimensions-spread-1200.avif";
+import collectionDimensions600Webp from "@/assets/collection-kit-six-dimensions-spread-600.webp";
+import collectionDimensions900Webp from "@/assets/collection-kit-six-dimensions-spread-900.webp";
+import collectionDimensions1200Webp from "@/assets/collection-kit-six-dimensions-spread-1200.webp";
 import collectionLetter from "@/assets/collection-kit-letter-from-where-im-sitting.jpg";
+import collectionLetter600Avif from "@/assets/collection-kit-letter-from-where-im-sitting-600.avif";
+import collectionLetter900Avif from "@/assets/collection-kit-letter-from-where-im-sitting-900.avif";
+import collectionLetter1200Avif from "@/assets/collection-kit-letter-from-where-im-sitting-1200.avif";
+import collectionLetter600Webp from "@/assets/collection-kit-letter-from-where-im-sitting-600.webp";
+import collectionLetter900Webp from "@/assets/collection-kit-letter-from-where-im-sitting-900.webp";
+import collectionLetter1200Webp from "@/assets/collection-kit-letter-from-where-im-sitting-1200.webp";
 
 export type CrossSell = {
   title: string;
