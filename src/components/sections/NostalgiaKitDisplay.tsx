@@ -167,14 +167,20 @@ export const NostalgiaKitDisplay = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible(false);
-      setTimeout(() => {
-        setActive((p) => (p + 1) % 5);
-        setIsVisible(true);
-      }, 300);
-    }, 3000);
-    return () => clearInterval(interval);
+    let interval: ReturnType<typeof setInterval> | undefined;
+    const start = setTimeout(() => {
+      interval = setInterval(() => {
+        setIsVisible(false);
+        setTimeout(() => {
+          setActive((p) => (p + 1) % 5);
+          setIsVisible(true);
+        }, 300);
+      }, 5000);
+    }, 5000);
+    return () => {
+      clearTimeout(start);
+      if (interval) clearInterval(interval);
+    };
   }, []);
 
   const previews = [
