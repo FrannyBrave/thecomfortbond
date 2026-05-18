@@ -156,6 +156,30 @@ export default function KitDetailPage() {
     };
   }, [kit]);
 
+  // Preload the LCP hero image. Prefers AVIF srcset, falls back to WebP, then
+  // the bundled JPG. Browsers that don't understand imagesrcset will use href.
+  useEffect(() => {
+    if (!kit) return;
+    const avif = kit.heroPictureSources?.find((s) => s.type === "image/avif");
+    const webp = kit.heroPictureSources?.find((s) => s.type === "image/webp");
+    const chosen = avif ?? webp;
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.fetchPriority = "high";
+    if (chosen) {
+      link.setAttribute("imagesrcset", chosen.srcSet);
+      link.setAttribute("imagesizes", chosen.sizes);
+      if (avif) link.type = "image/avif";
+      else if (webp) link.type = "image/webp";
+    }
+    link.href = kit.heroImage;
+    document.head.appendChild(link);
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, [kit]);
+
   if (!kit) return <Navigate to="/shop" replace />;
 
   const isCollection = kit.slug === "collection";
@@ -257,14 +281,21 @@ export default function KitDetailPage() {
               </div>
               <div className="kit-gallery-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0,1fr))", gap: "1rem" }}>
                 {kit.gallery.map((g, i) => (
-                  <div key={i} style={{ aspectRatio: "4 / 3", overflow: "hidden", borderRadius: 14, background: C.cream, boxShadow: "0 10px 30px -18px rgba(0,0,0,0.3)" }}>
-                    <img
-                      src={g.src}
-                      alt={g.alt}
-                      loading="lazy"
-                      decoding="async"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                    />
+                  <div key={i} style={{ aspectRatio: g.width && g.height ? `${g.width} / ${g.height}` : "4 / 3", overflow: "hidden", borderRadius: 14, background: C.cream, boxShadow: "0 10px 30px -18px rgba(0,0,0,0.3)" }}>
+                    <picture>
+                      {g.pictureSources?.map((s, j) => (
+                        <source key={j} type={s.type} srcSet={s.srcSet} sizes={s.sizes} />
+                      ))}
+                      <img
+                        src={g.src}
+                        alt={g.alt}
+                        width={g.width}
+                        height={g.height}
+                        loading="lazy"
+                        decoding="async"
+                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                      />
+                    </picture>
                   </div>
                 ))}
               </div>
