@@ -1,10 +1,10 @@
 import sharp from 'sharp';
 import fs from 'fs';
 const files = [
-  'remember-when-kit-hero-vintage-conversation-cards',
-  'remember-when-kit-games-trivia-bingo-word-link',
-  'remember-when-kit-conversation-card-television',
-  'remember-when-kit-bingo-board-illustrations',
+  'the-comfort-bond-remember-when-kit-conversation-cards-for-parents-grandparents',
+  'remember-when-kit-conversation-cards-family-memories-1950s-1960s',
+  'remember-when-kit-vintage-picture-cards-conversation-starters-grandparents',
+  'remember-when-kit-picture-word-memory-bingo-game-grandparents-grandchildren',
   'remember-when-kit-grandmother-conversation-cards-tea',
 ];
 for (const base of files) {

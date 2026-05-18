@@ -1,10 +1,10 @@
 import sharp from 'sharp';
 import fs from 'fs';
 const files = [
-  ['hands-that-made-it-kit-hero-two-people-using-kit', true],
-  ['hands-that-made-it-kit-cover-on-workbench', false],
-  ['hands-that-made-it-kit-visual-spark-cards', false],
-  ['hands-that-made-it-kit-conversation-card-workbench', false],
+  ['the-comfort-bond-hands-that-made-it-kit-conversation-cards-fathers-day-gift-grandpa', true],
+  ['hands-that-made-it-kit-conversation-cards-woodworking-sewing-family-stories', false],
+  ['hands-that-made-it-kit-picture-cards-tools-thimbles-sewing-machines-fathers-day-gift', false],
+  ['hands-that-made-it-kit-picture-word-bingo-makers-craftsmen-grandparents-grandchildren', false],
   ['hands-that-made-it-kit-games-trivia-word-bingo-cards', false],
   ['hands-that-made-it-kit-picture-word-bingo-board', false],
 ];
