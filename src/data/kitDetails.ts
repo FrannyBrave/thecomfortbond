@@ -649,19 +649,19 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Honor the Hands That Made It",
     stickyCta: "Honor the Hands That Made It — $34",
     pageNote: "23 pages — designed for many afternoons together.",
-    heroImage: handsHero,
+    heroImage: "/lcp/hands-hero-1200.avif",
     heroWidth: 1448,
     heroHeight: 1086,
     heroObjectFit: "cover",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: `${handsHero800Avif} 800w, ${handsHero1200Avif} 1200w, ${handsHero1600Avif} 1600w`,
+        srcSet: "/lcp/hands-hero-800.avif 800w, /lcp/hands-hero-1200.avif 1200w, /lcp/hands-hero-1600.avif 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
       {
         type: "image/webp",
-        srcSet: `${handsHero800Webp} 800w, ${handsHero1200Webp} 1200w, ${handsHero1600Webp} 1600w`,
+        srcSet: "/lcp/hands-hero-800.webp 800w, /lcp/hands-hero-1200.webp 1200w, /lcp/hands-hero-1600.webp 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
     ],
