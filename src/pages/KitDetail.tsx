@@ -474,9 +474,14 @@ export default function KitDetailPage() {
           <div className="footer-col">
             <h4>Shop</h4>
             <ul>
-              <li><a href="/shop#featured">The Connection Season: Summer Edition</a></li>
-              <li><a href="/shop#kits">The Comfort Bond Connection Kits</a></li>
+              <li><a href="/shop">Shop All</a></li>
+              <li><a href="/kits/connection-season-summer">The Connection Season: Summer Edition</a></li>
               <li><a href="/kits/collection">The Comfort Bond Collection</a></li>
+              <li><a href="/kits/remember-when">The Remember When Kit</a></li>
+              <li><a href="/kits/kitchen-table-memories">The Kitchen Table Memories Kit</a></li>
+              <li><a href="/kits/garden-memories">The Garden Memories Kit</a></li>
+              <li><a href="/kits/places-weve-been">The Places We've Been Kit</a></li>
+              <li><a href="/kits/hands-that-made-it">The Hands That Made It Kit</a></li>
             </ul>
           </div>
           <div className="footer-col">
