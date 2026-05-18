@@ -507,19 +507,19 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Step Into the Garden",
     stickyCta: "Step Into the Garden — $34",
     pageNote: "23 pages — designed for many afternoons together.",
-    heroImage: gardenHero,
+    heroImage: "/lcp/garden-hero-1200.avif",
     heroWidth: 1448,
     heroHeight: 1086,
     heroObjectFit: "cover",
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet: `${gardenHero800Avif} 800w, ${gardenHero1200Avif} 1200w, ${gardenHero1600Avif} 1600w`,
+        srcSet: "/lcp/garden-hero-800.avif 800w, /lcp/garden-hero-1200.avif 1200w, /lcp/garden-hero-1600.avif 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
       {
         type: "image/webp",
-        srcSet: `${gardenHero800Webp} 800w, ${gardenHero1200Webp} 1200w, ${gardenHero1600Webp} 1600w`,
+        srcSet: "/lcp/garden-hero-800.webp 800w, /lcp/garden-hero-1200.webp 1200w, /lcp/garden-hero-1600.webp 1600w",
         sizes: "(max-width: 820px) 100vw, 50vw",
       },
     ],
