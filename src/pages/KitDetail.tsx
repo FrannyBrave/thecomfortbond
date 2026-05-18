@@ -156,29 +156,8 @@ export default function KitDetailPage() {
     };
   }, [kit]);
 
-  // Preload the LCP hero image. Prefers AVIF srcset, falls back to WebP, then
-  // the bundled JPG. Browsers that don't understand imagesrcset will use href.
-  useEffect(() => {
-    if (!kit) return;
-    const avif = kit.heroPictureSources?.find((s) => s.type === "image/avif");
-    const webp = kit.heroPictureSources?.find((s) => s.type === "image/webp");
-    const chosen = avif ?? webp;
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.as = "image";
-    link.fetchPriority = "high";
-    if (chosen) {
-      link.setAttribute("imagesrcset", chosen.srcSet);
-      link.setAttribute("imagesizes", chosen.sizes);
-      if (avif) link.type = "image/avif";
-      else if (webp) link.type = "image/webp";
-    }
-    link.href = kit.heroImage;
-    document.head.appendChild(link);
-    return () => {
-      document.head.removeChild(link);
-    };
-  }, [kit]);
+  // Hero LCP preload is handled synchronously in index.html so the browser
+  // can fetch it in parallel with the JS bundle (faster than a useEffect).
 
   if (!kit) return <Navigate to="/shop" replace />;
 
