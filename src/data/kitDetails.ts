@@ -365,24 +365,22 @@ export const KIT_DETAILS: Record<string, KitDetail> = {
     ctaText: "Get the Collection",
     stickyCta: "Get the Collection — $147",
     pageNote: "156 pages of cards, prompts, and games — across six volumes.",
-    heroImage: "/lcp/collection-1100.webp",
+    heroImage: collectionHero,
     heroPictureSources: [
       {
         type: "image/avif",
-        srcSet:
-          "/lcp/collection-480.avif 480w, /lcp/collection-768.avif 768w, /lcp/collection-1100.avif 1100w",
-        sizes: "(max-width: 768px) 100vw, 50vw",
+        srcSet: `${collectionHero800Avif} 800w, ${collectionHero1200Avif} 1200w, ${collectionHero1600Avif} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 560px",
       },
       {
         type: "image/webp",
-        srcSet:
-          "/lcp/collection-480.webp 480w, /lcp/collection-768.webp 768w, /lcp/collection-1100.webp 1100w",
-        sizes: "(max-width: 768px) 100vw, 50vw",
+        srcSet: `${collectionHero800Webp} 800w, ${collectionHero1200Webp} 1200w, ${collectionHero1600Webp} 1600w`,
+        sizes: "(max-width: 820px) 100vw, 560px",
       },
     ],
-    heroWidth: 1100,
-    heroHeight: 825,
-    heroObjectFit: "contain",
+    heroWidth: 1600,
+    heroHeight: 900,
+    heroObjectFit: "cover",
     description:
       "The Collection is everything, in one place. All five Connection Kits — Remember When, Kitchen Table Memories, Garden Memories, Places We've Been, and Hands That Made It — and The Connection Season: Summer Edition, gathered as a single library for your family. It's how you give a year of presence, not just a Saturday.",
     bullets: [
