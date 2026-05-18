@@ -624,9 +624,14 @@ const Index = () => {
           <div className="footer-col">
             <h4>Shop</h4>
             <ul>
-              <li><a href="#blueprint">The Connection Season: Summer Edition</a></li>
-              <li><a href="#kits">The Comfort Bond Connection Kits</a></li>
-              <li><a href="#collection">The Comfort Bond Collection</a></li>
+              <li><a href="/shop">Shop All</a></li>
+              <li><a href="/kits/connection-season-summer">The Connection Season: Summer</a></li>
+              <li><a href="/kits/collection">The Comfort Bond Collection</a></li>
+              <li><a href="/kits/remember-when">Remember When Kit</a></li>
+              <li><a href="/kits/kitchen-table-memories">Kitchen Table Memories Kit</a></li>
+              <li><a href="/kits/places-weve-been">Places We've Been Kit</a></li>
+              <li><a href="/kits/garden-memories">Garden Memories Kit</a></li>
+              <li><a href="/kits/hands-that-made-it">Hands That Made It Kit</a></li>
             </ul>
           </div>
           <div className="footer-col">
