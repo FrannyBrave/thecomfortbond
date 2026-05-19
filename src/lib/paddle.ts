@@ -91,8 +91,6 @@ export const PRICE_REDIRECTS: Record<string, string> = {
   pri_01kpafxq9xrqg0qhqfttzdjswf: "/thank-you/heart-of-the-home-kit",
   // The 5-Kit Bundle (Complete Engagement System) — routes to a hidden access hub
   pri_01kpafqz2tc4pfc262j1dnh531: "/bundle-access",
-  // The Mother's Day Connection Kit — handled exclusively by Paddle settings.successUrl
-  // (see PRICE_SUCCESS_URLS below). Intentionally omitted here to avoid a redirect race.
 };
 
 declare global {
@@ -220,10 +218,7 @@ const PRICE_DISCOUNTS: Record<string, string> = {
 };
 
 /** Map of Paddle Price ID → external success URL (overrides PRICE_REDIRECTS). */
-const PRICE_SUCCESS_URLS: Record<string, string> = {
-  // The Mother's Day Connection Kit — own-domain thank-you page
-  pri_01kpsqv8dq9e08sjnpgpzs0a7v: "https://thecomfortbond.com/thank-you",
-};
+const PRICE_SUCCESS_URLS: Record<string, string> = {};
 
 /**
  * Open the Paddle Billing overlay checkout for a single Price ID.

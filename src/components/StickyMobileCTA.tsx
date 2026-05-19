@@ -17,7 +17,7 @@ interface StickyMobileCTAProps {
 export const StickyMobileCTA = ({
   showAfter = 400,
   href = "/free-sampler",
-  label = "Free Mother's Day Visit Guide",
+  label = "Get the Free Coffee Sampler",
   onClick,
 }: StickyMobileCTAProps) => {
   const [visible, setVisible] = useState(false);

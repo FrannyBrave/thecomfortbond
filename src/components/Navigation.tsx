@@ -16,12 +16,6 @@ import logo from "@/assets/the-comfort-bond-logo-160.png";
 // surfaced in the slide-out side drawer.
 const MOBILE_PRIMARY_LINKS = [
   {
-    label: "For Families",
-    description: "Mother's Day visit guide & memory care support",
-    href: "/family-visits",
-    icon: Heart,
-  },
-  {
     label: "Blueprint Pro",
     description: "13-week activity curriculum for facilities",
     href: "/blueprint-pro",
@@ -46,7 +40,7 @@ export const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const isMothersDayLanding = location.pathname === "/family-visits";
+  const isMothersDayLanding = false;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,7 +96,7 @@ export const Navigation = () => {
               { label: "", href: "#road-trip-kit" },
               { label: "", href: "#faq" },
               { label: "", href: "/resources" },
-              { label: "", href: "/family-visits" },
+              
               ...(isMothersDayLanding ? [] : [
                 { label: "Free Sampler", href: "/free-sampler" },
                 { label: "Blueprint Pro", href: "/blueprint-pro" },
