@@ -15,6 +15,8 @@ const Shop = lazy(() => import("./pages/Shop"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const OurStory = lazy(() => import("./pages/OurStory"));
+const AdminLogin = lazy(() => import("./pages/AdminLogin"));
+const AdminReviews = lazy(() => import("./pages/AdminReviews"));
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ function AppRoutes() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/about" element={<OurStory />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/reviews" element={<AdminReviews />} />
         {/* Deactivated rebrand legacy routes — redirect to home */}
         <Route path="/resources" element={<Navigate to="/" replace />} />
         <Route path="/resources/:slug" element={<Navigate to="/" replace />} />

@@ -7,6 +7,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { openPaddleCheckout } from "@/lib/paddle";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { KIT_DETAILS, type KitDetail, type CrossSell } from "@/data/kitDetails";
+import ReviewsSection from "@/components/ReviewsSection";
 import { TagPills } from "@/pages/Shop";
 
 const C = {
@@ -395,6 +396,9 @@ export default function KitDetailPage() {
             </div>
           </div>
         </section>
+
+        {/* REVIEWS */}
+        <ReviewsSection productSlug={kit.slug} productName={kit.name} />
 
         {/* BEST FOR */}
         <section style={{ background: C.sandPale, padding: "clamp(2rem,5vw,4rem) clamp(1.5rem,5vw,4rem)" }}>
