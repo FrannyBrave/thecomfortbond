@@ -7,6 +7,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { openPaddleCheckout } from "@/lib/paddle";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { KIT_DETAILS, type KitDetail, type CrossSell } from "@/data/kitDetails";
+import ReviewsSection from "@/components/ReviewsSection";
 import { TagPills } from "@/pages/Shop";
 
 const C = {
