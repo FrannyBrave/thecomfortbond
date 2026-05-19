@@ -397,6 +397,9 @@ export default function KitDetailPage() {
           </div>
         </section>
 
+        {/* REVIEWS */}
+        <ReviewsSection productSlug={kit.slug} productName={kit.name} />
+
         {/* BEST FOR */}
         <section style={{ background: C.sandPale, padding: "clamp(2rem,5vw,4rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
