@@ -15,6 +15,8 @@ const Shop = lazy(() => import("./pages/Shop"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const OurStory = lazy(() => import("./pages/OurStory"));
+const AdminLogin = lazy(() => import("./pages/AdminLogin"));
+const AdminReviews = lazy(() => import("./pages/AdminReviews"));
 
 const queryClient = new QueryClient();
 
