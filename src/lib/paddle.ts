@@ -97,6 +97,9 @@ async function initPaddle(): Promise<void> {
             id?: string;
             transaction_id?: string;
             items?: Array<{ price_id?: string; priceId?: string }>;
+            customer?: { email?: string };
+            custom_data?: { email?: string; first_name?: string };
+            customData?: { email?: string; first_name?: string };
           }
         | undefined;
       const purchasedId = data?.items?.find(
@@ -114,6 +117,20 @@ async function initPaddle(): Promise<void> {
         `purchase:${txId}`
       );
 
+      // ConvertKit purchase tag — fires the per-product delivery sequence.
+      // Pulls email from Paddle's customer object, falling back to customData
+      // we forwarded from the pre-checkout modal.
+      const buyerEmail =
+        data?.customer?.email ??
+        data?.custom_data?.email ??
+        data?.customData?.email;
+      const buyerFirstName =
+        data?.custom_data?.first_name ?? data?.customData?.first_name;
+      const purchaseTagId = priceId ? PRICE_TO_CK_PURCHASE_TAG[priceId] : undefined;
+      if (buyerEmail && purchaseTagId) {
+        void tagConvertKitPurchase(purchaseTagId, buyerEmail, buyerFirstName, txId);
+      }
+
       // If this price uses Paddle's native successUrl, let Paddle handle the
       // redirect — do NOT run our own JS redirect (it would race and win on
       // the current host, sending users to the wrong domain).
@@ -126,6 +143,7 @@ async function initPaddle(): Promise<void> {
         }, 600);
       }
     },
+
   });
 
   initialized = true;
