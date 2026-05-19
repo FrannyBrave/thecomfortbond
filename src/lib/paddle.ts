@@ -11,6 +11,76 @@ import { trackPinterestEvent } from "./pinterest";
 const PADDLE_JS_SRC = "https://cdn.paddle.com/paddle/v2/paddle.js";
 const CLIENT_TOKEN = "live_bd95fc6721aad743909ee0f4cbd";
 
+// ============================================================
+// ConvertKit purchase-tag delivery
+// ============================================================
+// When Paddle confirms a purchase, we tag the buyer in ConvertKit so the
+// matching delivery sequence (per product) fires automatically.
+//
+// ⚠️ ACTION REQUIRED: Replace each "REPLACE_ME" below with the numeric
+// ConvertKit tag ID for that product. Find the ID in ConvertKit →
+// Subscribers → Tags → click the tag → it's in the URL
+// (e.g. https://app.kit.com/subscribers?tag=19177239 → tag ID is 19177239).
+// Then set each delivery automation's trigger to "Tag added: <that tag>".
+
+const CONVERTKIT_API_KEY = "LyFHhQ8J1GJ27wcL4mq-uQ";
+
+const PRICE_TO_CK_PURCHASE_TAG: Record<string, string> = {
+  // The Blueprint™ Pro
+  pri_01kpagj5jtaxcnkbtjctq616k4: "REPLACE_ME",
+  // The Nostalgia Kit (Remember When)
+  pri_01kpafx84h0z9z11fwc5m84dam: "REPLACE_ME",
+  // The Heirloom Garden Kit (Garden Memories)
+  pri_01kpafvx3erd68458p4em99141: "REPLACE_ME",
+  // The Makers & Menders Kit (Hands That Made It)
+  pri_01kpafv0r50q149ctgje0dmn0q: "REPLACE_ME",
+  // The "Are We There Yet?" Kit (Places We've Been)
+  pri_01kpafwqs0wwzatbs5721cyfmk: "REPLACE_ME",
+  // The Heart of the Home Kit (Kitchen Table Memories)
+  pri_01kpafxq9xrqg0qhqfttzdjswf: "REPLACE_ME",
+  // The 5-Kit Bundle (Comfort Bond Collection)
+  pri_01kpafqz2tc4pfc262j1dnh531: "REPLACE_ME",
+  // The Mother's Day Connection Kit
+  pri_01kpsqv8dq9e08sjnpgpzs0a7v: "REPLACE_ME",
+};
+
+/** Local sessionStorage de-dupe so a repeated callback can't double-fire. */
+const firedPurchaseTags = new Set<string>();
+
+async function tagConvertKitPurchase(
+  tagId: string,
+  email: string,
+  firstName: string | undefined,
+  txId: string
+): Promise<void> {
+  if (!tagId || tagId === "REPLACE_ME") {
+    console.warn("[ConvertKit] Missing purchase tag id for transaction", txId);
+    return;
+  }
+  const dedupeKey = `ck-purchase:${txId}:${tagId}`;
+  if (firedPurchaseTags.has(dedupeKey)) return;
+  firedPurchaseTags.add(dedupeKey);
+  try {
+    const res = await fetch(
+      `https://api.convertkit.com/v3/tags/${tagId}/subscribe`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          api_key: CONVERTKIT_API_KEY,
+          email: email.trim(),
+          ...(firstName ? { first_name: firstName.trim() } : {}),
+        }),
+      }
+    );
+    if (!res.ok) throw new Error(`ConvertKit responded ${res.status}`);
+  } catch (err) {
+    console.error("[ConvertKit] Failed to apply purchase tag", err);
+  }
+}
+
+
+
 /** Map of Paddle Price ID → secure post-purchase download URL. */
 export const PRICE_REDIRECTS: Record<string, string> = {
   // The Blueprint™ Pro
