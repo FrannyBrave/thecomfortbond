@@ -14,16 +14,79 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      reviews: {
+        Row: {
+          approved_at: string | null
+          body: string
+          created_at: string
+          id: string
+          product_slug: string
+          rating: number
+          reviewer_name: string
+          status: Database["public"]["Enums"]["review_status"]
+          title: string
+        }
+        Insert: {
+          approved_at?: string | null
+          body: string
+          created_at?: string
+          id?: string
+          product_slug: string
+          rating: number
+          reviewer_name: string
+          status?: Database["public"]["Enums"]["review_status"]
+          title: string
+        }
+        Update: {
+          approved_at?: string | null
+          body?: string
+          created_at?: string
+          id?: string
+          product_slug?: string
+          rating?: number
+          reviewer_name?: string
+          status?: Database["public"]["Enums"]["review_status"]
+          title?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "moderator" | "user"
+      review_status: "pending" | "approved" | "rejected"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +213,9 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "moderator", "user"],
+      review_status: ["pending", "approved", "rejected"],
+    },
   },
 } as const
