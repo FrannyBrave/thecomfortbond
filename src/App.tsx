@@ -17,6 +17,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const OurStory = lazy(() => import("./pages/OurStory"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminReviews = lazy(() => import("./pages/AdminReviews"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
 
 const queryClient = new QueryClient();
 
@@ -51,7 +52,7 @@ function AppRoutes() {
         <Route path="/kits" element={<Shop />} />
         <Route path="/kits/:slug" element={<KitDetail />} />
         <Route path="/bundle-access" element={<Navigate to="/" replace />} />
-        <Route path="/thank-you" element={<Navigate to="/" replace />} />
+        <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/thank-you-mothers-day" element={<Navigate to="/" replace />} />
         <Route path="/thank-you/:slug" element={<Navigate to="/" replace />} />
         <Route path="/family-visits" element={<Navigate to="/" replace />} />
