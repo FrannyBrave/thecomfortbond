@@ -42,7 +42,7 @@ function AppRoutes() {
         <Route path="/resources" element={<Navigate to="/" replace />} />
         <Route path="/resources/:slug" element={<Navigate to="/" replace />} />
         <Route path="/blog/:slug" element={<Navigate to="/" replace />} />
-        <Route path="/blog/mothers-day-memory-care-family-guide" element={<Navigate to="/" replace />} />
+        
         <Route path="/blueprint" element={<Navigate to="/" replace />} />
         <Route path="/blueprint-test" element={<Navigate to="/" replace />} />
         <Route path="/blueprint-pdf" element={<Navigate to="/" replace />} />
@@ -54,7 +54,7 @@ function AppRoutes() {
         <Route path="/bundle-access" element={<Navigate to="/" replace />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/thank-you-mothers-day" element={<Navigate to="/" replace />} />
-        <Route path="/thank-you/:slug" element={<Navigate to="/" replace />} />
+        <Route path="/thank-you/:slug" element={<Navigate to="/thank-you" replace />} />
         <Route path="/family-visits" element={<Navigate to="/" replace />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
