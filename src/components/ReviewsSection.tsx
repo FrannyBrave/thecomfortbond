@@ -375,9 +375,6 @@ function ReviewForm({
           {submitting ? "Submitting…" : "Submit review"}
         </button>
       </div>
-      <p style={{ fontFamily: "var(--font-sans)", fontSize: 12, color: C.textMid, margin: 0, textAlign: "center" }}>
-        Reviews are moderated before they appear publicly.
-      </p>
     </form>
   );
 }
