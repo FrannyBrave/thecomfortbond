@@ -77,6 +77,9 @@ export const FooterSection = () => {
               <a href="mailto:hello@thecomfortbond.com" className="text-sm text-forest/80 hover:text-terracotta transition-colors">
                 hello@thecomfortbond.com
               </a>
+              <a href="mailto:francesca@thecomfortbond.com?subject=Partnership%20%2F%20Collaboration%20Inquiry" className="text-sm text-forest/80 hover:text-terracotta transition-colors">
+                Partnerships & Collaborations
+              </a>
               <button
                 onClick={() => { navigate("/thank-you"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                 className="text-sm text-forest/80 hover:text-terracotta transition-colors text-center md:text-left"
