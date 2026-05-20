@@ -476,16 +476,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* CONNECTION ACROSS DISTANCE — visual band */}
-        <section style={{ background: C.forestDark, padding: "0 clamp(1.5rem,5vw,4rem) clamp(3rem,6vw,5rem)" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <picture>
-              <source type="image/avif" srcSet="/lcp/home-collection-480.avif 480w, /lcp/home-collection-768.avif 768w, /lcp/home-collection-1100.avif 1100w" sizes="(max-width: 1100px) 100vw, 1100px" />
-              <source type="image/webp" srcSet="/lcp/home-collection-480.webp 480w, /lcp/home-collection-768.webp 768w, /lcp/home-collection-1100.webp 1100w" sizes="(max-width: 1100px) 100vw, 1100px" />
-              <img src="/lcp/home-collection-1100.webp" alt="Adult daughter on a video call with her aging mother — using The Comfort Bond Collection conversation cards across distance" width={1100} height={619} loading="lazy" decoding="async" style={{ width: "100%", height: "auto", borderRadius: 12, display: "block", objectFit: "contain" }} />
-            </picture>
-          </div>
-        </section>
 
         {/* FREE RESOURCES */}
         <section style={{ background: C.sandPale, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
