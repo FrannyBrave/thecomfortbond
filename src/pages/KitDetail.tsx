@@ -157,6 +157,31 @@ export default function KitDetailPage() {
     };
   }, [kit]);
 
+  // Pinterest 'viewcontent' event — fires once per kit detail page view.
+  useEffect(() => {
+    if (!kit) return;
+    const category =
+      kit.slug === "collection"
+        ? "Gift Bundles"
+        : kit.slug === "connection-season-summer"
+        ? "Seasonal Editions"
+        : "Connection Kits";
+    const priceNumeric = Number((kit.price || "").replace(/[^0-9.]/g, "")) || undefined;
+    void import("@/lib/pinterest").then(({ trackPinterestEvent }) => {
+      trackPinterestEvent(
+        "viewcontent",
+        {
+          product_name: kit.name,
+          product_category: category,
+          ...(priceNumeric ? { product_price: priceNumeric } : {}),
+          product_id: kit.slug,
+        },
+        `viewcontent:${kit.slug}`
+      );
+    });
+  }, [kit]);
+
+
   // Hero LCP preload is handled synchronously in index.html so the browser
   // can fetch it in parallel with the JS bundle (faster than a useEffect).
 

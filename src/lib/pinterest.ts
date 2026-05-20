@@ -43,7 +43,8 @@ export function trackPinterestPage(): void {
  * (e.g. one purchase per Paddle transaction id).
  */
 export function trackPinterestEvent(
-  event: "signup" | "checkout" | "purchase" | "lead" | "addtocart" | "search" | "viewcategory",
+  event: "signup" | "checkout" | "purchase" | "lead" | "addtocart" | "search" | "viewcategory" | "viewcontent",
+
   data?: Record<string, unknown>,
   dedupeKey?: string
 ): void {

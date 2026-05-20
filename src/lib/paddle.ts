@@ -38,8 +38,58 @@ const PRICE_TO_CK_PURCHASE_TAG: Record<string, string> = {
   pri_01kpafqz2tc4pfc262j1dnh531: "19660239",
 };
 
+/** Per-product metadata for analytics events (Pinterest, Meta, etc). */
+const PRICE_TO_PRODUCT_META: Record<
+  string,
+  { name: string; slug: string; price: number; category: string }
+> = {
+  pri_01kpagj5jtaxcnkbtjctq616k4: {
+    name: "The Connection Season: Summer Edition",
+    slug: "connection-season-summer",
+    price: 34,
+    category: "Seasonal Editions",
+  },
+  pri_01kpafx84h0z9z11fwc5m84dam: {
+    name: "The Remember When Kit",
+    slug: "remember-when",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafvx3erd68458p4em99141: {
+    name: "The Garden Memories Kit",
+    slug: "garden-memories",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafv0r50q149ctgje0dmn0q: {
+    name: "The Hands That Made It Kit",
+    slug: "hands-that-made-it",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafwqs0wwzatbs5721cyfmk: {
+    name: "The Places We've Been Kit",
+    slug: "places-weve-been",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafxq9xrqg0qhqfttzdjswf: {
+    name: "The Kitchen Table Memories Kit",
+    slug: "kitchen-table-memories",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafqz2tc4pfc262j1dnh531: {
+    name: "The Comfort Bond Collection",
+    slug: "collection",
+    price: 147,
+    category: "Gift Bundles",
+  },
+};
+
 /** Local sessionStorage de-dupe so a repeated callback can't double-fire. */
 const firedPurchaseTags = new Set<string>();
+
 
 async function tagConvertKitPurchase(
   tagId: string,
@@ -158,7 +208,9 @@ async function initPaddle(): Promise<void> {
         | {
             id?: string;
             transaction_id?: string;
-            items?: Array<{ price_id?: string; priceId?: string }>;
+            currency_code?: string;
+            items?: Array<{ price_id?: string; priceId?: string; quantity?: number }>;
+            totals?: { total?: number | string; grand_total?: number | string };
             customer?: { email?: string };
             custom_data?: { email?: string; first_name?: string };
             customData?: { email?: string; first_name?: string };
@@ -168,16 +220,33 @@ async function initPaddle(): Promise<void> {
         (it) => it.price_id || it.priceId
       );
       const priceId = purchasedId?.price_id ?? purchasedId?.priceId;
+      const meta = priceId ? PRICE_TO_PRODUCT_META[priceId] : undefined;
 
-      // Pinterest 'purchase' event — fires only on a confirmed Paddle
-      // checkout.completed event. De-duplicated by transaction id so
-      // re-rendering or repeat callbacks never double-fire.
+      // Pinterest 'checkout' event — fires on confirmed Paddle checkout.completed,
+      // de-duplicated by transaction id. Uses Paddle's actual transaction total
+      // (handles discounts/bundles/currency), falling back to static product price.
       const txId = data?.transaction_id ?? data?.id ?? priceId ?? "unknown";
+      const rawTotal = data?.totals?.total ?? data?.totals?.grand_total;
+      const txValue =
+        rawTotal !== undefined ? Number(rawTotal) : meta?.price;
+      const quantity = purchasedId?.quantity ?? 1;
       trackPinterestEvent(
-        "purchase",
-        priceId ? { line_items: [{ product_id: priceId, quantity: 1 }] } : undefined,
-        `purchase:${txId}`
+        "checkout",
+        {
+          ...(txValue !== undefined && !Number.isNaN(txValue) ? { value: txValue } : {}),
+          order_quantity: quantity,
+          currency: data?.currency_code ?? "USD",
+          line_items: [
+            {
+              ...(meta ? { product_name: meta.name, product_id: meta.slug } : { product_id: priceId }),
+              ...(meta ? { product_price: meta.price } : {}),
+              product_quantity: quantity,
+            },
+          ],
+        },
+        `checkout:${txId}`
       );
+
 
       // ConvertKit purchase tag — fires the per-product delivery sequence.
       // Pulls email from Paddle's customer object, falling back to customData
