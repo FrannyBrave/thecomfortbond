@@ -38,8 +38,58 @@ const PRICE_TO_CK_PURCHASE_TAG: Record<string, string> = {
   pri_01kpafqz2tc4pfc262j1dnh531: "19660239",
 };
 
+/** Per-product metadata for analytics events (Pinterest, Meta, etc). */
+const PRICE_TO_PRODUCT_META: Record<
+  string,
+  { name: string; slug: string; price: number; category: string }
+> = {
+  pri_01kpagj5jtaxcnkbtjctq616k4: {
+    name: "The Connection Season: Summer Edition",
+    slug: "connection-season-summer",
+    price: 34,
+    category: "Seasonal Editions",
+  },
+  pri_01kpafx84h0z9z11fwc5m84dam: {
+    name: "The Remember When Kit",
+    slug: "remember-when",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafvx3erd68458p4em99141: {
+    name: "The Garden Memories Kit",
+    slug: "garden-memories",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafv0r50q149ctgje0dmn0q: {
+    name: "The Hands That Made It Kit",
+    slug: "hands-that-made-it",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafwqs0wwzatbs5721cyfmk: {
+    name: "The Places We've Been Kit",
+    slug: "places-weve-been",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafxq9xrqg0qhqfttzdjswf: {
+    name: "The Kitchen Table Memories Kit",
+    slug: "kitchen-table-memories",
+    price: 34,
+    category: "Connection Kits",
+  },
+  pri_01kpafqz2tc4pfc262j1dnh531: {
+    name: "The Comfort Bond Collection",
+    slug: "collection",
+    price: 147,
+    category: "Gift Bundles",
+  },
+};
+
 /** Local sessionStorage de-dupe so a repeated callback can't double-fire. */
 const firedPurchaseTags = new Set<string>();
+
 
 async function tagConvertKitPurchase(
   tagId: string,
