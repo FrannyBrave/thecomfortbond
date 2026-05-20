@@ -492,6 +492,7 @@ export default function KitDetailPage() {
             <ul>
               <li><a href="/about">Our Story</a></li>
               <li><a href="mailto:hello@thecomfortbond.com">hello@thecomfortbond.com</a></li>
+              <li><a href="mailto:francesca@thecomfortbond.com?subject=Partnership%20%2F%20Collaboration%20Inquiry">Partnerships & Collaborations</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms">Terms</a></li>
               <li><a href="/refund-policy">Refund Policy</a></li>
