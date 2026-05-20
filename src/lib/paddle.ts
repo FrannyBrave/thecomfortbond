@@ -208,7 +208,9 @@ async function initPaddle(): Promise<void> {
         | {
             id?: string;
             transaction_id?: string;
-            items?: Array<{ price_id?: string; priceId?: string }>;
+            currency_code?: string;
+            items?: Array<{ price_id?: string; priceId?: string; quantity?: number }>;
+            totals?: { total?: number | string; grand_total?: number | string };
             customer?: { email?: string };
             custom_data?: { email?: string; first_name?: string };
             customData?: { email?: string; first_name?: string };
@@ -218,16 +220,33 @@ async function initPaddle(): Promise<void> {
         (it) => it.price_id || it.priceId
       );
       const priceId = purchasedId?.price_id ?? purchasedId?.priceId;
+      const meta = priceId ? PRICE_TO_PRODUCT_META[priceId] : undefined;
 
-      // Pinterest 'purchase' event — fires only on a confirmed Paddle
-      // checkout.completed event. De-duplicated by transaction id so
-      // re-rendering or repeat callbacks never double-fire.
+      // Pinterest 'checkout' event — fires on confirmed Paddle checkout.completed,
+      // de-duplicated by transaction id. Uses Paddle's actual transaction total
+      // (handles discounts/bundles/currency), falling back to static product price.
       const txId = data?.transaction_id ?? data?.id ?? priceId ?? "unknown";
+      const rawTotal = data?.totals?.total ?? data?.totals?.grand_total;
+      const txValue =
+        rawTotal !== undefined ? Number(rawTotal) : meta?.price;
+      const quantity = purchasedId?.quantity ?? 1;
       trackPinterestEvent(
-        "purchase",
-        priceId ? { line_items: [{ product_id: priceId, quantity: 1 }] } : undefined,
-        `purchase:${txId}`
+        "checkout",
+        {
+          ...(txValue !== undefined && !Number.isNaN(txValue) ? { value: txValue } : {}),
+          order_quantity: quantity,
+          currency: data?.currency_code ?? "USD",
+          line_items: [
+            {
+              ...(meta ? { product_name: meta.name, product_id: meta.slug } : { product_id: priceId }),
+              ...(meta ? { product_price: meta.price } : {}),
+              product_quantity: quantity,
+            },
+          ],
+        },
+        `checkout:${txId}`
       );
+
 
       // ConvertKit purchase tag — fires the per-product delivery sequence.
       // Pulls email from Paddle's customer object, falling back to customData
