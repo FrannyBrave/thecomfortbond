@@ -75,7 +75,7 @@ export default function AdminLogin() {
         }}
       >
         <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "1.6rem", color: "var(--forest-dark)", margin: 0 }}>
-          Admin {mode === "signin" ? "Sign In" : "Sign Up"}
+          Admin {mode === "signin" ? "Sign In" : mode === "signup" ? "Sign Up" : "Reset Password"}
         </h1>
         <input
           type="email"
@@ -86,16 +86,18 @@ export default function AdminLogin() {
           autoComplete="email"
           style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid var(--border)", fontSize: 15 }}
         />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          minLength={8}
-          autoComplete={mode === "signin" ? "current-password" : "new-password"}
-          style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid var(--border)", fontSize: 15 }}
-        />
+        {mode !== "forgot" && (
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            minLength={8}
+            autoComplete={mode === "signin" ? "current-password" : "new-password"}
+            style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid var(--border)", fontSize: 15 }}
+          />
+        )}
         <button
           type="submit"
           disabled={busy}
@@ -110,15 +112,34 @@ export default function AdminLogin() {
             cursor: busy ? "wait" : "pointer",
           }}
         >
-          {busy ? "Please wait…" : mode === "signin" ? "Sign in" : "Create account"}
+          {busy ? "Please wait…" : mode === "signin" ? "Sign in" : mode === "signup" ? "Create account" : "Send reset link"}
         </button>
-        <button
-          type="button"
-          onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
-          style={{ background: "transparent", border: 0, color: "var(--clay)", fontSize: 13, cursor: "pointer" }}
-        >
-          {mode === "signin" ? "Need an account? Sign up" : "Have an account? Sign in"}
-        </button>
+        <div style={{ display: "flex", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
+          <button
+            type="button"
+            onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
+            style={{ background: "transparent", border: 0, color: "var(--clay)", fontSize: 13, cursor: "pointer", padding: 0 }}
+          >
+            {mode === "signin" ? "Need an account? Sign up" : "Have an account? Sign in"}
+          </button>
+          {mode !== "forgot" ? (
+            <button
+              type="button"
+              onClick={() => setMode("forgot")}
+              style={{ background: "transparent", border: 0, color: "var(--clay)", fontSize: 13, cursor: "pointer", padding: 0 }}
+            >
+              Forgot password?
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setMode("signin")}
+              style={{ background: "transparent", border: 0, color: "var(--clay)", fontSize: 13, cursor: "pointer", padding: 0 }}
+            >
+              Back to sign in
+            </button>
+          )}
+        </div>
       </form>
     </main>
   );
