@@ -370,24 +370,9 @@ const Shop = () => {
     keywords: B2C_KEYWORDS,
   });
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-faqpage", "shop");
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: FAQS.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
-    });
-    document.head.appendChild(script);
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
+  // FAQPage JSON-LD intentionally removed: Google deprecated FAQ rich
+  // results for non-authoritative sites and now flags this schema as
+  // "invalid" in Search Console. The visible FAQ accordion is unchanged.
 
   return (
     <div style={{ background: C.cream, minHeight: "100vh" }}>
