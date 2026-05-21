@@ -181,7 +181,7 @@ const Index = () => {
             </div>
           </a>
           <ul className="nav-links">
-            <li><a href="/our-story">Our Story</a></li>
+            <li><a href="/about">Our Story</a></li>
             <li><a href="#kits">Connection Kits</a></li>
             <li><a href="/shop" className="nav-cta">Shop</a></li>
           </ul>
@@ -351,7 +351,7 @@ const Index = () => {
               </p>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
                 This brand is for anyone who wants the next call or visit with a parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;{" "}
-                <a href="/our-story" style={{ fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}>
+                <a href="/about" style={{ fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}>
                   Read the full story →
                 </a>
               </p>
@@ -622,7 +622,7 @@ const Index = () => {
           <div className="footer-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="/our-story">Our Story</a></li>
+              <li><a href="/about">Our Story</a></li>
               <li><a href="mailto:hello@thecomfortbond.com">hello@thecomfortbond.com</a></li>
               <li><a href="mailto:francesca@thecomfortbond.com?subject=Partnership%20%2F%20Collaboration%20Inquiry">Partnerships & Collaborations</a></li>
               <li><a href="/thank-you">Leave a review</a></li>
