@@ -16,6 +16,7 @@ const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const OurStory = lazy(() => import("./pages/OurStory"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
+const AdminResetPassword = lazy(() => import("./pages/AdminResetPassword"));
 const AdminReviews = lazy(() => import("./pages/AdminReviews"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 
@@ -37,6 +38,7 @@ function AppRoutes() {
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/about" element={<OurStory />} />
         <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/reset-password" element={<AdminResetPassword />} />
         <Route path="/admin/reviews" element={<AdminReviews />} />
         {/* Deactivated rebrand legacy routes — redirect to home */}
         <Route path="/resources" element={<Navigate to="/" replace />} />
