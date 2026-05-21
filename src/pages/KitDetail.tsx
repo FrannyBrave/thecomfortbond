@@ -136,26 +136,10 @@ export default function KitDetailPage() {
     description: kit ? kit.description.slice(0, 160) : "",
   });
 
-  // FAQPage schema
-  useEffect(() => {
-    if (!kit) return;
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-faqpage", `kit-${kit.slug}`);
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: kit.faqs.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
-    });
-    document.head.appendChild(script);
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [kit]);
+  // FAQPage JSON-LD intentionally removed:
+  // Google deprecated FAQ rich results for non-authoritative sites and now
+  // flags this schema as "invalid" in Search Console. The visible FAQ
+  // accordion below is unchanged for shoppers.
 
   // Pinterest 'viewcontent' event — fires once per kit detail page view.
   useEffect(() => {
