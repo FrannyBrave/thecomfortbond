@@ -35,8 +35,9 @@ function AppRoutes() {
     <>
       <FathersDayBanner />
       <Suspense fallback={null}>
-
+        <Routes>
         <Route path="/" element={<Index />} />
+
         <Route path="/shop" element={<Shop />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
