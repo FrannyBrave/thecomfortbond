@@ -13,6 +13,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { TagPills } from "@/pages/Shop";
+import { isFathersDayActive } from "@/lib/fathersDay";
 
 const SAMPLER_URL = "https://the-comfort-bond-2.kit.com/3dfe0171af";
 
@@ -182,7 +183,7 @@ const Index = () => {
           </a>
           <ul className="nav-links">
             <li><a href="/about">Our Story</a></li>
-            <li><a href="#kits">Connection Kits</a></li>
+            <li>{isFathersDayActive() ? <a href="/fathers-day">For Dad</a> : <a href="#kits">Connection Kits</a>}</li>
             <li><a href="/shop" className="nav-cta">Shop</a></li>
           </ul>
           <MobileMenuDrawer />
