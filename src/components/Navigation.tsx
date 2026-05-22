@@ -256,11 +256,11 @@ export const Navigation = () => {
                   size="lg"
                   className="w-full"
                   onClick={() => {
-                    navigate("/kits");
+                    navigate(isFathersDayActive() ? "/fathers-day" : "/kits");
                     setIsMobileMenuOpen(false);
                   }}
                 >
-                  Shop Now
+                  {isFathersDayActive() ? "For Dad" : "Shop Now"}
                 </Button>
               </div>
             </SheetContent>
