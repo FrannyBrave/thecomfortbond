@@ -372,6 +372,7 @@ export default function FathersDay() {
         @media (max-width: 900px) {
           .fd-hero-grid { grid-template-columns: 1fr !important; }
           .fd-cards { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+          .fd-quotes { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 560px) {
           .fd-cards { grid-template-columns: 1fr !important; }
