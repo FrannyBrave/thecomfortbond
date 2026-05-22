@@ -63,11 +63,14 @@ function AppRoutes() {
         <Route path="/thank-you-mothers-day" element={<Navigate to="/" replace />} />
         <Route path="/thank-you/:slug" element={<Navigate to="/thank-you" replace />} />
         <Route path="/family-visits" element={<Navigate to="/" replace />} />
+        <Route path="/fathers-day" element={<FathersDay />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
+    </>
   );
 }
+
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
