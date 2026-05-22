@@ -15,8 +15,8 @@ export const FathersDayBanner = () => {
       aria-label="Father's Day announcement"
       style={{
         width: "100%",
-        background: "var(--cream, #F7F1E8)",
-        borderBottom: "1px solid rgba(45,74,62,0.08)",
+        background: "var(--forest-dark, #2D4A3E)",
+        borderBottom: "1px solid rgba(0,0,0,0.12)",
         minHeight: 34,
         display: "flex",
         alignItems: "center",
@@ -29,7 +29,7 @@ export const FathersDayBanner = () => {
         style={{
           fontFamily: "var(--font-sans, 'DM Sans', system-ui, sans-serif)",
           fontSize: "clamp(12px, 1.4vw, 14px)",
-          color: "#4A2E1F",
+          color: "var(--cream, #F7F1E8)",
           textDecoration: "none",
           textAlign: "center",
           lineHeight: 1.35,
@@ -37,7 +37,7 @@ export const FathersDayBanner = () => {
         }}
       >
         For Father's Day, June 21 — explore kits made for the dads and grandfathers who built things{" "}
-        <span style={{ color: "var(--clay, #C67B5C)", fontWeight: 600 }}>→</span>
+        <span style={{ color: "var(--clay, #C67B5C)", fontWeight: 700 }}>→</span>
       </Link>
     </div>
   );
