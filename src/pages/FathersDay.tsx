@@ -170,34 +170,56 @@ export default function FathersDay() {
 
         {/* SOCIAL PROOF */}
         <section style={{ background: C.creamDark, padding: "clamp(2rem,5vw,3.5rem) clamp(1.5rem,5vw,4rem)" }}>
-          <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
-            <div aria-label="5 out of 5 stars" style={{ color: C.clay, fontSize: 22, letterSpacing: 4, marginBottom: 14 }}>
-              ★ ★ ★ ★ ★
-            </div>
-            <blockquote
-              style={{
-                fontFamily: "var(--font-serif)",
-                fontStyle: "italic",
-                fontSize: "clamp(1.1rem,2.2vw,1.35rem)",
-                lineHeight: 1.6,
-                color: C.forestDark,
-                margin: "0 0 1rem",
-              }}
-            >
-              “This helped my dad talk about old road trips we took as a family when I was younger.”
-            </blockquote>
-            <cite
-              style={{
-                fontFamily: "var(--font-sans)",
-                fontStyle: "normal",
-                fontSize: 13,
-                fontWeight: 600,
-                letterSpacing: "0.08em",
-                color: C.textMid,
-              }}
-            >
-              — Michelle M., May 2026
-            </cite>
+          <div
+            style={{
+              maxWidth: 1080,
+              margin: "0 auto",
+              display: "grid",
+              gridTemplateColumns: "repeat(2, minmax(0,1fr))",
+              gap: "clamp(1.5rem,4vw,2.5rem)",
+            }}
+            className="fd-quotes"
+          >
+            {[
+              {
+                quote: "This helped my dad talk about old road trips we took as a family when I was younger.",
+                cite: "Michelle M., May 2026",
+              },
+              {
+                quote: "My grandfather lit up flipping through the picture prompts — he told stories I'd never heard before.",
+                cite: "Daniel R., May 2026",
+              },
+            ].map((r) => (
+              <div key={r.cite} style={{ textAlign: "center" }}>
+                <div aria-label="5 out of 5 stars" style={{ color: C.clay, fontSize: 20, letterSpacing: 4, marginBottom: 12 }}>
+                  ★ ★ ★ ★ ★
+                </div>
+                <blockquote
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontStyle: "italic",
+                    fontSize: "clamp(1.05rem,2vw,1.2rem)",
+                    lineHeight: 1.6,
+                    color: C.forestDark,
+                    margin: "0 0 0.85rem",
+                  }}
+                >
+                  “{r.quote}”
+                </blockquote>
+                <cite
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontStyle: "normal",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    letterSpacing: "0.08em",
+                    color: C.textMid,
+                  }}
+                >
+                  — {r.cite}
+                </cite>
+              </div>
+            ))}
           </div>
         </section>
 
