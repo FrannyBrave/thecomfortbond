@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X, Heart, Layers, Package, Gift, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { isFathersDayActive } from "@/lib/fathersDay";
+
 import {
   Sheet,
   SheetContent,
@@ -101,7 +103,9 @@ export const Navigation = () => {
                 { label: "Free Sampler", href: "/free-sampler" },
                 { label: "Blueprint Pro", href: "/blueprint-pro" },
               ]),
+              ...(isFathersDayActive() ? [{ label: "For Dad", href: "/fathers-day" }] : []),
             ].map((link) => (
+
               <button
                 key={link.href}
                 onClick={() => {
@@ -205,9 +209,11 @@ export const Navigation = () => {
                   </p>
                   <ul className="flex flex-col">
                     {[
+                      ...(isFathersDayActive() ? [{ label: "For Dad", href: "/fathers-day" }] : []),
                       { label: "Resources", href: "/resources" },
                       { label: "Our Story", href: "/about" },
                     ].map((link) => (
+
                       <li key={link.href}>
                         <button
                           onClick={() => {

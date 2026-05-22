@@ -8,6 +8,7 @@ import { useCanonical } from "./hooks/useCanonical";
 import { trackPinterestPage } from "./lib/pinterest";
 
 import KitDetail from "./pages/KitDetail";
+import FathersDayBanner from "./components/FathersDayBanner";
 const Index = lazy(() => import("./pages/Index"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Terms = lazy(() => import("./pages/Terms"));
@@ -19,6 +20,8 @@ const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminResetPassword = lazy(() => import("./pages/AdminResetPassword"));
 const AdminReviews = lazy(() => import("./pages/AdminReviews"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
+const FathersDay = lazy(() => import("./pages/FathersDay"));
+
 
 const queryClient = new QueryClient();
 
@@ -29,9 +32,12 @@ function AppRoutes() {
     trackPinterestPage();
   }, [location.pathname, location.search]);
   return (
-    <Suspense fallback={null}>
-      <Routes>
+    <>
+      <FathersDayBanner />
+      <Suspense fallback={null}>
+        <Routes>
         <Route path="/" element={<Index />} />
+
         <Route path="/shop" element={<Shop />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -58,11 +64,14 @@ function AppRoutes() {
         <Route path="/thank-you-mothers-day" element={<Navigate to="/" replace />} />
         <Route path="/thank-you/:slug" element={<Navigate to="/thank-you" replace />} />
         <Route path="/family-visits" element={<Navigate to="/" replace />} />
+        <Route path="/fathers-day" element={<FathersDay />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
+    </>
   );
 }
+
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
