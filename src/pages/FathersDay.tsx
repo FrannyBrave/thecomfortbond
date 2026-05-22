@@ -53,7 +53,7 @@ const FEATURED: FeaturedKit[] = [
     price: "$147",
     href: "/kits/collection",
     blurb:
-      "For the milestone Father's Day — every kit and the seasonal Connection Season planner, $147 instead of $204.",
+      "All five connection kits plus The Connection Season: Summer Edition — $147 instead of $204.",
   },
 ];
 
