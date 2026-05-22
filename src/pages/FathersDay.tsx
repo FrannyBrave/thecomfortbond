@@ -53,7 +53,7 @@ const FEATURED: FeaturedKit[] = [
     price: "$147",
     href: "/kits/collection",
     blurb:
-      "For the milestone Father's Day — every kit and the seasonal Connection Season planner, $147 instead of $204.",
+      "All five connection kits plus The Connection Season: Summer Edition — $147 instead of $204.",
   },
 ];
 
@@ -142,10 +142,21 @@ export default function FathersDay() {
                   fontSize: "clamp(1.05rem,2vw,1.2rem)",
                   color: C.textMid,
                   lineHeight: 1.55,
+                  margin: "0 0 1rem",
+                }}
+              >
+                Father's Day, June 21 — four thoughtful gifts curated for the way he actually shows love.
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "clamp(0.95rem,1.6vw,1.05rem)",
+                  color: C.textMid,
+                  lineHeight: 1.65,
                   margin: 0,
                 }}
               >
-                Father's Day, June 21 — four kits curated for the way he actually shows love.
+                Printable conversation kits that help you ask better questions, hear old stories, and make the next call or visit feel more meaningful.
               </p>
             </div>
             <div
@@ -358,9 +369,9 @@ export default function FathersDay() {
                 margin: 0,
               }}
             >
-              What you give him this Father's Day matters less than what you ask him afterward. Each
-              of these kits is built to keep the conversation going, long after the card has been
-              put away.
+              What you give him this Father's Day matters. What you ask him afterward may matter
+              even more. Each of these kits is built to keep the conversation going, long after the
+              card has been put away.
             </p>
           </div>
         </section>
