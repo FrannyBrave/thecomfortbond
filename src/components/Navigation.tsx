@@ -138,9 +138,15 @@ export const Navigation = () => {
                 Free Blueprint
               </Button>
             )}
-            <Button variant="cta" size="lg" onClick={() => navigate("/kits")}>
-              Shop Now
-            </Button>
+            {isFathersDayActive() ? (
+              <Button variant="cta" size="lg" onClick={() => navigate("/fathers-day")}>
+                For Dad
+              </Button>
+            ) : (
+              <Button variant="cta" size="lg" onClick={() => navigate("/kits")}>
+                Shop Now
+              </Button>
+            )}
           </div>
 
           {/* Mobile + Tablet Side Drawer */}
@@ -250,11 +256,11 @@ export const Navigation = () => {
                   size="lg"
                   className="w-full"
                   onClick={() => {
-                    navigate("/kits");
+                    navigate(isFathersDayActive() ? "/fathers-day" : "/kits");
                     setIsMobileMenuOpen(false);
                   }}
                 >
-                  Shop Now
+                  {isFathersDayActive() ? "For Dad" : "Shop Now"}
                 </Button>
               </div>
             </SheetContent>
