@@ -9,6 +9,8 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { KIT_DETAILS, type KitDetail, type CrossSell } from "@/data/kitDetails";
 import ReviewsSection from "@/components/ReviewsSection";
 import { TagPills } from "@/pages/Shop";
+import { isFathersDayActive, FATHERS_DAY_KIT_SLUGS } from "@/lib/fathersDay";
+
 
 const C = {
   forest: "var(--forest)",
@@ -229,9 +231,28 @@ export default function KitDetailPage() {
             </div>
             <div>
               <Eyebrow>{isCollection ? "The Complete Collection" : "Connection Kit"}</Eyebrow>
+              {isFathersDayActive() && FATHERS_DAY_KIT_SLUGS.has(kit.slug) && (
+                <span
+                  style={{
+                    display: "inline-block",
+                    background: "var(--clay, #C67B5C)",
+                    color: "var(--cream, #F7F1E8)",
+                    fontFamily: "var(--font-sans)",
+                    fontSize: 11,
+                    fontWeight: 600,
+                    letterSpacing: "0.04em",
+                    padding: "4px 10px",
+                    borderRadius: 999,
+                    marginBottom: 10,
+                  }}
+                >
+                  Perfect for Father's Day
+                </span>
+              )}
               <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem,4vw,2.85rem)", fontWeight: 600, lineHeight: 1.15, color: C.forestDark, margin: "0 0 0.65rem" }}>
                 {kit.name}
               </h1>
+
               <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: C.clay, margin: "0 0 1.1rem" }}>
                 {kit.tagline}
               </p>
