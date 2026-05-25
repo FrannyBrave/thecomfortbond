@@ -7,6 +7,8 @@
  */
 
 import { trackPinterestEvent } from "./pinterest";
+import { trackInitiateCheckout, trackPurchase } from "./meta-tracking";
+
 
 const PADDLE_JS_SRC = "https://cdn.paddle.com/paddle/v2/paddle.js";
 const CLIENT_TOKEN = "live_bd95fc6721aad743909ee0f4cbd";
@@ -246,6 +248,19 @@ async function initPaddle(): Promise<void> {
         },
         `checkout:${txId}`
       );
+      // Meta Pixel + CAPI Purchase event — deduped on transaction id.
+      const purchaseValue =
+        txValue !== undefined && !Number.isNaN(txValue) ? txValue : meta?.price;
+      if (purchaseValue !== undefined) {
+        trackPurchase(
+          purchaseValue,
+          data?.currency_code ?? "USD",
+          txId,
+          meta?.name,
+          buyerEmailForMeta(data)
+        );
+      }
+
 
 
       // ConvertKit purchase tag — fires the per-product delivery sequence.
@@ -306,6 +321,9 @@ export async function openPaddleCheckout(
   trackPinterestEvent("checkout", {
     line_items: [{ product_id: priceId, quantity: 1 }],
   });
+  const ckMeta = PRICE_TO_PRODUCT_META[priceId];
+  if (ckMeta) trackInitiateCheckout(ckMeta.price, "USD", ckMeta.name);
+
   try {
     await initPaddle();
     if (!window.Paddle) throw new Error("Paddle not available");
