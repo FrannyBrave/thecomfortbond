@@ -248,20 +248,6 @@ async function initPaddle(): Promise<void> {
         },
         `checkout:${txId}`
       );
-      // Meta Pixel + CAPI Purchase event — deduped on transaction id.
-      const purchaseValue =
-        txValue !== undefined && !Number.isNaN(txValue) ? txValue : meta?.price;
-      if (purchaseValue !== undefined) {
-        trackPurchase(
-          purchaseValue,
-          data?.currency_code ?? "USD",
-          txId,
-          meta?.name,
-          buyerEmailForMeta(data)
-        );
-      }
-
-
 
       // ConvertKit purchase tag — fires the per-product delivery sequence.
       // Pulls email from Paddle's customer object, falling back to customData
@@ -276,6 +262,20 @@ async function initPaddle(): Promise<void> {
       if (buyerEmail && purchaseTagId) {
         void tagConvertKitPurchase(purchaseTagId, buyerEmail, buyerFirstName, txId);
       }
+
+      // Meta Pixel + CAPI Purchase event — deduped on transaction id.
+      const purchaseValue =
+        txValue !== undefined && !Number.isNaN(txValue) ? txValue : meta?.price;
+      if (purchaseValue !== undefined) {
+        trackPurchase(
+          purchaseValue,
+          data?.currency_code ?? "USD",
+          txId,
+          meta?.name,
+          buyerEmail
+        );
+      }
+
 
       // If this price uses Paddle's native successUrl, let Paddle handle the
       // redirect — do NOT run our own JS redirect (it would race and win on
