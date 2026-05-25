@@ -67,6 +67,10 @@ function SamplerEmailCapture({
         { content_name: "Free Morning Sampler", content_category: "free-sampler" },
         `lead:sampler:${email}`
       );
+      // Meta CAPI mirror — same email so Meta can dedupe + improve match rate.
+      const { trackLead } = await import("@/lib/meta-tracking");
+      trackLead("Free Morning Sampler", email);
+
 
     } catch (err) {
       setStatus("error");

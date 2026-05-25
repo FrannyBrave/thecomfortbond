@@ -66,7 +66,11 @@ export default function FathersDay() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    void import("@/lib/meta-tracking").then(({ trackViewContent }) => {
+      trackViewContent("Father's Day Collection", undefined, "USD", "fathers-day");
+    });
   }, []);
+
 
   // After Father's Day, redirect to /shop. The page itself stays for reuse next year.
   if (!isFathersDayActive()) return <Navigate to="/shop" replace />;
