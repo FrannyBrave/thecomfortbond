@@ -144,6 +144,7 @@ export default function KitDetailPage() {
   // accordion below is unchanged for shoppers.
 
   // Pinterest 'viewcontent' event — fires once per kit detail page view.
+  // Meta Pixel + CAPI ViewContent fires in parallel with the same dedupe key.
   useEffect(() => {
     if (!kit) return;
     const category =
@@ -165,7 +166,11 @@ export default function KitDetailPage() {
         `viewcontent:${kit.slug}`
       );
     });
+    void import("@/lib/meta-tracking").then(({ trackViewContent }) => {
+      trackViewContent(kit.name, priceNumeric, "USD", kit.slug);
+    });
   }, [kit]);
+
 
 
   // Hero LCP preload is handled synchronously in index.html so the browser
