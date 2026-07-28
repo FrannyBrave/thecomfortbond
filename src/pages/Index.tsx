@@ -332,34 +332,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* A NOTE FROM THE FOUNDER */}
-        <section style={{ background: C.creamDark, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
-          <div style={{ maxWidth: 880, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.6fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
-            <div>
-              <picture>
-                <source type="image/avif" srcSet="/lcp/home-founder-480.avif 480w, /lcp/home-founder-768.avif 768w" sizes="(max-width: 768px) 100vw, 35vw" />
-                <source type="image/webp" srcSet="/lcp/home-founder-480.webp 480w, /lcp/home-founder-768.webp 768w" sizes="(max-width: 768px) 100vw, 35vw" />
-                <img src="/lcp/home-founder-768.webp" alt="Francesca, founder of The Comfort Bond" width={768} height={768} loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 12, display: "block" }} />
-              </picture>
-            </div>
-            <div>
-              <div className="section-tag">A note from the founder</div>
-              <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem,2.6vw,2rem)", fontWeight: 600, lineHeight: 1.25, color: C.forestDark, margin: "0.5rem 0 1rem" }}>
-                I built this for the call I was always grateful I made.
-              </h2>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 0.75rem" }}>
-                I built The Comfort Bond after losing my grandmother, Félicité, in May 2024.
-              </p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: 16, lineHeight: 1.75, color: C.textMid, margin: "0 0 1.25rem" }}>
-                This brand is for anyone who wants the next call or visit with a parent or grandparent to feel deeper than &ldquo;How are you?&rdquo;{" "}
-                <a href="/about" style={{ fontWeight: 500, color: C.clay, textDecoration: "none", borderBottom: `1px solid ${C.clay}` }}>
-                  Read the full story →
-                </a>
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* THE BONDING BLUEPRINT — flagship paid */}
         <section id="blueprint" style={{ background: C.cream, padding: "clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,1fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }} className="founder-grid">
