@@ -71,9 +71,6 @@ export const FooterSection = () => {
           <div className="text-center md:text-left">
             <h4 className="text-sm font-semibold text-forest mb-3 uppercase tracking-wide">Company</h4>
             <div className="flex flex-col gap-2">
-              <a href="/about" className="text-sm text-forest/80 hover:text-terracotta transition-colors">
-                Our Story
-              </a>
               <a href="mailto:hello@thecomfortbond.com" className="text-sm text-forest/80 hover:text-terracotta transition-colors">
                 hello@thecomfortbond.com
               </a>

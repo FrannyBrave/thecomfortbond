@@ -42,7 +42,7 @@ function AppRoutes() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
-        <Route path="/about" element={<OurStory />} />
+        <Route path="/about" element={<Navigate to="/" replace />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/reset-password" element={<AdminResetPassword />} />
         <Route path="/admin/reviews" element={<AdminReviews />} />

@@ -158,7 +158,7 @@ const ArticleDetail = () => {
           author: {
             "@type": "Person",
             name: "Francesca",
-            url: `${SITE}/about`,
+            url: SITE,
           },
           publisher: {
             "@type": "Organization",

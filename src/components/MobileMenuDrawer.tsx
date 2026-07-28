@@ -17,12 +17,6 @@ const PRIMARY_LINKS = [
     href: "/shop",
     icon: ShoppingBag,
   },
-  {
-    label: "Our Story",
-    description: "The founder's story behind The Comfort Bond",
-    href: "/about",
-    icon: Heart,
-  },
 ] as const;
 
 const SECONDARY_LINKS: { label: string; href: string }[] = [];

@@ -91,7 +91,6 @@ export default function FathersDay() {
             </div>
           </a>
           <ul className="nav-links">
-            <li><a href="/about">Our Story</a></li>
             <li><a href="/shop#kits">Connection Kits</a></li>
             <li><a href="/shop" className="nav-cta">Shop</a></li>
           </ul>
