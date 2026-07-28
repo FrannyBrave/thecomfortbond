@@ -185,7 +185,7 @@ export const articles: Article[] = [
       { type: 'image', src: curriculumInline, alt: 'Open quarterly planner with color-coded weekly schedules and a laptop on a clean white desk — illustrating structured 13-week programming for senior living' },
 
       { type: 'heading', text: "Layer One: The Six Wellness Dimensions" },
-      { type: 'paragraph', text: "Every week should touch each of <a href=\"/about\">six wellness dimensions</a> at least once:" },
+      { type: 'paragraph', text: "Every week should touch each of six wellness dimensions at least once:" },
       { type: 'paragraph', text: "<strong>Cognitive</strong> — discussion circles, memory prompts, word play, light trivia.<br/><strong>Social</strong> — group conversations, intergenerational visits, small-group rituals.<br/><strong>Sensory</strong> — tactile objects, aromatics, textured fabrics, music with specific era cues.<br/><strong>Physical</strong> — seated movement, balloon work, walking clubs, gentle stretch.<br/><strong>Creative</strong> — guided art, storytelling, music-making, arranging.<br/><strong>Spiritual</strong> — reflection, legacy conversations, hymns, quiet nature observation." },
       { type: 'paragraph', text: "Six dimensions, five weekdays. That math is intentional. One dimension gets a double-touch each week, and that double-touch rotates through the quarter so every dimension receives extra attention roughly twice over 13 weeks. Nothing goes dormant." },
 

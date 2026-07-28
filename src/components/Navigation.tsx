@@ -217,7 +217,6 @@ export const Navigation = () => {
                     {[
                       ...(isFathersDayActive() ? [{ label: "For Dad", href: "/fathers-day" }] : []),
                       { label: "Resources", href: "/resources" },
-                      { label: "Our Story", href: "/about" },
                     ].map((link) => (
 
                       <li key={link.href}>
